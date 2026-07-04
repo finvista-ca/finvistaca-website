@@ -19,6 +19,68 @@
   align-items: center;
 }
 
+/* Knowledge Base specific hero adjustments */
+
+
+.services-hero.kb-hero .container {
+  align-items: center;
+  text-align: center;
+}
+
+.services-hero.kb-hero .service-badge {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.services-hero.kb-hero .service-title {
+  margin-top: 0.2rem;
+}
+
+.services-hero.kb-hero .search-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Long, compact, Google-like search bar */
+.services-hero.kb-hero .smart-search-container {
+  width: 600px; /* long horizontal length */
+  margin: 1rem auto 0;
+}
+
+.services-hero.kb-hero .search-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(16,43,90,0.06);
+  border: 1px solid rgba(16,43,90,0.06);
+}
+
+.services-hero.kb-hero .search-icon {
+  margin-right: 0.75rem;
+  color: rgba(16,43,90,0.6);
+}
+
+.services-hero.kb-hero .smart-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  height: 100%;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .services-hero.kb-hero .smart-search-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
 .service-badge {
   display: inline-flex;
   align-items: center;
@@ -77,6 +139,7 @@
   flex-direction: column;
   gap: 4rem;
 }
+
 
 .category-block {
   background: #ffffff;

@@ -1,54 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CalculatorLayout } from '../../components/layout/CalculatorLayout';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator } from 'lucide-react';
-
-const relatedCalcList = [
-  {
-    "id": "emi",
-    "title": "Equated Monthly Installment (EMI)",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-EMI.html"
-  },
-  {
-    "id": "home-loan",
-    "title": "Home Loan Calculator",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-HomeLoan.html"
-  },
-  {
-    "id": "auto-loan",
-    "title": "Auto Loan Calculator",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-AutoLoan.html"
-  }
-];
+import { Field, Results, formatINR } from './CalcKit';
 
 export const KisanVikasPatraCalculator: React.FC = () => {
+  const [amount, setAmount] = useState(100000);
+
+  const rate = 7.5;       // % p.a. compounded annually (current KVP rate)
+  const months = 115;     // matures in 9 years 7 months
+  const maturity = amount * 2; // KVP doubles the investment on maturity
+  const interest = maturity - amount;
+
   return (
-    <div className="calculator-detail-page">
-      <CalculatorLayout 
-        title="Kisan Vikas Patra" 
-        iframeUrl="https://catheme.saginfotech.com/calc/Calculators-KisanVikasPatras.html" 
-      />
-      
-      {/* Related Calculators */}
-      <section className="related-calculators" style={{ padding: '4rem 0', backgroundColor: '#f8fafc' }}>
-        <div className="container">
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '2rem', textAlign: 'center', color: '#0f172a' }}>
-            Related Calculators
-          </h2>
-          <div className="calc-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            {relatedCalcList.map(c => (
-              <Link to={`/calculator/${c.id}`} key={c.id} className="calc-card glass-card">
-                <div className="calc-card-icon"><Calculator size={28} /></div>
-                <h3>{c.title}</h3>
-                <div className="calc-card-footer">
-                  <span>Calculate Now</span>
-                  <ArrowRight size={16} />
-                </div>
-              </Link>
-            ))}
-          </div>
+    <CalculatorLayout id="kisan-vikas-patra" title="Kisan Vikas Patra (KVP)"
+      description="Calculate the maturity value of your Kisan Vikas Patra investment.">
+      <div className="calc-app">
+        <div className="calc-inputs">
+          <Field label="Investment Amount" value={amount} onChange={setAmount} min={1000} max={10000000} step={1000} prefix="₹ " />
         </div>
-      </section>
-    </div>
+        <div className="calc-outputs">
+          <Results
+            items={[
+              { label: 'Maturity Amount', value: formatINR(maturity), primary: true },
+              { label: 'Amount Invested', value: formatINR(amount) },
+              { label: 'Total Interest Earned', value: formatINR(interest) },
+              { label: 'Interest Rate', value: `${rate}% p.a. (compounded yearly)` },
+              { label: 'Maturity Period', value: `${months} months (9 yr 7 mo)` },
+            ]}
+            note="KVP doubles the invested amount on maturity at the current rate of 7.5% p.a. Small-savings rates are revised quarterly by the Ministry of Finance."
+          />
+        </div>
+      </div>
+    </CalculatorLayout>
   );
 };

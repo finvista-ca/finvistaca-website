@@ -1,31 +1,11 @@
 import React from 'react';
-import { ArrowRight, Tag } from 'lucide-react';
+import { ArrowRight, Tag, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { newsData } from '../../data/newsData';
 import './LatestUpdates.css';
 
-const updates = [
-  {
-    id: 1,
-    tag: 'Income Tax',
-    date: 'Oct 24, 2023',
-    title: 'New Guidelines for Section 80G Deductions',
-    description: 'CBDT issues comprehensive guidelines regarding the process of claiming deductions under Section 80G.',
-  },
-  {
-    id: 2,
-    tag: 'GST',
-    date: 'Oct 18, 2023',
-    title: 'Changes in e-Invoicing Applicability',
-    description: 'Mandatory e-invoicing limit reduced to ₹5 Crore from the upcoming financial quarter.',
-  },
-  {
-    id: 3,
-    tag: 'Corporate Law',
-    date: 'Oct 12, 2023',
-    title: 'MCA Amends CSR Reporting Requirements',
-    description: 'Detailed analysis of the new forms introduced by the Ministry of Corporate Affairs for CSR.',
-  }
-];
+// Show the three most recent items from the shared news snapshot.
+const updates = newsData.slice(0, 3);
 
 export const LatestUpdates: React.FC = () => {
   return (
@@ -45,16 +25,16 @@ export const LatestUpdates: React.FC = () => {
           {updates.map((update) => (
             <div key={update.id} className="update-card">
               <div className="update-meta">
-                <span className="update-tag" data-category={update.tag}>
-                  <Tag size={12} /> {update.tag}
+                <span className="update-tag" data-category={update.category}>
+                  <Tag size={12} /> {update.category}
                 </span>
                 <span className="update-date">{update.date}</span>
               </div>
               <h3 className="update-title">{update.title}</h3>
-              <p className="update-desc">{update.description}</p>
-              <Link to={`/news/${update.id}`} className="read-more">
-                Read Article <ArrowRight size={16} />
-              </Link>
+              <p className="update-desc">Source: {update.source}</p>
+              <a href={update.url} target="_blank" rel="noopener noreferrer" className="read-more">
+                Read Article <ExternalLink size={16} />
+              </a>
             </div>
           ))}
         </div>

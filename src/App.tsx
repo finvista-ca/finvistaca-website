@@ -10,11 +10,14 @@ import { OtherServices } from './pages/OtherServices';
 import { Career } from './pages/Career';
 import { NewsFeed } from './pages/NewsFeed';
 import { CalculatorList } from './pages/CalculatorList';
-import { CalculatorDetail } from './pages/CalculatorDetail';
 import { KnowledgeBase } from './pages/KnowledgeBase';
 import { GstResources } from './pages/GstResources';
 import { ResourcePage } from './pages/ResourcePage';
 import { ComingSoon } from './components/shared/ComingSoon';
+import { DataPolicy } from './pages/DataPolicy';
+import { DueDates } from './pages/DueDates';
+import { CallBackPopup } from './components/shared/CallBackPopup';
+import { ScrollToTop } from './components/layout/ScrollToTop';
 
 // Helper component for pending pages
 const PendingPage = ({ title }: { title: string }) => (
@@ -26,6 +29,7 @@ const PendingPage = ({ title }: { title: string }) => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-wrapper">
         <Navbar />
         <Routes>
@@ -45,10 +49,13 @@ function App() {
           
           {/* Service detail routes for footer links and mega menu */}
           <Route path="/services/:id" element={<ServiceDetail />} />
+          <Route path="/data-policy" element={<DataPolicy />} />
+          <Route path="/due-dates" element={<DueDates />} />
           <Route path="/privacy" element={<PendingPage title="Privacy Policy" />} />
           <Route path="/terms" element={<PendingPage title="Terms of Service" />} />
         </Routes>
         <Footer />
+        <CallBackPopup />
       </div>
     </Router>
   );

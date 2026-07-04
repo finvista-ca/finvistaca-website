@@ -1,54 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CalculatorLayout } from '../../components/layout/CalculatorLayout';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator } from 'lucide-react';
-
-const relatedCalcList = [
-  {
-    "id": "emi",
-    "title": "Equated Monthly Installment (EMI)",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-EMI.html"
-  },
-  {
-    "id": "home-loan",
-    "title": "Home Loan Calculator",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-HomeLoan.html"
-  },
-  {
-    "id": "auto-loan",
-    "title": "Auto Loan Calculator",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-AutoLoan.html"
-  }
-];
+import { Field, Results, formatINR } from './CalcKit';
 
 export const FbtCalculator: React.FC = () => {
+  const [expense, setExpense] = useState(100000);
+  const [pct, setPct] = useState(20);
+
+  const taxableValue = (expense * pct) / 100;
+  const fbt = taxableValue * 0.30;
+  const cess = fbt * 0.03;
+  const total = fbt + cess;
+
   return (
-    <div className="calculator-detail-page">
-      <CalculatorLayout 
-        title="Fringe Benefit Tax (FBT)" 
-        iframeUrl="https://catheme.saginfotech.com/calc/Calculators-FBT.html" 
-      />
-      
-      {/* Related Calculators */}
-      <section className="related-calculators" style={{ padding: '4rem 0', backgroundColor: '#f8fafc' }}>
-        <div className="container">
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '2rem', textAlign: 'center', color: '#0f172a' }}>
-            Related Calculators
-          </h2>
-          <div className="calc-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            {relatedCalcList.map(c => (
-              <Link to={`/calculator/${c.id}`} key={c.id} className="calc-card glass-card">
-                <div className="calc-card-icon"><Calculator size={28} /></div>
-                <h3>{c.title}</h3>
-                <div className="calc-card-footer">
-                  <span>Calculate Now</span>
-                  <ArrowRight size={16} />
-                </div>
-              </Link>
-            ))}
-          </div>
+    <CalculatorLayout id="fbt" title="Fringe Benefit Tax (FBT)"
+      description="Estimate Fringe Benefit Tax on expenses treated as fringe benefits.">
+      <div className="calc-app">
+        <div className="calc-inputs">
+          <Field label="Total Expenditure" value={expense} onChange={setExpense} min={0} max={100000000} step={5000} prefix="₹ " />
+          <Field label="Fringe Benefit Valuation (%)" value={pct} onChange={setPct} min={0} max={100} step={5} suffix=" %" />
         </div>
-      </section>
-    </div>
+        <div className="calc-outputs">
+          <Results
+            items={[
+              { label: 'Total FBT Payable', value: formatINR(total), primary: true },
+              { label: 'Taxable Value of Fringe Benefits', value: formatINR(taxableValue) },
+              { label: 'FBT @ 30%', value: formatINR(fbt) },
+              { label: 'Surcharge / Cess @ 3%', value: formatINR(cess) },
+            ]}
+            note="Fringe Benefit Tax was abolished in India from FY 2009-10. This tool is provided for reference and historical calculations only."
+          />
+        </div>
+      </div>
+    </CalculatorLayout>
   );
 };

@@ -1,9 +1,10 @@
-import React from 'react';
-import { MapPin, Phone, Mail, Clock, Building, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { MapPin, Phone, Mail, Clock, Building, Send, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
 export const Contact: React.FC = () => {
+  const [sent, setSent] = useState(false);
   return (
     <div className="contact-page">
       {/* Hero Section */}
@@ -98,7 +99,14 @@ export const Contact: React.FC = () => {
               <div className="glass-card form-wrapper">
                 <h2>Request a Consultation</h2>
                 <p className="form-desc">Fill out the form below and our team will get back to you shortly.</p>
-                <form className="contact-page-form" onSubmit={(e) => e.preventDefault()}>
+                {sent ? (
+                  <div className="form-success" style={{ textAlign: 'center', padding: '2rem 0' }}>
+                    <CheckCircle2 size={48} style={{ color: '#2e9e5b', marginBottom: '0.75rem' }} />
+                    <h3>Thank you for reaching out!</h3>
+                    <p className="form-desc">Your message has been received. Our team will get back to you within 24 business hours.</p>
+                  </div>
+                ) : (
+                <form className="contact-page-form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
                   <div className="form-group">
                     <label htmlFor="name">Full Name</label>
                     <input type="text" id="name" placeholder="Enter your full name" required />
@@ -124,6 +132,7 @@ export const Contact: React.FC = () => {
                     <Send size={18} /> Send Message
                   </button>
                 </form>
+                )}
 
                 <div className="quick-response">
                   <Clock size={16} />

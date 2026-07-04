@@ -7,6 +7,7 @@ import { ServicesSection } from '../components/home/ServicesSection';
 import { LatestUpdates } from '../components/home/LatestUpdates';
 import { DueDateReminder } from '../components/home/DueDateReminder';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
+import { Associations } from '../components/home/Associations';
 import { Testimonials } from '../components/home/Testimonials';
 import { ContactCTA } from '../components/home/ContactCTA';
 
@@ -21,6 +22,7 @@ export const Home: React.FC = () => {
       <LatestUpdates />
       <DueDateReminder />
       <WhyChooseUs />
+      <Associations />
       <Testimonials />
       <ContactCTA />
     </main>

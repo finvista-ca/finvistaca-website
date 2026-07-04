@@ -22,8 +22,8 @@ export const knowledgeBaseData: ServiceColumn[] = [
           { name: 'Rates of Depreciation Under Company Act', slug: 'rates-of-depreciation-company-act', keywords: ['depreciation', 'rate', ...companyKeywords] },
           { name: 'Cost Inflation Index', slug: 'cost-inflation-index', keywords: ['cii', 'index', 'inflation', 'capital gain', ...taxKeywords] },
           { name: 'ROC Fee Structure', slug: 'roc-fee-structure', keywords: ['roc', 'fee', 'structure', 'mca', ...companyKeywords] },
-          { name: 'MICR Codes', slug: 'micr-codes', keywords: ['micr', 'code', 'bank'] },
-          { name: 'IFSC Codes', slug: 'ifsc-codes', keywords: ['ifsc', 'code', 'bank', 'neft', 'rtgs'] }
+          { name: 'MICR Codes', slug: 'micr-codes', externalUrl: 'https://www.rbi.org.in/', keywords: ['micr', 'code', 'bank'] },
+          { name: 'IFSC Codes', slug: 'ifsc-codes', externalUrl: 'https://www.rbi.org.in/Scripts/IFSCMICRDetails.aspx', keywords: ['ifsc', 'code', 'bank', 'neft', 'rtgs'] }
         ]
       }
     ]
@@ -33,18 +33,18 @@ export const knowledgeBaseData: ServiceColumn[] = [
       {
         title: 'IMPORTANT LINKS',
         items: [
-          { name: 'ITATonline.org', slug: 'itat-online', keywords: ['itat', 'tribunal', 'online', ...taxKeywords] },
-          { name: 'PAN', slug: 'pan', keywords: ['pan', 'permanent account number', 'nsdl', ...taxKeywords] },
-          { name: 'TAN', slug: 'tan', keywords: ['tan', 'tax deduction account number', ...tdsKeywords] },
-          { name: 'E-Payment Online', slug: 'e-payment-online', keywords: ['epayment', 'online', 'challan', 'tax payment'] },
-          { name: 'Income Tax', slug: 'income-tax-link', keywords: ['portal', 'efiling', ...taxKeywords] },
-          { name: 'CBIC', slug: 'cbic', keywords: ['cbic', 'customs', 'indirect', ...gstKeywords] },
-          { name: 'PF & ESI', slug: 'pf-esi', keywords: ['pf', 'esi', 'epfo', 'provident fund'] },
-          { name: 'Excise and Service Tax', slug: 'excise-service-tax', keywords: ['excise', 'service tax', 'indirect tax'] },
-          { name: 'MCA', slug: 'mca', keywords: ['mca', 'ministry of corporate affairs', 'portal', ...companyKeywords] },
-          { name: 'CA/CS', slug: 'ca-cs', keywords: ['ca', 'cs', 'icai', 'icsi', 'institute'] },
-          { name: 'Supreme Court', slug: 'supreme-court', keywords: ['supreme court', 'judgement', 'law'] },
-          { name: 'More Link', slug: 'more-link', keywords: ['link', 'more'] }
+          { name: 'ITATonline.org', slug: 'itat-online', externalUrl: 'https://itatonline.org/', keywords: ['itat', 'tribunal', 'online', ...taxKeywords] },
+          { name: 'PAN', slug: 'pan', externalUrl: 'https://www.protean-tinpan.com/services/pan/pan-index.html', keywords: ['pan', 'permanent account number', 'nsdl', ...taxKeywords] },
+          { name: 'TAN', slug: 'tan', externalUrl: 'https://www.protean-tinpan.com/services/tan/tan-index.html', keywords: ['tan', 'tax deduction account number', ...tdsKeywords] },
+          { name: 'E-Payment Online', slug: 'e-payment-online', externalUrl: 'https://www.incometax.gov.in/iec/foportal/', keywords: ['epayment', 'online', 'challan', 'tax payment'] },
+          { name: 'Income Tax', slug: 'income-tax-link', externalUrl: 'https://www.incometax.gov.in/', keywords: ['portal', 'efiling', ...taxKeywords] },
+          { name: 'CBIC', slug: 'cbic', externalUrl: 'https://www.cbic.gov.in/', keywords: ['cbic', 'customs', 'indirect', ...gstKeywords] },
+          { name: 'PF & ESI', slug: 'pf-esi', externalUrl: 'https://www.epfindia.gov.in/', keywords: ['pf', 'esi', 'epfo', 'provident fund'] },
+          { name: 'Excise and Service Tax', slug: 'excise-service-tax', externalUrl: 'https://www.cbic.gov.in/', keywords: ['excise', 'service tax', 'indirect tax'] },
+          { name: 'MCA', slug: 'mca', externalUrl: 'https://www.mca.gov.in/', keywords: ['mca', 'ministry of corporate affairs', 'portal', ...companyKeywords] },
+          { name: 'CA/CS', slug: 'ca-cs', externalUrl: 'https://www.icai.org/', keywords: ['ca', 'cs', 'icai', 'icsi', 'institute'] },
+          { name: 'Supreme Court', slug: 'supreme-court', externalUrl: 'https://www.sci.gov.in/', keywords: ['supreme court', 'judgement', 'law'] },
+          { name: 'More Link', slug: 'more-link', externalUrl: 'https://www.india.gov.in/', keywords: ['link', 'more'] }
         ]
       }
     ]
@@ -60,14 +60,14 @@ export const knowledgeBaseData: ServiceColumn[] = [
           { name: 'Interest Tax Act', slug: 'interest-tax-act', keywords: ['interest', ...taxKeywords, ...actKeywords] },
           { name: 'Expenditure Tax Act', slug: 'expenditure-tax-act', keywords: ['expenditure', ...taxKeywords, ...actKeywords] },
           { name: 'Companies Act', slug: 'companies-act', keywords: [...companyKeywords, ...actKeywords] },
-          { name: 'Companies ( Donation to National ) Fund Act', slug: 'companies-donation-fund-act', keywords: ['donation', ...companyKeywords, ...actKeywords] },
+          { name: 'Companies ( Donation to National ) Fund Act', slug: 'companies-donation-fund-act', externalUrl: 'https://www.mca.gov.in/', keywords: ['donation', ...companyKeywords, ...actKeywords] },
           { name: 'Limited Liability Partnership Act', slug: 'llp-act', keywords: ['llp', 'partnership', ...actKeywords] },
           { name: 'Partnership Act', slug: 'partnership-act', keywords: ['partnership', 'firm', ...actKeywords] },
           { name: 'Societies Registration Act', slug: 'societies-registration-act', keywords: ['society', 'ngo', ...actKeywords] },
           { name: 'Monopolies and Restrictive Trade Practices Act', slug: 'monopolies-act', keywords: ['mrtp', 'monopoly', ...actKeywords] },
           { name: 'Competition Act', slug: 'competition-act', keywords: ['competition', 'cci', ...actKeywords] },
-          { name: 'Chartered Accountants Act', slug: 'chartered-accountants-act', keywords: ['ca', 'icai', ...actKeywords] },
-          { name: 'Company Secretaries Act', slug: 'company-secretaries-act', keywords: ['cs', 'icsi', ...actKeywords] },
+          { name: 'Chartered Accountants Act', slug: 'chartered-accountants-act', externalUrl: 'https://www.icai.org/', keywords: ['ca', 'icai', ...actKeywords] },
+          { name: 'Company Secretaries Act', slug: 'company-secretaries-act', externalUrl: 'https://www.icsi.edu/', keywords: ['cs', 'icsi', ...actKeywords] },
           { name: 'Cost And Works Accountants Act', slug: 'cost-works-accountants-act', keywords: ['cma', 'icwai', ...actKeywords] },
           { name: 'Insolvency And Bankruptcy Code', slug: 'insolvency-bankruptcy-code', keywords: ['ibc', 'nclt', 'insolvency', 'bankruptcy', ...companyKeywords, ...actKeywords] }
         ]

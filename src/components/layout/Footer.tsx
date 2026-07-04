@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -17,9 +17,11 @@ export const Footer: React.FC = () => {
               delivering excellence in auditing, taxation, and financial advisory.
             </p>
             <div className="social-links">
-              {/* <a href="#" aria-label="LinkedIn"><Linkedin size={18} /></a> */}
-              <a href="#" aria-label="Twitter"><FaTwitter size={18} /></a>
-              <a href="#" aria-label="Facebook"><FaFacebook size={18} /></a>
+              <a href="https://www.linkedin.com/in/ramakishore-itla-609511308/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={18} /></a>
+              <a href="https://x.com/ramakishoreitla" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaTwitter size={18} /></a>
+              <a href="https://www.facebook.com/ramakishore.itla" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook size={18} /></a>
+              <a href="https://www.instagram.com/irk_associates" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={18} /></a>
+              <a href="https://wa.me/919866121656" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp size={18} /></a>
             </div>
           </div>
 
@@ -38,7 +40,7 @@ export const Footer: React.FC = () => {
           <div className="footer-col">
             <h4 className="footer-subheading">Free Resources</h4>
             <ul className="footer-links">
-              <li><Link to="/rbi-policy">RBI Policy</Link></li>
+              <li><a href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer">RBI Policy</a></li>
               <li><Link to="/data-policy">Data Collection Policy</Link></li>
             </ul>
           </div>
@@ -47,10 +49,10 @@ export const Footer: React.FC = () => {
           <div className="footer-col">
             <h4 className="footer-subheading">Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services/audit">Audit And Assurance Services</Link></li>
-              <li><Link to="/services/compliance">Statutory Compliance Services</Link></li>
-              <li><Link to="/services/startup">Start Up Services</Link></li>
-              <li><Link to="/services/advisory">Financial Consultancy And Support Services</Link></li>
+              <li><Link to="/services/statutory-audit">Audit And Assurance Services</Link></li>
+              <li><Link to="/services/annual-compliance-for-private-limited-company">Statutory Compliance Services</Link></li>
+              <li><Link to="/services/startup-india-registration">Start Up Services</Link></li>
+              <li><Link to="/services/financial-reporting-and-accounting-advisory-services">Financial Consultancy And Support Services</Link></li>
             </ul>
           </div>
 

@@ -5,24 +5,39 @@ import './Testimonials.css';
 const testimonials = [
   {
     id: 1,
-    quote: "Finvista transformed our financial operations. Their expertise in GST compliance and corporate tax planning has saved us significant resources.",
-    author: "Rajesh Kumar",
-    role: "Director",
-    company: "TechNova Solutions"
+    quote: "My experience with Finvista has been great, super supportive and helpful, always guided me well. My process went through so easily without any haste. I am super grateful to have met them.",
+    author: "Harjeet Singh",
+    role: "Verified Client"
   },
   {
     id: 2,
-    quote: "The level of professionalism and the modern approach they bring to traditional accounting is refreshing. Their advisory services have been invaluable for our expansion.",
-    author: "Client Testimonial",
-    role: "CEO",
-    company: "Technology Client"
+    quote: "Keeping up with the constant changes in the legal and taxation environment is becoming harder by the day. Thanks to the super dynamic team, all my tax returns were filed smoothly. I don't have to worry about timely and correct filing, investment planning, digital compliances or representations. I am completely satisfied with their services.",
+    author: "Rohit",
+    role: "Verified Client"
   },
   {
     id: 3,
-    quote: "We've been with them for over 5 years. Their proactive alerts on compliance due dates mean we never have to worry about penalties.",
-    author: "Client Testimonial",
-    role: "Founder",
-    company: "Retail Client"
+    quote: "For the last 3 years I have been filing my ITR returns with them. They are very helpful and cooperative, they explained me each and everything about ITR filing and provided excellent service. Highly recommended.",
+    author: "Kuldeep",
+    role: "Verified Client"
+  },
+  {
+    id: 4,
+    quote: "It was indeed a great experience to come in contact with the whole team. They are super excellent and very efficient in their work. I certainly recommend others to try out their services. Thank you for your great teamwork and attention to detail.",
+    author: "Bharat",
+    role: "Verified Client"
+  },
+  {
+    id: 5,
+    quote: "Excellent customer service and timely resolution of all queries. Very polite and nice to work with. Definitely knows the business. Highly recommended.",
+    author: "Shivani",
+    role: "Verified Client"
+  },
+  {
+    id: 6,
+    quote: "I had the pleasure of working with them for our financial needs, and I can confidently say they are top-notch. From the moment I engaged their services, their expertise and professionalism were evident. Highly recommended for financial consulting and tax return services.",
+    author: "Karan",
+    role: "Verified Client"
   }
 ];
 
@@ -69,7 +84,7 @@ export const Testimonials: React.FC = () => {
                 </div>
                 <div className="author-info">
                   <h4>{testimonials[currentIndex].author}</h4>
-                  <p>{testimonials[currentIndex].role}, {testimonials[currentIndex].company}</p>
+                  <p>{testimonials[currentIndex].role}</p>
                 </div>
               </div>
             </div>

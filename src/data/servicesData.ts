@@ -1,6 +1,7 @@
 export interface ServiceItem {
   name: string;
   slug: string;
+  externalUrl?: string;
   keywords?: string[];
   related?: string[];
 }

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Search, ChevronRight, FileText, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,14 +9,22 @@ interface SmartSearchProps {
   services: ServiceItem[];
   basePath?: string;
   placeholder?: string;
+  initialQuery?: string;
 }
 
 export const SmartSearch: React.FC<SmartSearchProps> = ({ 
   services, 
   basePath = '/services',
-  placeholder = "Search GST Registration, Tax Audit, Company Registration, LLP, ROC Compliance..." 
+  placeholder = "Search GST Registration, Tax Audit, Company Registration, LLP, ROC Compliance...",
+  initialQuery = ''
 }) => {
   const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    if (initialQuery && initialQuery.trim()) {
+      setQuery(initialQuery);
+    }
+  }, [initialQuery]);
 
   const filteredServices = useMemo(() => {
     if (!query.trim()) return [];
@@ -78,6 +86,17 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({
                       exit={{ opacity: 0, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                     >
+                      {service.externalUrl ? (
+                      <a href={service.externalUrl} target="_blank" rel="noopener noreferrer" className="search-result-card glass-card">
+                        <div className="result-icon">
+                          <FileText size={24} />
+                        </div>
+                        <div className="result-content">
+                          <h4>{service.name}</h4>
+                          <span className="explore-link">Visit <ChevronRight size={14} /></span>
+                        </div>
+                      </a>
+                      ) : (
                       <Link to={`${basePath.replace(/\/$/, '')}/${service.slug}`} className="search-result-card glass-card">
                         <div className="result-icon">
                           <FileText size={24} />
@@ -87,6 +106,7 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({
                           <span className="explore-link">Explore <ChevronRight size={14} /></span>
                         </div>
                       </Link>
+                      )}
                     </motion.div>
                   ))}
                 </motion.div>

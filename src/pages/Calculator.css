@@ -181,3 +181,168 @@
   transform: translateX(4px);
   transition: transform 0.2s ease;
 }
+
+/* ===== Interactive calculator UI ===== */
+.calculator-canvas {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.calc-app {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 860px) {
+  .calc-app {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.calc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.calc-field { display: flex; flex-direction: column; gap: 0.5rem; }
+.calc-field-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.calc-field-head label {
+  font-weight: 600;
+  color: var(--brand-navy, #102b5a);
+  font-size: 0.92rem;
+}
+.calc-field-value {
+  font-weight: 700;
+  color: var(--brand-gold-dark, #b88a2f);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.calc-number {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(16, 43, 90, 0.15);
+  border-radius: 10px;
+  font: inherit;
+  color: var(--brand-navy, #102b5a);
+  outline: none;
+  background: #fff;
+}
+.calc-number:focus { border-color: var(--brand-gold, #c79a3d); }
+.calc-slider {
+  width: 100%;
+  accent-color: var(--brand-gold, #c79a3d);
+  cursor: pointer;
+}
+
+.calc-toggle {
+  display: inline-flex;
+  background: rgba(16, 43, 90, 0.05);
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+}
+.calc-toggle-btn {
+  border: none;
+  background: transparent;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--brand-navy, #102b5a);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.calc-toggle-btn.active {
+  background: var(--brand-gold, #c79a3d);
+  color: #fff;
+}
+
+.calc-outputs {
+  background: linear-gradient(160deg, #fbfaf7 0%, #ffffff 100%);
+  border: 1px solid rgba(199, 154, 61, 0.25);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+.calc-results { display: flex; flex-direction: column; gap: 0.25rem; }
+.calc-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(16, 43, 90, 0.08);
+}
+.calc-result:last-of-type { border-bottom: none; }
+.calc-result-label { color: var(--text-secondary, #2b2b2b); font-size: 0.9rem; }
+.calc-result-value { font-weight: 600; color: var(--brand-navy, #102b5a); text-align: right; }
+.calc-result.primary {
+  background: var(--brand-navy, #102b5a);
+  color: #fff;
+  margin: -1.5rem -1.5rem 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+}
+.calc-result.primary .calc-result-label { color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; }
+.calc-result.primary .calc-result-value { color: #fff; font-size: 1.6rem; font-weight: 700; }
+.calc-note {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #64748b);
+}
+
+/* Related calculators section spacing */
+.related-calculators { padding: 4rem 0; background-color: #f8fafc; }
+.related-calculators > .container > h2 { text-align: center; margin-bottom: 2rem; }
+
+/* ===== Calculator page CTA (self-contained so text stays visible) ===== */
+.calculator-detail-page .cta-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+.calculator-detail-page .cta-container {
+  background: var(--navy-gradient, linear-gradient(135deg, #102b5a 0%, #17386b 100%));
+  border-radius: 1.25rem;
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+.calculator-detail-page .cta-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.calculator-detail-page .cta-content h2 {
+  color: #ffffff;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+.calculator-detail-page .cta-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+.calculator-detail-page .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.calculator-detail-page .cta-section .btn-primary {
+  background: var(--brand-gold, #c79a3d);
+  color: #1a1a1a;
+  border: none;
+  font-weight: 600;
+}
+.calculator-detail-page .cta-section .btn-primary:hover {
+  background: var(--brand-gold-dark, #b88a2f);
+  color: #1a1a1a;
+}

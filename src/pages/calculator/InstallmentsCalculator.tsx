@@ -1,54 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CalculatorLayout } from '../../components/layout/CalculatorLayout';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator } from 'lucide-react';
-
-const relatedCalcList = [
-  {
-    "id": "emi",
-    "title": "Equated Monthly Installment (EMI)",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-EMI.html"
-  },
-  {
-    "id": "home-loan",
-    "title": "Home Loan Calculator",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-HomeLoan.html"
-  },
-  {
-    "id": "auto-loan",
-    "title": "Auto Loan Calculator",
-    "iframeUrl": "https://catheme.saginfotech.com/calc/Calculators-AutoLoan.html"
-  }
-];
+import { Field, Results, formatINR } from './CalcKit';
 
 export const InstallmentsCalculator: React.FC = () => {
+  const [amount, setAmount] = useState(500000);
+  const [rate, setRate] = useState(10);
+  const [emi, setEmi] = useState(12000);
+
+  const r = rate / 12 / 100;
+  const minEmi = amount * r; // interest-only payment
+  const feasible = emi > minEmi;
+  const n = feasible ? -Math.log(1 - (amount * r) / emi) / Math.log(1 + r) : NaN;
+  const months = feasible ? Math.ceil(n) : NaN;
+  const years = feasible ? Math.floor(months / 12) : 0;
+  const remMonths = feasible ? months % 12 : 0;
+  const totalPay = feasible ? emi * months : NaN;
+  const interest = feasible ? totalPay - amount : NaN;
+
   return (
-    <div className="calculator-detail-page">
-      <CalculatorLayout 
-        title="Get Number Of Installments" 
-        iframeUrl="https://catheme.saginfotech.com/calc/Calculators-GetNoOfInstalment.html" 
-      />
-      
-      {/* Related Calculators */}
-      <section className="related-calculators" style={{ padding: '4rem 0', backgroundColor: '#f8fafc' }}>
-        <div className="container">
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '2rem', textAlign: 'center', color: '#0f172a' }}>
-            Related Calculators
-          </h2>
-          <div className="calc-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            {relatedCalcList.map(c => (
-              <Link to={`/calculator/${c.id}`} key={c.id} className="calc-card glass-card">
-                <div className="calc-card-icon"><Calculator size={28} /></div>
-                <h3>{c.title}</h3>
-                <div className="calc-card-footer">
-                  <span>Calculate Now</span>
-                  <ArrowRight size={16} />
-                </div>
-              </Link>
-            ))}
-          </div>
+    <CalculatorLayout id="installments" title="Get Number Of Installments"
+      description="Find out how many monthly installments it will take to fully repay your loan.">
+      <div className="calc-app">
+        <div className="calc-inputs">
+          <Field label="Loan Amount" value={amount} onChange={setAmount} min={10000} max={20000000} step={10000} prefix="₹ " />
+          <Field label="Interest Rate (% per annum)" value={rate} onChange={setRate} min={1} max={20} step={0.1} suffix=" %" />
+          <Field label="Monthly Installment (EMI)" value={emi} onChange={setEmi} min={1000} max={2000000} step={500} prefix="₹ " />
         </div>
-      </section>
-    </div>
+        <div className="calc-outputs">
+          <Results
+            items={feasible ? [
+              { label: 'Number of Installments', value: `${months} months`, primary: true },
+              { label: 'Duration', value: `${years} yr ${remMonths} mo` },
+              { label: 'Total Interest', value: formatINR(interest) },
+              { label: 'Total Amount Payable', value: formatINR(totalPay) },
+            ] : [
+              { label: 'Number of Installments', value: 'Not possible', primary: true },
+            ]}
+            note={feasible
+              ? undefined
+              : `Your EMI must be greater than the monthly interest (${formatINR(minEmi)}) or the loan will never be repaid.`}
+          />
+        </div>
+      </div>
+    </CalculatorLayout>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { SmartSearch } from '../components/search/SmartSearch';
 import { knowledgeBaseData } from '../data/knowledgeBaseData';
 import { Book, ChevronRight, FileText, FileSignature, Briefcase, Star, Settings } from 'lucide-react';
@@ -36,6 +36,8 @@ const quickLinks = [
 export const KnowledgeBase: React.FC = () => {
   const [searchParams] = useSearchParams();
   const categoryParam = searchParams.get('category');
+  const queryParam = searchParams.get('q') || '';
+  const location = useLocation();
 
   // Flatten all items for the SmartSearch component
   const allKBServices = useMemo(() => {
@@ -49,8 +51,16 @@ export const KnowledgeBase: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    if (location.hash) {
+      const id = decodeURIComponent(location.hash.slice(1));
+      const el = document.getElementById(id);
+      if (el) {
+        const t = setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+        return () => clearTimeout(t);
+      }
+    }
     window.scrollTo(0, 0);
-  }, [categoryParam]);
+  }, [categoryParam, location.hash, location.pathname]);
 
   const displayData = useMemo(() => {
     if (!categoryParam) return knowledgeBaseData;
@@ -60,7 +70,7 @@ export const KnowledgeBase: React.FC = () => {
   return (
     <div className="services-directory">
       {/* Hero Section */}
-      <div className="services-hero">
+      <div className="services-hero kb-hero">
         <div className="container">
           <div className="service-badge">
             <Book size={16} />
@@ -75,7 +85,8 @@ export const KnowledgeBase: React.FC = () => {
             <SmartSearch 
               services={allKBServices} 
               basePath="/knowledge-base"
-              placeholder="Search knowledge base (e.g. TDS, Income Tax)..."
+              placeholder="Search knowledge base..."
+              initialQuery={queryParam}
             />
           </div>
         </div>
@@ -123,10 +134,21 @@ export const KnowledgeBase: React.FC = () => {
             {displayData.map((column, colIdx) => (
               <React.Fragment key={colIdx}>
                 {column.categories.map((category, catIdx) => (
-                  <div key={`${colIdx}-${catIdx}`} className="category-block" id={category.title.toLowerCase()}>
+                  <div key={`${colIdx}-${catIdx}`} className="category-block" id={category.title.toLowerCase()} style={{ scrollMarginTop: '110px' }}>
                     <h2 className="category-title">{category.title}</h2>
                     <div className="category-items-grid">
                       {category.items.map((item, itemIdx) => (
+                        item.externalUrl ? (
+                        <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" key={itemIdx} className="category-item-card glass-card">
+                          <div className="category-item-icon">
+                            {iconMap[category.title] || <FileText size={20} />}
+                          </div>
+                          <div className="category-item-content">
+                            <h4>{item.name}</h4>
+                            <span className="category-item-link">Visit <ChevronRight size={14} /></span>
+                          </div>
+                        </a>
+                        ) : (
                         <Link to={`/knowledge-base/${item.slug}`} key={itemIdx} className="category-item-card glass-card">
                           <div className="category-item-icon">
                             {iconMap[category.title] || <FileText size={20} />}
@@ -136,6 +158,7 @@ export const KnowledgeBase: React.FC = () => {
                             <span className="category-item-link">Explore <ChevronRight size={14} /></span>
                           </div>
                         </Link>
+                        )
                       ))}
                     </div>
                   </div>

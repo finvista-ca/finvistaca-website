@@ -4,6 +4,7 @@ import './Career.css';
 
 export const Career: React.FC = () => {
   const [fileName, setFileName] = useState<string>('');
+  const [submitted, setSubmitted] = useState(false);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -27,7 +28,7 @@ export const Career: React.FC = () => {
       <section className="culture-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2>Why Join Ark Associates?</h2>
+            <h2>Why Join Finvista?</h2>
             <p className="section-desc">We foster an environment where talent thrives and careers accelerate.</p>
           </div>
           
@@ -137,7 +138,14 @@ export const Career: React.FC = () => {
               <div className="glass-card form-wrapper">
                 <h2>Apply Now</h2>
                 <p className="form-desc">Take the next step in your professional journey.</p>
-                <form className="career-form" onSubmit={(e) => e.preventDefault()}>
+                {submitted ? (
+                  <div className="form-success" style={{ textAlign: 'center', padding: '2rem 0' }}>
+                    <CheckCircle2 size={48} style={{ color: '#2e9e5b', marginBottom: '0.75rem' }} />
+                    <h3>Application submitted!</h3>
+                    <p className="form-desc">Thank you for your interest in joining Finvista. Our team will review your application and reach out if there is a fit.</p>
+                  </div>
+                ) : (
+                <form className="career-form" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
                   <div className="form-group">
                     <label htmlFor="name">Full Name</label>
                     <input type="text" id="name" placeholder="Enter your full name" required />
@@ -195,6 +203,7 @@ export const Career: React.FC = () => {
                     Submit Application <ChevronRight size={18} />
                   </button>
                 </form>
+                )}
               </div>
             </div>
 

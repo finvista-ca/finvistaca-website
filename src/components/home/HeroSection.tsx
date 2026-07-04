@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../shared/Button';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronRight, TrendingUp, ShieldCheck, PieChart, Briefcase } from 'lucide-react';
 import './HeroSection.css';
 
@@ -28,12 +28,12 @@ export const HeroSection: React.FC = () => {
           </p>
           
           <div className="hero-actions">
-            <Button variant="primary" size="lg" className="action-btn">
+            <Link to="/contact" className="btn btn-primary btn-lg action-btn">
               Get Consultation <ArrowRight size={18} />
-            </Button>
-            <Button variant="secondary" size="lg" className="action-btn">
+            </Link>
+            <Link to="/knowledge-base" className="btn btn-secondary btn-lg action-btn">
               Explore Knowledge Base <ChevronRight size={18} />
-            </Button>
+            </Link>
           </div>
           
           <div className="trust-indicators">
@@ -106,7 +106,7 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="bento-card bento-wide glass-card">
+            <Link to="/services?category=advisory" className="bento-card bento-wide glass-card">
               <div className="bento-wide-content">
                 <div className="icon-wrapper bg-brand">
                   <Briefcase size={20} color="white" />
@@ -119,7 +119,7 @@ export const HeroSection: React.FC = () => {
               <div className="bento-action-arrow">
                 <ArrowRight size={20} />
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

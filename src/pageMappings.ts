@@ -23,6 +23,7 @@ import { IncomeTaxChallans } from './pages/knowledge-base/IncomeTaxChallans';
 import { IncomeTaxOtherForms } from './pages/knowledge-base/IncomeTaxOtherForms';
 import { RocForms } from './pages/knowledge-base/RocForms';
 import { LlpForms } from './pages/knowledge-base/LlpForms';
+import { KbGeneric } from './pages/knowledge-base/KbGeneric';
 import { GstActs } from './pages/gst/GstActs';
 import { GstRules } from './pages/gst/GstRules';
 import { GstCirculars } from './pages/gst/GstCirculars';
@@ -30,6 +31,8 @@ import { GstNotifications } from './pages/gst/GstNotifications';
 import { GstForms } from './pages/gst/GstForms';
 import { GstSacCodes } from './pages/gst/GstSacCodes';
 import { GstHsnCodes } from './pages/gst/GstHsnCodes';
+import { GstOrders } from './pages/gst/GstOrders';
+import { GstInstructions } from './pages/gst/GstInstructions';
 import { EmiCalculator } from './pages/calculator/EmiCalculator';
 import { HomeLoanCalculator } from './pages/calculator/HomeLoanCalculator';
 import { AutoLoanCalculator } from './pages/calculator/AutoLoanCalculator';
@@ -64,6 +67,35 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'income-tax-other-forms': IncomeTaxOtherForms,
     'roc-forms': RocForms,
     'llp-forms': LlpForms,
+    'rates-of-income-tax': KbGeneric,
+    'tds-rates-for-nri': KbGeneric,
+    'rates-of-tds': KbGeneric,
+    'rates-of-nsc-interest': KbGeneric,
+    'rates-of-depreciation-income-tax': KbGeneric,
+    'rates-of-depreciation-company-act': KbGeneric,
+    'cost-inflation-index': KbGeneric,
+    'roc-fee-structure': KbGeneric,
+    'micr-codes': KbGeneric,
+    'ifsc-codes': KbGeneric,
+    'itat-online': KbGeneric,
+    'pan': KbGeneric,
+    'tan': KbGeneric,
+    'e-payment-online': KbGeneric,
+    'income-tax-link': KbGeneric,
+    'cbic': KbGeneric,
+    'pf-esi': KbGeneric,
+    'excise-service-tax': KbGeneric,
+    'mca': KbGeneric,
+    'ca-cs': KbGeneric,
+    'supreme-court': KbGeneric,
+    'more-link': KbGeneric,
+    'companies-donation-fund-act': KbGeneric,
+    'llp-act': KbGeneric,
+    'societies-registration-act': KbGeneric,
+    'competition-act': KbGeneric,
+    'chartered-accountants-act': KbGeneric,
+    'company-secretaries-act': KbGeneric,
+    'cost-works-accountants-act': KbGeneric,
   },
   gst: {
     'gst-acts': GstActs,
@@ -73,6 +105,8 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'gst-forms': GstForms,
     'gst-sac-codes': GstSacCodes,
     'gst-hsn-codes': GstHsnCodes,
+    'gst-orders': GstOrders,
+    'gst-instructions': GstInstructions,
   },
   calculator: {
     'emi': EmiCalculator,

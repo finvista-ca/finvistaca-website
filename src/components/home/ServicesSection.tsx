@@ -65,7 +65,7 @@ export const ServicesSection: React.FC = () => {
             return (
               <Link to={service.path} key={service.id} className="service-card">
                 <div className="service-icon-wrapper">
-                  <Icon size={48} strokeWidth={1.5} />
+                  <Icon size={20} strokeWidth={1.4} />
                 </div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>

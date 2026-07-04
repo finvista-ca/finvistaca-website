@@ -1,20 +1,32 @@
-import React from 'react';
-import { Search, BookOpen, FileText, Scale, Bell, Copy, FilePlus, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Search, FileText, Scale, Bell, Copy, FilePlus, Calculator } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import './KnowledgeHub.css';
 
 const categories = [
-  { name: 'Acts', path: '/acts', icon: Scale },
-  { name: 'Sections', path: '/sections', icon: BookOpen },
-  { name: 'Rules', path: '/rules', icon: FileText },
-  { name: 'Notifications', path: '/notifications', icon: Bell },
-  { name: 'Circulars', path: '/circulars', icon: Copy },
-  { name: 'Forms', path: '/forms', icon: FilePlus },
-  { name: 'Due Dates', path: '/calculator', icon: Calendar },
-  { name: 'GST Resources', path: '/gst', icon: Search }
+  { name: 'Acts', path: '/knowledge-base#acts', icon: Scale },
+  { name: 'Rules', path: '/knowledge-base#rules', icon: FileText },
+  { name: 'Notifications', path: '/knowledge-base#notification', icon: Bell },
+  { name: 'Circulars', path: '/knowledge-base#circulars', icon: Copy },
+  { name: 'Forms', path: '/knowledge-base#forms', icon: FilePlus },
+  { name: 'GST Resources', path: '/gst', icon: Search },
+  { name: 'Calculators', path: '/calculator', icon: Calculator }
 ];
 
 export const KnowledgeHub: React.FC = () => {
+  const [term, setTerm] = useState('');
+  const navigate = useNavigate();
+
+  const doSearch = () => {
+    const q = term.trim();
+    if (q) navigate(`/knowledge-base?q=${encodeURIComponent(q)}`);
+    else navigate('/knowledge-base');
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') doSearch();
+  };
+
   return (
     <section className="section knowledge-hub-section">
       <div className="container">
@@ -32,14 +44,24 @@ export const KnowledgeHub: React.FC = () => {
                   type="text" 
                   className="kh-search-input" 
                   placeholder="Search Acts, Sections, Rules, Notifications, Circulars and Forms"
+                  value={term}
+                  onChange={(e) => setTerm(e.target.value)}
+                  onKeyDown={onKeyDown}
                 />
-                <button className="btn btn-primary search-btn">Search</button>
+                <button type="button" onClick={doSearch} className="btn btn-primary search-btn">Search</button>
               </div>
               <div className="search-suggestions">
                 <span>Popular:</span>
-                <span className="tag">Income Tax Act 1961</span>
-                <span className="tag">CGST Act</span>
-                <span className="tag">Form 16</span>
+                {['Income Tax Act', 'TDS Rates', 'ROC Forms'].map((t) => (
+                  <button
+                    key={t}
+                    type="button"
+                    className="tag"
+                    onClick={() => navigate(`/knowledge-base?q=${encodeURIComponent(t)}`)}
+                  >
+                    {t}
+                  </button>
+                ))}
               </div>
             </div>
           </div>

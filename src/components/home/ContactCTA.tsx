@@ -1,8 +1,9 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import './ContactCTA.css';
 
 export const ContactCTA: React.FC = () => {
+  const [sent, setSent] = useState(false);
   return (
     <section className="contact-cta-section">
       <div className="container">
@@ -23,7 +24,14 @@ export const ContactCTA: React.FC = () => {
           </div>
           
           <div className="cta-form-container">
-            <form className="cta-form" onSubmit={(e) => e.preventDefault()}>
+            {sent ? (
+              <div className="cta-form-success" style={{ textAlign: 'center', padding: '2rem 1rem', color: '#fff' }}>
+                <CheckCircle2 size={48} style={{ color: '#4ade80', marginBottom: '0.75rem' }} />
+                <h3 style={{ margin: '0 0 0.5rem' }}>Request received!</h3>
+                <p style={{ margin: 0, opacity: 0.9 }}>Thank you. Our experts will contact you shortly to schedule your consultation.</p>
+              </div>
+            ) : (
+            <form className="cta-form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
               <div className="form-group">
                 <input type="text" placeholder="Full Name" required />
               </div>
@@ -34,8 +42,8 @@ export const ContactCTA: React.FC = () => {
                 <input type="email" placeholder="Email Address" required />
               </div>
               <div className="form-group">
-                <select required style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', outline: 'none' }}>
-                  <option value="" disabled selected>Service Required</option>
+                <select required defaultValue="" style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', outline: 'none' }}>
+                  <option value="" disabled>Service Required</option>
                   <option value="taxation">Taxation</option>
                   <option value="audit">Audit & Assurance</option>
                   <option value="gst">GST Compliance</option>
@@ -50,6 +58,7 @@ export const ContactCTA: React.FC = () => {
                 Request Consultation <ArrowRight size={18} />
               </button>
             </form>
+            )}
           </div>
         </div>
       </div>
