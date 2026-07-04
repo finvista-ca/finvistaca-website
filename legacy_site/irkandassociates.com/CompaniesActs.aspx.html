@@ -1,0 +1,994 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+        <head><title>
+	Companies Acts
+</title><meta charset="utf-8"><meta name="Description" content="I R K &amp; Associates"><meta name="keywords" content="I R K &amp; Associates"><meta property="og:title" content="I R K &amp; Associates"><meta property="og:description" content="I R K &amp; Associates"><meta property="og:image" content="http://irkandassociates.com/images/logo.png"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="Content-Language" content="EN"><meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1"><link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"><link href="css/bootstrap.min.css" rel="stylesheet"><link href="css/font-awesome.min.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+        
+		 
+    
+          <script type="text/javascript">
+            function GetRadWindow() {
+                var oWindow = null;
+                if (window.radWindow) oWindow = window.radWindow; //Will work in Moz in all cases, including clasic dialog
+                else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow; //IE (and Moz az well)
+                return oWindow;
+            }
+
+            function CloseOnReload() {
+                GetRadWindow().Close();
+            }
+            function OnClientClose(oWnd) {
+              
+            }
+
+        </script>
+          <script type="text/javascript">
+
+             function isNumeric(e) {
+                 var KeyID = (window.event) ? event.keyCode : e.which;
+                 //alert(Enumerator.W);
+                 return ((KeyID >= 48 && KeyID <= 57) || KeyID == 8 || KeyID == 127 || KeyID == 0);
+             }
+        </script>
+        <link href="WebResource.axd?d=1IGx3oUTcmpXE7j1fwO-lH3zZCjnpbWbMaLNOH6eF64alEl_NSs-jDd0PpXLIYD4VC5egjKoe_5r0NAcPUoGF3XCpqrKvbWR1AlGBTaHILn-DIwL4O2U_LsB3nfS-vM753RXEw2&amp;t=638845407014717151" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="WebResource-15.axd?d=mo-gX-IPErSMtaNnVrODypy33YDe7bGPj2HpI5ZVX9Q82r9ZoUuv5czON7RH85mWDX7RdaI9TYoJaURxhMy3ThfuNzD63geCacq1AKi0Qn-uhaTBehsedrEmnb9Tuwp4e2fjhzkQQbowVZeBP9r4rtr3v_s1&amp;t=638845407014717151" type="text/css" rel="stylesheet" class="Telerik_stylesheet"><link href="WebResource-16.axd?d=u2tzRozeP5ATW0pn1BRwzBxShxRxShRyIvr1r2piVVLM7kJjzNX2o78TyK5J-8j5h7qm3F6GKXkWyOTXi2DogcFbQhuoPGhTTSDEfRF-WpxPfrtigq8uY7TRdP7m07542F6ovByKFI7H6GwXZfxmssbRUlw1&amp;t=638845407014717151" type="text/css" rel="stylesheet" class="Telerik_stylesheet"></head>
+        <body>
+    <form name="aspnetForm" method="post" action="CompaniesActs.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTIzODg0MzgwD2QWAmYPZBYCAgMPZBYEAgMPZBYSAgEPPCsACQEADxYEHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAIHZBYOZg9kFgICAQ8PFgIeC05hdmlnYXRlVXJsBQxnc3RhY3RzLmFzcHhkFgJmDxUBBEFjdHNkAgEPZBYCAgEPDxYCHwIFDWdzdHJ1bGVzLmFzcHhkFgJmDxUBBVJ1bGVzZAICD2QWAgIBDw8WAh8CBRFHc3RDaXJjdWxhcnMuYXNweGQWAmYPFQEJQ2lyY3VsYXJzZAIDD2QWAgIBDw8WAh8CBRNHc3ROb3RpZmFjdGlvbi5hc3B4ZBYCZg8VAQ1Ob3RpZmljYXRpb25zZAIED2QWAgIBDw8WAh8CBQ1Hc3RGb3Jtcy5hc3B4ZBYCZg8VAQVGb3Jtc2QCBQ9kFgICAQ8PFgIfAgUOR3N0T3JkZXJzLmFzcHhkFgJmDxUBBk9yZGVyc2QCBg9kFgICAQ8PFgIfAgUTR3N0SW5zdHJ1Y3Rpb24uYXNweGQWAmYPFQEMSW5zdHJ1Y3Rpb25zZAIDDzwrAAkBAA8WBB8AFgAfAQIKZBYUZg9kFgICAQ8PFgIfAgUodXRpbGl0aWVzLmFzcHg/c2VydmU9UmF0ZXMgb2YgSW5jb21lIFRheGQWAmYPFQETUmF0ZXMgb2YgSW5jb21lIFRheGQCAQ9kFgICAQ8PFgIfAgUwdXRpbGl0aWVzLmFzcHg/c2VydmU9VERTIFJhdGVzIGZvciBOLlIuSSB1L3MgMTk1ZBYCZg8VARtURFMgUmF0ZXMgZm9yIE4uUi5JIHUvcyAxOTVkAgIPZBYCAgEPDxYCHwIFIXV0aWxpdGllcy5hc3B4P3NlcnZlPVJhdGVzIG9mIFREU2QWAmYPFQEMUmF0ZXMgb2YgVERTZAIDD2QWAgIBDw8WAh8CBSp1dGlsaXRpZXMuYXNweD9zZXJ2ZT1SYXRlcyBvZiBOU0MgSW50ZXJlc3RkFgJmDxUBFVJhdGVzIG9mIE5TQyBJbnRlcmVzdGQCBA9kFgICAQ8PFgIfAgU/dXRpbGl0aWVzLmFzcHg/c2VydmU9UmF0ZXMgb2YgRGVwcmVjaWF0aW9uIFVuZGVyIEluY29tZSBUYXggQWN0ZBYCZg8VASpSYXRlcyBvZiBEZXByZWNpYXRpb24gVW5kZXIgSW5jb21lIFRheCBBY3RkAgUPZBYCAgEPDxYCHwIFPHV0aWxpdGllcy5hc3B4P3NlcnZlPVJhdGVzIG9mIERlcHJlY2lhdGlvbiBVbmRlciBDb21wYW55IEFjdGQWAmYPFQEnUmF0ZXMgb2YgRGVwcmVjaWF0aW9uIFVuZGVyIENvbXBhbnkgQWN0ZAIGD2QWAgIBDw8WAh8CBSl1dGlsaXRpZXMuYXNweD9zZXJ2ZT1Db3N0IEluZmxhdGlvbiBJbmRleGQWAmYPFQEUQ29zdCBJbmZsYXRpb24gSW5kZXhkAgcPZBYCAgEPDxYCHwIFJnV0aWxpdGllcy5hc3B4P3NlcnZlPVJPQyBGZWUgU3RydWN0dXJlZBYCZg8VARFST0MgRmVlIFN0cnVjdHVyZWQCCA9kFgICAQ8PFgIfAgUfdXRpbGl0aWVzLmFzcHg/c2VydmU9TUlDUiBDb2Rlc2QWAmYPFQEKTUlDUiBDb2Rlc2QCCQ9kFgICAQ8PFgIfAgUfdXRpbGl0aWVzLmFzcHg/c2VydmU9SUZTQyBDb2Rlc2QWAmYPFQEKSUZTQyBDb2Rlc2QCBQ88KwAJAQAPFgQfABYAHwECC2QWFmYPZBYCAgEPDxYCHwIFCFBhbi5hc3B4ZBYCZg8VAQNQQU5kAgEPZBYCAgEPDxYCHwIFCFRhbi5hc3B4ZBYCZg8VAQNUQU5kAgIPZBYCAgEPDxYCHwIFFEUtUGF5bWVudE9ubGluZS5hc3B4ZBYCZg8VARBFLVBheW1lbnQgT25saW5lZAIDD2QWAgIBDw8WAh8CBQ5JbmNvbWVUYXguYXNweGQWAmYPFQEKSW5jb21lIFRheGQCBA9kFgICAQ8PFgIfAgUJQ0JFQy5hc3B4ZBYCZg8VAQRDQklDZAIFD2QWAgIBDw8WAh8CBQpQRkVTSS5hc3B4ZBYCZg8VAQhQRiAmIEVTSWQCBg9kFgICAQ8PFgIfAgUYRXhjaXNlYW5kU2VydmljZVRheC5hc3B4ZBYCZg8VARZFeGNpc2UgYW5kIFNlcnZpY2UgVGF4ZAIHD2QWAgIBDw8WAh8CBQpNQ0EyMS5hc3B4ZBYCZg8VAQNNQ0FkAggPZBYCAgEPDxYCHwIFDGNhY3Njd2EuYXNweGQWAmYPFQEFQ0EvQ1NkAgkPZBYCAgEPDxYCHwIFEVN1cHJlbWVDb3VydC5hc3B4ZBYCZg8VAQ1TdXByZW1lIENvdXJ0ZAIKD2QWAgIBDw8WAh8CBQ1tb3JlbGluay5hc3B4ZBYCZg8VAQlNb3JlIExpbmtkAgcPPCsACQEADxYEHwAWAB8BAhBkFiBmD2QWAgIBDw8WAh8CBRFJbmNvbWVUYXhBY3QuYXNweGQWAmYPFQEOSW5jb21lIFRheCBBY3RkAgEPZBYCAgEPDxYCHwIFEVdlYWx0aFRheEFjdC5hc3B4ZBYCZg8VAQ5XZWFsdGggVGF4IEFjdGQCAg9kFgICAQ8PFgIfAgUPR2lmdFRheEFjdC5hc3B4ZBYCZg8VAQxHaWZ0IFRheCBBY3RkAgMPZBYCAgEPDxYCHwIFE0ludGVyZXN0VGF4QWN0LmFzcHhkFgJmDxUBEEludGVyZXN0IFRheCBBY3RkAgQPZBYCAgEPDxYCHwIFFkV4cGVuZGl0dXJlVGF4QWN0LmFzcHhkFgJmDxUBE0V4cGVuZGl0dXJlIFRheCBBY3RkAgUPZBYCAgEPDxYCHwIFEkNvbXBhbmllc0FjdHMuYXNweGQWAmYPFQENQ29tcGFuaWVzIEFjdGQCBg9kFgICAQ8PFgIfAgU9TUNBQWN0LmFzcHg/bWNhaWQ9Q29tcGFuaWVzICggRG9uYXRpb24gdG8gTmF0aW9uYWwgKSBGdW5kIEFjdGQWAmYPFQErQ29tcGFuaWVzICggRG9uYXRpb24gdG8gTmF0aW9uYWwgKSBGdW5kIEFjdGQCBw9kFgICAQ8PFgIfAgU0TUNBQWN0cy5hc3B4P21jYWlkPUxpbWl0ZWQgTGlhYmlsaXR5IFBhcnRuZXJzaGlwIEFjdGQWAmYPFQEhTGltaXRlZCBMaWFiaWxpdHkgUGFydG5lcnNoaXAgQWN0ZAIID2QWAgIBDw8WAh8CBRNQYXJ0bmVyc2hpcEFjdC5hc3B4ZBYCZg8VAQ9QYXJ0bmVyc2hpcCBBY3RkAgkPZBYCAgEPDxYCHwIFLE1DQUFjdC5hc3B4P21jYWlkPVNvY2lldGllcyByZWdpc3RyYXRpb24gQWN0ZBYCZg8VARpTb2NpZXRpZXMgUmVnaXN0cmF0aW9uIEFjdGQCCg9kFgICAQ8PFgIfAgUuTW9ub3BvbGllc2FuZFJlc3RyaWN0aXZlVHJhZGVQcmFjdGljZXNBY3QuYXNweGQWAmYPFQEuTW9ub3BvbGllcyBhbmQgUmVzdHJpY3RpdmUgVHJhZGUgUHJhY3RpY2VzIEFjdGQCCw9kFgICAQ8PFgIfAgUiTUNBQWN0cy5hc3B4P21jYWlkPUNvbXBldGl0aW9uIEFjdGQWAmYPFQEPQ29tcGV0aXRpb24gQWN0ZAIMD2QWAgIBDw8WAh8CBSxNQ0FBY3RzLmFzcHg/bWNhaWQ9Q2hhcnRlcmVkIEFjY291bnRhbnRzIEFjdGQWAmYPFQEZQ2hhcnRlcmVkIEFjY291bnRhbnRzIEFjdGQCDQ9kFgICAQ8PFgIfAgUqTUNBQWN0cy5hc3B4P21jYWlkPUNvbXBhbnkgU2VjcmV0YXJpZXMgQWN0ZBYCZg8VARdDb21wYW55IFNlY3JldGFyaWVzIEFjdGQCDg9kFgICAQ8PFgIfAgUxTUNBQWN0cy5hc3B4P21jYWlkPUNvc3QgQW5kIFdvcmtzIEFjY291bnRhbnRzIEFjdGQWAmYPFQEeQ29zdCBBbmQgV29ya3MgQWNjb3VudGFudHMgQWN0ZAIPD2QWAgIBDw8WAh8CBR1JbnNvbHZlbmN5QmFua3J1cHRjeUNvZGUuYXNweGQWAmYPFQEeSW5zb2x2ZW5jeSBBbmQgQmFua3J1cHRjeSBDb2RlZAIJDzwrAAkBAA8WBB8AFgAfAQICZBYEZg9kFgICAQ8PFgIfAgUTSW5jb21lVGF4UnVsZXMuYXNweGQWAmYPFQEQSW5jb21lIFRheCBSdWxlc2QCAQ9kFgICAQ8PFgIfAgUoQ29tcGFueUxhd1J1bGVzLmFzcHg/bWNhaWQ9Q29tcGFueSBSdWxlc2QWAmYPFQESQ29tcGFueSBMYXcgIFJ1bGVzZAILDzwrAAkBAA8WBB8AFgAfAQICZBYEZg9kFgICAQ8PFgIfAgUXSW5jb21lVGF4Q2lyY3VsYXJzLmFzcHhkFgJmDxUBCkluY29tZSBUYXhkAgEPZBYCAgEPDxYCHwIFGENvbXBhbnlMYXdDaXJjdWxhcnMuYXNweGQWAmYPFQELQ29tcGFueSBMYXdkAg0PPCsACQEADxYEHwAWAB8BAgJkFgRmD2QWAgIBDw8WAh8CBRFOb3RpZmljYXRpb24uYXNweGQWAmYPFQEKSW5jb21lIFRheGQCAQ9kFgICAQ8PFgIfAgUaQ29tcGFueUxhd05vdGlmYWN0aW9uLmFzcHhkFgJmDxUBC0NvbXBhbnkgTGF3ZAIPDzwrAAkBAA8WBB8AFgAfAQIHZBYOZg9kFgICAQ8PFgIfAgUVSW5jb21lVGF4UmV0dXJucy5hc3B4ZBYCZg8VARhJbmNvbWUgVGF4IFJldHVybnMgRm9ybXNkAgEPZBYCAgEPDxYCHwIFE0luY29tZVRheEZvcm1zLmFzcHhkFgJmDxUBEEluY29tZSBUYXggRm9ybXNkAgIPZBYCAgEPDxYCHwIFDldlYWx0aFRheC5hc3B4ZBYCZg8VARJXZWFsdGggVGF4IFJldHVybnNkAgMPZBYCAgEPDxYCHwIFFkluY29tZVRheENoYWxsYW5zLmFzcHhkFgJmDxUBE0luY29tZSBUYXggQ2hhbGxhbnNkAgQPZBYCAgEPDxYCHwIFGEluY29tZVRheE90aGVyRm9ybXMuYXNweGQWAmYPFQEWSW5jb21lIFRheCBPdGhlciBGb3Jtc2QCBQ9kFgICAQ8PFgIfAgUNUm9jRm9ybXMuYXNweGQWAmYPFQEJUk9DIEZvcm1zZAIGD2QWAgIBDw8WAh8CBQ1MTHBGb3Jtcy5hc3B4ZBYCZg8VASNMaW1pdGVkIExpYWJpbGl0eSBQYXJ0bmVyc2hpcCAoTExQKWQCEQ88KwAJAQAPFgQfABYAHwECCWQWEmYPZBYCAgEPDxYCHwIFIUNhbGN1bGF0b3JzLUtpc2FuVmlrYXNQYXRyYXMuYXNweGQWAmYPFQERS2lzYW4gVmlrYXMgUGF0cmFkAgEPZBYCAgEPDxYCHwIFIkNhbGN1bGF0b3JzLUdldE5vT2ZJbnN0YWxtZW50LmFzcHhkFgJmDxUBGUdldCBOdW1iZXIgT2YgSW5zdGFsbG1lbnRkAgIPZBYCAgEPDxYCHwIFFENhbGN1bGF0b3JzLUVNSS5hc3B4ZBYCZg8VASFFcXVhdGVkIE1vbnRobHkgSW5zdGFsbG1lbnQgKEVNSSlkAgMPZBYCAgEPDxYCHwIFFENhbGN1bGF0b3JzLUhSQS5hc3B4ZBYCZg8VARpIb3VzZSBSZW50IEFsbG93YW5jZSAoSFJBKWQCBA9kFgICAQ8PFgIfAgUUQ2FsY3VsYXRvcnMtRkJULmFzcHhkFgJmDxUBGEZyaW5nZSBCZW5lZml0IFRheCAoRkJUKWQCBQ9kFgICAQ8PFgIfAgUkQ2FsY3VsYXRvcnMtSW5jb21lVGF4Q2FsY3VsYXRvci5hc3B4ZBYCZg8VARVJbmNvbWUgVGF4IENhbGN1bGF0b3JkAgYPZBYCAgEPDxYCHwIFGUNhbGN1bGF0b3JzLUhvbWVMb2FuLmFzcHhkFgJmDxUBFEhvbWUgTG9hbiBDYWxjdWxhdG9yZAIHD2QWAgIBDw8WAh8CBRlDYWxjdWxhdG9ycy1BdXRvTG9hbi5hc3B4ZBYCZg8VARRBdXRvIExvYW4gQ2FsY3VsYXRvcmQCCA9kFgICAQ8PFgIfAgUUQ2FsY3VsYXRvcnMtTlNDLmFzcHhkFgJmDxUBIk5hdGlvbmFsIFNhdmluZyBDZXJ0aWZpY2F0ZXMgKE5TQylkAgUPZBYGAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUHZG9jTmFtZR4ORGF0YVZhbHVlRmllbGQFAmlkHgtfIURhdGFCb3VuZGdkEBUKF1RoZSBDb21wYW5pZXMgQWN0LCAyMDEzNVRoZSBDb21wYW5pZXMgKERvbmF0aW9ucyB0byBOYXRpb25hbCBGdW5kcykgQWN0LCAxOTUxK1RoZSBMaW1pdGVkIExpYWJpbGl0eSBQYXJ0bmVyc2hpcCBBY3QsIDIwMDgoVGhlIEluc29sdmVuY3kgYW5kIEJhbmtydXB0Y3kgQ29kZSwgMjAxNhlUaGUgQ29tcGV0aXRpb24gQWN0LCAyMDAyGVRoZSBQYXJ0bmVyc2hpcCBBY3QsIDE5MzIjVGhlIENoYXJ0ZXJlZCBBY2NvdW50YW50cyBBY3QsIDE5NDkeVGhlIENvc3QgQWNjb3VudGFudHMgQWN0LCAxOTU5IVRoZSBDb21wYW55IFNlY3JldGFyaWVzIEFjdCwgMTk4MCRUaGUgU29jaWV0aWVzIFJlZ2lzdHJhdGlvbiBBY3QsIDE4NjAVCgE1ATEBNAIxMAE2ATMBNwE4ATkBMhQrAwpnZ2dnZ2dnZ2dnFgFmZAIFDxAPFgYfAwUHaGVhZGluZx8EBQJpZB8FZ2QQFSEVQ2hhcHRlciBJIFByZWxpbWluYXJ5QkNoYXB0ZXIgSUkgSW5jb3Jwb3JhdGlvbiBvZiBDb21wYW55IGFuZCBNYXR0ZXJzIEluY2lkZW50YWwgVGhlcmV0bztDaGFwdGVyIElJSSBQYXJ0IC0gSSBQcm9zcGVjdHVzIGFuZCBBbGxvdG1lbnQgb2YgU2VjdXJpdGllczdDaGFwdGVyIElJSSBQYXJ0IC0gSUkgVGhlIENvbXBhbmllcyAoUHJpdmF0ZSBQbGFjZW1lbnQpJ0NoYXB0ZXIgSVYgU2hhcmUgQ2FwaXRhbCBhbmQgRGViZW50dXJlcy1DaGFwdGVyIFYgQWNjZXB0YW5jZSBvZiBEZXBvc2l0cyBCeSBDb21wYW5pZXMiQ2hhcHRlciBWSSBSZWdpc3RyYXRpb24gb2YgQ2hhcmdlcylDaGFwdGVyIFZJSSBNYW5hZ2VtZW50IGFuZCBBZG1pbmlzdHJhdGlvbjBDaGFwdGVyIFZJSUkgRGVjbGFyYXRpb24gYW5kIFBheW1lbnQgb2YgRGl2aWRlbmQgQ2hhcHRlciBJWCBBY2NvdW50cyBvZiBDb21wYW5pZXMcQ2hhcHRlciBYIEF1ZGl0IGFuZCBBdWRpdG9yczZDaGFwdGVyIFhJIEFwcG9pbnRtZW50IGFuZCBRdWFsaWZpY2F0aW9ucyBvZiBEaXJlY3RvcnMsQ2hhcHRlciBYSUkgTWVldGluZ3Mgb2YgQm9hcmQgYW5kIGl0cyBQb3dlcnNBQ2hhcHRlciBYSUlJIEFwcG9pbnRtZW50IGFuZCBSZW11bmVyYXRpb24gb2YgTWFuYWdlcmlhbCBQZXJzb25uZWwxQ2hhcHRlciBYSVYgSW5zcGVjdGlvbiwgSW5xdWlyeSBhbmQgSW52ZXN0aWdhdGlvbjZDaGFwdGVyIFhWIENvbXByb21pc2VzLCBBcnJhbmdlbWVudHMgYW5kIEFtYWxnYW1hdGlvbnM2Q2hhcHRlciBYVkkgUHJldmVudGlvbiBvZiBPcHByZXNzaW9uIGFuZCBNaXNtYW5hZ2VtZW50H0NoYXB0ZXIgWFZJSSBSZWdpc3RlcmVkIFZhbHVlcnNKQ2hhcHRlciBYVklJSSBSZW1vdmFsIG9mIE5hbWVzIG9mIENvbXBhbmllcyBmcm9tIHRoZSBSZWdpc3RlciBvZiBDb21wYW5pZXM4Q2hhcHRlciBYSVggUmV2aXZhbCBhbmQgUmVoYWJpbGl0YXRpb24gb2YgU2ljayBDb21wYW5pZXMVQ2hhcHRlciBYWCBXaW5kaW5nIFVwRENoYXB0ZXIgWFhJIFBhcnQgSSAtIENvbXBhbmllcyBBdXRob3Jpc2VkIHRvIFJlZ2lzdGVyIFVuZGVyIHRoaXMgQWN0OkNoYXB0ZXIgWFhJIFBhcnQgSUkgLSBXaW5kaW5nIFVwIG9mIFVucmVnaXN0ZXJlZCBDb21wYW5pZXMfQ2hhcHRlciBYWElBIFByb2R1Y2VyIENvbXBhbmllczFDaGFwdGVyIFhYSUkgQ29tcGFuaWVzIEluY29ycG9yYXRlZCBPdXRzaWRlIEluZGlhIkNoYXB0ZXIgWFhJSUkgR292ZXJubWVudCBDb21wYW5pZXMqQ2hhcHRlciBYWElWIFJlZ2lzdHJhdGlvbiBPZmZpY2VzIGFuZCBGZWVzOkNoYXB0ZXIgWFhWIENvbXBhbmllcyB0byBGdXJuaXNoIEluZm9ybWF0aW9uIG9yIFN0YXRpc3RpY3MTQ2hhcHRlciBYWFZJIE5pZGhpc0JDaGFwdGVyIFhYVklJIE5hdGlvbmFsIENvbXBhbnkgTGF3IFRyaWJ1bmFsIGFuZCBBcHBlbGxhdGUgVHJpYnVuYWwdQ2hhcHRlciBYWFZJSUkgU3BlY2lhbCBDb3VydHMaQ2hhcHRlciBYWElYIE1pc2NlbGxhbmVvdXMJU2NoZWR1bGVzFSECMjICMjMCMjQCMjUCMjYCMjcCMjgCMjkCMzACMzECMzICMzMCMzQCMzUCMzYCMzcCMzgCMzkCNDACNDECNDICNDMCNDQCNDUCNDYCNDcCNDgCNDkCNTACNTECNTICNTMCNTQUKwMhZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnFgFmZAIHDzwrAA0CABQrAAIPFggeF0VuYWJsZUFqYXhTa2luUmVuZGVyaW5naB8FZx8BAgEeC0VkaXRJbmRleGVzFgBkFwEFD1NlbGVjdGVkSW5kZXhlcxYAARYCFgoPAgMUKwADFCsABRYCHgRvaW5kAgJkZGQFA1NOTzwrAAUBABYEHghEYXRhVHlwZRkrAh8IAgM8KwAFAQAWBB8JGSsBHwgCBGRlFCsAAAspelRlbGVyaWsuV2ViLlVJLkdyaWRDaGlsZExvYWRNb2RlLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjMuMTEwMy4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0ATwrAAcACyl1VGVsZXJpay5XZWIuVUkuR3JpZEVkaXRNb2RlLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjMuMTEwMy4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0AWRkFgofBWceBV9xZWx0GSlnU3lzdGVtLkRhdGEuRGF0YVJvd1ZpZXcsIFN5c3RlbS5EYXRhLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OR8AFgAeBV8hQ0lTFwAfAQICZhYEZg8UKwADZGRkZAIBDxYEFCsAAg8WCh8FZx8KGSsGHwAWAB8LFwAfAQICZBcEBRBDdXJyZW50UGFnZUluZGV4ZgUGXyFEU0lDAgIFC18hSXRlbUNvdW50AgIFCF8hUENvdW50AgEWAh4DX3NlFgIeAl9jZhQrAAIUKwACFCsAAQUCaWQUKwABAuEBFCsAAhQrAAEFAmlkFCsAAQLiARYDZGRkFgJmD2QWDGYPZBYEZg8PFgIeB1Zpc2libGVoZBYCZg8PFgIeCkNvbHVtblNwYW4CAWQWAmYPZBYCZg9kFgJmD2QWBAIBD2QWAmYPDxYEHghDc3NDbGFzcwUNcmdDdXJyZW50UGFnZR4EXyFTQgICZGQCAw8PFgQfEAUQcmdXcmFwIHJnQWR2UGFydB8RAgJkFgICAQ8UKwACDxYSHhVFbmFibGVFbWJlZGRlZFNjcmlwdHNnHxECgAIeGVJlZ2lzdGVyV2l0aFNjcmlwdE1hbmFnZXJnHhxFbmFibGVFbWJlZGRlZEJhc2VTdHlsZXNoZWV0Zx8FZx4TRW5hYmxlRW1iZWRkZWRTa2luc2ceHE9uQ2xpZW50U2VsZWN0ZWRJbmRleENoYW5nZWQFLlRlbGVyaWsuV2ViLlVJLkdyaWQuQ2hhbmdlUGFnZVNpemVDb21ib0hhbmRsZXIeE2NhY2hlZFNlbGVjdGVkVmFsdWVkHgVXaWR0aBsAAAAAAABHQAEAAABkDxQrAAMUKwACDxYGHgRUZXh0BQIxMB4FVmFsdWUFAjEwHghTZWxlY3RlZGgWAh4Qb3duZXJUYWJsZVZpZXdJZAUoY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9SYWRHcmlkMV9jdGwwMGQUKwACDxYGHxkFAjIwHxoFAjIwHxtoFgIfHAUoY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9SYWRHcmlkMV9jdGwwMGQUKwACDxYGHxkFAjUwHxoFAjUwHxtnFgIfHAUoY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9SYWRHcmlkMV9jdGwwMGQPFCsBA2ZmZhYBBXhUZWxlcmlrLldlYi5VSS5SYWRDb21ib0JveEl0ZW0sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMDkuMy4xMTAzLjM1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQWCmYPDxYEHxAFCXJjYkhlYWRlch8RAgJkZAIBDw8WBB8QBQlyY2JGb290ZXIfEQICZGQCAg8PFgYfGQUCMTAfGgUCMTAfG2gWAh8cBShjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX1JhZEdyaWQxX2N0bDAwZAIDDw8WBh8ZBQIyMB8aBQIyMB8baBYCHxwFKGN0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfUmFkR3JpZDFfY3RsMDBkAgQPDxYGHxkFAjUwHxoFAjUwHxtnFgIfHAUoY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9SYWRHcmlkMV9jdGwwMGQCAQ9kFghmDw8WBB8ZBQYmbmJzcDsfDmhkZAIBDw8WBB8ZBQYmbmJzcDsfDmhkZAICDw8WAh8OaGRkAgQPDxYCHw5oZGQCAQ8PFgIfDmhkFgRmD2QWCmYPDxYCHxkFBiZuYnNwO2RkAgEPDxYCHxkFBiZuYnNwO2RkAgIPDxYCHxkFBiZuYnNwO2RkAgMPDxYCHxkFBiZuYnNwO2RkAgQPDxYCHxkFBiZuYnNwO2RkAgEPDxYCHw5oZBYCZg8PFgIfDwIBZBYCZg9kFgJmD2QWAmYPZBYEAgEPZBYCZg8PFgQfEAUNcmdDdXJyZW50UGFnZR8RAgJkZAIDDw8WBB8QBRByZ1dyYXAgcmdBZHZQYXJ0HxECAmQWAgIBDxQrAAIPFhIfEmcfEQKAAh8TZx8UZx8FZx8VZx8WBS5UZWxlcmlrLldlYi5VSS5HcmlkLkNoYW5nZVBhZ2VTaXplQ29tYm9IYW5kbGVyHxdkHxgbAAAAAAAAR0ABAAAAZA8UKwADFCsAAg8WBh8ZBQIxMB8aBQIxMB8baBYCHxwFKGN0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfUmFkR3JpZDFfY3RsMDBkFCsAAg8WBh8ZBQIyMB8aBQIyMB8baBYCHxwFKGN0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfUmFkR3JpZDFfY3RsMDBkFCsAAg8WBh8ZBQI1MB8aBQI1MB8bZxYCHxwFKGN0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfUmFkR3JpZDFfY3RsMDBkDxQrAQNmZmYWAQV4VGVsZXJpay5XZWIuVUkuUmFkQ29tYm9Cb3hJdGVtLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjMuMTEwMy4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FgpmDw8WBB8QBQlyY2JIZWFkZXIfEQICZGQCAQ8PFgQfEAUJcmNiRm9vdGVyHxECAmRkAgIPDxYGHxkFAjEwHxoFAjEwHxtoFgIfHAUoY3RsMDBfQ29udGVudFBsYWNlSG9sZGVyMV9SYWRHcmlkMV9jdGwwMGQCAw8PFgYfGQUCMjAfGgUCMjAfG2gWAh8cBShjdGwwMF9Db250ZW50UGxhY2VIb2xkZXIxX1JhZEdyaWQxX2N0bDAwZAIEDw8WBh8ZBQI1MB8aBQI1MB8bZxYCHxwFKGN0bDAwX0NvbnRlbnRQbGFjZUhvbGRlcjFfUmFkR3JpZDFfY3RsMDBkAgIPDxYCHgRfaWloBQEwZBYKZg8PFgIfDmhkZAIBDw8WBB8ZBQYmbmJzcDsfDmhkZAICDw8WBB8ZBQYmbmJzcDsfDmhkZAIDDw8WAh8ZBTQxLiBTaG9ydCBUaXRsZSwgRXh0ZW50LCBDb21tZW5jZW1lbnQgYW5kIEFwcGxpY2F0aW9uZGQCBA8PFgQfGQUDMjI1Hw5oZGQCAw9kFgJmDw8WAh8OaGRkAgQPDxYCHx0FATFkFgpmDw8WAh8OaGRkAgEPDxYEHxkFBiZuYnNwOx8OaGRkAgIPDxYEHxkFBiZuYnNwOx8OaGRkAgMPDxYCHxkFDjIuIERlZmluaXRpb25zZGQCBA8PFgQfGQUDMjI2Hw5oZGQCBQ9kFgJmDw8WAh8OaGRkGAMFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBStjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFJhZFdpbmRvd01hbmFnZXIxBSRjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFJhZFdpbmRvdzIFImN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUmFkR3JpZDEFRWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUmFkR3JpZDEkY3RsMDAkY3RsMDMkY3RsMDEkUGFnZVNpemVDb21ib0JveA8UKwACZQUCNTBkBUVjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFJhZEdyaWQxJGN0bDAwJGN0bDAyJGN0bDAwJFBhZ2VTaXplQ29tYm9Cb3gPFCsAAmUFAjUwZDmBI2PUqtxveH045+IPhPmOICYw">
+
+
+<script src="ScriptResource-11.axd?d=lZFTZWccOiGq8bOT4qSp4i6-vPlSizhanKzInjkE8oH_4YN2m5K8voFbLvG4wSzB2bZK5uLP6USLdFrfOknoiK8c1LRReRqAKgxhm5cg0yeKDSiz491dS06fb1mdlbaD-KZb1bjMRQyYfgh0b7EFLOEfJzNYC_GZsaaWcKUNg28L2R490&amp;t=559a934d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="ScriptResource-12.axd?d=rGlqg7-ucoS-XzBytlK0VkrBKOXLNFpUJVU9RDIBdfppiECy-TJFnBZ0AR8E--AVqlMCvYBbKWoTwFh-_NaH5swuvPdiOQE3Dok4fuPiCVzfxUuygPTlIBX0ndiN4Y4ezSHIAg2&amp;t=5907b0fc" type="text/javascript"></script>
+<script src="ScriptResource-13.axd?d=4-H_ApVg1ZBn8IoT05_uLaojouz0iARaYuM5mp3zUdclrz64z6b8JKPBbfqfn_eu3dm6Ava4rhqr2CGBWjEoUNKINzHNg7U2XhmCDdyi10AmZ9eTCQlsVb5iXlSmEmuL_kT1odo7DWBfNqL1Aao-Pi4PmPM1&amp;t=5907b0fc" type="text/javascript"></script>
+<script src="ScriptResource-14.axd?d=e7PUMOdvMrnCs6er7kFupwqW-qucmqVRrZuO-oJ6k8y64Li4sei0Ujomrj-zitcggjbrRO7Qwn8KM7BIjOAP-9RAae00I8XP_YFhiWm56W892s4JI3Qq9mq_RdiSlWnvFIFVUg2&amp;t=5907b0fc" type="text/javascript"></script>
+<script src="ScriptResource-15.axd?d=vs0pfUypJoXeQiCqFea_Moi31ylVeO1SW57qxFaujYgaDXT6u9Uetd6ED-VZGZh0-WxfXnY7nnHhF8tDM556NvsxUMxp6O-JqnD_P1vpFcxOg-8i1V1IBUibkgDPz8j_4jGPwQ2&amp;t=5907b0fc" type="text/javascript"></script>
+<script src="ScriptResource-16.axd?d=RoeQUT0sHovKo7_7DagzuQlSKXkQ00rm9Uzn_yBsJl3uxEQ7NSkcvmAQ8qN3zFGVjSD5nUAIWnZaGF-DBrcmVfldul1ClVsc5paZDOD2vw1JkUKSn8HZRldU2YyfiDx6UEkYMH_AYehX41FrTeNxbGtfvmI1&amp;t=5907b0fc" type="text/javascript"></script>
+<script src="ScriptResource-17.axd?d=NJyYOGaB9uQRChG21eNJ3bM9JJG-ObivSCqAGuFlvdB18iHDbaHteRwknJ-hq30D3IbtwoekfGWTjnygt7XSLTaBcBBKFBYoLDHZv_HljWlH7JAASaJ5ECLT-bYq9v84wHGPqw2&amp;t=5907b0fc" type="text/javascript"></script>
+<script src="ScriptResource-18.axd?d=7c8RxrNhUrTuSaLsaUdbMWTwhcmo1oj4KuCrwkA2PhmZBZDHrVlIL3sAgOma8B7xVi9RkqO3LK2lMeMMObiNTqf25muictdNZpbNmhfkGKU3wdJ_pUaiBIjYFtawdiAXeJr-ET5SZwutgecnOlzSa0bWZlI1&amp;t=5907b0fc" type="text/javascript"></script>
+<script src="ScriptResource-19.axd?d=0BHl8DXHtI2s927YW3nNwVInFVCdiXo6yCrpMM_2yS8yYXCfdGnqX9FqSfAqEhWzwXomes-EjimBcIsywlr_lm8Ryih_a0Id2Wciptdj3eYBBpwDsZ4e1jRGn8HOut5RqLu3yA2&amp;t=5907b0fc" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9E2B75ED">
+    
+   
+
+
+<script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?8180';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4dc247",
+      "ctaText":"",
+      "borderRadius":"25",
+      "marginLeft":"10",
+      "marginBottom":"50",
+      "marginRight":"50",
+      "position":"right"
+  },
+  "brandSetting":{
+      "brandName":" I R K & Associates",
+      "brandSubTitle":"Chartered Accountants",
+      "brandImg":"http://cakmagarwal.com/images/logo-wht.jpg",
+      "welcomeText":"Hi there!\nHow can I help you?",
+      "messageText":"Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Start Chat",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"+919866121656"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
+
+ <header class="header">
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+	  <div class="col-md-2">
+	  <div id="google_translate_element" style="padding-top:2px"></div>
+	  </div>
+        <div class="col-md-5">
+          <div class="top-lt-info">
+            <div class="top-info-d"> <i class="fa fa-phone"></i> <span>+91 8143505094</span> </div>
+            <div class="top-info-d"> <i class="fa fa-phone"></i> <span>+91 7993856920 </span> </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="pull-right">
+            <div class="top-lt-info social-top">
+           <ul>
+                <li>Connect With <span>Us</span></li>
+                <li><a class="icon-fa-facebook" href="https://www.facebook.com/ramakishore.itla" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/irk_associates?igsh=MXJhbXl3cDBheXNtdw==" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://x.com/ramakishoreitla" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="icon-fa-linkedin" href="https://www.linkedin.com/in/ramakishore-itla-609511308/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="icon-fa-whatsapp" href="https://wa.me/+919866121656" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg static-top">
+   <div class="header-logo"> 
+       <div class="container">
+      <div class="row">
+        <div class="logo col-md-8">
+        <div class="navbar-header"> <a href="index.htm" class="navbar-brand"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        </div>
+        </div>
+       <div class="info col-md-4">
+         <ul>
+           
+            <li class="last"><img src="images/email.png">
+              <p> <span class="heading">Contact Email</span> <span>caramakishore@gmail.com</span> </p>
+            </li>
+          </ul>
+        </div>
+        </div>
+        </div> 
+		</div>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="container">
+  <ul class="navbar-nav ml-auto">
+  <li class="nav-item"><a href="index.htm">Home</a></li>
+  <li class="nav-item"><a href="AboutUs.aspx.html">About Us</a></li>
+  <li class="nav-item dropdown drop-p"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Services</a>
+  <ul class="dropdown-menu full-width">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="font">Business Registration</div>
+                  <li><a href="Proprietorship.aspx.html">Proprietorship</a></li>
+                  <li><a href="Partnership.aspx.html">Partnership</a></li>
+                  <li><a href="OnePersonCompany.aspx.html">One Person Company</a></li>
+                  <li><a href="LimitedLiabilityPartnership.aspx.html">Limited Liability Partnership</a></li>
+                  <li><a href="PrivateLimitedCompany.aspx.html">Private Limited Company</a></li>
+                  <li><a href="PublicLimitedCompany.aspx.html">Public Limited Company</a></li>
+                  <li><a href="NidhiCompany.aspx.html">Nidhi Company</a></li>
+                  <li><a href="ProducerCompany.aspx.html">Producer Company</a></li>
+                  <li><a href="Section8Company.aspx.html">Section 8 Company</a></li>
+                  <li><a href="TrustRegistration.aspx.html">Trust Registration</a></li>
+                  <li><a href="SocietyRegistration.aspx.html">Society Registration</a></li>
+                  <li><a href="INDIANSUBSIDIARY.aspx.html">INDIAN SUBSIDIARY</a></li>
+                 
+                </div>
+                <div class="col-md-3">
+                   <div class="font">DIRECT TAXATION</div>
+                  <li><a href="Corporatetaxadvisorycompliance.aspx.html">Corporate tax advisory/compliance</a></li>
+                  <li><a href="Internationaltaxadvisorycompliance.aspx.html">International tax advisory/compliance</a></li>
+                  <li><a href="Transferpricingstudydocumentation.aspx.html">Transfer pricing study/documentation</a></li>
+                  <li><a href="Litigationrepresentationassistance.aspx.html">Litigation/representation assistance</a></li>
+                  <li><a href="Personaltaxadvisory.aspx.html">Personal tax advisory</a></li>
+                   <div class="font">GOODS & SERVICE TAX</div>
+                  <li><a href="GSTADVISORYANDCOMPLIANCESERVICE.aspx.html">GST ADVISORY AND COMPLIANCE SERVICE</a></li>
+                  <li><a href="GSTLIGITATIONSERVICES.aspx.html">GST LIGITATION SERVICES</a></li>
+                  <li><a href="GSTREGISTRATION.aspx.html">GST REGISTRATION</a></li>
+                  <li><a href="GSTRETURNS.aspx.html">GST RETURNS</a></li>
+                  <li><a href="GSTANNUALRETURN.aspx.html">GST ANNUAL RETURN</a></li>
+                  <li><a href="GSTEWAYBILL.aspx.html">GST EWAY BILL</a></li>
+                  <li><a href="LUTINGST.aspx.html">LUT IN GST</a></li>
+                  <li><a href="GSTCANCELLATION.aspx.html">GST CANCELLATION</a></li>
+                  <li><a href="GSTREGISTRATIONFORFOREIGNERS.aspx.html">GST REGISTRATION FOR FOREIGNERS</a></li>
+                </div>
+                <div class="col-md-3">
+                  <div class="font">ROC COMPLIANCES</div>
+                  <li><a href="AnnualComplianceforPrivateLimitedCompany.aspx.html">Annual Compliance for Private Limited Company</a></li>
+                  <li><a href="AnnualComplianceofLLP.aspx.html">Annual Compliance of LLP</a></li>
+                  <li><a href="NidhiCompanyCompliance.aspx.html">Nidhi Company Compliance</a></li>
+                  <li><a href="Section8CompanyCompliance.aspx.html">Section 8 Company Compliance</a></li>
+                  <li><a href="NBFCCompliance.aspx.html">NBFC Compliance</a></li>
+                  <li><a href="WindingPrivateLimitedCompany.aspx.html">Winding Private Limited Company</a></li>
+                  <li><a href="ClosureofLLP.aspx.html">Closure of LLP</a></li>
+                  <li><a href="RevivalofStruckOffCompanies.aspx.html">Revival of Struck Off Companies</a></li>
+                  <li><a href="OTHEREVENTBASEDCOMPLIANCES.aspx.html">OTHER EVENT BASED COMPLIANCES</a></li>
+                  
+               
+                </div>
+                <div class="col-md-3">
+                   <div class="font">AUDIT & ASSURANCE</div>
+                  <li><a href="StatutoryAudit.aspx.html">Statutory Audit </a></li>
+                  <li><a href="TaxAudit.aspx.html">Tax Audit</a></li>
+                  <li><a href="GSTAudit.aspx.html">GST Audit</a></li>
+                  <li><a href="OTHERAUDITS.aspx.html">OTHER AUDITS</a></li>
+                  <li><a href="ForensicAudit.aspx.html">Forensic Audit</a></li>
+                  <li><a href="SecretarialAudit.aspx.html">Secretarial Audit</a></li>
+                  <li><a href="DueDiligence.aspx.html">Due Diligence</a></li>
+                  <li><a href="Financialreportingandaccountingadvisoryservices.aspx.html">Financial reporting and accounting advisory services</a></li>
+                  <li><a href="ManagementAudits.aspx.html">Management Audits</a></li>
+                  <li><a href="CertificationServices.aspx.html">Certification Services</a></li>
+                  <li><a href="Agreeduponprocedures.aspx.html">Agreed upon procedures</a></li>
+                </div>
+              </div>
+            </ul>
+  
+		
+	</li>
+  <li class="nav-item dropdown drop-p"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Others Services</a>
+  <ul class="dropdown-menu full-width">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="font"><a href="PermitsandLicences.aspx.html" style="color:#fff;">Permits and Licences</a></div>
+                <li>FSSAI</li>
+                <li>Import & Export Code</li>
+                <li>ISO Certification</li>
+                <li>RERA Registration</li>
+                <li>MSME Udyam Registration</li>
+                <li>Startup India Registration</li>
+                <li>Shop Act Registration</li>
+                <li>ESI & PF Registration</li>
+                <li>NGO Darpan</li>
+                <li>Trust & Society Registration</li>
+                <li>NGO Registration</li>
+                <li>CSR registration to NGOs</li>
+                </div>
+                <div class="col-md-4">
+                   <div class="font"><a href="InternationalTaxationServices.aspx.html" style="color:#fff;">International Taxation</a></div>
+                  <li>International Taxation</li>
+                    <li>NRI Taxation Services</li>
+                    <li>Setup Business in India</li>
+                    <li>Tax Clearance Certificate</li>
+                    <li>Taxation of Expatriate Employees</li>
+                </div>
+                <div class="col-md-4">
+                  <div class="font"><a href="GlobalTaxationBookKeeping.aspx.html" style="color:#fff;">Global Taxation & Book Keeping</a></div>
+                 <li>Outsourcing Accounting & Book Keeping (including Outside india)</li>
+                <li>Payroll Management</li>
+                <li>Online Accounting</li>
+                <li>ZOHO</li>
+                <li>XERO </li>
+                <li>QUICK BOOKS</li>
+                
+                </div>
+                
+              </div>
+            </ul>
+  
+	</li>
+  <li class="nav-item dropdown"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">GST</a>
+    <ul class="dropdown-menu">
+	  <table id="ctl00_WUCInnerHeader_DataListGstCommon" cellspacing="0" border="0">
+	<tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl00_HyperGstActs" href="gstacts.aspx.html">Acts</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl01_HyperGstActs" href="gstrules.aspx.html">Rules</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl02_HyperGstActs" href="GstCirculars.aspx.html">Circulars</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl03_HyperGstActs" href="GstNotifaction.aspx.html">Notifications</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl04_HyperGstActs" href="GstForms.aspx.html">Forms</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl05_HyperGstActs" href="GstOrders.aspx.html">Orders</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl06_HyperGstActs" href="GstInstruction.aspx.html">Instructions</a>
+                  </td>
+	</tr>
+</table>
+	    	<li><a href="GstHSNCodeWithRate.aspx.html">HSN Code With Rate </a></li>
+          <li><a href="GstSACCode.aspx.html">SAC Code </a></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown drop-p"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Knowledge Base</a>
+    <ul class="dropdown-menu full-width">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="font">Tools</div>
+          <table id="ctl00_WUCInnerHeader_DataListTools" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl00_HyperTools" href="utilities.aspx.html?serve=Rates of Income Tax">Rates of Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl01_HyperTools" href="utilities.aspx-1.html?serve=TDS Rates for N.R.I u/s 195">TDS Rates for N.R.I u/s 195</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl02_HyperTools" href="utilities.aspx-2.html?serve=Rates of TDS">Rates of TDS</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl03_HyperTools" href="utilities.aspx-3.html?serve=Rates of NSC Interest">Rates of NSC Interest</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl04_HyperTools" href="utilities.aspx-4.html?serve=Rates of Depreciation Under Income Tax Act">Rates of Depreciation Under Income Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl05_HyperTools" href="utilities.aspx-5.html?serve=Rates of Depreciation Under Company Act">Rates of Depreciation Under Company Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl06_HyperTools" href="utilities.aspx-6.html?serve=Cost Inflation Index">Cost Inflation Index</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl07_HyperTools" href="utilities.aspx-7.html?serve=ROC Fee Structure">ROC Fee Structure</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl08_HyperTools" href="utilities.aspx-8.html?serve=MICR Codes">MICR Codes</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl09_HyperTools" href="utilities.aspx-9.html?serve=IFSC Codes">IFSC Codes</a>
+            </td>
+	</tr>
+</table>
+        </div>
+        <div class="col-md-3">
+          <div class="font">Important Links</div>
+		  
+		  <li> <a href="https://itatonline.org/" target="_blank">ITATonline.org</a></li>
+          <table id="ctl00_WUCInnerHeader_DataListImpLinks" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl00_HyperTools" href="Pan.aspx.html">PAN</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl01_HyperTools" href="Tan.aspx.html">TAN</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl02_HyperTools" href="E-PaymentOnline.aspx.html">E-Payment Online</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl03_HyperTools" href="IncomeTax.aspx.html">Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl04_HyperTools" href="CBEC.aspx.html">CBIC</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl05_HyperTools" href="PFESI.aspx.html">PF & ESI</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl06_HyperTools" href="ExciseandServiceTax.aspx.html">Excise and Service Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl07_HyperTools" href="MCA21.aspx.html">MCA</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl08_HyperTools" href="cacscwa.aspx.html">CA/CS</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl09_HyperTools" href="SupremeCourt.aspx.html">Supreme Court</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl10_HyperTools" href="morelink.aspx.html">More Link</a>
+            </td>
+	</tr>
+</table>
+        </div>
+        <div class="col-md-3">
+          <div class="font">Acts</div>
+          <table id="ctl00_WUCInnerHeader_DataListActs" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl00_HyperActs" href="IncomeTaxAct.aspx.html">Income Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl01_HyperActs" href="WealthTaxAct.aspx.html">Wealth Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl02_HyperActs" href="GiftTaxAct.aspx.html">Gift Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl03_HyperActs" href="InterestTaxAct.aspx.html">Interest Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl04_HyperActs" href="ExpenditureTaxAct.aspx.html">Expenditure Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl05_HyperActs" href="CompaniesActs.aspx.html">Companies Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl06_HyperActs" href="MCAAct.aspx.html?mcaid=Companies ( Donation to National ) Fund Act">Companies ( Donation to National ) Fund Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl07_HyperActs" href="MCAActs.aspx.html?mcaid=Limited Liability Partnership Act">Limited Liability Partnership Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl08_HyperActs" href="PartnershipAct.aspx.html">Partnership Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl09_HyperActs" href="MCAAct.aspx-1.html?mcaid=Societies registration Act">Societies Registration Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl10_HyperActs" href="MonopoliesandRestrictiveTradePracticesAct.aspx.html">Monopolies and Restrictive Trade Practices Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl11_HyperActs" href="MCAActs.aspx-1.html?mcaid=Competition Act">Competition Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl12_HyperActs" href="MCAActs.aspx-2.html?mcaid=Chartered Accountants Act">Chartered Accountants Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl13_HyperActs" href="MCAActs.aspx-3.html?mcaid=Company Secretaries Act">Company Secretaries Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl14_HyperActs" href="MCAActs.aspx-4.html?mcaid=Cost And Works Accountants Act">Cost And Works Accountants Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl15_HyperActs" href="InsolvencyBankruptcyCode.aspx.html">Insolvency And Bankruptcy Code</a>
+            </td>
+	</tr>
+</table>
+        </div>
+        <div class="col-md-3">
+          <div class="font">Rules</div>
+          <table id="ctl00_WUCInnerHeader_DataListRules" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListRules_ctl00_HyperRules" href="IncomeTaxRules.aspx.html">Income Tax Rules</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListRules_ctl01_HyperRules" href="CompanyLawRules.aspx.html?mcaid=Company Rules">Company Law  Rules</a>
+            </td>
+	</tr>
+</table>
+		   <div class="font">Circulars</div>
+          <table id="ctl00_WUCInnerHeader_DataListCirculars" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListCirculars_ctl00_HyperRules" href="IncomeTaxCirculars.aspx.html">Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListCirculars_ctl01_HyperRules" href="CompanyLawCirculars.aspx.html">Company Law</a>
+            </td>
+	</tr>
+</table>
+         
+          <div class="font">Notification</div>
+          <table id="ctl00_WUCInnerHeader_DataListNotification" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListNotification_ctl00_HyperRules" href="Notification.aspx.html">Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListNotification_ctl01_HyperRules" href="CompanyLawNotifaction.aspx.html">Company Law</a>
+            </td>
+	</tr>
+</table>
+          <div class="font">Forms</div>
+          <table id="ctl00_WUCInnerHeader_DataListForms" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl00_HyperRules" href="IncomeTaxReturns.aspx.html">Income Tax Returns Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl01_HyperRules" href="IncomeTaxForms.aspx.html">Income Tax Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl02_HyperRules" href="WealthTax.aspx.html">Wealth Tax Returns</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl03_HyperRules" href="IncomeTaxChallans.aspx.html">Income Tax Challans</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl04_HyperRules" href="IncomeTaxOtherForms.aspx.html">Income Tax Other Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl05_HyperRules" href="RocForms.aspx.html">ROC Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl06_HyperRules" href="LLpForms.aspx.html">Limited Liability Partnership (LLP)</a>
+            </td>
+	</tr>
+</table>
+        </div>
+      </div>
+    </ul>
+  </li>
+   <li class="nav-item dropdown"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Calculator</a>
+		<ul class="dropdown-menu">
+		  <table id="ctl00_WUCInnerHeader_DataListCalculator" cellspacing="0" border="0">
+	<tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl00_HyperRules" href="Calculators-KisanVikasPatras.aspx.html">Kisan Vikas Patra</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl01_HyperRules" href="Calculators-GetNoOfInstalment.aspx.html">Get Number Of Installment</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl02_HyperRules" href="Calculators-EMI.aspx.html">Equated Monthly Installment (EMI)</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl03_HyperRules" href="Calculators-HRA.aspx.html">House Rent Allowance (HRA)</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl04_HyperRules" href="Calculators-FBT.aspx.html">Fringe Benefit Tax (FBT)</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl05_HyperRules" href="Calculators-IncomeTaxCalculator.aspx.html">Income Tax Calculator</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl06_HyperRules" href="Calculators-HomeLoan.aspx.html">Home Loan Calculator</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl07_HyperRules" href="Calculators-AutoLoan.aspx.html">Auto Loan Calculator</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl08_HyperRules" href="Calculators-NSC.aspx.html">National Saving Certificates (NSC)</a>
+                    </td>
+	</tr>
+</table>
+		</ul>
+	</li>
+    <li><a href="Newsfeed.aspx.html">NewsFeed</a></li>
+  <li><a href="ContactUs.aspx.html">Contact Us</a></li>
+  <li><a href="Career.aspx.html">Career</a></li>
+</ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+        <section class="mid-text-box-inner"> 
+		<div class="container">
+        
+<script language="javascript" type="text/javascript">
+        function GetRadWindow() {
+            var oWindow = null;
+            if (window.radWindow) oWindow = window.radWindow; //Will work in Moz in all cases, including clasic dialog
+            else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow; //IE (and Moz az well)
+            return oWindow;
+        }
+
+        function OnClientClose() {
+            GetRadWindow().Close();
+        } 
+
+            
+
+    
+    
+        function OnClientShow(radWindow)  
+        {   
+            if(document.documentElement && document.documentElement.scrollTop)  
+            {  
+                var oTop = document.documentElement.scrollTop;  
+                document.documentElement.scroll = "no";  
+                document.documentElement.style.overflow = "hidden";  
+                document.documentElement.scrollTop = oTop;  
+                  
+            } else if(document.body)  
+            {  
+                var oTop = document.body.scrollTop;  
+                document.body.scroll = "no";  
+                document.body.style.overflow = "hidden";  
+                document.body.scrollTop = oTop;  
+            }  
+        }  
+ 
+        function OnClientClose(radWindow)  
+        {  
+            if(document.documentElement && document.documentElement.scrollTop)  
+            {  
+                document.documentElement.scroll = "";  
+                document.documentElement.style.overflow = "";  
+            } else if(document.body)  
+            {  
+                document.body.scroll = "";  
+                document.body.style.overflow = "";  
+            }  
+        }   
+    
+    </script> 
+  <div class="inner-breadcrum-sec">
+    <div class="container">
+      <div class="left-side">
+        <h2>Companies Acts</h2>
+      </div>
+    </div>
+  </div>
+
+   
+<div class="inner-page-sec table-grid">    
+<div id="ctl00_ContentPlaceHolder1_RadWindowManager1" style="display:none;">
+	<!-- 2009.3.1103.35 --><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a onclick="$find('{0}').close();" class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text" class="rwDialogInput" value="{2}">
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton rwCancel" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton rwCancel" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><div id="ctl00_ContentPlaceHolder1_RadWindow2" style="display:none;">
+		<div id="ctl00_ContentPlaceHolder1_RadWindow2_C">
+
+		</div><input id="ctl00_ContentPlaceHolder1_RadWindow2_ClientState" name="ctl00_ContentPlaceHolder1_RadWindow2_ClientState" type="hidden">
+	</div><input id="ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState" name="ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState" type="hidden">
+</div>
+       <div class="row form-group">
+         <div class="col-md-2 sl-yr offset-md-3">
+           Select Act
+          </div>
+           <div class="col-md-4">
+          <select name="ctl00$ContentPlaceHolder1$DropDownList1" id="ctl00_ContentPlaceHolder1_DropDownList1" class="SelectOpcation2 form-control">
+	<option selected="selected" value="5">The Companies Act, 2013</option>
+	<option value="1">The Companies (Donations to National Funds) Act, 1951</option>
+	<option value="4">The Limited Liability Partnership Act, 2008</option>
+	<option value="10">The Insolvency and Bankruptcy Code, 2016</option>
+	<option value="6">The Competition Act, 2002</option>
+	<option value="3">The Partnership Act, 1932</option>
+	<option value="7">The Chartered Accountants Act, 1949</option>
+	<option value="8">The Cost Accountants Act, 1959</option>
+	<option value="9">The Company Secretaries Act, 1980</option>
+	<option value="2">The Societies Registration Act, 1860</option>
+
+</select>
+            </div>
+        
+        </div>
+
+     <div class="row form-group">
+         <div class="col-md-2 sl-yr offset-md-3">
+           Select Chapter
+          </div>
+           <div class="col-md-4">
+          <select name="ctl00$ContentPlaceHolder1$DropDownList2" id="ctl00_ContentPlaceHolder1_DropDownList2" class="SelectOpcation2 form-control">
+	<option selected="selected" value="22">Chapter I Preliminary</option>
+	<option value="23">Chapter II Incorporation of Company and Matters Incidental Thereto</option>
+	<option value="24">Chapter III Part - I Prospectus and Allotment of Securities</option>
+	<option value="25">Chapter III Part - II The Companies (Private Placement)</option>
+	<option value="26">Chapter IV Share Capital and Debentures</option>
+	<option value="27">Chapter V Acceptance of Deposits By Companies</option>
+	<option value="28">Chapter VI Registration of Charges</option>
+	<option value="29">Chapter VII Management and Administration</option>
+	<option value="30">Chapter VIII Declaration and Payment of Dividend</option>
+	<option value="31">Chapter IX Accounts of Companies</option>
+	<option value="32">Chapter X Audit and Auditors</option>
+	<option value="33">Chapter XI Appointment and Qualifications of Directors</option>
+	<option value="34">Chapter XII Meetings of Board and its Powers</option>
+	<option value="35">Chapter XIII Appointment and Remuneration of Managerial Personnel</option>
+	<option value="36">Chapter XIV Inspection, Inquiry and Investigation</option>
+	<option value="37">Chapter XV Compromises, Arrangements and Amalgamations</option>
+	<option value="38">Chapter XVI Prevention of Oppression and Mismanagement</option>
+	<option value="39">Chapter XVII Registered Valuers</option>
+	<option value="40">Chapter XVIII Removal of Names of Companies from the Register of Companies</option>
+	<option value="41">Chapter XIX Revival and Rehabilitation of Sick Companies</option>
+	<option value="42">Chapter XX Winding Up</option>
+	<option value="43">Chapter XXI Part I - Companies Authorised to Register Under this Act</option>
+	<option value="44">Chapter XXI Part II - Winding Up of Unregistered Companies</option>
+	<option value="45">Chapter XXIA Producer Companies</option>
+	<option value="46">Chapter XXII Companies Incorporated Outside India</option>
+	<option value="47">Chapter XXIII Government Companies</option>
+	<option value="48">Chapter XXIV Registration Offices and Fees</option>
+	<option value="49">Chapter XXV Companies to Furnish Information or Statistics</option>
+	<option value="50">Chapter XXVI Nidhis</option>
+	<option value="51">Chapter XXVII National Company Law Tribunal and Appellate Tribunal</option>
+	<option value="52">Chapter XXVIII Special Courts</option>
+	<option value="53">Chapter XXIX Miscellaneous</option>
+	<option value="54">Schedules</option>
+
+</select>
+            </div>
+        
+        </div>
+       
+        
+                    
+                    <div id="ctl00_ContentPlaceHolder1_RadGrid1" class="RadGrid RadGrid_Office2007">
+
+<table cellspacing="0" class="rgMasterTable rgClipCells" border="0" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00" style="width:100%;table-layout:fixed;overflow:hidden;empty-cells:show;">
+	<colgroup>
+		<col style="width:350px">
+	</colgroup>
+<thead>
+		<tr>
+			<th scope="col" class="rgHeader" style="text-align:left;"><a title="Click here to sort" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$RadGrid1$ctl00$ctl02$ctl01$ctl01','')">Name</a></th>
+		</tr>
+	</thead><tbody>
+	<tr class="rgRow" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00__0">
+		<td align="left" style="width:350px;">1. Short Title, Extent, Commencement and Application</td>
+	</tr><tr class="rgAltRow" id="ctl00_ContentPlaceHolder1_RadGrid1_ctl00__1">
+		<td align="left" style="width:350px;">2. Definitions</td>
+	</tr>
+	</tbody>
+
+</table><input id="ctl00_ContentPlaceHolder1_RadGrid1_ClientState" name="ctl00_ContentPlaceHolder1_RadGrid1_ClientState" type="hidden">
+	</div>
+
+  </div>
+    
+
+		</div>
+		</section>
+
+  
+
+<footer>
+ <div class="foote-link">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <h2>Page Link</h2>
+          <ul class="foot-link-list">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="AboutUs.aspx.html">About Us</a></li>
+            <li><a href="Career.aspx.html">Career</a></li>
+            <li><a href="ContactUs.aspx.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h2>Free Resources</h2>
+          <ul class="foot-link-list">
+              <li><a href="https://sachet.rbi.org.in/" target="_blank">RBI Policy</a></li>
+             
+              <li><a href="DataCollectionPolicy.aspx.html" target="_blank">Data Collection Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-3">
+          <h2>Services</h2>
+          <ul class="foot-link-list">
+       <li><a href="AuditandAssurancesServices.aspx.html">Audit and Assurances Services</a></li>
+		<li><a href="StatutoryComplianceServices.aspx.html">Statutory Compliance Services</a></li>
+		<li><a href="StartUpServices.aspx.html">Start Up Services</a></li>
+		<li><a href="FinancialConsultancyandSupportServices.aspx.html">Financial Consultancy and Support Services</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Connect With Us</h2>
+          <ul class="call-ad">
+            <li>
+              <div><i class="fa fa-map-marker"></i><span> 33-105, Near Sai Ganapathi Theatre, Church Centre, Bobbili, Vizianagaram Dist. AP - 535558</span></div>
+            </li>
+           <li>
+              <div><i class="fa fa-phone"></i><span>+91 8143505094, 7993856920</span></div>
+            </li>
+            <li>
+              <div><i class="fa fa-envelope-o"></i><span>caramakishore@gmail.com</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" copy-right">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; Copyright 2025, I R K & Associates | All Rights Reserved.</p>
+        </div>
+		<div class="col-md-1 text-center"><script type="text/javascript" src="js/7/5/0/1"></script></div>
+        <div class="col-md-5 text-right">
+          <p>Designed &amp; Developed by: <a target="_blank" href="https://saginfotech.com/" rel="nofollow"> SAG Infotech Pvt Ltd</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<a data-toggle="modal" data-target="#myModal" class="call-back-btn">Get A Call Back</a>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Get In Touch</h1>
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtname1" type="text" id="ctl00_WUCFooter_txtname1" class="form-control" placeholder="Your Name" onfocus="onFocus(this);" onblur="offFocus(this);">
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtcontact1" type="text" maxlength="10" id="ctl00_WUCFooter_txtcontact1" class="form-control" placeholder="Your Number" onkeypress="return DigitOnly(event);" onblur="offFocus(this);" onfocus="onFocus(this);">
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtmail1" type="text" id="ctl00_WUCFooter_txtmail1" class="form-control" placeholder="Your Email ID" onblur="offFocus(this);" onfocus="onFocus(this);">
+                      &nbsp;
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtcity1" type="text" maxlength="10" id="ctl00_WUCFooter_txtcity1" class="form-control" placeholder="City" onkeypress="return DigitOnly(event);" onblur="offFocus(this);" onfocus="onFocus(this);">
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <textarea name="ctl00$WUCFooter$txtremark1" rows="5" cols="50" id="ctl00_WUCFooter_txtremark1" class="form-control" placeholder="Type Your Message.." onblur="offFocus(this);" onfocus="onFocus(this);"></textarea>
+                    </div>
+                    <div class="col-md-12 text-center"><br>
+                      <input type="submit" name="ctl00$WUCFooter$btnsubmit2" value="Send Message" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$WUCFooter$btnsubmit2&quot;, &quot;&quot;, true, &quot;ab&quot;, &quot;&quot;, false, false))" id="ctl00_WUCFooter_btnsubmit2" class="btn btn-send">
+                    </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <script type="text/javascript">
+    jQuery(function ($) {
+        var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+        $('ul a').each(function () {
+            if (this.href === path) {
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
+  <script>
+        $(document).ready(function() {
+            $(".col-lg-4").slice(0, 3).show();
+            if ($(".col-lg-4:hidden").length != 0) {
+                $("#loadMore").show();
+            }
+            $("#loadMore").on('click', function(e) {
+                e.preventDefault();
+                $(".col-lg-4:hidden").slice(0, 9).slideDown();
+                if ($(".col-lg-4:hidden").length == 0) {
+                    $("#loadMore").fadeOut('slow');
+                }
+            });
+        });
+    </script>
+			  <script>
+		  $(document).ready(function() {
+    $('.navbar a.dropdown-togg').on('click', function(e) {
+        var $el = $(this);
+        var $parent = $(this).offsetParent(".dropdown-menu");
+        $(this).parent("li").toggleClass('open');
+
+        if(!$parent.parent().hasClass('nav')) {
+            $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+        }
+
+        $('.nav li.open').not($(this).parents("li")).removeClass("open");
+
+        return false;
+    });
+});
+		  </script>
+  
+  
+
+	
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"autoSize":true,"behaviors":4,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindow2_ClientState","destroyOnClose":true,"formID":"aspnetForm","iconUrl":"http://www.google.com/favicon.ico","left":"","minimizeIconUrl":"http://www.google.com/favicon.ico","modal":true,"name":"RadWindow2","showContentDuringLoad":false,"skin":"Default","title":"Google","top":"","visibleStatusbar":false}, {"close":OnClientClose}, null, $get("ctl00_ContentPlaceHolder1_RadWindow2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"autoSize":true,"behaviors":4,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState","destroyOnClose":true,"formID":"aspnetForm","iconUrl":"","left":"","minimizeIconUrl":"","modal":true,"name":"RadWindowManager1","showContentDuringLoad":false,"skin":"Default","top":"","visibleStatusbar":false,"windowControls":"['ctl00_ContentPlaceHolder1_RadWindow2']"}, {"close":OnClientClose}, {"child":"ctl00_ContentPlaceHolder1_RadWindow2"}, $get("ctl00_ContentPlaceHolder1_RadWindowManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadGrid, {"ClientID":"ctl00_ContentPlaceHolder1_RadGrid1","ClientSettings":{"AllowAutoScrollOnDragDrop":true,"AllowColumnsReorder":true,"EnablePostBackOnRowClick":true,"ShouldCreateRows":true,"ReorderColumnsOnClient":true,"DataBinding":{},"Selecting":{"AllowRowSelect":true,"EnableDragToSelectRows":true},"Scrolling":{},"Resizing":{"AllowColumnResize":true,"ClipCellContentOnResize":true,"EnableRealTimeResize":true,"ResizeGridOnColumnResize":true},"ClientMessages":{},"KeyboardNavigationSettings":{"AllowActiveRowCycle":false,"EnableKeyboardShortcuts":true,"FocusKey":89,"InitInsertKey":73,"RebindKey":82,"ExitEditInsertModeKey":27,"UpdateInsertItemKey":13,"DeleteActiveRow":127}},"Skin":"Office2007","UniqueID":"ctl00$ContentPlaceHolder1$RadGrid1","_activeRowIndex":"","_controlToFocus":"","_currentPageIndex":0,"_editIndexes":"[]","_embeddedSkin":true,"_gridTableViewsData":"[{\"ClientID\":\"ctl00_ContentPlaceHolder1_RadGrid1_ctl00\",\"UniqueID\":\"ctl00$ContentPlaceHolder1$RadGrid1$ctl00\",\"PageSize\":50,\"PageCount\":1,\"EditMode\":\"EditForms\",\"CurrentPageIndex\":0,\"VirtualItemCount\":0,\"AllowMultiColumnSorting\":false,\"AllowNaturalSort\":true,\"IsItemInserted\":false,\"clientDataKeyNames\":[],\"_dataBindTemplates\":false,\"_selectedItemStyle\":\"\",\"_selectedItemStyleClass\":\"rgSelectedRow\",\"_columnsData\":[{\"UniqueName\":\"nm\",\"Resizable\":true,\"Reorderable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"Display\":true}]}]","_masterClientID":"ctl00_ContentPlaceHolder1_RadGrid1_ctl00","_shouldFocusOnPage":false,"allowMultiRowSelection":true,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadGrid1_ClientState"}, null, null, $get("ctl00_ContentPlaceHolder1_RadGrid1"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

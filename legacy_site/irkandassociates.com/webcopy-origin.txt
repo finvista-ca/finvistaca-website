@@ -1,0 +1,956 @@
+Uri: https://catheme.saginfotech.com/Gst/img/pdf.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Gst\img\pdf.png
+Content Type: image/png
+
+Uri: https://catheme.saginfotech.com/Gst/img/view.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Gst\img\view.png
+Content Type: image/png
+
+Uri: https://cbic-gst.gov.in/aces/Documents/gar7cx-challanfrnt.pdf
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\aces\Documents\gar7cx-challanfrnt.pdf
+Content Type: application/pdf
+
+Uri: https://cbic-gst.gov.in/aces/Documents/st_front_jan09.pdf
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\aces\Documents\st_front_jan09.pdf
+Content Type: application/pdf
+
+Uri: https://counter.websiteout.com/js/7/5/0/1
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\js\7\5\0\1
+Content Type: application/x-javascript
+
+Uri: https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\css-1
+Content Type: text/css
+
+Uri: https://gst.py.gov.in/p-vat
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\p-vat
+Content Type: text/html
+
+Uri: https://irkandassociates.com/
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\index.htm
+Content Type: text/html
+
+Uri: https://irkandassociates.com/AboutUs.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\AboutUs.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/AccountingBookkeeping.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\AccountingBookkeeping.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Agreeduponprocedures.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Agreeduponprocedures.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/AnnualComplianceforPrivateLimitedCompany.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\AnnualComplianceforPrivateLimitedCompany.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/AnnualComplianceofLLP.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\AnnualComplianceofLLP.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/AuditandAssurancesServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\AuditandAssurancesServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/AuditAssuranceServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\AuditAssuranceServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/BusinessRegistrationCompliance.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\BusinessRegistrationCompliance.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/cacscwa.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\cacscwa.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-AutoLoan.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-AutoLoan.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-EMI.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-EMI.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-FBT.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-FBT.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-GetNoOfInstalment.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-GetNoOfInstalment.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-HomeLoan.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-HomeLoan.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-HRA.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-HRA.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-IncomeTaxCalculator.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-IncomeTaxCalculator.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-KisanVikasPatras.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-KisanVikasPatras.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Calculators-NSC.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Calculators-NSC.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Career.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Career.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/CBEC.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\CBEC.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/CertificationServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\CertificationServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/ClosureofLLP.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ClosureofLLP.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/CompaniesActs.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\CompaniesActs.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/CompanyLawCirculars.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\CompanyLawCirculars.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/CompanyLawNotifaction.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\CompanyLawNotifaction.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/CompanyLawRules.aspx?mcaid=Company Rules
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\CompanyLawRules.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/ContactUs.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ContactUs.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Corporatetaxadvisorycompliance.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Corporatetaxadvisorycompliance.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/css/bootstrap.min.css
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://irkandassociates.com/css/font-awesome.min.css
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\css\font-awesome.min.css
+Content Type: text/css
+
+Uri: https://irkandassociates.com/css/style.css
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\css\style.css
+Content Type: text/css
+
+Uri: https://irkandassociates.com/DataCollectionPolicy.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\DataCollectionPolicy.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/DirectTaxationServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\DirectTaxationServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/DuedateAll.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\DuedateAll.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/DueDiligence.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\DueDiligence.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/E-PaymentOnline.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\E-PaymentOnline.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/ExciseandServiceTax.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ExciseandServiceTax.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/ExpenditureTaxAct.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ExpenditureTaxAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/FinancialConsultancyandSupportServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\FinancialConsultancyandSupportServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/FinancialInvestmentAdvisory.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\FinancialInvestmentAdvisory.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Financialreportingandaccountingadvisoryservices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Financialreportingandaccountingadvisoryservices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/fonts/fontawesome-webfont.eot?
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\fonts\fontawesome-webfont-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://irkandassociates.com/fonts/fontawesome-webfont.eot?v=4.7.0
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\fonts\fontawesome-webfont.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://irkandassociates.com/fonts/fontawesome-webfont.svg?v=4.7.0
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\fonts\fontawesome-webfont.svg
+Content Type: image/svg+xml
+
+Uri: https://irkandassociates.com/fonts/fontawesome-webfont.ttf?v=4.7.0
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\fonts\fontawesome-webfont.ttf
+Content Type: application/octet-stream
+
+Uri: https://irkandassociates.com/fonts/fontawesome-webfont.woff2?v=4.7.0
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\fonts\fontawesome-webfont.woff2
+Content Type: application/font-woff2
+
+Uri: https://irkandassociates.com/fonts/fontawesome-webfont.woff?v=4.7.0
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\fonts\fontawesome-webfont.woff
+Content Type: font/x-woff
+
+Uri: https://irkandassociates.com/ForensicAudit.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ForensicAudit.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GiftTaxAct.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GiftTaxAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GlobalTaxationBookKeeping.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GlobalTaxationBookKeeping.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/gstacts.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\gstacts.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTADVISORYANDCOMPLIANCESERVICE.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTADVISORYANDCOMPLIANCESERVICE.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTANNUALRETURN.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTANNUALRETURN.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTAudit.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTAudit.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTCANCELLATION.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTCANCELLATION.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GstCirculars.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GstCirculars.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTEWAYBILL.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTEWAYBILL.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GstForms.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GstForms.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GstHSNCodeWithRate.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GstHSNCodeWithRate.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GstInstruction.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GstInstruction.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTLIGITATIONSERVICES.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTLIGITATIONSERVICES.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GstNotifaction.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GstNotifaction.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GstOrders.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GstOrders.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTREGISTRATION.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTREGISTRATION.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTREGISTRATIONFORFOREIGNERS.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTREGISTRATIONFORFOREIGNERS.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GSTRETURNS.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GSTRETURNS.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/gstrules.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\gstrules.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/GstSACCode.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\GstSACCode.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/images/banner-1.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\banner-1.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/banner-2.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\banner-2.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/banner-3.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\banner-3.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/banner-4.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\banner-4.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/banner-5.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\banner-5.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/breadcrumb-bg.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\breadcrumb-bg.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/career-img.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\career-img.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/drop-arow.svg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\drop-arow.svg
+Content Type: image/svg+xml
+
+Uri: https://irkandassociates.com/images/due-diligence-1.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\due-diligence-1.png.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/images/due-diligence-2.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\due-diligence-2.png.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/images/due-diligence-3.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\due-diligence-3.png.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/images/email.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\email.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/favicon.ico
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\favicon.ico
+Content Type: image/x-icon
+
+Uri: https://irkandassociates.com/images/feature-checkmark.svg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\feature-checkmark.svg
+Content Type: image/svg+xml
+
+Uri: https://irkandassociates.com/images/green_right_arrow.svg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\green_right_arrow.svg
+Content Type: image/svg+xml
+
+Uri: https://irkandassociates.com/images/llp_home.svg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\llp_home.svg
+Content Type: image/svg+xml
+
+Uri: https://irkandassociates.com/images/logo.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\logo.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/request-back.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\request-back.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/serv-1.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\serv-1.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/serv-2.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\serv-2.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/serv-3.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\serv-3.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/serv-4.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\serv-4.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/serv-5.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\serv-5.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/serv-6.png
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\serv-6.png
+Content Type: image/png
+
+Uri: https://irkandassociates.com/images/test.jpg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\test.jpg
+Content Type: image/jpeg
+
+Uri: https://irkandassociates.com/images/tog.svg
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\images\tog.svg
+Content Type: image/svg+xml
+
+Uri: https://irkandassociates.com/IncomeTax.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTax.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IncomeTaxAct.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTaxAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IncomeTaxChallans.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTaxChallans.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IncomeTaxCirculars.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTaxCirculars.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IncomeTaxForms.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTaxForms.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IncomeTaxOtherForms.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTaxOtherForms.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IncomeTaxReturns.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTaxReturns.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IncomeTaxRules.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IncomeTaxRules.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/INDIANSUBSIDIARY.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\INDIANSUBSIDIARY.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/IndirectTaxationServicesGST.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\IndirectTaxationServicesGST.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/InsolvencyBankruptcyCode.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\InsolvencyBankruptcyCode.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/InterestTaxAct.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\InterestTaxAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Internationaltaxadvisorycompliance.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Internationaltaxadvisorycompliance.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/InternationalTaxationServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\InternationalTaxationServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/js/bootstrap.min.js
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://irkandassociates.com/js/jquery.min.js
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\js\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://irkandassociates.com/LimitedLiabilityPartnership.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\LimitedLiabilityPartnership.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Litigationrepresentationassistance.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Litigationrepresentationassistance.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/LLpForms.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\LLpForms.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/LUTINGST.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\LUTINGST.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/ManagementAudits.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ManagementAudits.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCA21.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCA21.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCAAct.aspx?mcaid=Companies ( Donation to National ) Fund Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCAAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCAAct.aspx?mcaid=Societies registration Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCAAct.aspx-1.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCAActs.aspx?mcaid=Chartered Accountants Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCAActs.aspx-2.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCAActs.aspx?mcaid=Company Secretaries Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCAActs.aspx-3.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCAActs.aspx?mcaid=Competition Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCAActs.aspx-1.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCAActs.aspx?mcaid=Cost And Works Accountants Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCAActs.aspx-4.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MCAActs.aspx?mcaid=Limited Liability Partnership Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MCAActs.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/MonopoliesandRestrictiveTradePracticesAct.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\MonopoliesandRestrictiveTradePracticesAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/morelink.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\morelink.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/NBFCCompliance.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\NBFCCompliance.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/newsall.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\newsall.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Newsfeed.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Newsfeed.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/NidhiCompany.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\NidhiCompany.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/NidhiCompanyCompliance.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\NidhiCompanyCompliance.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Notification.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Notification.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/OnePersonCompany.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\OnePersonCompany.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/OTHERAUDITS.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\OTHERAUDITS.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/OTHEREVENTBASEDCOMPLIANCES.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\OTHEREVENTBASEDCOMPLIANCES.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Pan.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Pan.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Partnership.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Partnership.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/PartnershipAct.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\PartnershipAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/PermitsandLicences.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\PermitsandLicences.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Personaltaxadvisory.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Personaltaxadvisory.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/PFESI.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\PFESI.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/PrivateLimitedCompany.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\PrivateLimitedCompany.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/ProducerCompany.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ProducerCompany.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Proprietorship.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Proprietorship.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/PublicLimitedCompany.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\PublicLimitedCompany.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/RevivalofStruckOffCompanies.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\RevivalofStruckOffCompanies.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/RocForms.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\RocForms.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=0BHl8DXHtI2s927YW3nNwVInFVCdiXo6yCrpMM_2yS8yYXCfdGnqX9FqSfAqEhWzwXomes-EjimBcIsywlr_lm8Ryih_a0Id2Wciptdj3eYBBpwDsZ4e1jRGn8HOut5RqLu3yA2&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-19.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=2rjs_1LQj40hwuoEmvJZEFzdED1wFmqGSAl88p-F7g5kMZCHiLjjPfkkjn2AJyMgmpqk93GSY0DiOe-CBY70qEHPQhOqtTek_HY7fMZUZbWTb5BT8HrfqndtvFAaqx4tl8oYfoAHrHLcgX12dVRG-hZ11FM1&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-24.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=3mtji3IrykT1Gft1M3_sjsD8qXmu0r5eyoTfjYeT1GgW8RRlVtJz68LhO2hF_YzafnPkQ8Cn40iwPKTwDefUB4iOedcFizEYnBF1Rw0X_XTgIGD-wDmO9hLk4GUj9hZdLMMQ9vdAvRaR9tSSnRRDMAOdJ-Q1&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-20.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=4-H_ApVg1ZBn8IoT05_uLaojouz0iARaYuM5mp3zUdclrz64z6b8JKPBbfqfn_eu3dm6Ava4rhqr2CGBWjEoUNKINzHNg7U2XhmCDdyi10AmZ9eTCQlsVb5iXlSmEmuL_kT1odo7DWBfNqL1Aao-Pi4PmPM1&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-13.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=7c8RxrNhUrTuSaLsaUdbMWTwhcmo1oj4KuCrwkA2PhmZBZDHrVlIL3sAgOma8B7xVi9RkqO3LK2lMeMMObiNTqf25muictdNZpbNmhfkGKU3wdJ_pUaiBIjYFtawdiAXeJr-ET5SZwutgecnOlzSa0bWZlI1&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-18.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=e7PUMOdvMrnCs6er7kFupwqW-qucmqVRrZuO-oJ6k8y64Li4sei0Ujomrj-zitcggjbrRO7Qwn8KM7BIjOAP-9RAae00I8XP_YFhiWm56W892s4JI3Qq9mq_RdiSlWnvFIFVUg2&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-14.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=lZFTZWccOiGq8bOT4qSp4i6-vPlSizhanKzInjkE8oH_4YN2m5K8voFbLvG4wSzB2bZK5uLP6USLdFrfOknoiK8c1LRReRqAKgxhm5cg0yeKDSiz491dS06fb1mdlbaD-KZb1bjMRQyYfgh0b7EFLOEfJzNYC_GZsaaWcKUNg28L2R490&t=559a934d
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-11.axd
+Content Type: application/x-javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=nJe1Yntm6VRP_t5AM6r-8R7Lsrt8jWapAXFrjl4b_WIXdGSO_0ZRQF2YLJ0nMxYsmHQxGzhVLVTC_Yrz5rRrm7Jvc6JrwiIqkkdlGaUoMwLL4eoSkJvqOq2o9kuKvKeMJsdKvwAzfoD2KhgA5BHAjMocs741&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-23.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=NJyYOGaB9uQRChG21eNJ3bM9JJG-ObivSCqAGuFlvdB18iHDbaHteRwknJ-hq30D3IbtwoekfGWTjnygt7XSLTaBcBBKFBYoLDHZv_HljWlH7JAASaJ5ECLT-bYq9v84wHGPqw2&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-17.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=QaF-rS3DHBuuGRKWbhZh6ReM2bxKVJk2nPwewFtKHY3wY89ItJ4ktpuH_gfbN9MQ7-8mnr1wmQ4aH5JziWVpqsJRmY3PgDtIiMT-QCRahmhJXnbilB3eDKVcT3JzhdeW4Gv9igm72ns5cEWp8XAPOhEIvRM1&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-21.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=rGlqg7-ucoS-XzBytlK0VkrBKOXLNFpUJVU9RDIBdfppiECy-TJFnBZ0AR8E--AVqlMCvYBbKWoTwFh-_NaH5swuvPdiOQE3Dok4fuPiCVzfxUuygPTlIBX0ndiN4Y4ezSHIAg2&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-12.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=RoeQUT0sHovKo7_7DagzuQlSKXkQ00rm9Uzn_yBsJl3uxEQ7NSkcvmAQ8qN3zFGVjSD5nUAIWnZaGF-DBrcmVfldul1ClVsc5paZDOD2vw1JkUKSn8HZRldU2YyfiDx6UEkYMH_AYehX41FrTeNxbGtfvmI1&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-16.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=vs0pfUypJoXeQiCqFea_Moi31ylVeO1SW57qxFaujYgaDXT6u9Uetd6ED-VZGZh0-WxfXnY7nnHhF8tDM556NvsxUMxp6O-JqnD_P1vpFcxOg-8i1V1IBUibkgDPz8j_4jGPwQ2&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-15.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=x5jJ2-yYt68RYqXmY4-3tHRFXzgKXDwRVKGY1FYw6p40EwKEQ0-JZd-ZRs0mdOTWITvC10Zn_yOq1HIQNmheuFeP7S1aqn39hje6dShd9v9xtMVc3tNgnnxYjMDHtuYuV4G-cJCbvfOcozy41NRbzcuZKgA1&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-22.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/ScriptResource.axd?d=y8Z4uxTYR43VoNhskpeckNlaxPneUaB4HvZO4ycIE0H3X51uvKV5p9UyX7XFgbFSCBPqS6lspgmyNWRGENZL5EyAFYPZMMDGwgY-MZLAGfijQANCcgQkXECXPtyCZEHeXV1iFCH024XgD_0H5A45uYn3tj5mXdambZDYQ75mDxGxjgK90&t=5907b0fc
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\ScriptResource-25.axd
+Content Type: text/javascript
+
+Uri: https://irkandassociates.com/SecretarialAudit.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\SecretarialAudit.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Section8Company.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Section8Company.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Section8CompanyCompliance.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Section8CompanyCompliance.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/SocietyRegistration.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\SocietyRegistration.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/StartUpServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\StartUpServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/StatutoryAudit.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\StatutoryAudit.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/StatutoryComplianceServices.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\StatutoryComplianceServices.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/SupremeCourt.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\SupremeCourt.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Tan.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Tan.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/TaxAudit.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\TaxAudit.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/Transferpricingstudydocumentation.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\Transferpricingstudydocumentation.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/TrustRegistration.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\TrustRegistration.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=Cost Inflation Index
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-6.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=IFSC Codes
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-9.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=MICR Codes
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-8.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=Rates of Depreciation Under Company Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-5.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=Rates of Depreciation Under Income Tax Act
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-4.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=Rates of Income Tax
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=Rates of NSC Interest
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-3.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=Rates of TDS
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-2.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=ROC Fee Structure
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-7.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/utilities.aspx?serve=TDS Rates for N.R.I u/s 195
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\utilities.aspx-1.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/View director/designated partner details
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\View director\designated partner details.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/WealthTax.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WealthTax.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/WealthTaxAct.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WealthTaxAct.aspx.html
+Content Type: text/html
+
+Uri: https://irkandassociates.com/WebResource.axd?d=-2d1ZZFpKLAHuNYbchzg0cl2ac-d1Rhye9u-Gqsd2cAvBh0XHXiOOaZkx9Vezw7DDXh88Y8tXQBDhSb1GIZhpLwfp75wnoQFtTMD3eQzVPlZrf5__1UUJaHxWLMvjrZG4DIxtmakJG-rvxGEilDG_xxNhso1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-30.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=1E2qsBVhEnVXtvkCBk1bSMz0HoHLQljuMEgtReSH3qno7KxzJ89Anh4wjQfD5ThhkGsHI20w1bLvwNMBoIiRlInAna8j7zFPizpdEjsKJ-uYsVmBrQjJRaYvISu04vSulUmnS1Twps_tgV-Au6umQMS88taARfTfYvm9hfC96BV33yiX0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-11.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=1IGx3oUTcmpXE7j1fwO-lH3zZCjnpbWbMaLNOH6eF64alEl_NSs-jDd0PpXLIYD4VC5egjKoe_5r0NAcPUoGF3XCpqrKvbWR1AlGBTaHILn-DIwL4O2U_LsB3nfS-vM753RXEw2&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=34q7aZiUlAWnxqy5MMWzFKqWeq6dCOWve5ho0W93h6Ioy2GEBuBrMqRxj0H8RT_3TN93_yGM2HUzXCjqoZPJEP5HDiNeSSfkSqdPRCcGX-9c49-qdDVDcCBH6naLFqstjsxI4rJArUr15CqGbS0CkpzQfD2D2DjRG0wDEhMSD9GcN8-W0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-6.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=3UccRTNgKLzQJQIGtqKzBOnDSbWMQP2kb_b8R83UAB7VaZk6d-2gSeKqOUXMdk2SK-_V1K4Fek-Whu6aEfQrwpNxcT_d2W1GLb5tzrJvtlvtc02srTzWPZxkclFq2qa6eDhG5uhdonRYhKAlXUEN6xKUYss1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-24.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=4-a-nc5VUy2HWozMEBMNebdpAXPywyzW_Vr8lJ8-K9X7uPZQuZ3nIDEPZ-O374hznZ4cv8qLMgzzoGsTdjnBpRTRDdAyJ3sMGqU3ff9bGJ41xFSSlmzZBqlP0WKJ9Oh7KSHbcq1MT-fOwsQl1muE-dVfmnU1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-4.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=4ZEerRPsN3y8SRhQTz1aH4HlltYGw26iAIBb1hraToiSWlKGpTGt0x4zy5GjfXpq3nRWNgrWBPHhbsh4R1YHLxdxDmMTIxWaD_tpC06iogLoVmW3rGql889KE99C2p8qVmcnrxeR1KutAWfNUEge-iumwLtBv4vIgE6IXo92bD2w8L8I0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-39.axd
+Content Type: image/png
+
+Uri: https://irkandassociates.com/WebResource.axd?d=6Mjn46RmSqOcAYeLFhGe9r6S1am35X_HreJ_H6azTDV7fmigtgdw186wEoMCu3FXNZepWOEHnVuH5Lk6y6XVju9Rl8E8Hrz0oeOGoC6DN3yD1NFC33wnQo3-6OTfPt_Q3rnPsAkB6eq9enxVuJPtT4WjMC01&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-25.axd
+Content Type: image/png
+
+Uri: https://irkandassociates.com/WebResource.axd?d=8wMyrpv0WM9tx-5Z43fnXQ9nkiYCD3aOwSvXzFcCPuzSodD8pNEbsosbPxW-MdrTb6QrNaLlRlxdOj7PMYPArjFh55UsG8wdHI4Rp9FAKQYZd1hD8JNBHKcCc8duM6Ib3t7KfK9qWNzVv7L9QtE4R4SR8UP3xtTN6Rp8KXfdhd-R5CH60&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-28.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=9o4KdFKAyfNueWBokgFUBjcyRPsnTw6B7v2X3kjJmfjpVVvxE99ihRVc2AMhWyFjuG-C2YL7a4TWqs3CNReqA36NdONHC9g7T-8ZhA_fjbW5-B1jKxMpalbyoBWffCYjQzO0id4XTKDxdFqrVtXJR1n6FTw1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-40.axd
+Content Type: image/png
+
+Uri: https://irkandassociates.com/WebResource.axd?d=aG2eFIYtCXNezY2I_aOTANxtZAUS1vCx0YMOV1bDR_4EQLWo4tI8UZDVIT_UXtsYDhEwf_LoFkcFGcvc8FEGuuRA4QRy1k65Esj1ushKiQa_zLne7mSE6DyPVPBDqrUXGONx6A2&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-13.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=bT_GgPTxekAhJa3NWiRKJV9uGxFvmQnHQpdQU_odvfZNPVJtI1fd2NzcR04A2gN7Vg--b_eDA6S88ilSMyX1-Q3Fc0FXEm4cloTHeeyHHjJnNumZEbdwNj5Yx8RbkqK673ZQr68VZCrmh5KcDPgluqiKKr1Irj_KOzw5RdjWYpvH9P6s0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-37.axd
+Content Type: image/png
+
+Uri: https://irkandassociates.com/WebResource.axd?d=cCM7NzVjlXlH0OTUJF_zWPbPI5ORDlFSITl1qN3SVbDAGh-oR2UKZ8-RAYurjs7ETaAHczR49gR5be-xHl4Fm473uY1ungIeK2tBr6dscV9U56YeEMTUsbR1tIcCBcluUZMGpcVUe_qL6ZV7YTl9jC3Xo281&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-18.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=CgdEoaFQ_u4h47GLPmq-dQxzz3fHqUVlbD9e6g_dYjLHGGm0MdiGq4-RBk85FtclpgXgoE9MtZ6Oh2fto6u_mn7yQVquPPpwnGBQW_Zic6t8dp6Z_nCTJCSuEeUbPFUeHpfzoiGMATCqaV8XgUVZ8yilcmvWb7b1g-EIoToFkF4Hp1NR0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-26.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=CnMWJ29uugfRlLsXtPekRF5CDaB4RjOGAjbvXU_vAdybBpghG-NQs2pjHKgjiHvBn7Qb6TVdpU_tZw4rrcwFS35-neaUHb-b6zZImLAaUHEo3wQGIs70H9Gvcmk-UvA9NfudcSbxcsR174HeVPjhs1STq9k1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-23.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=csFMsN61JsvrVNe4Ru0unkewoMnhKmRGaLLs0dxXQxeQ1ovLpVmO4W690a3GHC-dinKgwhNdZ3MDaeQruJMVL90yNbtyiw2QLwR_Bc7hRlEBSPW48nQs7NYlnH1c-eS2MZF0kQuPKd_x2xi04V4BUM4M-3s1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-14.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=EdsThNsqcQlswSLFuEQHbFnOG4VU4qc7CDChzq1ZoMAzv7hkeis15qf1Xt9IgkkuXa_f1ApOLAhTLKpKNpEt_kgKzbsVqvM5KuIyKs6ggvl2z6FUvrm5IYfPUQvw1AsMK1lRm8MzCLVNheraMpfQkJfv2RzFtQmtZH5KJGDeXdRcGoCD0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-34.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=Fboypw7t96yj4VehQ43BXL_7hRV6g67oOhq7jEjHjdsmYiqchHKSyY4ZK0MeBUrYN69eoUf1rt72w_kjbc4Fkqka_Xwl3-FTVg3oVV7Lrin1vDoxA6HiD78d0folvQwhZ2jt73BjaGov0RSAId5UM8QE8wA1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-9.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=gpAV-fKOviCGYSZNpjWKItkoIkKc1RTjIfE33WQH5YKJP12g4O8fQD3jabIWtu4awgDkN9g89kmUMePLeWDnJ8UGfTJ6ytNnz9x6k16Z5Dw5cCgVG8ex93EZC7Oh8rF44DWfXw2&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-19.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=hCFtuTbzjPuKyA4KCZg1fTbDfOYFsjVUqVLK_AOiAdDh5YLyG0O3hXxiDRSs2gLEmXM7GejstZF8hgrUDR7a3wsYGZWvRbq4mv9Hl-f_XqhFU1wfyB8lpe8Hvt03tm3_et5QqQtsMbwK7TLU6j-iUcncML0I2VA_u7Z3rG-bUbGjYp6m0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-7.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=hJQ-uWCYmqm9gxH6zaJqQR2y3rjAK--AgVIGHQaChoq7g08UZnfnVBPt4x4CZkuJKbX5CY2ieQzLOSQOOSTcYpFJQFTZlQkof7qZ19wUTRASbvAPWQBv06elSSnDd22gH1ktqcQdHs1eaDmgt4GUwXYm_-v87jeiDOPDBq05j2ThSUvK0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-35.axd
+Content Type: image/png
+
+Uri: https://irkandassociates.com/WebResource.axd?d=kMAe9IZt65oBvM-13l_YGcwNLKUbJfteWrQxZcRkPpIWJIeA6PLiawdB3q9W-c5dofv5gZbpWN5oRDD9wXJ5NEFCxt3CT6UU_XNc_ty7M8AydlxynStdGFfu9mV7hXxa2uGQo1zHvTZP26dHqLzOnq4-z_yvvv_Xk4hGLDowF_0WSSiT0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-32.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=m0M2NaWZDLCNR7e_CP7ZRMMxsA8DJEs9tgnbzLYz2rkmRoMj-R0hXp_L6VKj0fTemp1iMJiUc3iQw0jhQEJxQ5th54so18dz_dZRbnRkaDVLta7L3F0GmunSmG6Hqf7wxLTk6-ROkzKEtaWBORd03hpCabI1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-8.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=mfrlfqky7WBHDWU8eUXHF7r8KKFWoxGXzSUqKcvHi__Ci58RLHSpxs0NzP5LXvDEOxXVluayUPNco9pud5oLAIJeJ5BOhmsrucZr8pFtPB3wbvvfNLEgiL1i06881LPWAliHmPN2l5yzzbBhG0yMh6RoHyc1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-29.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=mhgRM-xAfYh_6QKLAZrsBZZ-I-z7sYOezEqJye5jK3hPQQx21Qc9XOm043_89wprY9zZ8xY4u1VaE0v77TdGyBE4xc0cFH09lq94yL7NXRU5vWt-ldsuCWgFDhTF_NX5xRj4CJYz6u3SW3DqtzDdJZSN3w-LfZ3H7Sg9FQ5a5f2CU8EI0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-41.axd
+Content Type: image/png
+
+Uri: https://irkandassociates.com/WebResource.axd?d=MhKOvEXlIxEkJFBhtaLK1OlHlx5t9uyw-GnRAO_V429V-79tO5vCRXINj9K5GYbKnbe4wn-zxEsJkwVPZ26ETC3dwLsSYkoT3sAeklWimPDuisN98Situ1oSZZsb9K8jhqMv4Q-sy34EkO9Hixg7UB41vvFqCTHLHZMqa1Ey6BYfoRud0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-36.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=mo-gX-IPErSMtaNnVrODypy33YDe7bGPj2HpI5ZVX9Q82r9ZoUuv5czON7RH85mWDX7RdaI9TYoJaURxhMy3ThfuNzD63geCacq1AKi0Qn-uhaTBehsedrEmnb9Tuwp4e2fjhzkQQbowVZeBP9r4rtr3v_s1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-15.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=N5OLcBj3907JOZ2yOuri15S5Izyo7D7kMfnTP1HvxGJtgy59sv3zLDlJooZgOBqKClR9xtaNSoWTUoiGkBIuPQGpwu1BGmUHUGspqFNHbUm1bz-VCmYMycBdFXgT2Ih_hCs5dg2&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-17.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=NaZgiacmBJbtypi_8_JPTZfZuc1Hr0Z5tHsVZu9x-ddgZe3n8lGHmg03G5Nz2e8OPQxCaaKEsTqtbET661SP58BD5C5jX5sMheK5lKz7Fag-bzCqSmgPe11na6pRaYqDdKOiAjIc0uxifR0FIfFNn0e_WNM1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-10.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=pNzqAmosyEJuWs67L7Wpr_eI7_CPv76CcerPPSEeCADZ_jo_eVXqlwCLA5D4HRNzi8S7IL9JpmhMzlEvfqutLx2r7lMQepRH3764-1roVBmFemSi44SZqwZML4MI_2mJ6yhhuTVy1iHmJwCYhdYseGAFCbc1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-31.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=q6GDo0i5pJTPTi5_jmzcNceXE2_le2E9UWITjhZFCtL6e3bzIE0id4hJrOFaukDxbUQGbtt8pDKvhAkDs9fvkCNv2YR9xgruR75D4syOPTFozYtWF17Kf6iRDG5MhyP9-Ju5cC44_kylo7dp1SuoyKEdRZ4E75VXm3gVfLLy17u84siJ0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-33.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=riR5v0Qtw_unh6jx9E8GTZ38mVG_xhNPE5nzx1zZ5NNf3inJ6xMp-xTq8i9ooQUufEwfCLujvjSuF10Rt94ngqo0Cdxnie7Gnu84CplgZShdIn0xfzWtr1Pxg4QnjqrkeVqP2BpNed8LdkQxNPxnxgazhuA1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-2.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=tupmek8tM5N05pn4jo8B_nwEDahGk0NuQht27lKp_bttQMvG6gphhuOq4eC2AEsrq8oZvMn5ZFC1UNI1PzIjxR9MijnhpS-whOerhwoY1T0uqk-q2m7c5Ldq1vpWnjdRj6H7f-kM4lQETM9Umvb811sMrg81&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-22.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=u2tzRozeP5ATW0pn1BRwzBxShxRxShRyIvr1r2piVVLM7kJjzNX2o78TyK5J-8j5h7qm3F6GKXkWyOTXi2DogcFbQhuoPGhTTSDEfRF-WpxPfrtigq8uY7TRdP7m07542F6ovByKFI7H6GwXZfxmssbRUlw1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-16.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=uUQk07wKABI0Tj2-J5X4JYo7FEtbu589S8NhFyysGRVFaiYPf0lwte-U7x6MjXiDZ_xr0MwVBLfKbbyYPqCVOxd7Ns6YA7wAF-IpuD0rROzSskhg1r0XgOtKBMEhhyAOwSHPg7zxHZEx17KtK2T-wW2wIYw1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-12.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=wGFm07wmklqP8bpY1C70J0bKIuu0IDAhx773Xg_NJm3MGfK-fxO7E5ag_m8LGnk4ZPu4_7IUn4ao6MnfyLZQtKwCn6ygcAjidlHCjpwzTgwKWtGQHbSsB9D8NN0w9pYWnEBtxdNpysVHI7cQeeDNdX6Eh5xYi_Np0pd0FD7EEbh0XC7R0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-5.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=wvxcIBJPZYk_adEwHBxZgfQKjNSq8EcSY7vKus191efJX1WxfGdYJrab4aRgzp9Dl22Le-1w99T3oOoasYU7UaFgq9GjZ6nlwMsPntRKc0iu-q5HdHebm9HANUJfmh0eFuSQ96mdmjm8oy3erBIIOxDwoI41&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-1.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=x2gJBhCMYm6O1yoJaAypQ8WY5XxgzNW3B7fZqLvQeCC1mGwkaxx5ULoZXdm0InDdE-TbR_P3seV27ehmsWKq9kiaMpx0-TlbToHfjYNiwqnrm7HZRGGcHzwuUM_Ri9xFnO2rhlzNZDTCCbHV0a-yGO-cFXA1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-20.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WebResource.axd?d=yvyzOXUmD7x5IqphCab0OuD3AeCNITcLvNYCL9JDZDr86RwuiO5JJlmZKnmBOn2WzT3Ej6GxYgmbFvOivoR5G0D1JAprGi7i8nvQFzZRPhd3HyUH06iVRpgBiTqKhlSTSsGULHfLFsmxL5oo7DHXFrfJ29Y1&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-3.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=z0tq0arAkzXaJCoxrSTs0X5P1iO7Yqd2nqTD3Jz1tgVeSaZrKewZk8aSaozyLfARDOXyqNclVEQFYqV2ssfYp4aYumXOWkmvXlR7CHxDbHxWCmZATSS_HXNJ2HSjMp8bBXINGn3JB6xC1z6oLAXKi7Tb3rLtKA1nNRN4Y88ZrtXVXtJZ0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-38.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=ZWOMMgplBfCz3FzeqRs_VPU2UKxLDquf3UeY79kfFy5g1FWE3CZPeHqYIvBvxCAiYNhDTf5VUdHexBE3stqU8u682T1HODB8cEWMYsneHvyzxq44HDHBkBfRX-7pFgYCiduFrRih2QfESDvHaElH7ccAeXNbA3M8sVf4-jhq_giknZUe0&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-27.axd
+Content Type: image/gif
+
+Uri: https://irkandassociates.com/WebResource.axd?d=_ggQBNFLTB05WWFKeM1X9RpsWDnY1fACLgrIuLruQFO2J1o0wmBX2N9HHkZ0sdMPIOSpFOCKpHgkZ08F8ufTwFNif6LJFY5bZWL-YFgurVwK5Xv7URjWteiv0Yr3BL_CwIKSCA2&t=638845407014717151
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WebResource-21.axd
+Content Type: text/css
+
+Uri: https://irkandassociates.com/WindingPrivateLimitedCompany.aspx
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\WindingPrivateLimitedCompany.aspx.html
+Content Type: text/html
+
+Uri: https://taxindiaonline.com/RC2/pdfdocs/forms/service/challan.pdf
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\RC2\pdfdocs\forms\service\challan.pdf
+Content Type: application/pdf
+
+Uri: https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit
+File Name: C:\Users\satvi\OneDrive\Desktop\IRK_Backup\irkandassociates.com\translate_a\element.js
+Content Type: text/javascript
+

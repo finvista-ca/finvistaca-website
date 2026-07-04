@@ -1,0 +1,3328 @@
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('html') -->
+<!-- FILE NAME SUGGESTIONS:
+   * html--node--1531.tpl.php
+   * html--node--%.tpl.php
+   * html--node.tpl.php
+   x html.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/html.tpl.php' -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://gst.py.gov.in/sites/default/files/fav-icon.png" />
+<meta name="description" content="P-VAT RELATED INFORMATION / SERVICES  E-Services  New Registration Renewal Filing of Return e-Payment Form Submission" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://gst.py.gov.in/" />
+<link rel="shortlink" href="https://gst.py.gov.in/" />
+
+<title>P-VAT | Official Website of Commercial Taxes Department, Government of Puducherry, India</title>
+<style>
+@import url("https://gst.py.gov.in/modules/system/system.base.css");
+@import url("https://gst.py.gov.in/modules/system/system.menus.css");
+@import url("https://gst.py.gov.in/modules/system/system.messages.css");
+@import url("https://gst.py.gov.in/modules/system/system.theme.css");
+</style>
+<style>
+@import url("https://gst.py.gov.in/sites/all/modules/views_slideshow/views_slideshow.css");
+</style>
+<style>
+@import url("https://gst.py.gov.in/sites/all/modules/simplenews/simplenews.css");
+@import url("https://gst.py.gov.in/modules/aggregator/aggregator.css");
+@import url("https://gst.py.gov.in/modules/comment/comment.css");
+@import url("https://gst.py.gov.in/sites/all/modules/date/date_repeat_field/date_repeat_field.css");
+@import url("https://gst.py.gov.in/modules/field/theme/field.css");
+@import url("https://gst.py.gov.in/modules/node/node.css");
+@import url("https://gst.py.gov.in/modules/poll/poll.css");
+@import url("https://gst.py.gov.in/modules/search/search.css");
+@import url("https://gst.py.gov.in/modules/user/user.css");
+@import url("https://gst.py.gov.in/modules/forum/forum.css");
+@import url("https://gst.py.gov.in/sites/all/modules/views/css/views.css");
+@import url("https://gst.py.gov.in/sites/all/modules/back_to_top/css/back_to_top.css");
+@import url("https://gst.py.gov.in/sites/all/modules/ckeditor/css/ckeditor.css");
+@import url("https://gst.py.gov.in/sites/all/modules/media/modules/media_wysiwyg/css/media_wysiwyg.base.css");
+</style>
+<style>
+@import url("https://gst.py.gov.in/sites/all/modules/colorbox/styles/default/colorbox_style.css");
+@import url("https://gst.py.gov.in/sites/all/modules/ctools/css/ctools.css");
+@import url("https://gst.py.gov.in/sites/all/modules/dynamic_banner/css/banner.css");
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+<style>
+@import url("https://gst.py.gov.in/sites/all/modules/tb_megamenu/css/bootstrap.css");
+@import url("https://gst.py.gov.in/sites/all/modules/tb_megamenu/css/base.css");
+@import url("https://gst.py.gov.in/sites/all/modules/tb_megamenu/css/default.css");
+@import url("https://gst.py.gov.in/sites/all/modules/tb_megamenu/css/compatibility.css");
+</style>
+<style>.tb-megamenu.animate .mega > .mega-dropdown-menu,.tb-megamenu.animate.slide .mega > .mega-dropdown-menu > div{transition-delay:200ms;-webkit-transition-delay:200ms;-ms-transition-delay:200ms;-o-transition-delay:200ms;transition-duration:400ms;-webkit-transition-duration:400ms;-ms-transition-duration:400ms;-o-transition-duration:400ms;}
+</style>
+<style>
+@import url("https://gst.py.gov.in/modules/locale/locale.css");
+@import url("https://gst.py.gov.in/sites/all/modules/text_resize/text_resize.css");
+@import url("https://gst.py.gov.in/sites/all/modules/views_slideshow/views_slideshow_controls_text.css");
+@import url("https://gst.py.gov.in/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/views_slideshow_cycle.css");
+@import url("https://gst.py.gov.in/sites/all/modules/styleswitcher/styleswitcher.overlay.css");
+</style>
+<style>
+@import url("https://gst.py.gov.in/sites/all/themes/chh/css/bootstrap.min.css");
+@import url("https://gst.py.gov.in/sites/all/themes/chh/style.css");
+</style>
+<style>
+@import url("https://gst.py.gov.in/sites/default/files/css_injector/css_injector_2.css");
+@import url("https://gst.py.gov.in/sites/default/files/css_injector/css_injector_3.css");
+@import url("https://gst.py.gov.in/sites/default/files/css_injector/css_injector_12.css");
+@import url("https://gst.py.gov.in/sites/default/files/css_injector/css_injector_14.css");
+</style>
+<link rel="stylesheet" href="https://gst.py.gov.in/styleswitcher/css/nexus?t1hf50" id="styleswitcher-css" />
+<script src="https://gst.py.gov.in/sites/all/modules/jquery_update/replace/jquery/3.7/jquery.js"></script>
+<script src="https://gst.py.gov.in/misc/jquery-extend-3.4.0.js"></script>
+<script src="https://gst.py.gov.in/misc/jquery-html-prefilter-3.5.0-backport.js"></script>
+<script src="https://gst.py.gov.in/misc/jquery.once.js"></script>
+<script src="https://gst.py.gov.in/misc/drupal.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.effect.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/views_slideshow/js/views_slideshow.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js"></script>
+<script src="https://gst.py.gov.in/misc/form-single-submit.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/back_to_top/js/back_to_top.js"></script>
+<script src="https://gst.py.gov.in/sites/all/libraries/colorbox/jquery.colorbox-min.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/colorbox/js/colorbox.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/colorbox/styles/default/colorbox_style.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/dynamic_banner/js/banner.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/tb_megamenu/js/tb-megamenu-frontend.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/tb_megamenu/js/tb-megamenu-touch.js"></script>
+<script>var text_resize_scope = "main";
+          var text_resize_minimum = "12";
+          var text_resize_maximum = "16";
+          var text_resize_line_height_allow = 1;
+          var text_resize_line_height_min = "12";
+          var text_resize_line_height_max = "22";</script>
+<script src="https://gst.py.gov.in/sites/all/modules/text_resize/text_resize.js"></script>
+<script src="https://gst.py.gov.in/sites/all/libraries/jquery.cycle/jquery.cycle.all.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/js/views_slideshow_cycle.js"></script>
+<script src="https://gst.py.gov.in/sites/all/modules/styleswitcher/styleswitcher.js"></script>
+<script src="https://gst.py.gov.in/sites/all/themes/chh/js/valid.js"></script>
+<script src="https://gst.py.gov.in/sites/all/themes/chh/js/bootstrap.min.js"></script>
+<script src="https://gst.py.gov.in/sites/all/themes/chh/js/superfish.js"></script>
+<script src="https://gst.py.gov.in/sites/all/themes/chh/js/mobilemenu.js"></script>
+<script src="https://gst.py.gov.in/sites/all/themes/chh/js/custom.js"></script>
+<script src="https://gst.py.gov.in/sites/all/themes/chh/js/jquery.marquee.min.js"></script>
+<script src="https://gst.py.gov.in/sites/all/themes/chh/js/jquery.pause.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"nexus","theme_token":"bQh0gfFepbIlUySAjJozDk2-gRPCnKCVKhyql0qpRHg","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/3.7\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.effect.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"misc\/form-single-submit.js":1,"sites\/all\/modules\/back_to_top\/js\/back_to_top.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/dynamic_banner\/js\/banner.js":1,"sites\/all\/modules\/tb_megamenu\/js\/tb-megamenu-frontend.js":1,"sites\/all\/modules\/tb_megamenu\/js\/tb-megamenu-touch.js":1,"0":1,"sites\/all\/modules\/text_resize\/text_resize.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"sites\/all\/modules\/styleswitcher\/styleswitcher.js":1,"sites\/all\/themes\/chh\/js\/valid.js":1,"sites\/all\/themes\/chh\/js\/bootstrap.min.js":1,"sites\/all\/themes\/chh\/js\/superfish.js":1,"sites\/all\/themes\/chh\/js\/mobilemenu.js":1,"sites\/all\/themes\/chh\/js\/custom.js":1,"sites\/all\/themes\/chh\/js\/jquery.marquee.min.js":1,"sites\/all\/themes\/chh\/js\/jquery.pause.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/simplenews\/simplenews.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/back_to_top\/css\/back_to_top.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/dynamic_banner\/css\/banner.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.4.0\/css\/font-awesome.min.css":1,"sites\/all\/modules\/tb_megamenu\/css\/bootstrap.css":1,"sites\/all\/modules\/tb_megamenu\/css\/base.css":1,"sites\/all\/modules\/tb_megamenu\/css\/default.css":1,"sites\/all\/modules\/tb_megamenu\/css\/compatibility.css":1,"0":1,"modules\/locale\/locale.css":1,"sites\/all\/modules\/text_resize\/text_resize.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow_controls_text.css":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/styleswitcher\/styleswitcher.overlay.css":1,"sites\/all\/themes\/chh\/css\/bootstrap.min.css":1,"sites\/all\/themes\/chh\/style.css":1,"public:\/\/css_injector\/css_injector_2.css":1,"public:\/\/css_injector\/css_injector_3.css":1,"public:\/\/css_injector\/css_injector_12.css":1,"public:\/\/css_injector\/css_injector_14.css":1,"https:\/\/gst.py.gov.in\/styleswitcher\/css\/nexus":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px","file_public_path":"\/sites\/default\/files","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"viewsSlideshow":{"news_slider-block_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0},"slidshow-block_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0},"what_s_new-block_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0},"photo_gallery-block_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0},"footer_external_logos-block_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_news_slider-block_1":{"num_divs":5,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"news_slider-block_1","effect":"scrollLeft","transition_advanced":1,"timeout":5000,"speed":1500,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"play_on_hover":0,"action_advanced":1,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"pause_after_slideshow":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"},"#views_slideshow_cycle_main_slidshow-block_1":{"num_divs":1,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"slidshow-block_1","effect":"fade","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":0,"pause_on_click":1,"play_on_hover":0,"action_advanced":1,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"pause_after_slideshow":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"},"#views_slideshow_cycle_main_what_s_new-block_1":{"num_divs":4,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"what_s_new-block_1","effect":"scrollUp","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"play_on_hover":0,"action_advanced":1,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"pause_after_slideshow":0,"fixed_height":1,"items_per_slide":4,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"},"#views_slideshow_cycle_main_photo_gallery-block_1":{"num_divs":5,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"photo_gallery-block_1","effect":"fade","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"play_on_hover":0,"action_advanced":1,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"pause_after_slideshow":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"},"#views_slideshow_cycle_main_footer_external_logos-block_1":{"num_divs":16,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"footer_external_logos-block_1","effect":"scrollLeft","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"play_on_hover":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"pause_after_slideshow":0,"fixed_height":1,"items_per_slide":5,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"viewsSlideshowControls":{"slidshow-block_1":{"top":{"type":"viewsSlideshowControlsText"}},"footer_external_logos-block_1":{"bottom":{"type":"viewsSlideshowControlsText"}}},"back_to_top":{"back_to_top_button_trigger":100,"back_to_top_button_text":"Back to top","#attached":{"library":[["system","ui"]]}},"styleSwitcher":{"styles":{"custom\/newsite":{"label":"A","name":"custom\/newsite","path":"https:\/\/gst.py.gov.in\/sites\/default\/files\/css_injector\/css_injector_15.css","weight":"-1","status":true,"is_default":false,"_i":0,"theme":"nexus"},"custom\/newstyle":{"label":"A","name":"custom\/newstyle","path":"https:\/\/gst.py.gov.in\/styleswitcher\/css\/nexus","weight":"0","status":true,"is_default":true,"_i":1,"theme":"nexus"},"custom\/g":{"label":"A","name":"custom\/g","path":"https:\/\/gst.py.gov.in\/sites\/default\/files\/css_injector\/css_injector_16.css","weight":"1","status":true,"is_default":false,"_i":2,"theme":"nexus"}},"default":"custom\/newstyle","enableOverlay":1,"cookieExpire":31536000,"theme":"nexus"},"urlIsAjaxTrusted":{"\/p-vat":true}});</script>
+<!--[if lt IE 9]><script src="/sites/all/themes/chh/js/html5.js"></script><![endif]-->
+<script>
+(function ($) { // JavaScript should be compatible with other libraries than jQuery
+$(function(){
+	
+//search button disable code starts	
+$(document).ready(function(){
+		$('li.en a').css("display","none");
+		
+		
+    $('.region-region-search .form-submit').attr('disabled',true);
+    $('#edit-search-block-form--2').keyup(function(){
+        if($(this).val().length !=0)
+            $('.region-region-search .form-submit').attr('disabled', false);            
+        else
+            $('.region-region-search .form-submit').attr('disabled',true);
+    })
+});
+//search button disable code ends
+
+
+
+$(document).ready(function() {
+    var elements = $("#edit-submitted-name");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity("Please fill out this field"); 
+            }
+        };
+    }
+	var elements2 = $("#edit-submitted-email-");
+    for (var i = 0; i < elements2.length; i++) {
+        elements2[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity("Please Write e-mail"); 
+            }
+        };
+    }
+	var elements3 = $("#edit-submitted-feedback-");
+    for (var i = 0; i < elements3.length; i++) {
+        elements3[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity("Please write your feedback"); 
+            }
+        };
+    }
+});
+	
+// onsubmit starts for feedback
+$(document).ready(function(){  
+    $(".webform-client-form").submit(function(e) {
+
+
+ 
+//$("#edit-submitted-name")[0].setCustomValidity("");
+		var alpha = /^\s*[a-zA-Z\s]+\s*$/;
+		if(!alpha.test($(".feedback-name").val())){
+			e.preventDefault();
+			alert("Only alphabets are alloweded for name.");
+			$(".feedback-name").focus();
+		}
+		//var alphanumers = /^[a-zA-Z0-9.,- ]+$/;
+		var alphanumers = /^\s*[a-zA-Z0-9,.-\s]+\s*$/;
+		if(!alphanumers.test($(".feedback-feedback").val())){
+			e.preventDefault();
+			alert("No special characters are allowed in feedback");
+			$(".feedback-feedback").focus();
+		}
+		var captcha_value = $('#edit-captcha-response').val();
+  if(captcha_value == "")
+  {
+   e.preventDefault();
+   alert("Please enter the captcha");
+   $("#edit-captcha-response").focus();
+  }
+var x = $(".feedback-email").val();
+  var atpos = x.indexOf("@");
+  var dotpos = x.lastIndexOf(".");
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+  e.preventDefault();
+        alert("Please enter a valid e-mail address");
+  $(".feedback-email").focus();
+  }
+		   
+    });
+});
+// onsubmit ends for feedback
+	
+$( 'a' ).each(function() {
+  if( location.hostname === this.hostname || !this.hostname.length ) {
+      $(this).addClass('local');
+  } else {
+     $(this).addClass('external');
+	}
+});
+
+$(".external").click(function () {
+	var href= $(this).attr('href');
+   
+ if (confirm("External site that opens in a new window " + href) == true) {
+        return true;
+    } else {
+        return false;
+    }
+
+});
+
+
+$("li.en a").click(function () {
+	var href= $(this).attr('href');
+    });
+
+$("li.ta a").click(function () {
+
+	var href= $(this).attr('href');
+   	if (confirm("Do you want to change website language in Tamil ?") == true) {
+        return true;
+    } else {
+        return false;
+    }
+	
+});
+	
+$("li.gu a").click(function () {
+	var href= $(this).attr('href');
+    		if (confirm("Do you want to change website language in Gujarati ?") == true) {
+				return true;
+			} else {
+				return false;
+			}
+	});
+
+
+$("object").text("this is captch sound file");
+
+$(".cssvalid a img").eq( 2 ).attr("src","https://gst.py.gov.in/sites/default/files/icon_W1_a.jpg");
+
+$("a.style-newstyle").attr("title","<? echo $default ?>");
+$("a.style-newsite").attr("title","<? echo $theme1 ?>");
+$("a.style-g").attr("title","<? echo $theme2 ?>");
+$(".content").attr("tabindex","0");
+$(".webform-client-form label").attr("tabindex","0");
+//$( ".quicktabs-style-basic li a" ).removeAttr( "href" );
+$( ".quicktabs-style-basic li a").attr("tabindex","0");
+
+ $(this).on('keydown', 'input, select,a', function(e) {
+        var self = $(this)
+          , form = self.parents('form:eq(0)')
+          , focusable
+          , next
+          ;
+            if (e.keyCode == 13) {
+                focusable = form.find('input,a,select,button').filter(':visible');
+                next = focusable.eq(focusable.index(this)+1);
+                if (next.length) {
+                    next.focus();
+                    $($this).click();
+                } else {
+                    $(this).parents('li').siblings().removeClass('active');
+                    $(this).parents('li').addClass('active');
+                     $(this).click();
+             
+                }
+                return false;
+            }
+        });
+		
+});
+})(jQuery);
+
+</script>
+
+
+<style>
+
+.bhashini-plugin-container
+
+{
+
+display: inline-block;
+
+height:10px;
+
+}
+
+
+.top-right-inner1 
+{
+    float: left;
+
+margin-top: 0px;
+
+}
+.bhashini-dropdown-btn
+{
+background-color:red ! important;
+
+}
+
+</style>
+
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1531 node-type-page i18n-en">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('page') -->
+<!-- FILE NAME SUGGESTIONS:
+   * page--node--1531.tpl.php
+   * page--node--%.tpl.php
+   * page--node.tpl.php
+   x page.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/page.tpl.php' -->
+<section class="top-header01" >
+<div class="container" >
+<div class="row">
+	<div class="col-sm-12"> 
+	    <div class="top-left01-inner1">
+			
+			
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--skip-to-main.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-skip-to-main">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--2.tpl.php
+   * block--block.tpl.php
+   * block--skip-to-main.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <a href="#maincontent" title="click to go on main content" class="m_content"><img src="https://gst.py.gov.in/sites/all/themes/chh/images/icon-2.png" alt="click to read main content"/> Skip To Main Content</a>
+<a href="https://gst.py.gov.in/screen-reader-access" title="click to go screen reader page" class="skiptoreader"><img src="https://gst.py.gov.in/sites/all/themes/chh/images/icon-1.png" alt="click to open screen reader page"/> Screen Reader Access</a>
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+ 
+		</div>
+		<div class="top-right01">
+
+		<div class="top-right-inner1">
+		<div class="bhashini-plugin-container"></div>
+	
+                </div>
+
+			
+		<div class="top-right-inner2">
+		
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--style-switcher.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-style-switcher">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--styleswitcher--styleswitcher.tpl.php
+   * block--styleswitcher.tpl.php
+   * block--style-switcher.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-styleswitcher-styleswitcher" class="block block-styleswitcher">
+
+    <h2 tabindex="0">Style Switcher</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="/styleswitcher/switch/nexus/custom/newsite?destination=node/1531" class="style-switcher custom-style style-newsite" data-rel="custom/newsite" rel="nofollow">A</a></li>
+<li><a href="/styleswitcher/switch/nexus/custom/newstyle?destination=node/1531" class="style-switcher custom-style style-newstyle" data-rel="custom/newstyle" rel="nofollow">A</a></li>
+<li class="last"><a href="/styleswitcher/switch/nexus/custom/g?destination=node/1531" class="style-switcher custom-style style-g" data-rel="custom/g" rel="nofollow">A</a></li>
+</ul></div>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+		
+		
+		</div>
+		<div class="top-right-inner3">
+		
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--textsize.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-textsize">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--text-resize--0.tpl.php
+   * block--text-resize.tpl.php
+   * block--textsize.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-text-resize-0" class="block block-text-resize">
+
+    <h2 tabindex="0">Text Resize</h2>
+  
+  <div class="content">
+    <ul class="textresize"><li><a href="javascript:;" class="changer" id="text_resize_decrease" title="Decrease font size">A-</a></li>
+	<li><a href="javascript:;" class="changer" id="text_resize_reset" title="Reset font size">A</a></li> 
+	<li><a href="javascript:;" class="changer" id="text_resize_increase" title="Increase font size">A+</a></li></ul><div id="text_resize_clear"></div>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+		</div>
+		<div class="top-right-inner4">
+		
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--language-tran.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-language-tran">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--22.tpl.php
+   * block--block.tpl.php
+   * block--language-tran.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <script>
+/*For Pdf File Extension*/
+(function ($) { // JavaScript should be compatible with other libraries than jQuery
+$(function(){
+
+$("a[href$='.pdf'],a[href$='.Pdf'],a[href$='.PDF']").each(function() {
+ if( location.hostname === this.hostname ) {
+var url = $(this).attr('href');
+var filename = url.substring(url.lastIndexOf('/')+1);
+var newurl='/sites/default/files/'+filename;
+
+var newurlall='https://gst.py.gov.in/sites/default/files/'+filename;
+    if(newurl==url || newurlall==url){
+ var links='https://gst.py.gov.in/sites/default/files/';
+  $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+  $('<img class="file-icon2" alt="PDF icon" title="application/pdf" src="https://gst.py.gov.in/modules/file/icons/application-pdf.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this);
+
+$('.file-size').remove();
+$('.file-icon').remove();
+$('.filesize').remove();
+    }
+    var newurl2='/sites/default/files/admin/'+filename;
+    var newurlall2='https://gst.py.gov.in/sites/default/files/admin/'+filename;
+    if(newurl2==url || newurlall2==url){
+     var links='https://gst.py.gov.in/sites/default/files/admin/';
+     if(getFileSize(links+filename)=='0byte'){
+      $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+                    var links='https://gst.py.gov.in/sites/default/files/';
+  $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+  $('<img class="file-icon2" alt="PDF icon" title="application/pdf" src="https://gst.py.gov.in/modules/file/icons/application-pdf.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this); 
+     }
+     else{
+      $(this).attr('href','https://gst.py.gov.in/sites/default/files/admin/'+filename);
+  $('<img class="file-icon2" alt="PDF icon" title="application/pdf" src="https://gst.py.gov.in/modules/file/icons/application-pdf.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this);
+     }
+     
+      
+  
+
+$('.filesize').remove();
+$('.file-size').remove();
+$('.file-icon').remove();
+    }
+    else{
+   
+    }
+
+}
+
+});
+
+});
+})(jQuery);
+
+function getFileSize(url)
+{
+    var fileSize = '';
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false); // false = Synchronous
+
+    http.send(null); // it will stop here until this http request is complete
+
+    // when we are here, we already have a response, b/c we used Synchronous XHR
+
+    if (http.status === 200) {
+        fileSize = http.getResponseHeader('content-length');
+        console.log('fileSize = ' + fileSize);
+    }
+ 
+ 
+ 
+ return formatSizeUnits(fileSize);
+}
+function formatSizeUnits(bytes){
+      if      (bytes>=1073741824) {bytes=(bytes/1073741824).toFixed(2)+'GB';}
+      else if (bytes>=1048576)    {bytes=(bytes/1048576).toFixed(2)+'MB';}
+      else if (bytes>=1024)       {bytes=(bytes/1024).toFixed(2)+'KB';}
+      else if (bytes>1)           {bytes=bytes+'bytes';}
+      else if (bytes==1)          {bytes=bytes+'byte';}
+      else                        {bytes='0byte';}
+      return bytes;
+}
+
+
+/*For Doc File Extension*/
+
+(function ($) { // JavaScript should be compatible with other libraries than jQuery
+$(function(){
+
+$("a[href$='.doc'],a[href$='.doc'],a[href$='.doc']").each(function() {
+ if( location.hostname === this.hostname ) {
+var url = $(this).attr('href');
+var filename = url.substring(url.lastIndexOf('/')+1);
+var newurl='/sites/default/files/'+filename;
+
+var newurlall='https://gst.py.gov.in/sites/default/files/'+filename;
+    if(newurl==url || newurlall==url){
+ var links='https://gst.py.gov.in/sites/default/files/';
+  $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+  $('<img class="file-icon2" alt="DOC icon" title="application/doc" src="https://gst.py.gov.in/modules/file/icons/x-office-document.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this);
+
+$('.file-size').remove();
+$('.file-icon').remove();
+$('.filesize').remove();
+    }
+    var newurl2='/sites/default/files/admin/'+filename;
+    var newurlall2='https://gst.py.gov.in/sites/default/files/admin/'+filename;
+    if(newurl2==url || newurlall2==url){
+     var links='https://gst.py.gov.in/sites/default/files/admin/';
+     if(getFileSize(links+filename)=='0byte'){
+      $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+                    var links='https://gst.py.gov.in/sites/default/files/';
+  $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+  $('<img class="file-icon2" alt="DOC icon" title="application/doc" src="https://gst.py.gov.in/modules/file/icons/x-office-document.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this); 
+     }
+     else{
+      $(this).attr('href','https://gst.py.gov.in/sites/default/files/admin/'+filename);
+  $('<img class="file-icon2" alt="DOC icon" title="application/doc" src="https://gst.py.gov.in/modules/file/icons/x-office-document.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this);
+     }     
+$('.filesize').remove();
+$('.file-size').remove();
+$('.file-icon').remove();
+    }
+    else{
+   
+    }
+}
+
+});
+
+});
+})(jQuery);
+
+function getFileSize(url)
+{
+    var fileSize = '';
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false); // false = Synchronous
+
+    http.send(null); // it will stop here until this http request is complete
+
+    // when we are here, we already have a response, b/c we used Synchronous XHR
+
+    if (http.status === 200) {
+        fileSize = http.getResponseHeader('content-length');
+        console.log('fileSize = ' + fileSize);
+    }
+
+ return formatSizeUnits(fileSize);
+}
+function formatSizeUnits(bytes){
+      if      (bytes>=1073741824) {bytes=(bytes/1073741824).toFixed(2)+'GB';}
+      else if (bytes>=1048576)    {bytes=(bytes/1048576).toFixed(2)+'MB';}
+      else if (bytes>=1024)       {bytes=(bytes/1024).toFixed(2)+'KB';}
+      else if (bytes>1)           {bytes=bytes+'bytes';}
+      else if (bytes==1)          {bytes=bytes+'byte';}
+      else                        {bytes='0byte';}
+      return bytes;
+}
+/*For DocX File Extension*/
+
+(function ($) { // JavaScript should be compatible with other libraries than jQuery
+$(function(){
+
+$("a[href$='.docx'],a[href$='.docx'],a[href$='.docx']").each(function() {
+ if( location.hostname === this.hostname ) {
+var url = $(this).attr('href');
+var filename = url.substring(url.lastIndexOf('/')+1);
+var newurl='/sites/default/files/'+filename;
+
+var newurlall='https://gst.py.gov.in/sites/default/files/'+filename;
+    if(newurl==url || newurlall==url){
+ var links='https://gst.py.gov.in/sites/default/files/';
+  $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+  $('<img class="file-icon2" alt="DOC icon" title="application/doc" src="https://gst.py.gov.in/modules/file/icons/x-office-document.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this);
+
+$('.file-size').remove();
+$('.file-icon').remove();
+$('.filesize').remove();
+    }
+    var newurl2='/sites/default/files/admin/'+filename;
+    var newurlall2='https://gst.py.gov.in/sites/default/files/admin/'+filename;
+    if(newurl2==url || newurlall2==url){
+     var links='https://gst.py.gov.in/sites/default/files/admin/';
+     if(getFileSize(links+filename)=='0byte'){
+      $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+                    var links='https://gst.py.gov.in/sites/default/files/';
+  $(this).attr('href','https://gst.py.gov.in/sites/default/files/'+filename);
+  $('<img class="file-icon2" alt="DOC icon" title="application/doc" src="https://gst.py.gov.in/modules/file/icons/x-office-document.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this); 
+     }
+     else{
+      $(this).attr('href','https://gst.py.gov.in/sites/default/files/admin/'+filename);
+  $('<img class="file-icon2" alt="DOC icon" title="application/doc" src="https://gst.py.gov.in/modules/file/icons/x-office-document.png"><span class="newsize">('+getFileSize(links+filename)+')</span>').insertAfter(this);
+     }     
+$('.filesize').remove();
+$('.file-size').remove();
+$('.file-icon').remove();
+    }
+    else{
+   
+    }
+}
+
+});
+
+});
+})(jQuery);
+
+function getFileSize(url)
+{
+    var fileSize = '';
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false); // false = Synchronous
+
+    http.send(null); // it will stop here until this http request is complete
+
+    // when we are here, we already have a response, b/c we used Synchronous XHR
+
+    if (http.status === 200) {
+        fileSize = http.getResponseHeader('content-length');
+        console.log('fileSize = ' + fileSize);
+    }
+
+ return formatSizeUnits(fileSize);
+}
+function formatSizeUnits(bytes){
+      if      (bytes>=1073741824) {bytes=(bytes/1073741824).toFixed(2)+'GB';}
+      else if (bytes>=1048576)    {bytes=(bytes/1048576).toFixed(2)+'MB';}
+      else if (bytes>=1024)       {bytes=(bytes/1024).toFixed(2)+'KB';}
+      else if (bytes>1)           {bytes=bytes+'bytes';}
+      else if (bytes==1)          {bytes=bytes+'byte';}
+      else                        {bytes='0byte';}
+      return bytes;
+}
+</script>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--locale--language.tpl.php
+   * block--locale.tpl.php
+   * block--language-tran.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-locale-language" class="block block-locale">
+
+    <h2 tabindex="0">Languages</h2>
+  
+  <div class="content">
+    <ul class="language-switcher-locale-url"><li class="en first active"><a href="/p-vat" class="language-link active" xml:lang="en" title="P-VAT">English</a></li>
+<li class="ta last"><a href="/ta/p-vat" class="language-link" xml:lang="ta" title="பி வாட்">தமிழ்</a></li>
+</ul>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+		</div>
+
+		
+		<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+	</div>
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="row">	
+	<div class="col-sm-12 ">
+		   <div id="logo" class="col-md-8 col-sm-7 col-xs-12 animated fadeInDown delay-07s">
+		   <div class="logo-1">
+			 <div id="site-logo" class="logo"><a href="/" title="Official Website of Commercial Taxes Department, Government of Puducherry, India">
+			  <img src="https://gst.py.gov.in/sites/default/files/pdy-commercial-tax-logo.png" alt="Site logo" />
+			</a></div>
+			</div>
+			
+						</div>
+			
+			<div class="col-md-4  col-sm-5 col-xs-8"><div class="logo-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--region-search.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-region-search">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--search--form.tpl.php
+   * block--search.tpl.php
+   * block--region-search.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form action="/p-vat" method="post" id="search-block-form" accept-charset="UTF-8"><div>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('search_block_form') -->
+<!-- BEGIN OUTPUT from 'modules/search/search-block-form.tpl.php' -->
+<div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-HVUmCGYwc2GolrLi4gV14qFpkOjIOuyJzabGmMLGY5w" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+
+<!-- END OUTPUT from 'modules/search/search-block-form.tpl.php' -->
+
+</div></form>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+</div></div>
+			</div> 
+   </div>
+</div>
+
+<div class="main">
+	<div class="menu-bg">
+	<div class="container">
+   <div class="col-sm-12 ">
+	  <div id="cssmenu">
+			  <div id="topNav">
+				
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--header.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-header">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--tb-megamenu--main-menu.tpl.php
+   * block--tb-megamenu.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-tb-megamenu-main-menu" class="block block-tb-megamenu">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu.tpl.php' -->
+<div  data-duration="400" data-delay="200" id="tb-megamenu-main-menu" class="tb-megamenu tb-megamenu-main-menu animate slide" role="navigation" aria-label="Main navigation">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button" type="button">
+      <i class="fa fa-reorder"></i>
+    </button>
+    <div class="nav-collapse  always-show">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_nav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-nav.tpl.php' -->
+<ul  class="tb-megamenu-nav nav level-0 items-22">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="736" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega">
+          <a href="/"  title="Home">
+                Home                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3568" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="#" class="tb_nolink ">
+                About Us      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-1" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-1 items-5">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3570" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/administrative-setup"  title="Administrative Setup">
+                Administrative Setup                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3572" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/mission"  title="Mission">
+                Mission                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3611" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/citizens-charter"  title="Citizen Charter">
+                Citizen&#039;s Charter                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3574" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/organization-chart"  title="Organization Chart">
+                Organization Chart                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="999" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/whos-who"  title="Who&#039;s who">
+                Who&#039;s who                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3583" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="#" class="tb_nolink ">
+                EoDB      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-6" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-1 items-6">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4279" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="#" class="tb_nolink ">
+                Apply online Services      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-2" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-2 items-4">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4280" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://reg.gst.gov.in/registration/" >
+                New Registration - Goods and Service Tax (GST)                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4281" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://vat.py.gov.in/ereg/Registration/frmRegistration.aspx" >
+                New Registration - Value Added Tax (VAT)                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3588" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://services.gst.gov.in/services/login"  title="Online Services - GST" target="_blank">
+                GST - Online Services for registered persons                       </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4282" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://vat.py.gov.in/e-returns/" >
+                VAT - Online services for registered persons                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4283" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="#" class="tb_nolink ">
+                Status Tracking      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-3" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-2 items-3">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4285" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://services.gst.gov.in/services/arnstatus" >
+                Status of GST  new registration application                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4286" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://vat.py.gov.in/ereg/viewstatus.aspx" >
+                Status of GST VAT new registration application                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3592" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://services.gst.gov.in/services/quicklinks/refunds"  title="Online Services - Refunds" target="_blank">
+                Refund status                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4284" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="#" class="tb_nolink ">
+                Download Certificate      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-4" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-2 items-2">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4287" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://services.gst.gov.in/services/login" >
+                GST Registration Certificate                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4288" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://vat.py.gov.in/e-returns/" >
+                VAT Registration Certificate                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4289" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega dropdown-submenu">
+          <a href="#" class="tb_nolink ">
+                Payment      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-5" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-2 items-3">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4291" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://services.gst.gov.in/services/login" >
+                GST Payment using User ID and Password                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4290" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://services.gst.gov.in/services/quicklinks/payments" >
+                GST Payment without login                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4292" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-3 mega">
+          <a href="https://vat.py.gov.in/e-returns/" >
+                VAT Payment                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4293" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://gst.py.gov.in/" >
+                GST &amp; VAT Act / Rules / Notifications                       </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3593" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://ewaybillgst.gov.in/"  title="Online Services - E-WAY BILL" target="_blank">
+                E - Way Bill                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3581" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega active active-trail">
+          <a href="/p-vat"  title="P-VAT">
+                P-VAT                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4294" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="#" class="tb_nolink ">
+                G.S.T.      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-7" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-1 items-3">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="2760" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://www.gst.gov.in/"  title="Services">
+                Go to GST website                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3999" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://gst.py.gov.in/sites/default/files/advnc-rulin-mechanism-gst-20Jul1.pdf "  target="_blank" title="GST - Advance Ruling Mechanisam">
+                GST - Advance Ruling Mechanisam                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4000" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://gst.py.gov.in/sites/default/files/JURISDICTION-2025.pdf"  target="_blank" title="GST - Jurisdiction Details for new GST Registration">
+                GST - Jurisdiction Details for new GST Registration                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="2940" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="/notice-board"  class="dropdown-toggle" title="Notice Board">
+                Notice Board                  <span class="caret"></span>
+                      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-8" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-1 items-5">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3255" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/news"  title="News">
+                News                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="2944" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/tenders"  title="Tenders">
+                Tenders                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3250" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/recruitments"  title="Recruitments">
+                Recruitments                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3409" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/orders-circular"  title="Orders &amp; Circulars">
+                Orders &amp; Circulars                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3602" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="/notifications-"  title="Notifications">
+                Notifications                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="3404" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega">
+          <a href="/right-information"  title="Right To Information">
+                RTI                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4138" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega">
+          <a href="http://gstcouncil.gov.in/faq" >
+                FAQ                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4207" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega dropdown">
+          <a href="#" class="tb_nolink ">
+                Consumer Welfare Fund      </a>
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_submenu') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+<div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+<div  class="tb-megamenu-row row-fluid">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_column') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+<div  data-class="" data-width="" data-hidewcol="0" id="tb-megamenu-column-9" class="tb-megamenu-column span  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_subnav') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+<ul  class="tb-megamenu-subnav mega-nav level-1 items-3">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4208" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://gras.py.gov.in/Common/gras_manuals/Unregistered_User_py.pdf" >
+                User manual for Unregistered users                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4209" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://gras.py.gov.in/Common/gras_manuals/Registered_User_py.pdf" >
+                User manual for Registered users                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="4210" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-2 mega">
+          <a href="https://gras.py.gov.in/" >
+                Go to DAT website for online payment                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-subnav.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-column.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-row.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-submenu.tpl.php' -->
+
+  </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('tb_megamenu_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+  <li  data-id="735" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" id="" style="" class="tb-megamenu-item level-1 mega">
+          <a href="/contact-us"  title="Contact Us">
+                Contact Us                      </a>
+          </li>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-item.tpl.php' -->
+
+</ul>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu-nav.tpl.php' -->
+
+      </div>
+  </div>
+
+<!-- END OUTPUT from 'sites/all/modules/tb_megamenu/templates/tb-megamenu.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views--news-slider-block.tpl.php
+   * block--views.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-views-news-slider-block" class="block block-views">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-news-slider view-id-news_slider view-display-id-block view-dom-id-5fa719eeafae3037afcb21f050248e1d">
+        
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow.tpl.php' -->
+
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_news_slider-block_1" class="views_slideshow_cycle_main views_slideshow_main">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame.tpl.php' -->
+<div id="views_slideshow_cycle_teaser_section_news_slider-block_1" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_news_slider-block_1_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-first views-row-odd" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first new-slider">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <strong class="field-content"><div class="newitem" style="padding-top:15px;" ><a href="/notification-regarding-extending-time-limit-furnishing-return-form-gstr-3b-month-march2026"> 	Notification regarding extending time limit for furnishing the return in FORM GSTR-3B for the month of March,2026.</a> </div>
+
+</strong>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_news_slider-block_1_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd new-slider">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <strong class="field-content"><div class="newitem" style="padding-top:15px;" ><a href="/gomsno1-dt24-05-2026-amendment-gomsno5-dt18-09-2025-relating-sgst-rate-goods">G.O.Ms.No.1, dt.24-05-2026 - Amendment in GO.Ms.No.5, dt.18-09-2025-relating to SGST rate on Goods.</a> </div>
+
+</strong>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_news_slider-block_1_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd new-slider">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <strong class="field-content"><div class="newitem" style="padding-top:15px;" ><a href="/gomsno25dt10th-march-2026-notification-setting-30-06-2026-limitation-date-filing-backlog-appeals-gst">G.O.Ms.No.25,dt.10th March 2026 - Notification for setting 30-06-2026 as the limitation date for filing of backlog appeals in the GST.</a> </div>
+
+</strong>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_news_slider-block_1_3" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd new-slider">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <strong class="field-content"><div class="newitem" style="padding-top:15px;" ><a href="/amendment-notification-no92025-puducherry-goods-and-service-tax-rate-relating-sgst-rate-goods">Amendment in notification No.9/2025 - Puducherry Goods and Service Tax (Rate) relating to SGST rate on Goods-G.O.Ms.No.24, dt.31-01-2026.</a> </div>
+
+</strong>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_news_slider-block_1_4" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-last views-row-odd" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd new-slider">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <strong class="field-content"><div class="newitem" style="padding-top:15px;" ><a href="/notification-puducherry-goods-and-service-tax-fifth-amendment-rules-2025-gomsno23-dt31-01-2026">Notification of the Puducherry Goods and Service Tax (Fifth Amendment) Rules, 2025.-G.O.Ms.No.23, dt.31-01-2026.</a> </div>
+
+</strong>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame.tpl.php' -->
+
+</div>
+      </div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow.tpl.php' -->
+
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+			  </div>
+			</div>
+	  
+	   
+   </div>
+    </div>
+	 </div>
+<div id="breadcrumbs"><div class="container"><h2 class="element-invisible">You are here</h2><nav class="breadcrumb"><div class="getbreadcrumbfont"><a href="/node">Home</a> » <span tabindex="0">P-VAT</span></div></nav></div></div>
+ <div class="container" id="maincontain-textsize">
+<div id="maincontent"></div>
+<div class="row">
+	
+	<div class="col-sm-9">
+
+	<h1 tabindex="0" class="h1classeng" >P-VAT</h1>
+	<div tabindex="0">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--content.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-content">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--system--main.tpl.php
+   * block--system.tpl.php
+   * block--content.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('node') -->
+<!-- FILE NAME SUGGESTIONS:
+   * node--1531.tpl.php
+   * node--page.tpl.php
+   x node.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/node.tpl.php' -->
+                    <span property="dc:title" content="P-VAT" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>  
+      
+    
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">			<div class="top-bar-faq">
+                    P-VAT RELATED INFORMATION / SERVICES 
+                </div>	<div class="col-sm-12 section-vat table-responsive">
+
+				<div class="col-sm-3 table-bordered" tabindex="0"><div class="title-edocuments">E-Services</div>
+						
+						<div class="item-list">
+							<ul>
+							<li><a href="https://vat.py.gov.in/ereg/" target="_blank" title="Click here to View">New Registration</a></li>
+							<li><a href="https://vat.py.gov.in/e-returns/login.aspx?ReturnUrl=/e-returns/default.aspx" target="_blank" title="Click here to View">Renewal</a></li>
+							<li><a href="https://vat.py.gov.in/e-returns/login.aspx?ReturnUrl=/e-returns/default.aspx" target="_blank" title="Click here to View">Filing of Return</a></li>
+							<li><a href="https://vat.py.gov.in/e-returns/" target="_blank" title="Click here to View">e-Payment</a></li>
+							<li><a href="https://vat.py.gov.in/e-returns/login.aspx?ReturnUrl=/e-returns/default.aspx" target="_blank" title="Click here to View">Form Submission</a></li>
+							</ul></div>
+<div class="more-link"><a href="https://gst.py.gov.in/e-services">View More  </a></div>
+
+			</div>
+<div class="col-sm-3 table-bordered" tabindex="0">
+						<div class="title-edocuments">User Manual</div>
+						<div class="item-list">
+							<ul>
+							<li><a href="https://gst.py.gov.in/sites/default/files/pubNoticeDec2020.pdf" target="_blank" title="Click here to View">Public Notice<br/></a></li>
+<!-- li><a href="https://gst.py.gov.in/sites/default/files/recruitment-rule-2017.pdf" target="_blank" title="Click here to View or Download">Recruitment Rules</a></li -->
+<li><a href="https://gst.py.gov.in/sites/default/files/rateschedule010112.pdf" target="_blank" title="Click here to View or Download">Rates Schedule</a></li>
+							</ul>
+						</div>
+<div class="more-link"><a href="https://gst.py.gov.in/user-manuals-documents">View More  </a></div>
+			</div>
+<div class="col-sm-3 table-bordered" tabindex="0">
+						<div class="title-edocuments">Tax Laws / Orders</div>
+						<div class="item-list">
+<ul>
+<li><a href="https://gst.py.gov.in/sites/default/files/pvat-2ndame.pdf" target="_blank" title="Click here to View or Download">PVAT (Second Amendment) Rules, 2017</a></li>
+<li><a href="https://gst.py.gov.in/sites/default/files/pvat-amet-rule.pdf" target="_blank" title="Click here to View or Download">PVAT Amendment Rules, 2017</a></li>
+</ul>
+						</div>
+<div class="more-link"><a href="https://gst.py.gov.in/tax-laws-orders">View More  </a></div>
+</div>
+
+<div class="col-sm-3 table-bordered" tabindex="0">
+						<div class="title-edocuments">Circulars</div>
+						<div class="item-list">
+						<ul>
+							<li>
+							<a href="https://gst.py.gov.in/sites/default/files/gst-mig-cir.PDF" target="_blank" title="Click here to View or Download">Migration of VAT dealers to GSTN Portal</a>
+							</li>
+
+							</ul>
+						</div>
+</div>
+			</div>
+			</div></div></div>  </div>
+
+      <footer>
+      <ul class="links inline"><li class="translation_ta first last"><a href="/ta/p-vat" title="பி வாட்" class="translation-link" xml:lang="ta">தமிழ்</a></li>
+</ul>    </footer>
+  
+  
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/node.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+</div> 
+		<div style="clear:both"></div><div class="page-update" id="notfound1608115135"><a href="" title="Click here to go on previous page">Back To Previous Page</a> | Page last updated date: 16-12-2020</div>
+	
+	</div>
+	
+    <div class="col-sm-3 siderbartitle">
+	<div class="news-box">
+
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--first-second-middle-layer.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-first-second-middle-layer">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views--documents-block.tpl.php
+   * block--views.tpl.php
+   * block--first-second-middle-layer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-views-documents-block" class="block block-views">
+
+    <h2 tabindex="0">GST - Act</h2>
+  
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-documents view-id-documents view-display-id-block view-dom-id-839059b7cc25cbfd941988d230da9026">
+        
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+<div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/go-ms-no18-dt11th-november-2025-appointed-date-provisions-pgst-second-amendment-act-2025">G.O. Ms. No.18, dt.11th November 2025 - Appointed date for the provisions of the PGST (Second Amendment) Act 2025.</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2 views-row-even">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/rescinding-notification-issued-vide-gomsno32dt03112021">Rescinding of Notification issued vide G.O.Ms.No.32,dt.03/11/2021</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/amendment-notification-nogoms49-dt28th-september-2018">Amendment to Notification No.G.O.Ms.49, dt.28th September 2018.</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul></div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+
+    </div>
+  
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_more') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+<div class="more-link">
+  <a href="/gst-act">
+    View More  </a>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--second-second-middle-layer.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-second-second-middle-layer">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views--government-block.tpl.php
+   * block--views.tpl.php
+   * block--second-second-middle-layer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-views-government-block" class="block block-views">
+
+    <h2 tabindex="0">GST - Rules &amp; Rates</h2>
+  
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-government view-id-government view-display-id-block view-dom-id-b38d80208bee94f0fad3ad1c5bc271cd">
+        
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+<div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/notification-regarding-extending-time-limit-furnishing-return-form-gstr-3b-month-march2026"> 	Notification regarding extending time limit for furnishing the return in FORM GSTR-3B for the month of March,2026.</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2 views-row-even">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/notification-amendment-notification-no132017-puducherry-gst-rate-dt29th-june-2017-relating-sgst">Notification - Amendment of notification No.13/2017 - Puducherry GST (Rate), dt.29th June 2017, relating to SGST on supply of services on Reverse Charge basis.</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/notification-amendment-notification-no22017-puducherry-gst-rate-dt29th-june-2017-relating-exempted-0">Notification - Amendment of notification No.2/2017 - Puducherry GST (Rate), dt.29th June 2017, relating to exempted supply of goods under the PGST Act,2017.</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul></div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+
+    </div>
+  
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_more') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+<div class="more-link">
+  <a href="/gst-rules-rates">
+    View More  </a>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--third-second-middle-layer.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-third-second-middle-layer">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views--online-services-block.tpl.php
+   * block--views.tpl.php
+   * block--third-second-middle-layer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-views-online-services-block" class="block block-views">
+
+    <h2 tabindex="0">GST - Notifications / Circulars</h2>
+  
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-online-services view-id-online_services view-display-id-block view-dom-id-475ebe3184e9823dbd3b0c6dedb52dbf">
+        
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+<div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/gst-advance-ruling-and-appeal-procedures">GST - Advance Ruling and Appeal Procedures</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2 views-row-even">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/exclusion-taxpayers-making-supply-bricks-opting-composition-scheme">Exclusion of Taxpayers making supply of Bricks from opting Composition Scheme</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <a href="/revision-sgst-rate-bricks">Revision of SGST rate on Bricks</a>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul></div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+
+    </div>
+  
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_more') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+<div class="more-link">
+  <a href="/gst-notifications-circulars">
+    View More  </a>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--four-second-middle-layer.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-four-second-middle-layer">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views--downloads-block.tpl.php
+   * block--views.tpl.php
+   * block--four-second-middle-layer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-views-downloads-block" class="block block-views">
+
+    <h2 tabindex="0">GST - Documents / Media</h2>
+  
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-downloads view-id-downloads view-display-id-block view-dom-id-99a4425174719dc74323f233cfec2c9f">
+        
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div tabindex="0">
+<div class="item-list"><ul>
+<li><a href="https://gst.py.gov.in/sites/default/files/recruitment-rule-2017.pdf" target="_blank" title="Click here to View or Download">Recruitment Rules</a></li>
+	<li><a href="https://gst.py.gov.in/photo-gallery">Photo Gallery</a></li>
+	<li><a href="https://gst.py.gov.in/press-release">Press Release - Official</a></li>
+
+</ul>
+</div>
+</div>  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+
+    </div>
+  
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_more') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+<div class="more-link">
+  <a href="/gst-documents-media">
+    View More  </a>
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-more.tpl.php' -->
+
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+			
+		</div>
+	<div style="clear:both"></div>
+	</div>
+</div>
+</div>
+<div class="footer-slide">
+					<div class="footer_class">					</div>
+</div>
+
+<div class="container"><div class="col-md-12 footer_class_temp">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--footer.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-footer">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views--footer-external-logos-block.tpl.php
+   * block--views.tpl.php
+   * block--footer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-views-footer-external-logos-block" class="block block-views">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-footer-external-logos view-id-footer_external_logos view-display-id-block view-dom-id-3eafcf5e41cf31f51319af26e0a04109">
+        
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow.tpl.php' -->
+
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_footer_external_logos-block_1" class="views_slideshow_cycle_main views_slideshow_main">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame.tpl.php' -->
+<div id="views_slideshow_cycle_teaser_section_footer_external_logos-block_1" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_footer_external_logos-block_1_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-first views-row-odd" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.india.gov.in/" target="_blank" title="https://www.india.gov.in/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/2017053023.png" width="200" height="100" alt="Government of India logo" title="Government of India" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even views-row-first">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="http://www.pmindia.gov.in/en/" target="_blank" title="http://www.pmindia.gov.in/en/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/2017110781.png" width="200" height="100" alt="PM India logo" title="PM India" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd views-row-first">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://data.gov.in/" target="_blank" title="https://data.gov.in/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/2017053045.png" width="200" height="100" alt="Data Government logo" title="Data Government" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-3 views-row-even views-row-first">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.mygov.in/" target="_blank" title="https://www.mygov.in/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/2017053017.png" width="200" height="100" alt="My Government logo" title="My Government" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-4 views-row-odd views-row-first">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="http://www.makeinindia.com/home" target="_blank" title="http://www.makeinindia.com/home"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/2017053052.png" width="200" height="100" alt="Make in India logo" title="Make in India" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_footer_external_logos-block_1_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://incredibleindia.org/" target="_blank" title="https://incredibleindia.org/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/2017053094.png" width="200" height="100" alt="Incredible India logo" title="Incredible India" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://digilocker.gov.in/" target="_blank" title="https://digilocker.gov.in/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/digilocker.jpg" width="208" height="61" alt="Digi Locker logo" title="Digi Locker" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://eci.gov.in/" target="_blank" title="https://eci.gov.in/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/ecilogo.jpg" width="208" height="61" alt="Election Commission of India logo" title="Election Commission of India" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-3 views-row-even">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="http://www.goidirectory.gov.in/index.php" target="_blank" title="http://www.goidirectory.gov.in/index.php"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/goiwebdirectory.jpg" width="208" height="61" alt="GOI Web Directory logo" title="GOI Web Directory" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-4 views-row-odd">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.gst.gov.in/" target="_blank" title="https://www.gst.gov.in/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/gst.jpg" width="208" height="61" alt="Goods and Services Tax Portal logo" title="Goods and Services Tax Portal" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_footer_external_logos-block_1_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.gstn.org/" target="_blank" title="https://www.gstn.org/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/gstn.jpg" width="208" height="61" alt="Goods and Services Tax Network logo" title="Goods and Services Tax Network" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://mail.gov.in/iwc_static/c11n/allDomain/layout/login_gov2.jsp" target="_blank" title="https://mail.gov.in/iwc_static/c11n/allDomain/layout/login_gov2.jsp?lang=en-US&amp;3…"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/nicmail.jpg" width="208" height="61" alt="NIC Mail logo" title="NIC Mail" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.py.gov.in/home.html" target="_blank" title="https://www.py.gov.in/home.html"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/puducherry.jpg" width="200" height="55" alt="Official Website of Puducherry logo" title="Official Website of Puducherry" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-3 views-row-even">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.rbi.org.in/" target="_blank" title="https://www.rbi.org.in/"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/rbi-company-logo.jpg" width="208" height="61" alt="Reserve Bank of India logo" title="Reserve Bank of India" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-4 views-row-odd">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://gst.py.gov.in/ctd/relatedlinks.html" target="_blank" title="https://gst.py.gov.in/ctd/relatedlinks.html"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/relatedlinks.jpg" width="208" height="61" alt="Related Website logo" title="Related Website Links" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+<div id="views_slideshow_cycle_div_footer_external_logos-block_1_3" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-last views-row-even" >
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_cycle_main_frame_row_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.tinxsys.com/TinxsysInternetWeb/index.jsp" target="_blank" title="https://www.tinxsys.com/TinxsysInternetWeb/index.jsp"><img typeof="foaf:Image" src="https://gst.py.gov.in/sites/default/files/tinxsys.jpg" width="200" height="61" alt="Tax Information Exchange System logo" title="Tax Information Exchange System" /></a></div>  </div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row-item.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame-row.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/theme/views-slideshow-cycle-main-frame.tpl.php' -->
+
+</div>
+          <div class="views-slideshow-controls-bottom clearfix">
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_controls_text') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text.tpl.php' -->
+<div id="views_slideshow_controls_text_footer_external_logos-block_1" class="views-slideshow-controls-text views_slideshow_controls_text">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_controls_text_previous') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text-previous.tpl.php' -->
+<span id="views_slideshow_controls_text_previous_footer_external_logos-block_1" class="views-slideshow-controls-text-previous views_slideshow_controls_text_previous">
+  <a href="#" rel="prev">Previous</a>
+</span>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text-previous.tpl.php' -->
+
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_controls_text_pause') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text-pause.tpl.php' -->
+<span id="views_slideshow_controls_text_pause_footer_external_logos-block_1" class="views-slideshow-controls-text-pause views_slideshow_controls_text_pause  views-slideshow-controls-text-status-play"><a href="#">Pause</a></span>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text-pause.tpl.php' -->
+
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_slideshow_controls_text_next') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text-next.tpl.php' -->
+<span id="views_slideshow_controls_text_next_footer_external_logos-block_1" class="views-slideshow-controls-text-next views_slideshow_controls_text_next">
+  <a href="#" rel="next">Next</a>
+</span>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text-next.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow-controls-text.tpl.php' -->
+
+      </div>
+      </div>
+
+<!-- END OUTPUT from 'sites/all/modules/views_slideshow/theme/views-slideshow.tpl.php' -->
+
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+</div></div>
+<div class="col-sm-12 hindien">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--footer-menu.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-footer-menu">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu-block--9.tpl.php
+   * block--menu-block.tpl.php
+   * block--footer-menu.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-menu-block-9" class="block block-menu-block">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/menu_block/menu-block-wrapper.tpl.php' -->
+<div class="menu-block-wrapper menu-block-9 menu-name-menu-footer-bottom-link parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-914"><a href="/accessibility-statement">Accessibility Statement</a></li>
+<li class="leaf menu-mlid-951"><a href="/copyright-policy">Copyright Policy</a></li>
+<li class="leaf menu-mlid-953"><a href="/disclaimer">Disclaimer</a></li>
+<li class="leaf menu-mlid-918"><a href="/sitemap">Site Map</a></li>
+<li class="leaf menu-mlid-947"><a href="/feedback">Feedback</a></li>
+<li class="leaf menu-mlid-952"><a href="/hyperlink-policy">Hyperlink Policy</a></li>
+<li class="leaf menu-mlid-950"><a href="/privacy-policy">Privacy Policy</a></li>
+<li class="leaf menu-mlid-949"><a href="/terms-condition">Terms &amp; Condition</a></li>
+<li class="leaf menu-mlid-915"><a href="/terms-use">Terms of Use</a></li>
+<li class="last leaf menu-mlid-920"><a href="/help">Help</a></li>
+</ul></div>
+
+<!-- END OUTPUT from 'sites/all/modules/menu_block/menu-block-wrapper.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+</div>
+<div class="footer-bg">
+<div class="col-sm-12 footer-01">
+
+	<div class="container">
+		<div class="row footer02">
+		
+		<div class="col-sm-12" tabindex="0">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--social-menu.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+<div class="region region-social-menu">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--20.tpl.php
+   * block--block.tpl.php
+   * block--social-menu.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-block-20" class="block block-block">
+
+    
+  <div class="content">
+    <div class="col-sm-12">
+<div class="col-sm-2"></div>
+<div class="col-sm-3 social-menu-bottom"><img src="https://gst.py.gov.in/sites/default/files/whatsappicon.png" title="+91-73977 17723" alt="Whatsapp Logo"></div>
+<div class="col-sm-3 social-menu-bottom"><a href="https://www.facebook.com/ctax.puducherry" target="_blank" title="Facebook"><img src="https://gst.py.gov.in/sites/default/files/facebook-icon.png" title="Facebook" alt="Facebook Logo"></a></div>
+<div class="col-sm-3 social-menu-bottom"><a href="https://twitter.com/ctaxpuducherry" target="_blank" title="Twitter"><img src="https://gst.py.gov.in/sites/default/files/twitter-icon.png" title="Twitter" alt="Twitter Logo"></a></div>
+<div class="col-sm-1"></div>
+</div>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views--copyrights-block.tpl.php
+   * block--views.tpl.php
+   * block--social-menu.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-views-copyrights-block" class="block block-views">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-copyrights view-id-copyrights view-display-id-block view-dom-id-0e6e261239313a871da2df87bf82c797">
+        
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <p class="align-center">Copyright © 2018 - All Rights Reserved - Official Website of Commercial Taxes Department, Government of Puducherry, India<br/>
+Note: Content on this website is published and managed by Commercial Taxes Department, Government of Puducherry<br/>
+For any query regarding this website, please contact, E-mail ID: cctax@py.gov.in,<br/> Contact : +91-413-2203055 </p>
+  
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view-list.tpl.php' -->
+
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/all/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--visitors--0.tpl.php
+   * block--visitors.tpl.php
+   * block--social-menu.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+<div id="block-visitors-0" class="block block-visitors">
+
+    
+  <div class="content">
+    <div class="item-list"><ul><li class="first last">Site Visitors: 170149</li>
+</ul></div>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/block.tpl.php' -->
+
+</div>
+ <!-- /.region -->
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/region.tpl.php' -->
+
+</div>
+		<div class="hindien"></div>
+    
+	  <div class="col-sm-12 lstupd" tabindex="0">
+		Page last updated date : 25-May-2026 5:08 pm		
+	 <div class="cssvalid">
+	         
+		  <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://gst.py.gov.in" title="Valid CSS!" target="_blank">
+		  <img style="border:0;width:88px;height:31px"  src="https://gst.py.gov.in/sites/all/themes/chh/images/vss.jpg" alt="Valid CSS!" /></a>
+          <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2.0 Level Double-A Conformance" target="_blank">
+          <img height="32" width="88" src="https://gst.py.gov.in/sites/all/themes/chh/images/w3c.jpg" alt="Level Double-A conformance,W3C WAI Web Content Accessibility Guidelines 2.0"></a>
+		  <a href="https://achecker.ca/checker/index.php?uri=referer&gid=WCAG2-A" target="_blank" title="WCAG 2.0 (Level A)">
+         <img src="https://gst.py.gov.in/sites/all/themes/chh/images/achecker.jpg" alt="WCAG 2.0 (Level A)" height="32" width="102" />
+         </a>
+ </div>
+		 </div>
+		 </div>
+		</div>
+	</div>
+</div> 
+</div>
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/page.tpl.php' -->
+
+  
+<script src="https://translation-plugin.bhashini.co.in/v3/website_translation_utility.js" language-icon-color= "#fff"></script>
+
+</body>
+</html>
+
+<!-- END OUTPUT from 'sites/all/themes/chh/templates/html.tpl.php' -->
+

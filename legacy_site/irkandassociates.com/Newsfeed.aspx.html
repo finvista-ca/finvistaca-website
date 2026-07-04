@@ -1,0 +1,790 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+        <head><title>
+	I R K & Associates
+</title><meta charset="utf-8"><meta name="Description" content="I R K &amp; Associates"><meta name="keywords" content="I R K &amp; Associates"><meta property="og:title" content="I R K &amp; Associates"><meta property="og:description" content="I R K &amp; Associates"><meta property="og:image" content="http://irkandassociates.com/images/logo.png"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="Content-Language" content="EN"><meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1"><link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"><link href="css/bootstrap.min.css" rel="stylesheet"><link href="css/font-awesome.min.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+        
+		 
+    
+          <script type="text/javascript">
+            function GetRadWindow() {
+                var oWindow = null;
+                if (window.radWindow) oWindow = window.radWindow; //Will work in Moz in all cases, including clasic dialog
+                else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow; //IE (and Moz az well)
+                return oWindow;
+            }
+
+            function CloseOnReload() {
+                GetRadWindow().Close();
+            }
+            function OnClientClose(oWnd) {
+              
+            }
+
+        </script>
+          <script type="text/javascript">
+
+             function isNumeric(e) {
+                 var KeyID = (window.event) ? event.keyCode : e.which;
+                 //alert(Enumerator.W);
+                 return ((KeyID >= 48 && KeyID <= 57) || KeyID == 8 || KeyID == 127 || KeyID == 0);
+             }
+        </script>
+        </head>
+        <body>
+    <form name="aspnetForm" method="post" action="Newsfeed.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMzEyMzU3OTcPZBYCZg9kFgICAw9kFgQCAw9kFhICAQ88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgdkFg5mD2QWAgIBDw8WAh4LTmF2aWdhdGVVcmwFDGdzdGFjdHMuYXNweGQWAmYPFQEEQWN0c2QCAQ9kFgICAQ8PFgIfAgUNZ3N0cnVsZXMuYXNweGQWAmYPFQEFUnVsZXNkAgIPZBYCAgEPDxYCHwIFEUdzdENpcmN1bGFycy5hc3B4ZBYCZg8VAQlDaXJjdWxhcnNkAgMPZBYCAgEPDxYCHwIFE0dzdE5vdGlmYWN0aW9uLmFzcHhkFgJmDxUBDU5vdGlmaWNhdGlvbnNkAgQPZBYCAgEPDxYCHwIFDUdzdEZvcm1zLmFzcHhkFgJmDxUBBUZvcm1zZAIFD2QWAgIBDw8WAh8CBQ5Hc3RPcmRlcnMuYXNweGQWAmYPFQEGT3JkZXJzZAIGD2QWAgIBDw8WAh8CBRNHc3RJbnN0cnVjdGlvbi5hc3B4ZBYCZg8VAQxJbnN0cnVjdGlvbnNkAgMPPCsACQEADxYEHwAWAB8BAgpkFhRmD2QWAgIBDw8WAh8CBSh1dGlsaXRpZXMuYXNweD9zZXJ2ZT1SYXRlcyBvZiBJbmNvbWUgVGF4ZBYCZg8VARNSYXRlcyBvZiBJbmNvbWUgVGF4ZAIBD2QWAgIBDw8WAh8CBTB1dGlsaXRpZXMuYXNweD9zZXJ2ZT1URFMgUmF0ZXMgZm9yIE4uUi5JIHUvcyAxOTVkFgJmDxUBG1REUyBSYXRlcyBmb3IgTi5SLkkgdS9zIDE5NWQCAg9kFgICAQ8PFgIfAgUhdXRpbGl0aWVzLmFzcHg/c2VydmU9UmF0ZXMgb2YgVERTZBYCZg8VAQxSYXRlcyBvZiBURFNkAgMPZBYCAgEPDxYCHwIFKnV0aWxpdGllcy5hc3B4P3NlcnZlPVJhdGVzIG9mIE5TQyBJbnRlcmVzdGQWAmYPFQEVUmF0ZXMgb2YgTlNDIEludGVyZXN0ZAIED2QWAgIBDw8WAh8CBT91dGlsaXRpZXMuYXNweD9zZXJ2ZT1SYXRlcyBvZiBEZXByZWNpYXRpb24gVW5kZXIgSW5jb21lIFRheCBBY3RkFgJmDxUBKlJhdGVzIG9mIERlcHJlY2lhdGlvbiBVbmRlciBJbmNvbWUgVGF4IEFjdGQCBQ9kFgICAQ8PFgIfAgU8dXRpbGl0aWVzLmFzcHg/c2VydmU9UmF0ZXMgb2YgRGVwcmVjaWF0aW9uIFVuZGVyIENvbXBhbnkgQWN0ZBYCZg8VASdSYXRlcyBvZiBEZXByZWNpYXRpb24gVW5kZXIgQ29tcGFueSBBY3RkAgYPZBYCAgEPDxYCHwIFKXV0aWxpdGllcy5hc3B4P3NlcnZlPUNvc3QgSW5mbGF0aW9uIEluZGV4ZBYCZg8VARRDb3N0IEluZmxhdGlvbiBJbmRleGQCBw9kFgICAQ8PFgIfAgUmdXRpbGl0aWVzLmFzcHg/c2VydmU9Uk9DIEZlZSBTdHJ1Y3R1cmVkFgJmDxUBEVJPQyBGZWUgU3RydWN0dXJlZAIID2QWAgIBDw8WAh8CBR91dGlsaXRpZXMuYXNweD9zZXJ2ZT1NSUNSIENvZGVzZBYCZg8VAQpNSUNSIENvZGVzZAIJD2QWAgIBDw8WAh8CBR91dGlsaXRpZXMuYXNweD9zZXJ2ZT1JRlNDIENvZGVzZBYCZg8VAQpJRlNDIENvZGVzZAIFDzwrAAkBAA8WBB8AFgAfAQILZBYWZg9kFgICAQ8PFgIfAgUIUGFuLmFzcHhkFgJmDxUBA1BBTmQCAQ9kFgICAQ8PFgIfAgUIVGFuLmFzcHhkFgJmDxUBA1RBTmQCAg9kFgICAQ8PFgIfAgUURS1QYXltZW50T25saW5lLmFzcHhkFgJmDxUBEEUtUGF5bWVudCBPbmxpbmVkAgMPZBYCAgEPDxYCHwIFDkluY29tZVRheC5hc3B4ZBYCZg8VAQpJbmNvbWUgVGF4ZAIED2QWAgIBDw8WAh8CBQlDQkVDLmFzcHhkFgJmDxUBBENCSUNkAgUPZBYCAgEPDxYCHwIFClBGRVNJLmFzcHhkFgJmDxUBCFBGICYgRVNJZAIGD2QWAgIBDw8WAh8CBRhFeGNpc2VhbmRTZXJ2aWNlVGF4LmFzcHhkFgJmDxUBFkV4Y2lzZSBhbmQgU2VydmljZSBUYXhkAgcPZBYCAgEPDxYCHwIFCk1DQTIxLmFzcHhkFgJmDxUBA01DQWQCCA9kFgICAQ8PFgIfAgUMY2Fjc2N3YS5hc3B4ZBYCZg8VAQVDQS9DU2QCCQ9kFgICAQ8PFgIfAgURU3VwcmVtZUNvdXJ0LmFzcHhkFgJmDxUBDVN1cHJlbWUgQ291cnRkAgoPZBYCAgEPDxYCHwIFDW1vcmVsaW5rLmFzcHhkFgJmDxUBCU1vcmUgTGlua2QCBw88KwAJAQAPFgQfABYAHwECEGQWIGYPZBYCAgEPDxYCHwIFEUluY29tZVRheEFjdC5hc3B4ZBYCZg8VAQ5JbmNvbWUgVGF4IEFjdGQCAQ9kFgICAQ8PFgIfAgURV2VhbHRoVGF4QWN0LmFzcHhkFgJmDxUBDldlYWx0aCBUYXggQWN0ZAICD2QWAgIBDw8WAh8CBQ9HaWZ0VGF4QWN0LmFzcHhkFgJmDxUBDEdpZnQgVGF4IEFjdGQCAw9kFgICAQ8PFgIfAgUTSW50ZXJlc3RUYXhBY3QuYXNweGQWAmYPFQEQSW50ZXJlc3QgVGF4IEFjdGQCBA9kFgICAQ8PFgIfAgUWRXhwZW5kaXR1cmVUYXhBY3QuYXNweGQWAmYPFQETRXhwZW5kaXR1cmUgVGF4IEFjdGQCBQ9kFgICAQ8PFgIfAgUSQ29tcGFuaWVzQWN0cy5hc3B4ZBYCZg8VAQ1Db21wYW5pZXMgQWN0ZAIGD2QWAgIBDw8WAh8CBT1NQ0FBY3QuYXNweD9tY2FpZD1Db21wYW5pZXMgKCBEb25hdGlvbiB0byBOYXRpb25hbCApIEZ1bmQgQWN0ZBYCZg8VAStDb21wYW5pZXMgKCBEb25hdGlvbiB0byBOYXRpb25hbCApIEZ1bmQgQWN0ZAIHD2QWAgIBDw8WAh8CBTRNQ0FBY3RzLmFzcHg/bWNhaWQ9TGltaXRlZCBMaWFiaWxpdHkgUGFydG5lcnNoaXAgQWN0ZBYCZg8VASFMaW1pdGVkIExpYWJpbGl0eSBQYXJ0bmVyc2hpcCBBY3RkAggPZBYCAgEPDxYCHwIFE1BhcnRuZXJzaGlwQWN0LmFzcHhkFgJmDxUBD1BhcnRuZXJzaGlwIEFjdGQCCQ9kFgICAQ8PFgIfAgUsTUNBQWN0LmFzcHg/bWNhaWQ9U29jaWV0aWVzIHJlZ2lzdHJhdGlvbiBBY3RkFgJmDxUBGlNvY2lldGllcyBSZWdpc3RyYXRpb24gQWN0ZAIKD2QWAgIBDw8WAh8CBS5Nb25vcG9saWVzYW5kUmVzdHJpY3RpdmVUcmFkZVByYWN0aWNlc0FjdC5hc3B4ZBYCZg8VAS5Nb25vcG9saWVzIGFuZCBSZXN0cmljdGl2ZSBUcmFkZSBQcmFjdGljZXMgQWN0ZAILD2QWAgIBDw8WAh8CBSJNQ0FBY3RzLmFzcHg/bWNhaWQ9Q29tcGV0aXRpb24gQWN0ZBYCZg8VAQ9Db21wZXRpdGlvbiBBY3RkAgwPZBYCAgEPDxYCHwIFLE1DQUFjdHMuYXNweD9tY2FpZD1DaGFydGVyZWQgQWNjb3VudGFudHMgQWN0ZBYCZg8VARlDaGFydGVyZWQgQWNjb3VudGFudHMgQWN0ZAIND2QWAgIBDw8WAh8CBSpNQ0FBY3RzLmFzcHg/bWNhaWQ9Q29tcGFueSBTZWNyZXRhcmllcyBBY3RkFgJmDxUBF0NvbXBhbnkgU2VjcmV0YXJpZXMgQWN0ZAIOD2QWAgIBDw8WAh8CBTFNQ0FBY3RzLmFzcHg/bWNhaWQ9Q29zdCBBbmQgV29ya3MgQWNjb3VudGFudHMgQWN0ZBYCZg8VAR5Db3N0IEFuZCBXb3JrcyBBY2NvdW50YW50cyBBY3RkAg8PZBYCAgEPDxYCHwIFHUluc29sdmVuY3lCYW5rcnVwdGN5Q29kZS5hc3B4ZBYCZg8VAR5JbnNvbHZlbmN5IEFuZCBCYW5rcnVwdGN5IENvZGVkAgkPPCsACQEADxYEHwAWAB8BAgJkFgRmD2QWAgIBDw8WAh8CBRNJbmNvbWVUYXhSdWxlcy5hc3B4ZBYCZg8VARBJbmNvbWUgVGF4IFJ1bGVzZAIBD2QWAgIBDw8WAh8CBShDb21wYW55TGF3UnVsZXMuYXNweD9tY2FpZD1Db21wYW55IFJ1bGVzZBYCZg8VARJDb21wYW55IExhdyAgUnVsZXNkAgsPPCsACQEADxYEHwAWAB8BAgJkFgRmD2QWAgIBDw8WAh8CBRdJbmNvbWVUYXhDaXJjdWxhcnMuYXNweGQWAmYPFQEKSW5jb21lIFRheGQCAQ9kFgICAQ8PFgIfAgUYQ29tcGFueUxhd0NpcmN1bGFycy5hc3B4ZBYCZg8VAQtDb21wYW55IExhd2QCDQ88KwAJAQAPFgQfABYAHwECAmQWBGYPZBYCAgEPDxYCHwIFEU5vdGlmaWNhdGlvbi5hc3B4ZBYCZg8VAQpJbmNvbWUgVGF4ZAIBD2QWAgIBDw8WAh8CBRpDb21wYW55TGF3Tm90aWZhY3Rpb24uYXNweGQWAmYPFQELQ29tcGFueSBMYXdkAg8PPCsACQEADxYEHwAWAB8BAgdkFg5mD2QWAgIBDw8WAh8CBRVJbmNvbWVUYXhSZXR1cm5zLmFzcHhkFgJmDxUBGEluY29tZSBUYXggUmV0dXJucyBGb3Jtc2QCAQ9kFgICAQ8PFgIfAgUTSW5jb21lVGF4Rm9ybXMuYXNweGQWAmYPFQEQSW5jb21lIFRheCBGb3Jtc2QCAg9kFgICAQ8PFgIfAgUOV2VhbHRoVGF4LmFzcHhkFgJmDxUBEldlYWx0aCBUYXggUmV0dXJuc2QCAw9kFgICAQ8PFgIfAgUWSW5jb21lVGF4Q2hhbGxhbnMuYXNweGQWAmYPFQETSW5jb21lIFRheCBDaGFsbGFuc2QCBA9kFgICAQ8PFgIfAgUYSW5jb21lVGF4T3RoZXJGb3Jtcy5hc3B4ZBYCZg8VARZJbmNvbWUgVGF4IE90aGVyIEZvcm1zZAIFD2QWAgIBDw8WAh8CBQ1Sb2NGb3Jtcy5hc3B4ZBYCZg8VAQlST0MgRm9ybXNkAgYPZBYCAgEPDxYCHwIFDUxMcEZvcm1zLmFzcHhkFgJmDxUBI0xpbWl0ZWQgTGlhYmlsaXR5IFBhcnRuZXJzaGlwIChMTFApZAIRDzwrAAkBAA8WBB8AFgAfAQIJZBYSZg9kFgICAQ8PFgIfAgUhQ2FsY3VsYXRvcnMtS2lzYW5WaWthc1BhdHJhcy5hc3B4ZBYCZg8VARFLaXNhbiBWaWthcyBQYXRyYWQCAQ9kFgICAQ8PFgIfAgUiQ2FsY3VsYXRvcnMtR2V0Tm9PZkluc3RhbG1lbnQuYXNweGQWAmYPFQEZR2V0IE51bWJlciBPZiBJbnN0YWxsbWVudGQCAg9kFgICAQ8PFgIfAgUUQ2FsY3VsYXRvcnMtRU1JLmFzcHhkFgJmDxUBIUVxdWF0ZWQgTW9udGhseSBJbnN0YWxsbWVudCAoRU1JKWQCAw9kFgICAQ8PFgIfAgUUQ2FsY3VsYXRvcnMtSFJBLmFzcHhkFgJmDxUBGkhvdXNlIFJlbnQgQWxsb3dhbmNlIChIUkEpZAIED2QWAgIBDw8WAh8CBRRDYWxjdWxhdG9ycy1GQlQuYXNweGQWAmYPFQEYRnJpbmdlIEJlbmVmaXQgVGF4IChGQlQpZAIFD2QWAgIBDw8WAh8CBSRDYWxjdWxhdG9ycy1JbmNvbWVUYXhDYWxjdWxhdG9yLmFzcHhkFgJmDxUBFUluY29tZSBUYXggQ2FsY3VsYXRvcmQCBg9kFgICAQ8PFgIfAgUZQ2FsY3VsYXRvcnMtSG9tZUxvYW4uYXNweGQWAmYPFQEUSG9tZSBMb2FuIENhbGN1bGF0b3JkAgcPZBYCAgEPDxYCHwIFGUNhbGN1bGF0b3JzLUF1dG9Mb2FuLmFzcHhkFgJmDxUBFEF1dG8gTG9hbiBDYWxjdWxhdG9yZAIID2QWAgIBDw8WAh8CBRRDYWxjdWxhdG9ycy1OU0MuYXNweGQWAmYPFQEiTmF0aW9uYWwgU2F2aW5nIENlcnRpZmljYXRlcyAoTlNDKWQCBQ9kFggCAQ8WAh4EVGV4dAXtGjxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly9jZm8uZWNvbm9taWN0aW1lcy5pbmRpYXRpbWVzLmNvbS9uZXdzL3RheC1sZWdhbC1hY2NvdW50aW5nL2NlbGVicmF0aW5nLW5pbmUteWVhcnMtb2YtZ3N0LWEtY2FsbC1mb3ItcmVmb3JtLWFuZC1pbm5vdmF0aW9uLWluLWluZGlhcy10YXgtbGFuZHNjYXBlLzEzMjEwNTM1MCI+R1NUIGF0IDk6IEluZGlhIEluYyBzZWVrcyBHU1QgMi4wIHdpdGggZmFzdGVyIElUQyByZWZ1bmRzLCBBSS1sZWQgY29tcGxpYW5jZSBhbmQgbG93ZXIgbGl0aWdhdGlvbjwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vY2ZvLmVjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy90YXgtbGVnYWwtYWNjb3VudGluZy9pbmRpYXMtZ3N0LXJldmVudWUtYnJlYWtkb3duLWZvci1meTI2LXRvcC1wZXJmb3JtZXJzLWFuZC1sYWdnYXJkcy1yZXZlYWxlZC8xMzIwOTM1NzEiPkluZGlh4oCZcyB0b3AgMTAgU3RhdGVzIGJ5IEdTVCBjb2xsZWN0aW9ucyBpbiBGWTI2IOKAlCBhbmQgd2hvIGxhZ2dlZCBiZWhpbmQ8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3Mvc3RyYXRlZ3ktb3BlcmF0aW9ucy9pY2ljaS1wcnVkZW50aWFsLWxpZmUtaW5zdXJhbmNlLXRhcmdldHMtMTAtMTUtcHJlbWl1bS1ncm93dGgtZm9jdXNpbmctb24tcHJvdGVjdGlvbi1idXNpbmVzcy8xMzIwODcwNDgiPklDSUNJIFBydWRlbnRpYWwgTGlmZSBwbGFucyAxMC0xNSUgcHJlbWl1bSBncm93dGgsIGJldHMgb24gcHJvdGVjdGlvbiB0byBvdXRwYWNlIHNhdmluZ3MsIENGTyBEaGlyZW4gU2FsaWFuIHNheXM8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3MvdGF4LWxlZ2FsLWFjY291bnRpbmcvbWNhLXRvLXJldmlzZS00MC1hdWRpdC1zdGFuZGFyZHMtaW5jbHVkaW5nLXNhLTYwMC1ieS1hdWd1c3QtMjAyNC8xMzIwODczNjIiPkV4Y2x1c2l2ZTogTUNBIHNldCB0byBub3RpZnkgU0EgNjAwLCA0MCByZXZpc2VkIGF1ZGl0IHN0YW5kYXJkcyBieSBBdWd1c3Q8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3MvbGVhZGVyc2hpcC9oZGZjLWJhbmstYXBwb2ludHMtcHVuZWV0LXNoYXJtYS1hcy1jZm8tcmFqaXYta3VtYXItYXMtcGFydC10aW1lLWNoYWlybWFuLzEzMjA4MjcwOSI+SERGQyBCYW5rIGFwcG9pbnRzIFB1bmVldCBTaGFybWEgYXMgQ0ZPPC9hPjwvc3Bhbj48L2xpPjxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly9jZm8uZWNvbm9taWN0aW1lcy5pbmRpYXRpbWVzLmNvbS9uZXdzL3RheC1sZWdhbC1hY2NvdW50aW5nL3VyZ2VudC1jYWxsLWZvci1nc3QtYXBwZWFsLWRlYWRsaW5lLWV4dGVuc2lvbi1hbWlkLXBvcnRhbC1nbGl0Y2hlcy8xMzIwNzAyMDIiPlBvcnRhbCBnbGl0Y2hlcyBwdXQgdGhvdXNhbmRzIG9mIEdTVCBhcHBlYWxzIGF0IHJpc2s7IGV4cGVydHMgc2VlayBkZWFkbGluZSBleHRlbnNpb248L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3Mvc3RyYXRlZ3ktb3BlcmF0aW9ucy9jZWF0LXBsYW5zLWRvdWJsZS1kaWdpdC1ncm93dGgtZGVzcGl0ZS1yaXNpbmctaW5wdXQtY29zdHMtY2ZvLWNvbmZpcm1zLzEzMjA1NjU4NiI+Q0VBVCB0YXJnZXRzIG9uZS10aGlyZCBleHBvcnQgcmV2ZW51ZSBzaGFyZSwgZXllcyBkb3VibGUtZGlnaXQgdm9sdW1lIGdyb3d0aCBvdmVyIG5leHQgZml2ZSB5ZWFyczogQ0ZPIEt1bWFyIFN1YmJpYWg8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3MvZWNvbm9teS9pbmRpYS11ay10cmFkZS1kZWFsLXVubG9ja2luZy1uZXctb3Bwb3J0dW5pdGllcy1mb3ItYnVzaW5lc3Nlcy1ieS0yMDI2LzEzMjA2Mzk3MiI+SW5kaWEtVUsgdHJhZGUgcGFjdCBvcGVucyBuZXcgcHJvc3BlY3RzLCBidXQgaW5kdXN0cnkgcmVhZGluZXNzIHdpbGwgZGVjaWRlIGdhaW5zLCBzYXkgZXhwZXJ0czwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vY2ZvLmVjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy90YXgtbGVnYWwtYWNjb3VudGluZy9nb3Zlcm5tZW50LWV4dGVuZHMtZ3N0YXQtYXBwZWFsLWZpbGluZy1kZWFkbGluZS10by1qdWx5LTMxLWFtaWQtcG9ydGFsLXJ1c2gtdGVjaG5pY2FsLWlzc3Vlcy8xMzIwODc0NjkiPkdvdmVybm1lbnQgZXh0ZW5kcyBHU1RBVCBhcHBlYWwgZmlsaW5nIGRlYWRsaW5lIHRvIEp1bHkgMzEgYW1pZCBwb3J0YWwgcnVzaCwgdGVjaG5pY2FsIGlzc3VlczwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vY2ZvLmVjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy9jZm8tdGVjaC9iaWctZm91ci1yZXRoaW5rLXBhcnRuZXJzaGlwLWFzLWFpLWNoYW5nZXMtdGhlLWdhbWUvMTMyMDYxMjA5Ij5CaWcgRm91ciByZXRoaW5rIHBhcnRuZXJzaGlwIGFzIEFJIGNoYW5nZXMgdGhlIGdhbWU8L2E+PC9zcGFuPjwvbGk+ZAIDDxYCHwMFqBs8bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vY2ZvLmVjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy90YXgtbGVnYWwtYWNjb3VudGluZy9jZWxlYnJhdGluZy1uaW5lLXllYXJzLW9mLWdzdC1hLWNhbGwtZm9yLXJlZm9ybS1hbmQtaW5ub3ZhdGlvbi1pbi1pbmRpYXMtdGF4LWxhbmRzY2FwZS8xMzIxMDUzNTAiPkdTVCBhdCA5OiBJbmRpYSBJbmMgc2Vla3MgR1NUIDIuMCB3aXRoIGZhc3RlciBJVEMgcmVmdW5kcywgQUktbGVkIGNvbXBsaWFuY2UgYW5kIGxvd2VyIGxpdGlnYXRpb248L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3MvZ292ZXJuYW5jZS1yaXNrLWNvbXBsaWFuY2Uvc2ViaS1iYXJzLTEwLWVudGl0aWVzLW92ZXItYWxsZWdlZC1mcmF1ZC1hdC1kYXJqZWVsaW5nLWluZHVzdHJpZXMvMTMyMTA1MDU0Ij5TZWJpIGJhcnMgMTAgZW50aXRpZXMgb3ZlciBhbGxlZ2VkIGZyYXVkIGF0IERhcmplZWxpbmcgSW5kdXN0cmllczwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vY2ZvLmVjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy9nb3Zlcm5hbmNlLXJpc2stY29tcGxpYW5jZS9zZWJpLWJhcnMtZGFyamVlbGluZy1pbmR1c3RyaWllcy1wcm9tb3RlcnMtYWxsZWdlcy1jaXJjdWxhci1mdW5kaW5nLWFuZC1zdG9jay1tYW5pcHVsYXRpb24tc2NoZW1lLzEzMjEwNTA1MSI+U0VCSSBiYXJzIERhcmplZWxpbmcgSW5kdXN0cmlpZXMgcHJvbW90ZXJzLCBhbGxlZ2VzIGNpcmN1bGFyIGZ1bmRpbmcgYW5kIHN0b2NrIG1hbmlwdWxhdGlvbiBzY2hlbWU8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3MvZ292ZXJuYW5jZS1yaXNrLWNvbXBsaWFuY2Uvam9pbnQtcGFybGlhbWVudGFyeS1jb21taXR0ZWUtdG8taG9sZC1tZWV0aW5nLW9uLXRocmVlLWtleS1hbWVuZG1lbnQtYmlsbHMvMTMyMTA1MDM4Ij5Kb2ludCBQYXJsaWFtZW50YXJ5IENvbW1pdHRlZSB0byBob2xkIG1lZXRpbmcgb24gdGhyZWUga2V5IGFtZW5kbWVudCBCaWxsczwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vY2ZvLmVjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy9jZm8tdGVjaC9haS1kcml2aW5nLWNyZWRpdC1yaXNrLW1heS10aHJlYXRlbi1qb2JzLWFuZC10YXgtcmV2ZW51ZXMtaW4tZGV2ZWxvcGVkLWVjb25vbWllcy1maXRjaC8xMzIxMDUwMzAiPkFJIGRyaXZpbmcgY3JlZGl0IHJpc2ssIG1heSB0aHJlYXRlbiBqb2JzIGFuZCB0YXggcmV2ZW51ZXMgaW4gZGV2ZWxvcGVkIGVjb25vbWllczogRml0Y2g8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3Mvc3RyYXRlZ3ktb3BlcmF0aW9ucy9uLWNoYW5kcmFzZWthcmFucy1zZWF0LW9uLXRhdGEtc29ucy1ib2FyZC11cC1mb3ItcmVzZXQtaW4tYXVndXN0LzEzMjEwNDk4NiI+TiBDaGFuZHJhc2VrYXJhbiYjMDM5O3Mgc2VhdCBvbiBUYXRhIFNvbnMgYm9hcmQgdXAgZm9yIHJlc2V0IGluIEF1Z3VzdDwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vY2ZvLmVjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy9lY29ub215L2luZGlhcy1tYW51ZmFjdHVyaW5nLWdyb3d0aC1leHBlY3RlZC10by1tb2RlcmF0ZS1pbi1hcHJpbC1qdW5lLWR1ZS10by13ZXN0LWFzaWEtY3Jpc2lzLWZpY2NpLzEzMjEwNDkzMSI+SW5kaWEmIzAzOTtzIG1hbnVmYWN0dXJpbmcgZ3Jvd3RoIGV4cGVjdGVkIHRvIG1vZGVyYXRlIGluIEFwcmlsLUp1bmUgZHVlIHRvIFdlc3QgQXNpYSBjcmlzaXM6IEZJQ0NJPC9hPjwvc3Bhbj48L2xpPjxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly9jZm8uZWNvbm9taWN0aW1lcy5pbmRpYXRpbWVzLmNvbS9uZXdzL2UyMC1taXhpbmctaW4tdHJpYWwtcGhhc2UtY2VudHJlLXRlbGxzLXNjLWNvdXJ0LW9yZGVycy1zdGF0dXMtcXVvLW9uLWV0aGFub2wtcXVvdGEvMTMyMTA0ODQyIj5FMjAgbWl4aW5nIGluIHRyaWFsIHBoYXNlLCBDZW50cmUgdGVsbHMgU0M7IGNvdXJ0IG9yZGVycyBzdGF0dXMgcXVvIG9uIGV0aGFub2wgcXVvdGE8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL2Nmby5lY29ub21pY3RpbWVzLmluZGlhdGltZXMuY29tL25ld3MvcmJpLWZsYWdzLWVtZXJnaW5nLWZhdWx0LWxpbmVzLWluLXByaXZhdGUtY3JlZGl0LW1hcmtldC1jYWxscy1mb3ItY2xvc2UtbW9uaXRvcmluZy8xMzIxMDQ4MzgiPlJCSSBmbGFncyBlbWVyZ2luZyBmYXVsdCBsaW5lcyBpbiBwcml2YXRlIGNyZWRpdCBtYXJrZXQsIGNhbGxzIGZvciBjbG9zZSBtb25pdG9yaW5nPC9hPjwvc3Bhbj48L2xpPjxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly9jZm8uZWNvbm9taWN0aW1lcy5pbmRpYXRpbWVzLmNvbS9uZXdzL3RoZS0xLXRyaWxsaW9uLWFpLWFybXMtcmFjZS1pcy1mdWVsaW5nLWEtaGlkZGVuLXN1cGVyY3ljbGUtYW5kLWl0cy1ub3QtanVzdC1jaGlwcy8xMzIxMDQ4MjUiPlRoZSAkMSB0cmlsbGlvbiBBSSAmIzAzOTthcm1zIHJhY2UmIzAzOTsgaXMgZnVlbGluZyBhIGhpZGRlbiBzdXBlcmN5Y2xlIGFuZCBpdCYjMDM5O3Mgbm90IGp1c3QgY2hpcHM8L2E+PC9zcGFuPjwvbGk+ZAIFDxYCHwMFgxg8bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vd3d3LmNhY2x1YmluZGlhLmNvbS9uZXdzL2dvdnQtZXh0ZW5kcy1jdXN0b21zLWR1dHktZXhlbXB0aW9uLW9uLWNyaXRpY2FsLXBldHJvY2hlbWljYWwtaW1wb3J0cy10aWxsLWp1bHktMTUtMjAyNi0yNjYyOC5hc3AiPkdvdnQgRXh0ZW5kcyBDdXN0b21zIER1dHkgRXhlbXB0aW9uIG9uIENyaXRpY2FsIFBldHJvY2hlbWljYWwgSW1wb3J0cyBUaWxsIEp1bHkgMTUsIDIwMjY8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5jYWNsdWJpbmRpYS5jb20vbmV3cy9jZW50cmUtbm90aWZpZXMtbmV3LWV4Y2lzZS1kdXR5LXJhdGVzLW9uLXBldHJvbGV1bS1wcm9kdWN0cy1lZmZlY3RpdmUtMXN0LWp1bHktMjAyNi0yNjYyNy5hc3AiPkNlbnRyZSBOb3RpZmllcyBOZXcgRXhjaXNlIER1dHkgUmF0ZXMgb24gUGV0cm9sZXVtIFByb2R1Y3RzIEVmZmVjdGl2ZSAxc3QgSnVseSAyMDI2PC9hPjwvc3Bhbj48L2xpPjxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly93d3cuY2FjbHViaW5kaWEuY29tL25ld3MvZ3N0YXQtYXBwZWFsLWZpbGluZy1kZWFkbGluZS1leHRlbmRlZC10aWxsLTMxc3QtanVseS0yMDI2LTI2NjI2LmFzcCI+R1NUQVQgQXBwZWFsIEZpbGluZyBEZWFkbGluZSBFeHRlbmRlZCBUaWxsIDMxc3QgSnVseSAyMDI2PC9hPjwvc3Bhbj48L2xpPjxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly93d3cuY2FjbHViaW5kaWEuY29tL25ld3MvaWNhaS1zdHJlbmd0aGVucy1haS1wdXNoLXdpdGgtc2FydmFtLWFpLXBhcnRuZXJzaGlwLWFuZC1uZXctYWktY2VydGlmaWNhdGlvbi1jb3Vyc2UtMjY2MjUuYXNwIj5JQ0FJIFN0cmVuZ3RoZW5zIEFJIFB1c2ggd2l0aCBTYXJ2YW0gQUkgUGFydG5lcnNoaXAgYW5kIE5ldyBBSSBDZXJ0aWZpY2F0aW9uIENvdXJzZTwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vd3d3LmNhY2x1YmluZGlhLmNvbS9uZXdzL2ljYWktYW5ub3VuY2VzLW1vY2stdGVzdC1wYXBlcnMtc2VyaWVzLWktaWktZm9yLWNhLWZvdW5kYXRpb24tc2VwdGVtYmVyLTIwMjYtZXhhbXMtMjY2MjQuYXNwIj5JQ0FJIEFubm91bmNlcyBNb2NrIFRlc3QgUGFwZXJzIFNlcmllcyBJIGFuZCBJSSBmb3IgQ0EgRm91bmRhdGlvbiBTZXB0ZW1iZXIgMjAyNiBFeGFtczwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vd3d3LmNhY2x1YmluZGlhLmNvbS9uZXdzL3JiaS1pc3N1ZXMtY3JlZGl0LWRlcml2YXRpdmVzLW1hc3Rlci1kaXJlY3Rpb24tMjAyNi0yNjYyMy5hc3AiPlJCSSBJc3N1ZXMgQ3JlZGl0IERlcml2YXRpdmVzIE1hc3RlciBEaXJlY3Rpb24gMjAyNjwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vd3d3LmNhY2x1YmluZGlhLmNvbS9uZXdzL2NiZHQtbm90aWZpZXMtdW5pdmVyc2l0eS1vZi1oeWRlcmFiYWQtYW5kLXBoZmktYXMtYXBwcm92ZWQtc2NpZW50aWZpYy1yZXNlYXJjaC1pbnN0aXR1dGlvbnMtdW5kZXItaW5jb21lLXRheC1hY3QtMjAyNS0yNjYyMi5hc3AiPkNCRFQgTm90aWZpZXMgVW5pdmVyc2l0eSBvZiBIeWRlcmFiYWQgYW5kIFBIRkkgYXMgQXBwcm92ZWQgU2NpZW50aWZpYyBSZXNlYXJjaCBJbnN0aXR1dGlvbnMgVW5kZXIgSW5jb21lIFRheCBBY3QsIDIwMjU8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5jYWNsdWJpbmRpYS5jb20vbmV3cy9tY2EtcmVsZWFzZXMtY29ycG9yYXRlLW1pdHJhLXNjaGVtZS1ndWlkZWxpbmVzLTIwMjYtMjY2MjEuYXNwIj5NQ0EgUmVsZWFzZXMgQ29ycG9yYXRlIE1pdHJhIFNjaGVtZSBHdWlkZWxpbmVzIDIwMjY8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5jYWNsdWJpbmRpYS5jb20vbmV3cy9pY2FpLWNhLWZvdW5kYXRpb24tZXhhbS1zZXB0ZW1iZXItMjAyNi0yNjYyMC5hc3AiPklDQUkgQ0EgRm91bmRhdGlvbiBFeGFtIFNlcHRlbWJlciAyMDI2OiBDb21wbGV0ZSBHdWlkZSB0byBSZWdpc3RyYXRpb24sIEZlZXMgYW5kIEV4YW0gRGF0ZXM8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5jYWNsdWJpbmRpYS5jb20vbmV3cy9pY2FpLWljc2ktaWNtYWktaWl0LW1hZHJhcy1qb2luLW1jYS1zLWNvcnBvcmF0ZS1taXRyYS1zY2hlbWUtZm9yLW1zbWUtZ3Jvd3RoLTI2NjE5LmFzcCI+SUNBSSwgSUNTSSwgSUNNQUkgYW5kIElJVCBNYWRyYXMgSm9pbiBNQ0EncyBDb3Jwb3JhdGUgTWl0cmEgU2NoZW1lIGZvciBNU01FIEdyb3d0aDwvYT48L3NwYW4+PC9saT5kAgcPFgIfAwXHEzxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly93d3cuYmJjLmNvLnVrL25ld3MvYXJ0aWNsZXMvY2Q5NWp6eTR6eWVvP2F0X21lZGl1bT1SU1MmYXRfY2FtcGFpZ249cnNzIj5TdXBlcmRyeSBjby1mb3VuZGVyIHdhcyBteSBib3NzIHdoZW4gaGUgcmFwZWQgbWU8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5iYmMuY28udWsvbmV3cy9hcnRpY2xlcy9jOXEyNTA1MTFuZW8/YXRfbWVkaXVtPVJTUyZhdF9jYW1wYWlnbj1yc3MiPldoeSBTdGFybWVyJ3MgZGVmZW5jZSBwbGFuIGxlYXZlcyBuZXh0IFBNIHdpdGggwqM0LjdibiBoZWFkYWNoZTwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vd3d3LmJiYy5jby51ay9uZXdzL2FydGljbGVzL2M1eXpxcnB3Mmc4bz9hdF9tZWRpdW09UlNTJmF0X2NhbXBhaWduPXJzcyI+UGxlYSBmb3IgaG91c2Vob2xkcyB0byByZWFkIGVuZXJneSBtZXRlciBhcyBwcmljZXMgcmlzZTwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vd3d3LmJiYy5jby51ay9uZXdzL2FydGljbGVzL2M4ZTJ5cDFnZzM3bz9hdF9tZWRpdW09UlNTJmF0X2NhbXBhaWduPXJzcyI+V2h5IEdlbiBaIGFyZSBwbGFubmluZyBmb3IgbGlmZSB3aXRob3V0IGEgc3RhdGUgcGVuc2lvbjwvYT48L3NwYW4+PC9saT48bGkgY2xhc3M9J1Byb2RldGFpbHMnPjxzcGFuIHN0eWxlPSdmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMXB4Oyc+PGEgdGFyZ2V0PSdfYmxhbmsnIGhyZWY9Imh0dHBzOi8vd3d3LmJiYy5jby51ay9uZXdzL2FydGljbGVzL2N2Z212OThlejN6bz9hdF9tZWRpdW09UlNTJmF0X2NhbXBhaWduPXJzcyI+VHJ1bXAgbWFkZSBtb3JlIHRoYW4gJDFibiBmcm9tIGNyeXB0byBpbiBmaXJzdCB5ZWFyIGJhY2sgaW4gb2ZmaWNlPC9hPjwvc3Bhbj48L2xpPjxsaSBjbGFzcz0nUHJvZGV0YWlscyc+PHNwYW4gc3R5bGU9J2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjExcHg7Jz48YSB0YXJnZXQ9J19ibGFuaycgaHJlZj0iaHR0cHM6Ly93d3cuYmJjLmNvLnVrL25ld3MvYXJ0aWNsZXMvYzFqeWt3azhuMThvP2F0X21lZGl1bT1SU1MmYXRfY2FtcGFpZ249cnNzIj5UaHJlZS15ZWFyLW9sZCByZXNjdWVkIGFuZCB0YWtlbiB0byBob3NwaXRhbCBzaXggZGF5cyBhZnRlciBWZW5lenVlbGEgcXVha2U8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5iYmMuY28udWsvbmV3cy9hcnRpY2xlcy9jZDBtM2cwNWt4Mm8/YXRfbWVkaXVtPVJTUyZhdF9jYW1wYWlnbj1yc3MiPldvbWVuIHdpdGggUE1PUyBzaG91bGQgaGF2ZSB5ZWFybHkgTkhTIGNoZWNrcywgc2F5cyBoZWFsdGggd2F0Y2hkb2c8L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5iYmMuY28udWsvbmV3cy9hcnRpY2xlcy9jajNnMjB5eHZtNG8/YXRfbWVkaXVtPVJTUyZhdF9jYW1wYWlnbj1yc3MiPkUtc2Nvb3RlcnMgYmVpbmcgYWR2ZXJ0aXNlZCBmb3IgY29tbXV0aW5nIGRlc3BpdGUgVUsgcm9hZCBiYW48L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5iYmMuY28udWsvc3BvcnQvZm9vdGJhbGwvYXJ0aWNsZXMvY3o5bHE1eTlwajJvP2F0X21lZGl1bT1SU1MmYXRfY2FtcGFpZ249cnNzIj5UdWNoZWwgd2lsbCBzdGljayB0byBTb3V0aGdhdGUncyBwZW5hbHR5IHBsYW48L2E+PC9zcGFuPjwvbGk+PGxpIGNsYXNzPSdQcm9kZXRhaWxzJz48c3BhbiBzdHlsZT0nZm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTFweDsnPjxhIHRhcmdldD0nX2JsYW5rJyBocmVmPSJodHRwczovL3d3dy5iYmMuY28udWsvbmV3cy9hcnRpY2xlcy9jOTgycXk3cXY1Z28/YXRfbWVkaXVtPVJTUyZhdF9jYW1wYWlnbj1yc3MiPlVLIGNoYXJpdGllcyBsYXVuY2ggVmVuZXp1ZWxhIGVhcnRocXVha2VzIGFwcGVhbDwvYT48L3NwYW4+PC9saT5kZDG4SRa5r5fATpuFebRi5VfXwXnq">
+
+
+<script src="ScriptResource-11.axd?d=lZFTZWccOiGq8bOT4qSp4i6-vPlSizhanKzInjkE8oH_4YN2m5K8voFbLvG4wSzB2bZK5uLP6USLdFrfOknoiK8c1LRReRqAKgxhm5cg0yeKDSiz491dS06fb1mdlbaD-KZb1bjMRQyYfgh0b7EFLOEfJzNYC_GZsaaWcKUNg28L2R490&amp;t=559a934d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BE617367">
+    
+   
+
+
+<script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?8180';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4dc247",
+      "ctaText":"",
+      "borderRadius":"25",
+      "marginLeft":"10",
+      "marginBottom":"50",
+      "marginRight":"50",
+      "position":"right"
+  },
+  "brandSetting":{
+      "brandName":" I R K & Associates",
+      "brandSubTitle":"Chartered Accountants",
+      "brandImg":"http://cakmagarwal.com/images/logo-wht.jpg",
+      "welcomeText":"Hi there!\nHow can I help you?",
+      "messageText":"Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Start Chat",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"+919866121656"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
+
+ <header class="header">
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+	  <div class="col-md-2">
+	  <div id="google_translate_element" style="padding-top:2px"></div>
+	  </div>
+        <div class="col-md-5">
+          <div class="top-lt-info">
+            <div class="top-info-d"> <i class="fa fa-phone"></i> <span>+91 8143505094</span> </div>
+            <div class="top-info-d"> <i class="fa fa-phone"></i> <span>+91 7993856920 </span> </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="pull-right">
+            <div class="top-lt-info social-top">
+           <ul>
+                <li>Connect With <span>Us</span></li>
+                <li><a class="icon-fa-facebook" href="https://www.facebook.com/ramakishore.itla" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/irk_associates?igsh=MXJhbXl3cDBheXNtdw==" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://x.com/ramakishoreitla" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="icon-fa-linkedin" href="https://www.linkedin.com/in/ramakishore-itla-609511308/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="icon-fa-whatsapp" href="https://wa.me/+919866121656" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg static-top">
+   <div class="header-logo"> 
+       <div class="container">
+      <div class="row">
+        <div class="logo col-md-8">
+        <div class="navbar-header"> <a href="index.htm" class="navbar-brand"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        </div>
+        </div>
+       <div class="info col-md-4">
+         <ul>
+           
+            <li class="last"><img src="images/email.png">
+              <p> <span class="heading">Contact Email</span> <span>caramakishore@gmail.com</span> </p>
+            </li>
+          </ul>
+        </div>
+        </div>
+        </div> 
+		</div>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="container">
+  <ul class="navbar-nav ml-auto">
+  <li class="nav-item"><a href="index.htm">Home</a></li>
+  <li class="nav-item"><a href="AboutUs.aspx.html">About Us</a></li>
+  <li class="nav-item dropdown drop-p"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Services</a>
+  <ul class="dropdown-menu full-width">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="font">Business Registration</div>
+                  <li><a href="Proprietorship.aspx.html">Proprietorship</a></li>
+                  <li><a href="Partnership.aspx.html">Partnership</a></li>
+                  <li><a href="OnePersonCompany.aspx.html">One Person Company</a></li>
+                  <li><a href="LimitedLiabilityPartnership.aspx.html">Limited Liability Partnership</a></li>
+                  <li><a href="PrivateLimitedCompany.aspx.html">Private Limited Company</a></li>
+                  <li><a href="PublicLimitedCompany.aspx.html">Public Limited Company</a></li>
+                  <li><a href="NidhiCompany.aspx.html">Nidhi Company</a></li>
+                  <li><a href="ProducerCompany.aspx.html">Producer Company</a></li>
+                  <li><a href="Section8Company.aspx.html">Section 8 Company</a></li>
+                  <li><a href="TrustRegistration.aspx.html">Trust Registration</a></li>
+                  <li><a href="SocietyRegistration.aspx.html">Society Registration</a></li>
+                  <li><a href="INDIANSUBSIDIARY.aspx.html">INDIAN SUBSIDIARY</a></li>
+                 
+                </div>
+                <div class="col-md-3">
+                   <div class="font">DIRECT TAXATION</div>
+                  <li><a href="Corporatetaxadvisorycompliance.aspx.html">Corporate tax advisory/compliance</a></li>
+                  <li><a href="Internationaltaxadvisorycompliance.aspx.html">International tax advisory/compliance</a></li>
+                  <li><a href="Transferpricingstudydocumentation.aspx.html">Transfer pricing study/documentation</a></li>
+                  <li><a href="Litigationrepresentationassistance.aspx.html">Litigation/representation assistance</a></li>
+                  <li><a href="Personaltaxadvisory.aspx.html">Personal tax advisory</a></li>
+                   <div class="font">GOODS & SERVICE TAX</div>
+                  <li><a href="GSTADVISORYANDCOMPLIANCESERVICE.aspx.html">GST ADVISORY AND COMPLIANCE SERVICE</a></li>
+                  <li><a href="GSTLIGITATIONSERVICES.aspx.html">GST LIGITATION SERVICES</a></li>
+                  <li><a href="GSTREGISTRATION.aspx.html">GST REGISTRATION</a></li>
+                  <li><a href="GSTRETURNS.aspx.html">GST RETURNS</a></li>
+                  <li><a href="GSTANNUALRETURN.aspx.html">GST ANNUAL RETURN</a></li>
+                  <li><a href="GSTEWAYBILL.aspx.html">GST EWAY BILL</a></li>
+                  <li><a href="LUTINGST.aspx.html">LUT IN GST</a></li>
+                  <li><a href="GSTCANCELLATION.aspx.html">GST CANCELLATION</a></li>
+                  <li><a href="GSTREGISTRATIONFORFOREIGNERS.aspx.html">GST REGISTRATION FOR FOREIGNERS</a></li>
+                </div>
+                <div class="col-md-3">
+                  <div class="font">ROC COMPLIANCES</div>
+                  <li><a href="AnnualComplianceforPrivateLimitedCompany.aspx.html">Annual Compliance for Private Limited Company</a></li>
+                  <li><a href="AnnualComplianceofLLP.aspx.html">Annual Compliance of LLP</a></li>
+                  <li><a href="NidhiCompanyCompliance.aspx.html">Nidhi Company Compliance</a></li>
+                  <li><a href="Section8CompanyCompliance.aspx.html">Section 8 Company Compliance</a></li>
+                  <li><a href="NBFCCompliance.aspx.html">NBFC Compliance</a></li>
+                  <li><a href="WindingPrivateLimitedCompany.aspx.html">Winding Private Limited Company</a></li>
+                  <li><a href="ClosureofLLP.aspx.html">Closure of LLP</a></li>
+                  <li><a href="RevivalofStruckOffCompanies.aspx.html">Revival of Struck Off Companies</a></li>
+                  <li><a href="OTHEREVENTBASEDCOMPLIANCES.aspx.html">OTHER EVENT BASED COMPLIANCES</a></li>
+                  
+               
+                </div>
+                <div class="col-md-3">
+                   <div class="font">AUDIT & ASSURANCE</div>
+                  <li><a href="StatutoryAudit.aspx.html">Statutory Audit </a></li>
+                  <li><a href="TaxAudit.aspx.html">Tax Audit</a></li>
+                  <li><a href="GSTAudit.aspx.html">GST Audit</a></li>
+                  <li><a href="OTHERAUDITS.aspx.html">OTHER AUDITS</a></li>
+                  <li><a href="ForensicAudit.aspx.html">Forensic Audit</a></li>
+                  <li><a href="SecretarialAudit.aspx.html">Secretarial Audit</a></li>
+                  <li><a href="DueDiligence.aspx.html">Due Diligence</a></li>
+                  <li><a href="Financialreportingandaccountingadvisoryservices.aspx.html">Financial reporting and accounting advisory services</a></li>
+                  <li><a href="ManagementAudits.aspx.html">Management Audits</a></li>
+                  <li><a href="CertificationServices.aspx.html">Certification Services</a></li>
+                  <li><a href="Agreeduponprocedures.aspx.html">Agreed upon procedures</a></li>
+                </div>
+              </div>
+            </ul>
+  
+		
+	</li>
+  <li class="nav-item dropdown drop-p"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Others Services</a>
+  <ul class="dropdown-menu full-width">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="font"><a href="PermitsandLicences.aspx.html" style="color:#fff;">Permits and Licences</a></div>
+                <li>FSSAI</li>
+                <li>Import & Export Code</li>
+                <li>ISO Certification</li>
+                <li>RERA Registration</li>
+                <li>MSME Udyam Registration</li>
+                <li>Startup India Registration</li>
+                <li>Shop Act Registration</li>
+                <li>ESI & PF Registration</li>
+                <li>NGO Darpan</li>
+                <li>Trust & Society Registration</li>
+                <li>NGO Registration</li>
+                <li>CSR registration to NGOs</li>
+                </div>
+                <div class="col-md-4">
+                   <div class="font"><a href="InternationalTaxationServices.aspx.html" style="color:#fff;">International Taxation</a></div>
+                  <li>International Taxation</li>
+                    <li>NRI Taxation Services</li>
+                    <li>Setup Business in India</li>
+                    <li>Tax Clearance Certificate</li>
+                    <li>Taxation of Expatriate Employees</li>
+                </div>
+                <div class="col-md-4">
+                  <div class="font"><a href="GlobalTaxationBookKeeping.aspx.html" style="color:#fff;">Global Taxation & Book Keeping</a></div>
+                 <li>Outsourcing Accounting & Book Keeping (including Outside india)</li>
+                <li>Payroll Management</li>
+                <li>Online Accounting</li>
+                <li>ZOHO</li>
+                <li>XERO </li>
+                <li>QUICK BOOKS</li>
+                
+                </div>
+                
+              </div>
+            </ul>
+  
+	</li>
+  <li class="nav-item dropdown"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">GST</a>
+    <ul class="dropdown-menu">
+	  <table id="ctl00_WUCInnerHeader_DataListGstCommon" cellspacing="0" border="0">
+	<tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl00_HyperGstActs" href="gstacts.aspx.html">Acts</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl01_HyperGstActs" href="gstrules.aspx.html">Rules</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl02_HyperGstActs" href="GstCirculars.aspx.html">Circulars</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl03_HyperGstActs" href="GstNotifaction.aspx.html">Notifications</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl04_HyperGstActs" href="GstForms.aspx.html">Forms</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl05_HyperGstActs" href="GstOrders.aspx.html">Orders</a>
+                  </td>
+	</tr><tr>
+		<td>
+                <a id="ctl00_WUCInnerHeader_DataListGstCommon_ctl06_HyperGstActs" href="GstInstruction.aspx.html">Instructions</a>
+                  </td>
+	</tr>
+</table>
+	    	<li><a href="GstHSNCodeWithRate.aspx.html">HSN Code With Rate </a></li>
+          <li><a href="GstSACCode.aspx.html">SAC Code </a></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown drop-p"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Knowledge Base</a>
+    <ul class="dropdown-menu full-width">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="font">Tools</div>
+          <table id="ctl00_WUCInnerHeader_DataListTools" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl00_HyperTools" href="utilities.aspx.html?serve=Rates of Income Tax">Rates of Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl01_HyperTools" href="utilities.aspx-1.html?serve=TDS Rates for N.R.I u/s 195">TDS Rates for N.R.I u/s 195</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl02_HyperTools" href="utilities.aspx-2.html?serve=Rates of TDS">Rates of TDS</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl03_HyperTools" href="utilities.aspx-3.html?serve=Rates of NSC Interest">Rates of NSC Interest</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl04_HyperTools" href="utilities.aspx-4.html?serve=Rates of Depreciation Under Income Tax Act">Rates of Depreciation Under Income Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl05_HyperTools" href="utilities.aspx-5.html?serve=Rates of Depreciation Under Company Act">Rates of Depreciation Under Company Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl06_HyperTools" href="utilities.aspx-6.html?serve=Cost Inflation Index">Cost Inflation Index</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl07_HyperTools" href="utilities.aspx-7.html?serve=ROC Fee Structure">ROC Fee Structure</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl08_HyperTools" href="utilities.aspx-8.html?serve=MICR Codes">MICR Codes</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListTools_ctl09_HyperTools" href="utilities.aspx-9.html?serve=IFSC Codes">IFSC Codes</a>
+            </td>
+	</tr>
+</table>
+        </div>
+        <div class="col-md-3">
+          <div class="font">Important Links</div>
+		  
+		  <li> <a href="https://itatonline.org/" target="_blank">ITATonline.org</a></li>
+          <table id="ctl00_WUCInnerHeader_DataListImpLinks" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl00_HyperTools" href="Pan.aspx.html">PAN</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl01_HyperTools" href="Tan.aspx.html">TAN</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl02_HyperTools" href="E-PaymentOnline.aspx.html">E-Payment Online</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl03_HyperTools" href="IncomeTax.aspx.html">Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl04_HyperTools" href="CBEC.aspx.html">CBIC</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl05_HyperTools" href="PFESI.aspx.html">PF & ESI</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl06_HyperTools" href="ExciseandServiceTax.aspx.html">Excise and Service Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl07_HyperTools" href="MCA21.aspx.html">MCA</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl08_HyperTools" href="cacscwa.aspx.html">CA/CS</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl09_HyperTools" href="SupremeCourt.aspx.html">Supreme Court</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListImpLinks_ctl10_HyperTools" href="morelink.aspx.html">More Link</a>
+            </td>
+	</tr>
+</table>
+        </div>
+        <div class="col-md-3">
+          <div class="font">Acts</div>
+          <table id="ctl00_WUCInnerHeader_DataListActs" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl00_HyperActs" href="IncomeTaxAct.aspx.html">Income Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl01_HyperActs" href="WealthTaxAct.aspx.html">Wealth Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl02_HyperActs" href="GiftTaxAct.aspx.html">Gift Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl03_HyperActs" href="InterestTaxAct.aspx.html">Interest Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl04_HyperActs" href="ExpenditureTaxAct.aspx.html">Expenditure Tax Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl05_HyperActs" href="CompaniesActs.aspx.html">Companies Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl06_HyperActs" href="MCAAct.aspx.html?mcaid=Companies ( Donation to National ) Fund Act">Companies ( Donation to National ) Fund Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl07_HyperActs" href="MCAActs.aspx.html?mcaid=Limited Liability Partnership Act">Limited Liability Partnership Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl08_HyperActs" href="PartnershipAct.aspx.html">Partnership Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl09_HyperActs" href="MCAAct.aspx-1.html?mcaid=Societies registration Act">Societies Registration Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl10_HyperActs" href="MonopoliesandRestrictiveTradePracticesAct.aspx.html">Monopolies and Restrictive Trade Practices Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl11_HyperActs" href="MCAActs.aspx-1.html?mcaid=Competition Act">Competition Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl12_HyperActs" href="MCAActs.aspx-2.html?mcaid=Chartered Accountants Act">Chartered Accountants Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl13_HyperActs" href="MCAActs.aspx-3.html?mcaid=Company Secretaries Act">Company Secretaries Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl14_HyperActs" href="MCAActs.aspx-4.html?mcaid=Cost And Works Accountants Act">Cost And Works Accountants Act</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListActs_ctl15_HyperActs" href="InsolvencyBankruptcyCode.aspx.html">Insolvency And Bankruptcy Code</a>
+            </td>
+	</tr>
+</table>
+        </div>
+        <div class="col-md-3">
+          <div class="font">Rules</div>
+          <table id="ctl00_WUCInnerHeader_DataListRules" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListRules_ctl00_HyperRules" href="IncomeTaxRules.aspx.html">Income Tax Rules</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListRules_ctl01_HyperRules" href="CompanyLawRules.aspx.html?mcaid=Company Rules">Company Law  Rules</a>
+            </td>
+	</tr>
+</table>
+		   <div class="font">Circulars</div>
+          <table id="ctl00_WUCInnerHeader_DataListCirculars" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListCirculars_ctl00_HyperRules" href="IncomeTaxCirculars.aspx.html">Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListCirculars_ctl01_HyperRules" href="CompanyLawCirculars.aspx.html">Company Law</a>
+            </td>
+	</tr>
+</table>
+         
+          <div class="font">Notification</div>
+          <table id="ctl00_WUCInnerHeader_DataListNotification" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListNotification_ctl00_HyperRules" href="Notification.aspx.html">Income Tax</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListNotification_ctl01_HyperRules" href="CompanyLawNotifaction.aspx.html">Company Law</a>
+            </td>
+	</tr>
+</table>
+          <div class="font">Forms</div>
+          <table id="ctl00_WUCInnerHeader_DataListForms" cellspacing="0" border="0">
+	<tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl00_HyperRules" href="IncomeTaxReturns.aspx.html">Income Tax Returns Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl01_HyperRules" href="IncomeTaxForms.aspx.html">Income Tax Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl02_HyperRules" href="WealthTax.aspx.html">Wealth Tax Returns</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl03_HyperRules" href="IncomeTaxChallans.aspx.html">Income Tax Challans</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl04_HyperRules" href="IncomeTaxOtherForms.aspx.html">Income Tax Other Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl05_HyperRules" href="RocForms.aspx.html">ROC Forms</a>
+            </td>
+	</tr><tr>
+		<td>
+              <a id="ctl00_WUCInnerHeader_DataListForms_ctl06_HyperRules" href="LLpForms.aspx.html">Limited Liability Partnership (LLP)</a>
+            </td>
+	</tr>
+</table>
+        </div>
+      </div>
+    </ul>
+  </li>
+   <li class="nav-item dropdown"><a href="javascript:void(0)" class="dropdown-togg" data-toggle="dropdown">Calculator</a>
+		<ul class="dropdown-menu">
+		  <table id="ctl00_WUCInnerHeader_DataListCalculator" cellspacing="0" border="0">
+	<tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl00_HyperRules" href="Calculators-KisanVikasPatras.aspx.html">Kisan Vikas Patra</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl01_HyperRules" href="Calculators-GetNoOfInstalment.aspx.html">Get Number Of Installment</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl02_HyperRules" href="Calculators-EMI.aspx.html">Equated Monthly Installment (EMI)</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl03_HyperRules" href="Calculators-HRA.aspx.html">House Rent Allowance (HRA)</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl04_HyperRules" href="Calculators-FBT.aspx.html">Fringe Benefit Tax (FBT)</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl05_HyperRules" href="Calculators-IncomeTaxCalculator.aspx.html">Income Tax Calculator</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl06_HyperRules" href="Calculators-HomeLoan.aspx.html">Home Loan Calculator</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl07_HyperRules" href="Calculators-AutoLoan.aspx.html">Auto Loan Calculator</a>
+                    </td>
+	</tr><tr>
+		<td>
+                      <a id="ctl00_WUCInnerHeader_DataListCalculator_ctl08_HyperRules" href="Calculators-NSC.aspx.html">National Saving Certificates (NSC)</a>
+                    </td>
+	</tr>
+</table>
+		</ul>
+	</li>
+    <li><a href="Newsfeed.aspx.html">NewsFeed</a></li>
+  <li><a href="ContactUs.aspx.html">Contact Us</a></li>
+  <li><a href="Career.aspx.html">Career</a></li>
+</ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+        <section class="mid-text-box-inner"> 
+		<div class="container">
+        
+ <div class="inner-breadcrum-sec">
+    <div class="container">
+      <div class="left-side">
+        <h2>News Feeds</h2>
+      </div>
+    </div>
+  </div>
+    <div class="inner-page-sec">
+    <div class="AboutRightbox"> <span style="font-size:11px;">Economic Times Top Stories</span>
+      <ul>
+        <li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/tax-legal-accounting/celebrating-nine-years-of-gst-a-call-for-reform-and-innovation-in-indias-tax-landscape/132105350">GST at 9: India Inc seeks GST 2.0 with faster ITC refunds, AI-led compliance and lower litigation</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/tax-legal-accounting/indias-gst-revenue-breakdown-for-fy26-top-performers-and-laggards-revealed/132093571">India’s top 10 States by GST collections in FY26 — and who lagged behind</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/strategy-operations/icici-prudential-life-insurance-targets-10-15-premium-growth-focusing-on-protection-business/132087048">ICICI Prudential Life plans 10-15% premium growth, bets on protection to outpace savings, CFO Dhiren Salian says</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/tax-legal-accounting/mca-to-revise-40-audit-standards-including-sa-600-by-august-2024/132087362">Exclusive: MCA set to notify SA 600, 40 revised audit standards by August</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/leadership/hdfc-bank-appoints-puneet-sharma-as-cfo-rajiv-kumar-as-part-time-chairman/132082709">HDFC Bank appoints Puneet Sharma as CFO</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/tax-legal-accounting/urgent-call-for-gst-appeal-deadline-extension-amid-portal-glitches/132070202">Portal glitches put thousands of GST appeals at risk; experts seek deadline extension</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/strategy-operations/ceat-plans-double-digit-growth-despite-rising-input-costs-cfo-confirms/132056586">CEAT targets one-third export revenue share, eyes double-digit volume growth over next five years: CFO Kumar Subbiah</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/economy/india-uk-trade-deal-unlocking-new-opportunities-for-businesses-by-2026/132063972">India-UK trade pact opens new prospects, but industry readiness will decide gains, say experts</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/tax-legal-accounting/government-extends-gstat-appeal-filing-deadline-to-july-31-amid-portal-rush-technical-issues/132087469">Government extends GSTAT appeal filing deadline to July 31 amid portal rush, technical issues</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/cfo-tech/big-four-rethink-partnership-as-ai-changes-the-game/132061209">Big Four rethink partnership as AI changes the game</a></span></li>
+      </ul>
+      <span style="font-size:11px;">Economic Times</span>
+      <ul>
+        <li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/tax-legal-accounting/celebrating-nine-years-of-gst-a-call-for-reform-and-innovation-in-indias-tax-landscape/132105350">GST at 9: India Inc seeks GST 2.0 with faster ITC refunds, AI-led compliance and lower litigation</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/sebi-bars-10-entities-over-alleged-fraud-at-darjeeling-industries/132105054">Sebi bars 10 entities over alleged fraud at Darjeeling Industries</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/sebi-bars-darjeeling-industriies-promoters-alleges-circular-funding-and-stock-manipulation-scheme/132105051">SEBI bars Darjeeling Industriies promoters, alleges circular funding and stock manipulation scheme</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/joint-parliamentary-committee-to-hold-meeting-on-three-key-amendment-bills/132105038">Joint Parliamentary Committee to hold meeting on three key amendment Bills</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/cfo-tech/ai-driving-credit-risk-may-threaten-jobs-and-tax-revenues-in-developed-economies-fitch/132105030">AI driving credit risk, may threaten jobs and tax revenues in developed economies: Fitch</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/strategy-operations/n-chandrasekarans-seat-on-tata-sons-board-up-for-reset-in-august/132104986">N Chandrasekaran&#039;s seat on Tata Sons board up for reset in August</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/economy/indias-manufacturing-growth-expected-to-moderate-in-april-june-due-to-west-asia-crisis-ficci/132104931">India&#039;s manufacturing growth expected to moderate in April-June due to West Asia crisis: FICCI</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/e20-mixing-in-trial-phase-centre-tells-sc-court-orders-status-quo-on-ethanol-quota/132104842">E20 mixing in trial phase, Centre tells SC; court orders status quo on ethanol quota</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/rbi-flags-emerging-fault-lines-in-private-credit-market-calls-for-close-monitoring/132104838">RBI flags emerging fault lines in private credit market, calls for close monitoring</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://cfo.economictimes.indiatimes.com/news/the-1-trillion-ai-arms-race-is-fueling-a-hidden-supercycle-and-its-not-just-chips/132104825">The $1 trillion AI &#039;arms race&#039; is fueling a hidden supercycle and it&#039;s not just chips</a></span></li>
+      </ul>
+      <span style="font-size:11px;">CA Club India</span>
+      <ul>
+        <li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/govt-extends-customs-duty-exemption-on-critical-petrochemical-imports-till-july-15-2026-26628.asp">Govt Extends Customs Duty Exemption on Critical Petrochemical Imports Till July 15, 2026</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/centre-notifies-new-excise-duty-rates-on-petroleum-products-effective-1st-july-2026-26627.asp">Centre Notifies New Excise Duty Rates on Petroleum Products Effective 1st July 2026</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/gstat-appeal-filing-deadline-extended-till-31st-july-2026-26626.asp">GSTAT Appeal Filing Deadline Extended Till 31st July 2026</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/icai-strengthens-ai-push-with-sarvam-ai-partnership-and-new-ai-certification-course-26625.asp">ICAI Strengthens AI Push with Sarvam AI Partnership and New AI Certification Course</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/icai-announces-mock-test-papers-series-i-ii-for-ca-foundation-september-2026-exams-26624.asp">ICAI Announces Mock Test Papers Series I and II for CA Foundation September 2026 Exams</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/rbi-issues-credit-derivatives-master-direction-2026-26623.asp">RBI Issues Credit Derivatives Master Direction 2026</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/cbdt-notifies-university-of-hyderabad-and-phfi-as-approved-scientific-research-institutions-under-income-tax-act-2025-26622.asp">CBDT Notifies University of Hyderabad and PHFI as Approved Scientific Research Institutions Under Income Tax Act, 2025</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/mca-releases-corporate-mitra-scheme-guidelines-2026-26621.asp">MCA Releases Corporate Mitra Scheme Guidelines 2026</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/icai-ca-foundation-exam-september-2026-26620.asp">ICAI CA Foundation Exam September 2026: Complete Guide to Registration, Fees and Exam Dates</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.caclubindia.com/news/icai-icsi-icmai-iit-madras-join-mca-s-corporate-mitra-scheme-for-msme-growth-26619.asp">ICAI, ICSI, ICMAI and IIT Madras Join MCA's Corporate Mitra Scheme for MSME Growth</a></span></li>
+      </ul>
+      <span style="font-size:11px;">BBC News</span>
+      <ul>
+        <li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/cd95jzy4zyeo?at_medium=RSS&at_campaign=rss">Superdry co-founder was my boss when he raped me</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/c9q250511neo?at_medium=RSS&at_campaign=rss">Why Starmer's defence plan leaves next PM with £4.7bn headache</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/c5yzqrpw2g8o?at_medium=RSS&at_campaign=rss">Plea for households to read energy meter as prices rise</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/c8e2yp1gg37o?at_medium=RSS&at_campaign=rss">Why Gen Z are planning for life without a state pension</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/cvgmv98ez3zo?at_medium=RSS&at_campaign=rss">Trump made more than $1bn from crypto in first year back in office</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/c1jykwk8n18o?at_medium=RSS&at_campaign=rss">Three-year-old rescued and taken to hospital six days after Venezuela quake</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/cd0m3g05kx2o?at_medium=RSS&at_campaign=rss">Women with PMOS should have yearly NHS checks, says health watchdog</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/cj3g20yxvm4o?at_medium=RSS&at_campaign=rss">E-scooters being advertised for commuting despite UK road ban</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/sport/football/articles/cz9lq5y9pj2o?at_medium=RSS&at_campaign=rss">Tuchel will stick to Southgate's penalty plan</a></span></li><li class='Prodetails'><span style='font-weight:bold;font-size:11px;'><a target='_blank' href="https://www.bbc.co.uk/news/articles/c982qy7qv5go?at_medium=RSS&at_campaign=rss">UK charities launch Venezuela earthquakes appeal</a></span></li>
+      </ul>
+     
+    </div>
+  </div>
+
+		</div>
+		</section>
+
+  
+
+<footer>
+ <div class="foote-link">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <h2>Page Link</h2>
+          <ul class="foot-link-list">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="AboutUs.aspx.html">About Us</a></li>
+            <li><a href="Career.aspx.html">Career</a></li>
+            <li><a href="ContactUs.aspx.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h2>Free Resources</h2>
+          <ul class="foot-link-list">
+              <li><a href="https://sachet.rbi.org.in/" target="_blank">RBI Policy</a></li>
+             
+              <li><a href="DataCollectionPolicy.aspx.html" target="_blank">Data Collection Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-3">
+          <h2>Services</h2>
+          <ul class="foot-link-list">
+       <li><a href="AuditandAssurancesServices.aspx.html">Audit and Assurances Services</a></li>
+		<li><a href="StatutoryComplianceServices.aspx.html">Statutory Compliance Services</a></li>
+		<li><a href="StartUpServices.aspx.html">Start Up Services</a></li>
+		<li><a href="FinancialConsultancyandSupportServices.aspx.html">Financial Consultancy and Support Services</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Connect With Us</h2>
+          <ul class="call-ad">
+            <li>
+              <div><i class="fa fa-map-marker"></i><span> 33-105, Near Sai Ganapathi Theatre, Church Centre, Bobbili, Vizianagaram Dist. AP - 535558</span></div>
+            </li>
+           <li>
+              <div><i class="fa fa-phone"></i><span>+91 8143505094, 7993856920</span></div>
+            </li>
+            <li>
+              <div><i class="fa fa-envelope-o"></i><span>caramakishore@gmail.com</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" copy-right">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; Copyright 2025, I R K & Associates | All Rights Reserved.</p>
+        </div>
+		<div class="col-md-1 text-center"><script type="text/javascript" src="js/7/5/0/1"></script></div>
+        <div class="col-md-5 text-right">
+          <p>Designed &amp; Developed by: <a target="_blank" href="https://saginfotech.com/" rel="nofollow"> SAG Infotech Pvt Ltd</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<a data-toggle="modal" data-target="#myModal" class="call-back-btn">Get A Call Back</a>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Get In Touch</h1>
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtname1" type="text" id="ctl00_WUCFooter_txtname1" class="form-control" placeholder="Your Name" onfocus="onFocus(this);" onblur="offFocus(this);">
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtcontact1" type="text" maxlength="10" id="ctl00_WUCFooter_txtcontact1" class="form-control" placeholder="Your Number" onkeypress="return DigitOnly(event);" onblur="offFocus(this);" onfocus="onFocus(this);">
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtmail1" type="text" id="ctl00_WUCFooter_txtmail1" class="form-control" placeholder="Your Email ID" onblur="offFocus(this);" onfocus="onFocus(this);">
+                      &nbsp;
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <input name="ctl00$WUCFooter$txtcity1" type="text" maxlength="10" id="ctl00_WUCFooter_txtcity1" class="form-control" placeholder="City" onkeypress="return DigitOnly(event);" onblur="offFocus(this);" onfocus="onFocus(this);">
+                      &nbsp;
+                    </div>
+                    <div class="col-md-12">
+                      <textarea name="ctl00$WUCFooter$txtremark1" rows="5" cols="50" id="ctl00_WUCFooter_txtremark1" class="form-control" placeholder="Type Your Message.." onblur="offFocus(this);" onfocus="onFocus(this);"></textarea>
+                    </div>
+                    <div class="col-md-12 text-center"><br>
+                      <input type="submit" name="ctl00$WUCFooter$btnsubmit2" value="Send Message" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$WUCFooter$btnsubmit2&quot;, &quot;&quot;, true, &quot;ab&quot;, &quot;&quot;, false, false))" id="ctl00_WUCFooter_btnsubmit2" class="btn btn-send">
+                    </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <script type="text/javascript">
+    jQuery(function ($) {
+        var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+        $('ul a').each(function () {
+            if (this.href === path) {
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
+  <script>
+        $(document).ready(function() {
+            $(".col-lg-4").slice(0, 3).show();
+            if ($(".col-lg-4:hidden").length != 0) {
+                $("#loadMore").show();
+            }
+            $("#loadMore").on('click', function(e) {
+                e.preventDefault();
+                $(".col-lg-4:hidden").slice(0, 9).slideDown();
+                if ($(".col-lg-4:hidden").length == 0) {
+                    $("#loadMore").fadeOut('slow');
+                }
+            });
+        });
+    </script>
+			  <script>
+		  $(document).ready(function() {
+    $('.navbar a.dropdown-togg').on('click', function(e) {
+        var $el = $(this);
+        var $parent = $(this).offsetParent(".dropdown-menu");
+        $(this).parent("li").toggleClass('open');
+
+        if(!$parent.parent().hasClass('nav')) {
+            $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+        }
+
+        $('.nav li.open').not($(this).parents("li")).removeClass("open");
+
+        return false;
+    });
+});
+		  </script>
+  
+  
+
+	
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

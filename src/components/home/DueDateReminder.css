@@ -1,0 +1,162 @@
+.due-date-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .due-date-layout {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+  }
+}
+
+.due-date-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .due-date-info {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.calendar-illustration {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  color: var(--brand-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-grid-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.timeline-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: var(--shadow-soft);
+  z-index: 2;
+  margin-top: 1.5rem; /* align dot roughly with card header */
+}
+
+.urgency-high {
+  background-color: var(--error);
+}
+
+.urgency-medium {
+  background-color: var(--warning);
+}
+
+.urgency-low {
+  background-color: var(--success);
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 3rem;
+  bottom: -3rem; /* extend slightly into the gap */
+  width: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.timeline-content {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.timeline-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #64748B;
+  background: var(--primary-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.days-left {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.bg-high {
+  background-color: #FEE2E2;
+}
+
+.bg-medium {
+  background-color: #FFEDD5;
+}
+
+.bg-low {
+  background-color: #DCFCE7;
+}
+
+.text-high {
+  color: var(--error);
+}
+
+.text-medium {
+  color: #D97706; /* Orange for Approaching */
+}
+
+.text-low {
+  color: var(--success);
+}
+
+.timeline-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.timeline-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
