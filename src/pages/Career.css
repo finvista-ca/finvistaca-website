@@ -269,6 +269,7 @@
 .career-form input[type="text"],
 .career-form input[type="tel"],
 .career-form input[type="email"],
+.career-form input[type="url"],
 .career-form select,
 .career-form textarea {
   width: 100%;
