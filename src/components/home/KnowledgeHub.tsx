@@ -37,7 +37,7 @@ export const KnowledgeHub: React.FC = () => {
               Access India's most comprehensive and updated database of tax laws, acts, rules, and circulars.
             </p>
             
-            <div className="search-container glass-card">
+            <div className="search-container">
               <div className="search-wrapper">
                 <Search className="search-icon" size={24} />
                 <input 
