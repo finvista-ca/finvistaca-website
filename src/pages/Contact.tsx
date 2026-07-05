@@ -1,10 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Building, Send, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
 export const Contact: React.FC = () => {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  email: "",
+  message: "",
+});
+
+const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  try {
+    const response = await fetch(
+      "https://finvistaca-backend-ebon.vercel.app/api/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error);
+    }
+
+    setSent(true);
+
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
+
+  } catch (error: any) {
+    alert(error.message || "Something went wrong.");
+  } finally {
+    setLoading(false);
+  }
+};
+
   return (
     <div className="contact-page">
       {/* Hero Section */}
@@ -106,30 +165,49 @@ export const Contact: React.FC = () => {
                     <p className="form-desc">Your message has been received. Our team will get back to you within 24 business hours.</p>
                   </div>
                 ) : (
-                <form className="contact-page-form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+                <form
+  className="contact-page-form"
+  onSubmit={handleSubmit}
+>
                   <div className="form-group">
                     <label htmlFor="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Enter your full name" required />
+                    <input
+  type="text"
+  id="name"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  placeholder="Enter your full name"
+  required
+/>
                   </div>
                   
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="phone">Phone Number</label>
-                      <input type="tel" id="phone" placeholder="Your phone number" required />
+                      <input
+  type="tel"
+  id="phone"
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  placeholder="Your phone number"
+  required
+/>
                     </div>
                     <div className="form-group">
                       <label htmlFor="email">Email Address</label>
-                      <input type="email" id="email" placeholder="Your email address" required />
+                      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required />
                     </div>
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="message">Message</label>
-                    <textarea id="message" rows={6} placeholder="How can we help you?" required></textarea>
+                    <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={6} placeholder="How can we help you?" required></textarea>
                   </div>
 
-                  <button type="submit" className="btn btn-primary submit-btn">
-                    <Send size={18} /> Send Message
+                  <button type="submit" className="btn btn-primary submit-btn" disabled={loading}>
+                    <Send size={18} /> {loading ? "Sending..." : "Send Message"}
                   </button>
                 </form>
                 )}

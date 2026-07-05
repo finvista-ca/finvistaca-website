@@ -5,10 +5,53 @@ import './Career.css';
 export const Career: React.FC = () => {
   const [fileName, setFileName] = useState<string>('');
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    position: '',
+    cover_letter: '',
+    resume_url: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      setFileName(e.target.files[0].name);
+      const file = e.target.files[0];
+      setFileName(file.name);
+      
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, resume_url: reader.result as string }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await fetch('https://finvistaca-backend-ebon.vercel.app/api/career', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Something went wrong');
+      
+      setSubmitted(true);
+      setFormData({ name: '', phone: '', email: '', position: '', cover_letter: '', resume_url: '' });
+      setFileName('');
+    } catch (err: any) {
+      alert(err.message || 'Something went wrong');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -145,26 +188,26 @@ export const Career: React.FC = () => {
                     <p className="form-desc">Thank you for your interest in joining Finvista. Our team will review your application and reach out if there is a fit.</p>
                   </div>
                 ) : (
-                <form className="career-form" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+                <form className="career-form" onSubmit={handleSubmit}>
                   <div className="form-group">
                     <label htmlFor="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Enter your full name" required />
+                    <input type="text" id="name" value={formData.name} onChange={handleChange} placeholder="Enter your full name" required />
                   </div>
                   
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="phone">Phone Number</label>
-                      <input type="tel" id="phone" placeholder="Your phone number" required />
+                      <input type="tel" id="phone" value={formData.phone} onChange={handleChange} placeholder="Your phone number" required />
                     </div>
                     <div className="form-group">
                       <label htmlFor="email">Email Address</label>
-                      <input type="email" id="email" placeholder="Your email address" required />
+                      <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required />
                     </div>
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="position">Position Applied For</label>
-                    <select id="position" required defaultValue="">
+                    <select id="position" value={formData.position} onChange={handleChange} required>
                       <option value="" disabled>Select a position...</option>
                       <option value="ca">Chartered Accountant</option>
                       <option value="article">Article Assistant</option>
@@ -176,8 +219,8 @@ export const Career: React.FC = () => {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="message">Cover Letter / Message</label>
-                    <textarea id="message" rows={4} placeholder="Briefly describe why you are a good fit..." required></textarea>
+                    <label htmlFor="cover_letter">Cover Letter / Message</label>
+                    <textarea id="cover_letter" value={formData.cover_letter} onChange={handleChange} rows={4} placeholder="Briefly describe why you are a good fit..." required></textarea>
                   </div>
 
                   <div className="form-group">
@@ -199,8 +242,8 @@ export const Career: React.FC = () => {
                     <p className="file-hint">Accepted formats: PDF, DOC, DOCX. Max size: 5MB.</p>
                   </div>
 
-                  <button type="submit" className="btn btn-primary submit-btn">
-                    Submit Application <ChevronRight size={18} />
+                  <button type="submit" className="btn btn-primary submit-btn" disabled={loading}>
+                    {loading ? 'Submitting...' : 'Submit Application'} <ChevronRight size={18} />
                   </button>
                 </form>
                 )}

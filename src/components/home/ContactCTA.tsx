@@ -4,6 +4,47 @@ import './ContactCTA.css';
 
 export const ContactCTA: React.FC = () => {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    service: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const payload = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.service ? `[Service: ${formData.service}]\n${formData.message}` : formData.message
+      };
+      
+      const response = await fetch('https://finvistaca-backend-ebon.vercel.app/api/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Something went wrong');
+      
+      setSent(true);
+      setFormData({ name: '', phone: '', email: '', service: '', message: '' });
+    } catch (err: any) {
+      alert(err.message || 'Something went wrong');
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section className="contact-cta-section">
       <div className="container">
@@ -31,18 +72,18 @@ export const ContactCTA: React.FC = () => {
                 <p style={{ margin: 0, opacity: 0.9 }}>Thank you. Our experts will contact you shortly to schedule your consultation.</p>
               </div>
             ) : (
-            <form className="cta-form" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+            <form className="cta-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <input type="text" placeholder="Full Name" required />
+                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name" required />
               </div>
               <div className="form-group">
-                <input type="tel" placeholder="Phone Number" required />
+                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required />
               </div>
               <div className="form-group">
-                <input type="email" placeholder="Email Address" required />
+                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" required />
               </div>
               <div className="form-group">
-                <select required defaultValue="" style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', outline: 'none' }}>
+                <select name="service" value={formData.service} onChange={handleChange} required style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', outline: 'none' }}>
                   <option value="" disabled>Service Required</option>
                   <option value="taxation">Taxation</option>
                   <option value="audit">Audit & Assurance</option>
@@ -52,10 +93,10 @@ export const ContactCTA: React.FC = () => {
                 </select>
               </div>
               <div className="form-group">
-                <textarea placeholder="Message" required rows={3} style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', resize: 'none', outline: 'none' }}></textarea>
+                <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" required rows={3} style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', resize: 'none', outline: 'none' }}></textarea>
               </div>
-              <button type="submit" className="btn btn-secondary btn-lg submit-btn">
-                Request Consultation <ArrowRight size={18} />
+              <button type="submit" className="btn btn-secondary btn-lg submit-btn" disabled={loading}>
+                {loading ? 'Submitting...' : 'Request Consultation'} <ArrowRight size={18} />
               </button>
             </form>
             )}
