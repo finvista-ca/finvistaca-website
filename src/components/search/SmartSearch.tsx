@@ -45,7 +45,7 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({
 
   return (
     <div className="smart-search-container">
-      <div className="search-input-wrapper glass-card">
+      <div className="search-input-wrapper">
         <Search className="search-icon" size={24} />
         <input 
           type="text" 
@@ -87,7 +87,7 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({
                       transition={{ duration: 0.2 }}
                     >
                       {service.externalUrl ? (
-                      <a href={service.externalUrl} target="_blank" rel="noopener noreferrer" className="search-result-card glass-card">
+                      <a href={service.externalUrl} target="_blank" rel="noopener noreferrer" className="search-result-card">
                         <div className="result-icon">
                           <FileText size={24} />
                         </div>
@@ -97,7 +97,7 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({
                         </div>
                       </a>
                       ) : (
-                      <Link to={`${basePath.replace(/\/$/, '')}/${service.slug}`} className="search-result-card glass-card">
+                      <Link to={`${basePath.replace(/\/$/, '')}/${service.slug}`} className="search-result-card">
                         <div className="result-icon">
                           <FileText size={24} />
                         </div>
@@ -112,7 +112,7 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({
                 </motion.div>
               ) : (
                 <motion.div 
-                  className="empty-state glass-card"
+                  className="empty-state"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
