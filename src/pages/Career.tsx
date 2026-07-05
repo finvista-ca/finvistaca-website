@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Briefcase, Users, Target, TrendingUp, CheckCircle2, UploadCloud, ChevronRight } from 'lucide-react';
+import { Briefcase, Users, Target, TrendingUp, CheckCircle2, ChevronRight } from 'lucide-react';
 import './Career.css';
 
 export const Career: React.FC = () => {
-  const [fileName, setFileName] = useState<string>('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -17,19 +16,6 @@ export const Career: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      const file = e.target.files[0];
-      setFileName(file.name);
-      
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setFormData(prev => ({ ...prev, resume_url: reader.result as string }));
-      };
-      reader.readAsDataURL(file);
-    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -47,7 +33,6 @@ export const Career: React.FC = () => {
       
       setSubmitted(true);
       setFormData({ name: '', phone: '', email: '', position: '', cover_letter: '', resume_url: '' });
-      setFileName('');
     } catch (err: any) {
       alert(err.message || 'Something went wrong');
     } finally {
@@ -224,22 +209,15 @@ export const Career: React.FC = () => {
                   </div>
 
                   <div className="form-group">
-                    <label>Resume / CV</label>
-                    <div className="file-upload-wrapper">
-                      <input 
-                        type="file" 
-                        id="resume" 
-                        accept=".pdf,.doc,.docx" 
-                        className="file-input" 
-                        onChange={handleFileChange}
-                        required 
-                      />
-                      <label htmlFor="resume" className="file-upload-button">
-                        <UploadCloud size={20} />
-                        <span>{fileName || 'Choose File...'}</span>
-                      </label>
-                    </div>
-                    <p className="file-hint">Accepted formats: PDF, DOC, DOCX. Max size: 5MB.</p>
+                    <label htmlFor="resume_url">Resume Link</label>
+                    <input 
+                      type="url" 
+                      id="resume_url" 
+                      value={formData.resume_url}
+                      onChange={handleChange}
+                      placeholder="https://drive.google.com/..." 
+                      required 
+                    />
                   </div>
 
                   <button type="submit" className="btn btn-primary submit-btn" disabled={loading}>
