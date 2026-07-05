@@ -54,7 +54,7 @@ export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, descripti
   const showingFrom = totalItems === 0 ? 0 : startIdx + 1;
   const showingTo = Math.min(startIdx + pageSize, totalItems);
 
-  const columnCount = tableData[0]?.length || 1;
+  const columnCount = tableData.reduce((max, row) => Math.max(max, row.length), 0) || 1;
 
   return (
     <div className="resource-layout">
@@ -102,7 +102,7 @@ export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, descripti
                 <table className="modern-table">
                   <thead>
                     <tr>
-                      {tableData.length > 0 && tableData[0].map((_, i) => (
+                      {tableData.length > 0 && Array.from({ length: columnCount }).map((_, i) => (
                         <th key={i}>Column {i + 1}</th>
                       ))}
                     </tr>
