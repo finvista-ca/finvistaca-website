@@ -667,19 +667,19 @@
   background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.2) 0%, transparent 60%);
 }
 
-.cta-content {
+.cta-panel .cta-content {
   position: relative;
   z-index: 2;
   max-width: 600px;
 }
 
-.cta-content h2 {
+.cta-panel .cta-content h2 {
   color: white;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.cta-content p {
+.cta-panel .cta-content p {
   color: var(--text-light);
   font-size: 1.125rem;
   margin-bottom: 2.5rem;
