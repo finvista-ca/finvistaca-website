@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { servicesData } from '../../data/servicesData';
 import { otherServicesData } from '../../data/otherServicesData';
@@ -177,24 +176,6 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className={`navbar ${isScrolled ? 'scrolled glass' : ''}`}>
-      {/* Top contact bar */}
-      <div className="topbar">
-        <div className="topbar-inner">
-          <div className="topbar-contact">
-            <a href="tel:+918143505094"><Phone size={13} /> +91 8143505094</a>
-            <a href="tel:+917993856920"><Phone size={13} /> +91 7993856920</a>
-            <a href="mailto:caramakishore@gmail.com" className="topbar-email"><Mail size={13} /> caramakishore@gmail.com</a>
-          </div>
-          <div className="topbar-social">
-            <a href="https://www.linkedin.com/in/ramakishore-itla-609511308/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={14} /></a>
-            <a href="https://x.com/ramakishoreitla" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaTwitter size={14} /></a>
-            <a href="https://www.facebook.com/ramakishore.itla" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook size={14} /></a>
-            <a href="https://www.instagram.com/irk_associates" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={14} /></a>
-            <a href="https://wa.me/919866121656" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp size={14} /></a>
-          </div>
-        </div>
-      </div>
-
       <div className="navbar-container">
         <div className="logos">
           <Link to="/" className="logo-link" aria-label="Home">
