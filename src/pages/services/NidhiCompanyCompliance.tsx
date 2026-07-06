@@ -33,9 +33,11 @@ export const NidhiCompanyCompliance: React.FC<NidhiCompanyComplianceProps> = ({ 
       "AOC-4 (30 days post AGM)",
       "MGT-7 (60 days post AGM)"
     ],
-    faqs: [
-{ q: "What happens if a Nidhi company fails to add 200 members?", a: "The company must file form NDH-2 with the Regional Director to appeal for a time extension." },
-    { q: "What is the penalty for non-compliance in a Nidhi company?", a: "Officials will be fined up to Rs 5000 initially, with an additional fine of Rs 500 per day if the infringement continues." }
+    faqs: [{ q: "What happens if a Nidhi company fails to add 200 members?", a: "The company must file form NDH-2 with the Regional Director to appeal for a time extension." },
+    { q: "What is the penalty for non-compliance in a Nidhi company?", a: "Officials will be fined up to Rs 5000 initially, with an additional fine of Rs 500 per day if the infringement continues." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

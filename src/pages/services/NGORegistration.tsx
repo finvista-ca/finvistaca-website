@@ -33,11 +33,11 @@ export const NGORegistration: React.FC<NGORegistrationProps> = ({ service, relat
       "Registration Filing",
       "Post-Registration Approvals"
     ],
-    faqs: [
-{ q: "Which structure should I choose?", a: "Section 8 Companies offer the highest transparency, Trusts are easier to manage for small groups, and Societies are best for democratic operations." },
+    faqs: [{ q: "Which structure should I choose?", a: "Section 8 Companies offer the highest transparency, Trusts are easier to manage for small groups, and Societies are best for democratic operations." },
     { q: "Can NGOs receive foreign donations?", a: "Yes, but only after obtaining an FCRA (Foreign Contribution Regulation Act) registration from the Ministry of Home Affairs." },
     { q: "Is an NGO exempt from taxes automatically?", a: "No, an NGO must specifically apply for Section 12A registration to get its income exempted from tax." },
-    { q: "How long does it take to register an NGO?", a: "A Trust takes about 10-15 days, a Section 8 Company takes 15-20 days, and a Society can take 30-45 days depending on the state." }
+    { q: "How long does it take to register an NGO?", a: "A Trust takes about 10-15 days, a Section 8 Company takes 15-20 days, and a Society can take 30-45 days depending on the state." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

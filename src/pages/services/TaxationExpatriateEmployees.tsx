@@ -34,11 +34,11 @@ export const TaxationExpatriateEmployees: React.FC<TaxationExpatriateEmployeesPr
       "Annual Return Filing",
       "Departure NOC"
     ],
-    faqs: [
-{ q: "How is an expatriate's residential status determined?", a: "It depends on the number of days they stay in India during the current financial year and the preceding four years." },
+    faqs: [{ q: "How is an expatriate's residential status determined?", a: "It depends on the number of days they stay in India during the current financial year and the preceding four years." },
     { q: "Is the global income of an expat taxable in India?", a: "It depends. If the expat qualifies as a 'Resident and Ordinarily Resident' (ROR), their global income becomes taxable in India." },
     { q: "Do expats need to contribute to Indian Provident Fund?", a: "Yes, foreign workers are classified as 'International Workers' and must contribute to PF unless covered under a Social Security Agreement (SSA)." },
-    { q: "What happens when the expatriate leaves India?", a: "They must obtain a Tax Clearance Certificate (NOC) from the Income Tax authorities before departing." }
+    { q: "What happens when the expatriate leaves India?", a: "They must obtain a Tax Clearance Certificate (NOC) from the Income Tax authorities before departing." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

@@ -17,11 +17,11 @@
 }
 
 @media (min-width: 640px) {
-  .services-section .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-section .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 }
 
 @media (min-width: 1000px) {
-  .services-section .services-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .services-section .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
 }
 
 .services-section .service-card {

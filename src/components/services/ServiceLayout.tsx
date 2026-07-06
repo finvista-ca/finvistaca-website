@@ -88,18 +88,20 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
           >
             <div className="abstract-shape shape-1"></div>
             <div className="abstract-shape shape-2"></div>
-            <div className="glass-stat-card card-1">
-              <div className="stat-icon"><ShieldCheck size={24} /></div>
-              <div className="stat-text">
-                <strong>100%</strong>
-                <span>Compliance Rate</span>
+            <div className="hero-badges">
+              <div className="glass-stat-card card-1">
+                <div className="stat-icon"><ShieldCheck size={20} /></div>
+                <div className="stat-text">
+                  <strong>100%</strong>
+                  <span>Compliance Rate</span>
+                </div>
               </div>
-            </div>
-            <div className="glass-stat-card card-2">
-              <div className="stat-icon"><Zap size={24} /></div>
-              <div className="stat-text">
-                <strong>Fast</strong>
-                <span>Processing Time</span>
+              <div className="glass-stat-card card-2">
+                <div className="stat-icon"><Zap size={20} /></div>
+                <div className="stat-text">
+                  <strong>Fast</strong>
+                  <span>Processing Time</span>
+                </div>
               </div>
             </div>
           </motion.div>

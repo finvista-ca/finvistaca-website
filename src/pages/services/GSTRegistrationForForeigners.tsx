@@ -32,9 +32,11 @@ export const GSTRegistrationForForeigners: React.FC<GSTRegistrationForForeigners
       "Provisional Registration",
       "Final REG-06 Issuance"
     ],
-    faqs: [
-{ q: "Does a foreign business need an Indian PAN for GST registration?", a: "No, a Non-resident taxable person can submit their country's Tax Identification Number, though their authorized Indian representative must have a valid PAN." },
-    { q: "Is a deposit required for non-resident registration?", a: "Yes, the non-resident must pay an advance deposit equal to the expected tax liability during the registration period." }
+    faqs: [{ q: "Does a foreign business need an Indian PAN for GST registration?", a: "No, a Non-resident taxable person can submit their country's Tax Identification Number, though their authorized Indian representative must have a valid PAN." },
+    { q: "Is a deposit required for non-resident registration?", a: "Yes, the non-resident must pay an advance deposit equal to the expected tax liability during the registration period." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

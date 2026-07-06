@@ -34,11 +34,11 @@ export const ZohoAccounting: React.FC<ZohoAccountingProps> = ({ service, related
       "User Training",
       "Go Live & Support"
     ],
-    faqs: [
-{ q: "Is Zoho Books suitable for startups and SMEs?", a: "Yes, Zoho Books is highly scalable and perfect for startups, SMEs, and service-based businesses in India." },
+    faqs: [{ q: "Is Zoho Books suitable for startups and SMEs?", a: "Yes, Zoho Books is highly scalable and perfect for startups, SMEs, and service-based businesses in India." },
     { q: "Can Zoho Books handle Indian GST?", a: "Yes, it is fully compliant with Indian GST laws, supporting e-invoicing, e-way bills, and direct return filing." },
     { q: "Can you migrate my data from Tally to Zoho Books?", a: "Yes, our experts can safely migrate your opening balances, chart of accounts, and historical transactions from Tally." },
-    { q: "Does Zoho Books have an inventory module?", a: "Yes, it has basic inventory tracking built-in, and seamlessly integrates with Zoho Inventory for advanced warehouse management." }
+    { q: "Does Zoho Books have an inventory module?", a: "Yes, it has basic inventory tracking built-in, and seamlessly integrates with Zoho Inventory for advanced warehouse management." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

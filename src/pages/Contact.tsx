@@ -12,11 +12,12 @@ const [formData, setFormData] = useState({
   name: "",
   phone: "",
   email: "",
+  branch: "",
   message: "",
 });
 
 const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
 ) => {
   setFormData({
     ...formData,
@@ -55,6 +56,7 @@ const handleSubmit = async (
       name: "",
       phone: "",
       email: "",
+      branch: "",
       message: "",
     });
 
@@ -200,6 +202,26 @@ const handleSubmit = async (
                       <label htmlFor="email">Email Address</label>
                       <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required />
                     </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="branch">Preferred Branch</label>
+                    <select
+                      id="branch"
+                      name="branch"
+                      value={formData.branch}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="" disabled>Select your preferred branch</option>
+                      <option value="Kakinada (Head Office)">Kakinada (Head Office)</option>
+                      <option value="Parvathipuram">Parvathipuram</option>
+                      <option value="Vijayawada">Vijayawada</option>
+                      <option value="Visakhapatnam">Visakhapatnam</option>
+                      <option value="Bobbili">Bobbili</option>
+                      <option value="Peddapuram">Peddapuram</option>
+                      <option value="Rayagada (Odisha)">Rayagada (Odisha)</option>
+                    </select>
                   </div>
 
                   <div className="form-group">

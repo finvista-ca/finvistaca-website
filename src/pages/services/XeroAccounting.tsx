@@ -34,11 +34,11 @@ export const XeroAccounting: React.FC<XeroAccountingProps> = ({ service, related
       "App Integration",
       "Ongoing Bookkeeping"
     ],
-    faqs: [
-{ q: "Is Xero suitable for Indian businesses?", a: "While Xero doesn't have native Indian GST modules like Zoho, it is highly preferred by Indian businesses that export services or have overseas clients due to its excellent multi-currency features." },
+    faqs: [{ q: "Is Xero suitable for Indian businesses?", a: "While Xero doesn't have native Indian GST modules like Zoho, it is highly preferred by Indian businesses that export services or have overseas clients due to its excellent multi-currency features." },
     { q: "Can Xero manage international transactions?", a: "Yes, Xero handles over 160 currencies and automatically updates exchange rates hourly." },
     { q: "How does bank reconciliation work in Xero?", a: "Xero connects directly to your bank, importing transactions automatically. Its smart AI suggests matches, making reconciliation a one-click process." },
-    { q: "Can you handle my day-to-day bookkeeping in Xero?", a: "Yes, our certified professionals can act as your outsourced accounting department, managing everything inside your Xero account." }
+    { q: "Can you handle my day-to-day bookkeeping in Xero?", a: "Yes, our certified professionals can act as your outsourced accounting department, managing everything inside your Xero account." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

@@ -31,9 +31,11 @@ export const FinancialReportingAdvisory: React.FC<FinancialReportingAdvisoryProp
       "Implementation",
       "Post-Reporting Support"
     ],
-    faqs: [
-{ q: "What does accounting advisory cover?", a: "It covers GAAP conversions, transaction reporting, IPO readiness, and complex restructuring advice." },
-    { q: "Why is GAAP conversion difficult?", a: "It requires understanding accounting differences alongside business implications like tax relationships and staff training." }
+    faqs: [{ q: "What does accounting advisory cover?", a: "It covers GAAP conversions, transaction reporting, IPO readiness, and complex restructuring advice." },
+    { q: "Why is GAAP conversion difficult?", a: "It requires understanding accounting differences alongside business implications like tax relationships and staff training." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

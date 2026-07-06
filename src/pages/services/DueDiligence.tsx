@@ -33,9 +33,11 @@ export const DueDiligence: React.FC<DueDiligenceProps> = ({ service, relatedServ
       "Report Generation",
       "Post-Diligence Negotiation"
     ],
-    faqs: [
-{ q: "How is Due Diligence different from Statutory Audit?", a: "Unlike a statutory audit which relies on historical data and is mandatory, due diligence covers future growth prospects, business plans, and is transaction-based." },
-    { q: "What is a Deal Cautioner?", a: "It covers findings that may not impact financials but require the investor to proceed cautiously with fixable non-compliances." }
+    faqs: [{ q: "How is Due Diligence different from Statutory Audit?", a: "Unlike a statutory audit which relies on historical data and is mandatory, due diligence covers future growth prospects, business plans, and is transaction-based." },
+    { q: "What is a Deal Cautioner?", a: "It covers findings that may not impact financials but require the investor to proceed cautiously with fixable non-compliances." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

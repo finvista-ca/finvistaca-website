@@ -34,11 +34,11 @@ export const QuickBooksAccounting: React.FC<QuickBooksAccountingProps> = ({ serv
       "Data Import",
       "Monthly Bookkeeping"
     ],
-    faqs: [
-{ q: "Who is QuickBooks best suited for?", a: "It is ideal for small businesses, freelancers, consultants, retail businesses, and service agencies." },
+    faqs: [{ q: "Who is QuickBooks best suited for?", a: "It is ideal for small businesses, freelancers, consultants, retail businesses, and service agencies." },
     { q: "Can QuickBooks integrate with GST?", a: "Yes, QuickBooks Online provides features to track GST on sales and purchases, and generate GST reports." },
     { q: "Do I need accounting knowledge to use it?", a: "While basic features like invoicing are easy for anyone, we recommend having professionals handle the actual reconciliation and reporting to ensure accuracy." },
-    { q: "Is QuickBooks a cloud-based software?", a: "Yes, QuickBooks Online is entirely cloud-based, allowing you to access your accounts from any web browser or mobile app." }
+    { q: "Is QuickBooks a cloud-based software?", a: "Yes, QuickBooks Online is entirely cloud-based, allowing you to access your accounts from any web browser or mobile app." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

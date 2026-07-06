@@ -30,9 +30,11 @@ export const GSTLitigationServices: React.FC<GSTLitigationServicesProps> = ({ se
       "Authority Representation",
       "Appellate Briefing"
     ],
-    faqs: [
-{ q: "Do you represent clients before the GST tribunal?", a: "Yes, we represent clients before adjudication and appellate authorities up to the tribunal." },
-    { q: "Can you help with notices received from GST officers?", a: "Absolutely, we specialize in drafting appeals, submissions, and precise replies to GST notices." }
+    faqs: [{ q: "Do you represent clients before the GST tribunal?", a: "Yes, we represent clients before adjudication and appellate authorities up to the tribunal." },
+    { q: "Can you help with notices received from GST officers?", a: "Absolutely, we specialize in drafting appeals, submissions, and precise replies to GST notices." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

@@ -31,9 +31,11 @@ export const LUTInGST: React.FC<LUTInGSTProps> = ({ service, relatedServices }) 
       "Department Verification",
       "LUT Acknowledgment"
     ],
-    faqs: [
-{ q: "What does an LUT allow an exporter to do?", a: "A Letter of Undertaking allows an exporter to supply goods or services overseas or to SEZs without paying IGST." },
-    { q: "Who is ineligible for filing an LUT?", a: "Persons prosecuted for tax evasion exceeding Rs. 250 lakhs under CGST/IGST Acts are ineligible and must furnish an Export Bond instead." }
+    faqs: [{ q: "What does an LUT allow an exporter to do?", a: "A Letter of Undertaking allows an exporter to supply goods or services overseas or to SEZs without paying IGST." },
+    { q: "Who is ineligible for filing an LUT?", a: "Persons prosecuted for tax evasion exceeding Rs. 250 lakhs under CGST/IGST Acts are ineligible and must furnish an Export Bond instead." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

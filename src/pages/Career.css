@@ -45,17 +45,10 @@
   text-align: center;
 }
 
-/* Culture Grid */
 .culture-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .culture-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .culture-card {
@@ -95,41 +88,84 @@
   font-size: 0.95rem;
 }
 
-/* Process Timeline */
 .process-timeline {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   position: relative;
 }
 
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 25px; /* Half of step-number width (50px) */
+  bottom: 40px;
+  width: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
 @media (min-width: 768px) {
   .process-timeline {
-    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
   
   .process-timeline::before {
-    content: '';
-    position: absolute;
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0;
+  }
+  
+  .process-timeline::before {
+    display: block;
     top: 24px;
     left: 10%;
     right: 10%;
+    bottom: auto;
+    width: auto;
     height: 2px;
-    background-color: var(--border-color);
-    z-index: 1;
   }
 }
 
 .process-step {
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .process-step {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-step {
+    flex: 1;
+  }
 }
 
 .step-number {
   width: 50px;
   height: 50px;
-  margin: 0 auto 1.5rem;
+  margin: 0;
   background-color: var(--brand-primary);
   color: white;
   font-size: 1.25rem;
@@ -139,6 +175,13 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 0 8px white;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .step-number {
+    margin: 0 auto 1.5rem;
+  }
 }
 
 .process-step h4 {

@@ -33,9 +33,11 @@ export const ClosureOfLLP: React.FC<ClosureOfLLPProps> = ({ service, relatedServ
       "Obtain CA Certificate",
       "File Form 24"
     ],
-    faqs: [
-{ q: "Who is eligible to file for closure?", a: "An LLP not carrying on business for one year or longer, with no liabilities or open bank accounts." },
-    { q: "Do I need to file pending returns before closing?", a: "Yes, any delayed return in Form 8 and Form 11 up to the financial year of cessation must be filed." }
+    faqs: [{ q: "Who is eligible to file for closure?", a: "An LLP not carrying on business for one year or longer, with no liabilities or open bank accounts." },
+    { q: "Do I need to file pending returns before closing?", a: "Yes, any delayed return in Form 8 and Form 11 up to the financial year of cessation must be filed." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

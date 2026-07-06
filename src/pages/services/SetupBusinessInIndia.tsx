@@ -34,11 +34,11 @@ export const SetupBusinessInIndia: React.FC<SetupBusinessInIndiaProps> = ({ serv
       "FDI Reporting (RBI)",
       "Ongoing Support"
     ],
-    faqs: [
-{ q: "Can foreigners own a 100% subsidiary in India?", a: "Yes, 100% Foreign Direct Investment (FDI) is allowed in most sectors under the automatic route without prior government approval." },
+    faqs: [{ q: "Can foreigners own a 100% subsidiary in India?", a: "Yes, 100% Foreign Direct Investment (FDI) is allowed in most sectors under the automatic route without prior government approval." },
     { q: "What is the difference between a Subsidiary and a Branch Office?", a: "A Subsidiary is a separate legal Indian entity, while a Branch Office is simply an extension of the foreign parent company and has restricted activities." },
     { q: "How long does incorporation take?", a: "If all foreign documents are properly apostilled/notarized, incorporation usually takes 15-20 working days." },
-    { q: "Do foreign directors need to visit India for registration?", a: "No, the entire incorporation process is online, though documents need to be notarized in the home country." }
+    { q: "Do foreign directors need to visit India for registration?", a: "No, the entire incorporation process is online, though documents need to be notarized in the home country." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

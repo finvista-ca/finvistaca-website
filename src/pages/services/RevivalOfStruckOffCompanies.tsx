@@ -33,9 +33,11 @@ export const RevivalOfStruckOffCompanies: React.FC<RevivalOfStruckOffCompaniesPr
       "Receive Order",
       "File INC-28 & Pending Returns"
     ],
-    faqs: [
-{ q: "What is the time limit to file an appeal?", a: "An appeal must be filed within 3 years for compulsory strike-off, and within 20 years for voluntary strike-off." },
-    { q: "What documents prove the company was in operation?", a: "Up-to-date bank statements, AGM minutes, tax acknowledgments, and sales invoices." }
+    faqs: [{ q: "What is the time limit to file an appeal?", a: "An appeal must be filed within 3 years for compulsory strike-off, and within 20 years for voluntary strike-off." },
+    { q: "What documents prove the company was in operation?", a: "Up-to-date bank statements, AGM minutes, tax acknowledgments, and sales invoices." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

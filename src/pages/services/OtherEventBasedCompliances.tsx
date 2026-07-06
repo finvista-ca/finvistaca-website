@@ -33,9 +33,11 @@ export const OtherEventBasedCompliances: React.FC<OtherEventBasedCompliancesProp
       "Filing within 15-30 Days",
       "ROC Approval"
     ],
-    faqs: [
-{ q: "What is an event-based compliance?", a: "It is a non-periodical filing triggered by specific company events like changing directors, address, or share capital." },
-    { q: "When is form DIR-12 filed?", a: "DIR-12 must be filed within 30 days of any change (appointment/resignation) in Directors or Key Managerial Personnel." }
+    faqs: [{ q: "What is an event-based compliance?", a: "It is a non-periodical filing triggered by specific company events like changing directors, address, or share capital." },
+    { q: "When is form DIR-12 filed?", a: "DIR-12 must be filed within 30 days of any change (appointment/resignation) in Directors or Key Managerial Personnel." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

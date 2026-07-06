@@ -34,11 +34,11 @@ export const NRITaxationServices: React.FC<NRITaxationServicesProps> = ({ servic
       "Return Filing",
       "Repatriation Support"
     ],
-    faqs: [
-{ q: "Do NRIs need to file tax returns in India?", a: "Yes, if your income earned or accrued in India exceeds the basic exemption limit (Rs. 2.5 Lakhs)." },
+    faqs: [{ q: "Do NRIs need to file tax returns in India?", a: "Yes, if your income earned or accrued in India exceeds the basic exemption limit (Rs. 2.5 Lakhs)." },
     { q: "Is foreign income taxable in India for NRIs?", a: "No, if you qualify as an NRI, your income earned outside India is not taxable in India." },
     { q: "What is the TDS rate on property sales by an NRI?", a: "The buyer must deduct TDS at 20% (for long-term capital gains) or 30% (short-term) plus applicable surcharge and cess." },
-    { q: "Can I claim a refund for high TDS deducted on my property sale?", a: "Yes, you can claim a refund by filing an income tax return if your actual tax liability is lower than the TDS deducted." }
+    { q: "Can I claim a refund for high TDS deducted on my property sale?", a: "Yes, you can claim a refund by filing an income tax return if your actual tax liability is lower than the TDS deducted." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

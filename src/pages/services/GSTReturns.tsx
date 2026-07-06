@@ -34,9 +34,11 @@ export const GSTReturns: React.FC<GSTReturnsProps> = ({ service, relatedServices
       "Client Approval",
       "Final Submission"
     ],
-    faqs: [
-{ q: "Do I have to file a GST return if I had no sales?", a: "Yes, a Nil GSTR-3B return must be filed even if there is no business activity to avoid penalties." },
-    { q: "What is the penalty for late filing?", a: "Failure to file leads to a penalty of Rs.50 per day (Rs.20 for Nil returns), plus 18% interest on late tax payment." }
+    faqs: [{ q: "Do I have to file a GST return if I had no sales?", a: "Yes, a Nil GSTR-3B return must be filed even if there is no business activity to avoid penalties." },
+    { q: "What is the penalty for late filing?", a: "Failure to file leads to a penalty of Rs.50 per day (Rs.20 for Nil returns), plus 18% interest on late tax payment." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

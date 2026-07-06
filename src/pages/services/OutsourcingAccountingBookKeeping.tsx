@@ -34,11 +34,11 @@ export const OutsourcingAccountingBookKeeping: React.FC<OutsourcingAccountingBoo
       "Data Migration",
       "Ongoing Bookkeeping"
     ],
-    faqs: [
-{ q: "Why should I outsource my bookkeeping?", a: "Outsourcing saves costs, ensures high accuracy, provides access to expert professionals, and frees up your time to focus on business growth." },
+    faqs: [{ q: "Why should I outsource my bookkeeping?", a: "Outsourcing saves costs, ensures high accuracy, provides access to expert professionals, and frees up your time to focus on business growth." },
     { q: "Do you provide accounting services for overseas businesses?", a: "Yes, we handle accounting for overseas clients adhering to international accounting standards (IFRS, US GAAP) using cloud software." },
     { q: "How secure is my financial data?", a: "We use encrypted, industry-standard cloud accounting software (like Xero, Zoho, QuickBooks) and maintain strict data confidentiality policies." },
-    { q: "How often will I receive financial reports?", a: "We can provide reports on a weekly, monthly, or quarterly basis depending on your business requirements." }
+    { q: "How often will I receive financial reports?", a: "We can provide reports on a weekly, monthly, or quarterly basis depending on your business requirements." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

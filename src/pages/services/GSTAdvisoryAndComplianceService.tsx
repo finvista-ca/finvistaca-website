@@ -34,9 +34,11 @@ export const GSTAdvisoryAndComplianceService: React.FC<GSTAdvisoryAndComplianceS
       "Implementation & Structuring",
       "Ongoing Compliance"
     ],
-    faqs: [
-{ q: "What does your GST compliance service include?", a: "Assistance in registration, review of GST returns including refunds, gap analysis, and annual reconciliation." },
-    { q: "Do you advise on Input Tax Credit availability?", a: "Yes, we advise on matters relating to outward supplies, ITC availability, valuation mechanism, and time and place of supply." }
+    faqs: [{ q: "What does your GST compliance service include?", a: "Assistance in registration, review of GST returns including refunds, gap analysis, and annual reconciliation." },
+    { q: "Do you advise on Input Tax Credit availability?", a: "Yes, we advise on matters relating to outward supplies, ITC availability, valuation mechanism, and time and place of supply." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

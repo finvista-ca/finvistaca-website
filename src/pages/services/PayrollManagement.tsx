@@ -34,11 +34,11 @@ export const PayrollManagement: React.FC<PayrollManagementProps> = ({ service, r
       "Statutory Deductions",
       "Payslip Distribution"
     ],
-    faqs: [
-{ q: "How often is payroll processed?", a: "Payroll is typically processed on a monthly basis, aligned with your company's salary disbursement cycle." },
+    faqs: [{ q: "How often is payroll processed?", a: "Payroll is typically processed on a monthly basis, aligned with your company's salary disbursement cycle." },
     { q: "Can statutory deductions be automated?", a: "Yes, our systems automatically calculate and track PF, ESI, Professional Tax, and TDS deductions accurately." },
     { q: "Do you help with employee queries?", a: "Yes, we can provide a dedicated helpdesk to resolve employee queries regarding their tax deductions and payslips." },
-    { q: "Is Form 16 provided to employees?", a: "Yes, as part of our year-end process, we generate and distribute Form 16 to all eligible employees." }
+    { q: "Is Form 16 provided to employees?", a: "Yes, as part of our year-end process, we generate and distribute Form 16 to all eligible employees." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

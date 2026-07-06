@@ -34,11 +34,11 @@ export const InternationalTaxation: React.FC<InternationalTaxationProps> = ({ se
       "Compliance Implementation",
       "Ongoing Advisory"
     ],
-    faqs: [
-{ q: "What is DTAA?", a: "DTAA (Double Taxation Avoidance Agreement) is a tax treaty between two countries that prevents the same income from being taxed twice." },
+    faqs: [{ q: "What is DTAA?", a: "DTAA (Double Taxation Avoidance Agreement) is a tax treaty between two countries that prevents the same income from being taxed twice." },
     { q: "How is foreign income taxed in India?", a: "Resident Indians are taxed on their global income, while Non-Residents are only taxed on income earned or accrued in India." },
     { q: "What is Permanent Establishment (PE)?", a: "A PE is a fixed place of business in India through which a foreign enterprise conducts its business, triggering Indian tax liabilities." },
-    { q: "Are there withholding taxes on foreign payments?", a: "Yes, remittances made to non-residents (like royalties, technical fees, or interest) are subject to specific withholding tax rates." }
+    { q: "Are there withholding taxes on foreign payments?", a: "Yes, remittances made to non-residents (like royalties, technical fees, or interest) are subject to specific withholding tax rates." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

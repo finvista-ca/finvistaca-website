@@ -34,11 +34,11 @@ export const OnlineAccounting: React.FC<OnlineAccountingProps> = ({ service, rel
       "Go Live",
       "Ongoing Support"
     ],
-    faqs: [
-{ q: "What is online accounting?", a: "It involves using internet-based accounting software to store and manage your financial data on remote servers instead of a local computer." },
+    faqs: [{ q: "What is online accounting?", a: "It involves using internet-based accounting software to store and manage your financial data on remote servers instead of a local computer." },
     { q: "Is my financial data secure in the cloud?", a: "Yes, leading online accounting platforms use bank-level encryption, multi-factor authentication, and automatic backups to secure your data." },
     { q: "Can I access my accounts from my phone?", a: "Absolutely. Most online accounting platforms offer mobile apps that allow you to view reports, send invoices, and capture receipts on the go." },
-    { q: "Do I need to install any software?", a: "No, online accounting is completely browser-based, meaning there is nothing to install or manually update." }
+    { q: "Do I need to install any software?", a: "No, online accounting is completely browser-based, meaning there is nothing to install or manually update." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

@@ -34,9 +34,11 @@ export const WindingPrivateLimitedCompany: React.FC<WindingPrivateLimitedCompany
       "Creditor Settlement",
       "Final Dissolution"
     ],
-    faqs: [
-{ q: "What is the summary procedure for liquidation?", a: "It allows companies with assets under Rs 1 crore to wind up through the Central Government rather than the Tribunal." },
-    { q: "What happens to leases when a company is wound up?", a: "If the company has entered into a lease, the liquidation process will legally eliminate all terms and conditions of the contract." }
+    faqs: [{ q: "What is the summary procedure for liquidation?", a: "It allows companies with assets under Rs 1 crore to wind up through the Central Government rather than the Tribunal." },
+    { q: "What happens to leases when a company is wound up?", a: "If the company has entered into a lease, the liquidation process will legally eliminate all terms and conditions of the contract." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

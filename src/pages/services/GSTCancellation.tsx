@@ -31,9 +31,11 @@ export const GSTCancellation: React.FC<GSTCancellationProps> = ({ service, relat
       "Order of Cancellation",
       "File GSTR-10"
     ],
-    faqs: [
-{ q: "Can an officer cancel my GST registration automatically?", a: "Yes, if you do not conduct business from the declared place or fail to file returns for six months." },
-    { q: "What happens if I just stop filing returns instead of canceling?", a: "Your registration will be canceled by the officer, but you will be liable for heavy penalties and blocked from obtaining another GST under the same PAN until late fees are paid." }
+    faqs: [{ q: "Can an officer cancel my GST registration automatically?", a: "Yes, if you do not conduct business from the declared place or fail to file returns for six months." },
+    { q: "What happens if I just stop filing returns instead of canceling?", a: "Your registration will be canceled by the officer, but you will be liable for heavy penalties and blocked from obtaining another GST under the same PAN until late fees are paid." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

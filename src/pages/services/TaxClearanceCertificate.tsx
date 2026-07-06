@@ -34,11 +34,11 @@ export const TaxClearanceCertificate: React.FC<TaxClearanceCertificateProps> = (
       "Bank Submission",
       "Funds Remitted"
     ],
-    faqs: [
-{ q: "Who needs a Tax Clearance Certificate?", a: "NRIs selling property and remitting funds, foreign citizens leaving India, and companies remitting income abroad." },
+    faqs: [{ q: "Who needs a Tax Clearance Certificate?", a: "NRIs selling property and remitting funds, foreign citizens leaving India, and companies remitting income abroad." },
     { q: "What is Form 15CB?", a: "Form 15CB is a certificate issued by a Chartered Accountant determining the rate and amount of TDS to be deducted on a foreign remittance." },
     { q: "Is Form 15CB required for all foreign payments?", a: "No, it is generally required if the remittance exceeds Rs. 5 Lakhs in a financial year and is taxable in India." },
-    { q: "What is Form 15CA?", a: "Form 15CA is a declaration filed online by the remitter using the information certified in Form 15CB." }
+    { q: "What is Form 15CA?", a: "Form 15CA is a declaration filed online by the remitter using the information certified in Form 15CB." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." }
     ]
   };
 

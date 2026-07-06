@@ -31,9 +31,11 @@ export const AgreedUponProcedures: React.FC<AgreedUponProceduresProps> = ({ serv
       "Factual Analysis",
       "Report of Findings"
     ],
-    faqs: [
-{ q: "How is an Agreed Upon Procedure different from an Audit?", a: "In an AUP, the auditor simply performs the procedures agreed with the client and reports factual findings without expressing an audit opinion or assurance." },
-    { q: "When should I use Agreed Upon Procedures?", a: "When you need an independent professional to verify specific financial elements, like accounts receivable or related party transactions, without needing a full audit." }
+    faqs: [{ q: "How is an Agreed Upon Procedure different from an Audit?", a: "In an AUP, the auditor simply performs the procedures agreed with the client and reports factual findings without expressing an audit opinion or assurance." },
+    { q: "When should I use Agreed Upon Procedures?", a: "When you need an independent professional to verify specific financial elements, like accounts receivable or related party transactions, without needing a full audit." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 

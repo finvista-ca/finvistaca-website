@@ -33,9 +33,11 @@ export const ForensicAudit: React.FC<ForensicAuditProps> = ({ service, relatedSe
       "Reporting & Documentation",
       "Court Proceedings"
     ],
-    faqs: [
-{ q: "What is a forensic audit?", a: "It is an examination of financial records to gather evidence for legal proceedings, typically involving fraud or embezzlement." },
-    { q: "Can a forensic auditor testify in court?", a: "Yes, forensic auditors frequently provide litigation assistance and serve as expert witnesses in court trials." }
+    faqs: [{ q: "What is a forensic audit?", a: "It is an examination of financial records to gather evidence for legal proceedings, typically involving fraud or embezzlement." },
+    { q: "Can a forensic auditor testify in court?", a: "Yes, forensic auditors frequently provide litigation assistance and serve as expert witnesses in court trials." },
+      { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
+      { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
+      { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." }
     ]
   };
 
