@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Building, Send, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { ImmediateAssistanceCTA } from '../components/shared/ImmediateAssistanceCTA';
 import './Contact.css';
 
 export const Contact: React.FC = () => {
@@ -240,21 +241,7 @@ const handleSubmit = async (
         </div>
       </section>
       
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-container">
-            <div className="cta-content">
-              <h2>Need immediate assistance?</h2>
-              <p>Our team of chartered accountants is ready to help you with your business compliance and taxation needs.</p>
-              <div className="cta-buttons">
-                <a href="tel:+918143505094" className="btn btn-primary">Call Us Now</a>
-                <a href="mailto:caramakishore@gmail.com" className="btn btn-secondary">Email Us</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ImmediateAssistanceCTA />
     </div>
   );
 };

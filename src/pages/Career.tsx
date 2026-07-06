@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Briefcase, Users, Target, TrendingUp, CheckCircle2, ChevronRight } from 'lucide-react';
+import { ImmediateAssistanceCTA } from '../components/shared/ImmediateAssistanceCTA';
 import './Career.css';
 
 export const Career: React.FC = () => {
@@ -232,20 +233,7 @@ export const Career: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-container">
-            <div className="cta-content">
-              <h2>Join Our Team Today</h2>
-              <p>Ready to challenge yourself and grow your career with a leading firm?</p>
-              <div className="cta-buttons">
-                <a href="mailto:caramakishore@gmail.com" className="btn btn-primary">Email Us Your Query</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ImmediateAssistanceCTA />
     </div>
   );
 };

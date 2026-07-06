@@ -44,7 +44,7 @@
 
 /* Long, compact, Google-like search bar */
 .services-hero.kb-hero .smart-search-container {
-  width: 600px; /* long horizontal length */
+  width: 100%; max-width: 600px; /* long horizontal length */
   margin: 1rem auto 0;
 }
 
@@ -106,7 +106,7 @@
 .service-subtitle {
   font-size: 1.2rem;
   color: var(--brand-navy-secondary);
-  max-width: 700px;
+  max-width: 100%; max-width: 700px;
   margin: 0 0 3rem 0;
   line-height: 1.6;
 }

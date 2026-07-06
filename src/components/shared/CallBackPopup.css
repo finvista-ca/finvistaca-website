@@ -33,7 +33,7 @@
 .callback-modal {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 100%; max-width: 420px;
   background: #fff;
   border-radius: 1rem;
   padding: 2rem 1.75rem;

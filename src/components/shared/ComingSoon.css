@@ -12,7 +12,7 @@
   align-items: center;
   gap: 0.5rem;
   align-self: flex-start;
-  max-width: 1200px;
+  max-width: 100%; max-width: 1200px;
   width: 100%;
   margin: 0 auto 3rem auto;
   color: var(--text-secondary);
@@ -40,7 +40,7 @@
 }
 
 .coming-soon-content {
-  max-width: 600px;
+  max-width: 100%; max-width: 600px;
   width: 100%;
   padding: 4rem 2rem;
   text-align: center;

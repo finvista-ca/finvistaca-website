@@ -46,7 +46,7 @@
 .calculator-hero .page-subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);
-  max-width: 800px;
+  max-width: 100%; max-width: 800px;
   margin: 0 auto;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .calculator-content-wrapper {
-  max-width: 1000px;
+  max-width: 100%; max-width: 1000px;
   margin: 0 auto 5rem;
 }
 
@@ -316,7 +316,7 @@
   text-align: center;
 }
 .calculator-detail-page .cta-content {
-  max-width: 640px;
+  max-width: 100%; max-width: 640px;
   margin: 0 auto;
 }
 .calculator-detail-page .cta-content h2 {

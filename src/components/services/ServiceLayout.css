@@ -26,7 +26,7 @@
 
 /* Base Utility Classes */
 .premium-service-layout .container {
-  max-width: 1200px;
+  max-width: 100%; max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
@@ -219,7 +219,7 @@
 }
 
 .shape-1 {
-  width: 300px;
+  width: 100%; max-width: 300px;
   height: 300px;
   background: rgba(59, 130, 246, 0.3);
   top: 10%;
@@ -569,7 +569,7 @@
    6. FAQ SECTION
    ========================================================================== */
 .faq-wrapper {
-  max-width: 800px;
+  max-width: 100%; max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -670,7 +670,7 @@
 .cta-panel .cta-content {
   position: relative;
   z-index: 2;
-  max-width: 600px;
+  max-width: 100%; max-width: 600px;
 }
 
 .cta-panel .cta-content h2 {

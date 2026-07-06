@@ -42,7 +42,7 @@
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 3rem;
-  max-width: 600px;
+  max-width: 100%; max-width: 600px;
 }
 
 .search-container {

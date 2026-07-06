@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  max-width: 1200px;
+  max-width: 100%; max-width: 1200px;
   margin: 0 auto;
   padding: 0.55rem 1rem 0.55rem 0.9rem;
   width: 100%;
@@ -229,13 +229,13 @@
 
 .mega-menu-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem 2.5rem;
 }
 
 .mega-menu-grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem 2.5rem;
 }
 
