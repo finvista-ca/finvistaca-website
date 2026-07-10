@@ -21,6 +21,7 @@ import { ScrollToTop } from './components/layout/ScrollToTop';
 import { GlobalBackground } from './components/layout/GlobalBackground';
 import AnimatedBackground from './components/layout/AnimatedBackground';
 import { SplashScreen } from './components/shared/SplashScreen';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
 
 // Helper component for pending pages
 const PendingPage = ({ title }: { title: string }) => (
@@ -60,8 +61,7 @@ function App() {
           <Route path="/others-services/:id" element={<ServiceDetail />} />
           <Route path="/data-policy" element={<DataPolicy />} />
           <Route path="/due-dates" element={<DueDates />} />
-          <Route path="/privacy" element={<PendingPage title="Privacy Policy" />} />
-          <Route path="/terms" element={<PendingPage title="Terms of Service" />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
         <VirtualAssistant />

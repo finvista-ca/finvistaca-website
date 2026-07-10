@@ -19,7 +19,7 @@ const branches = [
   },
   {
     name: 'Visakhapatnam',
-    address: '49-24-6/1, 4th Floor, Upstairs More Super Market, Sankaramatam Main Road, Visakhapatnam - 530016'
+    address: 'Guru Nivas, D.No: 50-53-6/E, Flat No MIG-245, Near Abaya Swamy Temple, Near Presidential School, BS Layout, Seethammadhara, Visakhapatnam - 530013'
   },
   {
     name: 'Bobbili',
@@ -32,6 +32,10 @@ const branches = [
   {
     name: 'Odisha',
     address: 'Indira Nagar, 3rd Lane, Near Rayagada College, Rayagada, Odisha - 765001'
+  },
+  {
+    name: 'Hyderabad',
+    address: 'Plot 854, H No 6-14/2/1, Budha Nager Colony, Road No 07, Boduppal, Uppal Bus Depot - 500092'
   }
 ];
 
@@ -77,7 +81,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/career">Career</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
             </ul>
           </div>
 
@@ -126,7 +129,6 @@ export const Footer: React.FC = () => {
           <div className="footer-bottom-right">
             <ul className="footer-legal-links">
               <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link to="/terms-conditions">Terms of Service</Link></li>
               <li><Link to="/sitemap">Sitemap</Link></li>
             </ul>
           </div>

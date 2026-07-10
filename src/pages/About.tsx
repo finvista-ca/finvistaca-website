@@ -209,11 +209,12 @@ export const About: React.FC = () => {
                 {[
                   { name: "Odisha", top: "30%", left: "58%", color: "#dc2626", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
                   { name: "Parvathipuram", top: "42%", left: "48%", color: "#0d9488", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Bobbili (Head Office)", top: "54%", left: "58%", color: "#C8A45D", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Bobbili", top: "54%", left: "58%", color: "#C8A45D", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
                   { name: "Visakhapatnam", top: "66%", left: "48%", color: "#ea580c", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
                   { name: "Peddapuram", top: "78%", left: "58%", color: "#9333ea", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
                   { name: "Kakinada", top: "86%", left: "42%", color: "#2563eb", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Vijayawada", top: "72%", left: "36%", color: "#16a34a", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } }
+                  { name: "Vijayawada (Head Office)", top: "72%", left: "36%", color: "#16a34a", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Hyderabad", top: "60%", left: "20%", color: "#0ea5e9", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } }
                 ].map((pin, idx) => (
                   <motion.div 
                     key={idx}

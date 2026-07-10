@@ -435,3 +435,24 @@ grid-template-columns:1fr;
 .bg-brand {
   background: var(--brand-blue);
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 6rem 16px 3rem;
+  }
+  .hero-title {
+    font-size: clamp(2.2rem, 7vw, 3.5rem) !important;
+  }
+  .hero-description {
+    font-size: clamp(1rem, 3vw, 1.125rem) !important;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

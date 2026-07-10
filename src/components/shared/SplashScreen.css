@@ -4,7 +4,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #09131F;
+  background-color: rgba(9, 19, 31, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;

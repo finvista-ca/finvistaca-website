@@ -15,17 +15,16 @@ export const HeroSection: React.FC = () => {
         <div className="hero-content animate-fade-in">
           <h2 className="hero-trusted-badge">
             <ShieldCheck size={18} strokeWidth={2.5} />
-            TRUSTED FINANCIAL ADVISORS
+            PREMIER CHARTERED ACCOUNTANTS
           </h2>
           
           <h1 className="hero-title" style={{ color: '#ffffff' }}>
-            Strategic Financial <br />
-            <span style={{ color: '#1E5EFF' }}>Guidance.</span> <br />
-            Stronger Business Future.
+            Authoritative Financial & <br />
+            <span style={{ color: '#1E5EFF' }}>Legal Compliance.</span>
           </h1>
           
           <p className="hero-description" style={{ color: '#D1D5DB', maxWidth: '600px', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '40px' }}>
-            We help businesses, entrepreneurs, and individuals navigate taxation, compliance, and regulatory frameworks with clarity and confidence.
+            Partner with premier Chartered Accountants for comprehensive Taxation, GST, Auditing, and Corporate Advisory services. We deliver absolute compliance and strategic financial leadership.
           </p>
           
           <div className="hero-feature-grid">

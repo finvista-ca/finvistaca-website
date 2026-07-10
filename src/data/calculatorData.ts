@@ -72,5 +72,12 @@ export const calculatorsList: CalculatorData[] = [
     description: 'Estimate returns on your National Saving Certificates.',
     iframeUrl: 'https://catheme.saginfotech.com/calc/Calculators-NSC.html',
     keywords: ['national saving certificate', 'nsc', 'investment', 'return', 'post office']
+  },
+  {
+    id: 'gst-late-fee',
+    title: 'GST Late Fee Calculator',
+    description: 'Calculate the GST late fee payable for delayed filing of GST returns based on the applicable government rules.',
+    iframeUrl: '',
+    keywords: ['gst', 'late fee', 'return', 'penalty', 'gstr-3b', 'gstr-1', 'gstr-9']
   }
 ];

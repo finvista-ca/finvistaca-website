@@ -71,6 +71,7 @@ const handleSubmit = async (
   const branchList = [
     { 
       name: 'Kakinada', 
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Kakinada',
       address: (
         <>
           2-34-8/A, 1st Floor,<br />
@@ -81,31 +82,42 @@ const handleSubmit = async (
       ) 
     },
     { 
-      name: 'Vijayawada', 
+      name: 'Bobbili', 
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Bobbili',
       address: (
         <>
-          D.No. 41-1-41C,<br />
-          SS Nilayam,<br />
-          KT Road,<br />
-          Chitti Nagar,<br />
-          Vijayawada – 520001
+          33-105, Near Sai Ganapathi Theatre,<br />
+          Church Centre, Bobbili,<br />
+          Vizianagaram Dist. AP - 535558
         </>
       ) 
     },
-    { 
-      name: 'Visakhapatnam', 
+    {
+      name: 'Hyderabad',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Hyderabad',
       address: (
         <>
-          49-24-6/1,<br />
-          4th Floor,<br />
-          Upstairs More Super Market,<br />
-          Sankaramatam Main Road,<br />
-          Visakhapatnam – 530016
+          Plot 854, H No 6-14/2/1,<br />
+          Budha Nager Colony, Road No 07,<br />
+          Boduppal, Uppal Bus Depot - 500092
+        </>
+      )
+    },
+    { 
+      name: 'Visakhapatnam', 
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Visakhapatnam',
+      address: (
+        <>
+          Guru Nivas, D.No: 50-53-6/E,<br />
+          Flat No MIG-245, Near Abaya Swamy Temple,<br />
+          Near Presidential School, BS Layout,<br />
+          Seethammadhara, Visakhapatnam - 530013
         </>
       ) 
     },
     { 
       name: 'Parvathipuram', 
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Parvathipuram',
       address: (
         <>
           D.No. 1-1,<br />
@@ -119,6 +131,7 @@ const handleSubmit = async (
     },
     { 
       name: 'Peddapuram', 
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Peddapuram',
       address: (
         <>
           21-1-19/A,<br />
@@ -131,6 +144,7 @@ const handleSubmit = async (
     },
     { 
       name: 'Odisha', 
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Rayagada',
       address: (
         <>
           Indira Nagar,<br />
@@ -168,18 +182,24 @@ const handleSubmit = async (
               
               <div className="hq-card glass-card">
                 <div className="hq-badge">Headquarters</div>
-                <h3>Bobbili</h3>
+                <h3>Vijayawada</h3>
                 <div className="info-items">
-                  <div className="info-item">
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Vijayawada" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="info-item"
+                    style={{ textDecoration: 'none', cursor: 'pointer' }}
+                  >
                     <div className="info-icon"><MapPin size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
                       <p>
-                        33-105, Near Sai Ganapathi Theatre,<br />
-                        Church Centre, Bobbili,<br />
-                        Vizianagaram Dist. AP - 535558
+                        D.No. 41-1-41C, SS Nilayam,<br />
+                        KT Road, Chitti Nagar,<br />
+                        Vijayawada – 520001
                       </p>
                     </div>
-                  </div>
+                  </a>
                   <div className="info-item">
                     <div className="info-icon"><Phone size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
@@ -261,10 +281,11 @@ const handleSubmit = async (
                       required
                     >
                       <option value="" disabled>Select your preferred branch</option>
-                      <option value="Bobbili (Head Office)">Bobbili (Head Office)</option>
+                      <option value="Vijayawada (Head Office)">Vijayawada (Head Office)</option>
+                      <option value="Bobbili">Bobbili</option>
+                      <option value="Hyderabad">Hyderabad</option>
                       <option value="Kakinada">Kakinada</option>
                       <option value="Parvathipuram">Parvathipuram</option>
-                      <option value="Vijayawada">Vijayawada</option>
                       <option value="Visakhapatnam">Visakhapatnam</option>
                       <option value="Peddapuram">Peddapuram</option>
                       <option value="Rayagada (Odisha)">Rayagada (Odisha)</option>
@@ -294,9 +315,13 @@ const handleSubmit = async (
               <h3 className="branches-title">Branch Offices</h3>
               <div className="branches-grid">
                 {branchList.map(branch => (
-                  <div 
+                  <a 
                     key={branch.name}
+                    href={branch.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="contact-branch-card"
+                    style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
                   >
                     <div className="branch-card-header">
                       <MapPin size={18} strokeWidth={2} className="branch-icon" />
@@ -305,26 +330,10 @@ const handleSubmit = async (
                     <div className="branch-card-body">
                       <p>{branch.address}</p>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
-
-            {/* 4. Map Section */}
-            <div className="contact-section-map">
-              <div className="map-container glass-card">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15201.06710821509!2d83.29318401293884!3d17.732064769791176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39432550b18955%3A0x68f6dc0198a265b9!2sVisakhapatnam%2C%20Andhra%20Pradesh%20530016!5e0!3m2!1sen!2sin!4v1748925331918!5m2!1sen!2sin" 
-                  width="100%" 
-                  height="350" 
-                  style={{ border: 0, borderRadius: '14px' }} 
-                  allowFullScreen={true} 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>

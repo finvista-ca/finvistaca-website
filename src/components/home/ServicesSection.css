@@ -110,3 +110,15 @@
   background-color: var(--brand-gold);
   border-radius: 50%;
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+  .service-row {
+    background: var(--dark-secondary);
+    border: 1px solid var(--dark-border);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-dark);
+  }
+}

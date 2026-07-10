@@ -407,3 +407,16 @@
   border-top: 1px solid var(--dark-border);
   background: var(--dark-bg);
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-logo {
+    height: 55px;
+  }
+  .navbar.scrolled .navbar-logo {
+    height: 48px;
+  }
+}

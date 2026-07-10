@@ -42,6 +42,7 @@ import { HraCalculator } from './pages/calculator/HraCalculator';
 import { InstallmentsCalculator } from './pages/calculator/InstallmentsCalculator';
 import { KisanVikasPatraCalculator } from './pages/calculator/KisanVikasPatraCalculator';
 import { NscCalculator } from './pages/calculator/NscCalculator';
+import { GstLateFeeCalculator } from './pages/calculator/GstLateFeeCalculator';
 
 export const pageMappings: Record<string, Record<string, React.FC>> = {
   knowledgeBase: {
@@ -118,5 +119,6 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'installments': InstallmentsCalculator,
     'kisan-vikas-patra': KisanVikasPatraCalculator,
     'nsc': NscCalculator,
+    'gst-late-fee': GstLateFeeCalculator,
   }
 };
