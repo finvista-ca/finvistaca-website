@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { SmartSearch } from '../components/search/SmartSearch';
 import { calculatorsList } from '../data/calculatorData';
 import { Calculator, ChevronRight, Star } from 'lucide-react';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './Services.css';
 
 const popularResources = [
@@ -34,27 +35,21 @@ export const CalculatorList: React.FC = () => {
 
   return (
     <div className="services-directory">
-      {/* Hero Section */}
-      <div className="services-hero">
-        <div className="container">
-          <div className="service-badge">
-            <Calculator size={16} />
-            <span>Calculators</span>
-          </div>
-          <h1 className="service-title">Financial & Tax Calculators</h1>
-          <p className="service-subtitle">
-            Plan your finances better with our free online calculators for EMI, Home Loans, Income Tax, and more.
-          </p>
-          
-          <div className="search-section">
-            <SmartSearch 
-              services={allCalculators} 
-              basePath="/calculator"
-              placeholder="Search calculators (e.g. EMI, HRA)..."
-            />
-          </div>
-        </div>
-        <div className="services-hero-pattern"></div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Calculators' }
+        ]}
+        title="Financial & Tax Calculators"
+        description="Plan your finances better with our free online calculators for EMI, Home Loans, Income Tax, and more."
+      />
+      
+      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+        <SmartSearch 
+          services={allCalculators} 
+          basePath="/calculator"
+          placeholder="Search calculators (e.g. EMI, HRA)..."
+        />
       </div>
 
       <div className="services-categories-section">

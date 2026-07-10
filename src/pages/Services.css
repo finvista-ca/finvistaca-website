@@ -1,10 +1,10 @@
 .services-directory {
   min-height: 100vh;
-  background-color: var(--background);
+  background-color: transparent;
 }
 
 .services-hero {
-  background: var(--hero-gradient);
+  background: transparent;
   padding: 6rem 0 8rem;
   position: relative;
   overflow: hidden;
@@ -88,7 +88,7 @@
   background: rgba(16, 43, 90, 0.05);
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  color: var(--brand-navy);
+  color: var(--brand-gold);
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -98,14 +98,14 @@
 .service-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--brand-navy);
+  color: var(--text-heading);
   margin: 0 0 1rem 0;
   line-height: 1.2;
 }
 
 .service-subtitle {
   font-size: 1.2rem;
-  color: var(--brand-navy-secondary);
+  color: var(--text-secondary);
   max-width: 100%; max-width: 700px;
   margin: 0 0 3rem 0;
   line-height: 1.6;
@@ -142,15 +142,15 @@
 
 
 .category-block {
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: 24px;
   padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-color);
 }
 
 .category-title {
-  color: var(--brand-primary);
+  color: var(--text-heading);
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0 0 2rem 0;
@@ -167,39 +167,43 @@
 
 .category-item-card {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   padding: 1.5rem;
-  background: var(--primary-bg);
+  background: var(--card-bg);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid var(--border-color);
+  gap: 1rem; /* Added gap between icon and text */
 }
 
 .category-item-card:hover {
   background: var(--card-bg);
-  border-color: var(--brand-gold);
+  border-color: var(--brand-blue);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-soft);
 }
 
 .category-item-icon {
-  background: var(--light-gold);
-  color: var(--brand-navy);
+  background: var(--bg-alt);
+  color: #FFFFFF;
+  border: 1px solid var(--border-color);
   width: 40px;
   height: 40px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1rem;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
 .category-item-card:hover .category-item-icon {
-  background: var(--brand-navy);
-  color: var(--brand-gold);
+  background: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 10px var(--brand-gold), 0 0 0 4px rgba(212, 175, 55, 0.2);
 }
 
 .category-item-content {
@@ -207,7 +211,7 @@
 }
 
 .category-item-content h4 {
-  color: var(--text-dark);
+  color: var(--text-primary);
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
@@ -225,7 +229,7 @@
 }
 
 .category-item-card:hover .category-item-link {
-  color: var(--brand-primary);
+  color: var(--brand-gold);
   transform: translateX(3px);
 }
 

@@ -3,6 +3,7 @@ import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { SmartSearch } from '../components/search/SmartSearch';
 import { knowledgeBaseData } from '../data/knowledgeBaseData';
 import { Book, ChevronRight, FileText, FileSignature, Briefcase, Star, Settings } from 'lucide-react';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './Services.css'; // Reuse premium services layout styling
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -69,28 +70,22 @@ export const KnowledgeBase: React.FC = () => {
 
   return (
     <div className="services-directory">
-      {/* Hero Section */}
-      <div className="services-hero kb-hero">
-        <div className="container">
-          <div className="service-badge">
-            <Book size={16} />
-            <span>Knowledge Base</span>
-          </div>
-          <h1 className="service-title">Professional Resource Center</h1>
-          <p className="service-subtitle">
-            Explore our comprehensive library of Acts, Rules, Circulars, Notifications, Forms, and Tools.
-          </p>
-          
-          <div className="search-section">
-            <SmartSearch 
-              services={allKBServices} 
-              basePath="/knowledge-base"
-              placeholder="Search knowledge base..."
-              initialQuery={queryParam}
-            />
-          </div>
-        </div>
-        <div className="services-hero-pattern"></div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base' }
+        ]}
+        title="Professional Resource Center"
+        description="Explore our comprehensive library of Acts, Rules, Circulars, Notifications, Forms, and Tools."
+      />
+      
+      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+        <SmartSearch 
+          services={allKBServices} 
+          basePath="/knowledge-base"
+          placeholder="Search knowledge base..."
+          initialQuery={queryParam}
+        />
       </div>
 
       <div className="services-categories-section">

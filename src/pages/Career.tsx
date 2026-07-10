@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Briefcase, Users, Target, TrendingUp, CheckCircle2, ChevronRight } from 'lucide-react';
 import { ImmediateAssistanceCTA } from '../components/shared/ImmediateAssistanceCTA';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './Career.css';
 
 export const Career: React.FC = () => {
@@ -43,15 +44,14 @@ export const Career: React.FC = () => {
 
   return (
     <div className="career-page">
-      {/* Hero Section */}
-      <section className="career-hero">
-        <div className="container">
-          <h1 className="page-title">Build Your Career With Us</h1>
-          <p className="page-subtitle">
-            Join a firm that values expertise, integrity, and innovation. Shape the future of finance and consulting.
-          </p>
-        </div>
-      </section>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Careers' }
+        ]}
+        title="Build Your Career With Us"
+        description="Join a firm that values expertise, integrity, and innovation. Shape the future of finance and consulting."
+      />
 
       {/* Why Join Us & Work Culture */}
       <section className="culture-section">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, ExternalLink, Calendar, TrendingUp, Filter } from 'lucide-react';
 import { newsData } from '../data/newsData';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './NewsFeed.css';
 
 const categories = ["All", "GST", "Taxation", "Audit", "Compliance", "Technology", "Economy"];
@@ -21,27 +22,29 @@ export const NewsFeed: React.FC = () => {
   return (
     <div className="newsfeed-page">
       {/* Hero Section */}
-      <section className="newsfeed-hero">
-        <div className="container">
-          <h1 className="page-title">News & Updates</h1>
-          <p className="page-subtitle">
-            Stay informed with the latest updates on taxation, compliance, audit, and global economics from trusted sources.
-          </p>
-          
-          <div className="news-search-wrapper">
-            <div className="search-bar glass-card">
-              <Search className="search-icon" size={20} />
-              <input 
-                type="text" 
-                placeholder="Search news, topics, or keywords..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <button className="btn btn-primary">Search</button>
-            </div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'News' }
+        ]}
+        title="News & Updates"
+        description="Stay informed with the latest updates on taxation, compliance, audit, and global economics from trusted sources."
+      />
+      
+      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+        <div className="news-search-wrapper" style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <div className="search-bar glass-card">
+            <Search className="search-icon" size={20} />
+            <input 
+              type="text" 
+              placeholder="Search news, topics, or keywords..." 
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button className="btn btn-primary">Search</button>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="newsfeed-main">
         <div className="container">

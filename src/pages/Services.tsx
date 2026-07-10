@@ -5,6 +5,7 @@ import { otherServicesData } from '../data/otherServicesData';
 import { knowledgeBaseData } from '../data/knowledgeBaseData';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ChevronRight, FileText, Settings } from 'lucide-react';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './Services.css';
 
 const combinedData = [...servicesData, ...otherServicesData, ...knowledgeBaseData];
@@ -50,22 +51,17 @@ export const Services: React.FC = () => {
 
   return (
     <div className="services-directory">
-      <div className="services-hero">
-        <div className="container">
-          <div className="service-badge">
-            <Settings size={16} />
-            <span>Service Directory</span>
-          </div>
-          <h1 className="service-title">Our Professional Services</h1>
-          <p className="service-subtitle">
-            Explore our complete range of taxation, compliance, audit, registration, and advisory services.
-          </p>
-          
-          <div className="search-section">
-            <SmartSearch services={allServices} />
-          </div>
-        </div>
-        <div className="services-hero-pattern"></div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Services' }
+        ]}
+        title="Our Professional Services"
+        description="Explore our complete range of taxation, compliance, audit, registration, and advisory services."
+      />
+      
+      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+        <SmartSearch services={allServices} />
       </div>
 
       <div className="services-categories-section">

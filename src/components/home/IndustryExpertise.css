@@ -1,0 +1,56 @@
+.industry-section {
+  padding: 6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.industry-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all var(--transition-normal);
+  cursor: default;
+}
+
+.industry-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.industry-icon-wrapper {
+  color: var(--brand-gold);
+  margin-bottom: 1rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(200, 164, 93, 0.1);
+  border-radius: 50%;
+  transition: all var(--transition-normal);
+}
+
+.industry-card:hover .industry-icon-wrapper {
+  background-color: var(--brand-gold);
+  color: var(--brand-navy);
+  transform: scale(1.1);
+}
+
+.industry-name {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}

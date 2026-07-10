@@ -6,24 +6,20 @@ import {
   MapPin, Briefcase, Award, ArrowRight
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './About.css';
 
 export const About: React.FC = () => {
   return (
     <div className="about-page">
-      {/* 1. Hero Section */}
-      <section className="about-hero">
-        <div className="container">
-          <div className="hero-content-wrapper">
-            <h1 className="hero-heading">About Finvista</h1>
-            <p className="hero-subheading">
-              Delivering uncompromised financial precision, strategic foresight, and 
-              absolute compliance for over 15 years.
-            </p>
-          </div>
-        </div>
-        <div className="hero-pattern"></div>
-      </section>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'About Us' }
+        ]}
+        title="About Finvista"
+        description="Delivering uncompromised financial precision, strategic foresight, and absolute compliance for over 15 years."
+      />
 
       {/* 2. Firm Overview */}
       <section className="about-overview section">
@@ -41,7 +37,7 @@ export const About: React.FC = () => {
             <div className="overview-visual">
               <div className="glass-panel">
                 <div className="visual-badge">
-                  <Building2 size={48} className="badge-icon" />
+                  <Building2 size={48} className="badge-icon" strokeWidth={1.5} />
                   <h3>Modern Accounting</h3>
                   <p>Enterprise-grade solutions tailored for your business scale.</p>
                 </div>
@@ -81,7 +77,7 @@ export const About: React.FC = () => {
           <div className="vm-grid">
             <div className="vm-card glass-hover">
               <div className="vm-icon-wrapper color-brand">
-                <Compass size={32} />
+                <Compass size={32} strokeWidth={1.5} />
               </div>
               <h3 className="vm-title">Our Vision</h3>
               <p className="vm-description">
@@ -90,7 +86,7 @@ export const About: React.FC = () => {
             </div>
             <div className="vm-card glass-hover">
               <div className="vm-icon-wrapper color-accent">
-                <Target size={32} />
+                <Target size={32} strokeWidth={1.5} />
               </div>
               <h3 className="vm-title">Our Mission</h3>
               <p className="vm-description">
@@ -124,7 +120,7 @@ export const About: React.FC = () => {
               const Icon = value.icon;
               return (
                 <div key={idx} className="value-item">
-                  <div className="value-icon"><Icon size={24} /></div>
+                  <div className="value-icon"><Icon size={24} strokeWidth={1.5} /></div>
                   <h4 className="value-title">{value.title}</h4>
                   <p className="value-desc">{value.desc}</p>
                 </div>
@@ -145,17 +141,17 @@ export const About: React.FC = () => {
           </div>
           <div className="wcu-grid">
             <div className="wcu-card">
-              <div className="wcu-icon color-brand"><Briefcase size={28} /></div>
+              <div className="wcu-icon color-brand"><Briefcase size={28} strokeWidth={1.5} /></div>
               <h3>Deep Industry Knowledge</h3>
               <p>Specialized expertise across various sectors ensures tailored financial strategies.</p>
             </div>
             <div className="wcu-card">
-              <div className="wcu-icon color-accent"><Shield size={28} /></div>
+              <div className="wcu-icon color-accent"><Shield size={28} strokeWidth={1.5} /></div>
               <h3>Risk Mitigation</h3>
               <p>Proactive identification and management of financial and regulatory risks.</p>
             </div>
             <div className="wcu-card">
-              <div className="wcu-icon color-brand"><TrendingUp size={28} /></div>
+              <div className="wcu-icon color-brand"><TrendingUp size={28} strokeWidth={1.5} /></div>
               <h3>Growth Focused</h3>
               <p>We don't just ensure compliance; we provide insights to accelerate your growth.</p>
             </div>
@@ -177,7 +173,7 @@ export const About: React.FC = () => {
             {/* Left Side: Premium Location Cards */}
             <div className="presence-cards-col">
               {[
-                { title: "Andhra Pradesh (Head Office)", desc: "Headquartered in Bobbili, serving clients across Andhra Pradesh.", icon: Building2, color: "var(--brand-primary)" },
+                { title: "Andhra Pradesh (Head Office)", desc: "Headquartered in Bobbili, serving clients across Andhra Pradesh.", icon: Building2, color: "#C8A45D" },
                 { title: "Telangana", desc: "Supporting businesses, professionals, and enterprises across Telangana.", icon: Users, color: "#0d9488" },
                 { title: "Odisha", desc: "Providing taxation, audit, and compliance services throughout Odisha.", icon: Briefcase, color: "#ea580c" },
                 { title: "South India", desc: "Strong presence across major South Indian markets and business hubs.", icon: MapPin, color: "#9333ea" },
@@ -192,7 +188,7 @@ export const About: React.FC = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <div className="pc-icon-wrapper" style={{ color: card.color, backgroundColor: `${card.color}15` }}>
-                      <Icon size={24} />
+                      <Icon size={24} strokeWidth={1.5} />
                     </div>
                     <div className="pc-content">
                       <h4 className="pc-title">{card.title}</h4>
@@ -209,45 +205,39 @@ export const About: React.FC = () => {
                 {/* Embedded SVG Map */}
                 <img src="/india-map.svg" alt="Map of India" className="india-base-map" />
                 
-                {/* Map Pins overlay - positioning percentages relative to the map image */}
-                
-                {/* Andhra Pradesh (HQ) Pin */}
-                <div className="map-pin-wrapper" style={{ top: '65%', left: '48%' }}>
+                {/* Map Pins overlay */}
+                {[
+                  { name: "Odisha", top: "30%", left: "58%", color: "#dc2626", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Parvathipuram", top: "42%", left: "48%", color: "#0d9488", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Bobbili (Head Office)", top: "54%", left: "58%", color: "#C8A45D", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Visakhapatnam", top: "66%", left: "48%", color: "#ea580c", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Peddapuram", top: "78%", left: "58%", color: "#9333ea", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Kakinada", top: "86%", left: "42%", color: "#2563eb", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
+                  { name: "Vijayawada", top: "72%", left: "36%", color: "#16a34a", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } }
+                ].map((pin, idx) => (
                   <motion.div 
-                    className="pin-pulse" 
-                    animate={{ scale: [1, 2, 2], opacity: [0.8, 0.4, 0] }}
-                    transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
-                    style={{ backgroundColor: "var(--brand-primary)" }}
-                  />
-                  <div className="map-pin" style={{ backgroundColor: "var(--brand-primary)" }}>
-                    <MapPin size={14} color="white" />
-                  </div>
-                  <div className="pin-label">Andhra Pradesh (HQ)</div>
-                </div>
-
-                {/* Telangana Pin */}
-                <div className="map-pin-wrapper" style={{ top: '55%', left: '42%' }}>
-                  <div className="map-pin" style={{ backgroundColor: "#0d9488" }}>
-                    <MapPin size={14} color="white" />
-                  </div>
-                  <div className="pin-label">Telangana</div>
-                </div>
-
-                {/* Odisha Pin */}
-                <div className="map-pin-wrapper" style={{ top: '48%', left: '55%' }}>
-                  <div className="map-pin" style={{ backgroundColor: "#ea580c" }}>
-                    <MapPin size={14} color="white" />
-                  </div>
-                  <div className="pin-label">Odisha</div>
-                </div>
-
-                {/* South India Region Pin */}
-                <div className="map-pin-wrapper" style={{ top: '75%', left: '40%' }}>
-                  <div className="map-pin" style={{ backgroundColor: "#9333ea" }}>
-                    <MapPin size={14} color="white" />
-                  </div>
-                  <div className="pin-label">South India</div>
-                </div>
+                    key={idx}
+                    className="map-pin-wrapper" 
+                    style={{ top: pin.top, left: pin.left }}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  >
+                    {pin.name.includes("Head Office") && (
+                      <motion.div 
+                        className="pin-pulse" 
+                        animate={{ scale: [1, 2, 2], opacity: [0.8, 0.4, 0] }}
+                        transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
+                        style={{ backgroundColor: pin.color }}
+                      />
+                    )}
+                    <div className="map-pin" style={{ backgroundColor: pin.color }}>
+                      <MapPin size={14} color="white" />
+                    </div>
+                    <div className="pin-label" style={pin.labelStyle}>{pin.name}</div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
@@ -281,17 +271,17 @@ export const About: React.FC = () => {
           </div>
           <div className="team-grid">
             <div className="team-category glass-card">
-              <Users size={32} className="team-icon color-brand" />
+              <Users size={32} className="team-icon color-brand" strokeWidth={1.5} />
               <h3>Taxation Specialists</h3>
               <p>Experts in Direct Tax, Corporate Tax structuring, and individual tax planning.</p>
             </div>
             <div className="team-category glass-card">
-              <Shield size={32} className="team-icon color-accent" />
+              <Shield size={32} className="team-icon color-accent" strokeWidth={1.5} />
               <h3>Audit & Assurance</h3>
               <p>Dedicated auditors ensuring compliance, statutory audits, and internal controls.</p>
             </div>
             <div className="team-category glass-card">
-              <CheckCircle size={32} className="team-icon color-brand" />
+              <CheckCircle size={32} className="team-icon color-brand" strokeWidth={1.5} />
               <h3>GST Compliance Panel</h3>
               <p>A specialized team dedicated entirely to navigating the complexities of Indirect Taxation.</p>
             </div>
@@ -312,14 +302,14 @@ export const About: React.FC = () => {
                   <strong>Phone:</strong> +91 8143505094
                 </div>
                 <div className="contact-detail">
-                  <strong>Email:</strong> <a href="mailto:caramakishore@gmail.com">caramakishore@gmail.com</a>
+                  <strong>Email:</strong> <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a>
                 </div>
               </div>
 
             </div>
             <div className="cta-box-action">
               <Link to="/contact" className="btn btn-secondary btn-lg">
-                Request Consultation <ArrowRight size={18} />
+                Request Consultation <ArrowRight size={18} strokeWidth={1.5} />
               </Link>
             </div>
           </div>

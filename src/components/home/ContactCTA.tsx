@@ -59,7 +59,7 @@ export const ContactCTA: React.FC = () => {
                 <strong>Phone:</strong> +91 8143505094
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <strong>Email:</strong> <a href="mailto:caramakishore@gmail.com" style={{ color: 'inherit' }}>caramakishore@gmail.com</a>
+                <strong>Email:</strong> <a href="mailto:finvistaca@gmail.com" style={{ color: 'inherit' }}>finvistaca@gmail.com</a>
               </div>
             </div>
           </div>

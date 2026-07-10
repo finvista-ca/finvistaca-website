@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowRight, Settings, FileText, ChevronRight } from 'lucide-react';
 import { getServiceBySlug, getRelatedServices } from '../data/servicesData';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import { Proprietorship } from './services/Proprietorship';
 import { Partnership } from './services/Partnership';
 import { OnePersonCompany } from './services/OnePersonCompany';
@@ -373,17 +374,18 @@ export const ServiceDetail: React.FC = () => {
 
   return (
     <div className="service-detail-page">
-      <div className="service-hero">
-        <div className="container">
-          <div className="service-badge">
-            <Settings size={16} />
-            <span>Service Detail</span>
-          </div>
-          <h1 className="service-title">{service.name}</h1>
-          <div className="coming-soon-pill">COMING SOON</div>
-        </div>
-        <div className="service-hero-pattern"></div>
-      </div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Services', path: '/services' },
+          { label: service.name }
+        ]}
+        title={service.name}
+        description="Detailed content for this service is currently being prepared and will be available soon."
+        ctaButtons={[
+          { label: 'Contact Us For Details', path: '/contact', primary: true }
+        ]}
+      />
 
       <div className="service-content-wrapper">
         <div className="container">

@@ -1,16 +1,17 @@
 .service-detail-page {
   min-height: 100vh;
   padding-top: 80px; /* Offset for navbar */
-  background-color: var(--primary-bg);
+  background-color: transparent;
 }
 
 .service-hero {
   position: relative;
-  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+  background: transparent;
   padding: 6rem 0;
   color: white;
   text-align: center;
   overflow: hidden;
+  border-bottom: 1px solid var(--dark-border);
 }
 
 .service-badge {
@@ -70,11 +71,11 @@
 .service-placeholder-card {
   max-width: 100%; max-width: 800px;
   margin: 0 auto;
-  background: white;
+  background-color: var(--card-bg);
   border-radius: 1.5rem;
   padding: 4rem 2rem;
   text-align: center;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-soft);
   position: relative;
   top: -4rem;
   z-index: 10;
@@ -84,8 +85,8 @@
 .placeholder-icon {
   width: 80px;
   height: 80px;
-  background: rgba(30, 58, 138, 0.05);
-  color: var(--brand-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--brand-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -96,7 +97,7 @@
 
 .service-placeholder-card h2 {
   font-size: 2rem;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 1rem;
 }
 
@@ -124,7 +125,7 @@
 .related-services-section {
   margin-top: 5rem;
   padding-top: 3rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--dark-border);
 }
 
 .related-header {
@@ -137,7 +138,7 @@
 .related-header h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--brand-primary);
+  color: var(--text-heading);
   margin: 0;
   white-space: nowrap;
 }
@@ -145,7 +146,7 @@
 .related-line {
   height: 1px;
   flex: 1;
-  background: linear-gradient(90deg, var(--brand-primary) 0%, transparent 100%);
+  background: linear-gradient(90deg, var(--brand-gold) 0%, transparent 100%);
   opacity: 0.2;
 }
 
@@ -159,7 +160,7 @@
   display: flex;
   align-items: flex-start;
   padding: 1.5rem;
-  background: white;
+  background-color: var(--card-bg);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -168,13 +169,13 @@
 
 .related-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  border-color: rgba(18, 52, 133, 0.2);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--brand-blue);
 }
 
 .related-icon {
-  background: rgba(18, 52, 133, 0.05);
-  color: var(--brand-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--brand-gold);
   width: 48px;
   height: 48px;
   border-radius: 10px;
@@ -187,8 +188,8 @@
 }
 
 .related-card:hover .related-icon {
-  background: var(--brand-primary);
-  color: #ffffff;
+  background: var(--brand-gold);
+  color: var(--dark-bg);
 }
 
 .related-content {
@@ -196,7 +197,7 @@
 }
 
 .related-content h4 {
-  color: var(--text-dark);
+  color: var(--text-primary);
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
@@ -206,7 +207,7 @@
 .related-card .explore-link {
   display: inline-flex;
   align-items: center;
-  color: var(--brand-secondary);
+  color: var(--text-secondary);
   font-size: 0.85rem;
   font-weight: 500;
   gap: 0.25rem;
@@ -216,7 +217,7 @@
 
 .related-card:hover .explore-link {
   opacity: 1;
-  color: var(--brand-primary);
+  color: var(--brand-gold);
   transform: translateX(3px);
 }
 

@@ -1,20 +1,20 @@
 .contact-page {
   padding-top: 80px; /* offset for navbar */
-  background-color: var(--bg-secondary);
+  background-color: transparent;
   min-height: 100vh;
 }
 
 .contact-hero {
-  background: linear-gradient(135deg, var(--primary-bg) 0%, #ffffff 100%);
+  background: transparent;
   padding: 4rem 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--dark-border);
   text-align: center;
 }
 
 .page-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 1rem;
 }
 
@@ -30,15 +30,37 @@
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
 }
 
 @media (min-width: 1024px) {
   .contact-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0 3rem; /* 48px horizontal gap */
     align-items: start;
+  }
+  .contact-section-hq {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .contact-section-form {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    position: sticky;
+    top: 100px;
+  }
+  .contact-section-branches {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 4rem;
+  }
+  .contact-section-map {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 4rem;
   }
 }
 
@@ -46,7 +68,7 @@
   margin-bottom: 2rem;
 }
 
-.contact-info-panel h2 {
+.section-header h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -60,10 +82,13 @@
 
 .hq-card {
   padding: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
   position: relative;
-  background-color: white;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
 }
 
 .hq-badge {
@@ -82,7 +107,7 @@
 .hq-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #FFFFFF;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
 }
@@ -105,101 +130,155 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border-color);
   border-radius: 50%;
-  color: var(--brand-primary);
+  color: #FFFFFF;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.info-content p {
-  color: var(--text-secondary);
+.info-item:hover .info-icon {
+  background-color: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 10px var(--brand-gold), 0 0 0 4px rgba(212, 175, 55, 0.2);
+}
+
+.hq-card .info-content p {
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   margin: 0;
   font-size: 0.95rem;
 }
 
-.info-content a {
-  color: var(--brand-primary);
+.hq-card .info-content a {
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
-.info-content a:hover {
-  color: var(--brand-secondary);
+.hq-card .info-content a:hover {
+  color: #FFFFFF;
   text-decoration: underline;
 }
 
 .branches-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  color: var(--text-heading);
+  margin-bottom: 3.5rem; /* Increased spacing before grid */
 }
 
 .branches-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-auto-rows: auto;
+  gap: 1.5rem; /* 24px for mobile */
+  margin-bottom: 3.5rem; /* Extra space before map */
 }
 
 @media (min-width: 640px) {
   .branches-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 1.75rem; /* 28px for tablet */
   }
 }
 
-.branch-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
+@media (min-width: 1024px) {
+  .branches-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 2.5rem; /* 32px row gap, 40px column gap for desktop */
+  }
+}
+
+.contact-branch-card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem; /* 24px internal padding */
+  border-radius: 1.125rem; /* 18px border radius */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 200px; /* Increased minimum height constraint */
+}
+
+.contact-branch-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 164, 93, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(200, 164, 93, 0.05);
+}
+
+.branch-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem; /* 20px gap between city name and address */
+}
+
+.branch-card-header h4 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700; /* Bold */
+  color: #FFFFFF;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.branch-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-alt);
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  border-radius: 50%;
+  color: #FFFFFF;
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
-.branch-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--brand-gold);
-  transform: translateY(-2px);
+.contact-branch-card:hover .branch-icon {
+  background-color: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 10px var(--brand-gold), 0 0 0 4px rgba(212, 175, 55, 0.2);
 }
 
-.branch-card h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.75rem;
+.branch-card-body {
+  flex: 1;
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.branch-card h4 svg {
-  color: var(--brand-primary);
-}
-
-.branch-card p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.5;
+.branch-card-body p {
+  color: var(--text-secondary); /* Light gray usually mapped to this variable */
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.7; /* Increased comfortable line height */
   margin: 0;
+  white-space: normal; /* Ensure proper word wrapping */
 }
 
-.contact-form-panel {
-  position: sticky;
-  top: 100px;
-}
+
 
 .form-wrapper {
   padding: 2.5rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .form-wrapper h2 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 0.5rem;
 }
 
@@ -256,9 +335,14 @@
 .contact-page-form input:focus,
 .contact-page-form select:focus,
 .contact-page-form textarea:focus {
-  border-color: var(--brand-gold);
-  box-shadow: var(--shadow-hover);
-  background-color: white;
+  border-color: var(--brand-blue);
+  box-shadow: var(--shadow-soft);
+  background-color: var(--card-bg);
+}
+
+.contact-page-form select option {
+  background: var(--card-bg);
+  color: var(--text-primary);
 }
 
 .contact-page-form textarea {
@@ -291,12 +375,10 @@
   color: var(--success);
 }
 
-.contact-map {
-  padding-bottom: 5rem;
-}
-
 .map-container {
   padding: 1rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft);
 }

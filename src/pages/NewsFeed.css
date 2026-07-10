@@ -1,13 +1,13 @@
 .newsfeed-page {
   padding-top: 80px;
-  background-color: var(--bg-secondary);
+  background-color: transparent;
   min-height: 100vh;
 }
 
 .newsfeed-hero {
-  background: linear-gradient(135deg, var(--primary-bg) 0%, #ffffff 100%);
+  background: transparent;
   padding: 4rem 0 6rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--dark-border);
   text-align: center;
   position: relative;
 }
@@ -15,7 +15,7 @@
 .newsfeed-hero .page-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 1rem;
 }
 
@@ -41,10 +41,10 @@
   align-items: center;
   width: 100%;
   max-width: 100%; max-width: 700px;
-  background-color: white;
+  background-color: var(--card-bg);
   padding: 0.4rem 0.5rem 0.4rem 1.25rem;
   border-radius: 3rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-color);
 }
 
@@ -104,7 +104,7 @@
 
 .category-chip {
   padding: 0.5rem 1.25rem;
-  background-color: white;
+  background-color: var(--primary-bg);
   border: 1px solid var(--border-color);
   border-radius: 2rem;
   color: var(--text-secondary);
@@ -115,14 +115,14 @@
 }
 
 .category-chip:hover {
-  border-color: var(--brand-primary);
-  color: var(--brand-primary);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
 }
 
 .category-chip.active {
-  background-color: var(--brand-primary);
-  color: white;
-  border-color: var(--brand-primary);
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  border-color: var(--brand-blue);
 }
 
 .section-header {
@@ -132,14 +132,14 @@
 .section-header h2 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
 .section-header h2 svg {
-  color: var(--brand-primary);
+  color: var(--brand-blue);
 }
 
 .featured-section {
@@ -162,17 +162,18 @@
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
 }
 
 .featured-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--brand-blue);
 }
 
 .card-badges {
@@ -183,8 +184,8 @@
 }
 
 .category-badge {
-  background-color: var(--primary-bg);
-  color: var(--brand-primary);
+  background-color: rgba(30, 94, 255, 0.1);
+  color: var(--brand-blue);
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   font-size: 0.75rem;
@@ -194,24 +195,26 @@
 }
 
 .source-badge {
-  background-color: var(--light-navy);
+  background-color: var(--primary-bg);
   color: var(--text-secondary);
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   font-size: 0.75rem;
   font-weight: 600;
+  border: 1px solid var(--border-color);
 }
 
 .source-badge.minimal {
   background-color: transparent;
   padding: 0;
-  color: var(--brand-primary);
+  color: var(--brand-blue);
+  border: none;
 }
 
 .featured-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   line-height: 1.4;
   margin-bottom: 2rem;
   flex-grow: 1;
@@ -238,7 +241,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: var(--brand-primary);
+  color: var(--brand-blue);
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -265,23 +268,24 @@
   display: flex;
   flex-direction: column;
   padding: 1.75rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 0.75rem;
   text-decoration: none;
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
 }
 
 .news-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--brand-blue);
 }
 
 .news-card h4 {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-heading);
   line-height: 1.5;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -299,13 +303,13 @@
 }
 
 .news-card:hover .ext-icon {
-  color: var(--brand-primary);
+  color: var(--brand-blue);
 }
 
 .no-results {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: white;
+  background-color: var(--card-bg);
   border: 1px dashed var(--border-color);
   border-radius: 1rem;
 }

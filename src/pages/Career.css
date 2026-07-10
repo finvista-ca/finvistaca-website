@@ -1,13 +1,13 @@
 .career-page {
   padding-top: 80px;
-  background-color: var(--bg-secondary);
+  background-color: transparent;
   min-height: 100vh;
 }
 
 .career-hero {
-  background: linear-gradient(135deg, var(--primary-bg) 0%, #ffffff 100%);
+  background: transparent;
   padding: 4rem 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--dark-border);
   text-align: center;
 }
 
@@ -18,9 +18,9 @@
 }
 
 .process-section {
-  background-color: white;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  background-color: transparent;
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
 }
 
 .section-header {
@@ -30,7 +30,7 @@
 .section-header h2 {
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 1rem;
 }
 
@@ -54,13 +54,17 @@
 .culture-card {
   padding: 2.5rem 2rem;
   text-align: center;
-  background-color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .culture-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--brand-blue);
 }
 
 .culture-icon {
@@ -68,7 +72,7 @@
   height: 64px;
   margin: 0 auto 1.5rem;
   background-color: var(--primary-bg);
-  color: var(--brand-primary);
+  color: var(--brand-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -78,7 +82,7 @@
 .culture-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 1rem;
 }
 
@@ -102,7 +106,7 @@
   left: 25px; /* Half of step-number width (50px) */
   bottom: 40px;
   width: 2px;
-  background-color: var(--border-color);
+  background-color: rgba(255, 255, 255, 0.1);
   z-index: 1;
 }
 
@@ -187,7 +191,7 @@
 .process-step h4 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 0.5rem;
 }
 
@@ -214,7 +218,7 @@
 .openings-list-panel h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 0.5rem;
 }
 
@@ -232,14 +236,18 @@
 
 .job-card {
   padding: 1.5rem;
-  background-color: white;
-  border-left: 4px solid var(--brand-primary);
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--brand-blue);
+  box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
 }
 
 .job-card:hover {
   transform: translateX(4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-hover);
+  border-left-color: var(--brand-gold);
 }
 
 .job-header {
@@ -252,12 +260,12 @@
 .job-header h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
 }
 
 .job-type {
-  background-color: var(--primary-bg);
-  color: var(--brand-primary);
+  background-color: rgba(30, 94, 255, 0.1);
+  color: var(--brand-blue);
   padding: 0.25rem 0.75rem;
   border-radius: 2rem;
   font-size: 0.8rem;
@@ -330,9 +338,14 @@
 .career-form input:focus,
 .career-form select:focus,
 .career-form textarea:focus {
-  border-color: var(--brand-gold);
-  box-shadow: var(--shadow-hover);
-  background-color: white;
+  border-color: var(--brand-blue);
+  box-shadow: var(--shadow-soft);
+  background-color: var(--card-bg);
+}
+
+.career-form select option {
+  background: var(--card-bg);
+  color: var(--text-primary);
 }
 
 .file-upload-wrapper {
@@ -367,9 +380,9 @@
 }
 
 .file-input:hover + .file-upload-button {
-  border-color: var(--brand-primary);
-  color: var(--brand-primary);
-  background-color: var(--primary-bg);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+  background-color: var(--card-bg);
 }
 
 .file-hint {

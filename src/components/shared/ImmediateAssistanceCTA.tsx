@@ -52,8 +52,7 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                     </div>
                     <div className="info-content">
                       <span className="info-label">Call Us</span>
-                      <a href="tel:+918143505094" className="info-value">+91 8143505094</a>
-                      <a href="tel:+917993856920" className="info-value">+91 7993856920</a>
+                      <a href="tel:+919908285223" className="info-value">+91 9908285223</a>
                     </div>
                   </div>
                   
@@ -63,7 +62,7 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                     </div>
                     <div className="info-content">
                       <span className="info-label">Email</span>
-                      <a href="mailto:caramakishore@gmail.com" className="info-value">caramakishore@gmail.com</a>
+                      <a href="mailto:finvistaca@gmail.com" className="info-value">finvistaca@gmail.com</a>
                     </div>
                   </div>
                   
@@ -80,10 +79,10 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                 </div>
 
                 <div className="cta-action-buttons">
-                  <a href="tel:+918143505094" className="btn btn-primary cta-btn-primary">
+                  <a href="tel:+919908285223" className="btn btn-primary cta-btn-primary">
                     <Phone size={18} /> Call Now
                   </a>
-                  <a href="mailto:caramakishore@gmail.com" className="btn btn-outline cta-btn-secondary">
+                  <a href="mailto:finvistaca@gmail.com" className="btn btn-outline cta-btn-secondary">
                     <Mail size={18} /> Email Us
                   </a>
                 </div>

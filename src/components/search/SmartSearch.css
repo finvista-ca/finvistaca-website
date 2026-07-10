@@ -10,11 +10,12 @@
   display: flex;
   align-items: center;
   padding: 0.5rem 1.5rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 50px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .search-icon {
-  color: var(--brand-navy);
+  color: var(--brand-gold);
   margin-right: 1rem;
 }
 
@@ -99,11 +100,11 @@
   display: flex;
   align-items: flex-start;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--card-bg);
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-color);
   height: 100%;
 }
 
@@ -114,8 +115,9 @@
 }
 
 .result-icon {
-  background: var(--light-gold);
-  color: var(--brand-navy);
+  background: var(--bg-alt);
+  color: #FFFFFF;
+  border: 1px solid var(--border-color);
   width: 48px;
   height: 48px;
   border-radius: 12px;
@@ -128,8 +130,10 @@
 }
 
 .search-result-card:hover .result-icon {
-  background: var(--brand-navy);
-  color: var(--brand-gold);
+  background: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 10px var(--brand-gold), 0 0 0 4px rgba(212, 175, 55, 0.2);
 }
 
 .result-content {
@@ -147,7 +151,7 @@
 .explore-link {
   display: inline-flex;
   align-items: center;
-  color: var(--brand-navy-secondary);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   font-weight: 500;
   gap: 0.25rem;
@@ -162,11 +166,11 @@
 }
 
 .empty-state {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--card-bg);
   border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-color);
 }
 
 .empty-message {

@@ -7,10 +7,10 @@
 /* 1. Hero Section */
 .about-hero {
   position: relative;
-  background: linear-gradient(135deg, var(--primary-bg) 0%, rgba(37, 99, 235, 0.05) 100%);
+  background: transparent;
   padding: 6rem 0;
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--dark-border);
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@
 .hero-heading {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 1.5rem;
   line-height: 1.1;
 }
@@ -74,12 +74,14 @@
 }
 
 .glass-panel {
-  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/modern-accounting.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--border-color);
   border-radius: 1.5rem;
   padding: 4rem 2rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +114,7 @@
 .visual-badge h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 0.5rem;
 }
 
@@ -136,9 +138,9 @@
 
 .stat-card {
   padding: 2rem;
-  background: white;
+  background: var(--card-bg);
   border-radius: 1rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease;
 }
@@ -177,10 +179,10 @@
 
 .vm-card {
   padding: 3rem;
-  background: white;
+  background: var(--card-bg);
   border-radius: 1rem;
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-soft);
   transition: all 0.4s ease;
 }
 
@@ -198,13 +200,24 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.vm-card:hover .vm-icon-wrapper {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 15px var(--brand-gold), 0 0 0 6px rgba(212, 175, 55, 0.2);
 }
 
 .vm-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: var(--text-heading);
 }
 
 .vm-description {
@@ -215,7 +228,7 @@
 
 /* 5. Core Values */
 .bg-dark {
-  background-color: var(--text-primary);
+  background-color: transparent;
 }
 
 .text-white {
@@ -243,21 +256,37 @@
 
 .value-item {
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
 }
 
 .value-item:hover {
-  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
-  border-color: var(--accent-primary);
+  border-color: var(--brand-blue);
 }
 
 .value-icon {
-  color: var(--accent-primary);
+  width: 48px;
+  height: 48px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
   margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover .value-icon {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 10px var(--brand-gold), 0 0 0 4px rgba(212, 175, 55, 0.2);
 }
 
 .value-title {
@@ -269,7 +298,7 @@
 
 .value-desc {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -288,11 +317,11 @@
 }
 
 .wcu-card {
-  background: white;
+  background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 1rem;
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
 }
 
@@ -306,13 +335,24 @@
   padding: 1rem;
   border-radius: 0.75rem;
   margin-bottom: 1.5rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.wcu-card:hover .wcu-icon {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 15px var(--brand-gold), 0 0 0 6px rgba(212, 175, 55, 0.2);
 }
 
 .wcu-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: var(--text-heading);
 }
 
 .wcu-card p {
@@ -347,9 +387,9 @@
   align-items: flex-start;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: white;
+  background: var(--card-bg);
   border-radius: 1rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-color);
   transition: box-shadow 0.3s ease;
   cursor: default;
@@ -367,6 +407,17 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.presence-card-modern:hover .pc-icon-wrapper {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold-light);
+  color: white;
+  box-shadow: 0 0 10px var(--brand-gold), 0 0 0 4px rgba(212, 175, 55, 0.2);
 }
 
 .pc-content {
@@ -377,7 +428,7 @@
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--text-primary);
+  color: var(--text-heading);
 }
 
 .pc-desc {
@@ -391,7 +442,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1.1;
-  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  background: var(--card-bg);
   border-radius: 1.5rem;
   border: 1px solid var(--border-color);
   display: flex;
@@ -447,15 +498,19 @@
 }
 
 .pin-label {
-  margin-top: 0.5rem;
-  background: white;
-  padding: 0.25rem 0.75rem;
+  position: absolute;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 0.35rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
+  z-index: 20;
+  pointer-events: none;
 }
 
 /* Bottom Strip Stats */
@@ -473,18 +528,18 @@
 }
 
 .p-stat-card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-color);
 }
 
 .p-stat-card h3 {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--brand-primary);
+  color: var(--brand-gold);
   margin-bottom: 0.25rem;
 }
 
@@ -512,7 +567,9 @@
   padding: 2.5rem 2rem;
   text-align: center;
   border-radius: 1rem;
-  background: white;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
 }
 
 .team-icon {
@@ -523,7 +580,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: var(--text-heading);
 }
 
 .team-category p {

@@ -1,0 +1,64 @@
+.global-background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  background-color: transparent;
+  pointer-events: none; /* Make sure it doesn't block clicks */
+}
+
+.global-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6; /* 60% opacity */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.global-video-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: linear-gradient(to right, rgba(7, 11, 10, 0.9) 0%, rgba(7, 11, 10, 0.4) 50%, rgba(7, 11, 10, 0.1) 100%),
+              linear-gradient(to top, rgba(7, 11, 10, 1) 0%, rgba(7, 11, 10, 0) 25%);
+  z-index: 1;
+}
+
+/* Ambient Glow */
+.global-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(94, 210, 156, 0.15) 0%, rgba(30, 94, 255, 0.1) 30%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+  z-index: 2;
+}
+
+/* Vertical Grid Lines (Desktop Only) */
+@media (min-width: 1024px) {
+  .global-grid-lines {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    z-index: 3;
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-position: 25% 0, 50% 0, 75% 0;
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,20 +1,20 @@
 .kb-page {
   padding-top: 80px;
-  background-color: var(--bg-secondary);
+  background-color: transparent;
   min-height: 100vh;
 }
 
 .kb-hero {
-  background: linear-gradient(135deg, var(--primary-bg) 0%, #ffffff 100%);
+  background: transparent;
   padding: 4rem 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--dark-border);
   text-align: center;
 }
 
 .kb-hero .page-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin-bottom: 1rem;
 }
 
@@ -36,10 +36,11 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: white;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 0.75rem;
   padding: 1rem 1.25rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-soft);
 }
 
 .hero-search-container .search-box input {
@@ -85,9 +86,10 @@
 
 .kb-category-card {
   padding: 2rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1rem;
   border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -106,7 +108,7 @@
   width: 48px;
   height: 48px;
   background-color: var(--primary-bg);
-  color: var(--brand-primary);
+  color: var(--brand-blue);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -116,7 +118,7 @@
 .kb-category-header h2 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-heading);
   margin: 0;
 }
 
@@ -141,11 +143,11 @@
 }
 
 .kb-links-list li a:hover {
-  color: var(--brand-primary);
+  color: var(--brand-blue);
 }
 
 .kb-links-list li a svg {
-  color: var(--brand-primary);
+  color: var(--brand-blue);
   flex-shrink: 0;
   margin-top: 0.15rem;
 }

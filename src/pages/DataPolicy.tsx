@@ -1,16 +1,17 @@
-import React from 'react';
 import { ShieldCheck } from 'lucide-react';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 
 export const DataPolicy: React.FC = () => {
   return (
     <div className="resource-layout" style={{ paddingTop: '90px' }}>
-      <section className="resource-hero">
-        <div className="container">
-          <div className="hero-icon"><ShieldCheck size={40} /></div>
-          <h1 className="page-title">Data Collection Policy</h1>
-          <p className="page-subtitle">How Finvista collects, uses and protects your information.</p>
-        </div>
-      </section>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Data Policy' }
+        ]}
+        title="Data Collection Policy"
+        description="How Finvista collects, uses and protects your information."
+      />
 
       <section className="resource-main">
         <div className="container" style={{ maxWidth: '860px', lineHeight: 1.8 }}>
@@ -55,7 +56,7 @@ export const DataPolicy: React.FC = () => {
           <p>
             For any questions about this policy or the information we hold about you,
             please contact us at{' '}
-            <a href="mailto:caramakishore@gmail.com">caramakishore@gmail.com</a> or call
+            <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a> or call
             +91 8143505094.
           </p>
         </div>

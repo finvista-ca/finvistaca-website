@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary);
+  color: #0B1F3A;
   transition: all var(--transition-fast);
 }
 
@@ -65,7 +65,7 @@
 .testimonial-text {
   font-size: 1.25rem;
   line-height: 1.8;
-  color: var(--text-primary);
+  color: #0B1F3A;
   margin-bottom: 2rem;
   font-style: italic;
   position: relative;
@@ -95,11 +95,12 @@
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  color: #0B1F3A;
 }
 
 .author-info p {
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: #4B5563;
 }
 
 .carousel-indicators {

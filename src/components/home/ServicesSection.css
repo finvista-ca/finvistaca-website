@@ -1,96 +1,112 @@
-.services-section {
-  position: relative;
-  overflow: hidden;
-  background-color: #f8f9fa;
-  padding: 4.5rem 0;
-}
-
-/* Clean, well-aligned 3 x 2 grid of compact cards.
-   All selectors scoped under .services-section so global .service-title
-   (used on other pages) can't override the card typography. */
-.services-section .services-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  max-width: 100%; max-width: 1000px;
-  margin: 2.5rem auto 0;
-}
-
-@media (min-width: 640px) {
-  .services-section .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-}
-
-@media (min-width: 1000px) {
-  .services-section .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-}
-
-.services-section .service-card {
-  background: #ffffff;
-  border: 1px solid rgba(16, 43, 90, 0.08);
-  border-radius: 14px;
-  padding: 1.5rem 1.25rem;
+.services-alternating {
   display: flex;
   flex-direction: column;
+  gap: 6rem;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
   align-items: center;
-  text-align: center;
-  gap: 0.6rem;
-  min-height: 170px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.services-section .service-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(199, 154, 61, 0.4);
-  box-shadow: 0 12px 28px rgba(16, 43, 90, 0.1);
+@media (min-width: 992px) {
+  .service-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+  
+  .service-row.row-reverse .service-visual {
+    order: 2;
+  }
+  
+  .service-row.row-reverse .service-content {
+    order: 1;
+  }
 }
 
-.services-section .service-icon-wrapper {
+.service-visual {
+  position: relative;
+  aspect-ratio: 4/3;
+  background-color: var(--brand-navy);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(199, 154, 61, 0.12);
-  color: var(--brand-navy, #102b5a);
-  transition: background 180ms ease, color 180ms ease;
-  flex-shrink: 0;
-  margin: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
 
-.services-section .service-card:hover .service-icon-wrapper {
-  background: var(--brand-gold, #c79a3d);
-  color: #ffffff;
-}
-
-.services-section .service-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--brand-navy, #102b5a);
-  line-height: 1.3;
-  margin: 0;
-  padding-bottom: 0.5rem;
+.service-visual-inner {
   position: relative;
-  max-width: none;
+  z-index: 2;
+  color: var(--brand-gold);
 }
 
-.services-section .service-title::after {
-  content: '';
+.visual-decoration {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 24px;
-  height: 3px;
-  background-color: var(--brand-gold, #c79a3d);
-  border-radius: 2px;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(200, 164, 93, 0.1) 0%, transparent 50%);
+  z-index: 1;
 }
 
-.services-section .service-description {
-  color: #6b7280;
-  line-height: 1.45;
-  font-size: 0.82rem;
-  margin: 0;
+.service-icon-small {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(30, 94, 255, 0.1);
+  color: var(--brand-blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-row-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #38BDF8;
+}
+
+.service-row-desc {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .service-features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.service-features li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--brand-gold);
+  border-radius: 50%;
 }

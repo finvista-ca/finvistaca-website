@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, BookOpen, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { InternalPageHero } from './InternalPageHero';
 import './ResourceLayout.css';
 
 interface ResourceLayoutProps {
@@ -58,14 +59,15 @@ export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, descripti
 
   return (
     <div className="resource-layout">
-      {/* Hero Section */}
-      <section className="resource-hero">
-        <div className="container">
-          <div className="hero-icon"><BookOpen size={40} /></div>
-          <h1 className="page-title">{title}</h1>
-          <p className="page-subtitle">{description}</p>
-        </div>
-      </section>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Resources', path: '/knowledge-base' },
+          { label: title }
+        ]}
+        title={title}
+        description={description}
+      />
 
       {/* Main Content Area */}
       <section className="resource-main">

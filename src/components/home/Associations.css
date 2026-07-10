@@ -17,25 +17,41 @@
   margin-bottom: 1rem;
 }
 .associations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
   gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* Add masking for smooth edge fade */
+  mask-image: linear-gradient(to right, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 95%, transparent 100%);
+}
+
+.associations-grid::-webkit-scrollbar {
+  display: none;
 }
 .association-badge {
   padding: 1.25rem 1rem;
   border-radius: 0.75rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 84px;
+  flex: 0 0 auto;
+  width: 140px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .association-badge:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md, 0 8px 24px rgba(0,0,0,0.1));
 }
-@media (max-width: 900px) {
-  .associations-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+@media (min-width: 1200px) {
+  .associations-grid {
+    mask-image: none;
+    -webkit-mask-image: none;
+    justify-content: center; /* Center them perfectly if there's room on huge screens */
+  }
 }

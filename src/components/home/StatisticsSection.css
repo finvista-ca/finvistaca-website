@@ -1,5 +1,4 @@
 .stats-section {
-  background-color: white;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   padding: 4rem 0;
@@ -28,7 +27,7 @@
 .stat-number-wrapper {
   display: flex;
   align-items: baseline;
-  color: var(--brand-primary);
+  color: #38BDF8;
   margin-bottom: 0.5rem;
 }
 
@@ -47,7 +46,7 @@
 .stat-suffix {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--brand-secondary);
+  color: #38BDF8;
 }
 
 .stat-label-text {

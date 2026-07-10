@@ -1,50 +1,33 @@
 import React from 'react';
-import { FileSearch, FileCheck, Coins, UserCog, ShieldCheck, Calculator } from 'lucide-react';
+import { FileSearch, ShieldCheck, Calculator, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './ServicesSection.css';
 
 const coreServices = [
   {
     id: 'direct-tax',
-    title: 'Direct Taxation Services',
-    description: 'Income Tax Return (ITR) Filing for Individuals, Firms, Companies, Trusts & HUFs',
+    title: 'Taxation Services',
+    description: 'Comprehensive tax planning, compliance, and dispute resolution for individuals and corporations.',
     icon: FileSearch,
-    path: '/services?category=direct-tax'
-  },
-  {
-    id: 'gst',
-    title: 'Indirect Taxation Services (GST)',
-    description: 'GST Audit & Annual Return Filing (GSTR-9/9C)',
-    icon: FileCheck,
-    path: '/services?category=gst'
-  },
-  {
-    id: 'accounting',
-    title: 'Accounting & Bookkeeping',
-    description: 'Preparation of Final Accounts (P&L Statement, Balance Sheet)',
-    icon: Coins,
-    path: '/services?category=accounting'
-  },
-  {
-    id: 'registration',
-    title: 'Business Registration & Compliance',
-    description: 'Company, LLP, Partnership & Proprietorship Registration',
-    icon: UserCog,
-    path: '/services?category=registration'
+    path: '/services?category=direct-tax',
+    features: ['Corporate Tax Planning', 'International Taxation', 'Transfer Pricing', 'Tax Representation']
   },
   {
     id: 'audit',
-    title: 'Audit & Assurance Services',
-    description: 'Statutory Audits for Companies, Trusts & NGOs',
+    title: 'Audit & Assurance',
+    description: 'Rigorous statutory and internal audits ensuring compliance, transparency, and operational efficiency.',
     icon: ShieldCheck,
-    path: '/services?category=audit'
+    path: '/services?category=audit',
+    features: ['Statutory Audit', 'Internal Audit', 'Information Systems Audit', 'Due Diligence']
   },
   {
     id: 'advisory',
-    title: 'Financial & Investment Advisory',
-    description: 'Personal & Business Tax Planning, Investment & Retirement Planning',
+    title: 'Corporate Advisory',
+    description: 'Strategic financial consulting to drive growth, optimize capital structure, and navigate complex transactions.',
     icon: Calculator,
-    path: '/services?category=advisory'
+    path: '/services?category=advisory',
+    features: ['Mergers & Acquisitions', 'Valuation Services', 'Financial Restructuring', 'Risk Management']
   }
 ];
 
@@ -52,24 +35,59 @@ export const ServicesSection: React.FC = () => {
   return (
     <section className="section services-section bg-light">
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Our Core Services</h2>
-          <p className="section-subtitle">
-            Professional financial, taxation, and compliance solutions tailored for individuals, startups, and businesses.
+        <div className="section-header" style={{ marginBottom: '4rem' }}>
+          <h2 className="section-title">Our Expertise</h2>
+          <p className="section-subtitle" style={{ margin: '0 auto' }}>
+            Strategic capabilities designed to address the most complex financial and regulatory challenges.
           </p>
         </div>
 
-        <div className="services-grid">
-          {coreServices.map((service) => {
+        <div className="services-alternating">
+          {coreServices.map((service, index) => {
             const Icon = service.icon;
+            const isEven = index % 2 === 0;
+            
             return (
-              <Link to={service.path} key={service.id} className="service-card">
-                <div className="service-icon-wrapper">
-                  <Icon size={20} strokeWidth={1.4} />
-                </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-              </Link>
+              <div key={service.id} className={`service-row ${isEven ? '' : 'row-reverse'}`}>
+                {/* Visual Side */}
+                <motion.div 
+                  className="service-visual"
+                  initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="service-visual-inner">
+                    <Icon size={120} strokeWidth={1} className="service-large-icon" />
+                    <div className="visual-decoration"></div>
+                  </div>
+                </motion.div>
+
+                {/* Content Side */}
+                <motion.div 
+                  className="service-content"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <div className="service-icon-small">
+                    <Icon size={24} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="service-row-title">{service.title}</h3>
+                  <p className="service-row-desc">{service.description}</p>
+                  
+                  <ul className="service-features">
+                    {service.features.map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
+
+                  <Link to={service.path} className="btn-primary" style={{ display: 'inline-flex', marginTop: '2rem', gap: '0.5rem' }}>
+                    Explore Practice <ArrowRight size={18} />
+                  </Link>
+                </motion.div>
+              </div>
             );
           })}
         </div>

@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { SmartSearch } from '../components/search/SmartSearch';
 import { gstData } from '../data/gstData';
 import { Book, ChevronRight, FileText, Star, Settings } from 'lucide-react';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './Services.css';
 
 const popularResources = [
@@ -49,27 +50,21 @@ export const GstResources: React.FC = () => {
 
   return (
     <div className="services-directory">
-      {/* Hero Section */}
-      <div className="services-hero">
-        <div className="container">
-          <div className="service-badge">
-            <Book size={16} />
-            <span>GST Resources</span>
-          </div>
-          <h1 className="service-title">Centralized GST Hub</h1>
-          <p className="service-subtitle">
-            Your comprehensive resource for GST Acts, Rules, Notifications, Circulars, Forms, and Codes.
-          </p>
-          
-          <div className="search-section">
-            <SmartSearch 
-              services={allGstServices} 
-              basePath="/gst"
-              placeholder="Search GST resources (e.g. SAC Codes, Rules)..."
-            />
-          </div>
-        </div>
-        <div className="services-hero-pattern"></div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'GST Resources' }
+        ]}
+        title="Centralized GST Hub"
+        description="Your comprehensive resource for GST Acts, Rules, Notifications, Circulars, Forms, and Codes."
+      />
+      
+      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+        <SmartSearch 
+          services={allGstServices} 
+          basePath="/gst"
+          placeholder="Search GST resources (e.g. SAC Codes, Rules)..."
+        />
       </div>
 
       <div className="services-categories-section">

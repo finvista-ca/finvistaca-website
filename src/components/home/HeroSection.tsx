@@ -5,7 +5,7 @@ import './HeroSection.css';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section dark-section">
       <div className="hero-bg-effects">
         <div className="blob blob-1"></div>
         <div className="blob blob-2"></div>
@@ -13,48 +13,70 @@ export const HeroSection: React.FC = () => {
       
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
-          <div className="badge">
-            <span className="badge-dot"></span>
-            Premier Chartered Accountants
-          </div>
+          <h2 className="hero-trusted-badge">
+            <ShieldCheck size={18} strokeWidth={2.5} />
+            TRUSTED FINANCIAL ADVISORS
+          </h2>
           
-          <h1 className="hero-title">
-            Authoritative Financial & Legal 
-            <span className="text-gradient"> Compliance</span>
+          <h1 className="hero-title" style={{ color: '#ffffff' }}>
+            Strategic Financial <br />
+            <span style={{ color: '#1E5EFF' }}>Guidance.</span> <br />
+            Stronger Business Future.
           </h1>
           
-          <p className="hero-description">
-            Partner with premier Chartered Accountants for comprehensive Taxation, GST, Auditing, and Corporate Advisory services. We deliver absolute compliance and strategic financial leadership.
+          <p className="hero-description" style={{ color: '#D1D5DB', maxWidth: '600px', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '40px' }}>
+            We help businesses, entrepreneurs, and individuals navigate taxation, compliance, and regulatory frameworks with clarity and confidence.
           </p>
+          
+          <div className="hero-feature-grid">
+            <div className="hero-feature-item">
+              <div className="feature-icon-box">
+                <ShieldCheck size={22} color="#C8A45D" strokeWidth={1.5} />
+              </div>
+              <div className="feature-text">
+                <h3 className="feature-title">Strategic Tax Advisory</h3>
+                <p className="feature-desc">Optimized tax strategies for individuals and businesses.</p>
+              </div>
+            </div>
+            
+            <div className="hero-feature-item">
+              <div className="feature-icon-box">
+                <Briefcase size={22} color="#C8A45D" strokeWidth={1.5} />
+              </div>
+              <div className="feature-text">
+                <h3 className="feature-title">Business Compliance</h3>
+                <p className="feature-desc">End-to-end compliance to keep your business future-ready.</p>
+              </div>
+            </div>
+
+            <div className="hero-feature-item">
+              <div className="feature-icon-box">
+                <TrendingUp size={22} color="#C8A45D" strokeWidth={1.5} />
+              </div>
+              <div className="feature-text">
+                <h3 className="feature-title">Corporate Consulting</h3>
+                <p className="feature-desc">Solutions that drive growth, efficiency, and value.</p>
+              </div>
+            </div>
+
+            <div className="hero-feature-item">
+              <div className="feature-icon-box">
+                <PieChart size={22} color="#C8A45D" strokeWidth={1.5} />
+              </div>
+              <div className="feature-text">
+                <h3 className="feature-title">Investment Guidance</h3>
+                <p className="feature-desc">Smart investment strategies aligned with your goals.</p>
+              </div>
+            </div>
+          </div>
           
           <div className="hero-actions">
             <Link to="/contact" className="btn btn-primary btn-lg action-btn">
-              Get Consultation <ArrowRight size={18} />
+              Book a Consultation <ArrowRight size={18} />
             </Link>
-            <Link to="/knowledge-base" className="btn btn-secondary btn-lg action-btn">
-              Explore Knowledge Base <ChevronRight size={18} />
+            <Link to="/services" className="btn btn-secondary-gold btn-lg action-btn">
+              Explore Services <ChevronRight size={18} />
             </Link>
-          </div>
-          
-          <div className="trust-indicators">
-            <div className="trust-stats">
-              <div className="trust-stat">
-                <strong>15+</strong>
-                <span>Years Experience</span>
-              </div>
-              <div className="trust-stat">
-                <strong>5000+</strong>
-                <span>Clients Served</span>
-              </div>
-              <div className="trust-stat">
-                <strong>Expert</strong>
-                <span>GST Professionals</span>
-              </div>
-              <div className="trust-stat">
-                <strong>Dedicated</strong>
-                <span>Compliance Specialists</span>
-              </div>
-            </div>
           </div>
         </div>
         

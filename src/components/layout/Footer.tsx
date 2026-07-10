@@ -1,88 +1,138 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail } from 'lucide-react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import './Footer.css';
+
+const branches = [
+  {
+    name: 'Kakinada',
+    address: '2-34-8/A, 1st Floor, Perrajupeta, Near Mamatha Scan Center, Kakinada - 533001'
+  },
+  {
+    name: 'Parvathipuram',
+    address: 'Dno. 1-1, Beside ITDA Petrol Bunk, Belagam, Parvathipuram, Manyam Dist AP - 535501'
+  },
+  {
+    name: 'Vijayawada',
+    address: 'DNO. 41-1-41C, SS Nilayam, KT Road, Chitti Nagar, Vijayawada - 520001'
+  },
+  {
+    name: 'Visakhapatnam',
+    address: '49-24-6/1, 4th Floor, Upstairs More Super Market, Sankaramatam Main Road, Visakhapatnam - 530016'
+  },
+  {
+    name: 'Bobbili',
+    address: '33-105, Near Sai Ganapathi Theatre, Church Centre, Bobbili, Vizianagaram Dist. AP - 535558'
+  },
+  {
+    name: 'Peddapuram',
+    address: '21-1-19/A, 1st Floor, opp. Lalitha Theatre, Rajahmundry Road, Peddapuram - 533437'
+  },
+  {
+    name: 'Odisha',
+    address: 'Indira Nagar, 3rd Lane, Near Rayagada College, Rayagada, Odisha - 765001'
+  }
+];
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="footer">
-      <div className="container">
+    <footer className="footer premium-footer dark-section">
+      <div className="glass-panel-subtle footer-main-card" style={{ padding: '4rem 5%', borderRadius: '0', borderLeft: 'none', borderRight: 'none', borderBottom: 'none' }}>
         <div className="footer-grid">
-          {/* Column 1: Company Overview */}
-          <div className="footer-col">
-            <img src="/finvista_temp.png" alt="Finvista" className="footer-logo company-logo" fetchPriority="low" loading="lazy" />
+            
+            {/* COLUMN 1: Overview & Trust */}
+            <div className="footer-col">
+              <img src="/finvista-logo.jpeg" alt="Finvista" className="footer-logo company-logo" fetchPriority="low" loading="lazy" />
+            
             <p className="footer-desc">
-              Your trusted partner for comprehensive Chartered Accountancy services, 
-              delivering excellence in auditing, taxation, and financial advisory.
+              Finvista Chartered Accountants is a full-service financial advisory and chartered accountancy firm helping businesses, startups, entrepreneurs, and individuals with taxation, compliance, audits, registrations, accounting, and strategic financial consulting across multiple locations.
             </p>
+            
+            <ul className="footer-trust-list">
+              <li>• ICAI Registered Firm</li>
+              <li>• 15+ Years of Experience</li>
+              <li>• 500+ Businesses Served</li>
+            </ul>
+
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/ramakishore-itla-609511308/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={18} /></a>
-              <a href="https://x.com/ramakishoreitla" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaTwitter size={18} /></a>
-              <a href="https://www.facebook.com/ramakishore.itla" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook size={18} /></a>
-              <a href="https://www.instagram.com/irk_associates" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={18} /></a>
-              <a href="https://wa.me/919866121656" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp size={18} /></a>
+              <a href="https://www.linkedin.com/in/ramakishore-itla-609511308/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin size={18} strokeWidth={1.5} /></a>
+              <a href="https://www.instagram.com/irk_associates" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FiInstagram size={18} strokeWidth={1.5} /></a>
+              <a href="https://www.facebook.com/ramakishore.itla" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FiFacebook size={18} strokeWidth={1.5} /></a>
+              <a href="https://x.com/ramakishoreitla" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FiTwitter size={18} strokeWidth={1.5} /></a>
+              <a href="https://wa.me/919908285223" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.5} /></a>
             </div>
           </div>
 
-          {/* Column 2: Page Links */}
+          {/* COLUMN 2: Quick Links */}
           <div className="footer-col">
-            <h4 className="footer-subheading">Page Links</h4>
+            <h4 className="footer-subheading">Quick Links</h4>
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/other-services">Other Services</Link></li>
+              <li><Link to="/knowledge-base">Knowledge Base</Link></li>
+              <li><Link to="/news-feed">News Feed</Link></li>
               <li><Link to="/career">Career</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
             </ul>
           </div>
 
-          {/* Column 3: Free Resources */}
+          {/* COLUMN 3: Financial Services */}
           <div className="footer-col">
-            <h4 className="footer-subheading">Free Resources</h4>
+            <h4 className="footer-subheading">Financial Services</h4>
             <ul className="footer-links">
-              <li><a href="https://sachet.rbi.org.in/" target="_blank" rel="noopener noreferrer">RBI Policy</a></li>
-              <li><Link to="/data-policy">Data Collection Policy</Link></li>
+              <li><Link to="/services#gst">GST Registration</Link></li>
+              <li><Link to="/services#income-tax">Income Tax</Link></li>
+              <li><Link to="/services#incorporation">Company Incorporation</Link></li>
+              <li><Link to="/services#audit">Audit & Assurance</Link></li>
+              <li><Link to="/services#roc">ROC Compliance</Link></li>
+              <li><Link to="/services#trademark">Trademark Registration</Link></li>
+              <li><Link to="/services#msme">MSME Registration</Link></li>
+              <li><Link to="/services#startup">Startup Advisory</Link></li>
+              <li><Link to="/services#consulting">Business Consulting</Link></li>
+              <li><Link to="/services#accounting">Accounting Services</Link></li>
             </ul>
           </div>
 
-          {/* Column 4: Services */}
+          {/* COLUMN 4: Our Branches */}
           <div className="footer-col">
-            <h4 className="footer-subheading">Services</h4>
+            <h4 className="footer-subheading">Our Branches</h4>
             <ul className="footer-links">
-              <li><Link to="/services/statutory-audit">Audit And Assurance Services</Link></li>
-              <li><Link to="/services/annual-compliance-for-private-limited-company">Statutory Compliance Services</Link></li>
-              <li><Link to="/services/startup-india-registration">Start Up Services</Link></li>
-              <li><Link to="/services/financial-reporting-and-accounting-advisory-services">Financial Consultancy And Support Services</Link></li>
+              {branches.map((branch, idx) => (
+                <li key={idx}>
+                  <Link to="/contact" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <MapPin size={16} strokeWidth={2} style={{ color: 'var(--brand-gold)' }} />
+                    {branch.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 5: Connect With Us */}
-          <div className="footer-col">
-            <h4 className="footer-subheading">Connect With Us</h4>
-            <ul className="footer-contact">
-              <li>
-                <MapPin size={18} className="contact-icon" />
-                <span>33-105, Near Sai Ganapathi Theatre, Church Centre, Bobbili, Vizianagaram District, Andhra Pradesh - 535558</span>
-              </li>
-              <li>
-                <Phone size={18} className="contact-icon" />
-                <span>
-                  +91 8143505094<br />
-                  +91 7993856920
-                </span>
-              </li>
-              <li>
-                <Mail size={18} className="contact-icon" />
-                <a href="mailto:caramakishore@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>caramakishore@gmail.com</a>
-              </li>
-            </ul>
-          </div>
         </div>
 
-        <div className="footer-bottom">
-          <p>&copy; Copyright {new Date().getFullYear()}, Finvista. All Rights Reserved.</p>
+        {/* BOTTOM BAR */}
+        <div className="footer-bottom-premium">
+          <div className="footer-bottom-left">
+            <p>&copy; 2026 Finvista Chartered Accountants.<br className="mobile-break" /> All Rights Reserved.</p>
+          </div>
+          <div className="footer-bottom-center">
+            <p>Accounting for Success</p>
+          </div>
+          <div className="footer-bottom-right">
+            <ul className="footer-legal-links">
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/terms-conditions">Terms of Service</Link></li>
+              <li><Link to="/sitemap">Sitemap</Link></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+

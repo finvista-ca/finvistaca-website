@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
-import { Search, FileText, Scale, Bell, Copy, FilePlus, Calculator } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Search, ArrowRight } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
 import './KnowledgeHub.css';
-
-const categories = [
-  { name: 'Acts', path: '/knowledge-base#acts', icon: Scale },
-  { name: 'Rules', path: '/knowledge-base#rules', icon: FileText },
-  { name: 'Notifications', path: '/knowledge-base#notification', icon: Bell },
-  { name: 'Circulars', path: '/knowledge-base#circulars', icon: Copy },
-  { name: 'Forms', path: '/knowledge-base#forms', icon: FilePlus },
-  { name: 'GST Resources', path: '/gst', icon: Search },
-  { name: 'Calculators', path: '/calculator', icon: Calculator }
-];
 
 export const KnowledgeHub: React.FC = () => {
   const [term, setTerm] = useState('');
@@ -28,56 +18,68 @@ export const KnowledgeHub: React.FC = () => {
   };
 
   return (
-    <section className="section knowledge-hub-section">
+    <section className="section knowledge-hub-section bg-white">
       <div className="container">
-        <div className="kh-layout">
-          <div className="kh-content">
-            <h2 className="kh-title">Legal Research Portal</h2>
-            <p className="kh-subtitle">
-              Access India's most comprehensive and updated database of tax laws, acts, rules, and circulars.
+        <div className="kh-header-wrapper">
+          <div className="kh-header-top">
+            <h2 className="kh-newspaper-title">The Finvista Ledger</h2>
+            <div className="kh-date">Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+          </div>
+          
+          <div className="kh-search-bar">
+            <input 
+              type="text" 
+              className="kh-input" 
+              placeholder="Search Acts, Rules, Notifications & Circulars..."
+              value={term}
+              onChange={(e) => setTerm(e.target.value)}
+              onKeyDown={onKeyDown}
+            />
+            <button type="button" onClick={doSearch} className="kh-btn">
+              <Search size={18} strokeWidth={1.5} />
+            </button>
+          </div>
+        </div>
+
+        <div className="kh-newspaper-grid">
+          {/* Main Article */}
+          <div className="kh-col kh-col-main">
+            <span className="kh-tag">Latest Regulation</span>
+            <h3 className="kh-article-title large"><Link to="/knowledge-base">Income Tax Appellate Tribunal (ITAT) Rulings & Updates</Link></h3>
+            <p className="kh-article-excerpt">
+              Recent developments in corporate tax assessments highlight the need for stringent compliance and proactive documentation. Our analysis breaks down the most critical rulings of this quarter.
             </p>
+            <Link to="/knowledge-base" className="kh-read-more">Read Analysis <ArrowRight size={14} /></Link>
+          </div>
+
+          {/* Secondary Articles */}
+          <div className="kh-col kh-col-secondary">
+            <div className="kh-article">
+              <span className="kh-tag">GST Updates</span>
+              <h3 className="kh-article-title"><Link to="/knowledge-base">New E-Invoicing Thresholds</Link></h3>
+              <p className="kh-article-excerpt">Mandatory e-invoicing extended to businesses with turnover exceeding ₹5Cr.</p>
+            </div>
             
-            <div className="search-container">
-              <div className="search-wrapper">
-                <Search className="search-icon" size={24} />
-                <input 
-                  type="text" 
-                  className="kh-search-input" 
-                  placeholder="Search Acts, Sections, Rules, Notifications, Circulars and Forms"
-                  value={term}
-                  onChange={(e) => setTerm(e.target.value)}
-                  onKeyDown={onKeyDown}
-                />
-                <button type="button" onClick={doSearch} className="btn btn-primary search-btn">Search</button>
-              </div>
-              <div className="search-suggestions">
-                <span>Popular:</span>
-                {['Income Tax Act', 'TDS Rates', 'ROC Forms'].map((t) => (
-                  <button
-                    key={t}
-                    type="button"
-                    className="tag"
-                    onClick={() => navigate(`/knowledge-base?q=${encodeURIComponent(t)}`)}
-                  >
-                    {t}
-                  </button>
-                ))}
-              </div>
+            <div className="kh-divider"></div>
+            
+            <div className="kh-article">
+              <span className="kh-tag">Corporate Law</span>
+              <h3 className="kh-article-title"><Link to="/knowledge-base">MCA Extends AGM Deadlines</Link></h3>
+              <p className="kh-article-excerpt">Key relief measures announced for private limited companies regarding Annual General Meetings.</p>
             </div>
           </div>
 
-          <div className="kh-categories">
-            {categories.map((category) => {
-              const Icon = category.icon;
-              return (
-                <Link to={category.path} key={category.name} className="category-card">
-                  <div className="category-icon">
-                    <Icon size={24} />
-                  </div>
-                  <span className="category-name">{category.name}</span>
-                </Link>
-              );
-            })}
+          {/* Quick Links / Database */}
+          <div className="kh-col kh-col-sidebar">
+            <h4 className="kh-sidebar-title">Research Database</h4>
+            <ul className="kh-sidebar-list">
+              <li><Link to="/knowledge-base#acts">Income Tax Act, 1961</Link></li>
+              <li><Link to="/knowledge-base#rules">CGST Rules, 2017</Link></li>
+              <li><Link to="/knowledge-base#circulars">RBI Master Circulars</Link></li>
+              <li><Link to="/knowledge-base#forms">MCA RoC Forms</Link></li>
+              <li><Link to="/calculator">Financial Calculators</Link></li>
+              <li><Link to="/gst">GST Compliance Calendar</Link></li>
+            </ul>
           </div>
         </div>
       </div>

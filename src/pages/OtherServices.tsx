@@ -3,6 +3,7 @@ import { SmartSearch } from '../components/search/SmartSearch';
 import { otherServicesData } from '../data/otherServicesData';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ChevronRight, FileText, Settings } from 'lucide-react';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './Services.css'; // Reuse existing styles
 
 export const OtherServices: React.FC = () => {
@@ -49,22 +50,17 @@ export const OtherServices: React.FC = () => {
 
   return (
     <div className="services-directory">
-      <div className="services-hero">
-        <div className="container">
-          <div className="service-badge">
-            <Settings size={16} />
-            <span>Other Services Directory</span>
-          </div>
-          <h1 className="service-title">Our Other Professional Services</h1>
-          <p className="service-subtitle">
-            Explore our complete range of permits, international taxation, and accounting services.
-          </p>
-          
-          <div className="search-section">
-            <SmartSearch services={allOtherServices} />
-          </div>
-        </div>
-        <div className="services-hero-pattern"></div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Other Services' }
+        ]}
+        title="Our Other Professional Services"
+        description="Explore our complete range of permits, international taxation, and accounting services."
+      />
+      
+      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+        <SmartSearch services={allOtherServices} />
       </div>
 
       <div className="services-categories-section">

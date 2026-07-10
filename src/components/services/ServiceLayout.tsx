@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import type { ServiceItem } from '../../data/servicesData';
 import RelatedServices from '../shared/RelatedServices';
+import { InternalPageHero } from '../layout/InternalPageHero';
 import './ServiceLayout.css';
 
 export interface ServicePageData {
@@ -52,61 +53,23 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
   return (
     <div className="premium-service-layout">
       {/* 1. HERO SECTION */}
-      <section className="premium-hero">
-        <div className="hero-grid container">
-          <motion.div 
-            className="hero-content"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="hero-badge">
-              <Award size={16} />
-              <span>Premium Consulting Service</span>
-            </div>
-            <h1>{pageData.title}</h1>
-            <p className="hero-desc">{pageData.intro_title}</p>
-            <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
-                Get Started <ArrowRight size={18} />
-              </Link>
-              <a href="#overview" className="btn btn-outline">
-                Learn More
-              </a>
-            </div>
-            <div className="trust-indicators">
-              <div className="trust-item"><CheckCircle size={16} /> ISO Certified</div>
-              <div className="trust-item"><CheckCircle size={16} /> 10+ Years Exp.</div>
-              <div className="trust-item"><CheckCircle size={16} /> 500+ Clients</div>
-            </div>
-          </motion.div>
-          <motion.div 
-            className="hero-visual"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="abstract-shape shape-1"></div>
-            <div className="abstract-shape shape-2"></div>
-            <div className="hero-badges">
-              <div className="glass-stat-card card-1">
-                <div className="stat-icon"><ShieldCheck size={20} /></div>
-                <div className="stat-text">
-                  <strong>100%</strong>
-                  <span>Compliance Rate</span>
-                </div>
-              </div>
-              <div className="glass-stat-card card-2">
-                <div className="stat-icon"><Zap size={20} /></div>
-                <div className="stat-text">
-                  <strong>Fast</strong>
-                  <span>Processing Time</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <InternalPageHero 
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Services', path: '/services' },
+          { label: service.name }
+        ]}
+        title={pageData.title}
+        description={pageData.intro_title}
+        ctaButtons={[
+          { label: 'Get Started', path: '/contact', primary: true },
+          { label: 'Learn More', path: '#overview' }
+        ]}
+        stats={[
+          { value: '100%', label: 'Compliance Rate', icon: 'ShieldCheck' },
+          { value: 'Fast', label: 'Processing Time', icon: 'Zap' }
+        ]}
+      />
 
       {/* 2. SERVICE OVERVIEW */}
       <section id="overview" className="premium-overview section-alternate">
@@ -301,7 +264,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                 </Link>
                 <div className="cta-contact-info">
                   <span className="contact-item"><Phone size={18} /> +91 8143505094</span>
-                  <span className="contact-item"><Mail size={18} /> caramakishore@gmail.com</span>
+                  <span className="contact-item"><Mail size={18} /> finvistaca@gmail.com</span>
                 </div>
               </div>
             </div>

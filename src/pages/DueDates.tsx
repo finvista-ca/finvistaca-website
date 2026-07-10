@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CalendarClock } from 'lucide-react';
 import { dueDatesData, daysUntil, urgencyFor } from '../data/dueDatesData';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -14,13 +15,14 @@ export const DueDates: React.FC = () => {
 
   return (
     <div className="resource-layout" style={{ paddingTop: '90px' }}>
-      <section className="resource-hero">
-        <div className="container">
-          <div className="hero-icon"><CalendarClock size={40} /></div>
-          <h1 className="page-title">Compliance Due Date Calendar</h1>
-          <p className="page-subtitle">Upcoming statutory due dates for GST, TDS, PF/ESI, MCA and more.</p>
-        </div>
-      </section>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Due Dates' }
+        ]}
+        title="Compliance Due Date Calendar"
+        description="Upcoming statutory due dates for GST, TDS, PF/ESI, MCA and more."
+      />
 
       <section className="resource-main">
         <div className="container">

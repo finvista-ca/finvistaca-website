@@ -16,8 +16,11 @@ import { ResourcePage } from './pages/ResourcePage';
 import { ComingSoon } from './components/shared/ComingSoon';
 import { DataPolicy } from './pages/DataPolicy';
 import { DueDates } from './pages/DueDates';
-import { CallBackPopup } from './components/shared/CallBackPopup';
+import { VirtualAssistant } from './components/shared/VirtualAssistant';
 import { ScrollToTop } from './components/layout/ScrollToTop';
+import { GlobalBackground } from './components/layout/GlobalBackground';
+import AnimatedBackground from './components/layout/AnimatedBackground';
+import { SplashScreen } from './components/shared/SplashScreen';
 
 // Helper component for pending pages
 const PendingPage = ({ title }: { title: string }) => (
@@ -30,6 +33,9 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <GlobalBackground />
+      <AnimatedBackground />
+      <SplashScreen />
       <div className="app-wrapper">
         <Navbar />
         <Routes>
@@ -37,6 +43,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/other-services" element={<OtherServices />} />
+          <Route path="/others-services" element={<OtherServices />} />
           <Route path="/knowledge-base" element={<KnowledgeBase />} />
           <Route path="/knowledge-base/:slug" element={<ResourcePage />} />
           <Route path="/gst" element={<GstResources />} />
@@ -49,13 +56,15 @@ function App() {
           
           {/* Service detail routes for footer links and mega menu */}
           <Route path="/services/:id" element={<ServiceDetail />} />
+          <Route path="/other-services/:id" element={<ServiceDetail />} />
+          <Route path="/others-services/:id" element={<ServiceDetail />} />
           <Route path="/data-policy" element={<DataPolicy />} />
           <Route path="/due-dates" element={<DueDates />} />
           <Route path="/privacy" element={<PendingPage title="Privacy Policy" />} />
           <Route path="/terms" element={<PendingPage title="Terms of Service" />} />
         </Routes>
         <Footer />
-        <CallBackPopup />
+        <VirtualAssistant />
       </div>
     </Router>
   );
