@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Calculator, ArrowRight } from 'lucide-react';
 import { calculatorsList } from '../../data/calculatorData';
+import { InternalPageHero } from './InternalPageHero';
 import '../../pages/Calculator.css';
-
 interface CalculatorLayoutProps {
   id: string;
   title: string;
@@ -16,20 +16,15 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({ id, title, d
 
   return (
     <div className="calculator-detail-page">
-      {/* Hero Section */}
-      <section className="calculator-hero">
-        <div className="container">
-          <div className="hero-breadcrumbs">
-            <Link to="/">Home</Link>
-            <ChevronRight size={14} />
-            <Link to="/calculator">Calculators</Link>
-            <ChevronRight size={14} />
-            <span>{title}</span>
-          </div>
-          <h1 className="page-title">{title}</h1>
-          {description && <p className="page-subtitle">{description}</p>}
-        </div>
-      </section>
+      <InternalPageHero 
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Calculators', path: '/calculator' },
+          { label: title }
+        ]}
+        title={title}
+        description={description || ''}
+      />
 
       {/* Calculator */}
       <section className="calculator-main">

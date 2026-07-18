@@ -196,7 +196,7 @@
 .suggestion-chip {
   background: var(--primary-bg);
   border: 1px solid var(--border-color);
-  color: var(--brand-primary);
+  color: #FFFFFF;
   padding: 0.5rem 1.25rem;
   border-radius: 50px;
   font-size: 0.9rem;

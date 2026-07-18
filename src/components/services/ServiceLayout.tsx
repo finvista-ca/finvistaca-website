@@ -20,8 +20,10 @@ export interface ServicePageData {
   intro_p2: string;
   features: { title: string; desc: string; icon: string }[];
   benefits: { title: string; desc: string; icon: string }[];
+  eligibleApplicants?: string[];
+  documentsRequired?: string[];
   timeline: string[];
-  faqs: { q: string; a: string }[];
+  faqs: { q?: string; a?: string; question?: string; answer?: string }[];
 }
 
 interface ServiceLayoutProps {
@@ -112,7 +114,8 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
       </section>
 
       {/* 3. WHAT WE OFFER */}
-      <section className="premium-features section-white">
+      {pageData.features && pageData.features.length > 0 && (
+        <section className="premium-features section-white">
         <div className="container">
           <div className="section-header text-center">
             <h2>What We Offer</h2>
@@ -142,9 +145,11 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
           </div>
         </div>
       </section>
+      )}
 
       {/* 4. BENEFITS SECTION */}
-      <section className="premium-benefits section-alternate">
+      {pageData.benefits && pageData.benefits.length > 0 && (
+        <section className="premium-benefits section-alternate">
         <div className="container">
           <div className="section-header text-center">
             <h2>Key Benefits</h2>
@@ -173,9 +178,52 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
           </div>
         </div>
       </section>
+      )}
+
+      {/* 4.5 ADDITIONAL SECTIONS (Eligible Applicants & Documents) */}
+      {(pageData.eligibleApplicants || pageData.documentsRequired) && (
+        <section className="premium-additional-info section-alternate" style={{ paddingTop: '2rem', paddingBottom: '2rem', backgroundColor: 'var(--bg-color-alt, rgba(255,255,255,0.02))' }}>
+          <div className="container">
+            <div className="additional-info-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
+              {pageData.eligibleApplicants && (
+                <div className="eligible-applicants-card glass-panel" style={{ padding: '2.5rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.08)', textAlign: 'left' }}>
+                  <h3 style={{ color: '#C8A45D', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'flex-start', textAlign: 'left' }}>
+                    <Users size={24} /> Eligible Applicants
+                  </h3>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
+                    {pageData.eligibleApplicants.map((item, idx) => (
+                      <li key={idx} style={{ padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'flex-start', gap: '0.75rem', opacity: 0.9, textAlign: 'left' }}>
+                        <CheckCircle size={18} style={{ color: '#C8A45D', marginTop: '2px', flexShrink: 0 }} />
+                        <span style={{ textAlign: 'left', flex: 1 }}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              
+              {pageData.documentsRequired && (
+                <div className="documents-required-card glass-panel" style={{ padding: '2.5rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.08)', textAlign: 'left' }}>
+                  <h3 style={{ color: '#C8A45D', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'flex-start', textAlign: 'left' }}>
+                    <FileText size={24} /> Documents Required
+                  </h3>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
+                    {pageData.documentsRequired.map((item, idx) => (
+                      <li key={idx} style={{ padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'flex-start', gap: '0.75rem', opacity: 0.9, textAlign: 'left' }}>
+                        <CheckCircle size={18} style={{ color: '#C8A45D', marginTop: '2px', flexShrink: 0 }} />
+                        <span style={{ textAlign: 'left', flex: 1 }}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 5. PROCESS SECTION */}
-      <section className="premium-process section-white">
+      {pageData.timeline && pageData.timeline.length > 0 && (
+        <section className="premium-process section-white">
         <div className="container">
           <div className="section-header text-center">
             <h2>Our Process</h2>
@@ -204,9 +252,11 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
           </div>
         </div>
       </section>
+      )}
 
       {/* 6. FAQ SECTION */}
-      <section className="premium-faq section-alternate">
+      {pageData.faqs && pageData.faqs.length > 0 && (
+        <section className="premium-faq section-alternate">
         <div className="container">
           <div className="section-header text-center">
             <h2>Frequently Asked Questions</h2>
@@ -227,7 +277,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                   className="faq-header"
                   onClick={() => toggleAccordion(index)}
                 >
-                  <h3>{faq.q}</h3>
+                  <h3>{faq.q || faq.question}</h3>
                   <div className="faq-icon">
                     {activeAccordion === index ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                   </div>
@@ -241,7 +291,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p>{faq.a}</p>
+                      <p>{faq.a || faq.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -250,6 +300,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
           </div>
         </div>
       </section>
+      )}
 
       {/* 7. FINAL CTA */}
       <section className="premium-cta">
@@ -263,7 +314,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                   Contact Us Today
                 </Link>
                 <div className="cta-contact-info">
-                  <span className="contact-item"><Phone size={18} /> +91 8143505094</span>
+                  <span className="contact-item"><Phone size={18} /> +91 9908285223</span>
                   <span className="contact-item"><Mail size={18} /> finvistaca@gmail.com</span>
                 </div>
               </div>

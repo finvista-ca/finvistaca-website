@@ -5,6 +5,7 @@ const ngoKeywords = ['ngo', 'trust', 'society', 'csr', 'darpan', 'non-profit'];
 const taxKeywords = ['tax', 'taxation', 'international', 'nri', 'expatriate', 'clearance'];
 const accountingKeywords = ['accounting', 'book keeping', 'bookkeeping', 'book', 'zoho', 'xero', 'quickbooks', 'quick books'];
 const payrollKeywords = ['payroll', 'salary', 'hr'];
+const loanKeywords = ['loan', 'finance', 'funding', 'advisory', 'assistance', 'bank', 'credit'];
 
 export const otherServicesData: ServiceColumn[] = [
   {
@@ -53,6 +54,36 @@ export const otherServicesData: ServiceColumn[] = [
           { name: 'Zoho Accounting Services', slug: 'zoho', keywords: ['zoho', ...accountingKeywords] },
           { name: 'Xero Accounting Services', slug: 'xero', keywords: ['xero', ...accountingKeywords] },
           { name: 'QuickBooks Accounting Services', slug: 'quick-books', keywords: ['quickbooks', 'quick books', ...accountingKeywords] }
+        ]
+      }
+    ]
+  },
+  {
+    categories: [
+      {
+        title: 'LOAN ADVISORY',
+        items: [
+          { name: 'Home Loan Assistance', slug: 'home-loan-assistance', keywords: ['home', 'housing', ...loanKeywords] },
+          { name: 'Personal Loan Assistance', slug: 'personal-loan-assistance', keywords: ['personal', ...loanKeywords] },
+          { name: 'Business Loan Assistance', slug: 'business-loan-assistance', keywords: ['business', 'msme', 'corporate', ...loanKeywords] },
+          { name: 'MSME Loan Assistance', slug: 'msme-loan-assistance', keywords: ['msme', 'small business', 'enterprise', ...loanKeywords] },
+          { name: 'Startup Funding Assistance', slug: 'startup-funding-assistance', keywords: ['startup', 'funding', 'seed', 'venture', ...loanKeywords] },
+          { name: 'Working Capital Loans', slug: 'working-capital-loans', keywords: ['working capital', 'wc', 'short term', ...loanKeywords] },
+          { name: 'Term Loans', slug: 'term-loans', keywords: ['term', 'long term', ...loanKeywords] },
+          { name: 'Machinery / Equipment Loans', slug: 'machinery-equipment-loans', keywords: ['machinery', 'equipment', 'asset', ...loanKeywords] },
+          { name: 'Project Finance', slug: 'project-finance', keywords: ['project', 'finance', 'infrastructure', ...loanKeywords] },
+          { name: 'Loan Against Property (LAP)', slug: 'loan-against-property', keywords: ['lap', 'property', 'mortgage', ...loanKeywords] },
+          { name: 'Mortgage Loan Assistance', slug: 'mortgage-loan-assistance', keywords: ['mortgage', 'property', ...loanKeywords] },
+          { name: 'Vehicle Loan Assistance', slug: 'vehicle-loan-assistance', keywords: ['vehicle', 'car', 'auto', ...loanKeywords] },
+          { name: 'Commercial Vehicle Loan Assistance', slug: 'commercial-vehicle-loan', keywords: ['commercial vehicle', 'truck', 'fleet', ...loanKeywords] },
+          { name: 'Education Loan Assistance', slug: 'education-loan-assistance', keywords: ['education', 'student', 'study', ...loanKeywords] },
+          { name: 'Agriculture Loans', slug: 'agriculture-loans', keywords: ['agriculture', 'kisan', 'farm', 'tractor', ...loanKeywords] },
+          { name: 'Gold Loan Advisory', slug: 'gold-loan-advisory', keywords: ['gold', 'jewel', ...loanKeywords] },
+          { name: 'Overdraft & Cash Credit Facilities', slug: 'overdraft-cash-credit-facilities', keywords: ['overdraft', 'od', 'cash credit', 'cc', 'facility', ...loanKeywords] },
+          { name: 'Trade Finance Assistance', slug: 'trade-finance-assistance', keywords: ['trade', 'finance', 'lc', 'bg', 'letter of credit', ...loanKeywords] },
+          { name: 'Export & Import Finance', slug: 'export-import-finance', keywords: ['export', 'import', 'pcfc', 'packing credit', ...loanKeywords] },
+          { name: 'Balance Transfer & Loan Restructuring', slug: 'balance-transfer-loan-restructuring', keywords: ['balance transfer', 'bt', 'restructuring', 'top up', ...loanKeywords] },
+          { name: 'Government Subsidy Linked Loans', slug: 'government-subsidy-linked-loans', keywords: ['government', 'subsidy', 'scheme', 'pmegp', 'mudra', ...loanKeywords] }
         ]
       }
     ]

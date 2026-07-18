@@ -4,51 +4,6 @@
   min-height: 100vh;
 }
 
-.calculator-hero {
-  background: transparent;
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--dark-border);
-  text-align: center;
-}
-
-.hero-breadcrumbs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.hero-breadcrumbs a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.hero-breadcrumbs a:hover {
-  color: var(--brand-primary);
-}
-
-.hero-breadcrumbs span {
-  color: var(--text-primary);
-}
-
-.calculator-hero .page-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-bottom: 1rem;
-}
-
-.calculator-hero .page-subtitle {
-  font-size: 1.125rem;
-  color: var(--text-secondary);
-  max-width: 100%; max-width: 800px;
-  margin: 0 auto;
-}
 
 .calculator-main {
   padding: 4rem 0 6rem;

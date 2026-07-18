@@ -57,20 +57,6 @@ export const servicesData: ServiceColumn[] = [
           { name: "Litigation / Representation Assistance", slug: "litigation-representation-assistance", keywords: taxKeywords, related: ['corporate-tax-advisory-compliance', 'personal-tax-advisory'] },
           { name: "Personal Tax Advisory", slug: "personal-tax-advisory", keywords: taxKeywords, related: ['litigation-representation-assistance'] }
         ]
-      },
-      {
-        title: "GOODS & SERVICE TAX",
-        items: [
-          { name: "GST Advisory and Compliance Service", slug: "gst-advisory-and-compliance-service", keywords: gstKeywords, related: ['gst-returns', 'gst-annual-return', 'gst-audit'] },
-          { name: "GST Litigation Services", slug: "gst-litigation-services", keywords: gstKeywords, related: ['gst-advisory-and-compliance-service', 'gst-returns'] },
-          { name: "GST Registration", slug: "gst-registration", keywords: gstKeywords, related: ['gst-returns', 'gst-annual-return', 'gst-advisory-and-compliance-service', 'gst-litigation-services', 'lut-in-gst'] },
-          { name: "GST Returns", slug: "gst-returns", keywords: gstKeywords, related: ['gst-registration', 'gst-annual-return', 'gst-eway-bill'] },
-          { name: "GST Annual Return", slug: "gst-annual-return", keywords: gstKeywords, related: ['gst-returns', 'gst-audit', 'gst-advisory-and-compliance-service'] },
-          { name: "GST E-Way Bill", slug: "gst-eway-bill", keywords: gstKeywords, related: ['gst-returns', 'gst-registration'] },
-          { name: "LUT in GST", slug: "lut-in-gst", keywords: gstKeywords, related: ['gst-registration', 'gst-returns'] },
-          { name: "GST Cancellation", slug: "gst-cancellation", keywords: gstKeywords, related: ['gst-registration', 'gst-returns'] },
-          { name: "GST Registration for Foreigners", slug: "gst-registration-for-foreigners", keywords: gstKeywords, related: ['gst-registration', 'international-tax-advisory-compliance'] }
-        ]
       }
     ]
   },
@@ -95,13 +81,38 @@ export const servicesData: ServiceColumn[] = [
   {
     categories: [
       {
+        title: "GOODS & SERVICE TAX",
+        items: [
+          { name: "GST Advisory and Compliance Service", slug: "gst-advisory-and-compliance-service", keywords: gstKeywords, related: ['gst-returns', 'gst-annual-return', 'gst-audit'] },
+          { name: "GST Litigation Services", slug: "gst-litigation-services", keywords: gstKeywords, related: ['gst-advisory-and-compliance-service', 'gst-returns'] },
+          { name: "GST Registration", slug: "gst-registration", keywords: gstKeywords, related: ['gst-returns', 'gst-annual-return', 'gst-advisory-and-compliance-service', 'gst-litigation-services', 'lut-in-gst'] },
+          { name: "GST Returns", slug: "gst-returns", keywords: gstKeywords, related: ['gst-registration', 'gst-annual-return', 'gst-eway-bill'] },
+          { name: "GST Annual Return", slug: "gst-annual-return", keywords: gstKeywords, related: ['gst-returns', 'gst-audit', 'gst-advisory-and-compliance-service'] },
+          { name: "GST E-Way Bill", slug: "gst-eway-bill", keywords: gstKeywords, related: ['gst-returns', 'gst-registration'] },
+          { name: "LUT in GST", slug: "lut-in-gst", keywords: gstKeywords, related: ['gst-registration', 'gst-returns'] },
+          { name: "GST Cancellation", slug: "gst-cancellation", keywords: gstKeywords, related: ['gst-registration', 'gst-returns'] },
+          { name: "GST Registration for Foreigners", slug: "gst-registration-for-foreigners", keywords: gstKeywords, related: ['gst-registration', 'international-tax-advisory-compliance'] }
+        ]
+      }
+    ]
+  }
+];
+
+export const auditServicesData: ServiceColumn[] = [
+  {
+    categories: [
+      {
         title: "AUDIT & ASSURANCE",
         items: [
           { name: "Statutory Audit", slug: "statutory-audit", keywords: auditKeywords, related: ['tax-audit', 'corporate-tax-advisory-compliance', 'annual-compliance-for-private-limited-company'] },
           { name: "Tax Audit", slug: "tax-audit", keywords: auditKeywords, related: ['statutory-audit', 'gst-audit', 'corporate-tax-advisory-compliance', 'financial-reporting-and-accounting-advisory-services'] },
           { name: "GST Audit", slug: "gst-audit", keywords: auditKeywords, related: ['tax-audit', 'gst-annual-return', 'gst-advisory-and-compliance-service'] }
         ]
-      },
+      }
+    ]
+  },
+  {
+    categories: [
       {
         title: "OTHER AUDITS",
         items: [
@@ -120,7 +131,7 @@ export const servicesData: ServiceColumn[] = [
 ];
 
 export function getServiceBySlug(slug: string): ServiceItem | undefined {
-  const allData = [...servicesData, ...otherServicesData, ...knowledgeBaseData];
+  const allData = [...servicesData, ...auditServicesData, ...otherServicesData, ...knowledgeBaseData];
   for (const column of allData) {
     for (const category of column.categories) {
       const found = category.items.find(item => item.slug === slug);
@@ -132,7 +143,7 @@ export function getServiceBySlug(slug: string): ServiceItem | undefined {
 
 export function getRelatedServices(slugs: string[] | undefined): ServiceItem[] {
   if (!slugs || slugs.length === 0) return [];
-  const allData = [...servicesData, ...otherServicesData, ...knowledgeBaseData];
+  const allData = [...servicesData, ...auditServicesData, ...otherServicesData, ...knowledgeBaseData];
   const related: ServiceItem[] = [];
   
   for (const slug of slugs) {
@@ -154,7 +165,7 @@ export function getRelatedServices(slugs: string[] | undefined): ServiceItem[] {
 }
 
 export function getAllServices(): ServiceItem[] {
-  const allData = [...servicesData, ...otherServicesData, ...knowledgeBaseData];
+  const allData = [...servicesData, ...auditServicesData, ...otherServicesData, ...knowledgeBaseData];
   const allItems: ServiceItem[] = [];
   for (const column of allData) {
     for (const category of column.categories) {

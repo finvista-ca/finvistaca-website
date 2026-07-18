@@ -143,7 +143,7 @@ const handleSubmit = async (
       ) 
     },
     { 
-      name: 'Odisha', 
+      name: 'Rayagada (Odisha)', 
       mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Rayagada',
       address: (
         <>
@@ -194,16 +194,16 @@ const handleSubmit = async (
                     <div className="info-icon"><MapPin size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
                       <p>
-                        D.No. 41-1-41C, SS Nilayam,<br />
-                        KT Road, Chitti Nagar,<br />
-                        Vijayawada – 520001
+                        76-43-399, HIG-399, Ground Floor,<br />
+                        H. B. Colony, Bhavanipuram,<br />
+                        Vijayawada, Krishna Dt., AP.
                       </p>
                     </div>
                   </a>
                   <div className="info-item">
                     <div className="info-icon"><Phone size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
-                      <p><a href="tel:+918143505094">+91 8143505094</a></p>
+                      <p><a href="tel:+919908285223">+91 9908285223</a></p>
                       <p><a href="tel:+917993856920">+91 7993856920</a></p>
                     </div>
                   </div>

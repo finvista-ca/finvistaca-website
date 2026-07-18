@@ -56,7 +56,7 @@ export const ContactCTA: React.FC = () => {
             </p>
             <div className="cta-contact-info" style={{ marginTop: '2rem' }}>
               <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <strong>Phone:</strong> +91 8143505094
+                <strong>Phone:</strong> +91 9908285223
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <strong>Email:</strong> <a href="mailto:finvistaca@gmail.com" style={{ color: 'inherit' }}>finvistaca@gmail.com</a>

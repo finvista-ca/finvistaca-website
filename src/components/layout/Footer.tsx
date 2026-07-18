@@ -15,7 +15,7 @@ const branches = [
   },
   {
     name: 'Vijayawada',
-    address: 'DNO. 41-1-41C, SS Nilayam, KT Road, Chitti Nagar, Vijayawada - 520001'
+    address: '76-43-399, HIG-399, Ground Floor, H. B. Colony, Bhavanipuram, Vijayawada, Krishna Dt., AP.'
   },
   {
     name: 'Visakhapatnam',
@@ -30,7 +30,7 @@ const branches = [
     address: '21-1-19/A, 1st Floor, opp. Lalitha Theatre, Rajahmundry Road, Peddapuram - 533437'
   },
   {
-    name: 'Odisha',
+    name: 'Rayagada (Odisha)',
     address: 'Indira Nagar, 3rd Lane, Near Rayagada College, Rayagada, Odisha - 765001'
   },
   {

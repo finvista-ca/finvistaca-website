@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { InternalPageHero } from '../components/layout/InternalPageHero';
+import { RegionalMap } from '../components/shared/RegionalMap';
 import './About.css';
 
 export const About: React.FC = () => {
@@ -165,7 +166,7 @@ export const About: React.FC = () => {
           <div className="section-header text-center" style={{ marginBottom: '3rem' }}>
             <h2 className="section-title">Serving Clients Across India and Beyond</h2>
             <p className="section-subtitle mx-auto" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              Headquartered in Bobbili, Andhra Pradesh, Finvista serves businesses, startups, SMEs, institutions, and individuals across multiple states in South India while also supporting clients throughout India and internationally.
+              Headquartered in Vijayawada, Andhra Pradesh, Finvista serves businesses, startups, SMEs, institutions, and individuals across multiple states in South India while also supporting clients throughout India and internationally.
             </p>
           </div>
 
@@ -173,11 +174,14 @@ export const About: React.FC = () => {
             {/* Left Side: Premium Location Cards */}
             <div className="presence-cards-col">
               {[
-                { title: "Andhra Pradesh (Head Office)", desc: "Headquartered in Bobbili, serving clients across Andhra Pradesh.", icon: Building2, color: "#C8A45D" },
-                { title: "Telangana", desc: "Supporting businesses, professionals, and enterprises across Telangana.", icon: Users, color: "#0d9488" },
-                { title: "Odisha", desc: "Providing taxation, audit, and compliance services throughout Odisha.", icon: Briefcase, color: "#ea580c" },
-                { title: "South India", desc: "Strong presence across major South Indian markets and business hubs.", icon: MapPin, color: "#9333ea" },
-                { title: "Pan India & International Clients", desc: "Serving clients across India and selected international markets.", icon: Compass, color: "var(--text-primary)" }
+                { title: "Vijayawada (Head Office)", desc: "76-43-399, HIG-399, Ground Floor, H. B. Colony, Bhavanipuram, Vijayawada, Krishna Dt., AP.", icon: Building2, color: "#C8A45D" },
+                { title: "Bobbili", desc: "33-105, Near Sai Ganapathi Theatre, Church Centre, Vizianagaram Dist. AP - 535558", icon: MapPin, color: "#0d9488" },
+                { title: "Hyderabad", desc: "Plot 854, H No 6-14/2/1, Budha Nager Colony, Road No 07, Boduppal, Uppal Bus Depot - 500092", icon: MapPin, color: "#0d9488" },
+                { title: "Visakhapatnam", desc: "Guru Nivas, D.No: 50-53-6/E, Flat No MIG-245, Near Abaya Swamy Temple, Seethammadhara - 530013", icon: MapPin, color: "#0d9488" },
+                { title: "Kakinada", desc: "2-34-8/A, 1st Floor, Perrajupeta, Near Mamatha Scan Center, Kakinada - 533001", icon: MapPin, color: "#0d9488" },
+                { title: "Parvathipuram", desc: "Dno. 1-1, Beside ITDA Petrol Bunk, Belagam, Parvathipuram, Manyam Dist AP - 535501", icon: MapPin, color: "#0d9488" },
+                { title: "Peddapuram", desc: "21-1-19/A, 1st Floor, opp. Lalitha Theatre, Rajahmundry Road, Peddapuram - 533437", icon: MapPin, color: "#0d9488" },
+                { title: "Rayagada (Odisha)", desc: "Indira Nagar, 3rd Lane, Near Rayagada College, Rayagada, Odisha - 765001", icon: MapPin, color: "#ea580c" }
               ].map((card, idx) => {
                 const Icon = card.icon;
                 return (
@@ -201,45 +205,7 @@ export const About: React.FC = () => {
 
             {/* Right Side: Interactive Map */}
             <div className="presence-map-col">
-              <div className="map-container-inner">
-                {/* Embedded SVG Map */}
-                <img src="/india-map.svg" alt="Map of India" className="india-base-map" />
-                
-                {/* Map Pins overlay */}
-                {[
-                  { name: "Odisha", top: "30%", left: "58%", color: "#dc2626", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Parvathipuram", top: "42%", left: "48%", color: "#0d9488", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Bobbili", top: "54%", left: "58%", color: "#C8A45D", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Visakhapatnam", top: "66%", left: "48%", color: "#ea580c", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Peddapuram", top: "78%", left: "58%", color: "#9333ea", labelStyle: { left: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Kakinada", top: "86%", left: "42%", color: "#2563eb", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Vijayawada (Head Office)", top: "72%", left: "36%", color: "#16a34a", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } },
-                  { name: "Hyderabad", top: "60%", left: "20%", color: "#0ea5e9", labelStyle: { right: "120%", top: "50%", transform: "translateY(-50%)" } }
-                ].map((pin, idx) => (
-                  <motion.div 
-                    key={idx}
-                    className="map-pin-wrapper" 
-                    style={{ top: pin.top, left: pin.left }}
-                    initial={{ opacity: 0, y: 15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  >
-                    {pin.name.includes("Head Office") && (
-                      <motion.div 
-                        className="pin-pulse" 
-                        animate={{ scale: [1, 2, 2], opacity: [0.8, 0.4, 0] }}
-                        transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}
-                        style={{ backgroundColor: pin.color }}
-                      />
-                    )}
-                    <div className="map-pin" style={{ backgroundColor: pin.color }}>
-                      <MapPin size={14} color="white" />
-                    </div>
-                    <div className="pin-label" style={pin.labelStyle}>{pin.name}</div>
-                  </motion.div>
-                ))}
-              </div>
+              <RegionalMap />
             </div>
           </div>
 
@@ -300,7 +266,7 @@ export const About: React.FC = () => {
               
               <div className="cta-contact-details">
                 <div className="contact-detail">
-                  <strong>Phone:</strong> +91 8143505094
+                  <strong>Phone:</strong> +91 9908285223
                 </div>
                 <div className="contact-detail">
                   <strong>Email:</strong> <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a>

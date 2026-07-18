@@ -61,7 +61,7 @@ export const CalculatorList: React.FC = () => {
                 href={link.hash} 
                 key={link.name} 
                 className="category-item-card glass-card" 
-                style={{ padding: '0.8rem 1.5rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: 'var(--brand-primary)', border: '1px solid rgba(18, 52, 133, 0.1)' }}
+                style={{ padding: '0.8rem 1.5rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, color: '#FFFFFF', border: '1px solid rgba(18, 52, 133, 0.1)' }}
               >
                 {link.name}
               </a>

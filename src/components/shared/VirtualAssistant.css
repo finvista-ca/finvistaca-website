@@ -44,6 +44,19 @@
   align-items: center;
   justify-content: center;
   animation: float 3s ease-in-out infinite;
+  position: relative;
+}
+
+.online-indicator-large {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  border: 2px solid rgba(9, 19, 31, 0.95);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
 }
 
 @keyframes float {
@@ -91,13 +104,13 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 350px;
+  width: 380px;
   max-width: calc(100vw - 2rem);
   background: rgba(9, 19, 31, 0.95);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3), 0 0 20px rgba(200, 164, 93, 0.05);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -125,6 +138,36 @@
   align-items: center;
 }
 
+.va-header-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.va-header-avatar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: rgba(200, 164, 93, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-gold);
+}
+
+.online-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  border: 2px solid rgba(9, 19, 31, 0.95);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
 .va-header h4 {
   color: #fff;
   margin: 0;
@@ -133,9 +176,9 @@
 }
 
 .va-header p {
-  color: var(--brand-gold);
+  color: rgba(255, 255, 255, 0.6);
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin-top: 0.2rem;
 }
 
@@ -161,22 +204,27 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  max-height: 400px;
+  height: 480px;
+  max-height: 60vh;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .va-body::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 .va-body::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.1);
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.va-body::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .va-message-row {
   display: flex;
   gap: 0.75rem;
-  align-items: flex-start;
+  align-items: flex-end;
   animation: slideIn 0.3s ease-out forwards;
 }
 
@@ -185,8 +233,8 @@
 }
 
 .va-avatar {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: rgba(200, 164, 93, 0.15);
   color: var(--brand-gold);
@@ -194,21 +242,23 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-bottom: 4px;
 }
 
 .va-message {
   background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
-  border-radius: 0 12px 12px 12px;
+  border-radius: 14px 14px 14px 4px;
   color: #e2e8f0;
   font-size: 0.9rem;
   line-height: 1.5;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 85%;
 }
 
 .va-message.user-message {
   background: rgba(200, 164, 93, 0.1);
-  border-radius: 12px 0 12px 12px;
+  border-radius: 14px 14px 4px 14px;
   border-color: rgba(200, 164, 93, 0.2);
   color: #fff;
 }
@@ -221,42 +271,196 @@
   margin-bottom: 0;
 }
 
-/* Actions */
-.va-actions {
+.va-message.typing {
+  display: flex;
+  gap: 4px;
+  padding: 1rem 1.25rem;
+  align-items: center;
+  height: 42px;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Options Grid */
+.va-options-grid {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding-left: 2.5rem; /* Align with bot messages */
+  animation: slideIn 0.4s ease-out forwards;
+}
+
+.va-option-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  line-height: 1.4;
+  min-height: 44px; /* Mobile friendly */
+}
+
+.va-option-btn:hover {
+  background: rgba(200, 164, 93, 0.15);
+  border-color: rgba(200, 164, 93, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.va-option-btn.small {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+}
+
+.va-option-btn.primary {
+  background: var(--brand-gold);
+  color: #0f172a;
+  border-color: var(--brand-gold);
+  font-weight: 600;
+}
+
+.va-option-btn.primary:hover {
+  background: #d4b26a;
+  color: #0f172a;
+}
+
+.va-option-btn.outline {
+  color: rgba(255,255,255,0.8);
+}
+
+.va-option-btn.outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Bot Actions Message */
+.bot-actions-msg {
+  width: 100%;
+}
+
+.va-service-list {
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.va-service-list li {
+  margin-bottom: 0.25rem;
+}
+
+.va-contact-prompt {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.va-phone-display {
+  font-weight: 600;
+  color: var(--brand-gold);
+  font-size: 1.1rem;
+  margin-top: 0.5rem !important;
+  letter-spacing: 0.5px;
+}
+
+.va-actions-row {
+  display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
 }
 
 .va-action-btn {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--brand-gold);
-  color: var(--dark-bg);
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
+  padding: 0.75rem 0.5rem;
+  border-radius: 8px;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
   transition: all 0.2s ease;
-  border: 1px solid var(--brand-gold);
+  min-height: 44px;
 }
 
-.va-action-btn:hover {
-  background: #d4b26a;
+.va-action-btn.primary {
+  background: #25D366; /* WhatsApp Green */
+  color: #fff;
+  border: 1px solid #25D366;
+}
+
+.va-action-btn.primary:hover {
+  background: #1EBE5D;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 .va-action-btn.outline {
-  background: transparent;
-  color: var(--brand-gold);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .va-action-btn.outline:hover {
-  background: rgba(200, 164, 93, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Follow Up */
+.va-followup {
+  margin-top: 1rem;
+  width: 100%;
+  padding-left: 2.5rem;
+  animation: slideIn 0.4s ease-out forwards;
+}
+
+.va-followup-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.va-followup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer (Input Area) */
@@ -294,7 +498,7 @@
   border-radius: 50%;
   border: none;
   background: var(--brand-gold);
-  color: var(--dark-bg);
+  color: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,27 +516,14 @@
   transform: scale(1.05);
 }
 
-.va-end-note {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.75rem;
-  line-height: 1.4;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 480px) {
   .va-chat-window {
     width: calc(100vw - 2rem);
     right: 0;
+    bottom: 80px;
+  }
+  
+  .va-actions-row {
+    flex-direction: column;
   }
 }

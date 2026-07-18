@@ -1,0 +1,354 @@
+.regional-map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0A1825; /* Dark Bay of Bengal ocean */
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.5);
+  padding: 12%; /* 88% Map Size target */
+}
+
+/* Optional subtle gradient for ocean */
+.map-ocean {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 60%, rgba(10, 24, 37, 0) 0%, #060e15 100%);
+  pointer-events: none;
+}
+
+.map-title-overlay {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.map-title-overlay h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.map-stats {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+  border-left: 2px solid var(--brand-gold);
+  padding-left: 10px;
+}
+
+.map-stats .highlight {
+  color: var(--brand-gold);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.regional-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.regional-base-map {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.core-states path {
+  transition: all 0.3s ease;
+}
+
+.core-states path:hover {
+  filter: brightness(1.2);
+  stroke: rgba(255, 255, 255, 0.3);
+  cursor: default;
+}
+
+.route-line {
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.map-pins-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.map-pin-wrapper {
+  position: absolute;
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Markers */
+.map-pin {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.inner-dot {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.is-head-office .map-pin {
+  width: 32px;
+  height: 32px;
+}
+
+.map-pin-wrapper:not(.is-head-office) .map-pin {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.map-pin-wrapper:hover .map-pin {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.is-head-office:hover .map-pin {
+  box-shadow: 0 0 25px rgba(200, 164, 93, 0.6) !important;
+}
+
+.map-pin-wrapper:not(.is-head-office):hover .map-pin {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.6) !important;
+}
+
+/* Pulses */
+.pin-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.pulse-large {
+  width: 32px;
+  height: 32px;
+  animation: pulse-anim 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pulse-small {
+  width: 14px;
+  height: 14px;
+  animation: pulse-anim 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pulse-anim {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
+
+/* Bloomberg Labels & Leader Lines */
+.pin-label-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.leader-line {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+.map-pin-wrapper:hover .leader-line {
+  border-color: rgba(255,255,255,0.6);
+}
+
+.bloomberg-label {
+  background: rgba(17, 25, 40, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tooltip */
+.label-tooltip {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  margin-top: 0;
+}
+
+.map-pin-wrapper:hover .bloomberg-label {
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: rgba(17, 25, 40, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.map-pin-wrapper:hover .label-tooltip {
+  max-height: 60px;
+  opacity: 1;
+  margin-top: 6px;
+}
+
+.label-tooltip p {
+  margin: 0 0 6px 0;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.7);
+  white-space: normal;
+  max-width: 150px;
+  line-height: 1.3;
+}
+
+.view-link {
+  font-size: 0.65rem;
+  color: var(--brand-gold);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.is-head-office .label-title {
+  color: var(--brand-gold);
+}
+
+/* Positioning Configurations for non-overlapping labels using Leader Lines */
+
+/* Leader Right-Down */
+.leader-right-down {
+  top: 0;
+  left: 10px;
+}
+.leader-right-down .leader-line {
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 10px;
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 4px;
+}
+.leader-right-down .bloomberg-label {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* Leader Right-Up */
+.leader-right-up {
+  bottom: 0;
+  left: 10px;
+}
+.leader-right-up .leader-line {
+  bottom: -10px;
+  left: -10px;
+  width: 20px;
+  height: 10px;
+  border-bottom: none;
+  border-left: none;
+  border-top-right-radius: 4px;
+}
+.leader-right-up .bloomberg-label {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Leader Left-Down */
+.leader-left-down {
+  top: 0;
+  right: 10px;
+}
+.leader-left-down .leader-line {
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 10px;
+  border-top: none;
+  border-right: none;
+  border-bottom-left-radius: 4px;
+}
+.leader-left-down .bloomberg-label {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+/* Leader Left-Up */
+.leader-left-up {
+  bottom: 0;
+  right: 10px;
+}
+.leader-left-up .leader-line {
+  bottom: -10px;
+  right: -10px;
+  width: 20px;
+  height: 10px;
+  border-bottom: none;
+  border-right: none;
+  border-top-left-radius: 4px;
+}
+.leader-left-up .bloomberg-label {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .regional-map-container {
+    padding: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-title-overlay {
+    top: 1rem;
+    left: 1rem;
+  }
+  .map-title-overlay h2 {
+    font-size: 1.1rem;
+  }
+  .bloomberg-label {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+  .map-pin-wrapper:hover .bloomberg-label {
+    padding: 8px 10px;
+  }
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { servicesData } from '../../data/servicesData';
+import { servicesData, auditServicesData } from '../../data/servicesData';
 import { otherServicesData } from '../../data/otherServicesData';
 import { knowledgeBaseData } from '../../data/knowledgeBaseData';
 import { gstData } from '../../data/gstData';
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
     setActiveMenu(null);
   }, [location.pathname]);
 
-  const renderMegaMenu = (data: any[], basePath: string, menuName: string) => {
+  const renderMegaMenu = (data: any[], basePath: string, menuName: string, bottomData?: any[]) => {
     const isOpen = activeMenu === menuName;
     return (
       <AnimatePresence>
@@ -96,6 +96,34 @@ export const Navbar: React.FC = () => {
                   </div>
                 ))}
               </div>
+              {bottomData && bottomData.length > 0 && (
+                <div className="container">
+                  <div className="mega-menu-bottom-section" style={{ marginTop: '2.5rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                    <div className="mega-menu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
+                      {bottomData.map((col, colIdx) => (
+                        <div key={`bottom-col-${colIdx}`} className="mega-menu-column">
+                          {col.categories.map((cat: any, catIdx: number) => (
+                            <div key={`bottom-cat-${catIdx}`} className="mega-menu-category">
+                              <h4 className="mega-menu-title">{cat.title}</h4>
+                              <ul className="mega-menu-list">
+                                {cat.items.map((item: any, itemIdx: number) => (
+                                  <li key={`bottom-item-${itemIdx}`}>
+                                    {item.externalUrl ? (
+                                      <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" className="mega-menu-link" onClick={() => setActiveMenu(null)}>{item.name}</a>
+                                    ) : (
+                                      <Link to={`${basePath}/${item.slug}`} className="mega-menu-link" onClick={() => setActiveMenu(null)}>{item.name}</Link>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
@@ -124,7 +152,7 @@ export const Navbar: React.FC = () => {
     );
   };
 
-  const renderMobileMegaMenu = (data: any[], basePath: string, menuName: string) => {
+  const renderMobileMegaMenu = (data: any[], basePath: string, menuName: string, bottomData?: any[]) => {
     const isOpen = mobileActiveMenu === menuName;
     return (
       <AnimatePresence>
@@ -160,6 +188,37 @@ export const Navbar: React.FC = () => {
                 })}
               </div>
             ))}
+            {bottomData && bottomData.length > 0 &&
+              bottomData.map((col, colIdx) => (
+                <div key={`mobile-bottom-${colIdx}`} className="mobile-mega-column">
+                  {col.categories.map((cat: any, catIdx: number) => {
+                    const isExpanded = expandedMobileCategory === cat.title;
+                    return (
+                      <div key={`mobile-bottom-cat-${catIdx}`} className="mobile-mega-category">
+                        <div className="mobile-mega-category-header" onClick={() => setExpandedMobileCategory(isExpanded ? null : cat.title)}>
+                          <h4 className="mobile-mega-title">{cat.title}</h4>
+                          <ChevronDown size={14} style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} strokeWidth={1.5} />
+                        </div>
+                        <AnimatePresence>
+                          {isExpanded && (
+                            <motion.ul className="mobile-mega-list" initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }}>
+                              {cat.items.map((item: any, itemIdx: number) => (
+                                <li key={`mobile-bottom-item-${itemIdx}`}>
+                                  {item.externalUrl ? (
+                                    <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" className="mobile-mega-link" onClick={() => setMobileMenuOpen(false)}>{item.name}</a>
+                                  ) : (
+                                    <Link to={`${basePath}/${item.slug}`} className="mobile-mega-link" onClick={() => setMobileMenuOpen(false)}>{item.name}</Link>
+                                  )}
+                                </li>
+                              ))}
+                            </motion.ul>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
           </motion.div>
         )}
       </AnimatePresence>
@@ -186,7 +245,7 @@ export const Navbar: React.FC = () => {
                     <Link to={link.path} className={`nav-link nav-link-dropdown ${location.pathname.startsWith(link.path) ? 'active' : ''}`}>
                       {link.name} <ChevronDown size={14} className="dropdown-icon" strokeWidth={1.5} />
                     </Link>
-                    {link.name === 'Services' && renderMegaMenu(servicesData, '/services', link.name)}
+                    {link.name === 'Services' && renderMegaMenu(servicesData, '/services', link.name, auditServicesData)}
                     {link.name === 'Others Services' && renderMegaMenu(otherServicesData, '/others-services', link.name)}
                     {link.name === 'Knowledge Base' && renderMegaMenu(knowledgeBaseData, '/knowledge-base', link.name)}
                     {link.name === 'GST' && renderSimpleDropdown(gstDropdownItems, '/gst', link.name)}
@@ -226,7 +285,7 @@ export const Navbar: React.FC = () => {
                       <div className={`mobile-nav-link mobile-dropdown-toggle ${location.pathname.startsWith(link.path) ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setMobileActiveMenu(mobileActiveMenu === link.name ? null : link.name); }} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         {link.name} <ChevronDown size={16} style={{ transform: mobileActiveMenu === link.name ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }} strokeWidth={1.5} />
                       </div>
-                      {link.name === 'Services' && renderMobileMegaMenu(servicesData, '/services', link.name)}
+                      {link.name === 'Services' && renderMobileMegaMenu(servicesData, '/services', link.name, auditServicesData)}
                       {link.name === 'Others Services' && renderMobileMegaMenu(otherServicesData, '/others-services', link.name)}
                       {link.name === 'Knowledge Base' && renderMobileMegaMenu(knowledgeBaseData, '/knowledge-base', link.name)}
                       

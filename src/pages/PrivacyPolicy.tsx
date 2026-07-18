@@ -249,7 +249,7 @@ export const PrivacyPolicy: React.FC = () => {
                 </div>
                 <div className="privacy-contact-item">
                   <h3>Head Office</h3>
-                  <p>D.No. 41-1-41C, SS Nilayam,<br />KT Road, Chitti Nagar,<br />Vijayawada – 520001</p>
+                  <p>76-43-399, HIG-399, Ground Floor,<br />H. B. Colony, Bhavanipuram,<br />Vijayawada, Krishna Dt., AP.</p>
                 </div>
               </div>
             </div>

@@ -77,6 +77,28 @@ import { ZohoAccounting } from './services/ZohoAccounting';
 import { XeroAccounting } from './services/XeroAccounting';
 import { QuickBooksAccounting } from './services/QuickBooksAccounting';
 
+import { HomeLoanAssistance } from './services/HomeLoanAssistance';
+import { PersonalLoanAssistance } from './services/PersonalLoanAssistance';
+import { BusinessLoanAssistance } from './services/BusinessLoanAssistance';
+import { MSMELoanAssistance } from './services/MSMELoanAssistance';
+import { StartupFundingAssistance } from './services/StartupFundingAssistance';
+import { WorkingCapitalLoans } from './services/WorkingCapitalLoans';
+import { TermLoans } from './services/TermLoans';
+import { VehicleLoanAssistance } from './services/VehicleLoanAssistance';
+import { EducationLoanAssistance } from './services/EducationLoanAssistance';
+import { LoanAgainstProperty } from './services/LoanAgainstProperty';
+import { GoldLoanAdvisory } from './services/GoldLoanAdvisory';
+import { MachineryEquipmentLoan } from './services/MachineryEquipmentLoan';
+import { CommercialVehicleLoan } from './services/CommercialVehicleLoan';
+import { AgricultureLoanAssistance } from './services/AgricultureLoanAssistance';
+import { ProjectFinance } from './services/ProjectFinance';
+import { MortgageLoanAssistance } from './services/MortgageLoanAssistance';
+import { OverdraftCashCredit } from './services/OverdraftCashCredit';
+import { TradeFinanceAssistance } from './services/TradeFinanceAssistance';
+import { ExportImportFinance } from './services/ExportImportFinance';
+import { BalanceTransferRestructuring } from './services/BalanceTransferRestructuring';
+import { GovernmentSubsidyLoans } from './services/GovernmentSubsidyLoans';
+
 import './ServiceDetail.css';
 
 export const ServiceDetail: React.FC = () => {
@@ -372,6 +394,92 @@ export const ServiceDetail: React.FC = () => {
     return <QuickBooksAccounting service={service} relatedServices={relatedServices} />;
   }
 
+  if (service.slug === 'home-loan-assistance') {
+    return <HomeLoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'personal-loan-assistance') {
+    return <PersonalLoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'business-loan-assistance') {
+    return <BusinessLoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'msme-loan-assistance') {
+    return <MSMELoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'startup-funding-assistance') {
+    return <StartupFundingAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'working-capital-loans') {
+    return <WorkingCapitalLoans service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'term-loans') {
+    return <TermLoans service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'vehicle-loan-assistance') {
+    return <VehicleLoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'education-loan-assistance') {
+    return <EducationLoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'loan-against-property') {
+    return <LoanAgainstProperty service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'gold-loan-advisory') {
+    return <GoldLoanAdvisory service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'machinery-equipment-loans') {
+    return <MachineryEquipmentLoan service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'commercial-vehicle-loan') {
+    return <CommercialVehicleLoan service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'agriculture-loans') {
+    return <AgricultureLoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'project-finance') {
+    return <ProjectFinance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'mortgage-loan-assistance') {
+    return <MortgageLoanAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'overdraft-cash-credit-facilities') {
+    return <OverdraftCashCredit service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'trade-finance-assistance') {
+    return <TradeFinanceAssistance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'export-import-finance') {
+    return <ExportImportFinance service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'balance-transfer-loan-restructuring') {
+    return <BalanceTransferRestructuring service={service} relatedServices={relatedServices} />;
+  }
+
+  if (service.slug === 'government-subsidy-linked-loans') {
+    return <GovernmentSubsidyLoans service={service} relatedServices={relatedServices} />;
+  }
+
+  const isLoanService = service.slug.includes('loan') || service.slug.includes('finance') || service.slug.includes('funding') || service.slug.includes('overdraft');
+
   return (
     <div className="service-detail-page">
       <InternalPageHero
@@ -390,6 +498,16 @@ export const ServiceDetail: React.FC = () => {
       <div className="service-content-wrapper">
         <div className="container">
           <div className="service-placeholder-card glass-card">
+            {isLoanService && (
+              <div className="loan-advisory-disclaimer" style={{ background: 'rgba(200, 164, 93, 0.1)', borderLeft: '4px solid #C8A45D', padding: '1.5rem', marginBottom: '2rem', borderRadius: '0 8px 8px 0', textAlign: 'left' }}>
+                <h3 style={{ color: '#C8A45D', marginBottom: '0.75rem', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <FileText size={18} /> Advisory Service Notice
+                </h3>
+                <p style={{ margin: 0, fontSize: '0.95rem', lineHeight: '1.6', opacity: 0.9, color: '#e2e8f0' }}>
+                  Please note that Finvista is a financial advisory firm, not a lending institution. We assist clients in obtaining loans through authorized banks and financial institutions by providing documentation support, eligibility assessment, financial advisory, compliance assistance, and end-to-end guidance. We do not directly provide or disburse loans.
+                </p>
+              </div>
+            )}
             <div className="placeholder-icon">
               <Settings size={48} />
             </div>
