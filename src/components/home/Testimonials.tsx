@@ -5,7 +5,7 @@ import './Testimonials.css';
 const testimonials = [
   {
     id: 1,
-    quote: "My experience with Finvista has been great, super supportive and helpful, always guided me well. My process went through so easily without any haste. I am super grateful to have met them.",
+    quote: "My experience with FinvistaCA has been great, super supportive and helpful, always guided me well. My process went through so easily without any haste. I am super grateful to have met them.",
     author: "Harjeet Singh",
     role: "Verified Client"
   },

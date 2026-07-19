@@ -13,7 +13,7 @@ export const OverdraftCashCredit: React.FC<OverdraftCashCreditProps> = ({ servic
     intro_title: "Overdraft & Cash Credit Advisory",
     intro_p1: "Maintain Business Liquidity with Flexible Credit Solutions",
     intro_p2: "Manage your day-to-day business finances efficiently through expert guidance on overdraft and cash credit facilities.",
-    overview: "Businesses often require flexible financing to manage working capital and operational expenses. Finvista helps identify suitable overdraft and cash credit solutions while assisting with documentation and lender coordination.",
+    overview: "Businesses often require flexible financing to manage working capital and operational expenses. FinvistaCA helps identify suitable overdraft and cash credit solutions while assisting with documentation and lender coordination.",
     features: [],
     benefits: [
       { title: "Cash Flow Management", desc: "Improved cash flow management", icon: "CheckCircle" },
@@ -58,8 +58,8 @@ export const OverdraftCashCredit: React.FC<OverdraftCashCreditProps> = ({ servic
       { question: "Is interest charged on the entire sanctioned amount?", answer: "No. Interest is usually charged only on the amount utilized." },
       { question: "Can the limit be increased later?", answer: "Yes, subject to financial performance and lender approval." },
       { question: "What documents are required?", answer: "Business registration, GST, financial statements, bank statements, and KYC." },
-      { question: "How does Finvista help?", answer: "We evaluate your financial requirements and help identify suitable facilities." },
-      { question: "Does Finvista sanction overdraft limits?", answer: "No. We provide advisory and application assistance." }
+      { question: "How does FinvistaCA help?", answer: "We evaluate your financial requirements and help identify suitable facilities." },
+      { question: "Does FinvistaCA sanction overdraft limits?", answer: "No. We provide advisory and application assistance." }
     ]
   };
 

@@ -12,7 +12,7 @@ export const TaxationExpatriateEmployees: React.FC<TaxationExpatriateEmployeesPr
     title: "Taxation of Expatriate Employees",
     intro_title: "Global Mobility & Payroll Tax",
     intro_p1: "The taxation of expatriate employees involves specialized tax planning and compliance for foreign nationals working in India as well as Indian employees deputed abroad. Factors such as residential status, DTAA, and social security impact tax liability.",
-    intro_p2: "Employers must also comply with payroll taxation, withholding tax obligations, and reporting requirements under Indian laws. Finvista provides comprehensive expatriate taxation services, helping both employers and employees manage international assignments efficiently.",
+    intro_p2: "Employers must also comply with payroll taxation, withholding tax obligations, and reporting requirements under Indian laws. FinvistaCA provides comprehensive expatriate taxation services, helping both employers and employees manage international assignments efficiently.",
     features: [
       { title: "Salary Structuring", desc: "Structuring expat compensation packages for maximum tax efficiency in India.", icon: "TrendingUp" },
       { title: "Tax Equalization", desc: "Advisory on tax equalization policies for globally mobile employees.", icon: "Settings" },

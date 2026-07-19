@@ -24,7 +24,7 @@ export const Career: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('https://finvistaca-backend-ebon.vercel.app/api/career', {
+      const response = await fetch('https://finvistacaca-backend-ebon.vercel.app/api/career', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -57,7 +57,7 @@ export const Career: React.FC = () => {
       <section className="culture-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2>Why Join Finvista?</h2>
+            <h2>Why Join FinvistaCA?</h2>
             <p className="section-desc">We foster an environment where talent thrives and careers accelerate.</p>
           </div>
           
@@ -171,7 +171,7 @@ export const Career: React.FC = () => {
                   <div className="form-success" style={{ textAlign: 'center', padding: '2rem 0' }}>
                     <CheckCircle2 size={48} style={{ color: '#2e9e5b', marginBottom: '0.75rem' }} />
                     <h3>Application submitted!</h3>
-                    <p className="form-desc">Thank you for your interest in joining Finvista. Our team will review your application and reach out if there is a fit.</p>
+                    <p className="form-desc">Thank you for your interest in joining FinvistaCA. Our team will review your application and reach out if there is a fit.</p>
                   </div>
                 ) : (
                 <form className="career-form" onSubmit={handleSubmit}>

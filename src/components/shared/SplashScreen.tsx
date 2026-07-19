@@ -27,7 +27,7 @@ export const SplashScreen: React.FC = () => {
   return (
     <div className={`splash-screen ${isFadingOut ? 'fade-out' : ''}`}>
       <div className="logo-container">
-        <img src="/finvista-logo.jpeg" alt="Finvista Logo" className="splash-logo" />
+        <img src="/finvista-logo.jpeg" alt="FinvistaCA Logo" className="splash-logo" />
       </div>
     </div>
   );

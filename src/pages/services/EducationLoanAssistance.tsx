@@ -12,7 +12,7 @@ export const EducationLoanAssistance: React.FC<EducationLoanAssistanceProps> = (
     title: "Education Loan Assistance",
     intro_title: "Education Loan Assistance",
     intro_p1: "Invest in Your Future with Confidence",
-    intro_p2: "Higher education is an investment in your future. Finvista helps students and parents secure education loans that support academic aspirations without unnecessary financial stress.",
+    intro_p2: "Higher education is an investment in your future. FinvistaCA helps students and parents secure education loans that support academic aspirations without unnecessary financial stress.",
     overview: "We simplify the education loan process by assisting with lender selection, documentation, financial planning, and application support for studies in India and abroad.",
     features: [],
     benefits: [
@@ -53,7 +53,7 @@ export const EducationLoanAssistance: React.FC<EducationLoanAssistanceProps> = (
       { question: "Is collateral mandatory?", answer: "Collateral requirements depend on the loan amount and lender policies." },
       { question: "What is the repayment period?", answer: "Repayment generally begins after the moratorium period and may extend over several years." },
       { question: "Can I apply before receiving admission confirmation?", answer: "Some lenders offer provisional approvals, though final sanction usually requires admission confirmation." },
-      { question: "How does Finvista help?", answer: "We help compare lenders, prepare documentation, and guide students throughout the loan approval process." }
+      { question: "How does FinvistaCA help?", answer: "We help compare lenders, prepare documentation, and guide students throughout the loan approval process." }
     ]
   };
 

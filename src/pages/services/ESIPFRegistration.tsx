@@ -12,7 +12,7 @@ export const ESIPFRegistration: React.FC<ESIPFRegistrationProps> = ({ service, r
     title: "ESI & PF Registration",
     intro_title: "Employee Social Security",
     intro_p1: "Employee State Insurance (ESI) and Employees' Provident Fund (EPF) registrations are essential statutory compliances for businesses employing eligible workers in India, providing vital social security benefits.",
-    intro_p2: "Failure to comply can result in significant penalties. Finvista offers end-to-end assistance with ESI and EPF registration, employee onboarding, monthly return filing, and ongoing compliance to safeguard employee welfare.",
+    intro_p2: "Failure to comply can result in significant penalties. FinvistaCA offers end-to-end assistance with ESI and EPF registration, employee onboarding, monthly return filing, and ongoing compliance to safeguard employee welfare.",
     features: [
       { title: "EPF Registration", desc: "Mandatory registration for businesses with 20 or more employees.", icon: "Users" },
       { title: "ESI Registration", desc: "Mandatory registration for businesses with 10 or more employees earning under Rs 21,000.", icon: "ShieldCheck" },

@@ -12,7 +12,7 @@ export const TaxClearanceCertificate: React.FC<TaxClearanceCertificateProps> = (
     title: "Tax Clearance Certificate",
     intro_title: "Form 15CA & 15CB Advisory",
     intro_p1: "A Tax Clearance Certificate (TCC) certifies that an individual or business has fulfilled applicable tax obligations before remitting funds outside India or completing certain overseas financial transactions.",
-    intro_p2: "It plays an important role in ensuring compliance with Indian Income Tax regulations, particularly for NRIs, foreign companies, and entities making overseas remittances. Finvista provides complete certification and filing assistance to minimize compliance risks.",
+    intro_p2: "It plays an important role in ensuring compliance with Indian Income Tax regulations, particularly for NRIs, foreign companies, and entities making overseas remittances. FinvistaCA provides complete certification and filing assistance to minimize compliance risks.",
     features: [
       { title: "Form 15CB Certification", desc: "Professional certification by a Chartered Accountant validating the withholding tax rate.", icon: "FileSignature" },
       { title: "Form 15CA Filing", desc: "Filing the mandatory declaration on the Income Tax portal for foreign remittances.", icon: "FileText" },

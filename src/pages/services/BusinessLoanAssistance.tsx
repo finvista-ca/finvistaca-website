@@ -12,7 +12,7 @@ export const BusinessLoanAssistance: React.FC<BusinessLoanAssistanceProps> = ({ 
     title: "Business Loan Assistance",
     intro_title: "Fuel Business Growth with the Right Financing",
     intro_p1: "Access business loans that help expand operations, manage working capital, purchase equipment, or invest in growth opportunities.",
-    intro_p2: "Finvista works closely with entrepreneurs and businesses to identify suitable loan products, prepare financial documents, and streamline the approval process.",
+    intro_p2: "FinvistaCA works closely with entrepreneurs and businesses to identify suitable loan products, prepare financial documents, and streamline the approval process.",
     features: [], // Left empty intentionally as benefits are used primarily
     benefits: [
           {
@@ -103,7 +103,7 @@ export const BusinessLoanAssistance: React.FC<BusinessLoanAssistanceProps> = ({ 
                 "a": "Typically, lenders require Income Tax Returns, Profit & Loss Statements, Balance Sheets, GST Returns, and Bank Statements."
           },
           {
-                "q": "Why choose Finvista?",
+                "q": "Why choose FinvistaCA?",
                 "a": "Our experts simplify documentation, compare multiple financing options, and help improve the likelihood of successful loan approval."
           }
     ]

@@ -10,13 +10,13 @@ export const DataPolicy: React.FC = () => {
           { label: 'Data Policy' }
         ]}
         title="Data Collection Policy"
-        description="How Finvista collects, uses and protects your information."
+        description="How FinvistaCA collects, uses and protects your information."
       />
 
       <section className="resource-main">
         <div className="container" style={{ maxWidth: '860px', lineHeight: 1.8 }}>
           <p>
-            Finvista ("we", "us", "our") is committed to protecting the privacy of every
+            FinvistaCA ("we", "us", "our") is committed to protecting the privacy of every
             individual and business that interacts with us. This policy explains what
             information we collect through this website and how we use it.
           </p>
@@ -56,7 +56,7 @@ export const DataPolicy: React.FC = () => {
           <p>
             For any questions about this policy or the information we hold about you,
             please contact us at{' '}
-            <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a> or call
+            <a href="mailto:finvistacaca@gmail.com">finvistacaca@gmail.com</a> or call
             +91 9908285223.
           </p>
         </div>

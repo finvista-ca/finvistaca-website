@@ -12,7 +12,7 @@ export const GovernmentSubsidyLoans: React.FC<GovernmentSubsidyLoansProps> = ({ 
     title: "Government Subsidy Linked Loan Assistance",
     intro_title: "Government Subsidy Linked Loan Assistance",
     intro_p1: "Helping You Benefit from Government-Backed Financing Schemes",
-    intro_p2: "Take advantage of government-supported financial assistance and subsidy-linked loan programs with expert advisory from Finvista.",
+    intro_p2: "Take advantage of government-supported financial assistance and subsidy-linked loan programs with expert advisory from FinvistaCA.",
     overview: "We assist businesses, entrepreneurs, MSMEs, startups, and individuals in identifying suitable government schemes, preparing documentation, and applying for eligible subsidy-linked loans.",
     features: [],
     benefits: [
@@ -59,10 +59,10 @@ export const GovernmentSubsidyLoans: React.FC<GovernmentSubsidyLoansProps> = ({ 
       { question: "Is Udyam Registration required?", answer: "For many MSME schemes, yes." },
       { question: "Can startups benefit from these schemes?", answer: "Yes, if they satisfy scheme requirements." },
       { question: "What documents are generally required?", answer: "KYC, business registration, financial statements, project report, and scheme-specific documents." },
-      { question: "Does Finvista help identify suitable schemes?", answer: "Yes. We evaluate eligibility and recommend relevant schemes." },
-      { question: "Does Finvista assist with documentation?", answer: "Yes." },
-      { question: "Does Finvista provide government grants?", answer: "No. We only provide advisory and application support." },
-      { question: "How does Finvista help?", answer: "We guide clients through scheme selection, documentation, compliance, and coordination with banks and government agencies to maximize their chances of successful approval." }
+      { question: "Does FinvistaCA help identify suitable schemes?", answer: "Yes. We evaluate eligibility and recommend relevant schemes." },
+      { question: "Does FinvistaCA assist with documentation?", answer: "Yes." },
+      { question: "Does FinvistaCA provide government grants?", answer: "No. We only provide advisory and application support." },
+      { question: "How does FinvistaCA help?", answer: "We guide clients through scheme selection, documentation, compliance, and coordination with banks and government agencies to maximize their chances of successful approval." }
     ]
   };
 

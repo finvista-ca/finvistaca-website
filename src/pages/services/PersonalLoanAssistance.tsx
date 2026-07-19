@@ -109,8 +109,8 @@ export const PersonalLoanAssistance: React.FC<PersonalLoanAssistanceProps> = ({ 
                 "a": "Income stability, repayment history, credit score, employment status, and debt-to-income ratio are key factors."
           },
           {
-                "q": "Does Finvista directly provide loans?",
-                "a": "No. Finvista is a financial advisory firm that assists clients in obtaining suitable loans from banks and financial institutions."
+                "q": "Does FinvistaCA directly provide loans?",
+                "a": "No. FinvistaCA is a financial advisory firm that assists clients in obtaining suitable loans from banks and financial institutions."
           }
     ]
   };

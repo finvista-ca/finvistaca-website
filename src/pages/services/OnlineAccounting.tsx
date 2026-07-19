@@ -12,7 +12,7 @@ export const OnlineAccounting: React.FC<OnlineAccountingProps> = ({ service, rel
     title: "Online Accounting",
     intro_title: "Cloud-Based Financial Management",
     intro_p1: "Online Accounting enables businesses to manage their financial records securely through cloud-based accounting platforms, providing real-time access to financial information from anywhere in the world.",
-    intro_p2: "It eliminates manual bookkeeping, improves collaboration, and enhances data security. Finvista provides complete Online Accounting solutions, ensuring your financial data remains accurate, accessible, and compliant.",
+    intro_p2: "It eliminates manual bookkeeping, improves collaboration, and enhances data security. FinvistaCA provides complete Online Accounting solutions, ensuring your financial data remains accurate, accessible, and compliant.",
     features: [
       { title: "Cloud Accounting", desc: "Setup and management of accounting books entirely on secure cloud servers.", icon: "Cloud" },
       { title: "Bank Integration", desc: "Live bank feeds for automated, real-time transaction reconciliation.", icon: "Landmark" },

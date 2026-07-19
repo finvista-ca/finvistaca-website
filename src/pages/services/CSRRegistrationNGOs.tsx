@@ -12,7 +12,7 @@ export const CSRRegistrationNGOs: React.FC<CSRRegistrationNGOsProps> = ({ servic
     title: "CSR Registration for NGOs",
     intro_title: "Corporate Social Responsibility",
     intro_p1: "Corporate Social Responsibility (CSR) Registration enables eligible NGOs, Trusts, and Section 8 Companies to receive CSR funding from companies under the provisions of the Companies Act, 2013.",
-    intro_p2: "Organizations intending to undertake CSR activities must obtain registration with the MCA by filing Form CSR-1. Finvista provides complete assistance in eligibility assessment, documentation, and ongoing compliance advisory.",
+    intro_p2: "Organizations intending to undertake CSR activities must obtain registration with the MCA by filing Form CSR-1. FinvistaCA provides complete assistance in eligibility assessment, documentation, and ongoing compliance advisory.",
     features: [
       { title: "Eligibility Assessment", desc: "Reviewing your track record and documents to ensure MCA compliance.", icon: "Search" },
       { title: "Form CSR-1 Filing", desc: "Accurate preparation and filing of the mandatory CSR-1 form with the MCA.", icon: "FileText" },

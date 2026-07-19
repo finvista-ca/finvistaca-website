@@ -12,7 +12,7 @@ export const TrustSocietyRegistration: React.FC<TrustSocietyRegistrationProps> =
     title: "Trust & Society Registration",
     intro_title: "Establish Your Charitable Organization",
     intro_p1: "Trust and Society Registration provides legal recognition to organizations established for charitable, educational, religious, cultural, social, or public welfare purposes, enhancing credibility and facilitating fundraising.",
-    intro_p2: "Choosing the right legal structure depends on the objectives and governance model. Finvista offers comprehensive advisory and registration services, including drafting trust deeds, bye-laws, and post-registration compliance.",
+    intro_p2: "Choosing the right legal structure depends on the objectives and governance model. FinvistaCA offers comprehensive advisory and registration services, including drafting trust deeds, bye-laws, and post-registration compliance.",
     features: [
       { title: "Trust Registration", desc: "Registration of Public Charitable Trusts under the Indian Trusts Act.", icon: "Landmark" },
       { title: "Society Registration", desc: "Registration of Societies under the Societies Registration Act, 1860.", icon: "Users" },

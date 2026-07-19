@@ -13,7 +13,7 @@ export const GoldLoanAdvisory: React.FC<GoldLoanAdvisoryProps> = ({ service, rel
     intro_title: "Gold Loan Advisory",
     intro_p1: "Quick Financial Support Backed by Your Gold Assets",
     intro_p2: "Need immediate funds? We help you obtain suitable gold loan solutions through trusted financial institutions with complete transparency.",
-    overview: "Gold loans offer a convenient financing option for short-term financial needs. Finvista assists clients in choosing suitable lenders while ensuring clarity throughout the borrowing process.",
+    overview: "Gold loans offer a convenient financing option for short-term financial needs. FinvistaCA assists clients in choosing suitable lenders while ensuring clarity throughout the borrowing process.",
     features: [],
     benefits: [
       { title: "Quick Financing", desc: "Quick financing guidance", icon: "CheckCircle" },
@@ -52,7 +52,7 @@ export const GoldLoanAdvisory: React.FC<GoldLoanAdvisoryProps> = ({ service, rel
       { question: "Can I reclaim my gold after repayment?", answer: "Yes. Your gold is returned once the loan and applicable charges are fully repaid." },
       { question: "Are interest rates fixed?", answer: "Interest rates vary depending on the lender and loan scheme selected." },
       { question: "Is income proof always required?", answer: "For many gold loan products, documentation requirements are relatively minimal." },
-      { question: "How does Finvista help?", answer: "We help clients compare lenders, understand repayment options, and complete documentation smoothly." }
+      { question: "How does FinvistaCA help?", answer: "We help clients compare lenders, understand repayment options, and complete documentation smoothly." }
     ]
   };
 

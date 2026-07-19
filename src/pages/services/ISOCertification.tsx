@@ -12,7 +12,7 @@ export const ISOCertification: React.FC<ISOCertificationProps> = ({ service, rel
     title: "ISO Certification",
     intro_title: "International Standards Compliance",
     intro_p1: "ISO Certification demonstrates that an organization follows internationally recognized standards for quality management, operational efficiency, customer satisfaction, or occupational safety.",
-    intro_p2: "Achieving ISO certification enhances business credibility, strengthens customer confidence, and increases opportunities. Finvista assists businesses in obtaining various ISO certifications with complete support from gap assessment to certification.",
+    intro_p2: "Achieving ISO certification enhances business credibility, strengthens customer confidence, and increases opportunities. FinvistaCA assists businesses in obtaining various ISO certifications with complete support from gap assessment to certification.",
     features: [
       { title: "ISO 9001 (QMS)", desc: "Quality Management System certification for consistent quality of products and services.", icon: "CheckCircle" },
       { title: "ISO 14001 (EMS)", desc: "Environmental Management System certification for environmental responsibility.", icon: "Leaf" },
@@ -38,7 +38,7 @@ export const ISOCertification: React.FC<ISOCertificationProps> = ({ service, rel
     { q: "How long is an ISO certificate valid?", a: "An ISO certificate is typically valid for 3 years, subject to successful annual surveillance audits." },
     { q: "Which ISO standard is best for my business?", a: "ISO 9001 is universally applicable. Specific standards like 27001 or 14001 depend on your industry and requirements." },
     { q: "What is the certification process?", a: "It involves gap analysis, documentation, implementation, internal audit, and a final external audit by the certification body." },
-    { q: "Does Finvista provide implementation support?", a: "Yes, we provide end-to-end guidance from documentation to final certification assistance." }
+    { q: "Does FinvistaCA provide implementation support?", a: "Yes, we provide end-to-end guidance from documentation to final certification assistance." }
     ]
   };
 

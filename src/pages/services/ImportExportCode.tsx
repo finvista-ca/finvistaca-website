@@ -12,7 +12,7 @@ export const ImportExportCode: React.FC<ImportExportCodeProps> = ({ service, rel
     title: "Import & Export Code (IEC)",
     intro_title: "Global Trade Registration",
     intro_p1: "The Import Export Code (IEC) is a mandatory business identification number issued by the Directorate General of Foreign Trade (DGFT) for businesses involved in importing or exporting goods and services from India.",
-    intro_p2: "Finvista provides end-to-end assistance in obtaining IEC registration for proprietorships, partnerships, LLPs, and companies. Our professionals guide clients through documentation, DGFT compliance, and digital authentication.",
+    intro_p2: "FinvistaCA provides end-to-end assistance in obtaining IEC registration for proprietorships, partnerships, LLPs, and companies. Our professionals guide clients through documentation, DGFT compliance, and digital authentication.",
     features: [
       { title: "DGFT Registration", desc: "New IEC application filing with the Directorate General of Foreign Trade.", icon: "Globe" },
       { title: "IEC Amendment", desc: "Modification of existing IEC details like address, directors, or bank accounts.", icon: "Settings" },

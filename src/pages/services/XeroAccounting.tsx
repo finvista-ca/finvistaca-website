@@ -12,7 +12,7 @@ export const XeroAccounting: React.FC<XeroAccountingProps> = ({ service, related
     title: "XERO Accounting Services",
     intro_title: "Global Cloud Accounting Solutions",
     intro_p1: "Xero is a globally recognized cloud accounting software trusted by businesses across the world for its simplicity, automation, and real-time financial management capabilities.",
-    intro_p2: "It enables organizations to manage invoicing, bank reconciliation, and multi-currency transactions efficiently. Finvista offers comprehensive Xero Accounting Services, including software implementation, migration, and ongoing support.",
+    intro_p2: "It enables organizations to manage invoicing, bank reconciliation, and multi-currency transactions efficiently. FinvistaCA offers comprehensive Xero Accounting Services, including software implementation, migration, and ongoing support.",
     features: [
       { title: "Xero Implementation", desc: "Expert setup and configuration of Xero tailored to your international operations.", icon: "Settings" },
       { title: "Multi-currency Accounting", desc: "Flawless management of foreign exchange gains/losses and foreign bank accounts.", icon: "Globe" },

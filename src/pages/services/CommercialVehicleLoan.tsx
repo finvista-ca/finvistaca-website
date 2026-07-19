@@ -54,7 +54,7 @@ export const CommercialVehicleLoan: React.FC<CommercialVehicleLoanProps> = ({ se
       { question: "Are used commercial vehicles eligible?", answer: "Many lenders provide financing for pre-owned commercial vehicles subject to valuation." },
       { question: "What documents are required?", answer: "Business proof, financial statements, KYC documents, vehicle quotation, and bank statements." },
       { question: "What determines loan eligibility?", answer: "Business income, repayment history, vehicle value, and credit profile." },
-      { question: "Why choose Finvista?", answer: "We simplify lender selection, documentation, and financing negotiations for commercial fleet purchases." }
+      { question: "Why choose FinvistaCA?", answer: "We simplify lender selection, documentation, and financing negotiations for commercial fleet purchases." }
     ]
   };
 

@@ -39,7 +39,7 @@ export const WhyChooseUs: React.FC = () => {
       
       <div className="container relative z-10">
         <div className="section-header text-center" style={{ marginBottom: '4rem' }}>
-          <h2 className="section-title">The Finvista Difference</h2>
+          <h2 className="section-title">The FinvistaCA Difference</h2>
           <p className="section-subtitle text-secondary">
             Beyond traditional accounting—we deliver strategic financial leadership.
           </p>

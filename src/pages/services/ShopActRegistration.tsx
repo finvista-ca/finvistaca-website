@@ -12,7 +12,7 @@ export const ShopActRegistration: React.FC<ShopActRegistrationProps> = ({ servic
     title: "Shop & Establishment Registration",
     intro_title: "State Commercial Compliance",
     intro_p1: "Shop and Establishment Registration is a mandatory registration governed by respective State Acts, applicable to businesses operating commercial establishments, shops, offices, restaurants, and service providers.",
-    intro_p2: "This registration regulates working conditions, employee rights, business hours, and wages. At Finvista, we provide complete assistance in obtaining the registration, renewals, and amendments to ensure your business operates legally.",
+    intro_p2: "This registration regulates working conditions, employee rights, business hours, and wages. At FinvistaCA, we provide complete assistance in obtaining the registration, renewals, and amendments to ensure your business operates legally.",
     features: [
       { title: "New Registration", desc: "Filing applications for new shops, offices, and commercial establishments.", icon: "Building" },
       { title: "License Renewal", desc: "Assistance with periodic renewals as per specific state regulations.", icon: "Clock" },

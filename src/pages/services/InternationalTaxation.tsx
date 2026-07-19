@@ -12,7 +12,7 @@ export const InternationalTaxation: React.FC<InternationalTaxationProps> = ({ se
     title: "International Taxation",
     intro_title: "Global Tax Planning & Compliance",
     intro_p1: "International taxation governs the tax implications of cross-border transactions, foreign investments, overseas income, and international business operations. With increasing globalization, dealing with multiple tax jurisdictions makes it essential to comply with both Indian and international tax regulations.",
-    intro_p2: "Proper international tax planning helps avoid double taxation, minimizes tax risks, and ensures compliance with treaties. At Finvista, our experienced professionals help businesses and individuals navigate complex international tax regulations while maximizing tax efficiency.",
+    intro_p2: "Proper international tax planning helps avoid double taxation, minimizes tax risks, and ensures compliance with treaties. At FinvistaCA, our experienced professionals help businesses and individuals navigate complex international tax regulations while maximizing tax efficiency.",
     features: [
       { title: "DTAA Advisory", desc: "Expert guidance on Double Taxation Avoidance Agreements to prevent dual tax liabilities.", icon: "Globe" },
       { title: "Cross Border Tax Planning", desc: "Strategic structuring of cross-border transactions for optimal tax efficiency.", icon: "TrendingUp" },

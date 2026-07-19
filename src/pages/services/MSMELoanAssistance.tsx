@@ -101,7 +101,7 @@ export const MSMELoanAssistance: React.FC<MSMELoanAssistanceProps> = ({ service,
                 "a": "Manufacturing, retail, trading, healthcare, hospitality, education, technology, logistics, and many more."
           },
           {
-                "q": "Does Finvista help with compliance documentation?",
+                "q": "Does FinvistaCA help with compliance documentation?",
                 "a": "Yes. We assist in preparing financial statements, GST records, and other required documentation."
           }
     ]

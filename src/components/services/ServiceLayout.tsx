@@ -102,7 +102,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="info-card glass-panel">
-              <h3>Why Choose Finvista?</h3>
+              <h3>Why Choose FinvistaCA?</h3>
               <ul className="info-list">
                 <li><div className="list-icon"><BadgeCheck size={20} /></div><span>Years of Experience</span></li>
                 <li><div className="list-icon"><Users size={20} /></div><span>Expert Professional Team</span></li>
@@ -317,7 +317,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                 </Link>
                 <div className="cta-contact-info">
                   <span className="contact-item"><Phone size={18} /> +91 9908285223</span>
-                  <span className="contact-item"><Mail size={18} /> finvistaca@gmail.com</span>
+                  <span className="contact-item"><Mail size={18} /> finvistacaca@gmail.com</span>
                 </div>
               </div>
             </div>

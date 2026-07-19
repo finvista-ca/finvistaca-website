@@ -18,7 +18,7 @@ export const About: React.FC = () => {
           { label: 'Home', path: '/' },
           { label: 'About Us' }
         ]}
-        title="About Finvista"
+        title="About FinvistaCA"
         description="Delivering uncompromised financial precision, strategic foresight, and absolute compliance for over 15 years."
       />
 
@@ -29,7 +29,7 @@ export const About: React.FC = () => {
             <div className="overview-text">
               <h2 className="section-title">Our Legacy of Excellence</h2>
               <p className="overview-paragraph">
-                Finvista is a premier Chartered Accountancy firm committed to redefining modern financial services. With over 15 years of industry-leading experience, we have built a reputation on the pillars of integrity, technical mastery, and personalized client focus.
+                FinvistaCA is a premier Chartered Accountancy firm committed to redefining modern financial services. With over 15 years of industry-leading experience, we have built a reputation on the pillars of integrity, technical mastery, and personalized client focus.
               </p>
               <p className="overview-paragraph">
                 From intricate tax planning and rigorous auditing to GST compliance and strategic corporate advisory, our comprehensive suite of services is designed to empower businesses. We handle the complexities of the regulatory landscape, allowing our clients to focus on sustainable growth and innovation.
@@ -166,7 +166,7 @@ export const About: React.FC = () => {
           <div className="section-header text-center" style={{ marginBottom: '3rem' }}>
             <h2 className="section-title">Serving Clients Across India and Beyond</h2>
             <p className="section-subtitle mx-auto" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              Headquartered in Vijayawada, Andhra Pradesh, Finvista serves businesses, startups, SMEs, institutions, and individuals across multiple states in South India while also supporting clients throughout India and internationally.
+              Headquartered in Vijayawada, Andhra Pradesh, FinvistaCA serves businesses, startups, SMEs, institutions, and individuals across multiple states in South India while also supporting clients throughout India and internationally.
             </p>
           </div>
 
@@ -269,7 +269,7 @@ export const About: React.FC = () => {
                   <strong>Phone:</strong> +91 9908285223
                 </div>
                 <div className="contact-detail">
-                  <strong>Email:</strong> <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a>
+                  <strong>Email:</strong> <a href="mailto:finvistacaca@gmail.com">finvistacaca@gmail.com</a>
                 </div>
               </div>
 

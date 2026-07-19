@@ -12,7 +12,7 @@ export const ProjectFinance: React.FC<ProjectFinanceProps> = ({ service, related
     title: "Project Finance Assistance",
     intro_title: "Project Finance Assistance",
     intro_p1: "Transform Your Business Vision into Reality with Strategic Project Financing",
-    intro_p2: "Whether you're setting up a new venture, expanding existing operations, or undertaking large-scale infrastructure projects, Finvista helps you secure the right project financing solutions.",
+    intro_p2: "Whether you're setting up a new venture, expanding existing operations, or undertaking large-scale infrastructure projects, FinvistaCA helps you secure the right project financing solutions.",
     overview: "Project finance requires careful planning, financial analysis, and lender confidence. Our experts assist businesses in preparing project reports, evaluating funding options, and coordinating with banks and financial institutions to obtain financing for long-term projects.",
     features: [],
     benefits: [
@@ -59,10 +59,10 @@ export const ProjectFinance: React.FC<ProjectFinanceProps> = ({ service, related
       { question: "Is collateral required?", answer: "Collateral requirements vary depending on the lender, project size, and financing structure." },
       { question: "How long does the approval process take?", answer: "Approval timelines vary depending on documentation completeness and lender evaluation." },
       { question: "Can startups apply for project finance?", answer: "Yes, provided they have a viable business model, project feasibility, and meet lender criteria." },
-      { question: "Does Finvista prepare project reports?", answer: "Yes. We assist in preparing financial projections and project documentation." },
+      { question: "Does FinvistaCA prepare project reports?", answer: "Yes. We assist in preparing financial projections and project documentation." },
       { question: "Can multiple lenders finance one project?", answer: "Yes. Large projects may involve consortium or multiple lender financing." },
-      { question: "How does Finvista help?", answer: "We provide complete advisory, documentation, lender coordination, and end-to-end financing support." },
-      { question: "Does Finvista provide loans directly?", answer: "No. We assist clients in obtaining suitable financing from banks and financial institutions." }
+      { question: "How does FinvistaCA help?", answer: "We provide complete advisory, documentation, lender coordination, and end-to-end financing support." },
+      { question: "Does FinvistaCA provide loans directly?", answer: "No. We assist clients in obtaining suitable financing from banks and financial institutions." }
     ]
   };
 

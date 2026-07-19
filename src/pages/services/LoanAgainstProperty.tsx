@@ -13,7 +13,7 @@ export const LoanAgainstProperty: React.FC<LoanAgainstPropertyProps> = ({ servic
     intro_title: "Loan Against Property (LAP)",
     intro_p1: "Unlock the Value of Your Property",
     intro_p2: "Leverage your residential or commercial property to secure financing for business expansion, education, medical expenses, or other financial requirements.",
-    overview: "Finvista assists clients in obtaining loans against eligible properties through careful lender evaluation, documentation, and professional advisory support.",
+    overview: "FinvistaCA assists clients in obtaining loans against eligible properties through careful lender evaluation, documentation, and professional advisory support.",
     features: [],
     benefits: [
       { title: "Higher Eligibility", desc: "Higher loan eligibility", icon: "CheckCircle" },
@@ -55,7 +55,7 @@ export const LoanAgainstProperty: React.FC<LoanAgainstPropertyProps> = ({ servic
       { question: "How is the loan amount determined?", answer: "The sanctioned amount depends on the property's market value and lender policies." },
       { question: "Is property valuation compulsory?", answer: "Yes. Lenders conduct technical and legal evaluations before approving the loan." },
       { question: "Can existing LAP loans be transferred?", answer: "Yes. Balance transfer options may be available with better interest rates." },
-      { question: "Why choose Finvista?", answer: "We assist with property documentation, lender comparison, valuation coordination, and end-to-end loan processing." }
+      { question: "Why choose FinvistaCA?", answer: "We assist with property documentation, lender comparison, valuation coordination, and end-to-end loan processing." }
     ]
   };
 

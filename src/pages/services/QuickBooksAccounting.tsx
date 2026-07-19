@@ -12,7 +12,7 @@ export const QuickBooksAccounting: React.FC<QuickBooksAccountingProps> = ({ serv
     title: "QuickBooks Accounting Services",
     intro_title: "Efficient Financial Management",
     intro_p1: "QuickBooks is one of the world's most widely used accounting software solutions, helping businesses simplify bookkeeping, financial reporting, payroll, tax management, invoicing, and expense tracking.",
-    intro_p2: "Suitable for startups, consultants, and growing enterprises, QuickBooks provides powerful financial management tools. Finvista offers complete QuickBooks implementation, data migration, bookkeeping, and ongoing support.",
+    intro_p2: "Suitable for startups, consultants, and growing enterprises, QuickBooks provides powerful financial management tools. FinvistaCA offers complete QuickBooks implementation, data migration, bookkeeping, and ongoing support.",
     features: [
       { title: "Software Setup", desc: "Configuring QuickBooks Online (QBO) according to your specific industry needs.", icon: "Settings" },
       { title: "Expense Tracking", desc: "Connecting bank accounts and categorizing expenses for accurate tracking.", icon: "CreditCard" },

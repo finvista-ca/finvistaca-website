@@ -12,7 +12,7 @@ export const FSSAIRegistration: React.FC<FSSAIRegistrationProps> = ({ service, r
     title: "FSSAI Registration",
     intro_title: "Food Safety & Standards Authority",
     intro_p1: "FSSAI Registration is a mandatory license for every food business operator involved in the manufacturing, processing, packaging, storage, distribution, or sale of food products in India.",
-    intro_p2: "At Finvista, we assist businesses in obtaining Basic Registration, State License, and Central License based on their turnover, nature of business, and operational scale. Our experts manage the complete registration process, documentation, and compliance requirements.",
+    intro_p2: "At FinvistaCA, we assist businesses in obtaining Basic Registration, State License, and Central License based on their turnover, nature of business, and operational scale. Our experts manage the complete registration process, documentation, and compliance requirements.",
     features: [
       { title: "Basic Registration", desc: "For small food businesses with an annual turnover of up to Rs. 12 lakhs.", icon: "CheckCircle" },
       { title: "State License", desc: "For mid-sized businesses with a turnover between Rs. 12 lakhs and 20 crores.", icon: "Building" },

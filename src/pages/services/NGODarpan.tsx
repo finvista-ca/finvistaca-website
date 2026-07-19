@@ -12,7 +12,7 @@ export const NGODarpan: React.FC<NGODarpanProps> = ({ service, relatedServices }
     title: "NGO Darpan Registration",
     intro_title: "NITI Aayog Recognition",
     intro_p1: "NGO Darpan Registration is an online registration system managed by NITI Aayog that enables NGOs, Trusts, and Societies to establish credibility and become eligible for various government grants and schemes.",
-    intro_p2: "Registration creates a unique identification number that is mandatory for receiving assistance from Central Government Ministries. Finvista assists NGOs throughout the registration process, profile creation, and compliance guidance.",
+    intro_p2: "Registration creates a unique identification number that is mandatory for receiving assistance from Central Government Ministries. FinvistaCA assists NGOs throughout the registration process, profile creation, and compliance guidance.",
     features: [
       { title: "Profile Creation", desc: "Setting up a comprehensive and accurate profile on the Darpan Portal.", icon: "UserCheck" },
       { title: "Document Verification", desc: "Ensuring all trust deeds, society registrations, and PAN details are verified.", icon: "FileCheck" },

@@ -12,7 +12,7 @@ export const NRITaxationServices: React.FC<NRITaxationServicesProps> = ({ servic
     title: "NRI Taxation Services",
     intro_title: "Tax Solutions for Non-Residents",
     intro_p1: "Managing tax obligations as a Non-Resident Indian (NRI) can be complex due to varying residential status, foreign income, Indian-source income, capital gains, and Double Taxation Avoidance Agreements (DTAA).",
-    intro_p2: "Whether you earn rental income, sell property, receive investments, or maintain financial assets in India, proper tax planning is essential. Finvista offers specialized NRI Taxation Services to simplify compliance and optimize your tax liabilities both in India and abroad.",
+    intro_p2: "Whether you earn rental income, sell property, receive investments, or maintain financial assets in India, proper tax planning is essential. FinvistaCA offers specialized NRI Taxation Services to simplify compliance and optimize your tax liabilities both in India and abroad.",
     features: [
       { title: "Residential Status Check", desc: "Accurate determination of your residential status under FEMA and Income Tax Act.", icon: "UserCheck" },
       { title: "NRI Income Tax Returns", desc: "Filing of income tax returns for Indian-source income like rent, interest, or dividends.", icon: "FileText" },

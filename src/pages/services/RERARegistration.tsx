@@ -12,7 +12,7 @@ export const RERARegistration: React.FC<RERARegistrationProps> = ({ service, rel
     title: "RERA Registration",
     intro_title: "Real Estate Compliance",
     intro_p1: "The Real Estate (Regulation and Development) Act (RERA) was introduced to bring transparency, accountability, and efficiency to the real estate sector. Builders, developers, and agents are required to obtain RERA registration.",
-    intro_p2: "Finvista offers comprehensive RERA registration and compliance services for developers, housing projects, commercial projects, and real estate agents across India, ensuring complete compliance with RERA guidelines.",
+    intro_p2: "FinvistaCA offers comprehensive RERA registration and compliance services for developers, housing projects, commercial projects, and real estate agents across India, ensuring complete compliance with RERA guidelines.",
     features: [
       { title: "Project Registration", desc: "Mandatory registration of new real estate projects before marketing or selling.", icon: "Building" },
       { title: "Agent Registration", desc: "Official RERA registration for real estate agents and brokers.", icon: "Users" },

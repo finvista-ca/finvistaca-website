@@ -11,7 +11,7 @@ export const HomeLoanAssistance: React.FC<HomeLoanAssistanceProps> = ({ service,
   const pageData: ServicePageData = {
     title: "Home Loan Assistance",
     intro_title: "Helping You Own Your Dream Home with Expert Financial Guidance",
-    intro_p1: "Whether you're purchasing your first home, constructing a new property, or refinancing an existing loan, Finvista provides end-to-end assistance in securing the right home loan from leading banks and financial institutions.",
+    intro_p1: "Whether you're purchasing your first home, constructing a new property, or refinancing an existing loan, FinvistaCA provides end-to-end assistance in securing the right home loan from leading banks and financial institutions.",
     intro_p2: "Buying a home is one of the most significant financial decisions you'll make. Our experts help you compare lenders, assess eligibility, prepare documentation, and guide you throughout the loan approval process to make financing simple and hassle-free.",
     features: [], // Left empty intentionally as benefits are used primarily
     benefits: [
@@ -87,7 +87,7 @@ export const HomeLoanAssistance: React.FC<HomeLoanAssistanceProps> = ({ service,
                 "a": "Yes."
           },
           {
-                "q": "Can Finvista reduce my interest rate?",
+                "q": "Can FinvistaCA reduce my interest rate?",
                 "a": "We help identify lenders offering competitive terms."
           },
           {
@@ -115,7 +115,7 @@ export const HomeLoanAssistance: React.FC<HomeLoanAssistanceProps> = ({ service,
                 "a": "Apart from the loan, you may incur processing fees, legal verification charges, technical valuation fees, insurance, and registration expenses."
           },
           {
-                "q": "How can Finvista help?",
+                "q": "How can FinvistaCA help?",
                 "a": "We help evaluate eligibility, compare lenders, prepare documentation, coordinate with banks, and support you throughout the approval process."
           }
     ]

@@ -26,7 +26,7 @@ const INITIAL_MESSAGE: Message = {
   content: (
     <>
       <p>👋 Hello!</p>
-      <p>Welcome to Finvista Chartered Accountants.</p>
+      <p>Welcome to FinvistaCA Chartered Accountants.</p>
       <p>Type "Hi", "Hello", or "Hey" to begin.</p>
     </>
   )
@@ -76,28 +76,28 @@ const SERVICE_DATA: Record<string, { title: string; phone: string; list: string[
     phone: '8340814350',
     intro: 'Our Direct Tax experts can assist you with:',
     list: ['Income Tax Filing', 'Tax Planning', 'Tax Notices', 'Assessments', 'Advisory', 'Compliance'],
-    waMessage: 'Hello Finvista,\nI need assistance regarding Direct Taxation.'
+    waMessage: 'Hello FinvistaCA,\nI need assistance regarding Direct Taxation.'
   },
   '2️⃣ Goods & Services Tax (GST)': {
     title: 'GST',
     phone: '7993856920',
     intro: 'Our GST experts can assist you with:',
     list: ['GST Registration', 'GST Returns', 'GST Notices', 'GST Audit', 'GST Compliance', 'Advisory'],
-    waMessage: 'Hello Finvista,\nI need assistance regarding GST.'
+    waMessage: 'Hello FinvistaCA,\nI need assistance regarding GST.'
   },
   '3️⃣ ROC Compliance': {
     title: 'ROC Compliance',
     phone: '9908285223',
     intro: 'Our ROC specialists can assist you with:',
     list: ['Annual Filings', 'Company Compliance', 'Director Changes', 'LLP Compliance', 'ROC Notices'],
-    waMessage: 'Hello Finvista,\nI need assistance regarding ROC Compliance.'
+    waMessage: 'Hello FinvistaCA,\nI need assistance regarding ROC Compliance.'
   },
   '4️⃣ Business Registration & Other Services': {
     title: 'Business Registration',
     phone: '9581439002',
     intro: 'Our consultants can assist you with:',
     list: ['Proprietorship Registration', 'Partnership Firm', 'LLP Registration', 'Private Limited Company', 'MSME Registration', 'Startup Registration', 'NGO Registration', 'PAN/TAN', 'Digital Signature', 'Loan Advisory', 'Other Business Services'],
-    waMessage: 'Hello Finvista,\nI need assistance regarding Business Registration.'
+    waMessage: 'Hello FinvistaCA,\nI need assistance regarding Business Registration.'
   }
 };
 
@@ -295,7 +295,7 @@ export const VirtualAssistant: React.FC = () => {
               <div className="online-indicator"></div>
             </div>
             <div>
-              <h4>Finvista Assistant</h4>
+              <h4>FinvistaCA Assistant</h4>
               <p>Typically replies instantly</p>
             </div>
           </div>

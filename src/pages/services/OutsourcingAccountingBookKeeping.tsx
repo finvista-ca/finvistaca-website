@@ -12,7 +12,7 @@ export const OutsourcingAccountingBookKeeping: React.FC<OutsourcingAccountingBoo
     title: "Outsourcing Accounting & Book Keeping",
     intro_title: "Professional Financial Management",
     intro_p1: "Managing accounting and bookkeeping functions efficiently is essential for every business, regardless of its size or location. Outsourcing accounting services enables businesses to reduce operational costs, improve financial accuracy, and focus on their core activities.",
-    intro_p2: "Finvista provides comprehensive Accounting & Bookkeeping Outsourcing services for businesses in India and overseas. By leveraging secure cloud-based solutions and international accounting standards, we help businesses maintain accurate records and ensure regulatory compliance.",
+    intro_p2: "FinvistaCA provides comprehensive Accounting & Bookkeeping Outsourcing services for businesses in India and overseas. By leveraging secure cloud-based solutions and international accounting standards, we help businesses maintain accurate records and ensure regulatory compliance.",
     features: [
       { title: "General Ledger Maintenance", desc: "Accurate recording of day-to-day financial transactions and journal entries.", icon: "BookOpen" },
       { title: "Bank Reconciliation", desc: "Regular reconciliation of bank statements with accounting ledgers.", icon: "Landmark" },

@@ -11,7 +11,7 @@ export const StartupFundingAssistance: React.FC<StartupFundingAssistanceProps> =
   const pageData: ServicePageData = {
     title: "Startup Funding Assistance",
     intro_title: "Helping Innovative Ideas Secure the Right Capital",
-    intro_p1: "Whether you're launching a startup or scaling operations, Finvista assists in identifying suitable funding opportunities and preparing your business for investment or financing.",
+    intro_p1: "Whether you're launching a startup or scaling operations, FinvistaCA assists in identifying suitable funding opportunities and preparing your business for investment or financing.",
     intro_p2: "Our team supports startups through financial planning, documentation, compliance, and lender or investor readiness.",
     features: [], // Left empty intentionally as benefits are used primarily
     benefits: [
@@ -83,7 +83,7 @@ export const StartupFundingAssistance: React.FC<StartupFundingAssistanceProps> =
                 "a": "Not necessarily. However, many funding programs require a registered business entity."
           },
           {
-                "q": "Can Finvista prepare financial projections?",
+                "q": "Can FinvistaCA prepare financial projections?",
                 "a": "Yes. We assist with financial planning, cash flow projections, and investor-ready documentation."
           },
           {
@@ -99,7 +99,7 @@ export const StartupFundingAssistance: React.FC<StartupFundingAssistanceProps> =
                 "a": "Yes. We guide eligible businesses through Startup India registration and related compliance."
           },
           {
-                "q": "Does Finvista arrange investments?",
+                "q": "Does FinvistaCA arrange investments?",
                 "a": "We provide advisory and funding assistance but do not directly invest or guarantee funding."
           }
     ]

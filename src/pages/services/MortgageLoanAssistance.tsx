@@ -13,7 +13,7 @@ export const MortgageLoanAssistance: React.FC<MortgageLoanAssistanceProps> = ({ 
     intro_title: "Mortgage Loan Assistance",
     intro_p1: "Unlock Financial Flexibility Through Property-Backed Financing",
     intro_p2: "Utilize your property as collateral to access financing for business growth, investments, or personal financial requirements.",
-    overview: "Finvista provides expert guidance in securing mortgage loans by helping clients understand eligibility, prepare documentation, compare lenders, and complete the application process with confidence.",
+    overview: "FinvistaCA provides expert guidance in securing mortgage loans by helping clients understand eligibility, prepare documentation, compare lenders, and complete the application process with confidence.",
     features: [],
     benefits: [
       { title: "Higher Capacity", desc: "Higher borrowing capacity", icon: "CheckCircle" },
@@ -59,8 +59,8 @@ export const MortgageLoanAssistance: React.FC<MortgageLoanAssistanceProps> = ({ 
       { question: "Is insurance mandatory?", answer: "Some lenders may require property or loan insurance." },
       { question: "Can I transfer my existing mortgage loan?", answer: "Yes. Balance transfer options are available through many lenders." },
       { question: "What repayment tenures are available?", answer: "Tenures vary by lender and loan type." },
-      { question: "How does Finvista assist?", answer: "We coordinate documentation, lender selection, and complete application support." },
-      { question: "Does Finvista finance properties directly?", answer: "No. We provide advisory services only." }
+      { question: "How does FinvistaCA assist?", answer: "We coordinate documentation, lender selection, and complete application support." },
+      { question: "Does FinvistaCA finance properties directly?", answer: "No. We provide advisory services only." }
     ]
   };
 

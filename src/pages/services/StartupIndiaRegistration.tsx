@@ -12,7 +12,7 @@ export const StartupIndiaRegistration: React.FC<StartupIndiaRegistrationProps> =
     title: "Startup India Registration",
     intro_title: "DPIIT Recognition for Startups",
     intro_p1: "Startup India Registration enables eligible startups to receive recognition from the Department for Promotion of Industry and Internal Trade (DPIIT), unlocking a wide range of government benefits, tax exemptions, and funding opportunities.",
-    intro_p2: "Finvista assists entrepreneurs in obtaining Startup India recognition by evaluating eligibility, preparing documentation, filing applications, and providing end-to-end advisory support for compliance and fundraising readiness.",
+    intro_p2: "FinvistaCA assists entrepreneurs in obtaining Startup India recognition by evaluating eligibility, preparing documentation, filing applications, and providing end-to-end advisory support for compliance and fundraising readiness.",
     features: [
       { title: "Eligibility Evaluation", desc: "Checking if your business meets the innovative and scalable criteria for DPIIT.", icon: "Search" },
       { title: "Application Filing", desc: "Drafting the pitch deck and filing the DPIIT recognition application.", icon: "FileText" },

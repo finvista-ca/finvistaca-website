@@ -230,7 +230,7 @@ export const Navbar: React.FC = () => {
       <div className="navbar-container">
         <div className="logos">
           <Link to="/" className="logo-link" aria-label="Home">
-            <img src="/finvista-logo.jpeg" alt="Finvista" className="navbar-logo company-logo" fetchPriority="high" />
+            <img src="/finvista-logo.jpeg" alt="FinvistaCA" className="navbar-logo company-logo" fetchPriority="high" />
           </Link>
         </div>
 

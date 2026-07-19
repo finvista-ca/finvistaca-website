@@ -12,7 +12,7 @@ export const MSMEUdyamRegistration: React.FC<MSMEUdyamRegistrationProps> = ({ se
     title: "MSME Udyam Registration",
     intro_title: "Micro, Small & Medium Enterprises",
     intro_p1: "MSME Udyam Registration is a Government of India initiative that provides Micro, Small, and Medium Enterprises with official recognition and access to numerous financial and business benefits.",
-    intro_p2: "Finvista simplifies the entire Udyam Registration process for startups, manufacturers, service providers, and small businesses by assisting with eligibility assessment, Aadhaar authentication, and certificate generation.",
+    intro_p2: "FinvistaCA simplifies the entire Udyam Registration process for startups, manufacturers, service providers, and small businesses by assisting with eligibility assessment, Aadhaar authentication, and certificate generation.",
     features: [
       { title: "Eligibility Assessment", desc: "Determine your classification as a Micro, Small, or Medium enterprise.", icon: "BarChart" },
       { title: "Aadhaar Authentication", desc: "Seamless online registration using OTP-based Aadhaar verification.", icon: "Lock" },

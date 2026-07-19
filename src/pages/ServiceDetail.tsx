@@ -504,7 +504,7 @@ export const ServiceDetail: React.FC = () => {
                   <FileText size={18} /> Advisory Service Notice
                 </h3>
                 <p style={{ margin: 0, fontSize: '0.95rem', lineHeight: '1.6', opacity: 0.9, color: '#e2e8f0' }}>
-                  Please note that Finvista is a financial advisory firm, not a lending institution. We assist clients in obtaining loans through authorized banks and financial institutions by providing documentation support, eligibility assessment, financial advisory, compliance assistance, and end-to-end guidance. We do not directly provide or disburse loans.
+                  Please note that FinvistaCA is a financial advisory firm, not a lending institution. We assist clients in obtaining loans through authorized banks and financial institutions by providing documentation support, eligibility assessment, financial advisory, compliance assistance, and end-to-end guidance. We do not directly provide or disburse loans.
                 </p>
               </div>
             )}

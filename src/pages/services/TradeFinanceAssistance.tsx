@@ -13,7 +13,7 @@ export const TradeFinanceAssistance: React.FC<TradeFinanceAssistanceProps> = ({ 
     intro_title: "Trade Finance Assistance",
     intro_p1: "Supporting Domestic and International Business Transactions",
     intro_p2: "Strengthen your business operations with expert guidance on trade finance solutions designed to improve cash flow and facilitate secure transactions.",
-    overview: "Trade finance plays a vital role in enabling businesses to manage supplier payments, customer receivables, and cross-border transactions. Finvista helps businesses navigate suitable trade finance products offered by financial institutions.",
+    overview: "Trade finance plays a vital role in enabling businesses to manage supplier payments, customer receivables, and cross-border transactions. FinvistaCA helps businesses navigate suitable trade finance products offered by financial institutions.",
     features: [],
     benefits: [
       { title: "Improved Cash Flow", desc: "Improved cash flow", icon: "CheckCircle" },
@@ -59,8 +59,8 @@ export const TradeFinanceAssistance: React.FC<TradeFinanceAssistanceProps> = ({ 
       { question: "What documents are commonly required?", answer: "Purchase orders, invoices, shipping documents, IEC, GST registration, and financial statements." },
       { question: "How long does approval take?", answer: "Depends on lender requirements and documentation." },
       { question: "Can existing businesses switch lenders?", answer: "Yes." },
-      { question: "How does Finvista assist?", answer: "We help businesses choose suitable trade finance products and coordinate documentation." },
-      { question: "Does Finvista issue Letters of Credit?", answer: "No. These are issued by banks." }
+      { question: "How does FinvistaCA assist?", answer: "We help businesses choose suitable trade finance products and coordinate documentation." },
+      { question: "Does FinvistaCA issue Letters of Credit?", answer: "No. These are issued by banks." }
     ]
   };
 

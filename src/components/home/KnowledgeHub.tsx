@@ -22,7 +22,7 @@ export const KnowledgeHub: React.FC = () => {
       <div className="container">
         <div className="kh-header-wrapper">
           <div className="kh-header-top">
-            <h2 className="kh-newspaper-title">The Finvista Ledger</h2>
+            <h2 className="kh-newspaper-title">The FinvistaCA Ledger</h2>
             <div className="kh-date">Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
           </div>
           

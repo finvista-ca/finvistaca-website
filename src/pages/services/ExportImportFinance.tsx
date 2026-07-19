@@ -13,7 +13,7 @@ export const ExportImportFinance: React.FC<ExportImportFinanceProps> = ({ servic
     intro_title: "Export & Import Finance Assistance",
     intro_p1: "Empowering Global Business Through Smart Financial Solutions",
     intro_p2: "Expand your international business confidently with financing solutions tailored for importers and exporters.",
-    overview: "Finvista assists businesses in obtaining export and import finance facilities that improve liquidity, manage international transactions, and support global trade operations.",
+    overview: "FinvistaCA assists businesses in obtaining export and import finance facilities that improve liquidity, manage international transactions, and support global trade operations.",
     features: [],
     benefits: [
       { title: "International Financing", desc: "International trade financing", icon: "CheckCircle" },
@@ -58,9 +58,9 @@ export const ExportImportFinance: React.FC<ExportImportFinanceProps> = ({ servic
       { question: "Do banks require collateral?", answer: "Requirements vary by lender and loan product." },
       { question: "Can export incentives be combined with financing?", answer: "Yes, depending on eligibility and government policies." },
       { question: "What documents are needed?", answer: "IEC, GST registration, invoices, shipping documents, financial statements, and KYC." },
-      { question: "Does Finvista assist with documentation?", answer: "Yes." },
-      { question: "Does Finvista provide export loans directly?", answer: "No." },
-      { question: "How does Finvista help?", answer: "We simplify financing, documentation, and lender coordination." }
+      { question: "Does FinvistaCA assist with documentation?", answer: "Yes." },
+      { question: "Does FinvistaCA provide export loans directly?", answer: "No." },
+      { question: "How does FinvistaCA help?", answer: "We simplify financing, documentation, and lender coordination." }
     ]
   };
 

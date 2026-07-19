@@ -35,7 +35,7 @@ const handleSubmit = async (
 
   try {
     const response = await fetch(
-      "https://finvistaca-backend-ebon.vercel.app/api/contact",
+      "https://finvistacaca-backend-ebon.vercel.app/api/contact",
       {
         method: "POST",
         headers: {
@@ -71,7 +71,7 @@ const handleSubmit = async (
   const branchList = [
     { 
       name: 'Kakinada', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Kakinada',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Kakinada',
       address: (
         <>
           2-34-8/A, 1st Floor,<br />
@@ -83,7 +83,7 @@ const handleSubmit = async (
     },
     { 
       name: 'Bobbili', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Bobbili',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Bobbili',
       address: (
         <>
           33-105, Near Sai Ganapathi Theatre,<br />
@@ -94,7 +94,7 @@ const handleSubmit = async (
     },
     {
       name: 'Hyderabad',
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Hyderabad',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Hyderabad',
       address: (
         <>
           Plot 854, H No 6-14/2/1,<br />
@@ -105,7 +105,7 @@ const handleSubmit = async (
     },
     { 
       name: 'Visakhapatnam', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Visakhapatnam',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Visakhapatnam',
       address: (
         <>
           Guru Nivas, D.No: 50-53-6/E,<br />
@@ -117,7 +117,7 @@ const handleSubmit = async (
     },
     { 
       name: 'Parvathipuram', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Parvathipuram',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Parvathipuram',
       address: (
         <>
           D.No. 1-1,<br />
@@ -131,7 +131,7 @@ const handleSubmit = async (
     },
     { 
       name: 'Peddapuram', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Peddapuram',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Peddapuram',
       address: (
         <>
           21-1-19/A,<br />
@@ -144,7 +144,7 @@ const handleSubmit = async (
     },
     { 
       name: 'Rayagada (Odisha)', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Rayagada',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Rayagada',
       address: (
         <>
           Indira Nagar,<br />
@@ -185,7 +185,7 @@ const handleSubmit = async (
                 <h3>Vijayawada</h3>
                 <div className="info-items">
                   <a 
-                    href="https://www.google.com/maps/search/?api=1&query=Finvista+Chartered+Accountants+Vijayawada" 
+                    href="https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Vijayawada" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="info-item"
@@ -210,7 +210,7 @@ const handleSubmit = async (
                   <div className="info-item">
                     <div className="info-icon"><Mail size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
-                      <p><a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a></p>
+                      <p><a href="mailto:finvistacaca@gmail.com">finvistacaca@gmail.com</a></p>
                     </div>
                   </div>
                   <div className="info-item">

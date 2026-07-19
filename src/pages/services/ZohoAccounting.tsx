@@ -12,7 +12,7 @@ export const ZohoAccounting: React.FC<ZohoAccountingProps> = ({ service, related
     title: "ZOHO Accounting Services",
     intro_title: "Expert Zoho Books Implementation",
     intro_p1: "Zoho Books is one of the leading cloud-based accounting platforms designed to simplify financial management for growing businesses. It offers powerful features such as invoicing, expense management, and workflow automation.",
-    intro_p2: "Finvista provides professional Zoho Books implementation, customization, migration, bookkeeping, and ongoing support. Our team ensures seamless utilization of Zoho Books to streamline your accounting operations and improve productivity.",
+    intro_p2: "FinvistaCA provides professional Zoho Books implementation, customization, migration, bookkeeping, and ongoing support. Our team ensures seamless utilization of Zoho Books to streamline your accounting operations and improve productivity.",
     features: [
       { title: "Zoho Setup", desc: "Complete configuration of Zoho Books tailored to your business structure.", icon: "Settings" },
       { title: "Data Migration", desc: "Secure migration of historical financial data from legacy accounting systems.", icon: "Database" },

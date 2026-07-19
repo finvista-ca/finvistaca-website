@@ -100,7 +100,7 @@ export const WorkingCapitalLoans: React.FC<WorkingCapitalLoansProps> = ({ servic
                 "a": "Yes. We can assist in evaluating refinancing or restructuring opportunities where appropriate."
           },
           {
-                "q": "How does Finvista help?",
+                "q": "How does FinvistaCA help?",
                 "a": "We assist in documentation, lender comparison, financial assessment, and application support."
           }
     ]

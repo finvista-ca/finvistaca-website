@@ -12,7 +12,7 @@ export const NGORegistration: React.FC<NGORegistrationProps> = ({ service, relat
     title: "NGO Registration",
     intro_title: "Create Meaningful Social Impact",
     intro_p1: "Non-Governmental Organizations (NGOs) play a vital role in addressing social, educational, environmental, and healthcare initiatives. Registering an NGO provides legal identity, operational transparency, and greater opportunities.",
-    intro_p2: "NGOs may be established as a Trust, Society, or Section 8 Company. Finvista assists individuals and institutions in selecting the most suitable structure and provides complete registration and advisory services.",
+    intro_p2: "NGOs may be established as a Trust, Society, or Section 8 Company. FinvistaCA assists individuals and institutions in selecting the most suitable structure and provides complete registration and advisory services.",
     features: [
       { title: "Structure Advisory", desc: "Consultation to choose between Trust, Society, or Section 8 Company.", icon: "Search" },
       { title: "Complete Registration", desc: "End-to-end handling of the chosen incorporation process.", icon: "CheckCircle" },

@@ -12,7 +12,7 @@ export const PayrollManagement: React.FC<PayrollManagementProps> = ({ service, r
     title: "Payroll Management",
     intro_title: "End-to-End Payroll Solutions",
     intro_p1: "Efficient payroll management is essential for maintaining employee satisfaction and ensuring compliance with labor laws, income tax regulations, and statutory requirements.",
-    intro_p2: "Managing salaries, deductions, reimbursements, PF, ESI, professional tax, and TDS can be time-consuming and prone to errors. Finvista offers end-to-end Payroll Management Services that automate processing and ensure complete confidentiality.",
+    intro_p2: "Managing salaries, deductions, reimbursements, PF, ESI, professional tax, and TDS can be time-consuming and prone to errors. FinvistaCA offers end-to-end Payroll Management Services that automate processing and ensure complete confidentiality.",
     features: [
       { title: "Salary Processing", desc: "Accurate calculation of monthly salaries, bonuses, and reimbursements.", icon: "Banknote" },
       { title: "PF & ESI Compliance", desc: "Calculation, deduction, and timely filing of Provident Fund and ESI contributions.", icon: "ShieldCheck" },

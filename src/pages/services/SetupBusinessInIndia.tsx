@@ -12,7 +12,7 @@ export const SetupBusinessInIndia: React.FC<SetupBusinessInIndiaProps> = ({ serv
     title: "Setup Business in India",
     intro_title: "Foreign Direct Investment & Expansion",
     intro_p1: "India has emerged as one of the world's fastest-growing economies, offering significant opportunities for foreign investors, multinational corporations, and entrepreneurs seeking rapid market expansion.",
-    intro_p2: "Establishing a business in India requires careful planning, entity selection, and compliance with FEMA, RBI, Companies Act, and Income Tax provisions. Finvista provides complete, seamless assistance for foreign entities setting up operations in India.",
+    intro_p2: "Establishing a business in India requires careful planning, entity selection, and compliance with FEMA, RBI, Companies Act, and Income Tax provisions. FinvistaCA provides complete, seamless assistance for foreign entities setting up operations in India.",
     features: [
       { title: "Entity Selection", desc: "Advising on the best structure: Subsidiary, Branch Office, or Liaison Office.", icon: "Building" },
       { title: "Company Incorporation", desc: "End-to-end registration of the Indian entity with the Ministry of Corporate Affairs.", icon: "CheckCircle" },

@@ -13,7 +13,7 @@ export const AgricultureLoanAssistance: React.FC<AgricultureLoanAssistanceProps>
     intro_title: "Agriculture Loan Assistance",
     intro_p1: "Supporting Farmers and Agribusinesses with Smart Financial Solutions",
     intro_p2: "Empowering agricultural growth through professional financial advisory and financing assistance.",
-    overview: "Finvista assists farmers, agribusinesses, and rural entrepreneurs in identifying suitable agricultural financing options, government-supported schemes, and institutional loans.",
+    overview: "FinvistaCA assists farmers, agribusinesses, and rural entrepreneurs in identifying suitable agricultural financing options, government-supported schemes, and institutional loans.",
     features: [],
     benefits: [
       { title: "Agricultural Advisory", desc: "Agricultural finance advisory", icon: "CheckCircle" },
@@ -55,7 +55,7 @@ export const AgricultureLoanAssistance: React.FC<AgricultureLoanAssistanceProps>
       { question: "Can I finance agricultural machinery?", answer: "Yes. Tractors, harvesters, irrigation systems, and other farm equipment can often be financed." },
       { question: "Is collateral always required?", answer: "Not always. Some agricultural loan schemes offer collateral-free financing within prescribed limits." },
       { question: "What documents are commonly required?", answer: "Land records, identity proof, bank statements, cultivation details, and other lender-specific documents." },
-      { question: "How does Finvista help?", answer: "We help identify the most suitable agricultural finance schemes, prepare documentation, and coordinate with financial institutions." }
+      { question: "How does FinvistaCA help?", answer: "We help identify the most suitable agricultural finance schemes, prepare documentation, and coordinate with financial institutions." }
     ]
   };
 

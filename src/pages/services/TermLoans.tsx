@@ -12,7 +12,7 @@ export const TermLoans: React.FC<TermLoansProps> = ({ service, relatedServices }
     title: "Term Loan Assistance",
     intro_title: "Structured Financing for Long-Term Business Growth",
     intro_p1: "Secure long-term financing for expansion, infrastructure, equipment, or major business investments.",
-    intro_p2: "Finvista helps businesses evaluate loan options, prepare documentation, and complete the financing process with confidence.",
+    intro_p2: "FinvistaCA helps businesses evaluate loan options, prepare documentation, and complete the financing process with confidence.",
     features: [], // Left empty intentionally as benefits are used primarily
     benefits: [
           {
@@ -101,7 +101,7 @@ export const TermLoans: React.FC<TermLoansProps> = ({ service, relatedServices }
                 "a": "For larger financing requirements, lenders may request a detailed project report and financial projections."
           },
           {
-                "q": "Why should I choose Finvista?",
+                "q": "Why should I choose FinvistaCA?",
                 "a": "We provide strategic guidance, documentation support, lender comparisons, and end-to-end assistance throughout the financing process."
           }
     ]

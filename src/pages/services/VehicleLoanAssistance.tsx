@@ -12,7 +12,7 @@ export const VehicleLoanAssistance: React.FC<VehicleLoanAssistanceProps> = ({ se
     title: "Vehicle Loan Assistance",
     intro_title: "Vehicle Loan Assistance",
     intro_p1: "Drive Your Dreams Forward with the Right Financing",
-    intro_p2: "Whether you're purchasing your first car or upgrading to a new vehicle, Finvista helps you secure competitive vehicle financing through trusted banks and financial institutions.",
+    intro_p2: "Whether you're purchasing your first car or upgrading to a new vehicle, FinvistaCA helps you secure competitive vehicle financing through trusted banks and financial institutions.",
     overview: "Buying a vehicle is a significant investment, and choosing the right financing option is just as important. Our experts guide you through lender comparisons, documentation, eligibility assessment, and loan processing to ensure a smooth borrowing experience.",
     features: [],
     benefits: [
@@ -56,7 +56,7 @@ export const VehicleLoanAssistance: React.FC<VehicleLoanAssistanceProps> = ({ se
       { question: "What documents are required?", answer: "Common documents include identity proof, address proof, income proof, bank statements, and vehicle quotation." },
       { question: "Can I repay the loan early?", answer: "Most lenders allow foreclosure or prepayment, subject to applicable terms and charges." },
       { question: "How long does loan approval take?", answer: "Approval timelines depend on documentation and lender processing, but many loans are processed quickly." },
-      { question: "How does Finvista assist?", answer: "We compare lenders, guide you through documentation, negotiate competitive loan options, and support you until disbursement." }
+      { question: "How does FinvistaCA assist?", answer: "We compare lenders, guide you through documentation, negotiate competitive loan options, and support you until disbursement." }
     ]
   };
 

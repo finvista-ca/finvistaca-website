@@ -12,7 +12,7 @@ export const MachineryEquipmentLoan: React.FC<MachineryEquipmentLoanProps> = ({ 
     title: "Machinery & Equipment Loan Assistance",
     intro_title: "Machinery & Equipment Loan Assistance",
     intro_p1: "Power Business Growth Through Smart Asset Financing",
-    intro_p2: "Acquire the machinery and equipment your business needs with expert financing guidance from Finvista.",
+    intro_p2: "Acquire the machinery and equipment your business needs with expert financing guidance from FinvistaCA.",
     overview: "Whether you're expanding manufacturing capacity or upgrading technology, we assist businesses in obtaining suitable financing for machinery and equipment purchases.",
     features: [],
     benefits: [
@@ -55,7 +55,7 @@ export const MachineryEquipmentLoan: React.FC<MachineryEquipmentLoanProps> = ({ 
       { question: "Can imported machinery also be financed?", answer: "Yes. Many lenders finance imported machinery subject to documentation." },
       { question: "How is repayment structured?", answer: "Repayment is generally made through fixed monthly installments over an agreed tenure." },
       { question: "Are subsidies available?", answer: "Certain industries and government schemes may provide financial assistance or subsidies." },
-      { question: "How can Finvista assist?", answer: "We help identify suitable lenders, prepare project reports, and manage the documentation process." }
+      { question: "How can FinvistaCA assist?", answer: "We help identify suitable lenders, prepare project reports, and manage the documentation process." }
     ]
   };
 

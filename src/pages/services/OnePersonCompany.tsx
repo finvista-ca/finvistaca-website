@@ -32,7 +32,7 @@ export const OnePersonCompany: React.FC<OnePersonCompanyProps> = ({ service, rel
       { q: "How long does this process typically take?", a: "The timeline varies based on government processing times and document readiness, but we ensure the fastest turnaround possible by reviewing all documents meticulously before submission." },
       { q: "What documents are required to initiate the service?", a: "We typically require standard KYC documents (PAN, Aadhaar) along with specific business proofs. Our team provides a tailored checklist upon consultation." },
       { q: "Is the entire process online?", a: "Yes, the process is completely digital. You can submit your documents online, and we will handle all filings and communications remotely for your convenience." },
-      { q: "Are there any hidden charges?", a: "No, Finvista believes in complete transparency. Our quoted professional fees are inclusive of all standard advisory, and any government fees are communicated upfront." },
+      { q: "Are there any hidden charges?", a: "No, FinvistaCA believes in complete transparency. Our quoted professional fees are inclusive of all standard advisory, and any government fees are communicated upfront." },
       { q: "Will I get ongoing support after completion?", a: "Absolutely! Our team provides continuous support and updates on any compliance or regulatory changes affecting your business." }
     ]
   };

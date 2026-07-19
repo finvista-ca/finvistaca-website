@@ -47,10 +47,10 @@ export const Footer: React.FC = () => {
             
             {/* COLUMN 1: Overview & Trust */}
             <div className="footer-col">
-              <img src="/finvista-logo.jpeg" alt="Finvista" className="footer-logo company-logo" fetchPriority="low" loading="lazy" />
+              <img src="/finvista-logo.jpeg" alt="FinvistaCA" className="footer-logo company-logo" fetchPriority="low" loading="lazy" />
             
             <p className="footer-desc">
-              Finvista Chartered Accountants is a full-service financial advisory and chartered accountancy firm helping businesses, startups, entrepreneurs, and individuals with taxation, compliance, audits, registrations, accounting, and strategic financial consulting across multiple locations.
+              FinvistaCA Chartered Accountants is a full-service financial advisory and chartered accountancy firm helping businesses, startups, entrepreneurs, and individuals with taxation, compliance, audits, registrations, accounting, and strategic financial consulting across multiple locations.
             </p>
             
             <ul className="footer-trust-list">
@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
         {/* BOTTOM BAR */}
         <div className="footer-bottom-premium">
           <div className="footer-bottom-left">
-            <p>&copy; 2026 Finvista Chartered Accountants.<br className="mobile-break" /> All Rights Reserved.</p>
+            <p>&copy; 2026 FinvistaCA Chartered Accountants.<br className="mobile-break" /> All Rights Reserved.</p>
           </div>
           <div className="footer-bottom-center">
             <p>Accounting for Success</p>

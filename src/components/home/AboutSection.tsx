@@ -7,9 +7,9 @@ export const AboutSection: React.FC = () => {
     <section className="section about-section">
       <div className="container">
         <div className="about-content">
-          <h2 className="section-title">About Finvista</h2>
+          <h2 className="section-title">About FinvistaCA</h2>
           <p className="about-desc">
-            With over 15 years of industry-leading experience, Finvista stands as a pillar of trust and professional excellence in the field of Chartered Accountancy. We specialize in delivering meticulous compliance, robust auditing, and strategic financial advisory to a diverse portfolio of clients ranging from innovative startups to established enterprises.
+            With over 15 years of industry-leading experience, FinvistaCA stands as a pillar of trust and professional excellence in the field of Chartered Accountancy. We specialize in delivering meticulous compliance, robust auditing, and strategic financial advisory to a diverse portfolio of clients ranging from innovative startups to established enterprises.
           </p>
           <p className="about-desc">
             Our firm is built on the unwavering commitment to ethical practices, up-to-date regulatory knowledge, and personalized client success.

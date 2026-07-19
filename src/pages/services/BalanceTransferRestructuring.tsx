@@ -13,7 +13,7 @@ export const BalanceTransferRestructuring: React.FC<BalanceTransferRestructuring
     intro_title: "Balance Transfer & Loan Restructuring Advisory",
     intro_p1: "Optimize Your Existing Loans with Smarter Financial Strategies",
     intro_p2: "Reduce borrowing costs and improve financial flexibility through expert guidance on loan balance transfers and restructuring options.",
-    overview: "If you're paying high interest rates or struggling with existing repayment terms, Finvista helps evaluate better financing alternatives offered by banks and financial institutions.",
+    overview: "If you're paying high interest rates or struggling with existing repayment terms, FinvistaCA helps evaluate better financing alternatives offered by banks and financial institutions.",
     features: [],
     benefits: [
       { title: "Lower Interest", desc: "Lower interest rate guidance", icon: "CheckCircle" },
@@ -59,8 +59,8 @@ export const BalanceTransferRestructuring: React.FC<BalanceTransferRestructuring
       { question: "How is eligibility assessed?", answer: "Based on repayment history, income, outstanding balance, and credit profile." },
       { question: "Will new documentation be required?", answer: "Yes." },
       { question: "Can self-employed borrowers apply?", answer: "Yes." },
-      { question: "How does Finvista help?", answer: "We compare lenders and recommend suitable restructuring options." },
-      { question: "Does Finvista guarantee lower interest rates?", answer: "No. Final approval rests with the lending institution." }
+      { question: "How does FinvistaCA help?", answer: "We compare lenders and recommend suitable restructuring options." },
+      { question: "Does FinvistaCA guarantee lower interest rates?", answer: "No. Final approval rests with the lending institution." }
     ]
   };
 
