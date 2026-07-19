@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import { MapPin, ArrowRight } from 'lucide-react';
 import mapData from '../../data/mapData.json';
 import './RegionalMap.css';
@@ -26,7 +27,7 @@ export const RegionalMap: React.FC = () => {
   const { paths, markers } = mapData as any;
 
   // Staggered animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -34,7 +35,7 @@ export const RegionalMap: React.FC = () => {
     }
   };
 
-  const pathVariants = {
+  const pathVariants: Variants = {
     hidden: { pathLength: 0, fillOpacity: 0 },
     visible: { 
       pathLength: 1, 
@@ -43,7 +44,7 @@ export const RegionalMap: React.FC = () => {
     }
   };
 
-  const mutedPathVariants = {
+  const mutedPathVariants: Variants = {
     hidden: { pathLength: 0, fillOpacity: 0 },
     visible: { 
       pathLength: 1, 
@@ -52,7 +53,7 @@ export const RegionalMap: React.FC = () => {
     }
   };
 
-  const pinVariants = {
+  const pinVariants: Variants = {
     hidden: { opacity: 0, scale: 0, y: 10 },
     visible: { 
       opacity: 1, 
@@ -62,12 +63,12 @@ export const RegionalMap: React.FC = () => {
     }
   };
 
-  const labelVariants = {
+  const labelVariants: Variants = {
     hidden: { opacity: 0, x: -10 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.4 } }
   };
 
-  const routeLineVariants = {
+  const routeLineVariants: Variants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: { 
       pathLength: 1, 

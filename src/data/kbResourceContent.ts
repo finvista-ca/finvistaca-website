@@ -14,134 +14,591 @@ export const kbResourceContent: Record<string, KbResource> = {
     "type": "table",
     "data": [
       [
-        "Individuals"
+            "1. In case of an Individual (resident or non-resident) or HUF or Association of Person or Body of Individual or any other artificial juridical person"
       ],
       [
-        "(Other than resident senior and super senior citizen)"
+            "Individuals"
       ],
       [
-        "Net Income Range",
-        "Rate of Income-tax"
+            "(Other than resident senior and super senior citizen)"
       ],
       [
-        "Assessment Year 2026-27",
-        "Assessment Year 2025-26"
+            "Net Income Range",
+            "Assessment Year 2026-27",
+            "Assessment Year 2025-26"
       ],
       [
-        "Up to Rs. 2,50,000",
-        "-",
-        "-"
+            "Up to Rs. 2,50,000",
+            "-",
+            "-"
       ],
       [
-        "Rs. 2,50,000 to Rs. 5,00,000",
-        "5%",
-        "5%"
+            "Rs. 2,50,000 to Rs. 5,00,000",
+            "5%",
+            "5%"
       ],
       [
-        "Rs. 5,00,000 to Rs. 10,00,000",
-        "20%",
-        "20%"
+            "Rs. 5,00,000 to Rs. 10,00,000",
+            "20%",
+            "20%"
       ],
       [
-        "Above Rs. 10,00,000",
-        "30%",
-        "30%"
+            "Above Rs. 10,00,000",
+            "30%",
+            "30%"
       ],
       [
-        "Resident Senior Citizen"
+            "Resident Senior Citizen"
       ],
       [
-        "(who is 60 years or more but less than 80 years at any time during the previous year)"
+            "(who is 60 years or more but less than 80 years at any time during the previous year)"
       ],
       [
-        "Net Income Range",
-        "Rate of Income-tax"
+            "Net Income Range",
+            "Assessment Year 2026-27",
+            "Assessment Year 2025-26"
       ],
       [
-        "Assessment Year 2026-27",
-        "Assessment Year 2025-26"
+            "Up to Rs. 3,00,000",
+            "-",
+            "-"
       ],
       [
-        "Up to Rs. 3,00,000",
-        "-",
-        "-"
+            "Rs. 3,00,000 to Rs. 5,00,000",
+            "5%",
+            "5%"
       ],
       [
-        "Rs. 3,00,000 to Rs. 5,00,000",
-        "5%",
-        "5%"
+            "Rs. 5,00,000 to Rs. 10,00,000",
+            "20%",
+            "20%"
       ],
       [
-        "Rs. 5,00,000 to Rs. 10,00,000",
-        "20%",
-        "20%"
+            "Above Rs. 10,00,000",
+            "30%",
+            "30%"
       ],
       [
-        "Above Rs. 10,00,000",
-        "30%",
-        "30%"
+            "Resident Super Senior Citizen"
       ],
       [
-        "Resident Super Senior Citizen"
+            "(who is 80 years or more at any time during the previous year)"
       ],
       [
-        "(who is 80 years or more at any time during the previous year)"
+            "Net Income Range",
+            "Assessment Year 2026-27",
+            "Assessment Year 2025-26"
       ],
       [
-        "Net Income Range",
-        "Rate of Income-tax"
+            "Up to Rs. 5,00,000",
+            "-",
+            "-"
       ],
       [
-        "Assessment Year 2026-27",
-        "Assessment Year 2025-26"
+            "Rs. 5,00,000 to Rs. 10,00,000",
+            "20%",
+            "20%"
       ],
       [
-        "Up to Rs. 5,00,000",
-        "-",
-        "-"
+            "Above Rs. 10,00,000",
+            "30%",
+            "30%"
       ],
       [
-        "Rs. 5,00,000 to Rs. 10,00,000",
-        "20%",
-        "20%"
+            "Hindu Undivided Family (Including AOP, BOI and Artificial Juridical Person)"
       ],
       [
-        "Above Rs. 10,00,000",
-        "30%",
-        "30%"
+            "Net Income Range",
+            "Assessment Year 2025-26",
+            "Assessment Year 2024-25"
       ],
       [
-        "Hindu Undivided Family (Including AOP, BOI and Artificial Juridical Person)"
+            "Up to Rs. 2,50,000",
+            "-",
+            "-"
       ],
       [
-        "Net Income Range",
-        "Rate of Income-tax"
+            "Rs. 2,50,000 to Rs. 5,00,000",
+            "5%",
+            "5%"
       ],
       [
-        "Assessment Year 2025-26",
-        "Assessment Year 2024-25"
+            "Rs. 5,00,000 to Rs. 10,00,000",
+            "20%",
+            "20%"
       ],
       [
-        "Up to Rs. 2,50,000",
-        "-",
-        "-"
+            "Above Rs. 10,00,000",
+            "30%",
+            "30%"
       ],
       [
-        "Rs. 2,50,000 to Rs. 5,00,000",
-        "5%",
-        "5%"
+            "Add:"
       ],
       [
-        "Rs. 5,00,000 to Rs. 10,00,000",
-        "20%",
-        "20%"
+            "a. Surcharge : Surcharge is levied on the amount of income-tax at following rates if total income of an assessee exceeds specified limits:-"
       ],
       [
-        "Above Rs. 10,00,000",
-        "30%",
-        "30%"
+            "Range of Income",
+            "Range of Income",
+            "Range of Income",
+            "Range of Income"
+      ],
+      [
+            "Rs. 50 Lakhs to Rs. 1 Crore",
+            "Rs. 1 Crore to Rs. 2 Crores",
+            "Rs. 2 Crores to Rs. 5 Crores",
+            "above Rs. 5 crore"
+      ],
+      [
+            "10%",
+            "15%",
+            "25%",
+            "37%"
+      ],
+      [
+            "Note:"
+      ],
+      [
+            "(1) The enhanced surcharge of 25% & 37%, as the case may be, is not levied, on dividend income or income chargeable to tax under sections 111A, 112, 112A and 115AD(1)(b). Hence, the maximum rate of surcharge on tax payable on such incomes shall be 15%."
+      ],
+      [
+            "(2) The surcharge rate for AOP with all members as a company, shall be capped at 15%."
+      ],
+      [
+            "(3) The surcharge rate is nil if the total income of a 'specified fund' as referred to in section 10(4D) includes any income in respect of securities as given under section 115AD(1)(a)."
+      ],
+      [
+            "Marginal relief is available from surcharge in following manner-"
+      ],
+      [
+            "i. in case where net income exceeds Rs. 50 lakh but doesn't exceed Rs. 1 Crore, the amount payable as income tax and surcharge shall not exceed the total amount payable as income tax on total income of Rs 50 Lakh by more than the amount of income that exceeds Rs 50 Lakhs."
+      ],
+      [
+            "ii. in case where net income exceeds Rs. 1 crore but doesn't exceed Rs. 2 crore, marginal relief shall be available from surcharge in such a manner that the amount payable as income tax and surcharge shall not exceed the total amount payable as income-tax on total income of Rs. 1 crore by more than the amount of income that exceeds Rs. 1 crore."
+      ],
+      [
+            "iii. in case where net income exceeds Rs. 2 crores but doesn't exceed Rs. 5 crores, marginal relief shall be available from surcharge in such a manner that the amount payable as income tax and surcharge shall not exceed the total amount payable as income-tax on total income of Rs. 2 crores by more than the amount of income that exceeds Rs. 2 crores."
+      ],
+      [
+            "iv. in case where net income exceeds Rs. 5 crores, marginal relief shall be available from surcharge in such a manner that the amount payable as income tax and surcharge shall not exceed the total amount payable as income-tax on total income of Rs. 5 crores by more than the amount of income that exceeds Rs. 5 crores."
+      ],
+      [
+            "b. Health and Education Cess : Health and Education Cess is levied at the rate of 4% on the amount of income-tax plus surcharge."
+      ],
+      [
+            "Notes:"
+      ],
+      [
+            "(1) The Health and Education Cess is nil if the total income of a 'specified fund' as referred to section 10(4D) includes any income in respect of securities as given under section 115AD(1)(a)."
+      ],
+      [
+            "(2) A resident individual (whose net income does not exceed Rs. 5,00,000) can avail rebate under section 87A. It is deductible from income-tax before calculating education cess. The amount of rebate is 100 per cent of income-tax or Rs. 12,500, whichever is less."
+      ],
+      [
+            "Alternate Minimum Tax (AMT)"
+      ],
+      [
+            "An individual is liable to pay Alternate Minimum Tax where tax payable by him, on his total income computed as per normal provisions of the Act, is less than 18.5% of 'adjusted total income'. In such a case the 'adjusted total income' is taken as income of such individual and he shall be liable to pay tax at the rate of 18.5% of such 'adjusted total income'."
+      ],
+      [
+            "However, AMT is levied at the rate of 9% (plus surcharge and cess as applicable) in case of an assessee other than a company, being a unit of an International Financial Services Centre and deriving its income solely in convertible foreign exchange."
+      ],
+      [
+            "1.1. Special tax Rate for Individual, HUF, AOP, BOI or AJP"
+      ],
+      [
+            "The Finance Act 2020 inserted Section 115BAC, with effect from the assessment year 2021-22, to provide for an alternative regime providing for lower tax rates in the case of an individual or a Hindu undivided family (HUF). The Finance Act, 2023 extends the scope of this regime to AOP, BOI, and AJP as well and makes it a default tax regime. However, an assessee has to forego various exemptions and deductions for claiming the benefit of reduced tax rates under this regime."
+      ],
+      [
+            "The tax rates under the this regime are as under:"
+      ],
+      [
+            "For Assessment Year 2025-26:"
+      ],
+      [
+            "Net Income Range",
+            "Tax rate"
+      ],
+      [
+            "Upto Rs. 3,00,000",
+            "Nil"
+      ],
+      [
+            "From Rs. 3,00,001 to Rs. 7,00,000",
+            "5%"
+      ],
+      [
+            "From Rs. 7,00,001 to Rs.10,00,000",
+            "10%"
+      ],
+      [
+            "From Rs. 10,00,001 to Rs. 12,00,000",
+            "15%"
+      ],
+      [
+            "From Rs. 12,00,001 to Rs. 15,00,000",
+            "20%"
+      ],
+      [
+            "Above Rs. 15,00,000",
+            "30%"
+      ],
+      [
+            "For Assessment Year 2026-27:"
+      ],
+      [
+            "Net Income Range",
+            "Tax rate"
+      ],
+      [
+            "Upto Rs. 4,00,000",
+            "Nil"
+      ],
+      [
+            "From Rs. 4,00,001 to Rs. 8,00,000",
+            "5%"
+      ],
+      [
+            "From Rs. 8,00,001 to Rs. 12,00,000",
+            "10%"
+      ],
+      [
+            "From Rs. 12,00,001 to Rs. 16,00,000",
+            "15%"
+      ],
+      [
+            "From Rs. 16,00,001 to Rs. 20,00,000",
+            "20%"
+      ],
+      [
+            "From Rs. 20,00,001 to Rs. 24,00,000",
+            "25%"
+      ],
+      [
+            "Above Rs. 24,00,000",
+            "30%"
+      ],
+      [
+            "Add:"
+      ],
+      [
+            "a. Surcharge : Surcharge is levied on the amount of income-tax at following rates if total income of an assessee exceeds specified limits:-"
+      ],
+      [
+            "Range of Income",
+            "Range of Income",
+            "Range of Income",
+            "Range of Income"
+      ],
+      [
+            "Rs. 50 Lakhs to Rs. 1 Crore",
+            "Rs. 1 Crore to Rs. 2 Crores",
+            "Rs. 2 crores to Rs. 5 crores",
+            "Exceeding Rs. 5 Crores"
+      ],
+      [
+            "10%",
+            "15%",
+            "25%",
+            "37%"
+      ],
+      [
+            "Note: The enhanced surcharge of 25% is not levied, on income by way of dividend or from income chargeable to tax under sections 111A, 112, 112A and 115AD(1)(b). Hence, the maximum rate of surcharge on tax payable on such incomes shall be 15%. Also, the surcharge rate for AOP with all members as a company, shall be capped at 15%."
+      ],
+      [
+            "Further, the surcharge rate is nil if the total income of a 'specified fund' as referred to in section 10(4D) includes any income in respect of securities as given under section 115AD(1)(a)."
+      ],
+      [
+            "However, marginal relief is available from surcharge in following manner-"
+      ],
+      [
+            "i. in case where net income exceeds Rs. 50 lakh but doesn't exceed Rs. 1 Crore, the amount payable as income tax and surcharge shall not exceed the total amount payable as income tax on total income of Rs 50 Lakh by more than the amount of income that exceeds Rs 50 Lakhs."
+      ],
+      [
+            "ii. in case where net income exceeds Rs. 1 crore but doesn't exceed Rs. 2 crore, marginal relief shall be available from surcharge in such a manner that the amount payable as income tax and surcharge shall not exceed the total amount payable as income-tax on total income of Rs. 1 crore by more than the amount of income that exceeds Rs. 1 crore."
+      ],
+      [
+            "iii. in case where net income exceeds Rs. 2 crores, marginal relief shall be available from surcharge in such a manner that the amount payable as income tax and surcharge shall not exceed the total amount payable as income-tax on total income of Rs. 2 crores by more than the amount of income that exceeds Rs. 2 crores."
+      ],
+      [
+            "b. Health and Education Cess : Health and Education Cess is levied at the rate of 4% on the amount of income-tax plus surcharge. However, The Health and Education Cess is nil if the total income of a 'specified fund' as referred to section 10(4D) includes any income in respect of securities as given under section 115AD(1)(a)."
+      ],
+      [
+            "Notes:"
+      ],
+      [
+            "(a) A maximum rebate of Rs. 25,000 is allowed under section 87A, if the total income of a resident individual, who is opting for the new tax scheme under Section 115BAC(1A), is up to Rs. 7,00,000 [Applicable for AY 2025-26]."
+      ],
+      [
+            "(b) A maximum rebate of Rs. 60,000 is allowed under section 87A, if the total income of a resident individual, who is opting for the new tax scheme under Section 115BAC(1A), is up to Rs. 12,00,000 [Applicable from AY 2026-27]."
+      ],
+      [
+            "Note: The total rebate under section 87A shall not exceed the amount of income tax payable as per the rates provided in section 115BAC(1A) [effective from AY 2026-27]"
+      ],
+      [
+            "(c) Further, if the total income of the resident individual chargeable to tax section 115BAC(1A) exceeds Rs. 7 or 12 lakhs and the tax payable on such income exceeds the difference between the total income and Rs. 7 or 12 lakhs he can claim a rebate with marginal relief to the extent of the difference between the tax payable on such total income and the amount of income by which it exceeds Rs. 7 or 12 lakhs."
+      ],
+      [
+            "(c) If an assessee has opted for new tax regime, the provisions of AMT shall not be applicable."
+      ],
+      [
+            "2. Partnership Firm"
+      ],
+      [
+            "A partnership firm (including LLP) is taxable at 30%."
+      ],
+      [
+            "Add:"
+      ],
+      [
+            "(a) Surcharge : The amount of income-tax shall be increased by a surcharge at the rate of 12% of such tax, where total income exceeds one crore rupees. However, the surcharge shall be subject to marginal relief (where income exceeds one crore rupees, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of one crore rupees by more than the amount of income that exceeds one crore rupees)."
+      ],
+      [
+            "(b) Health and Education Cess : The amount of income-tax and the applicable surcharge, shall be further increased by health and education cess calculated at the rate of four percent of such income-tax and surcharge"
+      ],
+      [
+            "Alternate Minimum Tax (AMT)"
+      ],
+      [
+            "A partnership firm is liable to pay Alternative Minimum Tax where tax payable by it, on total income computed as per normal provisions of the Act, is less than 18.5% of 'adjusted total income'. In such a case the 'adjusted total income' is taken as the income of the firm and it shall be liable to pay tax at the rate of 18.5% of such 'adjusted total income'."
+      ],
+      [
+            "However, AMT is levied at the rate of 9% (plus surcharge and cess as applicable) in case of an assessee other than a company, being a unit of an International Financial Services Centre and deriving its income solely in convertible foreign exchange."
+      ],
+      [
+            "3. Local Authority"
+      ],
+      [
+            "A local authority is taxable at 30%."
+      ],
+      [
+            "Add:"
+      ],
+      [
+            "(a) Surcharge : The amount of income-tax shall be increased by a surcharge at the rate of 12% of such tax, where total income exceeds one crore rupees. However, the surcharge shall be subject to marginal relief (where income exceeds one crore rupees, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of one crore rupees by more than the amount of income that exceeds one crore rupees)."
+      ],
+      [
+            "(b) Health and Education Cess : The amount of income-tax and the applicable surcharge, shall be further increased by health and education cess calculated at the rate of four percent of such income-tax and surcharge."
+      ],
+      [
+            "Alternate Minimum Tax (AMT)"
+      ],
+      [
+            "A Local Authority is liable to pay Alternative Minimum Tax where tax payable by it, on total income computed as per normal provisions of the Act, is less than 18.5% of 'adjusted total income'. In such a case the 'adjusted total income' is taken as the income of the firm and it shall be liable to pay tax at the rate of 18.5% of such 'adjusted total income'."
+      ],
+      [
+            "However, AMT is levied at the rate of 9% (plus surcharge and cess as applicable) in case of a company, being a unit of an International Financial Services Centre and deriving its income solely in convertible foreign exchange."
+      ],
+      [
+            "4. Domestic Company"
+      ],
+      [
+            "Income-tax rates applicable in case of domestic companies for assessment years 2026-27 and 2025-26 are as follows:"
+      ],
+      [
+            "Domestic Company",
+            "Assessment Year 2026-27",
+            "Assessment Year 2025-26"
+      ],
+      [
+            "\u2666 Where its total turnover or gross receipt during the previous year 2022-23 does not exceed Rs. 400 crore",
+            "NA",
+            "25%"
+      ],
+      [
+            "\u2666 Where its total turnover or gross receipt during the previous year 2023-24 does not exceed Rs. 400 crore",
+            "25%",
+            "NA"
+      ],
+      [
+            "\u2666 Any other domestic company",
+            "30%",
+            "30%"
+      ],
+      [
+            "Add:"
+      ],
+      [
+            "(a) Surcharge : The amount of income-tax shall be increased by a surcharge at the rate of 7% of such tax, where total income exceeds one crore rupees but not exceeding ten crore rupees and at the rate of 12% of such tax, where total income exceeds ten crore rupees. The surcharge shall be subject to marginal relief, which shall be as under:"
+      ],
+      [
+            "(i) Where income exceeds Rs. 1 crore but not exceeding Rs. 10 crore, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of Rs. 1 crore by more than the amount of income that exceeds Rs. 1 crore."
+      ],
+      [
+            "(ii) Where income exceeds Rs. 10 crore, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of Rs. 10 crore by more than the amount of income that exceeds Rs. 10 crore"
+      ],
+      [
+            "(b) Health and Education Cess : The amount of income-tax and the applicable surcharge, shall be further increased by health and education cess calculated at the rate of four percent of such income-tax and surcharge."
+      ],
+      [
+            "Minimum Alternate Tax (MAT)"
+      ],
+      [
+            "A domestic company is liable to pay Minimum Alternate Tax where tax payable by it, on total income computed as per normal provisions of the Act, is less than 15% of 'book profit'. In such a case the 'book profit' is taken as the income of the company and it shall be liable to pay tax at the rate of 15% of such 'book profit'."
+      ],
+      [
+            "However, MAT is levied at the rate of 9% (plus surcharge and cess as applicable) in case of a company, being a unit of an International Financial Services Centre and deriving its income solely in convertible foreign exchange."
+      ],
+      [
+            "4.1. Special Tax rates applicable to a domestic company"
+      ],
+      [
+            "The special Income-tax rates applicable in case of domestic companies are as follows:"
+      ],
+      [
+            "Domestic Company",
+            "Tax Rate"
+      ],
+      [
+            "\u2666 Where it opted for section 115BA",
+            "25%"
+      ],
+      [
+            "\u2666 Where it opted for Section 115BAA",
+            "22%"
+      ],
+      [
+            "\u2666 Where it opted for Section 115BAB",
+            "15%"
+      ],
+      [
+            "Surcharge : The rate of surcharge in case of a company opting for taxability under Section 115BAA or Section 115BAB shall be flat 10% irrespective of amount of total income."
+      ],
+      [
+            "Health and Education Cess: The amount of income-tax and the applicable surcharge, shall be further increased by health and education cess calculated at the rate of four percent of such income-tax and surcharge."
+      ],
+      [
+            "MAT : The domestic company who has opted for special taxation regime under Section 115BAA & 115BAB is exempted from provision of MAT. However, no exemption is available in case where section 115BA has been opted."
+      ],
+      [
+            "5. Foreign Company"
+      ],
+      [
+            "Assessment Year 2025-26 and 2026-27"
+      ],
+      [
+            "Nature of Income",
+            "Tax Rate"
+      ],
+      [
+            "Royalty received from Government or an Indian concern in pursuance of an agreement made with the Indian concern after March 31, 1961, but before April 1, 1976, or fees for rendering technical services in pursuance of an agreement made after February 29, 1964 but before April 1, 1976 and where such agreement has, in either case, been approved by the Central Government",
+            "50%"
+      ],
+      [
+            "Any other income",
+            "35%"
+      ],
+      [
+            "Add:"
+      ],
+      [
+            "(a) Surcharge: The amount of income-tax shall be increased by a surcharge at the rate of 2% of such tax, where total income exceeds one crore rupees but not exceeding ten crore rupees and at the rate of 5% of such tax, where total income exceeds ten crore rupees. However, the surcharge shall be subject to marginal relief, which shall be as under:"
+      ],
+      [
+            "(i) Where income exceeds one crore rupees but not exceeding ten crore rupees, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of one crore rupees by more than the amount of income that exceeds one crore rupees."
+      ],
+      [
+            "(ii) Where income exceeds ten crore rupees, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of ten crore rupees by more than the amount of income that exceeds ten crore rupees."
+      ],
+      [
+            "(b) Health and Education Cess : The amount of income-tax and the applicable surcharge, shall be further increased by health and education cess calculated at the rate of four percent of such income-tax and surcharge."
+      ],
+      [
+            "Minimum Alternate Tax (MAT)"
+      ],
+      [
+            "A foreign company is liable to pay Minimum Alternate Tax where tax payable by it, on total income computed as per normal provisions of the Act, is less than 15% of 'book profit'. In such a case the 'book profit' is taken as the income of the company and it shall be liable to pay tax at the rate of 15% of such 'book profit'."
+      ],
+      [
+            "However, the provisions of MAT do not apply in case of foreign companies if it does not have permanent establishment (PE) in India or opts for presumptive taxation scheme of Section 44B, Section 44BB, Section 44BBA or Section 44BBB."
+      ],
+      [
+            "6. Co-operative Society"
+      ],
+      [
+            "Assessment Years 2025-26 and 2026-27"
+      ],
+      [
+            "Taxable income",
+            "Tax Rate"
+      ],
+      [
+            "Up to Rs. 10,000",
+            "10%"
+      ],
+      [
+            "Rs. 10,000 to Rs. 20,000",
+            "20%"
+      ],
+      [
+            "Above Rs. 20,000",
+            "30%"
+      ],
+      [
+            "Add:"
+      ],
+      [
+            "(a) Surcharge: The amount of income-tax shall be increased by a surcharge at the rate of 7% of such tax, where total income exceeds one crore rupees but not exceeding ten crore rupees and at the rate of 12% of such tax, where total income exceeds ten crore rupees. However, the surcharge shall be subject to marginal relief, which shall be as under:"
+      ],
+      [
+            "(i) Where income exceeds one crore rupees but not exceeding ten crore rupees, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of one crore rupees by more than the amount of income that exceeds one crore rupees."
+      ],
+      [
+            "(ii) Where income exceeds ten crore rupees, the total amount payable as income-tax and surcharge shall not exceed total amount payable as income-tax on total income of ten crore rupees by more than the amount of income that exceeds ten crore rupees."
+      ],
+      [
+            "(b) Health and Education Cess: The amount of income-tax and the applicable surcharge, shall be further increased by health and education cess calculated at the rate of four percent of such income-tax and surcharge."
+      ],
+      [
+            "Note:"
+      ],
+      [
+            "(a) A co-op. society is liable to pay Alternate Minimum Tax where tax payable by it, on total income computed as per normal provisions of the Act, is less than 15% of 'adjusted total income'. In such a case the 'adjusted total income' is taken as the income of co-op. society and it shall be liable to pay tax at the rate of 15% of such 'adjusted total income'."
+      ],
+      [
+            "(b) If the assessee is a unit located in an International Financial Services Centre and derives its income solely in convertible foreign exchange, the rate of AMT will be 9%."
+      ],
+      [
+            "6.1. Alternative Tax regime for Co-operative societies"
+      ],
+      [
+            "Income-tax Act allows a co-operative society to choose from the following alternative taxation regime subject to fulfilment of prescribed conditions:"
+      ],
+      [
+            "Section",
+            "Conditions",
+            "Tax rate"
+      ],
+      [
+            "Section 115BAE",
+            "\u2022 The co-operative society is set up and registered on or after 01-04-2023; \u2022 It is engaged in manufacture or production of any article or thing; \u2022 It commences manufacturing on or before 31-03-2024 ; and \u2022 It does not claim specified exemption, incentive or deduction.",
+            "15% (Income from manufacturing activities)"
+      ],
+      [
+            "Section 115BAD",
+            "If co-operative society does not claim specified exemption, incentive or deduction",
+            "22%"
+      ],
+      [
+            "Add:"
+      ],
+      [
+            "(a) Surcharge: The surcharge is levied at a rate of 10% on the amount of income-tax irrespective of the total income of such co-operative society."
+      ],
+      [
+            "(b) Health & Education Cess: The amount of income-tax and the applicable surcharge, shall be further increased by health and education cess calculated at the rate of 4% of such income-tax and surcharge."
+      ],
+      [
+            "Note:"
+      ],
+      [
+            "(a) If a co-operative society has exercised the option of Section 115BAD or Section 115BAE, the provisions of AMT shall not be applicable. Further, the provisions regarding computation and carry forward of AMT credit shall also be not applicable."
+      ],
+      [
+            "[As amended by Finance Act, 2026]"
       ]
-    ]
+]
   },
   "tds-rates-for-nri": {
     "title": "TDS Rates for N.R.I u/s 195",
@@ -3344,7 +3801,7 @@ export const kbResourceContent: Record<string, KbResource> = {
     "type": "links",
     "data": [
       {
-        "href": "https://www.rbi.org.in/",
+        "href": "https://www.rbi.org.in/Scripts/IFSCMICRDetails.aspx",
         "text": "RBI – Bank Branch / MICR Code directory"
       }
     ]
@@ -3403,7 +3860,7 @@ export const kbResourceContent: Record<string, KbResource> = {
     "type": "links",
     "data": [
       {
-        "href": "https://www.incometax.gov.in/iec/foportal/",
+        "href": "https://www.incometaxindia.gov.in/tax-services/pay-tax-online",
         "text": "e-Pay Tax – Income Tax portal"
       },
       {
@@ -3455,7 +3912,7 @@ export const kbResourceContent: Record<string, KbResource> = {
     "type": "links",
     "data": [
       {
-        "href": "https://www.cbic.gov.in/",
+        "href": "https://www.cbic.gov.in/entities/centralExcise",
         "text": "CBIC – Central Excise & Service Tax"
       }
     ]

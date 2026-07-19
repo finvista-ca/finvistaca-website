@@ -1,19 +1,10 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Search, BookOpen, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
-import { InternalPageHero } from './InternalPageHero';
-import './ResourceLayout.css';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
+import '../../components/layout/ResourceLayout.css';
 
-interface ResourceLayoutProps {
-  title: string;
-  description: string;
-  data: React.ReactNode[][] | { href: string; text: string }[];
-  type: 'table' | 'links';
-  headers?: string[];
-}
+const PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
 
-const PAGE_SIZE_OPTIONS = [10, 30, 50];
-
-// Build a compact page list with ellipses, e.g. 1 … 5 6 [7] 8 9 … 19
 function buildPageList(current: number, total: number): (number | '...')[] {
   if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
   const pages: (number | '...')[] = [1];
@@ -26,39 +17,59 @@ function buildPageList(current: number, total: number): (number | '...')[] {
   return pages;
 }
 
-export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, description, data, type, headers }) => {
+const tableData = [
+  ["1", "2001-02", "100"],
+  ["2", "2002-03", "105"],
+  ["3", "2003-04", "109"],
+  ["4", "2004-05", "113"],
+  ["5", "2005-06", "117"],
+  ["6", "2006-07", "122"],
+  ["7", "2007-08", "129"],
+  ["8", "2008-09", "137"],
+  ["9", "2009-10", "148"],
+  ["10", "2010-11", "167"],
+  ["11", "2011-12", "184"],
+  ["12", "2012-13", "200"],
+  ["13", "2013-14", "220"],
+  ["14", "2014-15", "240"],
+  ["15", "2015-16", "254"],
+  ["16", "2016-17", "264"],
+  ["17", "2017-18", "272"],
+  ["18", "2018-19", "280"],
+  ["19", "2019-20", "289"],
+  ["20", "2020-21", "301"],
+  ["21", "2021-22", "317"],
+  ["22", "2022-23", "331"],
+  ["23", "2023-24", "348"],
+  ["24", "2024-25", "363"],
+  ["25", "2025-26", "376"],
+  ["26", "2026-27", "384"]
+];
+
+export const CostInflationIndex: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [pageSize, setPageSize] = useState(50);
+  const [pageSize, setPageSize] = useState(10);
   const [page, setPage] = useState(1);
 
-  const tableData = type === 'table' ? (data as React.ReactNode[][]) : [];
-  const linksData = type === 'links' ? (data as { href: string; text: string }[]) : [];
+  const title = "Cost Inflation Index";
+  const description = "Cost Inflation Index (CII) is notified by the Central Government under Section 48 of the Income-tax Act, 1961. It is used to calculate the indexed cost of acquisition and indexed cost of improvement while determining long-term capital gains. The Cost Inflation Index adjusts the purchase cost of an asset for inflation, ensuring that capital gains are taxed on real appreciation rather than inflationary increases in value.";
 
-  const filteredTableData = useMemo(
-    () => tableData.filter(row => row.some(cell => 
-      typeof cell === 'string' ? cell.toLowerCase().includes(searchTerm.toLowerCase()) : false
-    )),
-    [tableData, searchTerm]
-  );
-  const filteredLinksData = useMemo(
-    () => linksData.filter(link => link.text.toLowerCase().includes(searchTerm.toLowerCase())),
-    [linksData, searchTerm]
-  );
+  const filteredData = useMemo(() => {
+    return tableData.filter(row => 
+      row.some(cell => cell.toLowerCase().includes(searchTerm.toLowerCase()))
+    );
+  }, [searchTerm]);
 
-  const totalItems = type === 'table' ? filteredTableData.length : filteredLinksData.length;
+  const totalItems = filteredData.length;
   const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
 
-  // Keep the current page valid when the filter, page size, or data changes.
-  useEffect(() => { setPage(1); }, [searchTerm, pageSize, type, title]);
+  useEffect(() => { setPage(1); }, [searchTerm, pageSize]);
   useEffect(() => { if (page > totalPages) setPage(totalPages); }, [page, totalPages]);
 
   const startIdx = (page - 1) * pageSize;
-  const pagedTable = filteredTableData.slice(startIdx, startIdx + pageSize);
-  const pagedLinks = filteredLinksData.slice(startIdx, startIdx + pageSize);
+  const pagedTable = filteredData.slice(startIdx, startIdx + pageSize);
   const showingFrom = totalItems === 0 ? 0 : startIdx + 1;
   const showingTo = Math.min(startIdx + pageSize, totalItems);
-
-  const columnCount = tableData.reduce((max, row) => Math.max(max, row.length), 0) || 1;
 
   return (
     <div className="resource-layout">
@@ -72,11 +83,9 @@ export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, descripti
         description={description}
       />
 
-      {/* Main Content Area */}
       <section className="resource-main">
         <div className="container">
 
-          {/* Controls Bar */}
           <div className="resource-controls glass-card">
             <div className="search-box">
               <Search size={18} className="search-icon" />
@@ -100,58 +109,47 @@ export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, descripti
             </div>
           </div>
 
-          {/* Data Presentation */}
           <div className="resource-content">
-            {type === 'table' && (
-              <div className="table-responsive glass-card">
-                <table className="modern-table">
-                  <thead>
-                    <tr>
-                      {tableData.length > 0 && Array.from({ length: columnCount }).map((_, i) => (
-                        <th key={i}>{headers && headers[i] ? headers[i] : `Column ${i + 1}`}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {pagedTable.length > 0 ? (
-                      pagedTable.map((row, i) => (
-                        <tr key={startIdx + i}>
-                          {row.map((cell, j) => (
-                            <td key={j}>{cell}</td>
-                          ))}
-                        </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td colSpan={columnCount} className="text-center no-data">
-                          No matching records found.
-                        </td>
+            <div className="table-responsive glass-card">
+              <table className="modern-table">
+                <thead>
+                  <tr>
+                    <th>Sl. No.</th>
+                    <th>Financial Year</th>
+                    <th>Cost Inflation Index</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pagedTable.length > 0 ? (
+                    pagedTable.map((row, i) => (
+                      <tr key={startIdx + i}>
+                        {row.map((cell, j) => (
+                          <td key={j}>
+                            {cell}
+                          </td>
+                        ))}
                       </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            )}
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={3} className="text-center no-data">
+                        No matching records found.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
 
-            {type === 'links' && (
-              <div className="links-grid">
-                {pagedLinks.length > 0 ? (
-                  pagedLinks.map((link, i) => (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="resource-link-card glass-card" key={startIdx + i}>
-                      <h4>{link.text}</h4>
-                      <ExternalLink size={16} className="ext-icon" />
-                    </a>
-                  ))
-                ) : (
-                  <div className="no-data glass-card text-center">
-                    No matching resources found.
-                  </div>
-                )}
-              </div>
-            )}
+            <div className="glass-card mt-4" style={{ padding: '1.5rem', backgroundColor: 'rgba(var(--primary-rgb), 0.02)' }}>
+              <h3 style={{ color: 'var(--primary-color)', marginBottom: '1rem' }}>Reference</h3>
+              <ul style={{ listStyleType: 'disc', paddingLeft: '20px', margin: 0, lineHeight: 1.6 }}>
+                <li>Notification No. 70/2025, dated 01 July 2025</li>
+                <li className="mt-2">As amended by the Finance Act, 2026.</li>
+              </ul>
+            </div>
           </div>
 
-          {/* Pagination */}
           {totalItems > 0 && (
             <div className="resource-pagination">
               <div className="pagination-info">
@@ -175,7 +173,7 @@ export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, descripti
                       <button
                         key={p}
                         className={`page-btn ${p === page ? 'active' : ''}`}
-                        onClick={() => setPage(p)}
+                        onClick={() => setPage(p as number)}
                       >
                         {p}
                       </button>

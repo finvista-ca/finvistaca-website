@@ -22,7 +22,7 @@ export const knowledgeBaseData: ServiceColumn[] = [
           { name: 'Rates of Depreciation Under Company Act', slug: 'rates-of-depreciation-company-act', keywords: ['depreciation', 'rate', ...companyKeywords] },
           { name: 'Cost Inflation Index', slug: 'cost-inflation-index', keywords: ['cii', 'index', 'inflation', 'capital gain', ...taxKeywords] },
           { name: 'ROC Fee Structure', slug: 'roc-fee-structure', keywords: ['roc', 'fee', 'structure', 'mca', ...companyKeywords] },
-          { name: 'MICR Codes', slug: 'micr-codes', externalUrl: 'https://www.rbi.org.in/', keywords: ['micr', 'code', 'bank'] },
+          { name: 'MICR Codes', slug: 'micr-codes', externalUrl: 'https://www.rbi.org.in/Scripts/IFSCMICRDetails.aspx', keywords: ['micr', 'code', 'bank'] },
           { name: 'IFSC Codes', slug: 'ifsc-codes', externalUrl: 'https://www.rbi.org.in/Scripts/IFSCMICRDetails.aspx', keywords: ['ifsc', 'code', 'bank', 'neft', 'rtgs'] }
         ]
       }
@@ -36,11 +36,11 @@ export const knowledgeBaseData: ServiceColumn[] = [
           { name: 'ITATonline.org', slug: 'itat-online', externalUrl: 'https://itatonline.org/', keywords: ['itat', 'tribunal', 'online', ...taxKeywords] },
           { name: 'PAN', slug: 'pan', externalUrl: 'https://www.protean-tinpan.com/services/pan/pan-index.html', keywords: ['pan', 'permanent account number', 'nsdl', ...taxKeywords] },
           { name: 'TAN', slug: 'tan', externalUrl: 'https://www.protean-tinpan.com/services/tan/tan-index.html', keywords: ['tan', 'tax deduction account number', ...tdsKeywords] },
-          { name: 'E-Payment Online', slug: 'e-payment-online', externalUrl: 'https://www.incometax.gov.in/iec/foportal/', keywords: ['epayment', 'online', 'challan', 'tax payment'] },
+          { name: 'E-Payment Online', slug: 'e-payment-online', externalUrl: 'https://www.incometaxindia.gov.in/tax-services/pay-tax-online', keywords: ['epayment', 'online', 'challan', 'tax payment'] },
           { name: 'Income Tax', slug: 'income-tax-link', externalUrl: 'https://www.incometax.gov.in/', keywords: ['portal', 'efiling', ...taxKeywords] },
           { name: 'CBIC', slug: 'cbic', externalUrl: 'https://www.cbic.gov.in/', keywords: ['cbic', 'customs', 'indirect', ...gstKeywords] },
           { name: 'PF & ESI', slug: 'pf-esi', externalUrl: 'https://www.epfindia.gov.in/', keywords: ['pf', 'esi', 'epfo', 'provident fund'] },
-          { name: 'Excise and Service Tax', slug: 'excise-service-tax', externalUrl: 'https://www.cbic.gov.in/', keywords: ['excise', 'service tax', 'indirect tax'] },
+          { name: 'Excise and Service Tax', slug: 'excise-service-tax', externalUrl: 'https://www.cbic.gov.in/entities/centralExcise', keywords: ['excise', 'service tax', 'indirect tax'] },
           { name: 'MCA', slug: 'mca', externalUrl: 'https://www.mca.gov.in/', keywords: ['mca', 'ministry of corporate affairs', 'portal', ...companyKeywords] },
           { name: 'CA/CS', slug: 'ca-cs', externalUrl: 'https://www.icai.org/', keywords: ['ca', 'cs', 'icai', 'icsi', 'institute'] },
           { name: 'Supreme Court', slug: 'supreme-court', externalUrl: 'https://www.sci.gov.in/', keywords: ['supreme court', 'judgement', 'law'] },

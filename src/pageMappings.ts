@@ -24,6 +24,16 @@ import { IncomeTaxOtherForms } from './pages/knowledge-base/IncomeTaxOtherForms'
 import { RocForms } from './pages/knowledge-base/RocForms';
 import { LlpForms } from './pages/knowledge-base/LlpForms';
 import { KbGeneric } from './pages/knowledge-base/KbGeneric';
+import { RatesOfNscInterest } from './pages/knowledge-base/RatesOfNscInterest';
+
+import { RatesOfDepreciationCompanyAct } from './pages/knowledge-base/RatesOfDepreciationCompanyAct';
+import { CostInflationIndex } from './pages/knowledge-base/CostInflationIndex';
+import { RocFeeStructure } from './pages/knowledge-base/RocFeeStructure';
+
+import { TdsRatesForNri } from './pages/knowledge-base/TdsRatesForNri';
+
+import { RatesOfIncomeTax } from './pages/knowledge-base/RatesOfIncomeTax';
+
 import { GstActs } from './pages/gst/GstActs';
 import { GstRules } from './pages/gst/GstRules';
 import { GstCirculars } from './pages/gst/GstCirculars';
@@ -68,14 +78,14 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'income-tax-other-forms': IncomeTaxOtherForms,
     'roc-forms': RocForms,
     'llp-forms': LlpForms,
-    'rates-of-income-tax': KbGeneric,
-    'tds-rates-for-nri': KbGeneric,
+    'rates-of-income-tax': RatesOfIncomeTax,
+    'tds-rates-for-nri': TdsRatesForNri,
     'rates-of-tds': KbGeneric,
-    'rates-of-nsc-interest': KbGeneric,
+    'rates-of-nsc-interest': RatesOfNscInterest,
     'rates-of-depreciation-income-tax': KbGeneric,
-    'rates-of-depreciation-company-act': KbGeneric,
-    'cost-inflation-index': KbGeneric,
-    'roc-fee-structure': KbGeneric,
+    'rates-of-depreciation-company-act': RatesOfDepreciationCompanyAct,
+    'cost-inflation-index': CostInflationIndex,
+    'roc-fee-structure': RocFeeStructure,
     'micr-codes': KbGeneric,
     'ifsc-codes': KbGeneric,
     'itat-online': KbGeneric,

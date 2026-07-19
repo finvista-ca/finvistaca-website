@@ -18,6 +18,7 @@ export interface ServicePageData {
   intro_title: string;
   intro_p1: string;
   intro_p2: string;
+  overview?: string;
   features: { title: string; desc: string; icon: string }[];
   benefits: { title: string; desc: string; icon: string }[];
   eligibleApplicants?: string[];
@@ -90,6 +91,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
             <div className="text-content">
               <p className="lead">{pageData.intro_p1}</p>
               <p>{pageData.intro_p2}</p>
+              {pageData.overview && <p>{pageData.overview}</p>}
             </div>
           </motion.div>
           <motion.div 
