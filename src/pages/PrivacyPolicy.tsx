@@ -245,7 +245,7 @@ export const PrivacyPolicy: React.FC = () => {
                 <div className="privacy-contact-item">
                   <h3>FinVista Chartered Accountants</h3>
                   <p><strong>Phone:</strong> +91 9908285223</p>
-                  <p><strong>Email:</strong> finvistacaca@gmail.com</p>
+                  <p><strong>Email:</strong> finvistaca@gmail.com</p>
                 </div>
                 <div className="privacy-contact-item">
                   <h3>Head Office</h3>

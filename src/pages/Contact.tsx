@@ -35,7 +35,7 @@ const handleSubmit = async (
 
   try {
     const response = await fetch(
-      "https://finvistacaca-backend-ebon.vercel.app/api/contact",
+      "https://finvistaca-backend-ebon.vercel.app/api/contact",
       {
         method: "POST",
         headers: {
@@ -210,7 +210,7 @@ const handleSubmit = async (
                   <div className="info-item">
                     <div className="info-icon"><Mail size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
-                      <p><a href="mailto:finvistacaca@gmail.com">finvistacaca@gmail.com</a></p>
+                      <p><a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a></p>
                     </div>
                   </div>
                   <div className="info-item">

@@ -56,7 +56,7 @@ export const DataPolicy: React.FC = () => {
           <p>
             For any questions about this policy or the information we hold about you,
             please contact us at{' '}
-            <a href="mailto:finvistacaca@gmail.com">finvistacaca@gmail.com</a> or call
+            <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a> or call
             +91 9908285223.
           </p>
         </div>

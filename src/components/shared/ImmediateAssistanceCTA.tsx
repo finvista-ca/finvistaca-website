@@ -62,7 +62,7 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                     </div>
                     <div className="info-content">
                       <span className="info-label">Email</span>
-                      <a href="mailto:finvistacaca@gmail.com" className="info-value">finvistacaca@gmail.com</a>
+                      <a href="mailto:finvistaca@gmail.com" className="info-value">finvistaca@gmail.com</a>
                     </div>
                   </div>
                   
@@ -82,7 +82,7 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                   <a href="tel:+919908285223" className="btn btn-primary cta-btn-primary">
                     <Phone size={18} /> Call Now
                   </a>
-                  <a href="mailto:finvistacaca@gmail.com" className="btn btn-outline cta-btn-secondary">
+                  <a href="mailto:finvistaca@gmail.com" className="btn btn-outline cta-btn-secondary">
                     <Mail size={18} /> Email Us
                   </a>
                 </div>

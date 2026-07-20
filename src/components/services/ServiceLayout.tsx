@@ -317,7 +317,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                 </Link>
                 <div className="cta-contact-info">
                   <span className="contact-item"><Phone size={18} /> +91 9908285223</span>
-                  <span className="contact-item"><Mail size={18} /> finvistacaca@gmail.com</span>
+                  <span className="contact-item"><Mail size={18} /> finvistaca@gmail.com</span>
                 </div>
               </div>
             </div>
