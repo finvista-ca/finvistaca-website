@@ -35,7 +35,7 @@ const handleSubmit = async (
 
   try {
     const response = await fetch(
-      "https://finvistaca-backend-ebon.vercel.app/api/contact",
+      "/api/contact",
       {
         method: "POST",
         headers: {
