@@ -263,9 +263,6 @@ export const Navbar: React.FC = () => {
               );
             })}
           </ul>
-          <div className="navbar-cta-wrapper" style={{ marginLeft: '1.5rem', display: 'flex', alignItems: 'center' }}>
-            <Link to="/contact" className="btn-primary-small">Schedule Consultation</Link>
-          </div>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -329,9 +326,6 @@ export const Navbar: React.FC = () => {
                   </li>
                 );
               })}
-              <li className="mobile-nav-item" style={{ padding: '1rem 1.5rem' }}>
-                <Link to="/contact" className="btn-primary" style={{ width: '100%' }} onClick={() => setMobileMenuOpen(false)}>Schedule Consultation</Link>
-              </li>
             </ul>
           </motion.div>
         )}
