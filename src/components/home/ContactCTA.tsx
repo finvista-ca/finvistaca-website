@@ -28,7 +28,7 @@ export const ContactCTA: React.FC = () => {
         message: formData.service ? `[Service: ${formData.service}]\n${formData.message}` : formData.message
       };
       
-      const response = await fetch('https://finvistacaca-backend-ebon.vercel.app/api/book', {
+      const response = await fetch('https://finvistaca-backend-ebon.vercel.app/api/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

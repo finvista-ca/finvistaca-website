@@ -295,7 +295,7 @@ const PaginatedTable: React.FC<{ data: TableData, initialPageSize?: number }> = 
             <div className="pagination-controls">
               <button
                 className="page-btn page-arrow"
-                onClick={() => setPage(p => Math.max(1, p - 1))}
+                onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 disabled={page === 1}
                 aria-label="Previous page"
               >
@@ -308,7 +308,7 @@ const PaginatedTable: React.FC<{ data: TableData, initialPageSize?: number }> = 
                   <button
                     key={p}
                     className={`page-btn ${p === page ? 'active' : ''}`}
-                    onClick={() => setPage(p)}
+                    onClick={() => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                   >
                     {p}
                   </button>
@@ -316,7 +316,7 @@ const PaginatedTable: React.FC<{ data: TableData, initialPageSize?: number }> = 
               )}
               <button
                 className="page-btn page-arrow"
-                onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 disabled={page === totalPages}
                 aria-label="Next page"
               >

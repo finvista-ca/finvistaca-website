@@ -24,7 +24,7 @@ export const Career: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('https://finvistacaca-backend-ebon.vercel.app/api/career', {
+      const response = await fetch('https://finvistaca-backend-ebon.vercel.app/api/career', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

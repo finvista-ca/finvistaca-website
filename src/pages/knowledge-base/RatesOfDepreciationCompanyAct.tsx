@@ -890,7 +890,7 @@ export const RatesOfDepreciationCompanyAct: React.FC = () => {
                 <div className="pagination-controls">
                   <button
                     className="page-btn page-arrow"
-                    onClick={() => setPage(p => Math.max(1, p - 1))}
+                    onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                     disabled={page === 1}
                     aria-label="Previous page"
                   >
@@ -903,7 +903,7 @@ export const RatesOfDepreciationCompanyAct: React.FC = () => {
                       <button
                         key={p}
                         className={`page-btn ${p === page ? 'active' : ''}`}
-                        onClick={() => setPage(p as number)}
+                        onClick={() => { setPage(p as number); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                       >
                         {p}
                       </button>
@@ -911,7 +911,7 @@ export const RatesOfDepreciationCompanyAct: React.FC = () => {
                   )}
                   <button
                     className="page-btn page-arrow"
-                    onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                    onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                     disabled={page === totalPages}
                     aria-label="Next page"
                   >
