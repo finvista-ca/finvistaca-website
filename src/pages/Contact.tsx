@@ -3,6 +3,8 @@ import { MapPin, Phone, Mail, Clock, Building, Send, CheckCircle2 } from 'lucide
 import { motion } from 'framer-motion';
 import { ImmediateAssistanceCTA } from '../components/shared/ImmediateAssistanceCTA';
 import { InternalPageHero } from '../components/layout/InternalPageHero';
+import { servicesData, auditServicesData } from '../data/servicesData';
+import { otherServicesData } from '../data/otherServicesData';
 import './Contact.css';
 
 export const Contact: React.FC = () => {
@@ -14,7 +16,7 @@ const [formData, setFormData] = useState({
   phone: "",
   email: "",
   branch: "",
-  message: "",
+  service: "",
 });
 
 const handleChange = (
@@ -41,7 +43,14 @@ const handleSubmit = async (
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          branch: formData.branch,
+          message: formData.service, // Map service to message for the backend
+          service: formData.service  // Also send service explicitly just in case
+        }),
       }
     );
 
@@ -58,7 +67,7 @@ const handleSubmit = async (
       phone: "",
       email: "",
       branch: "",
-      message: "",
+      service: "",
     });
 
   } catch (error: any) {
@@ -293,8 +302,27 @@ const handleSubmit = async (
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={6} placeholder="How can we help you?" required></textarea>
+                    <label htmlFor="service">Services</label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="" disabled>Select a service you are enquiring about</option>
+                      {[...servicesData, ...auditServicesData, ...otherServicesData].map((column) =>
+                        column.categories.map((category) => (
+                          <optgroup key={category.title} label={category.title}>
+                            {category.items.map((item) => (
+                              <option key={item.slug} value={item.name}>
+                                {item.name}
+                              </option>
+                            ))}
+                          </optgroup>
+                        ))
+                      )}
+                    </select>
                   </div>
 
                   <button type="submit" className="btn btn-primary submit-btn" disabled={loading}>

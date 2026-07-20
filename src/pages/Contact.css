@@ -346,9 +346,16 @@
   background-color: var(--card-bg);
 }
 
-.contact-page-form select option {
+.contact-page-form select option,
+.contact-page-form select optgroup {
   background-color: #0B1F3A; /* Solid background for visibility */
   color: #FFFFFF;
+}
+
+.contact-page-form select optgroup {
+  font-weight: 700;
+  font-style: normal;
+  padding: 0.5rem;
 }
 
 .contact-page-form textarea {
