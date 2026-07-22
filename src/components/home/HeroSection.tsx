@@ -11,6 +11,7 @@ export const HeroSection: React.FC = () => {
         <div className="blob blob-2"></div>
       </div>
       
+
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
           <h2 className="hero-trusted-badge">
@@ -70,9 +71,6 @@ export const HeroSection: React.FC = () => {
           </div>
           
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary btn-lg action-btn">
-              Book a Consultation <ArrowRight size={18} />
-            </Link>
             <Link to="/services" className="btn btn-secondary-gold btn-lg action-btn">
               Explore Services <ChevronRight size={18} />
             </Link>
@@ -80,7 +78,13 @@ export const HeroSection: React.FC = () => {
         </div>
         
         <div className="hero-visual animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <div className="bento-grid">
+          <div className="hero-dashboard-wrapper">
+            <div className="hero-visual-cta-container">
+              <Link to="/contact" className="btn btn-primary hero-dashboard-cta">
+                Book a Consultation <ArrowRight size={18} />
+              </Link>
+            </div>
+            <div className="bento-grid">
             <div className="bento-card bento-main glass-card">
               <div className="bento-header">
                 <PieChart className="text-brand" size={24} />
@@ -141,6 +145,7 @@ export const HeroSection: React.FC = () => {
                 <ArrowRight size={20} />
               </div>
             </Link>
+          </div>
           </div>
         </div>
       </div>

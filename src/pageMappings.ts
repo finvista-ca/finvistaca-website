@@ -7,6 +7,7 @@ import { GiftTaxAct } from './pages/knowledge-base/GiftTaxAct';
 import { InterestTaxAct } from './pages/knowledge-base/InterestTaxAct';
 import { ExpenditureTaxAct } from './pages/knowledge-base/ExpenditureTaxAct';
 import { CompaniesAct } from './pages/knowledge-base/CompaniesAct';
+import { CompaniesDonationsAct } from './pages/knowledge-base/CompaniesDonationsAct';
 import { PartnershipAct } from './pages/knowledge-base/PartnershipAct';
 import { MonopoliesAct } from './pages/knowledge-base/MonopoliesAct';
 import { InsolvencyBankruptcyCode } from './pages/knowledge-base/InsolvencyBankruptcyCode';
@@ -100,7 +101,7 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'ca-cs': KbGeneric,
     'supreme-court': KbGeneric,
     'more-link': KbGeneric,
-    'companies-donation-fund-act': KbGeneric,
+    'companies-donation-fund-act': CompaniesDonationsAct,
     'llp-act': KbGeneric,
     'societies-registration-act': KbGeneric,
     'competition-act': KbGeneric,

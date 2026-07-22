@@ -60,7 +60,7 @@ export const knowledgeBaseData: ServiceColumn[] = [
           { name: 'Interest Tax Act', slug: 'interest-tax-act', keywords: ['interest', ...taxKeywords, ...actKeywords] },
           { name: 'Expenditure Tax Act', slug: 'expenditure-tax-act', keywords: ['expenditure', ...taxKeywords, ...actKeywords] },
           { name: 'Companies Act', slug: 'companies-act', keywords: [...companyKeywords, ...actKeywords] },
-          { name: 'Companies ( Donation to National ) Fund Act', slug: 'companies-donation-fund-act', externalUrl: 'https://www.mca.gov.in/', keywords: ['donation', ...companyKeywords, ...actKeywords] },
+          { name: 'Companies ( Donation to National ) Fund Act', slug: 'companies-donation-fund-act', keywords: ['donation', ...companyKeywords, ...actKeywords] },
           { name: 'Limited Liability Partnership Act', slug: 'llp-act', keywords: ['llp', 'partnership', ...actKeywords] },
           { name: 'Partnership Act', slug: 'partnership-act', keywords: ['partnership', 'firm', ...actKeywords] },
           { name: 'Societies Registration Act', slug: 'societies-registration-act', keywords: ['society', 'ngo', ...actKeywords] },
