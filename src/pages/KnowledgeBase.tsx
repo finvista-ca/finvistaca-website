@@ -79,17 +79,17 @@ export const KnowledgeBase: React.FC = () => {
         description="Explore our comprehensive library of Acts, Rules, Circulars, Notifications, Forms, and Tools."
       />
       
-      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
-        <SmartSearch 
-          services={allKBServices} 
-          basePath="/knowledge-base"
-          placeholder="Search knowledge base..."
-          initialQuery={queryParam}
-        />
-      </div>
-
-      <div className="services-categories-section">
+      <div className="services-categories-section" style={{ paddingTop: '1rem' }}>
         <div className="container">
+          <div style={{ marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+            <h1 className="section-title text-center" style={{ marginBottom: '24px' }}>Professional Resource Center</h1>
+            <SmartSearch 
+              services={allKBServices} 
+              basePath="/knowledge-base"
+              placeholder="Search knowledge base..."
+              initialQuery={queryParam}
+            />
+          </div>
           {/* Quick Navigation */}
           <div className="quick-navigation" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginBottom: '3rem' }}>
             {quickLinks.map(link => (

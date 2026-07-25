@@ -1,12 +1,12 @@
 .contact-page {
-  padding-top: 80px; /* offset for navbar */
+  padding-top:40px; /* offset for navbar */
   background-color: transparent;
   min-height: 100vh;
 }
 
 .contact-hero {
   background: transparent;
-  padding: 4rem 0;
+  padding:2rem 0;
   border-bottom: 1px solid var(--dark-border);
   text-align: center;
 }
@@ -15,18 +15,18 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-heading);
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
 }
 
 .page-subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);
   max-width: 100%; max-width: 800px;
-  margin: 0 auto;
+  margin:0 auto;
 }
 
 .contact-main {
-  padding: 5rem 0;
+  padding:1rem 0 2.5rem;
 }
 
 .contact-grid {
@@ -48,26 +48,26 @@
   }
   .contact-section-form {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1;
     position: sticky;
     top: 100px;
   }
   .contact-section-branches {
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 2;
-    margin-top: 4rem;
+    margin-top:2rem;
   }
 }
 
 .section-header {
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
 }
 
 .section-header h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .info-desc {
@@ -76,8 +76,8 @@
 }
 
 .hq-card {
-  padding: 2rem;
-  margin-bottom: 0;
+  padding:2rem;
+  margin-bottom:0;
   position: relative;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -92,7 +92,7 @@
   left: 2rem;
   background-color: var(--brand-primary);
   color: white;
-  padding: 0.25rem 1rem;
+  padding:0.25rem 1rem;
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -103,8 +103,8 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 1.5rem;
-  margin-top: 0.5rem;
+  margin-bottom:1.5rem;
+  margin-top:0.5rem;
 }
 
 .info-items {
@@ -143,7 +143,7 @@
 .hq-card .info-content p {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
-  margin: 0;
+  margin:0;
   font-size: 0.95rem;
 }
 
@@ -163,7 +163,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-heading);
-  margin-bottom: 3.5rem; /* Increased spacing before grid */
+  margin-bottom:1.5rem; /* Increased spacing before grid */
 }
 
 .branches-grid {
@@ -171,7 +171,7 @@
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   gap: 1.5rem; /* 24px for mobile */
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 @media (min-width: 640px) {
@@ -183,14 +183,14 @@
 
 @media (min-width: 1024px) {
   .branches-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem 2.5rem; /* 32px row gap, 40px column gap for desktop */
   }
 }
 
 .contact-branch-card {
   background: rgba(255, 255, 255, 0.02);
-  padding: 1.5rem; /* 24px internal padding */
+  padding:1.5rem; /* 24px internal padding */
   border-radius: 1.125rem; /* 18px border radius */
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -212,14 +212,14 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1.25rem; /* 20px gap between city name and address */
+  margin-bottom:1.25rem; /* 20px gap between city name and address */
 }
 
 .branch-card-header h4 {
   font-size: 1.125rem; /* 18px */
   font-weight: 700; /* Bold */
   color: #FFFFFF;
-  margin: 0;
+  margin:0;
   display: flex;
   align-items: center;
 }
@@ -256,14 +256,14 @@
   color: var(--text-secondary); /* Light gray usually mapped to this variable */
   font-size: 0.9375rem; /* 15px */
   line-height: 1.7; /* Increased comfortable line height */
-  margin: 0;
+  margin:0;
   white-space: normal; /* Ensure proper word wrapping */
 }
 
 
 
 .form-wrapper {
-  padding: 2.5rem;
+  padding:2.5rem;
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 1.5rem;
@@ -274,12 +274,12 @@
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--text-heading);
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .form-desc {
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
 }
 
 .contact-page-form {
@@ -316,7 +316,7 @@
 .contact-page-form select,
 .contact-page-form textarea {
   width: 100%;
-  padding: 0.875rem 1rem;
+  padding:0.875rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   background-color: var(--primary-bg);
@@ -335,7 +335,7 @@
   background-repeat: no-repeat;
   background-position: right 1.25rem center;
   background-size: 1rem;
-  padding-right: 3rem; /* Make room for the custom arrow */
+  padding-right:1.5rem; /* Make room for the custom arrow */
 }
 
 .contact-page-form input:focus,
@@ -355,7 +355,7 @@
 .contact-page-form select optgroup {
   font-weight: 700;
   font-style: normal;
-  padding: 0.5rem;
+  padding:0.5rem;
 }
 
 .contact-page-form textarea {
@@ -365,7 +365,7 @@
 
 .submit-btn {
   width: 100%;
-  padding: 1rem;
+  padding:1rem;
   font-size: 1rem;
   font-weight: 600;
   display: flex;
@@ -379,7 +379,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1.5rem;
+  margin-top:1.5rem;
   color: var(--text-secondary);
   font-size: 0.875rem;
 }
@@ -389,7 +389,7 @@
 }
 
 .map-container {
-  padding: 1rem;
+  padding:1rem;
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 1.5rem;

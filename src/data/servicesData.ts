@@ -28,6 +28,20 @@ export const servicesData: ServiceColumn[] = [
   {
     categories: [
       {
+        title: "DIRECT TAXATION",
+        items: [
+          { name: "Income Tax Advisory / Compliance", slug: "corporate-tax-advisory-compliance", keywords: taxKeywords, related: ['tax-audit', 'transfer-pricing-study-documentation', 'litigation-representation-assistance'] },
+          { name: "International Tax Advisory / Compliance", slug: "international-tax-advisory-compliance", keywords: taxKeywords, related: ['corporate-tax-advisory-compliance', 'transfer-pricing-study-documentation', 'indian-subsidiary'] },
+          { name: "Transfer Pricing Study / Documentation", slug: "transfer-pricing-study-documentation", keywords: taxKeywords, related: ['international-tax-advisory-compliance', 'corporate-tax-advisory-compliance'] },
+          { name: "Litigation / Representation Assistance", slug: "litigation-representation-assistance", keywords: taxKeywords, related: ['corporate-tax-advisory-compliance', 'personal-tax-advisory'] },
+          { name: "Personal Tax Advisory", slug: "personal-tax-advisory", keywords: taxKeywords, related: ['litigation-representation-assistance'] }
+        ]
+      }
+    ]
+  },
+  {
+    categories: [
+      {
         title: "BUSINESS REGISTRATION",
         items: [
           { name: "Proprietorship", slug: "proprietorship", keywords: companyKeywords, related: ['partnership', 'one-person-company', 'gst-registration'] },
@@ -42,20 +56,6 @@ export const servicesData: ServiceColumn[] = [
           { name: "Trust Registration", slug: "trust-registration", keywords: companyKeywords, related: ['society-registration', 'section-8-company'] },
           { name: "Society Registration", slug: "society-registration", keywords: companyKeywords, related: ['trust-registration', 'section-8-company'] },
           { name: "Indian Subsidiary", slug: "indian-subsidiary", keywords: companyKeywords, related: ['private-limited-company', 'international-tax-advisory-compliance'] }
-        ]
-      }
-    ]
-  },
-  {
-    categories: [
-      {
-        title: "DIRECT TAXATION",
-        items: [
-          { name: "Corporate Tax Advisory / Compliance", slug: "corporate-tax-advisory-compliance", keywords: taxKeywords, related: ['tax-audit', 'transfer-pricing-study-documentation', 'litigation-representation-assistance'] },
-          { name: "International Tax Advisory / Compliance", slug: "international-tax-advisory-compliance", keywords: taxKeywords, related: ['corporate-tax-advisory-compliance', 'transfer-pricing-study-documentation', 'indian-subsidiary'] },
-          { name: "Transfer Pricing Study / Documentation", slug: "transfer-pricing-study-documentation", keywords: taxKeywords, related: ['international-tax-advisory-compliance', 'corporate-tax-advisory-compliance'] },
-          { name: "Litigation / Representation Assistance", slug: "litigation-representation-assistance", keywords: taxKeywords, related: ['corporate-tax-advisory-compliance', 'personal-tax-advisory'] },
-          { name: "Personal Tax Advisory", slug: "personal-tax-advisory", keywords: taxKeywords, related: ['litigation-representation-assistance'] }
         ]
       }
     ]

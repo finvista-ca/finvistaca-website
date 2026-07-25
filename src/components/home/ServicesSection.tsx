@@ -11,7 +11,8 @@ const coreServices = [
     description: 'Comprehensive tax planning, compliance, and dispute resolution for individuals and corporations.',
     icon: FileSearch,
     path: '/services?category=direct-tax',
-    features: ['Corporate Tax Planning', 'International Taxation', 'Transfer Pricing', 'Tax Representation']
+    features: ['Corporate Tax Planning', 'International Taxation', 'Transfer Pricing', 'Tax Representation'],
+    image: '/taxation.jpg'
   },
   {
     id: 'audit',
@@ -19,7 +20,8 @@ const coreServices = [
     description: 'Rigorous statutory and internal audits ensuring compliance, transparency, and operational efficiency.',
     icon: ShieldCheck,
     path: '/services?category=audit',
-    features: ['Statutory Audit', 'Internal Audit', 'Information Systems Audit', 'Due Diligence']
+    features: ['Statutory Audit', 'Internal Audit', 'Information Systems Audit', 'Due Diligence'],
+    image: '/audit.jpg'
   },
   {
     id: 'advisory',
@@ -27,7 +29,8 @@ const coreServices = [
     description: 'Strategic financial consulting to drive growth, optimize capital structure, and navigate complex transactions.',
     icon: Calculator,
     path: '/services?category=advisory',
-    features: ['Mergers & Acquisitions', 'Valuation Services', 'Financial Restructuring', 'Risk Management']
+    features: ['Mergers & Acquisitions', 'Valuation Services', 'Financial Restructuring', 'Risk Management'],
+    image: '/corporate.jpg'
   }
 ];
 
@@ -57,10 +60,11 @@ export const ServicesSection: React.FC = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="service-visual-inner">
-                    <Icon size={120} strokeWidth={1} className="service-large-icon" />
-                    <div className="visual-decoration"></div>
-                  </div>
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
                 </motion.div>
 
                 {/* Content Side */}

@@ -1,7 +1,7 @@
 .stats-section {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 2.5rem 0 !important;
+  padding:2.5rem 0 !important;
 }
 
 .stats-grid {
@@ -28,7 +28,7 @@
   display: flex;
   align-items: baseline;
   color: #38BDF8;
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .stat-number {

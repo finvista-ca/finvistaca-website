@@ -59,12 +59,12 @@ export const OtherServices: React.FC = () => {
         description="Explore our complete range of permits, international taxation, and accounting services."
       />
       
-      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
-        <SmartSearch services={allOtherServices} />
-      </div>
-
-      <div className="services-categories-section">
+      <div className="services-categories-section" style={{ paddingTop: '1rem' }}>
         <div className="container">
+          <div style={{ marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+            <h1 className="section-title text-center" style={{ marginBottom: '24px' }}>Our Other Professional Services</h1>
+            <SmartSearch services={allOtherServices} />
+          </div>
           <div className="categories-grid">
             {displayData.map((column, colIdx) => (
               <React.Fragment key={colIdx}>

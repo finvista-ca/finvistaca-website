@@ -15,67 +15,108 @@ interface TaxConfig {
     rebateLimit: number;
     standardDeduction: number;
     surchargeRates: Slab[];
+    marginalRebate: boolean;
   };
   oldRegime: {
     slabs: Record<AgeCategory, Slab[]>;
     rebateLimit: number;
     standardDeduction: number;
     surchargeRates: Slab[];
+    marginalRebate: boolean;
   };
   cessRate: number;
 }
 
+const OLD_REGIME_SLABS = {
+  regular: [
+    { limit: 250000, rate: 0 },
+    { limit: 500000, rate: 0.05 },
+    { limit: 1000000, rate: 0.20 },
+    { limit: Infinity, rate: 0.30 },
+  ],
+  senior: [
+    { limit: 300000, rate: 0 },
+    { limit: 500000, rate: 0.05 },
+    { limit: 1000000, rate: 0.20 },
+    { limit: Infinity, rate: 0.30 },
+  ],
+  super_senior: [
+    { limit: 500000, rate: 0 },
+    { limit: 1000000, rate: 0.20 },
+    { limit: Infinity, rate: 0.30 },
+  ]
+};
+
+const OLD_REGIME_SURCHARGE = [
+  { limit: 5000000, rate: 0 },
+  { limit: 10000000, rate: 0.10 },
+  { limit: 20000000, rate: 0.15 },
+  { limit: 50000000, rate: 0.25 },
+  { limit: Infinity, rate: 0.37 },
+];
+
+const NEW_REGIME_SURCHARGE_CAPPED = [
+  { limit: 5000000, rate: 0 },
+  { limit: 10000000, rate: 0.10 },
+  { limit: 20000000, rate: 0.15 },
+  { limit: Infinity, rate: 0.25 },
+];
+
 const TAX_RULES: Record<string, TaxConfig> = {
-  '2025-26': {
+  '2021-22': {
     newRegime: {
       slabs: [
-        { limit: 400000, rate: 0 },
-        { limit: 800000, rate: 0.05 },
-        { limit: 1200000, rate: 0.10 },
-        { limit: 1600000, rate: 0.15 },
-        { limit: 2000000, rate: 0.20 },
-        { limit: 2400000, rate: 0.25 },
+        { limit: 250000, rate: 0 },
+        { limit: 500000, rate: 0.05 },
+        { limit: 750000, rate: 0.10 },
+        { limit: 1000000, rate: 0.15 },
+        { limit: 1250000, rate: 0.20 },
+        { limit: 1500000, rate: 0.25 },
         { limit: Infinity, rate: 0.30 },
       ],
-      rebateLimit: 1200000,
-      standardDeduction: 75000,
-      surchargeRates: [
-        { limit: 5000000, rate: 0 },
-        { limit: 10000000, rate: 0.10 },
-        { limit: 20000000, rate: 0.15 },
-        { limit: Infinity, rate: 0.25 },
-      ]
-    },
-    oldRegime: {
-      slabs: {
-        regular: [
-          { limit: 250000, rate: 0 },
-          { limit: 500000, rate: 0.05 },
-          { limit: 1000000, rate: 0.20 },
-          { limit: Infinity, rate: 0.30 },
-        ],
-        senior: [
-          { limit: 300000, rate: 0 },
-          { limit: 500000, rate: 0.05 },
-          { limit: 1000000, rate: 0.20 },
-          { limit: Infinity, rate: 0.30 },
-        ],
-        super_senior: [
-          { limit: 500000, rate: 0 },
-          { limit: 1000000, rate: 0.20 },
-          { limit: Infinity, rate: 0.30 },
-        ]
-      },
       rebateLimit: 500000,
-      standardDeduction: 50000,
-      surchargeRates: [
-        { limit: 5000000, rate: 0 },
-        { limit: 10000000, rate: 0.10 },
-        { limit: 20000000, rate: 0.15 },
-        { limit: 50000000, rate: 0.25 },
-        { limit: Infinity, rate: 0.37 },
-      ]
+      standardDeduction: 0,
+      surchargeRates: OLD_REGIME_SURCHARGE,
+      marginalRebate: false
     },
+    oldRegime: { slabs: OLD_REGIME_SLABS, rebateLimit: 500000, standardDeduction: 50000, surchargeRates: OLD_REGIME_SURCHARGE, marginalRebate: false },
+    cessRate: 0.04
+  },
+  '2022-23': {
+    newRegime: {
+      slabs: [
+        { limit: 250000, rate: 0 },
+        { limit: 500000, rate: 0.05 },
+        { limit: 750000, rate: 0.10 },
+        { limit: 1000000, rate: 0.15 },
+        { limit: 1250000, rate: 0.20 },
+        { limit: 1500000, rate: 0.25 },
+        { limit: Infinity, rate: 0.30 },
+      ],
+      rebateLimit: 500000,
+      standardDeduction: 0,
+      surchargeRates: OLD_REGIME_SURCHARGE,
+      marginalRebate: false
+    },
+    oldRegime: { slabs: OLD_REGIME_SLABS, rebateLimit: 500000, standardDeduction: 50000, surchargeRates: OLD_REGIME_SURCHARGE, marginalRebate: false },
+    cessRate: 0.04
+  },
+  '2023-24': {
+    newRegime: {
+      slabs: [
+        { limit: 300000, rate: 0 },
+        { limit: 600000, rate: 0.05 },
+        { limit: 900000, rate: 0.10 },
+        { limit: 1200000, rate: 0.15 },
+        { limit: 1500000, rate: 0.20 },
+        { limit: Infinity, rate: 0.30 },
+      ],
+      rebateLimit: 700000,
+      standardDeduction: 50000,
+      surchargeRates: NEW_REGIME_SURCHARGE_CAPPED,
+      marginalRebate: true
+    },
+    oldRegime: { slabs: OLD_REGIME_SLABS, rebateLimit: 500000, standardDeduction: 50000, surchargeRates: OLD_REGIME_SURCHARGE, marginalRebate: false },
     cessRate: 0.04
   },
   '2024-25': {
@@ -90,52 +131,55 @@ const TAX_RULES: Record<string, TaxConfig> = {
       ],
       rebateLimit: 700000,
       standardDeduction: 50000,
-      surchargeRates: [
-        { limit: 5000000, rate: 0 },
-        { limit: 10000000, rate: 0.10 },
-        { limit: 20000000, rate: 0.15 },
-        { limit: Infinity, rate: 0.25 },
-      ]
+      surchargeRates: NEW_REGIME_SURCHARGE_CAPPED,
+      marginalRebate: true
     },
-    oldRegime: {
-      slabs: {
-        regular: [
-          { limit: 250000, rate: 0 },
-          { limit: 500000, rate: 0.05 },
-          { limit: 1000000, rate: 0.20 },
-          { limit: Infinity, rate: 0.30 },
-        ],
-        senior: [
-          { limit: 300000, rate: 0 },
-          { limit: 500000, rate: 0.05 },
-          { limit: 1000000, rate: 0.20 },
-          { limit: Infinity, rate: 0.30 },
-        ],
-        super_senior: [
-          { limit: 500000, rate: 0 },
-          { limit: 1000000, rate: 0.20 },
-          { limit: Infinity, rate: 0.30 },
-        ]
-      },
-      rebateLimit: 500000,
-      standardDeduction: 50000,
-      surchargeRates: [
-        { limit: 5000000, rate: 0 },
-        { limit: 10000000, rate: 0.10 },
-        { limit: 20000000, rate: 0.15 },
-        { limit: 50000000, rate: 0.25 },
-        { limit: Infinity, rate: 0.37 },
-      ]
+    oldRegime: { slabs: OLD_REGIME_SLABS, rebateLimit: 500000, standardDeduction: 50000, surchargeRates: OLD_REGIME_SURCHARGE, marginalRebate: false },
+    cessRate: 0.04
+  },
+  '2025-26': {
+    newRegime: {
+      slabs: [
+        { limit: 400000, rate: 0 },
+        { limit: 800000, rate: 0.05 },
+        { limit: 1200000, rate: 0.10 },
+        { limit: 1600000, rate: 0.15 },
+        { limit: 2000000, rate: 0.20 },
+        { limit: 2400000, rate: 0.25 },
+        { limit: Infinity, rate: 0.30 },
+      ],
+      rebateLimit: 1200000,
+      standardDeduction: 75000,
+      surchargeRates: NEW_REGIME_SURCHARGE_CAPPED,
+      marginalRebate: true
     },
+    oldRegime: { slabs: OLD_REGIME_SLABS, rebateLimit: 500000, standardDeduction: 50000, surchargeRates: OLD_REGIME_SURCHARGE, marginalRebate: false },
     cessRate: 0.04
   }
 };
 
+const getTaxRulesForYear = (fy: string): TaxConfig => {
+  if (TAX_RULES[fy]) return TAX_RULES[fy];
+  const sortedYears = Object.keys(TAX_RULES).sort();
+  return TAX_RULES[sortedYears[sortedYears.length - 1]];
+};
+
+const getDynamicFYs = (): string[] => {
+  const today = new Date();
+  const currentMonth = today.getMonth(); // 0 = Jan, 3 = Apr
+  const currentYear = today.getFullYear();
+  const latestFyStart = currentMonth >= 3 ? currentYear : currentYear - 1;
+  const fys = [];
+  for (let i = 0; i < 6; i++) {
+    const startYear = latestFyStart - i;
+    const endYearStr = (startYear + 1).toString().slice(-2);
+    fys.push(`${startYear}-${endYearStr}`);
+  }
+  return fys;
+};
+
 // Engine logic
-function calculateTaxBreakdown(
-  taxableIncome: number,
-  slabs: Slab[]
-) {
+function calculateTaxBreakdown(taxableIncome: number, slabs: Slab[]) {
   let tax = 0;
   let prevLimit = 0;
   const breakdown: { range: string; rate: string; amount: number }[] = [];
@@ -162,8 +206,10 @@ function calculateTaxBreakdown(
 }
 
 export const IncomeTaxCalculator: React.FC = () => {
+  const dynamicFys = useMemo(() => getDynamicFYs(), []);
+  
   // State
-  const [fy, setFy] = useState('2025-26');
+  const [fy, setFy] = useState(dynamicFys[0]);
   const [regime, setRegime] = useState<RegimeType>('new');
   const [age, setAge] = useState<AgeCategory>('regular');
   const [empType, setEmpType] = useState<EmploymentType>('salaried');
@@ -186,7 +232,7 @@ export const IncomeTaxCalculator: React.FC = () => {
     sec80e: 0,
     sec80g: 0,
     other: 0,
-    employerNps: 0 // Applies to both (Section 80CCD(2))
+    employerNps: 0
   });
 
   const [showIncomeDetails, setShowIncomeDetails] = useState(false);
@@ -194,7 +240,7 @@ export const IncomeTaxCalculator: React.FC = () => {
 
   // Derived Values
   const grossIncome = useMemo(() => {
-    return Object.values(income).reduce((acc, val) => acc + val, 0);
+    return Object.values(income).reduce((acc, val) => acc + (val >= 0 ? val : 0), 0);
   }, [income]);
 
   const updateIncomeField = (field: keyof typeof income, value: number) => {
@@ -205,36 +251,49 @@ export const IncomeTaxCalculator: React.FC = () => {
     setDeductions(prev => ({ ...prev, [field]: value }));
   };
 
-  const totalOtherDeductions = useMemo(() => {
-    // Excluding employerNps as it's added separately below based on regime rules
-    return deductions.sec80c + deductions.sec80ccd1b + deductions.sec80d + deductions.hra + 
-           deductions.homeLoanInt + deductions.sec24 + deductions.sec80e + deductions.sec80g + deductions.other;
-  }, [deductions]);
-
   // Main Calculator Function
   const computeEngine = (activeRegime: RegimeType) => {
-    const rules = TAX_RULES[fy];
+    const rules = getTaxRulesForYear(fy);
+    const regimeConfig = activeRegime === 'new' ? rules.newRegime : rules.oldRegime;
     const isSalariedOrPensioner = empType === 'salaried' || empType === 'pensioner';
     
+    // Negative validation - sanitize at calculation time
+    const safeSalary = Math.max(0, income.salary);
+    const safeProperty = Math.max(0, income.property);
+    const safeBusiness = Math.max(0, income.business);
+    const safeCapGains = Math.max(0, income.capitalGains);
+    const safeOther = Math.max(0, income.other);
+    const actualGrossIncome = safeSalary + safeProperty + safeBusiness + safeCapGains + safeOther;
+
     let standardDeduction = 0;
     if (isSalariedOrPensioner) {
-      standardDeduction = activeRegime === 'new' 
-        ? rules.newRegime.standardDeduction 
-        : rules.oldRegime.standardDeduction;
-      // Cannot exceed salary/pension income
-      const eligibleIncomeForStdDed = income.salary + income.other; // assuming pension might be in other or salary
-      standardDeduction = Math.min(standardDeduction, income.salary > 0 ? income.salary : income.other);
+      standardDeduction = regimeConfig.standardDeduction;
+      const eligibleIncomeForStdDed = safeSalary + safeOther; // Rough estimate of salary+pension
+      standardDeduction = Math.min(standardDeduction, safeSalary > 0 ? safeSalary : safeOther);
     }
+
+    // Cap specific deductions
+    const capped80c = Math.min(150000, Math.max(0, deductions.sec80c));
+    const capped80ccd1b = Math.min(50000, Math.max(0, deductions.sec80ccd1b));
+    const safeHra = Math.max(0, deductions.hra);
+    const safeHomeLoanInt = Math.max(0, deductions.homeLoanInt);
+    const safeSec24 = Math.max(0, deductions.sec24);
+    const safe80d = Math.max(0, deductions.sec80d);
+    const safe80e = Math.max(0, deductions.sec80e);
+    const safe80g = Math.max(0, deductions.sec80g);
+    const safeOtherDed = Math.max(0, deductions.other);
+    const safeEmployerNps = Math.max(0, deductions.employerNps);
+
+    const totalOtherDeductions = capped80c + capped80ccd1b + safe80d + safeHra + safeHomeLoanInt + safeSec24 + safe80e + safe80g + safeOtherDed;
 
     let applicableDeductions = 0;
     if (activeRegime === 'old') {
-      applicableDeductions = totalOtherDeductions + deductions.employerNps;
+      applicableDeductions = totalOtherDeductions + safeEmployerNps;
     } else {
-      // In New Regime, only 80CCD(2) [Employer NPS] and standard deduction are allowed among common ones
-      applicableDeductions = deductions.employerNps;
+      applicableDeductions = safeEmployerNps; // Only NPS by employer is allowed in new regime generally
     }
 
-    const taxableIncome = Math.max(0, grossIncome - standardDeduction - applicableDeductions);
+    const taxableIncome = Math.max(0, actualGrossIncome - standardDeduction - applicableDeductions);
     
     const slabs = activeRegime === 'new' 
       ? rules.newRegime.slabs 
@@ -242,50 +301,71 @@ export const IncomeTaxCalculator: React.FC = () => {
 
     const { tax: baseTax, breakdown } = calculateTaxBreakdown(taxableIncome, slabs);
 
-    const rebateLimit = activeRegime === 'new' ? rules.newRegime.rebateLimit : rules.oldRegime.rebateLimit;
+    const rebateLimit = regimeConfig.rebateLimit;
     
     let taxAfterRebate = baseTax;
     let rebateApplied = 0;
     
-    // Exact rebate logic: rebate up to the tax amount if income <= rebateLimit
     if (taxableIncome <= rebateLimit) {
       rebateApplied = baseTax;
       taxAfterRebate = 0;
-    } else if (activeRegime === 'new' && fy === '2025-26') {
-       // Marginal relief for 87A added in recent budgets if slightly above limit
-       // Standard generic calculator just calculates full tax if above limit.
-    } else if (activeRegime === 'new' && fy === '2024-25') {
-       // Marginal relief for 87A (tax > income - 700000)
-       const incomeAboveLimit = taxableIncome - 700000;
-       if (incomeAboveLimit > 0 && baseTax > incomeAboveLimit) {
+    } else if (regimeConfig.marginalRebate) {
+       const incomeAboveLimit = taxableIncome - rebateLimit;
+       if (baseTax > incomeAboveLimit) {
          taxAfterRebate = incomeAboveLimit;
          rebateApplied = baseTax - taxAfterRebate;
        }
     }
 
-    const surchargeRates = activeRegime === 'new' ? rules.newRegime.surchargeRates : rules.oldRegime.surchargeRates;
+    const surchargeRates = regimeConfig.surchargeRates;
     
-    let surchargeRate = 0;
-    for (const s of surchargeRates) {
-      if (taxableIncome > s.limit) {
-        // continue
+    let surchargeAmount = 0;
+    let applicableSurchargeRate = 0;
+    let previousSurchargeLimit = 0;
+    let previousSurchargeRate = 0;
+
+    for (let i = 0; i < surchargeRates.length; i++) {
+      if (taxableIncome > surchargeRates[i].limit) {
+        previousSurchargeLimit = surchargeRates[i].limit;
+        previousSurchargeRate = surchargeRates[i].rate;
       } else {
-        surchargeRate = s.rate;
+        applicableSurchargeRate = surchargeRates[i].rate;
         break;
       }
     }
+    
     if (taxableIncome > surchargeRates[surchargeRates.length - 1].limit) {
-      surchargeRate = surchargeRates[surchargeRates.length - 1].rate;
+      applicableSurchargeRate = surchargeRates[surchargeRates.length - 1].rate;
     }
 
-    const surchargeAmount = taxAfterRebate * surchargeRate;
+    if (applicableSurchargeRate > 0) {
+      const taxOnActual = taxAfterRebate;
+      const surchargeOnActual = taxOnActual * applicableSurchargeRate;
+      const totalTaxWithSurchargeActual = taxOnActual + surchargeOnActual;
+      
+      if (previousSurchargeLimit > 0) {
+        const taxOnLimit = calculateTaxBreakdown(previousSurchargeLimit, slabs).tax;
+        const surchargeOnLimit = taxOnLimit * previousSurchargeRate;
+        const totalTaxWithSurchargeLimit = taxOnLimit + surchargeOnLimit;
+        
+        const marginalReliefCap = totalTaxWithSurchargeLimit + (taxableIncome - previousSurchargeLimit);
+        
+        if (totalTaxWithSurchargeActual > marginalReliefCap) {
+           surchargeAmount = marginalReliefCap - taxOnActual;
+        } else {
+           surchargeAmount = surchargeOnActual;
+        }
+      } else {
+        surchargeAmount = surchargeOnActual;
+      }
+    }
+
     const taxWithSurcharge = taxAfterRebate + surchargeAmount;
-    
     const cessAmount = taxWithSurcharge * rules.cessRate;
     const totalTaxLiability = taxWithSurcharge + cessAmount;
 
     return {
-      grossIncome,
+      grossIncome: actualGrossIncome,
       standardDeduction,
       applicableDeductions,
       taxableIncome,
@@ -350,10 +430,7 @@ export const IncomeTaxCalculator: React.FC = () => {
             label="Financial Year" 
             value={fy} 
             onChange={setFy} 
-            options={[
-              { value: '2025-26', label: 'FY 2025-26 (AY 2026-27)' },
-              { value: '2024-25', label: 'FY 2024-25 (AY 2025-26)' }
-            ]} 
+            options={dynamicFys.map(y => ({ value: y, label: `FY ${y}` }))} 
           />
 
           <Toggle 
@@ -396,17 +473,18 @@ export const IncomeTaxCalculator: React.FC = () => {
 
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.5rem', marginTop: '0.5rem' }}>
             <Field label="Annual Gross Income" value={grossIncome} onChange={(v) => {
-              // If edited directly via slider, assign it all to salary (or other if not salaried)
+              const sanitized = Math.max(0, v);
               if (empType === 'business' || empType === 'professional') {
-                 setIncome({ salary: 0, property: 0, business: v, capitalGains: 0, other: 0 });
+                 setIncome({ salary: 0, property: 0, business: sanitized, capitalGains: 0, other: 0 });
               } else {
-                 setIncome({ salary: v, property: 0, business: 0, capitalGains: 0, other: 0 });
+                 setIncome({ salary: sanitized, property: 0, business: 0, capitalGains: 0, other: 0 });
               }
             }} min={0} max={20000000} step={10000} prefix="₹ " />
+            {grossIncome < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Income cannot be negative</div>}
             
             <button 
               onClick={() => setShowIncomeDetails(!showIncomeDetails)}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#C8A45D', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 500 }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#C8A45D', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 500, cursor: 'pointer', background: 'transparent', border: 'none', padding: 0 }}
             >
               {showIncomeDetails ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
               {showIncomeDetails ? 'Hide Income Breakdown' : 'Show Detailed Income Breakdown'}
@@ -415,10 +493,15 @@ export const IncomeTaxCalculator: React.FC = () => {
             {showIncomeDetails && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem', padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
                 <Field label="Salary Income" value={income.salary} onChange={(v) => updateIncomeField('salary', v)} slider={false} prefix="₹ " />
+                {income.salary < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                 <Field label="Income from House Property" value={income.property} onChange={(v) => updateIncomeField('property', v)} slider={false} prefix="₹ " />
+                {income.property < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                 <Field label="Business / Professional Income" value={income.business} onChange={(v) => updateIncomeField('business', v)} slider={false} prefix="₹ " />
+                {income.business < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                 <Field label="Capital Gains" value={income.capitalGains} onChange={(v) => updateIncomeField('capitalGains', v)} slider={false} prefix="₹ " />
+                {income.capitalGains < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                 <Field label="Other Sources" value={income.other} onChange={(v) => updateIncomeField('other', v)} slider={false} prefix="₹ " />
+                {income.other < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
               </div>
             )}
           </div>
@@ -433,7 +516,7 @@ export const IncomeTaxCalculator: React.FC = () => {
 
             <button 
               onClick={() => setShowDeductions(!showDeductions)}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#C8A45D', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 500 }}
+              style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#C8A45D', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 500, cursor: 'pointer', background: 'transparent', border: 'none', padding: 0 }}
             >
               {showDeductions ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
               {showDeductions ? 'Hide Deductions' : 'Manage Deductions'}
@@ -443,15 +526,26 @@ export const IncomeTaxCalculator: React.FC = () => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem', padding: '1.25rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', opacity: regime === 'new' ? 0.7 : 1 }}>
                 
                 <Field label="Employer NPS Contribution (80CCD(2))" value={deductions.employerNps} onChange={(v) => updateDeductionField('employerNps', v)} slider={false} prefix="₹ " />
+                {deductions.employerNps < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                 
                 {regime === 'old' && (
                   <>
                     <Field label="Section 80C (LIC, PPF, EPF)" value={deductions.sec80c} onChange={(v) => updateDeductionField('sec80c', v)} slider={false} prefix="₹ " max={150000} />
+                    {deductions.sec80c > 150000 && <div style={{ color: '#C8A45D', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Limited to ₹1,50,000 for calculation</div>}
+                    {deductions.sec80c < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
+                    
                     <Field label="Section 80CCD(1B) (NPS)" value={deductions.sec80ccd1b} onChange={(v) => updateDeductionField('sec80ccd1b', v)} slider={false} prefix="₹ " max={50000} />
+                    {deductions.sec80ccd1b > 50000 && <div style={{ color: '#C8A45D', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Limited to ₹50,000 for calculation</div>}
+                    {deductions.sec80ccd1b < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
+                    
                     <Field label="Section 80D (Health Insurance)" value={deductions.sec80d} onChange={(v) => updateDeductionField('sec80d', v)} slider={false} prefix="₹ " />
+                    {deductions.sec80d < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                     <Field label="House Rent Allowance (HRA)" value={deductions.hra} onChange={(v) => updateDeductionField('hra', v)} slider={false} prefix="₹ " />
+                    {deductions.hra < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                     <Field label="Home Loan Interest (Sec 24)" value={deductions.sec24} onChange={(v) => updateDeductionField('sec24', v)} slider={false} prefix="₹ " />
+                    {deductions.sec24 < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                     <Field label="Other Deductions (80G, 80E, etc)" value={deductions.other} onChange={(v) => updateDeductionField('other', v)} slider={false} prefix="₹ " />
+                    {deductions.other < 0 && <div style={{ color: '#ff4d4f', fontSize: '0.8rem', marginTop: '-0.5rem' }}>Cannot be negative</div>}
                   </>
                 )}
               </div>
@@ -551,3 +645,4 @@ export const IncomeTaxCalculator: React.FC = () => {
     </CalculatorLayout>
   );
 };
+

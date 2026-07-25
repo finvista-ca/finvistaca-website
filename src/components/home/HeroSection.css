@@ -1,10 +1,10 @@
 .hero-section {
   position: relative;
-  padding: 8rem 0 4rem;
+  padding: 9rem 0 1.5rem;
   overflow: hidden;
-  min-height: 90vh;
+  min-height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-bg-effects {
@@ -26,8 +26,8 @@
     flex-direction: column;
     width: 100%;
     gap: 1rem;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-bottom:1.5rem;
+    margin-top:2rem;
   }
   .mobile-hero-cta {
     display: flex;
@@ -39,7 +39,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 3; /* Above all background layers */
 }
@@ -55,21 +55,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
 }
 
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.35rem 1rem;
+  padding:0.35rem 1rem;
   background: transparent;
   border: 1px solid var(--brand-gold);
   border-radius: 9999px;
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--brand-gold);
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -78,7 +77,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.75rem 1.5rem;
+  padding:0.75rem 1.5rem;
   background: rgba(200, 164, 93, 0.08);
   border: 1px solid #C8A45D;
   border-radius: 999px;
@@ -90,7 +89,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
-  margin-bottom: 24px;
+  margin-bottom:16px;
 
   backdrop-filter: blur(12px);
 
@@ -106,11 +105,11 @@
 
   font-family: "Sora", sans-serif;
 
-  font-size: clamp(56px, 6vw, 76px);
+  font-size: clamp(21px, 2.4vw, 29px);
 
   font-weight: 800;
 
-  line-height: 1.05;
+  line-height: 1.0;
 
   letter-spacing: -0.04em;
 
@@ -130,12 +129,12 @@
 
   z-index: 20;
 
-  margin: 0 0 28px 0;
+  margin:0 0 16px 0;
 }
 
 .hero-title span{
-  color:#1E5EFF !important;
-  -webkit-text-fill-color:#1E5EFF !important;
+  color:#C8A45D !important;
+  -webkit-text-fill-color:#C8A45D !important;
 }
 
 .hero-title .text-brand-blue {
@@ -152,11 +151,11 @@
 
   grid-template-columns:repeat(2,minmax(0,1fr));
 
-  gap:28px 40px;
+  gap:20px 40px;
 
   width:100%;
 
-  margin-bottom:48px;
+  margin-bottom:32px;
 }
 
 @media(max-width:768px){
@@ -169,7 +168,7 @@
 @media (min-width: 640px) {
   .hero-feature-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 2rem;
+    gap: 1.25rem 2rem;
   }
 }
 
@@ -200,7 +199,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #FFFFFF;
-  margin-bottom: 0.25rem;
+  margin-bottom:0.25rem;
 }
 
 .feature-desc {
@@ -213,7 +212,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom:2rem;
 }
 
 .action-btn {
@@ -227,24 +226,29 @@
 .hero-visual {
   position: relative;
   display: none;
+  margin-top:40px;
 }
 
 .hero-dashboard-wrapper {
   width: 100%;
   max-width: 520px;
-  margin: 0 auto;
+  margin:0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero-visual-cta-container {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   width: 100%;
 }
 
 .hero-dashboard-cta {
   font-size: 0.95rem;
-  padding: 0.8rem 1.5rem;
+  padding:0.8rem 1.5rem;
   box-shadow: 0 10px 25px rgba(30,94,255,0.3);
   border-radius: 8px;
   display: inline-flex;
@@ -261,6 +265,8 @@
 @media (min-width: 1024px) {
   .hero-visual {
     display: block;
+    align-self: stretch;
+    margin-top: 0;
   }
 }
 
@@ -275,12 +281,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 1.25rem;
+  gap: 0.85rem;
   width: 100%;
 }
 
 .bento-card {
-  padding: 1.5rem;
+  padding:1.5rem;
   border-radius: 1.25rem;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
   overflow: hidden;
@@ -307,9 +313,10 @@
   gap: 1.25rem;
 }
 
-.bento-wide {
+.bento-card.bento-wide {
   grid-column: 1 / 3;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: var(--dark-secondary);
@@ -334,7 +341,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .text-brand {
@@ -350,14 +357,14 @@
 .bento-desc {
   font-size: 0.875rem;
   color: var(--text-light-secondary);
-  margin-top: 0.25rem;
+  margin-top:0.25rem;
 }
 
 .circular-progress {
   position: relative;
   width: 160px;
   height: 160px;
-  margin: 0 auto;
+  margin:0 auto;
 }
 
 .circular-progress svg {
@@ -411,7 +418,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .stat-label {
@@ -431,7 +438,7 @@
 }
 
 .mini-trendline {
-  margin-top: 1rem;
+  margin-top:1rem;
   height: 40px;
   width: 100%;
 }
@@ -440,7 +447,7 @@
   height: 8px;
   background: rgba(0,0,0,0.05);
   border-radius: 4px;
-  margin-top: 1.5rem;
+  margin-top:1.5rem;
   overflow: hidden;
 }
 
@@ -466,6 +473,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .bento-card:hover .bento-action-arrow {
@@ -481,7 +489,7 @@
 /* Mobile Responsive Adjustments */
 @media (max-width: 991px) {
   .hero-section {
-    padding: 6rem 16px 3rem;
+    padding: 7rem 16px 1.5rem;
   }
   .hero-title {
     font-size: clamp(2.2rem, 7vw, 3.5rem) !important;

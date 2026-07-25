@@ -23,16 +23,16 @@ export const About: React.FC = () => {
       />
 
       {/* 2. Firm Overview */}
-      <section className="about-overview section">
+      <section className="about-overview section" style={{ paddingTop: '2rem' }}>
         <div className="container">
           <div className="overview-grid">
             <div className="overview-text">
-              <h2 className="section-title">Our Legacy of Excellence</h2>
+              <h1 className="section-title">Our Legacy of Excellence</h1>
               <p className="overview-paragraph">
-                FinvistaCA is a premier Chartered Accountancy firm committed to redefining modern financial services. With over 15 years of industry-leading experience, we have built a reputation on the pillars of integrity, technical mastery, and personalized client focus.
+                Partner with premier Chartered Accountants committed to delivering modern financial solutions backed by deep industry expertise, technical excellence, and a client-first approach. With over 15 years of experience, we help businesses confidently navigate taxation, GST, auditing, compliance, and strategic financial decisions through practical advice and trusted professional guidance.
               </p>
               <p className="overview-paragraph">
-                From intricate tax planning and rigorous auditing to GST compliance and strategic corporate advisory, our comprehensive suite of services is designed to empower businesses. We handle the complexities of the regulatory landscape, allowing our clients to focus on sustainable growth and innovation.
+                From intricate tax planning and rigorous audits to GST compliance and corporate advisory, our comprehensive financial services are designed to simplify regulatory complexity and support long-term business growth. We take care of compliance and financial governance, allowing you to focus on innovation, expansion, and achieving your business goals.
               </p>
             </div>
             <div className="overview-visual">

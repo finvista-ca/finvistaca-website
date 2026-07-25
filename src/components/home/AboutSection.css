@@ -1,6 +1,6 @@
 .about-section {
   background-color: #ffffff;
-  padding: 6rem 0;
+  padding:3rem 0;
 }
 
 /* Full-width content — no empty right column / gap */
@@ -9,14 +9,14 @@
 }
 
 .about-content .section-title {
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .about-desc {
   font-size: 1.125rem;
   color: var(--text-secondary);
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   max-width: none;
 }
 
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top:2.5rem;
 }
 
 @media (min-width: 640px) {

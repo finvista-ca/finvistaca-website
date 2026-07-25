@@ -102,14 +102,44 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="info-card glass-panel">
-              <h3>Why Choose FinvistaCA?</h3>
-              <ul className="info-list">
-                <li><div className="list-icon"><BadgeCheck size={20} /></div><span>Years of Experience</span></li>
-                <li><div className="list-icon"><Users size={20} /></div><span>Expert Professional Team</span></li>
-                <li><div className="list-icon"><ShieldCheck size={20} /></div><span>End-to-End Compliance</span></li>
-                <li><div className="list-icon"><HeartHandshake size={20} /></div><span>Personalized Advisory</span></li>
-                <li><div className="list-icon"><CheckCircle size={20} /></div><span>Dedicated Support</span></li>
-              </ul>
+              <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem' }}>
+                {/* Left Column */}
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <h3 style={{ borderBottom: 'none', paddingBottom: 0, marginBottom: '1.5rem', fontSize: '1.75rem', lineHeight: 1.2 }}>Why Choose<br/>FinvistaCA?</h3>
+                  <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#080d1a', borderRadius: '12px', padding: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+                    <img src="/logo 2.0.jpeg" alt="FinvistaCA Logo" style={{ width: '100%', maxWidth: '160px', height: 'auto', objectFit: 'contain', borderRadius: '8px' }} />
+                  </div>
+                </div>
+                
+                {/* Vertical Divider */}
+                <div style={{ width: '1px', background: 'rgba(255,255,255,0.1)', margin: '0.5rem 0' }}></div>
+                
+                {/* Right Column */}
+                <div style={{ flex: '1.2' }}>
+                  <ul className="info-list" style={{ gap: 0 }}>
+                    <li style={{ padding: '1rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <div className="list-icon" style={{ borderRadius: '12px', width: '48px', height: '48px' }}><BadgeCheck size={24} /></div>
+                      <span style={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.3 }}>Years of<br/>Experience</span>
+                    </li>
+                    <li style={{ padding: '1rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <div className="list-icon" style={{ borderRadius: '12px', width: '48px', height: '48px' }}><Users size={24} /></div>
+                      <span style={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.3 }}>Expert<br/>Professional<br/>Team</span>
+                    </li>
+                    <li style={{ padding: '1rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <div className="list-icon" style={{ borderRadius: '12px', width: '48px', height: '48px' }}><ShieldCheck size={24} /></div>
+                      <span style={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.3 }}>End-to-End<br/>Compliance</span>
+                    </li>
+                    <li style={{ padding: '1rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <div className="list-icon" style={{ borderRadius: '12px', width: '48px', height: '48px' }}><HeartHandshake size={24} /></div>
+                      <span style={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.3 }}>Personalized<br/>Advisory</span>
+                    </li>
+                    <li style={{ padding: '1rem 0', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <div className="list-icon" style={{ borderRadius: '12px', width: '48px', height: '48px' }}><CheckCircle size={24} /></div>
+                      <span style={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.3 }}>Dedicated<br/>Support</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

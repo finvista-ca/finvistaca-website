@@ -73,7 +73,7 @@
   transform: translateY(-50%) translateX(10px);
   background: rgba(9, 19, 31, 0.9);
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding:0.5rem 1rem;
   border-radius: 6px;
   font-size: 0.85rem;
   white-space: nowrap;
@@ -130,7 +130,7 @@
 
 /* Header */
 .va-header {
-  padding: 1.25rem 1.5rem;
+  padding:1.25rem 1.5rem;
   background: rgba(255, 255, 255, 0.03);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
@@ -170,16 +170,16 @@
 
 .va-header h4 {
   color: #fff;
-  margin: 0;
+  margin:0;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .va-header p {
   color: rgba(255, 255, 255, 0.6);
-  margin: 0;
+  margin:0;
   font-size: 0.75rem;
-  margin-top: 0.2rem;
+  margin-top:0.2rem;
 }
 
 .va-close-btn {
@@ -187,7 +187,7 @@
   border: none;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  padding: 0.25rem;
+  padding:0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,7 +200,7 @@
 
 /* Body */
 .va-body {
-  padding: 1.5rem;
+  padding:1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -242,12 +242,12 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-bottom: 4px;
+  margin-bottom:4px;
 }
 
 .va-message {
   background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
+  padding:1rem;
   border-radius: 14px 14px 14px 4px;
   color: #e2e8f0;
   font-size: 0.9rem;
@@ -264,17 +264,17 @@
 }
 
 .va-message p {
-  margin: 0 0 0.5rem 0;
+  margin:0 0 0.5rem 0;
 }
 
 .va-message p:last-child {
-  margin-bottom: 0;
+  margin-bottom:0;
 }
 
 .va-message.typing {
   display: flex;
   gap: 4px;
-  padding: 1rem 1.25rem;
+  padding:1rem 1.25rem;
   align-items: center;
   height: 42px;
 }
@@ -302,7 +302,7 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  padding-left: 2.5rem; /* Align with bot messages */
+  padding-left:2.5rem; /* Align with bot messages */
   animation: slideIn 0.4s ease-out forwards;
 }
 
@@ -310,7 +310,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding: 0.75rem 1rem;
+  padding:0.75rem 1rem;
   color: #fff;
   font-size: 0.9rem;
   text-align: left;
@@ -334,7 +334,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.6rem 1rem;
+  padding:0.6rem 1rem;
 }
 
 .va-option-btn.primary {
@@ -364,18 +364,18 @@
 }
 
 .va-service-list {
-  margin: 0.5rem 0 1rem 0;
-  padding-left: 1.2rem;
+  margin:0.5rem 0 1rem 0;
+  padding-left:1.2rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .va-service-list li {
-  margin-bottom: 0.25rem;
+  margin-bottom:0.25rem;
 }
 
 .va-contact-prompt {
-  margin-top: 1rem;
-  padding-top: 1rem;
+  margin-top:1rem;
+  padding-top:1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -383,14 +383,14 @@
   font-weight: 600;
   color: var(--brand-gold);
   font-size: 1.1rem;
-  margin-top: 0.5rem !important;
+  margin-top:0.5rem !important;
   letter-spacing: 0.5px;
 }
 
 .va-actions-row {
   display: flex;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top:1rem;
 }
 
 .va-action-btn {
@@ -399,7 +399,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 0.5rem;
+  padding:0.75rem 0.5rem;
   border-radius: 8px;
   text-decoration: none;
   font-size: 0.85rem;
@@ -433,9 +433,9 @@
 
 /* Follow Up */
 .va-followup {
-  margin-top: 1rem;
+  margin-top:1rem;
   width: 100%;
-  padding-left: 2.5rem;
+  padding-left:2.5rem;
   animation: slideIn 0.4s ease-out forwards;
 }
 
@@ -443,7 +443,7 @@
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.85rem;
   text-align: center;
-  margin-bottom: 0.75rem;
+  margin-bottom:0.75rem;
 }
 
 .va-followup-actions {
@@ -465,7 +465,7 @@
 
 /* Footer (Input Area) */
 .va-footer {
-  padding: 1rem 1.5rem;
+  padding:1rem 1.5rem;
   background: rgba(255, 255, 255, 0.02);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -480,7 +480,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 0.6rem 1rem;
+  padding:0.6rem 1rem;
   color: #fff;
   font-size: 0.9rem;
   outline: none;

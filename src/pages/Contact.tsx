@@ -15,8 +15,8 @@ const [formData, setFormData] = useState({
   name: "",
   phone: "",
   email: "",
-  branch: "",
   service: "",
+  message: "",
 });
 
 const handleChange = (
@@ -47,9 +47,9 @@ const handleSubmit = async (
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
-          branch: formData.branch,
-          message: formData.service, // Map service to message for the backend
-          service: formData.service  // Also send service explicitly just in case
+          branch: "Not specified",
+          message: formData.message,
+          service: formData.service
         }),
       }
     );
@@ -66,8 +66,8 @@ const handleSubmit = async (
       name: "",
       phone: "",
       email: "",
-      branch: "",
       service: "",
+      message: "",
     });
 
   } catch (error: any) {
@@ -185,7 +185,7 @@ const handleSubmit = async (
             {/* 1. HQ Section */}
             <div className="contact-section-hq">
               <div className="section-header">
-                <h2>Our Offices</h2>
+                <h1 className="section-title" style={{ marginBottom: '16px' }}>Contact Us</h1>
                 <p className="info-desc">Visit our headquarters or one of our branch offices.</p>
               </div>
               
@@ -276,29 +276,8 @@ const handleSubmit = async (
                     </div>
                     <div className="form-group">
                       <label htmlFor="email">Email Address</label>
-                      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required />
+                      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address" />
                     </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="branch">Preferred Branch</label>
-                    <select
-                      id="branch"
-                      name="branch"
-                      value={formData.branch}
-                      onChange={handleChange}
-                      required
-                    >
-                      <option value="" disabled>Select your preferred branch</option>
-                      <option value="Vijayawada (Head Office)">Vijayawada (Head Office)</option>
-                      <option value="Bobbili">Bobbili</option>
-                      <option value="Hyderabad">Hyderabad</option>
-                      <option value="Kakinada">Kakinada</option>
-                      <option value="Parvathipuram">Parvathipuram</option>
-                      <option value="Visakhapatnam">Visakhapatnam</option>
-                      <option value="Peddapuram">Peddapuram</option>
-                      <option value="Rayagada (Odisha)">Rayagada (Odisha)</option>
-                    </select>
                   </div>
 
                   <div className="form-group">
@@ -323,6 +302,18 @@ const handleSubmit = async (
                         ))
                       )}
                     </select>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="How can we help you?"
+                      required
+                    ></textarea>
                   </div>
 
                   <button type="submit" className="btn btn-primary submit-btn" disabled={loading}>

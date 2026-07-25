@@ -53,69 +53,15 @@ export const Career: React.FC = () => {
         description="Join a firm that values expertise, integrity, and innovation. Shape the future of finance and consulting."
       />
 
-      {/* Why Join Us & Work Culture */}
-      <section className="culture-section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>Why Join FinvistaCA?</h2>
-            <p className="section-desc">We foster an environment where talent thrives and careers accelerate.</p>
-          </div>
-          
-          <div className="culture-grid">
-            <div className="culture-card glass-card">
-              <div className="culture-icon"><TrendingUp size={28} /></div>
-              <h3>Continuous Growth</h3>
-              <p>We provide ongoing training, mentorship, and opportunities to work on diverse, challenging projects that accelerate your professional development.</p>
-            </div>
-            <div className="culture-card glass-card">
-              <div className="culture-icon"><Users size={28} /></div>
-              <h3>Collaborative Culture</h3>
-              <p>Work alongside industry veterans in a supportive, team-oriented environment where every voice is heard and valued.</p>
-            </div>
-            <div className="culture-card glass-card">
-              <div className="culture-icon"><Target size={28} /></div>
-              <h3>Impactful Work</h3>
-              <p>Contribute to solutions that make a tangible difference for our clients, from dynamic startups to large multinational corporations.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Hiring Process */}
-      <section className="process-section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>Our Hiring Process</h2>
-          </div>
-          
-          <div className="process-timeline">
-            <div className="process-step">
-              <div className="step-number">1</div>
-              <h4>Application Review</h4>
-              <p>Our team reviews your resume and cover letter.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">2</div>
-              <h4>Initial Screening</h4>
-              <p>A brief call to discuss your background and career goals.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">3</div>
-              <h4>Technical Interview</h4>
-              <p>An in-depth assessment of your domain knowledge and skills.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">4</div>
-              <h4>Partner Round</h4>
-              <p>Final discussion to ensure mutual fit and alignment of values.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Current Openings & Form */}
-      <section className="openings-section">
+      <section className="openings-section" style={{ paddingTop: '2rem' }}>
         <div className="container">
+          <div className="section-header text-center" style={{ marginBottom: '3rem' }}>
+            <h1 className="section-title" style={{ marginBottom: '16px' }}>Build Your Career With Us</h1>
+            <p className="section-desc" style={{ fontSize: '1.15rem', color: 'var(--brand-gold-light)' }}>Take the next step in your professional journey and join our team of experts.</p>
+          </div>
           <div className="openings-grid">
             
             {/* Openings List */}
@@ -187,7 +133,7 @@ export const Career: React.FC = () => {
                     </div>
                     <div className="form-group">
                       <label htmlFor="email">Email Address</label>
-                      <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required />
+                      <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder="Your email address" />
                     </div>
                   </div>
 
@@ -229,6 +175,66 @@ export const Career: React.FC = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Why Join Us & Work Culture */}
+      <section className="culture-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <h2>Why Join FinvistaCA?</h2>
+            <p className="section-desc">We foster an environment where talent thrives and careers accelerate.</p>
+          </div>
+          
+          <div className="culture-grid">
+            <div className="culture-card glass-card">
+              <div className="culture-icon"><TrendingUp size={28} /></div>
+              <h3>Continuous Growth</h3>
+              <p>We provide ongoing training, mentorship, and opportunities to work on diverse, challenging projects that accelerate your professional development.</p>
+            </div>
+            <div className="culture-card glass-card">
+              <div className="culture-icon"><Users size={28} /></div>
+              <h3>Collaborative Culture</h3>
+              <p>Work alongside industry veterans in a supportive, team-oriented environment where every voice is heard and valued.</p>
+            </div>
+            <div className="culture-card glass-card">
+              <div className="culture-icon"><Target size={28} /></div>
+              <h3>Impactful Work</h3>
+              <p>Contribute to solutions that make a tangible difference for our clients, from dynamic startups to large multinational corporations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hiring Process */}
+      <section className="process-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <h2>Our Hiring Process</h2>
+          </div>
+          
+          <div className="process-timeline">
+            <div className="process-step">
+              <div className="step-number">1</div>
+              <h4>Application Review</h4>
+              <p>Our team reviews your resume and cover letter.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">2</div>
+              <h4>Initial Screening</h4>
+              <p>A brief call to discuss your background and career goals.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">3</div>
+              <h4>Technical Interview</h4>
+              <p>An in-depth assessment of your domain knowledge and skills.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">4</div>
+              <h4>Partner Round</h4>
+              <p>Final discussion to ensure mutual fit and alignment of values.</p>
+            </div>
           </div>
         </div>
       </section>

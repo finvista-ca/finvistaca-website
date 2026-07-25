@@ -1,6 +1,6 @@
 /* About Page General */
 .about-page {
-  padding-top: 80px; /* Navbar offset */
+  padding-top:40px; /* Navbar offset */
   min-height: 100vh;
 }
 
@@ -8,7 +8,7 @@
 .about-hero {
   position: relative;
   background: transparent;
-  padding: 6rem 0;
+  padding:3rem 0;
   text-align: center;
   border-bottom: 1px solid var(--dark-border);
   overflow: hidden;
@@ -18,7 +18,7 @@
   position: relative;
   z-index: 2;
   max-width: 100%; max-width: 800px;
-  margin: 0 auto;
+  margin:0 auto;
   animation: fadeUp 0.8s ease forwards;
 }
 
@@ -26,7 +26,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   color: var(--text-heading);
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   line-height: 1.1;
 }
 
@@ -66,7 +66,7 @@
   font-size: 1.125rem;
   color: var(--text-secondary);
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .overview-visual {
@@ -80,7 +80,7 @@
   background-repeat: no-repeat;
   border: 1px solid var(--border-color);
   border-radius: 1.5rem;
-  padding: 4rem 2rem;
+  padding:2rem 2rem;
   box-shadow: var(--shadow-dark);
   display: flex;
   align-items: center;
@@ -108,14 +108,14 @@
 
 .badge-icon {
   color: var(--brand-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .visual-badge h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-heading);
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .visual-badge p {
@@ -124,7 +124,7 @@
 
 /* 3. Statistics Section */
 .about-stats {
-  padding: 2.5rem 0 !important;
+  padding:2.5rem 0 !important;
 }
 
 .stats-grid {
@@ -141,7 +141,7 @@
 }
 
 .stat-card {
-  padding: 2rem;
+  padding:2rem;
   background: var(--card-bg);
   border-radius: 1rem;
   box-shadow: var(--shadow-soft);
@@ -157,7 +157,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .stat-label {
@@ -182,7 +182,7 @@
 }
 
 .vm-card {
-  padding: 3rem;
+  padding:1.5rem;
   background: var(--card-bg);
   border-radius: 1rem;
   border: 1px solid var(--border-color);
@@ -203,7 +203,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
   background: var(--bg-alt);
   border: 1px solid var(--border-color);
   color: #FFFFFF;
@@ -220,7 +220,7 @@
 .vm-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
   color: var(--text-heading);
 }
 
@@ -243,7 +243,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top:2rem;
 }
 
 @media (min-width: 640px) {
@@ -259,7 +259,7 @@
 }
 
 .value-item {
-  padding: 2rem;
+  padding:2rem;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 1rem;
@@ -282,7 +282,7 @@
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
-  margin-bottom: 1.25rem;
+  margin-bottom:1.25rem;
   transition: all 0.3s ease;
 }
 
@@ -296,7 +296,7 @@
 .value-title {
   font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom:0.75rem;
   color: white;
 }
 
@@ -311,7 +311,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top:1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -322,7 +322,7 @@
 
 .wcu-card {
   background: var(--card-bg);
-  padding: 2.5rem;
+  padding:2.5rem;
   border-radius: 1rem;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-soft);
@@ -336,9 +336,9 @@
 
 .wcu-icon {
   display: inline-flex;
-  padding: 1rem;
+  padding:1rem;
   border-radius: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   background: var(--bg-alt);
   border: 1px solid var(--border-color);
   color: #FFFFFF;
@@ -355,7 +355,7 @@
 .wcu-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
   color: var(--text-heading);
 }
 
@@ -369,7 +369,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom:2rem;
 }
 
 @media (min-width: 1024px) {
@@ -386,7 +386,7 @@
   gap: 1.5rem;
   max-height: 700px;
   overflow-y: auto;
-  padding-right: 1rem;
+  padding-right:1rem;
 }
 
 /* Custom Scrollbar for presence cards */
@@ -409,7 +409,7 @@
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding:1.5rem;
   background: var(--card-bg);
   border-radius: 1rem;
   box-shadow: var(--shadow-soft);
@@ -450,7 +450,7 @@
 .pc-title {
   font-size: 1.125rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
   color: var(--text-heading);
 }
 
@@ -524,7 +524,7 @@
   position: absolute;
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(4px);
-  padding: 0.35rem 0.75rem;
+  padding:0.35rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
   font-weight: 500;
@@ -541,7 +541,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top:2rem;
 }
 
 @media (min-width: 768px) {
@@ -553,7 +553,7 @@
 .p-stat-card {
   background: var(--card-bg);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding:1.5rem;
   text-align: center;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-color);
@@ -563,7 +563,7 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--brand-gold);
-  margin-bottom: 0.25rem;
+  margin-bottom:0.25rem;
 }
 
 .p-stat-card p {
@@ -577,7 +577,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top:1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -587,7 +587,7 @@
 }
 
 .team-category {
-  padding: 2.5rem 2rem;
+  padding:2.5rem 2rem;
   text-align: center;
   border-radius: 1rem;
   background: var(--card-bg);
@@ -596,13 +596,13 @@
 }
 
 .team-icon {
-  margin: 0 auto 1.5rem;
+  margin:0 auto 1.5rem;
 }
 
 .team-category h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
   color: var(--text-heading);
 }
 
@@ -613,14 +613,14 @@
 
 /* 9. Final CTA */
 .about-cta {
-  padding: 5rem 0;
+  padding:2.5rem 0;
 }
 
 .cta-box {
   background: var(--navy-gradient);
   color: white;
   border-radius: 1.5rem;
-  padding: 4rem;
+  padding:2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -653,14 +653,14 @@
 .cta-box-content h2 {
   font-size: 2.25rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
   color: white;
 }
 
 .cta-box-content p {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
 }
 
 .cta-contact-details {

@@ -2,7 +2,7 @@
   position: relative;
   background: var(--bg-light);
   overflow: hidden;
-  padding-bottom: 6rem;
+  padding-bottom:3rem;
 }
 
 .service-cta-container {
@@ -12,7 +12,7 @@
   background: linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(226, 232, 240, 0.6) 100%);
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 2rem;
-  padding: 4rem;
+  padding:2rem;
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
   z-index: 1;
@@ -71,31 +71,31 @@
 .cta-badge {
   background: rgba(18, 52, 133, 0.1);
   color: var(--brand-primary);
-  padding: 0.5rem 1.25rem;
+  padding:0.5rem 1.25rem;
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   display: inline-block;
 }
 
 .cta-left-column h2 {
   font-size: 2.5rem;
   color: var(--brand-primary);
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
   line-height: 1.2;
 }
 
 .cta-left-column p {
   font-size: 1.1rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
 }
 
 .cta-benefits-list {
   list-style: none;
-  padding: 0;
-  margin: 0 0 2.5rem 0;
+  padding:0;
+  margin:0 0 2.5rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -124,7 +124,7 @@
 }
 
 .btn-large {
-  padding: 1rem 2rem;
+  padding:1rem 2rem;
   font-size: 1.1rem;
   justify-content: center;
 }
@@ -146,7 +146,7 @@
   background: white;
   border: 1px solid rgba(18, 52, 133, 0.05);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding:1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,7 +258,7 @@
   }
   .cta-right-column {
     grid-column: 1 / -1;
-    margin-top: 2rem;
+    margin-top:2rem;
   }
   .illustration-wrapper {
     width: 150px;
@@ -272,7 +272,7 @@
 
 @media (max-width: 992px) {
   .service-cta-container {
-    padding: 3rem 2rem;
+    padding:1.5rem 2rem;
   }
   .cta-left-column h2 {
     font-size: 2rem;
@@ -291,7 +291,7 @@
   .cta-benefits-list {
     grid-template-columns: 1fr;
     text-align: left;
-    margin: 0 auto 2.5rem auto;
+    margin:0 auto 2.5rem auto;
   }
   .cta-buttons-container {
     flex-direction: column;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Send } from 'lucide-react';
+import { servicesData, auditServicesData } from '../../data/servicesData';
+import { otherServicesData } from '../../data/otherServicesData';
 import './ContactCTA.css';
-
 export const ContactCTA: React.FC = () => {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -25,10 +26,12 @@ export const ContactCTA: React.FC = () => {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
-        message: formData.service ? `[Service: ${formData.service}]\n${formData.message}` : formData.message
+        branch: "Home Page",
+        message: formData.message,
+        service: formData.service
       };
       
-      const response = await fetch('/api/book', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -72,31 +75,44 @@ export const ContactCTA: React.FC = () => {
                 <p style={{ margin: 0, opacity: 0.9 }}>Thank you. Our experts will contact you shortly to schedule your consultation.</p>
               </div>
             ) : (
-            <form className="cta-form" onSubmit={handleSubmit}>
+            <form className="cta-form contact-page-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name" required />
+                <label htmlFor="name" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Full Name</label>
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your full name" required />
               </div>
-              <div className="form-group">
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required />
+              <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginTop: '1.5rem' }}>
+                <div className="form-group">
+                  <label htmlFor="phone" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Phone Number</label>
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="Your phone number" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Email Address</label>
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address" />
+                </div>
               </div>
-              <div className="form-group">
-                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" required />
-              </div>
-              <div className="form-group">
-                <select name="service" value={formData.service} onChange={handleChange} required style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', outline: 'none' }}>
-                  <option value="" disabled>Service Required</option>
-                  <option value="taxation">Taxation</option>
-                  <option value="audit">Audit & Assurance</option>
-                  <option value="gst">GST Compliance</option>
-                  <option value="advisory">Financial Advisory</option>
-                  <option value="other">Other</option>
+              <div className="form-group" style={{ marginTop: '1.5rem' }}>
+                <label htmlFor="service" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Services</label>
+                <select name="service" id="service" value={formData.service} onChange={handleChange} required>
+                  <option value="" disabled>Select a service you are enquiring about</option>
+                  {[...servicesData, ...auditServicesData, ...otherServicesData].map((column) =>
+                    column.categories.map((category) => (
+                      <optgroup key={category.title} label={category.title}>
+                        {category.items.map((item) => (
+                          <option key={item.slug} value={item.name}>
+                            {item.name}
+                          </option>
+                        ))}
+                      </optgroup>
+                    ))
+                  )}
                 </select>
               </div>
-              <div className="form-group">
-                <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" required rows={3} style={{ width: '100%', padding: '0.875rem 1.25rem', borderRadius: '0.5rem', border: '1px solid var(--border-color)', background: 'rgba(255, 255, 255, 0.9)', color: 'var(--text-primary)', resize: 'none', outline: 'none' }}></textarea>
+              <div className="form-group" style={{ marginTop: '1.5rem' }}>
+                <label htmlFor="message" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Message</label>
+                <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Enter your message" required rows={3}></textarea>
               </div>
-              <button type="submit" className="btn btn-secondary btn-lg submit-btn" disabled={loading}>
-                {loading ? 'Submitting...' : 'Request Consultation'} <ArrowRight size={18} />
+              <button type="submit" className="btn btn-primary submit-btn" disabled={loading} style={{ width: '100%', padding: '1rem', marginTop: '1.5rem', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', borderRadius: '0.5rem' }}>
+                <Send size={18} strokeWidth={1.5} /> {loading ? 'Submitting...' : 'Send Message'}
               </button>
             </form>
             )}

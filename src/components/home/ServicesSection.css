@@ -63,13 +63,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .service-row-title {
   font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
   color: #38BDF8;
 }
 
@@ -77,12 +77,12 @@
   font-size: 1.125rem;
   color: var(--text-secondary);
   line-height: 1.7;
-  margin-bottom: 2.5rem;
+  margin-bottom:2.5rem;
 }
 
 .service-features {
   list-style: none;
-  padding: 0;
+  padding:0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
@@ -117,8 +117,8 @@
     background: var(--dark-secondary);
     border: 1px solid var(--dark-border);
     border-radius: 20px;
-    padding: 24px;
-    margin-bottom: 16px;
+    padding:24px;
+    margin-bottom:16px;
     box-shadow: var(--shadow-dark);
   }
 }

@@ -7,13 +7,11 @@ import './NewsFeed.css';
 const categories = ["All", "GST", "Taxation", "Audit", "Compliance", "Technology", "Economy"];
 
 export const NewsFeed: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredNews = newsData.filter(news => {
-    const matchesSearch = news.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = activeCategory === "All" || news.category === activeCategory;
-    return matchesSearch && matchesCategory;
+    return matchesCategory;
   });
 
   const featuredNews = filteredNews.filter(news => news.featured);
@@ -31,23 +29,12 @@ export const NewsFeed: React.FC = () => {
         description="Stay informed with the latest updates on taxation, compliance, audit, and global economics from trusted sources."
       />
       
-      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
-        <div className="news-search-wrapper" style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <div className="search-bar glass-card">
-            <Search className="search-icon" size={20} />
-            <input 
-              type="text" 
-              placeholder="Search news, topics, or keywords..." 
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <button className="btn btn-primary">Search</button>
-          </div>
-        </div>
-      </div>
-
-      <section className="newsfeed-main">
+      <section className="newsfeed-main" style={{ paddingTop: '1rem' }}>
         <div className="container">
+          <div className="section-header text-center" style={{ marginBottom: '2rem' }}>
+            <h1 className="section-title" style={{ marginBottom: '16px' }}>News & Updates</h1>
+            <p className="section-desc" style={{ fontSize: '1.15rem', color: 'var(--text-secondary)' }}>Stay informed with the latest updates on taxation, compliance, audit, and global economics from trusted sources.</p>
+          </div>
           
           {/* Categories Filter */}
           <div className="categories-wrapper">
@@ -117,8 +104,8 @@ export const NewsFeed: React.FC = () => {
               </div>
             ) : (
               <div className="no-results glass-card">
-                <p>No news articles found matching your search criteria.</p>
-                <button className="btn btn-secondary" onClick={() => {setSearchTerm(''); setActiveCategory('All');}}>Clear Filters</button>
+                <p>No news articles found for this category.</p>
+                <button className="btn btn-secondary" onClick={() => setActiveCategory('All')}>Clear Filters</button>
               </div>
             )}
           </div>

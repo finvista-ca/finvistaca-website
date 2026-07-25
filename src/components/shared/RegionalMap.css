@@ -9,7 +9,7 @@
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.5);
-  padding: 12%; /* 88% Map Size target */
+  padding:12%; /* 88% Map Size target */
 }
 
 /* Optional subtle gradient for ocean */
@@ -35,7 +35,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: #fff;
-  margin: 0 0 0.5rem 0;
+  margin:0 0 0.5rem 0;
   opacity: 0.9;
   letter-spacing: 0.5px;
 }
@@ -45,7 +45,7 @@
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.4;
   border-left: 2px solid var(--brand-gold);
-  padding-left: 10px;
+  padding-left:10px;
 }
 
 .map-stats .highlight {
@@ -193,7 +193,7 @@
 .bloomberg-label {
   background: rgba(17, 25, 40, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 6px 12px;
+  padding:6px 12px;
   border-radius: 999px;
   backdrop-filter: blur(10px);
   color: #fff;
@@ -212,12 +212,12 @@
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  margin-top: 0;
+  margin-top:0;
 }
 
 .map-pin-wrapper:hover .bloomberg-label {
   border-radius: 12px;
-  padding: 10px 14px;
+  padding:10px 14px;
   background: rgba(17, 25, 40, 0.95);
   border-color: rgba(255, 255, 255, 0.2);
 }
@@ -225,11 +225,11 @@
 .map-pin-wrapper:hover .label-tooltip {
   max-height: 60px;
   opacity: 1;
-  margin-top: 6px;
+  margin-top:6px;
 }
 
 .label-tooltip p {
-  margin: 0 0 6px 0;
+  margin:0 0 6px 0;
   font-size: 0.7rem;
   color: rgba(255,255,255,0.7);
   white-space: normal;
@@ -269,8 +269,8 @@
   border-bottom-right-radius: 4px;
 }
 .leader-right-down .bloomberg-label {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left:20px;
+  margin-top:20px;
 }
 
 /* Leader Right-Up */
@@ -288,8 +288,8 @@
   border-top-right-radius: 4px;
 }
 .leader-right-up .bloomberg-label {
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-left:20px;
+  margin-bottom:20px;
 }
 
 /* Leader Left-Down */
@@ -307,8 +307,8 @@
   border-bottom-left-radius: 4px;
 }
 .leader-left-down .bloomberg-label {
-  margin-right: 20px;
-  margin-top: 20px;
+  margin-right:20px;
+  margin-top:20px;
 }
 
 /* Leader Left-Up */
@@ -326,13 +326,13 @@
   border-top-left-radius: 4px;
 }
 .leader-left-up .bloomberg-label {
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right:20px;
+  margin-bottom:20px;
 }
 
 @media (max-width: 1024px) {
   .regional-map-container {
-    padding: 5%;
+    padding:5%;
   }
 }
 
@@ -346,9 +346,9 @@
   }
   .bloomberg-label {
     font-size: 0.65rem;
-    padding: 4px 8px;
+    padding:4px 8px;
   }
   .map-pin-wrapper:hover .bloomberg-label {
-    padding: 8px 10px;
+    padding:8px 10px;
   }
 }

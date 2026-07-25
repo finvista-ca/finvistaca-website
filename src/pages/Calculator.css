@@ -1,24 +1,24 @@
 .calculator-page {
-  padding-top: 80px;
+  padding-top:40px;
   background-color: transparent;
   min-height: 100vh;
 }
 
 
 .calculator-main {
-  padding: 4rem 0 6rem;
+  padding:2rem 0 3rem;
 }
 
 .calculator-content-wrapper {
   max-width: 100%; max-width: 1000px;
-  margin: 0 auto 5rem;
+  margin:0 auto 2.5rem;
 }
 
 .calculator-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .calculator-header h2 {
@@ -32,7 +32,7 @@
 }
 
 .calculator-iframe-container {
-  padding: 0;
+  padding:0;
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 1rem;
@@ -54,7 +54,7 @@
   font-weight: 700;
   color: var(--text-heading);
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom:1.5rem;
 }
 
 .calc-grid {
@@ -78,7 +78,7 @@
 .calc-card {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding:2rem;
   background-color: var(--card-bg);
   border-radius: 1rem;
   text-decoration: none;
@@ -103,21 +103,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .calc-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-heading);
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
 }
 
 .calc-card p {
   color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
   flex-grow: 1;
 }
 
@@ -129,8 +129,8 @@
   font-weight: 600;
   font-size: 0.95rem;
   border-top: 1px solid var(--border-color);
-  padding-top: 1.25rem;
-  margin-top: auto;
+  padding-top:1.25rem;
+  margin-top:auto;
 }
 
 .calc-card:hover .calc-card-footer svg {
@@ -140,7 +140,7 @@
 
 /* ===== Interactive calculator UI ===== */
 .calculator-canvas {
-  padding: 2rem;
+  padding:2rem;
   border-radius: 1rem;
 }
 
@@ -183,7 +183,7 @@
 }
 .calc-number {
   width: 100%;
-  padding: 0.7rem 0.9rem;
+  padding:0.7rem 0.9rem;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   font: inherit;
@@ -203,13 +203,13 @@
   background: var(--primary-bg);
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  padding: 4px;
+  padding:4px;
   gap: 4px;
 }
 .calc-toggle-btn {
   border: none;
   background: transparent;
-  padding: 0.5rem 1.1rem;
+  padding:0.5rem 1.1rem;
   border-radius: 8px;
   font: inherit;
   font-weight: 600;
@@ -226,7 +226,7 @@
   background: var(--primary-bg);
   border: 1px solid var(--border-color);
   border-radius: 14px;
-  padding: 1.5rem;
+  padding:1.5rem;
 }
 .calc-results { display: flex; flex-direction: column; gap: 0.25rem; }
 .calc-result {
@@ -234,7 +234,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.7rem 0;
+  padding:0.7rem 0;
   border-bottom: 1px solid var(--border-color);
 }
 .calc-result:last-of-type { border-bottom: none; }
@@ -243,27 +243,27 @@
 .calc-result.primary {
   background: rgba(200, 164, 93, 0.15);
   color: var(--brand-gold);
-  margin: -1.5rem -1.5rem 0.75rem;
-  padding: 1.25rem 1.5rem;
+  margin:-1.5rem -1.5rem 0.75rem;
+  padding:1.25rem 1.5rem;
   border-radius: 14px 14px 0 0;
   border-bottom: none;
 }
 .calc-result.primary .calc-result-label { color: var(--brand-gold); opacity: 0.8; font-size: 0.95rem; }
 .calc-result.primary .calc-result-value { color: var(--brand-gold); font-size: 1.6rem; font-weight: 700; }
 .calc-note {
-  margin: 1rem 0 0;
+  margin:1rem 0 0;
   font-size: 0.8rem;
   line-height: 1.5;
   color: var(--text-light-secondary);
 }
 
 /* Related calculators section spacing */
-.related-calculators { padding: 4rem 0; background-color: transparent; }
-.related-calculators > .container > h2 { text-align: center; margin-bottom: 2rem; }
+.related-calculators { padding:2rem 0; background-color: transparent; }
+.related-calculators > .container > h2 { text-align: center; margin-bottom:2rem; }
 
 /* ===== Calculator page CTA (self-contained so text stays visible) ===== */
 .calculator-detail-page .cta-section {
-  padding: 4rem 0;
+  padding:2rem 0;
   background: transparent;
 }
 .calculator-detail-page .cta-container {
@@ -271,23 +271,23 @@
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-soft);
   border-radius: 1.25rem;
-  padding: 3rem 2.5rem;
+  padding:1.5rem 2.5rem;
   text-align: center;
 }
 .calculator-detail-page .cta-content {
   max-width: 100%; max-width: 640px;
-  margin: 0 auto;
+  margin:0 auto;
 }
 .calculator-detail-page .cta-content h2 {
   color: var(--text-primary);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
 }
 .calculator-detail-page .cta-content p {
   color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.6;
-  margin-bottom: 1.75rem;
+  margin-bottom:1.75rem;
 }
 .calculator-detail-page .cta-buttons {
   display: flex;

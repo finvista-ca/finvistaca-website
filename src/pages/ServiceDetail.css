@@ -1,13 +1,13 @@
 .service-detail-page {
   min-height: 100vh;
-  padding-top: 80px; /* Offset for navbar */
+  padding-top:40px; /* Offset for navbar */
   background-color: transparent;
 }
 
 .service-hero {
   position: relative;
   background: transparent;
-  padding: 6rem 0;
+  padding:3rem 0;
   color: white;
   text-align: center;
   overflow: hidden;
@@ -19,11 +19,11 @@
   align-items: center;
   gap: 0.5rem;
   background: rgba(255, 255, 255, 0.15);
-  padding: 0.5rem 1rem;
+  padding:0.5rem 1rem;
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   backdrop-filter: blur(10px);
 }
 
@@ -31,9 +31,9 @@
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
   max-width: 100%; max-width: 900px;
-  margin-inline: auto;
+  margin-inline:auto;
   position: relative;
   z-index: 2;
 }
@@ -42,7 +42,7 @@
   display: inline-block;
   background-color: var(--accent-primary);
   color: white;
-  padding: 0.5rem 1.5rem;
+  padding:0.5rem 1.5rem;
   border-radius: 2rem;
   font-weight: 700;
   font-size: 0.875rem;
@@ -65,15 +65,15 @@
 }
 
 .service-content-wrapper {
-  padding: 5rem 0;
+  padding:2.5rem 0;
 }
 
 .service-placeholder-card {
   max-width: 100%; max-width: 800px;
-  margin: 0 auto;
+  margin:0 auto;
   background-color: var(--card-bg);
   border-radius: 1.5rem;
-  padding: 4rem 2rem;
+  padding:2rem 2rem;
   text-align: center;
   box-shadow: var(--shadow-soft);
   position: relative;
@@ -91,14 +91,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 2rem;
+  margin:0 auto 2rem;
   animation: float 6s ease-in-out infinite;
 }
 
 .service-placeholder-card h2 {
   font-size: 2rem;
   color: var(--text-heading);
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
 }
 
 .placeholder-text {
@@ -106,7 +106,7 @@
   color: var(--text-secondary);
   line-height: 1.7;
   max-width: 100%; max-width: 600px;
-  margin: 0 auto 2.5rem;
+  margin:0 auto 2.5rem;
 }
 
 .placeholder-actions {
@@ -123,15 +123,15 @@
 /* --- Related Services Section --- */
 
 .related-services-section {
-  margin-top: 5rem;
-  padding-top: 3rem;
+  margin-top:2.5rem;
+  padding-top:1.5rem;
   border-top: 1px solid var(--dark-border);
 }
 
 .related-header {
   display: flex;
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom:2.5rem;
   gap: 1.5rem;
 }
 
@@ -139,7 +139,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-heading);
-  margin: 0;
+  margin:0;
   white-space: nowrap;
 }
 
@@ -159,7 +159,7 @@
 .related-card {
   display: flex;
   align-items: flex-start;
-  padding: 1.5rem;
+  padding:1.5rem;
   background-color: var(--card-bg);
   border-radius: 12px;
   text-decoration: none;
@@ -182,7 +182,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1.25rem;
+  margin-right:1.25rem;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
@@ -200,7 +200,7 @@
   color: var(--text-primary);
   font-size: 1.05rem;
   font-weight: 600;
-  margin: 0 0 0.5rem 0;
+  margin:0 0 0.5rem 0;
   line-height: 1.4;
 }
 

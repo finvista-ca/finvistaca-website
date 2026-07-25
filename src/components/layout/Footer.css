@@ -1,7 +1,7 @@
 .footer.premium-footer {
   background-color: var(--dark-bg);
   color: #e2e8f0;
-  padding: 0;
+  padding:0;
   position: relative;
   overflow: hidden;
 }
@@ -21,7 +21,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom:2rem;
   position: relative;
   z-index: 1;
 }
@@ -43,7 +43,7 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  padding: 2rem;
+  padding:2rem;
   transition: all 0.3s ease;
 }
 
@@ -57,27 +57,27 @@
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
 }
 
 .footer-desc {
   color: #D1D5DB;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   font-size: 0.9rem;
 }
 
 .footer-trust-list {
   list-style: none;
-  padding: 0;
-  margin: 0 0 2rem 0;
+  padding:0;
+  margin:0 0 2rem 0;
 }
 
 .footer-trust-list li {
   color: var(--brand-gold);
   font-size: 0.9rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .social-links {
@@ -108,10 +108,10 @@
 .footer-subheading {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   color: #ffffff;
   position: relative;
-  padding-bottom: 0.75rem;
+  padding-bottom:0.75rem;
 }
 
 .footer-subheading::after {
@@ -127,8 +127,8 @@
 
 .footer-links {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding:0;
+  margin:0;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -167,7 +167,7 @@
 /* Bottom Bar */
 .footer-bottom-premium {
   border-top: 1px solid rgba(200, 164, 93, 0.3);
-  padding-top: 2rem;
+  padding-top:2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,7 +186,7 @@
 .footer-bottom-left p {
   color: #94a3b8;
   font-size: 0.9rem;
-  margin: 0;
+  margin:0;
   line-height: 1.5;
 }
 
@@ -194,15 +194,15 @@
   color: var(--brand-gold);
   font-size: 1rem;
   font-weight: 600;
-  margin: 0;
+  margin:0;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .footer-legal-links {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding:0;
+  margin:0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -239,7 +239,7 @@
 
 .newsletter-input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding:0.75rem 1rem;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;

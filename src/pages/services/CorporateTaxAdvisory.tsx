@@ -9,8 +9,8 @@ interface CorporateTaxAdvisoryProps {
 
 export const CorporateTaxAdvisory: React.FC<CorporateTaxAdvisoryProps> = ({ service, relatedServices }) => {
   const pageData: ServicePageData = {
-    title: "Corporate Tax Advisory / Compliance",
-    intro_title: "Optimizing Corporate Tax",
+    title: "Income Tax Advisory / Compliance",
+    intro_title: "Optimizing Income Tax",
     intro_p1: "We assist corporates to deal with the various challenges arising from a complex tax environment. We assist companies across a spectrum of matters relating to applicability of withholding tax, deductibility of any expenditure, availability of exemption or enhanced deduction or tax holiday on any particular source of income or expenditure or investment. We also undertake corporate tax compliances ranging from advance tax computations, preparation and filing of tax returns, assistance with documentation requirements to support the planning and positions adopted for corporate and withholding tax matters.",
     intro_p2: "We assist companies in reducing their effective tax rates within the legal framework and providing them clear guidelines for implementation. We keep track of decisions of Tribunals and Courts and use such learning into our planning, advisory and compliance services. We also frequently update our clients on any change in the tax regulations or on receipt of any particular judicial decision which could have an impact on the client or the industry.",
     features: [

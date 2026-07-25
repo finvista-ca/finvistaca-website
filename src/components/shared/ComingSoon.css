@@ -1,6 +1,6 @@
 .coming-soon-container {
   min-height: calc(100vh - 80px - 300px); /* Adjust based on navbar/footer height */
-  padding: 4rem 1.5rem;
+  padding:2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@
   align-self: flex-start;
   max-width: 100%; max-width: 1200px;
   width: 100%;
-  margin: 0 auto 3rem auto;
+  margin:0 auto 1.5rem auto;
   color: var(--text-secondary);
   font-size: 0.875rem;
 }
@@ -42,13 +42,13 @@
 .coming-soon-content {
   max-width: 100%; max-width: 600px;
   width: 100%;
-  padding: 4rem 2rem;
+  padding:2rem 2rem;
   text-align: center;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin:0 auto;
 }
 
 .icon-wrapper {
@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom:2rem;
 }
 
 .icon-clock {
@@ -68,7 +68,7 @@
 
 .coming-soon-content h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom:1rem;
   color: var(--brand-primary);
 }
 

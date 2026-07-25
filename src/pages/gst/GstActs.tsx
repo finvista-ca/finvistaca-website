@@ -66,9 +66,9 @@ export const GstActs: React.FC = () => {
         </div>
 
         {/* HERO SECTION */}
-        <div className="gst-header">
-          <h1>Goods & Services Tax (GST) Acts, 2017</h1>
-          <p className="subtitle">India's unified indirect taxation framework governing supply, registration, ITC, returns, and compliance.</p>
+        <div className="section-header text-center" style={{ marginBottom: '2rem' }}>
+          <h1 className="section-title" style={{ marginBottom: '16px' }}>Goods & Services Tax (GST) Acts, 2017</h1>
+          <p className="section-desc" style={{ fontSize: '1.15rem', color: 'var(--text-secondary)' }}>India's unified indirect taxation framework governing supply, registration, ITC, returns, and compliance.</p>
         </div>
 
         <div className="info-card">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronRight, TrendingUp, ShieldCheck, PieChart, Briefcase } from 'lucide-react';
 import './HeroSection.css';
+import { RiH2 } from 'react-icons/ri';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -14,17 +15,14 @@ export const HeroSection: React.FC = () => {
 
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
-          <h2 className="hero-trusted-badge">
-            <ShieldCheck size={18} strokeWidth={2.5} />
-            PREMIER CHARTERED ACCOUNTANTS
-          </h2>
           
+
           <h1 className="hero-title" style={{ color: '#ffffff' }}>
             Authoritative Financial & <br />
-            <span style={{ color: '#1E5EFF' }}>Legal Compliance.</span>
+            <span style={{ color: '#C8A45D' }}>Legal Compliance.</span>
           </h1>
           
-          <p className="hero-description" style={{ color: '#D1D5DB', maxWidth: '600px', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '40px' }}>
+          <p className="hero-description" style={{ color: '#D1D5DB', maxWidth: '600px', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '24px' }}>
             Partner with premier Chartered Accountants for comprehensive Taxation, GST, Auditing, and Corporate Advisory services. We deliver absolute compliance and strategic financial leadership.
           </p>
           
@@ -70,11 +68,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="hero-actions">
-            <Link to="/services" className="btn btn-secondary-gold btn-lg action-btn">
-              Explore Services <ChevronRight size={18} />
-            </Link>
-          </div>
+
         </div>
         
         <div className="hero-visual animate-fade-in" style={{ animationDelay: '0.2s' }}>

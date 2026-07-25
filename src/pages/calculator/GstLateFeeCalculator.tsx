@@ -15,19 +15,19 @@ interface GSTLateFeeRule {
 const GST_LATE_FEE_RULES: GSTLateFeeRule[] = [
   // FY 2024-25 & FY 2025-26 rules (Standardized post-rationalization)
   { financialYear: 'FY 2025-26', returnType: 'GSTR-3B/1', taxpayerType: 'NIL Return', feePerDay: 20, maxCap: 500 },
-  { financialYear: 'FY 2025-26', returnType: 'GSTR-3B/1', taxpayerType: 'Regular Return', feePerDay: 50, maxCap: 5000 },
+  { financialYear: 'FY 2025-26', returnType: 'GSTR-3B/1', taxpayerType: 'Tax Return', feePerDay: 50, maxCap: 5000 },
   { financialYear: 'FY 2025-26', returnType: 'GSTR-9', taxpayerType: 'NIL Return', feePerDay: 200, maxCap: 20000 },
-  { financialYear: 'FY 2025-26', returnType: 'GSTR-9', taxpayerType: 'Regular Return', feePerDay: 200, maxCap: 20000 },
+  { financialYear: 'FY 2025-26', returnType: 'GSTR-9', taxpayerType: 'Tax Return', feePerDay: 200, maxCap: 20000 },
   
   { financialYear: 'FY 2024-25', returnType: 'GSTR-3B/1', taxpayerType: 'NIL Return', feePerDay: 20, maxCap: 500 },
-  { financialYear: 'FY 2024-25', returnType: 'GSTR-3B/1', taxpayerType: 'Regular Return', feePerDay: 50, maxCap: 5000 },
+  { financialYear: 'FY 2024-25', returnType: 'GSTR-3B/1', taxpayerType: 'Tax Return', feePerDay: 50, maxCap: 5000 },
   { financialYear: 'FY 2024-25', returnType: 'GSTR-9', taxpayerType: 'NIL Return', feePerDay: 200, maxCap: 20000 },
-  { financialYear: 'FY 2024-25', returnType: 'GSTR-9', taxpayerType: 'Regular Return', feePerDay: 200, maxCap: 20000 },
+  { financialYear: 'FY 2024-25', returnType: 'GSTR-9', taxpayerType: 'Tax Return', feePerDay: 200, maxCap: 20000 },
 
   { financialYear: 'FY 2026-27', returnType: 'GSTR-3B/1', taxpayerType: 'NIL Return', feePerDay: 20, maxCap: 500 },
-  { financialYear: 'FY 2026-27', returnType: 'GSTR-3B/1', taxpayerType: 'Regular Return', feePerDay: 50, maxCap: 5000 },
+  { financialYear: 'FY 2026-27', returnType: 'GSTR-3B/1', taxpayerType: 'Tax Return', feePerDay: 50, maxCap: 5000 },
   { financialYear: 'FY 2026-27', returnType: 'GSTR-9', taxpayerType: 'NIL Return', feePerDay: 200, maxCap: 20000 },
-  { financialYear: 'FY 2026-27', returnType: 'GSTR-9', taxpayerType: 'Regular Return', feePerDay: 200, maxCap: 20000 },
+  { financialYear: 'FY 2026-27', returnType: 'GSTR-9', taxpayerType: 'Tax Return', feePerDay: 200, maxCap: 20000 },
 ];
 
 const formatDate = (date: Date) => {
@@ -36,8 +36,9 @@ const formatDate = (date: Date) => {
 
 export const GstLateFeeCalculator: React.FC = () => {
   const [fy, setFy] = useState('FY 2024-25');
+  const [returnMonth, setReturnMonth] = useState('April');
   const [returnType, setReturnType] = useState('GSTR-3B/1');
-  const [taxpayerType, setTaxpayerType] = useState('Regular Return');
+  const [taxpayerType, setTaxpayerType] = useState('Tax Return');
   
   const today = new Date().toISOString().split('T')[0];
   const [dueDate, setDueDate] = useState(today);
@@ -126,21 +127,43 @@ export const GstLateFeeCalculator: React.FC = () => {
           />
 
           <SelectField 
+            label="Return Month" 
+            value={returnMonth} 
+            onChange={setReturnMonth} 
+            options={[
+              { value: 'April', label: 'April' },
+              { value: 'May', label: 'May' },
+              { value: 'June', label: 'June' },
+              { value: 'July', label: 'July' },
+              { value: 'August', label: 'August' },
+              { value: 'September', label: 'September' },
+              { value: 'October', label: 'October' },
+              { value: 'November', label: 'November' },
+              { value: 'December', label: 'December' },
+              { value: 'January', label: 'January' },
+              { value: 'February', label: 'February' },
+              { value: 'March', label: 'March' }
+            ]} 
+          />
+
+          <SelectField 
             label="GST Return Type" 
             value={returnType} 
             onChange={setReturnType} 
             options={[
               { value: 'GSTR-3B/1', label: 'GSTR-3B / GSTR-1' },
+              { value: 'GSTR-4', label: 'GSTR-4' },
+              { value: 'CMP-08', label: 'CMP-08' },
               { value: 'GSTR-9', label: 'GSTR-9 (Annual Return)' }
             ]} 
           />
 
           <SelectField 
-            label="Taxpayer Type" 
+            label="Tax Return" 
             value={taxpayerType} 
             onChange={setTaxpayerType} 
             options={[
-              { value: 'Regular Return', label: 'Regular Return' },
+              { value: 'Tax Return', label: 'Tax Return' },
               { value: 'NIL Return', label: 'NIL Return' }
             ]} 
           />

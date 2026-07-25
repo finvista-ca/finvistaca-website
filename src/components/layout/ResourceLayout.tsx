@@ -73,8 +73,9 @@ export const ResourceLayout: React.FC<ResourceLayoutProps> = ({ title, descripti
       />
 
       {/* Main Content Area */}
-      <section className="resource-main">
+      <section className="resource-main section">
         <div className="container">
+          <h1 className="section-title text-center" style={{ marginBottom: '24px' }}>{title}</h1>
 
           {/* Controls Bar */}
           <div className="resource-controls glass-card">
