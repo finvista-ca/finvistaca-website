@@ -13,7 +13,6 @@ export const Footer: React.FC = () => {
   useEffect(() => {
     async function fetchFooterData() {
       try {
-        // Replace with your production backend URL when deploying
         const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
 
         const [branchesRes, settingsRes] = await Promise.all([
@@ -108,10 +107,10 @@ export const Footer: React.FC = () => {
                 <li style={{ color: 'var(--text-muted, #aaa)', fontSize: '0.9rem' }}>Loading branches...</li>
               ) : (
                 branches.map((branch: any, idx: number) => (
-                  <li key={idx}>
+                  <li key={branch.id || idx}>
                     <Link to="/contact" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <MapPin size={16} strokeWidth={2} style={{ color: 'var(--brand-gold)' }} />
-                      {branch.name}
+                      {branch.branch_name || branch.name}
                     </Link>
                   </li>
                 ))
