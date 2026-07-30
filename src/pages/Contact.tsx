@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
   useEffect(() => {
     async function fetchContactData() {
       try {
-        const backendUrl = "http://localhost:3000"; // Update with production URL if needed
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with production URL if needed
         const [branchesRes, settingsRes] = await Promise.all([
           fetch(`${backendUrl}/api/branches`),
           fetch(`${backendUrl}/api/settings`)
@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
     setLoading(true);
 
     try {
-      const backendUrl = "http://localhost:3000";
+      const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
       const response = await fetch(
         `${backendUrl}/api/contact`,
         {

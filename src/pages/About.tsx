@@ -22,7 +22,7 @@ export const About: React.FC = () => {
   useEffect(() => {
     async function fetchAboutData() {
       try {
-        const backendUrl = "http://localhost:3000"; // Update with your backend URL in production
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with your backend URL in production
 
         const [branchesRes, settingsRes] = await Promise.all([
           fetch(`${backendUrl}/api/branches`),

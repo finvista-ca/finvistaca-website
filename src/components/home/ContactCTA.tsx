@@ -26,7 +26,7 @@ export const ContactCTA: React.FC = () => {
   useEffect(() => {
     async function fetchContactSettings() {
       try {
-        const backendUrl = "http://localhost:3000"; // Update with your backend production URL if needed
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with your backend production URL if needed
         const response = await fetch(`${backendUrl}/api/settings`);
         if (response.ok) {
           const data = await response.json();
@@ -52,7 +52,7 @@ export const ContactCTA: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const backendUrl = "http://localhost:3000";
+      const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
       const payload = {
         name: formData.name,
         phone: formData.phone,

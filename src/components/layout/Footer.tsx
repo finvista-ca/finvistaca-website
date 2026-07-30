@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
     async function fetchFooterData() {
       try {
         // Replace with your production backend URL when deploying
-        const backendUrl = "http://localhost:3000";
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
 
         const [branchesRes, settingsRes] = await Promise.all([
           fetch(`${backendUrl}/api/branches`),

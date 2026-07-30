@@ -11,7 +11,7 @@ export const DataPolicy: React.FC = () => {
   useEffect(() => {
     async function fetchSettings() {
       try {
-        const backendUrl = "http://localhost:3000";
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
         const response = await fetch(`${backendUrl}/api/settings`);
         if (response.ok) {
           const data = await response.json();

@@ -14,7 +14,7 @@ export const ImmediateAssistanceCTA: React.FC = () => {
   useEffect(() => {
     async function fetchSettings() {
       try {
-        const backendUrl = "http://localhost:3000"; // Update with your backend URL in production
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with your backend URL in production
         const response = await fetch(`${backendUrl}/api/settings`);
         if (response.ok) {
           const data = await response.json();

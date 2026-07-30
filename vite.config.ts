@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://finvistaca-backend-ebon.vercel.app',
+        target: 'https://https://finvistaca-backend-ebon.vercel.app',
         changeOrigin: true,
       }
     }

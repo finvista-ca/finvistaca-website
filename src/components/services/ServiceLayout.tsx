@@ -54,7 +54,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
   useEffect(() => {
     async function fetchSettings() {
       try {
-        const backendUrl = "http://localhost:3000"; // Update with your backend production URL if needed
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with your backend production URL if needed
         const response = await fetch(`${backendUrl}/api/settings`);
         if (response.ok) {
           const data = await response.json();

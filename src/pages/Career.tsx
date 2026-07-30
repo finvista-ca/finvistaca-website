@@ -25,7 +25,7 @@ export const Career: React.FC = () => {
   useEffect(() => {
     async function fetchJobs() {
       try {
-        const backendUrl = "http://localhost:3000"; // Update with your backend URL in production
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with your backend URL in production
         const response = await fetch(`${backendUrl}/api/job-postings`);
         if (response.ok) {
           const data = await response.json();
@@ -51,7 +51,7 @@ export const Career: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const backendUrl = "http://localhost:3000";
+      const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
       const response = await fetch(`${backendUrl}/api/career`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
