@@ -278,37 +278,48 @@ export const Contact: React.FC = () => {
               </div>
             </div>
 
-            {/* 3. Branches Section (Dynamically Mapped) */}
+            {/* 3. Branches Section (Dynamically Mapped, excluding Head Office) */}
             <div className="contact-section-branches">
               <h3 className="branches-title">Branch Offices</h3>
               <div className="branches-grid">
                 {branches.length === 0 ? (
                   <p className="text-muted-foreground">Loading branch offices...</p>
                 ) : (
-                  branches.map((branch) => {
-                    const branchName = branch.branch_name || branch.name;
-                    const mapUrl = `https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+${encodeURIComponent(branchName)}`;
-                    
-                    return (
-                      <a 
-                        key={branch.id || branchName}
-                        href={mapUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="contact-branch-card"
-                        style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
-                      >
-                        <div className="branch-card-header">
-                          <MapPin size={18} strokeWidth={2} className="branch-icon" />
-                          <h4>{branchName}</h4>
-                        </div>
-                        <div className="branch-card-body">
-                          <p style={{ whiteSpace: 'pre-line' }}>{branch.address}</p>
-                          {branch.phone && <p style={{ fontSize: '0.85rem', marginTop: '0.5rem', opacity: 0.8 }}>📞 {branch.phone}</p>}
-                        </div>
-                      </a>
-                    );
-                  })
+                  (() => {
+                    const regularBranches = branches.filter((branch) => {
+                      const name = (branch.branch_name || branch.name || "").toLowerCase();
+                      return !name.includes("vijayawada") && !name.includes("head office");
+                    });
+
+                    if (regularBranches.length === 0) {
+                      return <p className="text-muted-foreground">No other branch offices available.</p>;
+                    }
+
+                    return regularBranches.map((branch) => {
+                      const branchName = branch.branch_name || branch.name;
+                      const mapUrl = `https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+${encodeURIComponent(branchName)}`;
+                      
+                      return (
+                        <a 
+                          key={branch.id || branchName}
+                          href={mapUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="contact-branch-card"
+                          style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
+                        >
+                          <div className="branch-card-header">
+                            <MapPin size={18} strokeWidth={2} className="branch-icon" />
+                            <h4>{branchName}</h4>
+                          </div>
+                          <div className="branch-card-body">
+                            <p style={{ whiteSpace: 'pre-line' }}>{branch.address}</p>
+                            {branch.phone && <p style={{ fontSize: '0.85rem', marginTop: '0.5rem', opacity: 0.8 }}>📞 {branch.phone}</p>}
+                          </div>
+                        </a>
+                      );
+                    });
+                  })()
                 )}
               </div>
             </div>
