@@ -23,14 +23,13 @@ export const Contact: React.FC = () => {
     phone: "",
     email: "",
     service: "",
-    message: "",
   });
 
   // Fetch branches and settings dynamically from the backend API on load
   useEffect(() => {
     async function fetchContactData() {
       try {
-        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with production URL if needed
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
         const [branchesRes, settingsRes] = await Promise.all([
           fetch(`${backendUrl}/api/branches`),
           fetch(`${backendUrl}/api/settings`)
@@ -89,7 +88,6 @@ export const Contact: React.FC = () => {
             phone: formData.phone,
             email: formData.email,
             branch: "Not specified",
-            message: formData.message,
             service: formData.service
           }),
         }
@@ -107,7 +105,6 @@ export const Contact: React.FC = () => {
         phone: "",
         email: "",
         service: "",
-        message: "",
       });
 
     } catch (error: any) {
@@ -251,18 +248,6 @@ export const Contact: React.FC = () => {
                         ))
                       )}
                     </select>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="How can we help you?"
-                      required
-                    ></textarea>
                   </div>
 
                   <button type="submit" className="btn btn-primary submit-btn" disabled={loading}>
