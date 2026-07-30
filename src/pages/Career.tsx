@@ -26,7 +26,7 @@ export const Career: React.FC = () => {
     async function fetchJobs() {
       try {
         const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with your backend URL in production
-        const response = await fetch(`${backendUrl}/api/job-postings`);
+        const response = await fetch(`${backendUrl}/api/admin/job-postings`);
         if (response.ok) {
           const data = await response.json();
           // Filter only active jobs if needed, or handle array structure
