@@ -9,6 +9,7 @@ import './ContactCTA.css';
 export const ContactCTA: React.FC = () => {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [branches, setBranches] = useState<any[]>([]);
   const [contactInfo, setContactInfo] = useState({
     phone: '+91 9908285223',
     email: 'finvistaca@gmail.com'
@@ -18,24 +19,33 @@ export const ContactCTA: React.FC = () => {
     name: '',
     phone: '',
     email: '',
-    service: '',
-    message: ''
+    branch: '',
+    service: ''
   });
 
-  // Fetch dynamic contact details from your backend settings API on load
+  // Fetch dynamic contact details and branches from your backend API on load
   useEffect(() => {
     async function fetchContactSettings() {
       try {
-        const backendUrl = "https://finvistaca-backend-ebon.vercel.app"; // Update with your backend production URL if needed
-        const response = await fetch(`${backendUrl}/api/settings`);
-        if (response.ok) {
-          const data = await response.json();
+        const backendUrl = "https://finvistaca-backend-ebon.vercel.app";
+        const [settingsRes, branchesRes] = await Promise.all([
+          fetch(`${backendUrl}/api/settings`),
+          fetch(`${backendUrl}/api/branches`)
+        ]);
+
+        if (settingsRes.ok) {
+          const data = await settingsRes.json();
           if (data.settings) {
             setContactInfo({
               phone: data.settings.primary_phone || '+91 9908285223',
               email: data.settings.support_email || 'finvistaca@gmail.com'
             });
           }
+        }
+
+        if (branchesRes.ok) {
+          const data = await branchesRes.json();
+          setBranches(data.branches || []);
         }
       } catch (err) {
         console.error("Failed to load contact info settings", err);
@@ -44,7 +54,7 @@ export const ContactCTA: React.FC = () => {
     fetchContactSettings();
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -57,8 +67,7 @@ export const ContactCTA: React.FC = () => {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
-        branch: "Home Page",
-        message: formData.message,
+        branch: formData.branch,
         service: formData.service
       };
       
@@ -72,7 +81,7 @@ export const ContactCTA: React.FC = () => {
       if (!response.ok) throw new Error(data.error || 'Something went wrong');
       
       setSent(true);
-      setFormData({ name: '', phone: '', email: '', service: '', message: '' });
+      setFormData({ name: '', phone: '', email: '', branch: '', service: '' });
     } catch (err: any) {
       alert(err.message || 'Something went wrong');
     } finally {
@@ -122,6 +131,27 @@ export const ContactCTA: React.FC = () => {
                   <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address" />
                 </div>
               </div>
+
+              {/* Branch Selection Dropdown */}
+              <div className="form-group" style={{ marginTop: '1.5rem' }}>
+                <label htmlFor="branch" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Preferred Branch</label>
+                <select name="branch" id="branch" value={formData.branch} onChange={handleChange} required>
+                  <option value="" disabled>Select a branch location</option>
+                  <option value="Vijayawada (Headquarters)">Vijayawada (Headquarters)</option>
+                  {branches.map((b: any) => {
+                    const bName = b.branch_name || b.name;
+                    if (!bName.toLowerCase().includes("vijayawada")) {
+                      return (
+                        <option key={b.id || bName} value={bName}>
+                          {bName}
+                        </option>
+                      );
+                    }
+                    return null;
+                  })}
+                </select>
+              </div>
+
               <div className="form-group" style={{ marginTop: '1.5rem' }}>
                 <label htmlFor="service" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Services</label>
                 <select name="service" id="service" value={formData.service} onChange={handleChange} required>
@@ -139,10 +169,7 @@ export const ContactCTA: React.FC = () => {
                   )}
                 </select>
               </div>
-              <div className="form-group" style={{ marginTop: '1.5rem' }}>
-                <label htmlFor="message" style={{ color: 'white', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem', display: 'block' }}>Message</label>
-                <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Enter your message" required rows={3}></textarea>
-              </div>
+
               <button type="submit" className="btn btn-primary submit-btn" disabled={loading} style={{ width: '100%', padding: '1rem', marginTop: '1.5rem', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', borderRadius: '0.5rem' }}>
                 <Send size={18} strokeWidth={1.5} /> {loading ? 'Submitting...' : 'Send Message'}
               </button>

@@ -22,6 +22,7 @@ export const Contact: React.FC = () => {
     name: "",
     phone: "",
     email: "",
+    branch: "",
     service: "",
   });
 
@@ -46,7 +47,7 @@ export const Contact: React.FC = () => {
             setHeadquarters({
               address: data.settings.office_address || "76-43-399, HIG-399, Ground Floor,\nH. B. Colony, Bhavanipuram,\nVijayawada, Krishna Dt., AP.",
               phone1: data.settings.primary_phone || "+91 9908285223",
-              phone2: "+91 7993856920",
+              phone2: data.settings.phone2 || "+91 7993856920",
               email: data.settings.support_email || "finvistaca@gmail.com"
             });
           }
@@ -87,7 +88,7 @@ export const Contact: React.FC = () => {
             name: formData.name,
             phone: formData.phone,
             email: formData.email,
-            branch: "Not specified",
+            branch: formData.branch, // Passes the chosen branch to the backend!
             service: formData.service
           }),
         }
@@ -104,6 +105,7 @@ export const Contact: React.FC = () => {
         name: "",
         phone: "",
         email: "",
+        branch: "",
         service: "",
       });
 
@@ -224,6 +226,32 @@ export const Contact: React.FC = () => {
                       <label htmlFor="email">Email Address</label>
                       <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your email address" />
                     </div>
+                  </div>
+
+                  {/* Branch Selection Dropdown */}
+                  <div className="form-group">
+                    <label htmlFor="branch">Preferred Branch</label>
+                    <select
+                      id="branch"
+                      name="branch"
+                      value={formData.branch}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="" disabled>Select a branch location</option>
+                      <option value="Vijayawada (Headquarters)">Vijayawada (Headquarters)</option>
+                      {branches.map((b: any) => {
+                        const bName = b.branch_name || b.name;
+                        if (!bName.toLowerCase().includes("vijayawada")) {
+                          return (
+                            <option key={b.id || bName} value={bName}>
+                              {bName}
+                            </option>
+                          );
+                        }
+                        return null;
+                      })}
+                    </select>
                   </div>
 
                   <div className="form-group">
