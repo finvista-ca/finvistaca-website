@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+// src/components/home/ContactCTA.tsx
+
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Send } from 'lucide-react';
 import { servicesData, auditServicesData } from '../../data/servicesData';
 import { otherServicesData } from '../../data/otherServicesData';
 import './ContactCTA.css';
+
 export const ContactCTA: React.FC = () => {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [contactInfo, setContactInfo] = useState({
+    phone: '+91 9908285223',
+    email: 'finvistaca@gmail.com'
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -13,6 +21,28 @@ export const ContactCTA: React.FC = () => {
     service: '',
     message: ''
   });
+
+  // Fetch dynamic contact details from your backend settings API on load
+  useEffect(() => {
+    async function fetchContactSettings() {
+      try {
+        const backendUrl = "http://localhost:3000"; // Update with your backend production URL if needed
+        const response = await fetch(`${backendUrl}/api/settings`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.settings) {
+            setContactInfo({
+              phone: data.settings.primary_phone || '+91 9908285223',
+              email: data.settings.support_email || 'finvistaca@gmail.com'
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load contact info settings", err);
+      }
+    }
+    fetchContactSettings();
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -22,6 +52,7 @@ export const ContactCTA: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
+      const backendUrl = "http://localhost:3000";
       const payload = {
         name: formData.name,
         phone: formData.phone,
@@ -31,7 +62,7 @@ export const ContactCTA: React.FC = () => {
         service: formData.service
       };
       
-      const response = await fetch('/api/contact', {
+      const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -48,6 +79,7 @@ export const ContactCTA: React.FC = () => {
       setLoading(false);
     }
   };
+
   return (
     <section className="contact-cta-section">
       <div className="container">
@@ -59,10 +91,10 @@ export const ContactCTA: React.FC = () => {
             </p>
             <div className="cta-contact-info" style={{ marginTop: '2rem' }}>
               <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <strong>Phone:</strong> +91 9908285223
+                <strong>Phone:</strong> <a href={`tel:${contactInfo.phone}`} style={{ color: 'inherit' }}>{contactInfo.phone}</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <strong>Email:</strong> <a href="mailto:finvistaca@gmail.com" style={{ color: 'inherit' }}>finvistaca@gmail.com</a>
+                <strong>Email:</strong> <a href={`mailto:${contactInfo.email}`} style={{ color: 'inherit' }}>{contactInfo.email}</a>
               </div>
             </div>
           </div>

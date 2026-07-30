@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Database, 
@@ -15,6 +15,34 @@ import {
 import './PrivacyPolicy.css';
 
 export const PrivacyPolicy: React.FC = () => {
+  const [contactInfo, setContactInfo] = useState({
+    phone: '+91 9908285223',
+    email: 'finvistaca@gmail.com',
+    address: '76-43-399, HIG-399, Ground Floor,\nH. B. Colony, Bhavanipuram,\nVijayawada, Krishna Dt., AP.'
+  });
+
+  useEffect(() => {
+    async function fetchSettings() {
+      try {
+        const backendUrl = "http://localhost:3000";
+        const response = await fetch(`${backendUrl}/api/settings`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.settings) {
+            setContactInfo({
+              phone: data.settings.primary_phone || '+91 9908285223',
+              email: data.settings.support_email || 'finvistaca@gmail.com',
+              address: data.settings.office_address || '76-43-399, HIG-399, Ground Floor,\nH. B. Colony, Bhavanipuram,\nVijayawada, Krishna Dt., AP.'
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load privacy policy contact settings", err);
+      }
+    }
+    fetchSettings();
+  }, []);
+
   return (
     <div className="privacy-page">
       {/* Hero Section */}
@@ -244,12 +272,12 @@ export const PrivacyPolicy: React.FC = () => {
               <div className="privacy-contact-grid">
                 <div className="privacy-contact-item">
                   <h3>FinVista Chartered Accountants</h3>
-                  <p><strong>Phone:</strong> +91 9908285223</p>
-                  <p><strong>Email:</strong> finvistaca@gmail.com</p>
+                  <p><strong>Phone:</strong> <a href={`tel:${contactInfo.phone}`} style={{ color: 'inherit', textDecoration: 'none' }}>{contactInfo.phone}</a></p>
+                  <p><strong>Email:</strong> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
                 </div>
                 <div className="privacy-contact-item">
                   <h3>Head Office</h3>
-                  <p>76-43-399, HIG-399, Ground Floor,<br />H. B. Colony, Bhavanipuram,<br />Vijayawada, Krishna Dt., AP.</p>
+                  <p style={{ whiteSpace: 'pre-line' }}>{contactInfo.address}</p>
                 </div>
               </div>
             </div>

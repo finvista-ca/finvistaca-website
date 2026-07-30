@@ -1,4 +1,6 @@
-import React from 'react';
+// src/components/About.tsx (Frontend Project)
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Building2, Users, Target, Compass, Shield, Heart, 
@@ -11,6 +13,44 @@ import { RegionalMap } from '../components/shared/RegionalMap';
 import './About.css';
 
 export const About: React.FC = () => {
+  const [branches, setBranches] = useState<any[]>([]);
+  const [contactInfo, setContactInfo] = useState({
+    phone: "+91 9908285223",
+    email: "finvistaca@gmail.com"
+  });
+
+  useEffect(() => {
+    async function fetchAboutData() {
+      try {
+        const backendUrl = "http://localhost:3000"; // Update with your backend URL in production
+
+        const [branchesRes, settingsRes] = await Promise.all([
+          fetch(`${backendUrl}/api/branches`),
+          fetch(`${backendUrl}/api/settings`)
+        ]);
+
+        if (branchesRes.ok) {
+          const data = await branchesRes.json();
+          setBranches(data.branches || []);
+        }
+
+        if (settingsRes.ok) {
+          const data = await settingsRes.json();
+          if (data.settings) {
+            setContactInfo({
+              phone: data.settings.primary_phone || "+91 9908285223",
+              email: data.settings.support_email || "finvistaca@gmail.com"
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load about page dynamic data", err);
+      }
+    }
+
+    fetchAboutData();
+  }, []);
+
   return (
     <div className="about-page">
       <InternalPageHero
@@ -160,7 +200,7 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. Regional Presence */}
+      {/* 7. Regional Presence (Dynamically Mapped from Database) */}
       <section className="about-presence section">
         <div className="container">
           <div className="section-header text-center" style={{ marginBottom: '3rem' }}>
@@ -171,36 +211,34 @@ export const About: React.FC = () => {
           </div>
 
           <div className="presence-grid-modern">
-            {/* Left Side: Premium Location Cards */}
+            {/* Left Side: Dynamic Location Cards */}
             <div className="presence-cards-col">
-              {[
-                { title: "Vijayawada (Head Office)", desc: "76-43-399, HIG-399, Ground Floor, H. B. Colony, Bhavanipuram, Vijayawada, Krishna Dt., AP.", icon: Building2, color: "#C8A45D" },
-                { title: "Bobbili", desc: "33-105, Near Sai Ganapathi Theatre, Church Centre, Vizianagaram Dist. AP - 535558", icon: MapPin, color: "#0d9488" },
-                { title: "Hyderabad", desc: "Plot 854, H No 6-14/2/1, Budha Nager Colony, Road No 07, Boduppal, Uppal Bus Depot - 500092", icon: MapPin, color: "#0d9488" },
-                { title: "Visakhapatnam", desc: "Guru Nivas, D.No: 50-53-6/E, Flat No MIG-245, Near Abaya Swamy Temple, Seethammadhara - 530013", icon: MapPin, color: "#0d9488" },
-                { title: "Kakinada", desc: "2-34-8/A, 1st Floor, Perrajupeta, Near Mamatha Scan Center, Kakinada - 533001", icon: MapPin, color: "#0d9488" },
-                { title: "Parvathipuram", desc: "Dno. 1-1, Beside ITDA Petrol Bunk, Belagam, Parvathipuram, Manyam Dist AP - 535501", icon: MapPin, color: "#0d9488" },
-                { title: "Peddapuram", desc: "21-1-19/A, 1st Floor, opp. Lalitha Theatre, Rajahmundry Road, Peddapuram - 533437", icon: MapPin, color: "#0d9488" },
-                { title: "Rayagada (Odisha)", desc: "Indira Nagar, 3rd Lane, Near Rayagada College, Rayagada, Odisha - 765001", icon: MapPin, color: "#ea580c" }
-              ].map((card, idx) => {
-                const Icon = card.icon;
-                return (
-                  <motion.div 
-                    key={idx} 
-                    className="presence-card-modern"
-                    whileHover={{ scale: 1.02, y: -4 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="pc-icon-wrapper" style={{ color: card.color, backgroundColor: `${card.color}15` }}>
-                      <Icon size={24} strokeWidth={1.5} />
-                    </div>
-                    <div className="pc-content">
-                      <h4 className="pc-title">{card.title}</h4>
-                      <p className="pc-desc">{card.desc}</p>
-                    </div>
-                  </motion.div>
-                );
-              })}
+              {branches.length === 0 ? (
+                <p className="text-muted-foreground">Loading branch locations...</p>
+              ) : (
+                branches.map((branch, idx) => {
+                  const isHeadOffice = branch.name?.toLowerCase().includes("head") || idx === 0;
+                  const color = isHeadOffice ? "#C8A45D" : "#0d9488";
+                  const Icon = isHeadOffice ? Building2 : MapPin;
+
+                  return (
+                    <motion.div 
+                      key={branch.id || idx} 
+                      className="presence-card-modern"
+                      whileHover={{ scale: 1.02, y: -4 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <div className="pc-icon-wrapper" style={{ color: color, backgroundColor: `${color}15` }}>
+                        <Icon size={24} strokeWidth={1.5} />
+                      </div>
+                      <div className="pc-content">
+                        <h4 className="pc-title">{branch.branch_name || branch.name}</h4>
+                        <p className="pc-desc">{branch.address}</p>
+                      </div>
+                    </motion.div>
+                  );
+                })
+              )}
             </div>
 
             {/* Right Side: Interactive Map */}
@@ -256,7 +294,7 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 9. Final Call-To-Action */}
+      {/* 9. Final Call-To-Action (Dynamically Synced Contact Info) */}
       <section className="about-cta">
         <div className="container">
           <div className="cta-box glass-card-dark">
@@ -266,10 +304,10 @@ export const About: React.FC = () => {
               
               <div className="cta-contact-details">
                 <div className="contact-detail">
-                  <strong>Phone:</strong> +91 9908285223
+                  <strong>Phone:</strong> <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
                 </div>
                 <div className="contact-detail">
-                  <strong>Email:</strong> <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a>
+                  <strong>Email:</strong> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                 </div>
               </div>
 

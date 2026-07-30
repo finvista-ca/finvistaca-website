@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+// src/components/services/ServiceLayout.tsx
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building, Briefcase, FileText, CheckCircle, 
   ShieldCheck, Check, Users, HeartHandshake, FileSignature,
   Wallet, ChevronDown, ArrowRight, BadgeCheck, Zap, 
-  Lock, TrendingUp, ChevronRight, ChevronUp, Globe, Landmark,
+  Lock, TrendingUp, ChevronRight as ChevronRightIcon, ChevronUp, Globe, Landmark,
   XOctagon, Scale, FileSearch, HelpCircle, Phone, Mail, Award, MapPin
 } from 'lucide-react';
 import type { ServiceItem } from '../../data/servicesData';
@@ -43,6 +45,32 @@ const IconMap: Record<string, React.FC<any>> = {
 
 export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedServices, pageData }) => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(0);
+  const [contactInfo, setContactInfo] = useState({
+    phone: "+91 9908285223",
+    email: "finvistaca@gmail.com"
+  });
+
+  // Fetch dynamic settings from backend API on load
+  useEffect(() => {
+    async function fetchSettings() {
+      try {
+        const backendUrl = "http://localhost:3000"; // Update with your backend production URL if needed
+        const response = await fetch(`${backendUrl}/api/settings`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.settings) {
+            setContactInfo({
+              phone: data.settings.primary_phone || "+91 9908285223",
+              email: data.settings.support_email || "finvistaca@gmail.com"
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch contact settings", err);
+      }
+    }
+    fetchSettings();
+  }, []);
 
   const toggleAccordion = (index: number) => {
     setActiveAccordion(activeAccordion === index ? null : index);
@@ -346,8 +374,8 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                   Contact Us Today
                 </Link>
                 <div className="cta-contact-info">
-                  <span className="contact-item"><Phone size={18} /> +91 9908285223</span>
-                  <span className="contact-item"><Mail size={18} /> finvistaca@gmail.com</span>
+                  <span className="contact-item"><Phone size={18} /> <a href={`tel:${contactInfo.phone}`} style={{ color: 'inherit', textDecoration: 'none' }}>{contactInfo.phone}</a></span>
+                  <span className="contact-item"><Mail size={18} /> <a href={`mailto:${contactInfo.email}`} style={{ color: 'inherit', textDecoration: 'none' }}>{contactInfo.email}</a></span>
                 </div>
               </div>
             </div>
@@ -376,7 +404,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                   </div>
                   <div className="related-text">
                     <h4>{item.name}</h4>
-                    <span className="view-link">View Details <ChevronRight size={16} /></span>
+                    <span className="view-link">View Details <ChevronRightIcon size={16} /></span>
                   </div>
                 </Link>
               ))}

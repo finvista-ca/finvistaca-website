@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MapPin, Phone, Mail, Clock, Building, Send, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ImmediateAssistanceCTA } from '../components/shared/ImmediateAssistanceCTA';
@@ -10,161 +10,112 @@ import './Contact.css';
 export const Contact: React.FC = () => {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
-
-const [formData, setFormData] = useState({
-  name: "",
-  phone: "",
-  email: "",
-  service: "",
-  message: "",
-});
-
-const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-) => {
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value,
+  const [branches, setBranches] = useState<any[]>([]);
+  const [headquarters, setHeadquarters] = useState({
+    address: "76-43-399, HIG-399, Ground Floor,\nH. B. Colony, Bhavanipuram,\nVijayawada, Krishna Dt., AP.",
+    phone1: "+91 9908285223",
+    phone2: "+91 7993856920",
+    email: "finvistaca@gmail.com"
   });
-};
 
-const handleSubmit = async (
-  e: React.FormEvent<HTMLFormElement>
-) => {
-  e.preventDefault();
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
 
-  setLoading(true);
+  // Fetch branches and settings dynamically from the backend API on load
+  useEffect(() => {
+    async function fetchContactData() {
+      try {
+        const backendUrl = "http://localhost:3000"; // Update with production URL if needed
+        const [branchesRes, settingsRes] = await Promise.all([
+          fetch(`${backendUrl}/api/branches`),
+          fetch(`${backendUrl}/api/settings`)
+        ]);
 
-  try {
-    const response = await fetch(
-      "/api/contact",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          branch: "Not specified",
-          message: formData.message,
-          service: formData.service
-        }),
+        if (branchesRes.ok) {
+          const data = await branchesRes.json();
+          setBranches(data.branches || []);
+        }
+
+        if (settingsRes.ok) {
+          const data = await settingsRes.json();
+          if (data.settings) {
+            setHeadquarters({
+              address: data.settings.office_address || "76-43-399, HIG-399, Ground Floor,\nH. B. Colony, Bhavanipuram,\nVijayawada, Krishna Dt., AP.",
+              phone1: data.settings.primary_phone || "+91 9908285223",
+              phone2: "+91 7993856920",
+              email: data.settings.support_email || "finvistaca@gmail.com"
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load contact page dynamic data", err);
       }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.error);
     }
 
-    setSent(true);
+    fetchContactData();
+  }, []);
 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      service: "",
-      message: "",
+      ...formData,
+      [e.target.name]: e.target.value,
     });
+  };
 
-  } catch (error: any) {
-    alert(error.message || "Something went wrong.");
-  } finally {
-    setLoading(false);
-  }
-};
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+    setLoading(true);
 
-  const branchList = [
-    { 
-      name: 'Kakinada', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Kakinada',
-      address: (
-        <>
-          2-34-8/A, 1st Floor,<br />
-          Perrajupeta,<br />
-          Near Mamatha Scan Center,<br />
-          Kakinada – 533001
-        </>
-      ) 
-    },
-    { 
-      name: 'Bobbili', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Bobbili',
-      address: (
-        <>
-          33-105, Near Sai Ganapathi Theatre,<br />
-          Church Centre, Bobbili,<br />
-          Vizianagaram Dist. AP - 535558
-        </>
-      ) 
-    },
-    {
-      name: 'Hyderabad',
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Hyderabad',
-      address: (
-        <>
-          Plot 854, H No 6-14/2/1,<br />
-          Budha Nager Colony, Road No 07,<br />
-          Boduppal, Uppal Bus Depot - 500092
-        </>
-      )
-    },
-    { 
-      name: 'Visakhapatnam', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Visakhapatnam',
-      address: (
-        <>
-          Guru Nivas, D.No: 50-53-6/E,<br />
-          Flat No MIG-245, Near Abaya Swamy Temple,<br />
-          Near Presidential School, BS Layout,<br />
-          Seethammadhara, Visakhapatnam - 530013
-        </>
-      ) 
-    },
-    { 
-      name: 'Parvathipuram', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Parvathipuram',
-      address: (
-        <>
-          D.No. 1-1,<br />
-          Beside ITDA Petrol Bunk,<br />
-          Belagam,<br />
-          Parvathipuram,<br />
-          Manyam District,<br />
-          Andhra Pradesh – 535501
-        </>
-      ) 
-    },
-    { 
-      name: 'Peddapuram', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Peddapuram',
-      address: (
-        <>
-          21-1-19/A,<br />
-          1st Floor,<br />
-          Opp. Lalitha Theatre,<br />
-          Rajahmundry Road,<br />
-          Peddapuram – 533437
-        </>
-      ) 
-    },
-    { 
-      name: 'Rayagada (Odisha)', 
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Rayagada',
-      address: (
-        <>
-          Indira Nagar,<br />
-          3rd Lane,<br />
-          Near Rayagada College,<br />
-          Rayagada,<br />
-          Odisha – 765001
-        </>
-      ) 
+    try {
+      const backendUrl = "http://localhost:3000";
+      const response = await fetch(
+        `${backendUrl}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            branch: "Not specified",
+            message: formData.message,
+            service: formData.service
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error);
+      }
+
+      setSent(true);
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        service: "",
+        message: "",
+      });
+
+    } catch (error: any) {
+      alert(error.message || "Something went wrong.");
+    } finally {
+      setLoading(false);
     }
-  ];
+  };
 
   return (
     <div className="contact-page">
@@ -202,24 +153,22 @@ const handleSubmit = async (
                   >
                     <div className="info-icon"><MapPin size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
-                      <p>
-                        76-43-399, HIG-399, Ground Floor,<br />
-                        H. B. Colony, Bhavanipuram,<br />
-                        Vijayawada, Krishna Dt., AP.
+                      <p style={{ whiteSpace: 'pre-line' }}>
+                        {headquarters.address}
                       </p>
                     </div>
                   </a>
                   <div className="info-item">
                     <div className="info-icon"><Phone size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
-                      <p><a href="tel:+919908285223">+91 9908285223</a></p>
-                      <p><a href="tel:+917993856920">+91 7993856920</a></p>
+                      <p><a href={`tel:${headquarters.phone1}`}>{headquarters.phone1}</a></p>
+                      {headquarters.phone2 && <p><a href={`tel:${headquarters.phone2}`}>{headquarters.phone2}</a></p>}
                     </div>
                   </div>
                   <div className="info-item">
                     <div className="info-icon"><Mail size={20} strokeWidth={1.5} /></div>
                     <div className="info-content">
-                      <p><a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a></p>
+                      <p><a href={`mailto:${headquarters.email}`}>{headquarters.email}</a></p>
                     </div>
                   </div>
                   <div className="info-item">
@@ -329,28 +278,38 @@ const handleSubmit = async (
               </div>
             </div>
 
-            {/* 3. Branches Section */}
+            {/* 3. Branches Section (Dynamically Mapped) */}
             <div className="contact-section-branches">
               <h3 className="branches-title">Branch Offices</h3>
               <div className="branches-grid">
-                {branchList.map(branch => (
-                  <a 
-                    key={branch.name}
-                    href={branch.mapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contact-branch-card"
-                    style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
-                  >
-                    <div className="branch-card-header">
-                      <MapPin size={18} strokeWidth={2} className="branch-icon" />
-                      <h4>{branch.name}</h4>
-                    </div>
-                    <div className="branch-card-body">
-                      <p>{branch.address}</p>
-                    </div>
-                  </a>
-                ))}
+                {branches.length === 0 ? (
+                  <p className="text-muted-foreground">Loading branch offices...</p>
+                ) : (
+                  branches.map((branch) => {
+                    const branchName = branch.branch_name || branch.name;
+                    const mapUrl = `https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+${encodeURIComponent(branchName)}`;
+                    
+                    return (
+                      <a 
+                        key={branch.id || branchName}
+                        href={mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="contact-branch-card"
+                        style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
+                      >
+                        <div className="branch-card-header">
+                          <MapPin size={18} strokeWidth={2} className="branch-icon" />
+                          <h4>{branchName}</h4>
+                        </div>
+                        <div className="branch-card-body">
+                          <p style={{ whiteSpace: 'pre-line' }}>{branch.address}</p>
+                          {branch.phone && <p style={{ fontSize: '0.85rem', marginTop: '0.5rem', opacity: 0.8 }}>📞 {branch.phone}</p>}
+                        </div>
+                      </a>
+                    );
+                  })
+                )}
               </div>
             </div>
           </div>

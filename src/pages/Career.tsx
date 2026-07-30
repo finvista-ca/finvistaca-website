@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+// src/components/Career.tsx (or your respective component path)
+
+import React, { useState, useEffect } from 'react';
 import { Briefcase, Users, Target, TrendingUp, CheckCircle2, ChevronRight } from 'lucide-react';
 import { ImmediateAssistanceCTA } from '../components/shared/ImmediateAssistanceCTA';
 import { InternalPageHero } from '../components/layout/InternalPageHero';
@@ -7,6 +9,9 @@ import './Career.css';
 export const Career: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [jobOpenings, setJobOpenings] = useState<any[]>([]);
+  const [fetchingJobs, setFetchingJobs] = useState(true);
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -16,6 +21,28 @@ export const Career: React.FC = () => {
     resume_url: ''
   });
 
+  // Fetch active job postings dynamically from your backend API on load
+  useEffect(() => {
+    async function fetchJobs() {
+      try {
+        const backendUrl = "http://localhost:3000"; // Update with your backend URL in production
+        const response = await fetch(`${backendUrl}/api/job-postings`);
+        if (response.ok) {
+          const data = await response.json();
+          // Filter only active jobs if needed, or handle array structure
+          const jobsList = Array.isArray(data) ? data : (data.jobs || []);
+          const activeJobs = jobsList.filter((j: any) => j.isActive !== false);
+          setJobOpenings(activeJobs);
+        }
+      } catch (err) {
+        console.error("Failed to load career openings", err);
+      } finally {
+        setFetchingJobs(false);
+      }
+    }
+    fetchJobs();
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
   };
@@ -24,7 +51,8 @@ export const Career: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('/api/career', {
+      const backendUrl = "http://localhost:3000";
+      const response = await fetch(`${backendUrl}/api/career`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -53,8 +81,6 @@ export const Career: React.FC = () => {
         description="Join a firm that values expertise, integrity, and innovation. Shape the future of finance and consulting."
       />
 
-
-
       {/* Current Openings & Form */}
       <section className="openings-section" style={{ paddingTop: '2rem' }}>
         <div className="container">
@@ -64,47 +90,32 @@ export const Career: React.FC = () => {
           </div>
           <div className="openings-grid">
             
-            {/* Openings List */}
+            {/* Openings List - Dynamically Mapped */}
             <div className="openings-list-panel">
               <h2>Current Openings</h2>
               <p className="openings-desc">Don't see a perfect fit? Submit your resume anyway.</p>
               
               <div className="job-cards">
-                <div className="job-card glass-card">
-                  <div className="job-header">
-                    <h3>Chartered Accountant</h3>
-                    <span className="job-type">Full Time</span>
-                  </div>
-                  <p className="job-location">Visakhapatnam / Vijayawada</p>
-                  <ul className="job-reqs">
-                    <li><CheckCircle2 size={16} /> 2-5 years PQE in Statutory Audit</li>
-                    <li><CheckCircle2 size={16} /> Strong knowledge of Ind AS</li>
-                  </ul>
-                </div>
-                
-                <div className="job-card glass-card">
-                  <div className="job-header">
-                    <h3>Article Assistant</h3>
-                    <span className="job-type">Training</span>
-                  </div>
-                  <p className="job-location">Multiple Locations</p>
-                  <ul className="job-reqs">
-                    <li><CheckCircle2 size={16} /> Cleared CA Intermediate (Both Groups)</li>
-                    <li><CheckCircle2 size={16} /> Strong analytical skills</li>
-                  </ul>
-                </div>
-                
-                <div className="job-card glass-card">
-                  <div className="job-header">
-                    <h3>Audit Executive / Semi Qualified CA</h3>
-                    <span className="job-type">Full Time</span>
-                  </div>
-                  <p className="job-location">Kakinada HQ</p>
-                  <ul className="job-reqs">
-                    <li><CheckCircle2 size={16} /> Completed 3 years of articleship</li>
-                    <li><CheckCircle2 size={16} /> Experience in Internal Audits</li>
-                  </ul>
-                </div>
+                {fetchingJobs ? (
+                  <p className="text-muted-foreground py-4" style={{ color: '#fff' }}>Loading open positions...</p>
+                ) : jobOpenings.length === 0 ? (
+                  <p className="text-muted-foreground py-4" style={{ color: '#fff' }}>No active openings at the moment. Feel free to submit a general application!</p>
+                ) : (
+                  jobOpenings.map((job) => (
+                    <div key={job.id} className="job-card glass-card">
+                      <div className="job-header">
+                        <h3>{job.title}</h3>
+                        <span className="job-type">{job.jobType || "Full Time"}</span>
+                      </div>
+                      <p className="job-location">{job.location || job.department || "Multiple Locations"}</p>
+                      {job.description && (
+                        <ul className="job-reqs">
+                          <li><CheckCircle2 size={16} /> {job.description}</li>
+                        </ul>
+                      )}
+                    </div>
+                  ))
+                )}
               </div>
             </div>
 
@@ -141,11 +152,9 @@ export const Career: React.FC = () => {
                     <label htmlFor="position">Position Applied For</label>
                     <select id="position" value={formData.position} onChange={handleChange} required>
                       <option value="" disabled>Select a position...</option>
-                      <option value="ca">Chartered Accountant</option>
-                      <option value="article">Article Assistant</option>
-                      <option value="audit-assistant">Audit Assistant/Semi Qualified CA</option>
-                      <option value="cs-trainee">CS Trainee</option>
-                      <option value="accountant">Executive Accountant</option>
+                      {jobOpenings.map((job) => (
+                        <option key={job.id} value={job.title}>{job.title}</option>
+                      ))}
                       <option value="other">Other / General Application</option>
                     </select>
                   </div>

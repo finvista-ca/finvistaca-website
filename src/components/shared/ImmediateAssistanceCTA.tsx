@@ -1,9 +1,37 @@
-import React from 'react';
+// src/components/shared/ImmediateAssistanceCTA.tsx
+
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Phone, Mail, Clock } from 'lucide-react';
 import './ImmediateAssistanceCTA.css';
 
 export const ImmediateAssistanceCTA: React.FC = () => {
+  const [contactInfo, setContactInfo] = useState({
+    phone: "+91 9908285223",
+    email: "finvistaca@gmail.com"
+  });
+
+  useEffect(() => {
+    async function fetchSettings() {
+      try {
+        const backendUrl = "http://localhost:3000"; // Update with your backend URL in production
+        const response = await fetch(`${backendUrl}/api/settings`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.settings) {
+            setContactInfo({
+              phone: data.settings.primary_phone || "+91 9908285223",
+              email: data.settings.support_email || "finvistaca@gmail.com"
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load contact info from backend", err);
+      }
+    }
+    fetchSettings();
+  }, []);
+
   return (
     <section className="immediate-cta-section">
       <div className="container">
@@ -52,7 +80,7 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                     </div>
                     <div className="info-content">
                       <span className="info-label">Call Us</span>
-                      <a href="tel:+919908285223" className="info-value">+91 9908285223</a>
+                      <a href={`tel:${contactInfo.phone}`} className="info-value">{contactInfo.phone}</a>
                     </div>
                   </div>
                   
@@ -62,7 +90,7 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                     </div>
                     <div className="info-content">
                       <span className="info-label">Email</span>
-                      <a href="mailto:finvistaca@gmail.com" className="info-value">finvistaca@gmail.com</a>
+                      <a href={`mailto:${contactInfo.email}`} className="info-value">{contactInfo.email}</a>
                     </div>
                   </div>
                   
@@ -79,10 +107,10 @@ export const ImmediateAssistanceCTA: React.FC = () => {
                 </div>
 
                 <div className="cta-action-buttons">
-                  <a href="tel:+919908285223" className="btn btn-primary cta-btn-primary">
+                  <a href={`tel:${contactInfo.phone}`} className="btn btn-primary cta-btn-primary">
                     <Phone size={18} /> Call Now
                   </a>
-                  <a href="mailto:finvistaca@gmail.com" className="btn cta-btn-secondary">
+                  <a href={`mailto:${contactInfo.email}`} className="btn cta-btn-secondary">
                     <Mail size={18} /> Email Us
                   </a>
                 </div>

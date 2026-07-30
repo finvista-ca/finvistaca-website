@@ -1,45 +1,45 @@
-import React from 'react';
+// src/components/Footer.tsx (Frontend Project)
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, MessageCircle } from 'lucide-react';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import './Footer.css';
 
-const branches = [
-  {
-    name: 'Kakinada',
-    address: '2-34-8/A, 1st Floor, Perrajupeta, Near Mamatha Scan Center, Kakinada - 533001'
-  },
-  {
-    name: 'Parvathipuram',
-    address: 'Dno. 1-1, Beside ITDA Petrol Bunk, Belagam, Parvathipuram, Manyam Dist AP - 535501'
-  },
-  {
-    name: 'Vijayawada',
-    address: '76-43-399, HIG-399, Ground Floor, H. B. Colony, Bhavanipuram, Vijayawada, Krishna Dt., AP.'
-  },
-  {
-    name: 'Visakhapatnam',
-    address: 'Guru Nivas, D.No: 50-53-6/E, Flat No MIG-245, Near Abaya Swamy Temple, Near Presidential School, BS Layout, Seethammadhara, Visakhapatnam - 530013'
-  },
-  {
-    name: 'Bobbili',
-    address: '33-105, Near Sai Ganapathi Theatre, Church Centre, Bobbili, Vizianagaram Dist. AP - 535558'
-  },
-  {
-    name: 'Peddapuram',
-    address: '21-1-19/A, 1st Floor, opp. Lalitha Theatre, Rajahmundry Road, Peddapuram - 533437'
-  },
-  {
-    name: 'Rayagada (Odisha)',
-    address: 'Indira Nagar, 3rd Lane, Near Rayagada College, Rayagada, Odisha - 765001'
-  },
-  {
-    name: 'Hyderabad',
-    address: 'Plot 854, H No 6-14/2/1, Budha Nager Colony, Road No 07, Boduppal, Uppal Bus Depot - 500092'
-  }
-];
-
 export const Footer: React.FC = () => {
+  const [branches, setBranches] = useState<any[]>([]);
+  const [phone, setPhone] = useState("+91 9908285223");
+
+  useEffect(() => {
+    async function fetchFooterData() {
+      try {
+        // Replace with your production backend URL when deploying
+        const backendUrl = "http://localhost:3000";
+
+        const [branchesRes, settingsRes] = await Promise.all([
+          fetch(`${backendUrl}/api/branches`),
+          fetch(`${backendUrl}/api/settings`)
+        ]);
+
+        if (branchesRes.ok) {
+          const data = await branchesRes.json();
+          setBranches(data.branches || []);
+        }
+
+        if (settingsRes.ok) {
+          const data = await settingsRes.json();
+          if (data.settings?.primary_phone) {
+            setPhone(data.settings.primary_phone);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load footer data from backend", err);
+      }
+    }
+
+    fetchFooterData();
+  }, []);
+
   return (
     <footer className="footer premium-footer dark-section">
       <div className="glass-panel-subtle footer-main-card" style={{ padding: '4rem 5%', borderRadius: '0', borderLeft: 'none', borderRight: 'none', borderBottom: 'none' }}>
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
               <a href="https://www.instagram.com/irk_associates" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FiInstagram size={18} strokeWidth={1.5} /></a>
               <a href="https://www.facebook.com/ramakishore.itla" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FiFacebook size={18} strokeWidth={1.5} /></a>
               <a href="https://x.com/ramakishoreitla" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FiTwitter size={18} strokeWidth={1.5} /></a>
-              <a href="https://wa.me/919908285223" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.5} /></a>
+              <a href={`https://wa.me/${phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.5} /></a>
             </div>
           </div>
 
@@ -100,18 +100,22 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* COLUMN 4: Our Branches */}
+          {/* COLUMN 4: Our Branches (Dynamically fetched from Backend API!) */}
           <div className="footer-col">
             <h4 className="footer-subheading">Our Branches</h4>
             <ul className="footer-links">
-              {branches.map((branch, idx) => (
-                <li key={idx}>
-                  <Link to="/contact" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <MapPin size={16} strokeWidth={2} style={{ color: 'var(--brand-gold)' }} />
-                    {branch.name}
-                  </Link>
-                </li>
-              ))}
+              {branches.length === 0 ? (
+                <li style={{ color: 'var(--text-muted, #aaa)', fontSize: '0.9rem' }}>Loading branches...</li>
+              ) : (
+                branches.map((branch: any, idx: number) => (
+                  <li key={idx}>
+                    <Link to="/contact" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <MapPin size={16} strokeWidth={2} style={{ color: 'var(--brand-gold)' }} />
+                      {branch.name}
+                    </Link>
+                  </li>
+                ))
+              )}
             </ul>
           </div>
 
@@ -136,4 +140,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-

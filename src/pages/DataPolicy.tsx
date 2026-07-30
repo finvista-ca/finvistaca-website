@@ -1,7 +1,34 @@
+import React, { useState, useEffect } from 'react';
 import { ShieldCheck } from 'lucide-react';
 import { InternalPageHero } from '../components/layout/InternalPageHero';
 
 export const DataPolicy: React.FC = () => {
+  const [contactInfo, setContactInfo] = useState({
+    email: 'finvistaca@gmail.com',
+    phone: '+91 9908285223'
+  });
+
+  useEffect(() => {
+    async function fetchSettings() {
+      try {
+        const backendUrl = "http://localhost:3000";
+        const response = await fetch(`${backendUrl}/api/settings`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.settings) {
+            setContactInfo({
+              email: data.settings.support_email || 'finvistaca@gmail.com',
+              phone: data.settings.primary_phone || '+91 9908285223'
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load contact settings", err);
+      }
+    }
+    fetchSettings();
+  }, []);
+
   return (
     <div className="resource-layout" style={{ paddingTop: '90px' }}>
       <InternalPageHero
@@ -56,8 +83,8 @@ export const DataPolicy: React.FC = () => {
           <p>
             For any questions about this policy or the information we hold about you,
             please contact us at{' '}
-            <a href="mailto:finvistaca@gmail.com">finvistaca@gmail.com</a> or call
-            +91 9908285223.
+            <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a> or call{' '}
+            <a href={`tel:${contactInfo.phone}`} style={{ color: 'inherit', textDecoration: 'none' }}>{contactInfo.phone}</a>.
           </p>
         </div>
       </section>
