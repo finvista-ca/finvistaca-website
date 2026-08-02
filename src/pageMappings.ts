@@ -11,6 +11,7 @@ import { CompaniesDonationsAct } from './pages/knowledge-base/CompaniesDonations
 import { PartnershipAct } from './pages/knowledge-base/PartnershipAct';
 import { MonopoliesAct } from './pages/knowledge-base/MonopoliesAct';
 import { InsolvencyBankruptcyCode } from './pages/knowledge-base/InsolvencyBankruptcyCode';
+import LlpAct from './pages/knowledge-base/LlpAct';
 import { IncomeTaxRules } from './pages/knowledge-base/IncomeTaxRules';
 import { CompanyLawRules } from './pages/knowledge-base/CompanyLawRules';
 import { IncomeTaxCirculars } from './pages/knowledge-base/IncomeTaxCirculars';
@@ -102,7 +103,7 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'supreme-court': KbGeneric,
     'more-link': KbGeneric,
     'companies-donation-fund-act': CompaniesDonationsAct,
-    'llp-act': KbGeneric,
+    'llp-act': LlpAct,
     'societies-registration-act': KbGeneric,
     'competition-act': KbGeneric,
     'chartered-accountants-act': KbGeneric,

@@ -135,7 +135,7 @@ export const ServiceLayout: React.FC<ServiceLayoutProps> = ({ service, relatedSe
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <h3 style={{ borderBottom: 'none', paddingBottom: 0, marginBottom: '1.5rem', fontSize: '1.75rem', lineHeight: 1.2 }}>Why Choose<br/>FinvistaCA?</h3>
                   <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#080d1a', borderRadius: '12px', padding: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-                    <img src="/logo 2.0.jpeg" alt="FinvistaCA Logo" style={{ width: '100%', maxWidth: '160px', height: 'auto', objectFit: 'contain', borderRadius: '8px' }} />
+                    <img src="/logo 2.0.png" alt="FinvistaCA Logo" style={{ width: '100%', maxWidth: '160px', height: 'auto', objectFit: 'contain', borderRadius: '8px' }} />
                   </div>
                 </div>
                 

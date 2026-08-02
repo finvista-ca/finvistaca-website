@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
             
             {/* COLUMN 1: Overview & Trust */}
             <div className="footer-col">
-              <img src="/finvista-logo.jpeg" alt="FinvistaCA" className="footer-logo company-logo" fetchPriority="low" loading="lazy" />
+              <img src="/finvista-logo.png" alt="FinvistaCA" className="footer-logo company-logo" fetchPriority="low" loading="lazy" />
             
             <p className="footer-desc">
               Partner with premier Chartered Accountants for comprehensive taxation, compliance, auditing, registrations, accounting, and strategic financial advisory services. We help businesses, startups, entrepreneurs, and individuals navigate complex financial regulations with confidence while building a strong foundation for sustainable growth.
