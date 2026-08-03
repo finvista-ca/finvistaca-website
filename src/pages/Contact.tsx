@@ -144,7 +144,7 @@ export const Contact: React.FC = () => {
                 <h3>Vijayawada</h3>
                 <div className="info-items">
                   <a 
-                    href="https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+Vijayawada" 
+                    href="https://maps.app.goo.gl/WeB1UB6FAE6VVNCH8" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="info-item"
@@ -310,7 +310,16 @@ export const Contact: React.FC = () => {
 
                     return regularBranches.map((branch) => {
                       const branchName = branch.branch_name || branch.name;
-                      const mapUrl = `https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+${encodeURIComponent(branchName)}`;
+                      const bNameLower = branchName.toLowerCase();
+                      let mapUrl = `https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+${encodeURIComponent(branchName)}`;
+                      if (bNameLower.includes("visakhapatnam")) mapUrl = "https://maps.app.goo.gl/axmavKyLCnZNQSM89";
+                      else if (bNameLower.includes("hyderabad")) mapUrl = "https://maps.app.goo.gl/AErMpa1NjvCeSMTEA";
+                      else if (bNameLower.includes("parvathipuram")) mapUrl = "https://maps.app.goo.gl/nQxvPGbQFQmGs1VR6";
+                      else if (bNameLower.includes("bobbili")) mapUrl = "https://maps.app.goo.gl/9n6BF9Y85hQQ5auC7";
+                      else if (bNameLower.includes("kakinada")) mapUrl = "https://maps.app.goo.gl/8imbGw1YefMU6ycQ8";
+                      else if (bNameLower.includes("rayagada")) mapUrl = "https://maps.app.goo.gl/jEMrH2uTwsWherDx8";
+                      else if (bNameLower.includes("peddapuram")) mapUrl = "https://maps.app.goo.gl/TNs19gDv38trQ6Q18";
+                      else if (bNameLower.includes("vijayawada")) mapUrl = "https://maps.app.goo.gl/WeB1UB6FAE6VVNCH8";
                       
                       return (
                         <a 

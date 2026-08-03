@@ -31,7 +31,15 @@ export const About: React.FC = () => {
 
         if (branchesRes.ok) {
           const data = await branchesRes.json();
-          setBranches(data.branches || []);
+          let fetchedBranches = data.branches || [];
+          fetchedBranches.sort((a: any, b: any) => {
+            const aName = (a.branch_name || a.name || '').toLowerCase();
+            const bName = (b.branch_name || b.name || '').toLowerCase();
+            if (aName.includes('vijayawada (head office)')) return -1;
+            if (bName.includes('vijayawada (head office)')) return 1;
+            return 0;
+          });
+          setBranches(fetchedBranches);
         }
 
         if (settingsRes.ok) {
@@ -217,25 +225,41 @@ export const About: React.FC = () => {
                 <p className="text-muted-foreground">Loading branch locations...</p>
               ) : (
                 branches.map((branch, idx) => {
-                  const isHeadOffice = branch.name?.toLowerCase().includes("head") || idx === 0;
+                  const bName = branch.branch_name || branch.name || '';
+                  const isHeadOffice = bName.toLowerCase().includes("head") || idx === 0;
                   const color = isHeadOffice ? "#C8A45D" : "#0d9488";
-                  const Icon = isHeadOffice ? Building2 : MapPin;
+                  const Icon = MapPin;
+
+                  const bNameLower = bName.toLowerCase();
+                  let mapUrl = `https://www.google.com/maps/search/?api=1&query=FinvistaCA+Chartered+Accountants+${encodeURIComponent(bName)}`;
+                  if (bNameLower.includes("visakhapatnam")) mapUrl = "https://maps.app.goo.gl/axmavKyLCnZNQSM89";
+                  else if (bNameLower.includes("hyderabad")) mapUrl = "https://maps.app.goo.gl/AErMpa1NjvCeSMTEA";
+                  else if (bNameLower.includes("parvathipuram")) mapUrl = "https://maps.app.goo.gl/nQxvPGbQFQmGs1VR6";
+                  else if (bNameLower.includes("bobbili")) mapUrl = "https://maps.app.goo.gl/9n6BF9Y85hQQ5auC7";
+                  else if (bNameLower.includes("kakinada")) mapUrl = "https://maps.app.goo.gl/8imbGw1YefMU6ycQ8";
+                  else if (bNameLower.includes("rayagada")) mapUrl = "https://maps.app.goo.gl/jEMrH2uTwsWherDx8";
+                  else if (bNameLower.includes("peddapuram")) mapUrl = "https://maps.app.goo.gl/TNs19gDv38trQ6Q18";
+                  else if (bNameLower.includes("vijayawada")) mapUrl = "https://maps.app.goo.gl/WeB1UB6FAE6VVNCH8";
 
                   return (
-                    <motion.div 
+                    <motion.a 
                       key={branch.id || idx} 
+                      href={mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="presence-card-modern"
                       whileHover={{ scale: 1.02, y: -4 }}
                       transition={{ type: "spring", stiffness: 300 }}
+                      style={{ textDecoration: 'none', color: 'inherit' }}
                     >
                       <div className="pc-icon-wrapper" style={{ color: color, backgroundColor: `${color}15` }}>
                         <Icon size={24} strokeWidth={1.5} />
                       </div>
                       <div className="pc-content">
-                        <h4 className="pc-title">{branch.branch_name || branch.name}</h4>
+                        <h4 className="pc-title">{bName}</h4>
                         <p className="pc-desc">{branch.address}</p>
                       </div>
-                    </motion.div>
+                    </motion.a>
                   );
                 })
               )}

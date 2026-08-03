@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, MessageCircle } from 'lucide-react';
-import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
+import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiYoutube } from 'react-icons/fi';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -22,7 +22,15 @@ export const Footer: React.FC = () => {
 
         if (branchesRes.ok) {
           const data = await branchesRes.json();
-          setBranches(data.branches || []);
+          let fetchedBranches = data.branches || [];
+          fetchedBranches.sort((a: any, b: any) => {
+            const aName = (a.branch_name || a.name || '').toLowerCase();
+            const bName = (b.branch_name || b.name || '').toLowerCase();
+            if (aName.includes('vijayawada (head office)')) return -1;
+            if (bName.includes('vijayawada (head office)')) return 1;
+            return 0;
+          });
+          setBranches(fetchedBranches);
         }
 
         if (settingsRes.ok) {
@@ -58,11 +66,12 @@ export const Footer: React.FC = () => {
             </ul>
 
             <div className="social-links">
-              <a href="https://www.linkedin.com/in/ramakishore-itla-609511308/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin size={18} strokeWidth={1.5} /></a>
-              <a href="https://www.instagram.com/irk_associates" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FiInstagram size={18} strokeWidth={1.5} /></a>
-              <a href="https://www.facebook.com/ramakishore.itla" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FiFacebook size={18} strokeWidth={1.5} /></a>
+              <a href="https://www.linkedin.com/company/143040523/admin/dashboard/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin size={18} strokeWidth={1.5} /></a>
+              <a href="https://www.instagram.com/finvistaca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FiInstagram size={18} strokeWidth={1.5} /></a>
+              <a href="https://www.facebook.com/finvistaCA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FiFacebook size={18} strokeWidth={1.5} /></a>
               <a href="https://x.com/ramakishoreitla" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FiTwitter size={18} strokeWidth={1.5} /></a>
               <a href={`https://wa.me/${phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.5} /></a>
+              <a href="https://www.youtube.com/@FINVISTACA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FiYoutube size={18} strokeWidth={1.5} /></a>
             </div>
           </div>
 
@@ -131,7 +140,6 @@ export const Footer: React.FC = () => {
           <div className="footer-bottom-right">
             <ul className="footer-legal-links">
               <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link to="/sitemap">Sitemap</Link></li>
             </ul>
           </div>
         </div>

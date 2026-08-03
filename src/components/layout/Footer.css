@@ -100,7 +100,7 @@
 
 .social-links a:hover {
   background: var(--brand-gold);
-  color: var(--dark-bg);
+  color: #09131F;
   transform: translateY(-3px);
   border-color: var(--brand-gold);
 }
