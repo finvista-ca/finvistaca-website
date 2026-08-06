@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, MessageCircle } from 'lucide-react';
-import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiYoutube } from 'react-icons/fi';
+import { FiFacebook, FiInstagram, FiLinkedin, FiYoutube } from 'react-icons/fi';
+import { RiTwitterXFill } from 'react-icons/ri';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -66,10 +67,10 @@ export const Footer: React.FC = () => {
             </ul>
 
             <div className="social-links">
-              <a href="https://www.linkedin.com/company/143040523/admin/dashboard/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin size={18} strokeWidth={1.5} /></a>
+              <a href="https://www.linkedin.com/company/finvistaca/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin size={18} strokeWidth={1.5} /></a>
               <a href="https://www.instagram.com/finvistaca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FiInstagram size={18} strokeWidth={1.5} /></a>
               <a href="https://www.facebook.com/finvistaCA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FiFacebook size={18} strokeWidth={1.5} /></a>
-              <a href="https://x.com/ramakishoreitla" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FiTwitter size={18} strokeWidth={1.5} /></a>
+              <a href="https://x.com/finvistaca" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><RiTwitterXFill size={18} /></a>
               <a href={`https://wa.me/${phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.5} /></a>
               <a href="https://www.youtube.com/@FINVISTACA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FiYoutube size={18} strokeWidth={1.5} /></a>
             </div>
