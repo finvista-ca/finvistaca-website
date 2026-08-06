@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import { 
   Search, ArrowRight, Briefcase, 
   Users, Shield, TrendingUp, Scale, BookOpen, FileText, 
-  CheckCircle, ChevronRight, Landmark, Hash, Building2, Clock, FileSignature
+  CheckCircle, ChevronRight, Landmark, Hash, Building2, Clock, FileSignature, AlertTriangle
 } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import { 
-  competitionChapters, 
-  importantCompetitionSections, 
+  charteredAccountantsChapters, 
+  importantCharteredAccountantsSections, 
   complianceDashboardItems, 
   featuredTopics, 
   relatedActs,
-  competitionSections
-} from '../../data/competitionActData';
-import './InsolvencyBankruptcyCode.css';
+  charteredAccountantsSections
+} from '../../data/charteredAccountantsActData';
+import './CharteredAccountantsAct.css';
 
-export const InsolvencyBankruptcyCode: React.FC = () => {
+export const CharteredAccountantsAct: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
 
@@ -28,11 +28,11 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
 
   // Filter Sections based on Search
   const filteredSections = useMemo(() => {
-    if (!searchQuery) return competitionSections;
+    if (!searchQuery) return charteredAccountantsSections;
     
     const query = searchQuery.toLowerCase();
     
-    return competitionSections.filter(section => 
+    return charteredAccountantsSections.filter(section => 
       section.section.toLowerCase().includes(query) ||
       section.title.toLowerCase().includes(query) ||
       section.explanation.toLowerCase().includes(query)
@@ -41,11 +41,11 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
 
   // Filter Important Sections based on Search
   const filteredImportantSections = useMemo(() => {
-    if (!searchQuery) return importantCompetitionSections;
+    if (!searchQuery) return importantCharteredAccountantsSections;
     
     const query = searchQuery.toLowerCase();
     
-    return importantCompetitionSections.filter(section => 
+    return importantCharteredAccountantsSections.filter(section => 
       section && (
         section.section.toLowerCase().includes(query) ||
         section.title.toLowerCase().includes(query) ||
@@ -65,16 +65,16 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
   }, [searchQuery, filteredSections]);
 
   const IconMap: Record<string, React.FC<any>> = {
-    Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Search
+    Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Search, Landmark, FileSignature, AlertTriangle
   };
 
   return (
-    <div className="competition-act-page">
+    <div className="chartered-accountants-act-page">
       <InternalPageHero
         breadcrumbs={[
           { label: 'Home', path: '/' },
           { label: 'Knowledge Base', path: '/knowledge-base' },
-          { label: 'Competition Act, 2002' }
+          { label: 'Chartered Accountants Act, 1949' }
         ]}
         title=""
         description=""
@@ -88,12 +88,12 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
           <div style={{ width: '100%' }}>
             <h3>Act Information</h3>
             <div className="info-card-grid">
-              <span><strong>Act Name:</strong> Competition Act</span>
-              <span><strong>Year Enacted:</strong> 2002</span>
-              <span><strong>Act Number:</strong> 12 of 2003</span>
+              <span><strong>Act Name:</strong> Chartered Accountants Act</span>
+              <span><strong>Year Enacted:</strong> 1949</span>
+              <span><strong>Act Number:</strong> 38 of 1949</span>
               <span><strong>Status:</strong> In Force</span>
-              <span><strong>Applicable To:</strong> Competition Law, Anti-Competitive Practices & Market Regulation</span>
-              <span><strong>Administered By:</strong> Competition Commission of India (CCI)</span>
+              <span><strong>Applicable To:</strong> Regulation of the Chartered Accountancy Profession</span>
+              <span><strong>Administered By:</strong> Institute of Chartered Accountants of India (ICAI)</span>
             </div>
           </div>
         </div>
@@ -102,22 +102,22 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
         <div className="overview-grid">
           <div className="stat-card">
             <BookOpen size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
-            <span className="stat-value">2002</span>
+            <span className="stat-value">1949</span>
             <span className="stat-label">YEAR ENACTED</span>
           </div>
           <div className="stat-card">
             <Hash size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
-            <span className="stat-value">255</span>
+            <span className="stat-value">32+</span>
             <span className="stat-label">TOTAL SECTIONS</span>
           </div>
           <div className="stat-card">
             <Hash size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
-            <span className="stat-value" style={{ fontSize: '1.25rem' }}>12 of 2003</span>
+            <span className="stat-value" style={{ fontSize: '1.25rem' }}>38 of 1949</span>
             <span className="stat-label">ACT NUMBER</span>
           </div>
           <div className="stat-card">
             <Building2 size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
-            <span className="stat-value" style={{ fontSize: '1.25rem' }}>Competition Law</span>
+            <span className="stat-value" style={{ fontSize: '1.25rem' }}>Professional Regulation</span>
             <span className="stat-label">APPLICABLE TO</span>
           </div>
           <div className="stat-card">
@@ -127,7 +127,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
           </div>
           <div className="stat-card">
             <FileSignature size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
-            <span className="stat-value">Competition Commission of India</span>
+            <span className="stat-value">ICAI</span>
             <span className="stat-label">ADMINISTERED BY</span>
           </div>
         </div>
@@ -138,7 +138,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
             <Search size={20} className="search-icon" />
             <input 
               type="text" 
-              placeholder="Search sections, anti-competitive agreements, abuse of dominance, combinations..."
+              placeholder="Search sections, ICAI, Council, disciplinary provisions, certificate of practice..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -165,7 +165,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
             <div className="highlights-grid">
               <div className="highlight-card" style={{ gridColumn: '1 / -1' }}>
                 <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-                  Insolvency and Bankruptcy Code, 2016 was enacted to promote and sustain competition in Indian markets, prevent practices having an appreciable adverse effect on competition, protect consumer interests, and ensure freedom of trade. It establishes the Competition Commission of India (CCI), regulates anti-competitive agreements, abuse of dominant position, and combinations such as mergers and acquisitions.
+                  The Chartered Accountants Act, 1949 provides for the regulation and development of the profession of Chartered Accountants in India. It establishes the Institute of Chartered Accountants of India (ICAI), governs the registration and practice of Chartered Accountants, regulates professional conduct and disciplinary proceedings, and prescribes the framework for maintaining professional standards and ethics.
                 </p>
               </div>
             </div>
@@ -174,72 +174,77 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
             <div className="highlights-grid">
               <div className="highlight-card">
                 <Shield className="icon" size={32} color="var(--brand-blue)" />
-                <h4>Anti-Competitive Agreements</h4>
-                <p>Prohibits cartels, bid-rigging, and agreements that adversely affect competition.</p>
+                <h4>Institute of Chartered Accountants of India (ICAI)</h4>
+                <p>Establishes the ICAI as the premier body regulating the accountancy profession.</p>
               </div>
               <div className="highlight-card">
-                <TrendingUp className="icon" size={32} color="var(--brand-gold)" />
-                <h4>Abuse of Dominant Position</h4>
-                <p>Prevents dominant enterprises from exploiting market power or stifling competition.</p>
+                <FileSignature className="icon" size={32} color="var(--brand-gold)" />
+                <h4>Certificate of Practice</h4>
+                <p>Mandates strict registration and practice requirements for all chartered accountants.</p>
               </div>
               <div className="highlight-card">
-                <Landmark className="icon" size={32} color="#10B981" />
-                <h4>Competition Commission of India</h4>
-                <p>Established the CCI as the primary regulator to enforce the provisions of the Act.</p>
+                <AlertTriangle className="icon" size={32} color="#10B981" />
+                <h4>Professional Misconduct & Discipline</h4>
+                <p>Provides a comprehensive framework for investigating and penalizing professional misconduct.</p>
               </div>
               <div className="highlight-card">
-                <Briefcase className="icon" size={32} color="var(--brand-blue)" />
-                <h4>Merger & Acquisition Regulation</h4>
-                <p>Regulates combinations that could adversely affect competition in the relevant market.</p>
+                <Landmark className="icon" size={32} color="var(--brand-blue)" />
+                <h4>Council & Governance</h4>
+                <p>Establishes the Council to oversee the functions, academics, and administration of the Institute.</p>
               </div>
               <div className="highlight-card">
-                <Users className="icon" size={32} color="var(--brand-gold)" />
-                <h4>Consumer Protection</h4>
-                <p>Ensures that free and fair competition ultimately benefits the consumer.</p>
+                <CheckCircle className="icon" size={32} color="var(--brand-gold)" />
+                <h4>Quality Review Board</h4>
+                <p>Sets up independent oversight to review and enhance the quality of audit services.</p>
               </div>
               <div className="highlight-card">
                 <BookOpen className="icon" size={32} color="#10B981" />
-                <h4>Competition Advocacy</h4>
-                <p>Promotes a culture of competition and raises awareness among stakeholders.</p>
+                <h4>Professional Standards & Ethics</h4>
+                <p>Defines rigorous ethical standards and compliance requirements under the Schedules.</p>
               </div>
             </div>
 
             <h2 className="section-title">Major Regulatory Areas</h2>
             <div className="dashboard-grid">
               <div className="dashboard-card">
+                <Users className="icon" size={28} />
+                <h4>ICAI & Membership</h4>
+                <p>Structure of the Institute</p>
+              </div>
+              <div className="dashboard-card">
                 <FileText className="icon" size={28} />
-                <h4>Anti-Competitive Agreements</h4>
-                <p>Enforcement against cartels</p>
+                <h4>Registration of Members</h4>
+                <p>Entry into the Register</p>
               </div>
               <div className="dashboard-card">
-                <TrendingUp className="icon" size={28} />
-                <h4>Abuse of Dominant Position</h4>
-                <p>Preventing market exploitation</p>
+                <FileSignature className="icon" size={28} />
+                <h4>Certificate of Practice</h4>
+                <p>Requirements to practice</p>
               </div>
               <div className="dashboard-card">
-                <Briefcase className="icon" size={28} />
-                <h4>Combinations (Mergers & Acquisitions)</h4>
-                <p>Mandatory prior approvals</p>
+                <Landmark className="icon" size={28} />
+                <h4>Council Administration</h4>
+                <p>Committees and functions</p>
+              </div>
+              <div className="dashboard-card">
+                <AlertTriangle className="icon" size={28} />
+                <h4>Professional Misconduct</h4>
+                <p>First and Second Schedules</p>
               </div>
               <div className="dashboard-card">
                 <Shield className="icon" size={28} />
-                <h4>Competition Commission of India</h4>
-                <p>Regulatory oversight and powers</p>
+                <h4>Disciplinary Mechanism</h4>
+                <p>Directorate and Board of Discipline</p>
               </div>
               <div className="dashboard-card">
-                <Search className="icon" size={28} />
-                <h4>Investigations</h4>
-                <p>Role of the Director General</p>
+                <CheckCircle className="icon" size={28} />
+                <h4>Quality Review Board</h4>
+                <p>Reviewing audit quality</p>
               </div>
               <div className="dashboard-card">
                 <Scale className="icon" size={28} />
-                <h4>Penalties</h4>
-                <p>Fines and leniency program</p>
-              </div>
-              <div className="dashboard-card" style={{ gridColumn: '1 / -1' }}>
-                <Users className="icon" size={28} />
-                <h4>Competition Advocacy</h4>
-                <p>Promoting competitive culture</p>
+                <h4>Penalties & Compliance</h4>
+                <p>Fines for false claims</p>
               </div>
             </div>
 
@@ -247,33 +252,33 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
             <h2 className="section-title">Regulatory Workflow</h2>
             <div className="process-diagram">
               <div className="process-step">
-                <div className="process-icon-box"><Briefcase size={24} /></div>
-                <div className="process-text">Business<br/>Conduct</div>
+                <div className="process-icon-box"><Users size={24} /></div>
+                <div className="process-text">Student /<br/>Candidate</div>
               </div>
               <ArrowRight className="process-arrow" size={24} />
               <div className="process-step">
                 <div className="process-icon-box"><FileText size={24} /></div>
-                <div className="process-text">Competition<br/>Assessment</div>
+                <div className="process-text">Registration<br/>with ICAI</div>
               </div>
               <ArrowRight className="process-arrow" size={24} />
               <div className="process-step">
-                <div className="process-icon-box"><Landmark size={24} /></div>
-                <div className="process-text">CCI<br/>Review</div>
-              </div>
-              <ArrowRight className="process-arrow" size={24} />
-              <div className="process-step">
-                <div className="process-icon-box"><Search size={24} /></div>
-                <div className="process-text">Investigation</div>
+                <div className="process-icon-box"><BookOpen size={24} /></div>
+                <div className="process-text">Training &<br/>Examination</div>
               </div>
               <ArrowRight className="process-arrow" size={24} />
               <div className="process-step">
                 <div className="process-icon-box"><FileSignature size={24} /></div>
-                <div className="process-text">Order /<br/>Penalty</div>
+                <div className="process-text">Certificate of<br/>Practice</div>
               </div>
               <ArrowRight className="process-arrow" size={24} />
               <div className="process-step">
-                <div className="process-icon-box"><CheckCircle size={24} /></div>
-                <div className="process-text">Compliance</div>
+                <div className="process-icon-box"><Briefcase size={24} /></div>
+                <div className="process-text">Professional<br/>Practice</div>
+              </div>
+              <ArrowRight className="process-arrow" size={24} />
+              <div className="process-step">
+                <div className="process-icon-box"><Shield size={24} /></div>
+                <div className="process-text">Compliance &<br/>Discipline</div>
               </div>
             </div>
 
@@ -317,7 +322,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
 
         {/* Sections Directory (Filterable) */}
         <h2 className="section-title" style={{ marginTop: '3rem' }}>
-          {searchQuery ? 'Matching Sections' : 'Complete Sections Directory (1-255)'}
+          {searchQuery ? 'Matching Sections' : 'Complete Sections Directory'}
         </h2>
         
         {filteredSections.length === 0 && filteredImportantSections.length === 0 ? (
@@ -327,7 +332,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
         ) : (
           <div style={{ marginBottom: '4rem' }}>
             {/* We map chapters then sections within them */}
-            {competitionChapters.map(chapter => {
+            {charteredAccountantsChapters.map(chapter => {
               // Get sections for this chapter
               const chapterSecs = filteredSections.filter(s => {
                 const sNumStr = s.section.replace(/[^0-9]/g, '');

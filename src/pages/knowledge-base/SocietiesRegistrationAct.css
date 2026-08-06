@@ -1,5 +1,4 @@
-.companies-act-page {
-  padding-top: 120px;
+.societies-act-page {
   padding-bottom: 3rem;
   background-color: transparent;
   color: var(--text-primary);
@@ -36,6 +35,52 @@
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.75rem;
   font-weight: 600;
+}
+
+/* Info Card */
+.info-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, rgba(11, 31, 58, 0.8), rgba(30, 94, 255, 0.15));
+  border: 1px solid rgba(30, 94, 255, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.info-card .icon {
+  color: var(--brand-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-heading);
+  font-size: 1.25rem;
+}
+
+.info-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.info-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.info-card-grid span strong {
+  color: var(--text-heading);
+  margin-right: 0.5rem;
 }
 
 /* Overview Stats */

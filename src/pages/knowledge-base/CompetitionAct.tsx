@@ -14,9 +14,9 @@ import {
   relatedActs,
   competitionSections
 } from '../../data/competitionActData';
-import './InsolvencyBankruptcyCode.css';
+import './CompetitionAct.css';
 
-export const InsolvencyBankruptcyCode: React.FC = () => {
+export const CompetitionAct: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
 
@@ -107,7 +107,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
           </div>
           <div className="stat-card">
             <Hash size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
-            <span className="stat-value">255</span>
+            <span className="stat-value">66</span>
             <span className="stat-label">TOTAL SECTIONS</span>
           </div>
           <div className="stat-card">
@@ -165,7 +165,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
             <div className="highlights-grid">
               <div className="highlight-card" style={{ gridColumn: '1 / -1' }}>
                 <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-                  Insolvency and Bankruptcy Code, 2016 was enacted to promote and sustain competition in Indian markets, prevent practices having an appreciable adverse effect on competition, protect consumer interests, and ensure freedom of trade. It establishes the Competition Commission of India (CCI), regulates anti-competitive agreements, abuse of dominant position, and combinations such as mergers and acquisitions.
+                  The Competition Act, 2002 was enacted to promote and sustain competition in Indian markets, prevent practices having an appreciable adverse effect on competition, protect consumer interests, and ensure freedom of trade. It establishes the Competition Commission of India (CCI), regulates anti-competitive agreements, abuse of dominant position, and combinations such as mergers and acquisitions.
                 </p>
               </div>
             </div>
@@ -317,7 +317,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
 
         {/* Sections Directory (Filterable) */}
         <h2 className="section-title" style={{ marginTop: '3rem' }}>
-          {searchQuery ? 'Matching Sections' : 'Complete Sections Directory (1-255)'}
+          {searchQuery ? 'Matching Sections' : 'Complete Sections Directory (1-66)'}
         </h2>
         
         {filteredSections.length === 0 && filteredImportantSections.length === 0 ? (

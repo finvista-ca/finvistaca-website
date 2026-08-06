@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ChevronDown, ChevronUp, ArrowRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText } from 'lucide-react';
+import { Search, ArrowRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import {
   llpChapters,
@@ -9,18 +9,10 @@ import {
 } from '../../data/llpData';
 import './LlpAct.css';
 
-const LlpAct: React.FC = () => {
+export const LlpAct: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedChapter, setExpandedChapter] = useState<string | null>(null);
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
-  const toggleChapter = (chapterNum: string) => {
-    setExpandedChapter(expandedChapter === chapterNum ? null : chapterNum);
-  };
 
-  const toggleSection = (sectionNum: string) => {
-    setExpandedSection(expandedSection === sectionNum ? null : sectionNum);
-  };
 
   // Filter Chapters based on Search
   const filteredChapters = useMemo(() => {
@@ -191,46 +183,12 @@ const LlpAct: React.FC = () => {
         ) : (
           <div style={{ marginBottom: '4rem' }}>
             {filteredChapters.map((chapter) => (
-              <div key={chapter.chapterNumber} className={`accordion-item ${expandedChapter === chapter.chapterNumber ? 'active' : ''}`}>
-                <button 
-                  className="accordion-header"
-                  onClick={() => toggleChapter(chapter.chapterNumber)}
-                >
+              <div key={chapter.chapterNumber} className="accordion-item static">
+                <div className="accordion-header static-header">
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                     <span className="stat-label" style={{ fontSize: '0.85rem' }}>Chapter {chapter.chapterNumber}</span>
                     <span style={{ fontWeight: 600, fontSize: '1.1rem' }}>{chapter.title}</span>
                   </div>
-                  {expandedChapter === chapter.chapterNumber ? (
-                    <ChevronUp className="accordion-icon" size={20} />
-                  ) : (
-                    <ChevronDown className="accordion-icon" size={20} />
-                  )}
-                </button>
-                
-                <div className={`accordion-content ${expandedChapter === chapter.chapterNumber ? 'active' : ''}`}>
-                  {chapter.sections.map((section, idx) => (
-                    <div key={section.sectionNumber} style={{ 
-                      paddingBottom: '1rem', 
-                      paddingTop: '1rem',
-                      borderBottom: idx < chapter.sections.length - 1 ? '1px solid var(--border-color)' : 'none'
-                    }}>
-                      <div 
-                        style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--text-heading)', fontWeight: 600 }}
-                        onClick={() => toggleSection(section.sectionNumber)}
-                      >
-                        Section {section.sectionNumber}: {section.title}
-                        <span style={{ fontSize: '0.8rem', color: 'var(--brand-blue)', background: 'rgba(30, 94, 255, 0.1)', padding: '2px 8px', borderRadius: '12px' }}>
-                          {expandedSection === section.sectionNumber ? 'Hide Text' : 'Read Text'}
-                        </span>
-                      </div>
-                      
-                      {(expandedSection === section.sectionNumber || searchQuery) && (
-                        <div style={{ marginTop: '1rem', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                          {section.content}
-                        </div>
-                      )}
-                    </div>
-                  ))}
                 </div>
               </div>
             ))}
@@ -243,7 +201,7 @@ const LlpAct: React.FC = () => {
             <h2 className="section-title">Schedules</h2>
             <div>
               {llpSchedules.map((schedule, idx) => (
-                <div key={idx} className={`accordion-item ${expandedChapter === `schedule-${idx}` ? 'active' : ''}`}>
+                <div key={idx} className="accordion-item static">
                   <button 
                     className="accordion-header"
                     onClick={() => toggleChapter(`schedule-${idx}`)}
@@ -251,27 +209,22 @@ const LlpAct: React.FC = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                       <span style={{ fontWeight: 600, fontSize: '1.1rem' }}>{schedule.title}</span>
                     </div>
-                    {expandedChapter === `schedule-${idx}` ? (
-                      <ChevronUp className="accordion-icon" size={20} />
-                    ) : (
-                      <ChevronDown className="accordion-icon" size={20} />
-                    )}
                   </button>
-                  
-                  <div className={`accordion-content ${expandedChapter === `schedule-${idx}` ? 'active' : ''}`}>
-                    <div style={{ marginTop: '1rem', color: 'var(--text-secondary)', lineHeight: 1.7, paddingBottom: '1rem' }}>
-                      {schedule.content}
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
           </div>
         )}
 
+
+        {/* Official Reference */}
+        <div className="official-reference-card" style={{ marginTop: '4rem', marginBottom: '2rem', padding: '2rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '16px', textAlign: 'center' }}>
+          <h3 style={{ color: 'var(--brand-gold)', marginBottom: '1rem' }}>Official Gazette / Government Reference</h3>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>For complete statutory wording, explanations, amendments, and schedules, please refer to the official Government publication of this Act.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="premium-btn">View Official Act</a>
+        </div>
       </div>
     </div>
   );
 };
 
-export default LlpAct;

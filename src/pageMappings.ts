@@ -11,7 +11,10 @@ import { CompaniesDonationsAct } from './pages/knowledge-base/CompaniesDonations
 import { PartnershipAct } from './pages/knowledge-base/PartnershipAct';
 import { MonopoliesAct } from './pages/knowledge-base/MonopoliesAct';
 import { InsolvencyBankruptcyCode } from './pages/knowledge-base/InsolvencyBankruptcyCode';
-import LlpAct from './pages/knowledge-base/LlpAct';
+import { LlpAct } from './pages/knowledge-base/LlpAct';
+import { CompetitionAct } from './pages/knowledge-base/CompetitionAct';
+import { CharteredAccountantsAct } from './pages/knowledge-base/CharteredAccountantsAct';
+import { CostWorksAccountantsAct } from './pages/knowledge-base/CostWorksAccountantsAct';
 import { IncomeTaxRules } from './pages/knowledge-base/IncomeTaxRules';
 import { CompanyLawRules } from './pages/knowledge-base/CompanyLawRules';
 import { IncomeTaxCirculars } from './pages/knowledge-base/IncomeTaxCirculars';
@@ -55,6 +58,8 @@ import { InstallmentsCalculator } from './pages/calculator/InstallmentsCalculato
 import { KisanVikasPatraCalculator } from './pages/calculator/KisanVikasPatraCalculator';
 import { NscCalculator } from './pages/calculator/NscCalculator';
 import { GstLateFeeCalculator } from './pages/calculator/GstLateFeeCalculator';
+
+import { SocietiesRegistrationAct } from './pages/knowledge-base/SocietiesRegistrationAct';
 
 export const pageMappings: Record<string, Record<string, React.FC>> = {
   knowledgeBase: {
@@ -104,11 +109,11 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'more-link': KbGeneric,
     'companies-donation-fund-act': CompaniesDonationsAct,
     'llp-act': LlpAct,
-    'societies-registration-act': KbGeneric,
-    'competition-act': KbGeneric,
-    'chartered-accountants-act': KbGeneric,
+    'societies-registration-act': SocietiesRegistrationAct,
+    'competition-act': CompetitionAct,
+    'chartered-accountants-act': CharteredAccountantsAct,
     'company-secretaries-act': KbGeneric,
-    'cost-works-accountants-act': KbGeneric,
+    'cost-works-accountants-act': CostWorksAccountantsAct,
   },
   gst: {
     'gst-acts': GstActs,

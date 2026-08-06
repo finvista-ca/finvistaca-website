@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ChevronDown, ChevronUp, AlertCircle, FileText, Download, ChevronLeft, ChevronRight, BookOpen, Clock, FileKey, Layers, Hash } from 'lucide-react';
+import { Search, AlertCircle, FileText, Download, ChevronLeft, BookOpen, Clock, FileKey, Layers, Hash } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 
 import { giftTaxChapters, giftTaxImportantSections, giftTaxSearchIndex } from '../../data/giftTaxData';
@@ -17,19 +17,7 @@ export const GiftTaxAct: React.FC = () => {
   const [activeReference, setActiveReference] = useState<string | null>(null);
 
   // Important Sections "Read More" State
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
-  const toggleChapter = (id: string) => {
-    setActiveChapter(activeChapter === id ? null : id);
-  };
-
-  const toggleReference = (id: string) => {
-    setActiveReference(activeReference === id ? null : id);
-  };
-
-  const toggleImportantSection = (sectionId: string) => {
-    setExpandedSection(expandedSection === sectionId ? null : sectionId);
-  };
 
   // Search logic for Section Index
   const filteredSearchIndex = useMemo(() => {
@@ -125,10 +113,10 @@ export const GiftTaxAct: React.FC = () => {
         <div style={{ marginBottom: '4rem' }}>
           {giftTaxChapters.map((chapter) => (
             <div key={chapter.id} className={`accordion-item ${activeChapter === chapter.id ? 'active' : ''}`}>
-              <button className="accordion-header" onClick={() => toggleChapter(chapter.id)}>
+              <div className="accordion-header static-header">
                 {chapter.title}
                 <ChevronDown className="accordion-icon" size={20} />
-              </button>
+              </div>
               <div className="accordion-content">
                 <ul className="section-list">
                   {chapter.sections.map(section => (
@@ -235,10 +223,10 @@ export const GiftTaxAct: React.FC = () => {
           </p>
           {giftTaxChapters.map((chapter) => (
             <div key={`ref-${chapter.id}`} className={`accordion-item ${activeReference === chapter.id ? 'active' : ''}`}>
-              <button className="accordion-header" onClick={() => toggleReference(chapter.id)}>
+              <div className="accordion-header static-header">
                 {chapter.title}
                 <ChevronDown className="accordion-icon" size={20} />
-              </button>
+              </div>
               <div className="accordion-content">
                 <ul className="section-list">
                   {chapter.sections.map(section => (
@@ -261,6 +249,13 @@ export const GiftTaxAct: React.FC = () => {
         </div>
 
 
+
+        {/* Official Reference */}
+        <div className="official-reference-card" style={{ marginTop: '4rem', marginBottom: '2rem', padding: '2rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '16px', textAlign: 'center' }}>
+          <h3 style={{ color: 'var(--brand-gold)', marginBottom: '1rem' }}>Official Gazette / Government Reference</h3>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>For complete statutory wording, explanations, amendments, and schedules, please refer to the official Government publication of this Act.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="premium-btn">View Official Act</a>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Search, ChevronDown, ChevronUp, ArrowRight, Briefcase, 
+  Search, ArrowRight, Briefcase, 
   Users, Shield, TrendingUp, Scale, BookOpen, FileText, 
   BarChart, UserCheck, Heart, CheckCircle, ChevronRight
 } from 'lucide-react';
@@ -21,16 +21,8 @@ type ImportantSection = typeof importantSectionsList[0];
 
 const CompaniesAct: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedChapter, setExpandedChapter] = useState<string | null>(null);
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
-  const toggleChapter = (chapterNum: string) => {
-    setExpandedChapter(expandedChapter === chapterNum ? null : chapterNum);
-  };
 
-  const toggleSection = (sectionNum: string) => {
-    setExpandedSection(expandedSection === sectionNum ? null : sectionNum);
-  };
 
   const handleTopicClick = (topic: string) => {
     setSearchQuery(topic);
@@ -220,7 +212,7 @@ const CompaniesAct: React.FC = () => {
               {complianceDashboardItems.map((item, idx) => {
                 const IconComponent = IconMap[item.icon] || FileText;
                 return (
-                  <div key={idx} className="dashboard-card" onClick={() => handleTopicClick(item.target !== 'General' ? item.target : item.title)}>
+                  <div key={idx} className="dashboard-card">
                     <IconComponent className="icon" size={28} />
                     <h4>{item.title}</h4>
                     <p>{item.desc}</p>
@@ -247,17 +239,6 @@ const CompaniesAct: React.FC = () => {
                   <div style={{ fontWeight: 600, color: 'var(--text-heading)', marginBottom: '0.5rem' }}>{sec.title}</div>
                   <div className="purpose">{sec.purpose}</div>
                   <p>{sec.explanation}</p>
-                  
-                  <button className="read-more-btn" onClick={() => toggleSection(`imp-${sec.section}`)}>
-                    {expandedSection === `imp-${sec.section}` ? 'Hide Details' : 'Read Statutory Text'}
-                    <ChevronRight size={16} style={{ transform: expandedSection === `imp-${sec.section}` ? 'rotate(90deg)' : 'rotate(0deg)', transition: '0.2s' }} />
-                  </button>
-
-                  {expandedSection === `imp-${sec.section}` && (
-                    <div className="important-content">
-                      (Statutory wording for Section {sec.section} would be dynamically loaded here from the official gazette repository. Due to the length of the Act, only essential text is displayed.)
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -276,34 +257,16 @@ const CompaniesAct: React.FC = () => {
         ) : (
           <div style={{ marginBottom: '4rem' }}>
             {filteredChapters.map((chapter) => (
-              <div key={chapter.chapterNumber} className={`accordion-item ${expandedChapter === chapter.chapterNumber ? 'active' : ''}`}>
-                <button 
-                  className="accordion-header"
-                  onClick={() => toggleChapter(chapter.chapterNumber)}
-                >
+              <div key={chapter.chapterNumber} className="accordion-item static">
+                <div className="accordion-header static-header">
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', width: '90%' }}>
                     <span className="stat-label" style={{ fontSize: '0.85rem' }}>Chapter {chapter.chapterNumber} • Sections {chapter.sections}</span>
                     <span style={{ fontWeight: 600, fontSize: '1.2rem', marginTop: '0.25rem', color: 'var(--brand-blue)' }}>{chapter.title}</span>
                     <span style={{ fontWeight: 400, fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem' }}>{chapter.description}</span>
                   </div>
-                  {expandedChapter === chapter.chapterNumber ? (
-                    <ChevronUp className="accordion-icon" size={24} />
-                  ) : (
-                    <ChevronDown className="accordion-icon" size={24} />
-                  )}
-                </button>
-                
-                <div className={`accordion-content ${expandedChapter === chapter.chapterNumber ? 'active' : ''}`}>
-                  <div style={{ padding: '1rem 0', color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                    <p style={{ marginBottom: '1rem', fontStyle: 'italic' }}>This chapter covers Sections {chapter.sections}. Select an important section above to read full provisions.</p>
-                    {/* Placeholder for list of sections within this chapter */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                       <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.5rem' }}><strong>Section {chapter.sections.split('-')[0]}:</strong> Introduction to {chapter.title}</div>
-                       <div style={{ paddingBottom: '0.5rem' }}><strong>Section {chapter.sections.split('-')[1] || parseInt(chapter.sections.split('-')[0]) + 1}:</strong> General provisions of {chapter.title}</div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+                
+                </div>
             ))}
           </div>
         )}
@@ -333,6 +296,13 @@ const CompaniesAct: React.FC = () => {
           </>
         )}
 
+
+        {/* Official Reference */}
+        <div className="official-reference-card" style={{ marginTop: '4rem', marginBottom: '2rem', padding: '2rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '16px', textAlign: 'center' }}>
+          <h3 style={{ color: 'var(--brand-gold)', marginBottom: '1rem' }}>Official Gazette / Government Reference</h3>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>For complete statutory wording, explanations, amendments, and schedules, please refer to the official Government publication of this Act.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="premium-btn">View Official Act</a>
+        </div>
       </div>
     </div>
   );
