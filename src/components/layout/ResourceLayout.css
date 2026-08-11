@@ -78,8 +78,10 @@
 }
 
 .search-icon {
-  color: var(--text-secondary);
   font-size: 1.1rem;
+
+  color: var(--brand-gold);
+  left: 1.5rem;
 }
 
 .action-buttons {

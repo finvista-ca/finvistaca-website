@@ -1,216 +1,518 @@
-import React from 'react';
-import { ResourceLayout } from '../../components/layout/ResourceLayout';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { 
+  Search, 
+  X, 
+  ChevronLeft, 
+  ChevronRight, 
+  FileText, 
+  Book,
+  Scale,
+  Building2,
+  ExternalLink,
+  ChevronDown
+} from 'lucide-react';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
+import { KnowledgeBaseHeader } from '../../components/common/KnowledgeBaseHeader';
+import { incomeTaxNotificationsData, type IncomeTaxNotification, relatedActs } from '../../data/incomeTaxNotificationsData';
+import './IncomeTaxNotifications.css';
 
-const pageData = [
-  [
-    "Notification No. 70/2026 [F. No. 500/Misc./S10(23FE)/FT&TR-II] / SO 2768(E)",
-    "01/06/2026"
-  ],
-  [
-    "Notification No. 69/2026-CBDT[F. No. 203/18/2025/ITA-II] / SO 2752(E)",
-    "30/05/2026"
-  ],
-  [
-    "Notification No. 66/2026-CBDT[F. No. 203/15/2025/ITA-II] / SO 2749(E)",
-    "30/05/2026"
-  ],
-  [
-    "Notification No. 67/2026-CBDT[F. No. 203/16/2025/ITA-II] / SO 2750(E)",
-    "30/05/2026"
-  ],
-  [
-    "Notification No. 68/2026-CBDT[F. No. 203/17/2025/ITA-II] / SO 2751(E)",
-    "30/05/2026"
-  ],
-  [
-    "Notification No. 6/2026:",
-    "12/05/2026"
-  ],
-  [
-    "Notification No. 64/2026 [F. No. 370142/41/2025-TPL] / GSR 286(E)",
-    "16/04/2026"
-  ],
-  [
-    "Notification No. 63/2026 [F. No. 370142/13/2026-TPL]/ GSR 268(E)",
-    "10/04/2026"
-  ],
-  [
-    "Notification No. 60/2026 [F. No. 370142/8/2026-TPL]/ GSR 265(E)",
-    "10/04/2026"
-  ],
-  [
-    "Notification No. 61/2026 [F. No. 370142/9/2026-TPL] / GSR 266(E)",
-    "10/04/2026"
-  ],
-  [
-    "Notification No. 62/2026 [F. No. 370142/10/2026-TPL]/ GSR 267(E)",
-    "10/04/2026"
-  ],
-  [
-    "Notification No. 58/2026 [F. No. 370142/6/2026-TPL] / GSR 263(E)",
-    "10/04/2026"
-  ],
-  [
-    "Notification No. 59/2026 [F. No. 370142/7/2026-TPL] / GSR 264(E)",
-    "10/04/2026"
-  ],
-  [
-    "Notification No. 57/2026 [F. No. 370142/5/2026-TPL] / GSR 262(E)",
-    "10/04/2026"
-  ],
-  [
-    "Notification No. 56/2026 [F. No. 500/22/2022-FT&TR-V] / S.O. 1715(E)",
-    "02/04/2026"
-  ],
-  [
-    "Notification No. 54/2026 [F. No. 370142/15/2026-TPL] / G.S.R. 240(E)",
-    "31/03/2026"
-  ],
-  [
-    "Notification No. 55/2026 [F. No. 370142/15/2026-TPL] / G.S.R. 241(E)",
-    "31/03/2026"
-  ],
-  [
-    "Notification No. 48/2026 [F. No. 370142/8/2026-TPL] / G.S.R. 229(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 49/2026 [F. No. 370142/9/2026-TPL] / G.S.R. 230(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 50/2026 [F. No. 370142/10/2026-TPL] / G.S.R. 231(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 51/2026 [F. No.370142/12 /2026-TPL] / G.S.R. 232(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 52/2026 [F.No. 370142/13/2026-TPL] / G.S.R. 233(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 53/2026 [F.No.300195/48/2025-ITA-I] / SO 1664(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 39/2026 [F. No. CBDT/1/2022-FT&TR-V Section-CBDT(Part-1)] / SO 1647(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 40/2026 [F. No. 203/07/2025/ITA-II] / SO 1657(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 41/2026 [F. No. 300195/54/2024-ITA-I] / SO 1653(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 42/2026 [F. No 203/09/2025/ITA-II] / SO 1658(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 43/2026 [F. No. 203/11/2025/ITA-II] / SO 1659(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 44/2026 [F.No.300196/92/2024-ITA-I] / SO 1656(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 45/2026 [F. No. 370142/5/2026-TPL] / G.S.R. 226(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 46/2026 [F. No. 370142/6/2026-TPL] / G.S.R. 227(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 47/2026 [F. No. 370142/7/2026-TPL] / G.S.R. 228(E)",
-    "30/03/2026"
-  ],
-  [
-    "Notification No. 01/CPC(TDS)/2026",
-    "28/03/2026"
-  ],
-  [
-    "Notification No. 37/2026 [F. No. 300196/2/2026-ITA-I] / SO 1626(E)",
-    "27/03/2026"
-  ],
-  [
-    "Notification No. 38/2026 [F.No.300196/4/2025-ITA-I] / SO 1627(E)",
-    "27/03/2026"
-  ],
-  [
-    "Notification No. 33/2026 [F.No. 300195/48/2024-ITA-I] / SO 1622(E)",
-    "27/03/2026"
-  ],
-  [
-    "Notification No. 34/2026 [F.No. 300195/38/2024-ITA-I] / SO 1623(E)",
-    "27/03/2026"
-  ],
-  [
-    "Notification No. 35/2026 [F.No.300196/52/2024-ITA-I] / SO 1625(E)",
-    "27/03/2026"
-  ],
-  [
-    "Notification No. 36/2026 [F. No. 300195/37/2025-ITA-I] / SO 1624(E)",
-    "27/03/2026"
-  ],
-  [
-    "Notification No. 29/2026 [F.No.300195/19/2024-ITA-I] / SO 1576(E)",
-    "25/03/2026"
-  ],
-  [
-    "Notification No. 30/2026 [F.No. 300195/21/2024-ITA-I] / SO 1577(E)",
-    "25/03/2026"
-  ],
-  [
-    "Notification No. 31/2026 [F.No. 300195/45/2024-ITA-I] / SO 1578(E)",
-    "25/03/2026"
-  ],
-  [
-    "Notification No. 32/2026 [F.No. 300196/67/2024-ITA-I] / SO 1579(E)",
-    "25/03/2026"
-  ],
-  [
-    "Notification No. 28/2026 [F. No. 300196/7/2026-ITA-I] / SO 1535(E)",
-    "24/03/2026"
-  ],
-  [
-    "Notification No. 26/2026 [F. No. 300195/36/2025-ITA-I] / SO 1533(E)",
-    "24/03/2026"
-  ],
-  [
-    "Notification No. 27/2026 [F. No. 300196/61/2025-ITA-I] / SO 1534(E)",
-    "24/03/2026"
-  ],
-  [
-    "Notification No. 25/2026 [F. No. 300195/29/2025-ITA-I] / SO 1532(E)",
-    "24/03/2026"
-  ],
-  [
-    "Notification No. 5/2026",
-    "23/03/2026"
-  ],
-  [
-    "Notification No. 23/2026 [F. No. 203/08/2025/ITA-II] / SO 1490(E)",
-    "20/03/2026"
-  ],
-  [
-    "Income-tax Rules, 2026 : Notification No. 22/2026",
-    "20/03/2026"
-  ]
-];
+const NOTIFICATIONS_PER_PAGE = 20;
 
 export const IncomeTaxNotifications: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [yearFilter, setYearFilter] = useState('All Years');
+  const [categoryFilter, setCategoryFilter] = useState('All');
+  const [actFilter, setActFilter] = useState('All');
+  const [statusFilter, setStatusFilter] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedNotificationId, setSelectedNotificationId] = useState<string | null>(searchParams.get('notification'));
+  
+  const directoryRef = useRef<HTMLDivElement>(null);
+
+  // Debounce search
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // Sync selectedNotificationId with URL
+  useEffect(() => {
+    const notifParam = searchParams.get('notification');
+    if (notifParam !== selectedNotificationId) {
+      setSelectedNotificationId(notifParam);
+    }
+  }, [searchParams]);
+
+  const openNotification = (id: string) => {
+    setSelectedNotificationId(id);
+    setSearchParams({ notification: id });
+  };
+
+  const closeNotification = () => {
+    setSelectedNotificationId(null);
+    setSearchParams({});
+  };
+
+  const availableYears = useMemo(() => {
+    const years = Array.from(new Set(incomeTaxNotificationsData.map(c => c.year)));
+    return years.sort((a, b) => b - a);
+  }, []);
+
+  const categories = useMemo(() => {
+    const cats = Array.from(new Set(incomeTaxNotificationsData.map(c => c.category)));
+    return cats.sort();
+  }, []);
+
+  const applicableLaws = useMemo(() => {
+    const laws = Array.from(new Set(incomeTaxNotificationsData.map(c => c.applicableAct).filter(Boolean))) as string[];
+    return laws.sort();
+  }, []);
+
+  const statuses = useMemo(() => {
+    const s = Array.from(new Set(incomeTaxNotificationsData.map(c => c.status).filter(Boolean))) as string[];
+    return s.sort();
+  }, []);
+
+  // Filter Notifications
+  const filteredNotifications = useMemo(() => {
+    let result = incomeTaxNotificationsData;
+
+    // Search
+    if (debouncedQuery) {
+      const query = debouncedQuery.toLowerCase();
+      result = result.filter(notification => {
+        return (
+          notification.notificationNumber.toLowerCase().includes(query) ||
+          notification.title.toLowerCase().includes(query) ||
+          notification.category.toLowerCase().includes(query) ||
+          (notification.sections && notification.sections.some(s => s.toLowerCase().includes(query))) ||
+          notification.summary.toLowerCase().includes(query) ||
+          (notification.applicableAct && notification.applicableAct.toLowerCase().includes(query))
+        );
+      });
+
+      // Sort by exact number match
+      result = [...result].sort((a, b) => {
+        const aNumMatch = a.notificationNumber.toLowerCase() === query;
+        const bNumMatch = b.notificationNumber.toLowerCase() === query;
+        if (aNumMatch && !bNumMatch) return -1;
+        if (!aNumMatch && bNumMatch) return 1;
+        
+        const aContains = a.notificationNumber.toLowerCase().includes(query);
+        const bContains = b.notificationNumber.toLowerCase().includes(query);
+        if (aContains && !bContains) return -1;
+        if (!aContains && bContains) return 1;
+
+        return 0;
+      });
+    } else {
+      // Default sort by date descending
+      result = [...result].sort((a, b) => {
+        const dateA = new Date(a.date.split('/').reverse().join('-'));
+        const dateB = new Date(b.date.split('/').reverse().join('-'));
+        return dateB.getTime() - dateA.getTime();
+      });
+    }
+
+    if (yearFilter !== 'All Years') {
+      result = result.filter(c => c.year.toString() === yearFilter);
+    }
+    
+    if (categoryFilter !== 'All') {
+      result = result.filter(c => c.category === categoryFilter);
+    }
+    
+    if (actFilter !== 'All') {
+      result = result.filter(c => c.applicableAct === actFilter);
+    }
+
+    if (statusFilter !== 'All') {
+      result = result.filter(c => c.status === statusFilter);
+    }
+
+    return result;
+  }, [debouncedQuery, yearFilter, categoryFilter, actFilter, statusFilter]);
+
+  const featuredNotifications = useMemo(() => {
+    return [...incomeTaxNotificationsData]
+      .sort((a, b) => {
+        const dateA = new Date(a.date.split('/').reverse().join('-'));
+        const dateB = new Date(b.date.split('/').reverse().join('-'));
+        return dateB.getTime() - dateA.getTime();
+      })
+      .slice(0, 3);
+  }, []);
+
+  const selectedNotification = useMemo(() => {
+    return incomeTaxNotificationsData.find(c => c.id === selectedNotificationId) || null;
+  }, [selectedNotificationId]);
+
+  // Pagination
+  const totalPages = Math.ceil(filteredNotifications.length / NOTIFICATIONS_PER_PAGE);
+  const paginatedNotifications = filteredNotifications.slice(
+    (currentPage - 1) * NOTIFICATIONS_PER_PAGE,
+    currentPage * NOTIFICATIONS_PER_PAGE
+  );
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    if (directoryRef.current) {
+      const y = directoryRef.current.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setYearFilter('All Years');
+    setCategoryFilter('All');
+    setActFilter('All');
+    setStatusFilter('All');
+    setCurrentPage(1);
+  };
+
   return (
-    <ResourceLayout 
-      title="Income Tax Notifications"
-      description="View and search through Income Tax Notifications documents."
-      data={pageData}
-      type="table"
-    />
+    <div className="income-tax-notifications-page">
+      <InternalPageHero 
+        title="Income Tax Notifications"
+        description="Browse official CBDT notifications covering tax provisions, exemptions, compliance requirements, procedures and regulatory changes."
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base', path: '/knowledge-base' },
+          { label: 'Income Tax Notifications' }
+        ]}
+      />
+
+      <div className="container" style={{ marginTop: '0' }}>
+        {/* AT A GLANCE */}
+        <KnowledgeBaseHeader
+          infoTitle="Browse official CBDT notifications covering tax provisions, exemptions, compliance requirements, procedures and regulatory changes."
+          infoIcon={<Book className="icon" size={24} />}
+          infoGrid={[
+            { label: 'Notifications Indexed', value: incomeTaxNotificationsData.length },
+            { label: 'Issuing Authority', value: 'CBDT' },
+            { label: 'Primary Source', value: 'Income Tax Dept' },
+            { label: 'Directory', value: 'Searchable' }
+          ]}
+          statCards={[
+            { value: 'CBDT', label: 'Issuing Authority' },
+            { value: incomeTaxNotificationsData.length, label: 'Notifications Indexed' },
+            { value: 'Searchable', label: 'Notification Directory' },
+            { value: 'Income Tax Dept', label: 'Primary Source' }
+          ]}
+        />
+
+      {/* FEATURED NOTIFICATIONS */}
+      {featuredNotifications.length > 0 && (
+        <div className="featured-notifications-section" style={{ marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '1.5rem', color: 'var(--brand-gold)', marginBottom: '1.5rem', borderBottom: '1px solid var(--glass-border)', paddingBottom: '0.5rem' }}>
+            Featured Notifications
+          </h2>
+          <div className="notifications-directory-grid">
+            {featuredNotifications.map((notification) => (
+              <div key={`feat-${notification.id}`} className="notification-card" onClick={() => openNotification(notification.id)}>
+                <div className="notification-header">
+                  <div className="notification-number">Notification No. {notification.notificationNumber}</div>
+                  <div className="notification-date">Published: {notification.date}</div>
+                </div>
+                <div className="notification-title">{notification.title}</div>
+                <div className="notification-tags">
+                  <span className="notification-tag">{notification.category}</span>
+                  {notification.applicableAct && <span className="notification-tag act">{notification.applicableAct}</span>}
+                </div>
+                <div className="notification-summary">{notification.summary}</div>
+                <div className="notification-card-footer">
+                  <span className="notification-source">{notification.source}</span>
+                  <span className="notification-view-link">View Notification <ChevronRight size={16} /></span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* MAIN DIRECTORY */}
+      <div ref={directoryRef} className="notifications-directory-section">
+        <h2 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1.5rem' }}>CBDT Notification Directory</h2>
+        
+        {/* Search and Filters */}
+        <div className="notification-search-filter-container">
+          <div className="notification-search-wrapper">
+            <Search className="notification-search-icon" size={20} />
+            <input
+              type="text"
+              placeholder="Search notification number, topic, section or keyword..."
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="notification-search-input"
+            />
+            {searchQuery && (
+              <button className="clear-search-btn" onClick={() => { setSearchQuery(''); setCurrentPage(1); }} style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>
+                <X size={18} />
+              </button>
+            )}
+          </div>
+          
+          <div className="notification-filters-row">
+            <div className="filter-group">
+              <select 
+                value={yearFilter} 
+                onChange={(e) => { setYearFilter(e.target.value); setCurrentPage(1); }}
+                className="notification-filter-select"
+              >
+                <option value="All Years">All Years</option>
+                {availableYears.map(year => (
+                  <option key={year} value={year.toString()}>{year}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div className="filter-group">
+              <select 
+                value={categoryFilter} 
+                onChange={(e) => { setCategoryFilter(e.target.value); setCurrentPage(1); }}
+                className="notification-filter-select"
+              >
+                <option value="All">All Categories</option>
+                {categories.map(cat => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
+            
+            {applicableLaws.length > 0 && (
+              <div className="filter-group">
+                <select 
+                  value={actFilter} 
+                  onChange={(e) => { setActFilter(e.target.value); setCurrentPage(1); }}
+                  className="notification-filter-select"
+                >
+                  <option value="All">All Applicable Laws</option>
+                  {applicableLaws.map(law => (
+                    <option key={law} value={law}>{law}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            {statuses.length > 0 && (
+              <div className="filter-group">
+                <select 
+                  value={statusFilter} 
+                  onChange={(e) => { setStatusFilter(e.target.value); setCurrentPage(1); }}
+                  className="notification-filter-select"
+                >
+                  <option value="All">All Statuses</option>
+                  {statuses.map(s => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Notifications List */}
+        {paginatedNotifications.length > 0 ? (
+          <>
+            <div className="notifications-directory-grid">
+              {paginatedNotifications.map((notification) => (
+                <div key={notification.id} className="notification-card" onClick={() => openNotification(notification.id)}>
+                  <div className="notification-header">
+                    <div className="notification-number">Notification No. {notification.notificationNumber}</div>
+                    <div className="notification-date">Published: {notification.date}</div>
+                  </div>
+                  <div className="notification-title">{notification.title}</div>
+                  <div className="notification-tags">
+                    <span className="notification-tag">{notification.category}</span>
+                    {notification.applicableAct && <span className="notification-tag act">{notification.applicableAct}</span>}
+                  </div>
+                  {notification.effectiveDate && (
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+                      <strong>Effective:</strong> {notification.effectiveDate}
+                    </div>
+                  )}
+                  <div className="notification-summary">{notification.summary}</div>
+                  <div className="notification-card-footer">
+                    <span className="notification-source">{notification.source}</span>
+                    <span className="notification-view-link">View Notification <ChevronRight size={16} /></span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="notification-pagination">
+                <div className="pagination-info">
+                  Showing {(currentPage - 1) * NOTIFICATIONS_PER_PAGE + 1} - {Math.min(currentPage * NOTIFICATIONS_PER_PAGE, filteredNotifications.length)} of {filteredNotifications.length} notifications
+                </div>
+                <div className="pagination-controls">
+                  <button 
+                    className="page-btn" 
+                    onClick={() => handlePageChange(currentPage - 1)} 
+                    disabled={currentPage === 1}
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter(p => p === 1 || p === totalPages || Math.abs(currentPage - p) <= 1)
+                    .map((page, idx, arr) => (
+                      <React.Fragment key={page}>
+                        {idx > 0 && arr[idx - 1] !== page - 1 && <span style={{ color: 'var(--text-muted)', alignSelf: 'center' }}>...</span>}
+                        <button 
+                          className={`page-btn ${currentPage === page ? 'active' : ''}`}
+                          onClick={() => handlePageChange(page)}
+                        >
+                          {page}
+                        </button>
+                      </React.Fragment>
+                  ))}
+                  <button 
+                    className="page-btn" 
+                    onClick={() => handlePageChange(currentPage + 1)} 
+                    disabled={currentPage === totalPages}
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="no-results-state" style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--glass-bg)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+            <FileText size={48} style={{ color: 'var(--text-muted)', margin: '0 auto 1.5rem', opacity: 0.5 }} />
+            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '1rem' }}>No notifications found</h3>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Try another notification number, keyword, year or category.</p>
+            <button 
+              onClick={clearFilters}
+              style={{ padding: '0.75rem 1.5rem', background: 'var(--brand-gold)', color: 'var(--primary-color)', border: 'none', borderRadius: '8px', fontWeight: 600, cursor: 'pointer' }}
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* OFFICIAL REFERENCE FOOTER */}
+      <div className="official-reference-card" style={{ marginTop: '4rem', padding: '2rem', background: 'var(--glass-bg)', border: '1px solid rgba(201, 160, 80, 0.3)', borderRadius: '12px', borderLeft: '4px solid var(--brand-gold)' }}>
+        <h3 style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+          <Book size={24} color="var(--brand-gold)" /> Official Income Tax Notifications
+        </h3>
+        <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+          Income-tax provisions and administrative requirements may change through subsequent notifications, amendments and other official updates. Verify the current applicable position from the official Income Tax Department / CBDT source before relying on any notification.
+        </p>
+        <a 
+          href="https://incometaxindia.gov.in/Pages/communications/notifications.aspx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="notification-official-btn"
+          style={{ display: 'inline-flex', padding: '0.75rem 1.5rem', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid var(--glass-border)', borderRadius: '8px', color: 'white', textDecoration: 'none', fontWeight: 500 }}
+        >
+          View Official Notifications <ExternalLink size={16} />
+        </a>
+      </div>
+
+      {/* RELATED KNOWLEDGE BASE */}
+      <div className="related-kb-section" style={{ marginTop: '4rem', padding: '3rem 0', borderTop: '1px solid var(--glass-border)' }}>
+        <h2 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '2rem', textAlign: 'center' }}>Related Knowledge Base</h2>
+        <div className="notifications-overview-grid">
+          {relatedActs.map((item, idx) => (
+            <Link key={idx} to={item.path} className="notifications-stat-card" style={{ textDecoration: 'none', minHeight: 'auto', padding: '1rem' }}>
+              <span style={{ color: 'white', fontWeight: 500 }}>{item.title}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* DETAIL MODAL */}
+      {selectedNotification && (
+        <div className="notification-modal-overlay" onClick={closeNotification}>
+          <div className="notification-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="notification-modal-header">
+              <div>
+                <h2>Notification No. {selectedNotification.notificationNumber}</h2>
+                <div style={{ color: 'var(--text-muted)' }}>Published: {selectedNotification.date}</div>
+              </div>
+              <button className="notification-modal-close" onClick={closeNotification}>
+                <X size={24} />
+              </button>
+            </div>
+            
+            <div className="notification-modal-body">
+              <h3 style={{ fontSize: '1.3rem', lineHeight: 1.5, marginBottom: '2rem', color: 'white' }}>
+                {selectedNotification.title}
+              </h3>
+              
+              <div className="notification-modal-meta-grid">
+                <div className="notification-modal-meta-item">
+                  <span className="notification-modal-meta-label">Issuing Authority</span>
+                  <span className="notification-modal-meta-value">{selectedNotification.source}</span>
+                </div>
+                <div className="notification-modal-meta-item">
+                  <span className="notification-modal-meta-label">Category</span>
+                  <span className="notification-modal-meta-value">{selectedNotification.category}</span>
+                </div>
+                {selectedNotification.applicableAct && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Applicable Act</span>
+                    <span className="notification-modal-meta-value">{selectedNotification.applicableAct}</span>
+                  </div>
+                )}
+                {selectedNotification.effectiveDate && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Effective Date</span>
+                    <span className="notification-modal-meta-value">{selectedNotification.effectiveDate}</span>
+                  </div>
+                )}
+                {selectedNotification.status && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Status</span>
+                    <span className="notification-modal-meta-value" style={{ 
+                      color: selectedNotification.status === 'Active' ? 'var(--success-green)' : 'var(--brand-gold)' 
+                    }}>
+                      {selectedNotification.status}
+                    </span>
+                  </div>
+                )}
+                {selectedNotification.sections && selectedNotification.sections.length > 0 && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Related Sections</span>
+                    <span className="notification-modal-meta-value">{selectedNotification.sections.join(', ')}</span>
+                  </div>
+                )}
+              </div>
+              
+              <div className="notification-modal-summary">
+                <h3>Summary</h3>
+                <p>{selectedNotification.summary}</p>
+                <p style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--text-muted)' }}>Complete notification available at the official source.</p>
+              </div>
+              
+            </div>
+            
+            <div className="notification-modal-footer">
+              <a 
+                href={selectedNotification.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="notification-official-btn"
+              >
+                View Official Notification <ExternalLink size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+      </div>
+    </div>
   );
 };

@@ -1,266 +1,356 @@
-import React from 'react';
-import { ResourceLayout } from '../../components/layout/ResourceLayout';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Search, 
+  X, 
+  FileText, 
+  ChevronRight,
+  ExternalLink,
+  Book,
+  ChevronLeft
+} from 'lucide-react';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
+import { KnowledgeBaseHeader } from '../../components/common/KnowledgeBaseHeader';
+import { incomeTaxFormsData, type IncomeTaxForm, relatedKnowledgeBase } from '../../data/incomeTaxFormsData';
+import './IncomeTaxForms.css';
 
-const pageData = [
-  [
-    "1",
-    "Form No.:2B",
-    "Return of income for block assessment"
-  ],
-  [
-    "2",
-    "Form No.:2C",
-    "Return of income for persons"
-  ],
-  [
-    "3",
-    "Form No.:2E",
-    "NAYA SARAL - Income-tax return form for resident individual/Hindu undivided family not having income from business or profession or capital gains or agricultural income"
-  ],
-  [
-    "4",
-    "Form No.:3AA",
-    "Report under section 32(1)(iia) of the Income -tax Act, 1961"
-  ],
-  [
-    "5",
-    "Form No.:3AAA",
-    "Audit Report under section 32AB(5)"
-  ],
-  [
-    "6",
-    "Form No.:3AC",
-    "dit report under section 33AB(2)"
-  ],
-  [
-    "7",
-    "Form No.:3AD",
-    "Audit Report under section 33ABA(2)"
-  ],
-  [
-    "8",
-    "Form No.:3AE",
-    "Audit report under section 35D(4)/35E(6) of the Income- tax Act, 1961"
-  ],
-  [
-    "9",
-    "Form No.:3BA",
-    "Report under section 36(1)(xi) of the Income-tax Act, 1961"
-  ],
-  [
-    "10",
-    "Form No.:3BB",
-    "Monthly statement to be furnished by a stock exchange in respect of transactions in which client codes been modified after registering in the system for the month of ……"
-  ],
-  [
-    "11",
-    "Form No.:3BC",
-    "Monthly statement to be furnished by a recognised association in respect of transactions in which client codes have been modified after registering in the system for the month of ....."
-  ],
-  [
-    "12",
-    "Form No.:3C",
-    "Form of daily case register"
-  ],
-  [
-    "13",
-    "Form No. : 3CA",
-    "Audit report under section 44AB of the Income-tax Act, 1961 in a case where the accounts of the business or profession of a person have been audited under any other law"
-  ],
-  [
-    "14",
-    "Form No. : 3CB",
-    "Audit report under section 44AB of the Income-tax Act, 1961, in the case of a person referred to in clause (b) of sub-rule (1) of rule 6G"
-  ],
-  [
-    "15",
-    "Form No. : 3CD",
-    "Statement of particulars required to be furnished under section 44AB of the Income-tax Act, 1961"
-  ],
-  [
-    "16",
-    "Form No.:3CE",
-    "Audit Report under sub-section (2) of section 44DA of the Income-tax Act, 1961"
-  ],
-  [
-    "17",
-    "Form No.:3CEA",
-    "Report from an accountant to be furnished under section 92E relating to international transaction(s)"
-  ],
-  [
-    "18",
-    "Form No.:3CEAA",
-    "Report to be furnished under sub-section (4) of section 92D of the Income-tax Act, 1961"
-  ],
-  [
-    "19",
-    "Form No.:3CEAB",
-    "Intimation by a designated constituent entity, resident in India, of an international group, for the purposes of sub-section (4) of section 92D of the Income-tax Act, 1961"
-  ],
-  [
-    "20",
-    "Form No.:3CEAC",
-    "Intimation by a constituent entity, resident in India, of an international group, the parent entity of which is not resident in India, for the purposes of sub-section (1) of section 286 of the Income-tax Act, 1961"
-  ],
-  [
-    "21",
-    "Form No.:3CEAD",
-    "Report by a parent entity or an alternate reporting entity or any other constituent entity, resident in India, for the purposes of sub-section (2) or sub-section (4) of section 286 of the Income-tax Act, 1961"
-  ],
-  [
-    "22",
-    "Form No.:3CEAE",
-    "Intimation on behalf of the international group for the purposes of the proviso to sub-section (4) of section 286 of the Income-tax Act, 1961"
-  ],
-  [
-    "23",
-    "Form No.:3CEB",
-    "Report from an accountant to be furnished under section 92E relating to international transaction(s) and specified domestic transaction(s)"
-  ],
-  [
-    "24",
-    "Form No.:3CEC",
-    "Application for a pre-filing meeting"
-  ],
-  [
-    "25",
-    "Form No.:3CED",
-    "Application for an Advance Pricing Agreement"
-  ],
-  [
-    "26",
-    "Form No.:3CEDA",
-    "Application for rollback of an Advance Pricing Agreement"
-  ],
-  [
-    "27",
-    "Form No.:3CEE",
-    "Application for withdrawal of APA request"
-  ],
-  [
-    "28",
-    "Form No.:3CEF",
-    "Annual Compliance Report on Advance Pricing Agreement"
-  ],
-  [
-    "29",
-    "Form No.:3CEFA",
-    "Application for Opting for Safe Harbour"
-  ],
-  [
-    "30",
-    "Form No.:3CEG",
-    "Form for making the reference to the Commissioner by the Assessing Officer under section 144BA(1)"
-  ],
-  [
-    "31",
-    "Form No.:3CEFB",
-    "Application for Opting for Safe Harbour in respect of Specified Domestic Transactions"
-  ],
-  [
-    "32",
-    "Form No.:3CEH",
-    "Form for returning the reference made under section 144BA"
-  ],
-  [
-    "33",
-    "Form No.:3CEI",
-    "Form for recording the satisfaction by the Commissioner before making a reference to the Approving Panel under sub-section (4) of section 144BA"
-  ],
-  [
-    "34",
-    "Form No.:3CEJ",
-    "Report from an accountant to be furnished for purposes of section 9A relating to arm’s length price in respect of the remuneration paid by an eligible investment fund to the fund manager"
-  ],
-  [
-    "35",
-    "Form No.:3CEJA",
-    "Report from an accountant to be furnished for purpose of section 9A regarding fulfilment of certain conditions by an eligible investment fund"
-  ],
-  [
-    "36",
-    "Form No.:3CEIA",
-    "Form for making reference to the Approving Panel under sub-section (4) of section 144BA of the Income-tax Act, 1961"
-  ],
-  [
-    "37",
-    "Form No.:3CEK",
-    "Statement to be furnished by an eligible investment fund to the Assessing Officer"
-  ],
-  [
-    "38",
-    "Form No.:3CF-I",
-    "Application Form for approval under clause (ii) of sub-section (1) of section 35 of the Income-tax Act, 1961 in the case of a Scientific Research Association"
-  ],
-  [
-    "39",
-    "Form No.:3CF-II",
-    "Application Form for approval under clause (ii) or clause (iii) of sub-section (1) of section 35 of the Income-tax Act, 1961 in the case of a University, College or other Institution"
-  ],
-  [
-    "40",
-    "Form No.:3CFIII",
-    "Application form for approval under clause (iia) of sub-section (1) of section 35 of the Income-tax Act, 1961 in the case of company"
-  ],
-  [
-    "41",
-    "Form No.:3CFA",
-    "Form for opting for taxation of income by way of royalty in respect of Patent"
-  ],
-  [
-    "42",
-    "Form No.:3CG",
-    "Application for approval of scientific research programme under section 35(2AA) of the Income-tax Act, 1961"
-  ],
-  [
-    "43",
-    "Form No.:3CH",
-    "Order of approval of Scientific Research Programme under section 35(2AA) of the Income-tax Act, 1961"
-  ],
-  [
-    "44",
-    "Form No.:3CI",
-    "Receipt of payment for carrying out scientific research under section 35(2AA) of the Income-tax Act, 1961"
-  ],
-  [
-    "45",
-    "Form No.:3CJ",
-    "Report to be submitted by the prescribed authority to the Director General (Income-tax Exemptions) after approval of scientific research programme under section 35(2AA) of the Income-tax Act, 1961"
-  ],
-  [
-    "46",
-    "Form No.:3CK",
-    "Application form for entering into an agreement with the Department of Scientific and Industrial Research for co-operation in in-house Research and Development facility and for audit of the accounts maintained for that facility"
-  ],
-  [
-    "47",
-    "Form No.:3CL",
-    "Report to be submitted by the prescribed authority to the Director General (Income-tax Exemptions) under section 35(2AB) of the Income-tax Act, 1961"
-  ],
-  [
-    "48",
-    "Form No.:3CLA",
-    "Report from an accountant to be furnished under sub-section (2AB) of section 35 of the Act relating to in-house scientific research and development facility"
-  ],
-  [
-    "49",
-    "Form No.:3CM",
-    "Order of approval of in-house research and development facility under section 35(2AB) of the Income-tax Act, 1961"
-  ],
-  [
-    "50",
-    "Form No.:3CN",
-    "Application for notification of affordable housing project as specified business under section 35AD"
-  ]
-];
+const FORMS_PER_PAGE = 20;
 
 export const IncomeTaxForms: React.FC = () => {
+  // State
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedFramework, setSelectedFramework] = useState<string>('All');
+  const [selectedIntent, setSelectedIntent] = useState<string>('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedFormId, setSelectedFormId] = useState<string | null>(null);
+
+  // Derived filters from data
+  const categories = useMemo(() => {
+    const cats = Array.from(new Set(incomeTaxFormsData.map(f => f.category)));
+    return ['All', ...cats.sort()];
+  }, []);
+
+  const frameworks = useMemo(() => {
+    const frames = Array.from(new Set(incomeTaxFormsData.map(f => f.applicableLaw)));
+    return ['All', ...frames.sort().reverse()]; // To put 2025 before 1961 typically, or just sort alphabetically
+  }, []);
+
+  const intentOptions = [
+    { label: 'File a TDS/TCS statement', category: 'TDS / TCS' },
+    { label: 'Make a foreign remittance', category: 'Foreign Remittance' },
+    { label: 'Submit a tax audit report', category: 'Tax Audit' },
+    { label: 'Submit a declaration', category: 'Declarations' },
+    { label: 'Obtain a certificate', category: 'Certificates' },
+    { label: 'Charitable / religious institution compliance', category: 'Charitable / Religious Institutions' },
+    { label: 'International taxation', category: 'International Taxation' },
+    { label: 'PAN / TAN related requirement', category: 'PAN / TAN' }
+  ];
+
+  // Filtering Logic
+  const filteredForms = useMemo(() => {
+    let result = incomeTaxFormsData;
+
+    if (selectedCategory !== 'All') {
+      result = result.filter(f => f.category === selectedCategory);
+    }
+
+    if (selectedFramework !== 'All') {
+      result = result.filter(f => f.applicableLaw === selectedFramework);
+    }
+
+    if (searchQuery) {
+      const lower = searchQuery.toLowerCase();
+      result = result.filter(f => 
+        f.formNumber.toLowerCase().includes(lower) ||
+        f.title.toLowerCase().includes(lower) ||
+        f.purpose.toLowerCase().includes(lower) ||
+        (f.relevantSections && f.relevantSections.some(s => s.toLowerCase().includes(lower)))
+      );
+    }
+
+    return result;
+  }, [searchQuery, selectedCategory, selectedFramework]);
+
+  // Pagination Logic
+  const totalPages = Math.ceil(filteredForms.length / FORMS_PER_PAGE);
+  const paginatedForms = useMemo(() => {
+    const start = (currentPage - 1) * FORMS_PER_PAGE;
+    return filteredForms.slice(start, start + FORMS_PER_PAGE);
+  }, [filteredForms, currentPage]);
+
+  const handlePageChange = (newPage: number) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+      const directoryElement = document.getElementById('form-directory-start');
+      if (directoryElement) {
+        directoryElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  // Reset page on filter change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory, selectedFramework]);
+
+  // Handle Intent Selection
+  const handleIntentChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const val = e.target.value;
+    setSelectedIntent(val);
+    if (val) {
+      const intentObj = intentOptions.find(opt => opt.label === val);
+      if (intentObj) {
+        setSelectedCategory(intentObj.category);
+      }
+    } else {
+      setSelectedCategory('All');
+    }
+  };
+
+  const selectedForm = incomeTaxFormsData.find(f => f.id === selectedFormId);
+
   return (
-    <ResourceLayout 
-      title="Income Tax Forms"
-      description="View and search through Income Tax Forms documents."
-      data={pageData}
-      type="table"
-    />
+    <div className="statutory-forms-page">
+      <InternalPageHero 
+        title="Income Tax Forms"
+        description="Explore statutory income-tax forms, declarations, certificates and compliance filings for taxpayers, businesses and professionals."
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base', path: '/knowledge-base' },
+          { label: 'Income Tax Forms' }
+        ]}
+      />
+
+      <div className="container" style={{ marginTop: '0' }}>
+        {/* AT A GLANCE */}
+        <KnowledgeBaseHeader
+          infoTitle="Explore statutory income-tax forms, declarations, certificates and compliance filings for taxpayers, businesses and professionals."
+          infoIcon={<Book className="icon" size={24} />}
+          infoGrid={[
+            { label: 'Forms Indexed', value: incomeTaxFormsData.length },
+            { label: 'Issuing Authority', value: 'CBDT / Income Tax Dept' },
+            { label: 'Directory', value: 'Searchable' },
+            { label: 'Tax Frameworks', value: '1961 Act / 2025 Act' }
+          ]}
+          statCards={[
+            { value: incomeTaxFormsData.length, label: 'Statutory Forms' },
+            { value: 'CBDT', label: 'Issuing Authority' },
+            { value: 'Searchable', label: 'Form Directory' },
+            { value: '1961/2025', label: 'Tax Frameworks' }
+          ]}
+        />
+
+      {/* ITR DISTINCTION */}
+      <div className="itr-distinction">
+        <div>
+          <h3>Income Tax Forms vs ITR Forms</h3>
+          <p>
+            ITR Forms are used to file an income-tax return, while other statutory forms are used for specific declarations, certificates, reports, applications and compliance requirements.
+          </p>
+        </div>
+        <Link to="/knowledge-base/income-tax-returns-forms" className="itr-link-btn">
+          Explore Income Tax Return Forms &rarr;
+        </Link>
+      </div>
+
+      {/* FIND A FORM HELPER */}
+      <div className="intent-finder-container">
+        <label className="intent-finder-label">Find a Form: What are you trying to do?</label>
+        <select className="intent-select" value={selectedIntent} onChange={handleIntentChange}>
+          <option value="">-- Select an objective --</option>
+          {intentOptions.map(opt => (
+            <option key={opt.label} value={opt.label}>{opt.label}</option>
+          ))}
+        </select>
+      </div>
+
+      <div id="form-directory-start" style={{ scrollMarginTop: '2rem' }}></div>
+
+      {/* DIRECTORY FILTERS */}
+      <h2 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1.5rem' }}>Income Tax Form Directory</h2>
+      <div className="forms-controls">
+        <div className="search-wrapper">
+          <Search className="search-icon" size={20} />
+          <input 
+            type="text" 
+            className="forms-search-input"
+            placeholder="Search form number, name, purpose or section..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          {searchQuery && (
+            <button className="clear-search-btn" onClick={() => setSearchQuery('')}>
+              <X size={18} />
+            </button>
+          )}
+        </div>
+        <div className="filters-wrapper">
+          <select 
+            className="filter-select"
+            value={selectedCategory}
+            onChange={(e) => { setSelectedCategory(e.target.value); setSelectedIntent(''); }}
+          >
+            {categories.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
+          <select 
+            className="filter-select"
+            value={selectedFramework}
+            onChange={(e) => setSelectedFramework(e.target.value)}
+          >
+            {frameworks.map(f => <option key={f} value={f}>{f}</option>)}
+          </select>
+        </div>
+      </div>
+
+      {/* DIRECTORY GRID */}
+      {filteredForms.length === 0 ? (
+        <div style={{ textAlign: 'center', padding: '4rem 1rem', background: 'var(--glass-bg)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+          <p style={{ color: 'var(--text-secondary)' }}>No statutory forms found matching your criteria.</p>
+        </div>
+      ) : (
+        <>
+          <div className="forms-directory-grid">
+            {paginatedForms.map(form => (
+              <div key={form.id} className="statutory-form-card" onClick={() => setSelectedFormId(form.id)}>
+                <div className={`form-framework-badge ${form.applicableLaw.includes('2025') ? 'framework-2025' : ''}`}>
+                  {form.applicableLaw}
+                </div>
+                <div className="s-form-header">
+                  <div className="s-form-number">{form.formNumber}</div>
+                  <div className="s-form-category">{form.category}</div>
+                </div>
+                <div className="s-form-body">
+                  <div className="s-form-title">{form.title}</div>
+                  <div className="s-form-purpose">{form.purpose}</div>
+                </div>
+                <div className="s-form-footer">
+                  <span className="view-details-link">View Form Details <ChevronRight size={16} /></span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="pagination-container">
+              <button 
+                className="pagination-btn" 
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <span className="pagination-info">Showing {(currentPage - 1) * FORMS_PER_PAGE + 1}–{Math.min(currentPage * FORMS_PER_PAGE, filteredForms.length)} of {filteredForms.length} forms</span>
+              <button 
+                className="pagination-btn" 
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
+          )}
+        </>
+      )}
+
+      {/* OFFICIAL REFERENCE FOOTER */}
+      <div className="official-reference-card" style={{ marginTop: '2rem', padding: '2rem', background: 'var(--glass-bg)', border: '1px solid rgba(201, 160, 80, 0.3)', borderRadius: '12px', borderLeft: '4px solid var(--brand-gold)' }}>
+        <h3 style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+          <Book size={24} color="var(--brand-gold)" /> Official Income Tax Forms
+        </h3>
+        <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+          Statutory forms, filing requirements and applicable procedures may change with amendments, new rules and changes in the applicable tax framework. Always verify the current form and instructions from the official Income Tax Department.
+        </p>
+        <a 
+          href="https://incometaxindia.gov.in/pages/downloads/income-tax-forms.aspx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1.5rem', background: 'var(--brand-blue)', borderRadius: '8px', color: 'white', textDecoration: 'none', fontWeight: 600, transition: 'all 0.2s' }}
+        >
+          View Official Income Tax Forms <ExternalLink size={16} />
+        </a>
+      </div>
+
+      {/* RELATED KNOWLEDGE BASE */}
+      <div className="related-kb-section" style={{ marginTop: '4rem', padding: '3rem 0', borderTop: '1px solid var(--glass-border)' }}>
+        <h2 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '2rem', textAlign: 'center' }}>Related Knowledge Base</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+          {relatedKnowledgeBase.map((item, idx) => (
+            <Link key={idx} to={item.path} style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', padding: '1rem', borderRadius: '8px', textDecoration: 'none', color: 'white', textAlign: 'center', transition: 'all 0.2s' }}>
+              <span style={{ fontWeight: 500 }}>{item.title}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* FORM DETAIL MODAL */}
+      {selectedForm && (
+        <div className="s-form-modal-overlay" onClick={() => setSelectedFormId(null)}>
+          <div className="s-form-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="s-form-modal-header">
+              <div className="s-form-modal-title">
+                <h2>{selectedForm.formNumber}</h2>
+                <div className="modal-subtitle">{selectedForm.title}</div>
+              </div>
+              <button className="s-form-modal-close" onClick={() => setSelectedFormId(null)}>
+                <X size={24} />
+              </button>
+            </div>
+            
+            <div className="s-form-modal-body">
+              <div className="modal-detail-row">
+                <div className="modal-detail-label">Purpose</div>
+                <div className="modal-detail-value">{selectedForm.purpose}</div>
+              </div>
+              
+              <div className="modal-detail-row">
+                <div className="modal-detail-label">Who Should Use It</div>
+                <div className="modal-detail-value">
+                  <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
+                    {selectedForm.whoShouldUse.map((user, idx) => <li key={idx} style={{ marginBottom: '0.25rem' }}>{user}</li>)}
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="modal-detail-row">
+                <div className="modal-detail-label">Applicable Law</div>
+                <div className="modal-detail-value">
+                  <span style={{ color: 'var(--brand-gold)', fontWeight: 600 }}>{selectedForm.applicableLaw}</span>
+                </div>
+              </div>
+              
+              {selectedForm.relevantSections && selectedForm.relevantSections.length > 0 && (
+                <div className="modal-detail-row">
+                  <div className="modal-detail-label">Relevant Sections</div>
+                  <div className="modal-detail-value">
+                    {selectedForm.relevantSections.join(', ')}
+                  </div>
+                </div>
+              )}
+              
+              <div className="modal-detail-row" style={{ borderBottom: 'none', paddingBottom: 0, marginBottom: 0 }}>
+                <div className="modal-detail-label"></div>
+                <div className="modal-detail-value" style={{ color: 'var(--text-muted)', fontStyle: 'italic', fontSize: '0.9rem' }}>
+                  Complete form and instructions are available at the official Income Tax Department source.
+                </div>
+              </div>
+            </div>
+            
+            <div className="s-form-modal-footer">
+              <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Source: {selectedForm.source}</span>
+              <a 
+                href={selectedForm.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="official-btn"
+              >
+                View Official Form <ExternalLink size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+      </div>
   );
 };

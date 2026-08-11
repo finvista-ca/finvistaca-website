@@ -32,7 +32,7 @@ export const LatestUpdates: React.FC = () => {
               </div>
               <h3 className="update-title">{update.title}</h3>
               <p className="update-desc">Source: {update.source}</p>
-              <a href={update.url} target="_blank" rel="noopener noreferrer" className="read-more">
+              <a href={update.sourceUrl} target="_blank" rel="noopener noreferrer" className="read-more">
                 Read Article <ExternalLink size={16} />
               </a>
             </div>

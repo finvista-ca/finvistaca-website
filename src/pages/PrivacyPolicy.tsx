@@ -271,7 +271,7 @@ export const PrivacyPolicy: React.FC = () => {
             <div className="privacy-content">
               <div className="privacy-contact-grid">
                 <div className="privacy-contact-item">
-                  <h3>FinVista Chartered Accountants</h3>
+                  <h3>FinvistaCA</h3>
                   <p><strong>Phone:</strong> <a href={`tel:${contactInfo.phone}`} style={{ color: 'inherit', textDecoration: 'none' }}>{contactInfo.phone}</a></p>
                   <p><strong>Email:</strong> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
                 </div>

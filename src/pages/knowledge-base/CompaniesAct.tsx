@@ -1,10 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Search, ArrowRight, Briefcase, 
-  Users, Shield, TrendingUp, Scale, BookOpen, FileText, 
-  BarChart, UserCheck, Heart, CheckCircle, ChevronRight
-} from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Landmark, Hash, Building2, Clock, FileSignature, ArrowRight, Link as LinkIcon, BarChart, UserCheck, Heart } from 'lucide-react';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import { 
   companiesActChapters, 
   importantSectionsList, 
@@ -62,15 +59,7 @@ const CompaniesAct: React.FC = () => {
     );
   }, [searchQuery]);
 
-  // Auto-expand chapter if there's only one search result
-  React.useEffect(() => {
-    if (searchQuery && filteredChapters.length === 1) {
-      setExpandedChapter(filteredChapters[0].chapterNumber);
-    } else if (!searchQuery) {
-      setExpandedChapter(null);
-      setExpandedSection(null);
-    }
-  }, [searchQuery, filteredChapters]);
+
 
   const IconMap: Record<string, React.FC<any>> = {
     Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, BarChart, UserCheck, Heart, CheckCircle
@@ -78,26 +67,70 @@ const CompaniesAct: React.FC = () => {
 
   return (
     <div className="companies-act-page">
-      {/* Breadcrumbs (No Hero) */}
-      <div className="breadcrumb-container">
-        <Link to="/">Home</Link>
-        <span className="breadcrumb-separator">›</span>
-        <Link to="/knowledge-base">Knowledge Base</Link>
-        <span className="breadcrumb-separator">›</span>
-        <span>Companies Act 2013</span>
-      </div>
+      <InternalPageHero
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base', path: '/knowledge-base' },
+          { label: 'Companies Act, 2013' }
+        ]}
+        title=""
+        description=""
+      />
 
       <div className="container">
         
-        <h1 style={{ color: 'var(--text-heading)', fontSize: '2.5rem', marginBottom: '0.5rem', textAlign: 'center' }}>
-          Companies Act, 2013
-        </h1>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', textAlign: 'center', marginBottom: '3rem', maxWidth: '800px', margin: '0 auto 3rem auto' }}>
-          India's principal legislation governing the incorporation, management, administration, regulation, restructuring and winding up of companies.
-        </p>
+        {/* Information Card (Act Information) */}
+        <div className="info-card">
+          <Landmark className="icon" size={32} />
+          <div style={{ width: '100%' }}>
+            <h3>Act Information</h3>
+            <div className="info-card-grid">
+              <span><strong>Act Name:</strong> Companies Act</span>
+              <span><strong>Year Enacted:</strong> 2013</span>
+              <span><strong>Act Number:</strong> 18 of 2013</span>
+              <span><strong>Status:</strong> In Force</span>
+              <span><strong>Applicable To:</strong> Incorporation and Regulation of Companies</span>
+              <span><strong>Administered By:</strong> Ministry of Corporate Affairs (MCA)</span>
+            </div>
+          </div>
+        </div>
+
+        {/* At a Glance Statistics */}
+        <div className="overview-grid">
+          <div className="stat-card">
+            <BookOpen size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value">2013</span>
+            <span className="stat-label">YEAR ENACTED</span>
+          </div>
+          <div className="stat-card">
+            <Hash size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value">470</span>
+            <span className="stat-label">TOTAL SECTIONS</span>
+          </div>
+          <div className="stat-card">
+            <Hash size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value" style={{ fontSize: '1.25rem' }}>18 of 2013</span>
+            <span className="stat-label">ACT NUMBER</span>
+          </div>
+          <div className="stat-card">
+            <Building2 size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value" style={{ fontSize: '1.25rem' }}>Companies</span>
+            <span className="stat-label">APPLICABLE TO</span>
+          </div>
+          <div className="stat-card">
+            <Clock size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value">In Force</span>
+            <span className="stat-label">CURRENT STATUS</span>
+          </div>
+          <div className="stat-card">
+            <FileSignature size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value">MCA</span>
+            <span className="stat-label">ADMINISTERED BY</span>
+          </div>
+        </div>
 
         {/* Global Search */}
-        <div className="search-container">
+        <div className="search-container" style={{ marginBottom: '2rem' }}>
           <div className="search-box-custom">
             <Search size={20} className="search-icon" />
             <input 
@@ -110,7 +143,7 @@ const CompaniesAct: React.FC = () => {
         </div>
 
         {/* Featured Topics Filters */}
-        <div className="pill-container" style={{ justifyContent: 'center' }}>
+        <div className="pill-container" style={{ justifyContent: 'center', marginBottom: '2rem' }}>
           {featuredTopics.map(topic => (
             <button 
               key={topic} 
@@ -124,33 +157,6 @@ const CompaniesAct: React.FC = () => {
 
         {!searchQuery && (
           <>
-            {/* Act at a Glance - Statistics */}
-            <div className="overview-grid" style={{ marginTop: '2rem' }}>
-              <div className="stat-card">
-                <span className="stat-value">2013</span>
-                <span className="stat-label">Year Enacted</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-value">29</span>
-                <span className="stat-label">Chapters</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-value">470</span>
-                <span className="stat-label">Sections</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-value">7</span>
-                <span className="stat-label">Schedules</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-value" style={{ fontSize: '1.25rem', marginTop: '0.5rem' }}>MCA</span>
-                <span className="stat-label">Administered By</span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-value" style={{ fontSize: '1.25rem', marginTop: '0.5rem', color: '#10B981' }}>In Force</span>
-                <span className="stat-label">Status</span>
-              </div>
-            </div>
 
             {/* What is the Companies Act? */}
             <h2 className="section-title">What is the Companies Act, 2013?</h2>

@@ -14,7 +14,7 @@ const gstDropdownItems = [
   { name: 'GST Rules', slug: 'gst-rules' },
   { name: 'GST Notifications', slug: 'gst-notifications' },
   { name: 'GST Circulars', slug: 'gst-circulars' },
-  { name: 'GST Orders', slug: 'gst-instructions' },
+  { name: 'GST Orders', slug: 'gst-orders' },
   { name: 'GST Forms', slug: 'gst-forms' },
   { name: 'HSN Codes', slug: 'gst-hsn-codes' },
   { name: 'SAC Codes', slug: 'gst-sac-codes' },

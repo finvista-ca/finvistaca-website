@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, AlertCircle, FileText, Download, ChevronLeft, BookOpen, Clock, FileKey, Layers, Hash, Building2, Landmark, LineChart, FileSignature, Scale, Calculator, RefreshCcw, HandCoins } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Landmark, Hash, Building2, Clock, FileSignature, ArrowRight, Link as LinkIcon, BarChart, UserCheck, Heart, Layers, HandCoins, LineChart, Calculator, AlertCircle, RefreshCcw } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 
 import { interestTaxChapters, interestTaxImportantSections, interestTaxSearchIndex } from '../../data/interestTaxData';
@@ -16,10 +16,11 @@ export const InterestTaxAct: React.FC = () => {
   // Full Act Reference Accordion State
   const [activeReference, setActiveReference] = useState<string | null>(null);
   const [activeReferenceSection, setActiveReferenceSection] = useState<string | null>(null);
+  const toggleReferenceSection = (id: string, e: any) => { e.preventDefault(); setActiveReferenceSection(p => p === id ? null : id); };
 
   // Important Sections "Read More" State
-
-
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const toggleImportantSection = (sec: string) => setExpandedSection(p => p === sec ? null : sec);
   // Search logic for Section Index
   const filteredSearchIndex = useMemo(() => {
     return interestTaxSearchIndex.filter(item => 

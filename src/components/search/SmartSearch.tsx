@@ -46,7 +46,7 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({
   return (
     <div className="smart-search-container">
       <div className="search-input-wrapper">
-        <Search className="search-icon" size={24} />
+        <Search className="smart-search-icon" size={24} />
         <input 
           type="text" 
           className="smart-search-input"

@@ -1,316 +1,506 @@
-import React from 'react';
-import { ResourceLayout } from '../../components/layout/ResourceLayout';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { 
+  Search, 
+  X, 
+  ChevronLeft, 
+  ChevronRight, 
+  FileText, 
+  Book,
+  Scale,
+  Building2,
+  ExternalLink,
+  ChevronDown
+} from 'lucide-react';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
+import { KnowledgeBaseHeader } from '../../components/common/KnowledgeBaseHeader';
+import { companyLawCircularsData, type CompanyLawCircular, relatedActs } from '../../data/companyLawCircularsData';
+import './CompanyLawCirculars.css';
 
-const pageData = [
-  [
-    "1",
-    "General Circular No.01/2025",
-    "Circular",
-    "16/06/2025"
-  ],
-  [
-    "2",
-    "General Circular No.02/2025",
-    "Circular",
-    "16/06/2025"
-  ],
-  [
-    "3",
-    "General Circular No.09/2024",
-    "Circular",
-    "19/09/2024"
-  ],
-  [
-    "4",
-    "General Circular No.07/2024",
-    "Circular",
-    "17/07/2024"
-  ],
-  [
-    "5",
-    "General Circular No.06/2024",
-    "Circular",
-    "16/07/2024"
-  ],
-  [
-    "6",
-    "General Circular No.05/2024",
-    "Circular",
-    "06/07/2024"
-  ],
-  [
-    "7",
-    "General Circular No.04",
-    "Circular",
-    "04/07/2024"
-  ],
-  [
-    "8",
-    "General Circular No.03/2024",
-    "Circular",
-    "07/05/2024"
-  ],
-  [
-    "9",
-    "General Circular No.02/2024",
-    "Circular",
-    "19/02/2024"
-  ],
-  [
-    "10",
-    "General Circular No.01/2024",
-    "Circular",
-    "07/02/2024"
-  ],
-  [
-    "11",
-    "General Circular No.09/2023-Clarification",
-    "Circular",
-    "25/09/2023"
-  ],
-  [
-    "12",
-    "General Circular No.08/2023",
-    "Circular",
-    "23/08/2023"
-  ],
-  [
-    "13",
-    "General Circular No.07/2023",
-    "Circular",
-    "12/07/2023"
-  ],
-  [
-    "14",
-    "General Circular No.06/2023",
-    "Circular",
-    "21/06/2023"
-  ],
-  [
-    "15",
-    "General Circular No.04-2023",
-    "Circular",
-    "21/02/2023"
-  ],
-  [
-    "16",
-    "General Circular No.03/2023-Extension",
-    "Circular",
-    "07/02/2023"
-  ],
-  [
-    "17",
-    "General Circular No.05/2023-Filing",
-    "Circular",
-    "22/01/2023"
-  ],
-  [
-    "18",
-    "General Circular No.02/2023-Filing of Forms GNL-2",
-    "Circular",
-    "09/01/2023"
-  ],
-  [
-    "19",
-    "General Circular No.01/2023-Release Plan of 45 company e-Forms in MCA 21 Version 3.0-reg.",
-    "Circular",
-    "09/01/2023"
-  ],
-  [
-    "20",
-    "General Circular No.10/2022-Clarification of holding of Annual General Meeting (AGM) through Video Conference (VC) or Other Audio Visual Means (OAVM)-reg.",
-    "Circular",
-    "28/12/2022"
-  ],
-  [
-    "21",
-    "General Circular No.09/2022-Extension of time for filing e-form DIR-3 KYC and web-form DIR-3 KYC WEB without fee upto 15.10.2022",
-    "Circular",
-    "28/09/2022"
-  ],
-  [
-    "22",
-    "General Circular No.11/2022-Clarification on passing of Ordinary and Special resolutions by the companies under the Companies Act, 2013 read with rules made thereunder on account of COVID-19-Extention of timeline-reg.",
-    "Circular",
-    "28/09/2022"
-  ],
-  [
-    "23",
-    "General Circular No.08/2022-Clarification on spending of CSR fund for Har Ghar Tiranga campaign - reg.",
-    "Circular",
-    "26/07/2022"
-  ],
-  [
-    "24",
-    "General Circular No.07/2022-Further relaxation in paying additional fee in case delay",
-    "Circular",
-    "29/06/2022"
-  ],
-  [
-    "25",
-    "General Circular No.06/2022-Relaxation in paying additional fees in case of delay in",
-    "Circular",
-    "31/05/2022"
-  ],
-  [
-    "26",
-    "General Circular No.05/2022-Micro Finance/Micro Credit as an object in the Object",
-    "Circular",
-    "30/05/2022"
-  ],
-  [
-    "27",
-    "General Circular No.04/2022-Relaxation in paying additional fees in case of delay in",
-    "Circular",
-    "27/05/2022"
-  ],
-  [
-    "28",
-    "General Circular No.03/2022-Clarification on passing of Ordinary and Special",
-    "Circular",
-    "05/05/2022"
-  ],
-  [
-    "29",
-    "General Circular No.02/2022-Clarification of holding of Annual General Meeting (AGM)",
-    "Circular",
-    "05/05/2022"
-  ],
-  [
-    "30",
-    "General Circular No.01/2022-Relaxation on levy of additional fees in filing of e-forms",
-    "Circular",
-    "14/02/2022"
-  ],
-  [
-    "31",
-    "General Circular No.22/2021",
-    "Circular",
-    "29/12/2021"
-  ],
-  [
-    "32",
-    "General Circular No.20/2021-Clarification on passing of Ordinary and Special resolutions by the companies under the Companies Act, 2013 read with rules made thereunder on account of COVID-19-Extention of timeline-reg.",
-    "Circular",
-    "08/12/2021"
-  ],
-  [
-    "33",
-    "General Circular No.19/2021-Clarification of holding of Annual General Meeting (AGM) through Video Conference (VC) or Other Audio Visual Means (OAVM)-reg.",
-    "Circular",
-    "08/12/2021"
-  ],
-  [
-    "34",
-    "General Circular No.17/2021-Relaxation on levy of additional fees in filing of e-forms AOC-4, AOC-4 (CFS), AOC-4, AOC-4 XBRL AOC-4 Non-XBRL and MGT-7/MGT-7A for the financial year ended on 31.03.2021 under the Companies Act, 2013",
-    "Circular",
-    "29/10/2021"
-  ],
-  [
-    "35",
-    "General Circular No.16/2021-Relaxations in paying additional fees in case of delay in filing Form 8 (the Statement of Account and Solvency) by Limited Liability Partnerships upto 30th December, 2021.",
-    "Circular",
-    "26/10/2021"
-  ],
-  [
-    "36",
-    "General Circular No.15/2021-Extension of last date of filing of Cost Audit Report to the Board of Directors under Rule 6(5) of the Companies (Cost Records and Audit) Rules 2014-reg",
-    "Circular",
-    "27/09/2021"
-  ],
-  [
-    "37",
-    "General Circular No.14/2021-Frequently Asked Questions (FAQs) on Corporate Social Responsibility (CSR) -reg.",
-    "Circular",
-    "25/08/2021"
-  ],
-  [
-    "38",
-    "General Circular No.13/2021-Clarification on spending of CSR fund for COVID-19 vaccination - reg.",
-    "Circular",
-    "30/07/2021"
-  ],
-  [
-    "39",
-    "Relaxation of time for filing forms related to creation or modification of charges",
-    "Circular",
-    "30/06/2021"
-  ],
-  [
-    "40",
-    "Relaxation on levy of additional fees in filing of certain Forms under the Companies Act, 2013",
-    "Circular",
-    "30/06/2021"
-  ],
-  [
-    "41",
-    "Clarification on passing of ordinary and special resolutions by companies under the Companies Act,",
-    "Circular",
-    "23/06/2021"
-  ],
-  [
-    "42",
-    "Clarification on offsetting the excess CSR spent for FY 2019-20",
-    "Circular",
-    "20/05/2021"
-  ],
-  [
-    "43",
-    "Clarification on spending of CSR funds for ‘creating health infrastructure for COVID care",
-    "Circular",
-    "05/05/2021"
-  ],
-  [
-    "44",
-    "Relaxation of time for filing forms related to creation or modification of charges under",
-    "Circular",
-    "03/05/2021"
-  ],
-  [
-    "45",
-    "Gap between two board meetings under section 173 of the Companies Act, 2013 (CA-13) – Clarification",
-    "Circular",
-    "03/05/2021"
-  ],
-  [
-    "46",
-    "Relaxation of time for filing certain forms under the Companies Act, 2013.",
-    "Circular",
-    "03/05/2021"
-  ],
-  [
-    "47",
-    "Clarification on spending of CSR funds for setting up temporary COVID Care facilities and makeshift",
-    "Circular",
-    "22/04/2021"
-  ],
-  [
-    "48",
-    "Relaxation of additional fee in filing all AOC-4 e-forms",
-    "Circular",
-    "28/01/2021"
-  ],
-  [
-    "49",
-    "Scheme for condonation of delay for companies restored during Dec 2020 u/s 252 of the CA 2013",
-    "Circular",
-    "15/01/2021"
-  ],
-  [
-    "50",
-    "Clarification on holding of AGM through VC other OAVM",
-    "Circular",
-    "13/01/2021"
-  ]
-];
+const CIRCULARS_PER_PAGE = 20;
 
 export const CompanyLawCirculars: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [yearFilter, setYearFilter] = useState('All Years');
+  const [categoryFilter, setCategoryFilter] = useState('All');
+  const [actFilter, setActFilter] = useState('All');
+  const [statusFilter, setStatusFilter] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCircularId, setSelectedCircularId] = useState<string | null>(searchParams.get('circular'));
+  
+  const directoryRef = useRef<HTMLDivElement>(null);
+
+  // Debounce search
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // Sync selectedCircularId with URL
+  useEffect(() => {
+    const circularParam = searchParams.get('circular');
+    if (circularParam !== selectedCircularId) {
+      setSelectedCircularId(circularParam);
+    }
+  }, [searchParams]);
+
+  const openCircular = (id: string) => {
+    setSelectedCircularId(id);
+    setSearchParams({ circular: id });
+  };
+
+  const closeCircular = () => {
+    setSelectedCircularId(null);
+    setSearchParams({});
+  };
+
+  const availableYears = useMemo(() => {
+    const years = Array.from(new Set(companyLawCircularsData.map(c => c.year)));
+    return years.sort((a, b) => b - a);
+  }, []);
+
+  const categories = useMemo(() => {
+    const cats = Array.from(new Set(companyLawCircularsData.map(c => c.category)));
+    return cats.sort();
+  }, []);
+
+  const applicableLaws = useMemo(() => {
+    const laws = Array.from(new Set(companyLawCircularsData.map(c => c.applicableLaw).filter(Boolean))) as string[];
+    return laws.sort();
+  }, []);
+
+  const statuses = useMemo(() => {
+    const s = Array.from(new Set(companyLawCircularsData.map(c => c.status).filter(Boolean))) as string[];
+    return s.sort();
+  }, []);
+
+  // Filter Circulars
+  const filteredCirculars = useMemo(() => {
+    let result = companyLawCircularsData;
+
+    // Search
+    if (debouncedQuery) {
+      const query = debouncedQuery.toLowerCase();
+      result = result.filter(circular => {
+        return (
+          circular.circularNumber.toLowerCase().includes(query) ||
+          circular.title.toLowerCase().includes(query) ||
+          circular.category.toLowerCase().includes(query) ||
+          (circular.sections && circular.sections.some(s => s.toLowerCase().includes(query))) ||
+          circular.summary.toLowerCase().includes(query) ||
+          (circular.applicableLaw && circular.applicableLaw.toLowerCase().includes(query))
+        );
+      });
+
+      // Sort by exact number match
+      result = [...result].sort((a, b) => {
+        const aNumMatch = a.circularNumber.toLowerCase() === query;
+        const bNumMatch = b.circularNumber.toLowerCase() === query;
+        if (aNumMatch && !bNumMatch) return -1;
+        if (!aNumMatch && bNumMatch) return 1;
+        
+        const aContains = a.circularNumber.toLowerCase().includes(query);
+        const bContains = b.circularNumber.toLowerCase().includes(query);
+        if (aContains && !bContains) return -1;
+        if (!aContains && bContains) return 1;
+
+        return 0;
+      });
+    } else {
+      // Default sort by date descending
+      result = [...result].sort((a, b) => {
+        const dateA = new Date(a.date.split('/').reverse().join('-'));
+        const dateB = new Date(b.date.split('/').reverse().join('-'));
+        return dateB.getTime() - dateA.getTime();
+      });
+    }
+
+    if (yearFilter !== 'All Years') {
+      result = result.filter(c => c.year.toString() === yearFilter);
+    }
+    
+    if (categoryFilter !== 'All') {
+      result = result.filter(c => c.category === categoryFilter);
+    }
+    
+    if (actFilter !== 'All') {
+      result = result.filter(c => c.applicableLaw === actFilter);
+    }
+
+    if (statusFilter !== 'All') {
+      result = result.filter(c => c.status === statusFilter);
+    }
+
+    return result;
+  }, [debouncedQuery, yearFilter, categoryFilter, actFilter, statusFilter]);
+
+  const featuredCirculars = useMemo(() => {
+    return [...companyLawCircularsData]
+      .sort((a, b) => {
+        const dateA = new Date(a.date.split('/').reverse().join('-'));
+        const dateB = new Date(b.date.split('/').reverse().join('-'));
+        return dateB.getTime() - dateA.getTime();
+      })
+      .slice(0, 3);
+  }, []);
+
+  const selectedCircular = useMemo(() => {
+    return companyLawCircularsData.find(c => c.id === selectedCircularId) || null;
+  }, [selectedCircularId]);
+
+  // Pagination
+  const totalPages = Math.ceil(filteredCirculars.length / CIRCULARS_PER_PAGE);
+  const paginatedCirculars = filteredCirculars.slice(
+    (currentPage - 1) * CIRCULARS_PER_PAGE,
+    currentPage * CIRCULARS_PER_PAGE
+  );
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    if (directoryRef.current) {
+      const y = directoryRef.current.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setYearFilter('All Years');
+    setCategoryFilter('All');
+    setActFilter('All');
+    setStatusFilter('All');
+    setCurrentPage(1);
+  };
+
   return (
-    <ResourceLayout 
-      title="Company Law Circulars"
-      description="View and search through Company Law Circulars documents."
-      data={pageData}
-      type="table"
-    />
+    <div className="company-law-circulars-page">
+      <InternalPageHero 
+        title="Company Law Circulars"
+        description="Browse important MCA circulars, clarifications and regulatory updates relating to corporate compliance and company law."
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base', path: '/knowledge-base' },
+          { label: 'Company Law Circulars' }
+        ]}
+      />
+
+      <div className="container" style={{ marginTop: '0' }}>
+        {/* AT A GLANCE */}
+        <KnowledgeBaseHeader
+          infoTitle="Important MCA circulars, clarifications and regulatory updates relating to corporate compliance and company law."
+          infoIcon={<Book className="icon" size={24} />}
+          infoGrid={[
+            { label: 'Circulars Indexed', value: companyLawCircularsData.length },
+            { label: 'Issuing Authority', value: 'MCA' },
+            { label: 'Primary Act', value: 'Companies Act, 2013' },
+            { label: 'Directory', value: 'Searchable & Verified' }
+          ]}
+          statCards={[
+            { value: 'MCA', label: 'Issuing Authority' },
+            { value: companyLawCircularsData.length, label: 'Circulars Indexed' },
+            { value: 'Searchable', label: 'Circular Directory' },
+            { value: 'Verified', label: 'Primary Source' }
+          ]}
+        />
+
+      {/* FEATURED CIRCULARS */}
+      {featuredCirculars.length > 0 && (
+        <div className="featured-circulars-section" style={{ marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '1.5rem', color: 'var(--brand-gold)', marginBottom: '1.5rem', borderBottom: '1px solid var(--glass-border)', paddingBottom: '0.5rem' }}>
+            Featured Circulars
+          </h2>
+          <div className="circulars-directory-grid">
+            {featuredCirculars.map((circular) => (
+              <div key={`feat-${circular.id}`} className="circular-card" onClick={() => openCircular(circular.id)}>
+                <div className="circular-header">
+                  <div className="circular-number">Circular No. {circular.circularNumber}</div>
+                  <div className="circular-date">{circular.date}</div>
+                </div>
+                <div className="circular-title">{circular.title}</div>
+                <div className="circular-tags">
+                  <span className="circular-tag">{circular.category}</span>
+                  {circular.applicableLaw && <span className="circular-tag act">{circular.applicableLaw}</span>}
+                </div>
+                <div className="circular-summary">{circular.summary}</div>
+                <div className="circular-card-footer">
+                  <span className="circular-source">{circular.source}</span>
+                  <span className="circular-view-link">View Circular <ChevronRight size={16} /></span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* MAIN DIRECTORY */}
+      <div ref={directoryRef} className="circulars-directory-section">
+        <h2 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1.5rem' }}>MCA Circular Directory</h2>
+        
+        {/* Search and Filters */}
+        <div className="circular-search-filter-container">
+          <div className="circular-search-wrapper">
+            <Search className="circular-search-icon" size={20} />
+            <input
+              type="text"
+              placeholder="Search circular number, topic, section or keyword... (e.g. 09/2024, AGM)"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="circular-search-input"
+            />
+            {searchQuery && (
+              <button className="clear-search-btn" onClick={() => { setSearchQuery(''); setCurrentPage(1); }} style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>
+                <X size={18} />
+              </button>
+            )}
+          </div>
+          
+          <div className="circular-filters-row">
+            <div className="filter-group">
+              <select 
+                value={yearFilter} 
+                onChange={(e) => { setYearFilter(e.target.value); setCurrentPage(1); }}
+                className="circular-filter-select"
+              >
+                <option value="All Years">All Years</option>
+                {availableYears.map(year => (
+                  <option key={year} value={year.toString()}>{year}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div className="filter-group">
+              <select 
+                value={categoryFilter} 
+                onChange={(e) => { setCategoryFilter(e.target.value); setCurrentPage(1); }}
+                className="circular-filter-select"
+              >
+                <option value="All">All Categories</option>
+                {categories.map(cat => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
+            
+            {applicableLaws.length > 0 && (
+              <div className="filter-group">
+                <select 
+                  value={actFilter} 
+                  onChange={(e) => { setActFilter(e.target.value); setCurrentPage(1); }}
+                  className="circular-filter-select"
+                >
+                  <option value="All">All Applicable Laws</option>
+                  {applicableLaws.map(law => (
+                    <option key={law} value={law}>{law}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            {statuses.length > 0 && (
+              <div className="filter-group">
+                <select 
+                  value={statusFilter} 
+                  onChange={(e) => { setStatusFilter(e.target.value); setCurrentPage(1); }}
+                  className="circular-filter-select"
+                >
+                  <option value="All">All Statuses</option>
+                  {statuses.map(s => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Circulars List */}
+        {paginatedCirculars.length > 0 ? (
+          <>
+            <div className="circulars-directory-grid">
+              {paginatedCirculars.map((circular) => (
+                <div key={circular.id} className="circular-card" onClick={() => openCircular(circular.id)}>
+                  <div className="circular-header">
+                    <div className="circular-number">Circular No. {circular.circularNumber}</div>
+                    <div className="circular-date">{circular.date}</div>
+                  </div>
+                  <div className="circular-title">{circular.title}</div>
+                  <div className="circular-tags">
+                    <span className="circular-tag">{circular.category}</span>
+                    {circular.applicableLaw && <span className="circular-tag act">{circular.applicableLaw}</span>}
+                  </div>
+                  <div className="circular-summary">{circular.summary}</div>
+                  <div className="circular-card-footer">
+                    <span className="circular-source">{circular.source}</span>
+                    <span className="circular-view-link">View Circular <ChevronRight size={16} /></span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="circular-pagination">
+                <div className="pagination-info">
+                  Showing {(currentPage - 1) * CIRCULARS_PER_PAGE + 1} - {Math.min(currentPage * CIRCULARS_PER_PAGE, filteredCirculars.length)} of {filteredCirculars.length} circulars
+                </div>
+                <div className="pagination-controls">
+                  <button 
+                    className="page-btn" 
+                    onClick={() => handlePageChange(currentPage - 1)} 
+                    disabled={currentPage === 1}
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter(p => p === 1 || p === totalPages || Math.abs(currentPage - p) <= 1)
+                    .map((page, idx, arr) => (
+                      <React.Fragment key={page}>
+                        {idx > 0 && arr[idx - 1] !== page - 1 && <span style={{ color: 'var(--text-muted)', alignSelf: 'center' }}>...</span>}
+                        <button 
+                          className={`page-btn ${currentPage === page ? 'active' : ''}`}
+                          onClick={() => handlePageChange(page)}
+                        >
+                          {page}
+                        </button>
+                      </React.Fragment>
+                  ))}
+                  <button 
+                    className="page-btn" 
+                    onClick={() => handlePageChange(currentPage + 1)} 
+                    disabled={currentPage === totalPages}
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="no-results-state" style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--glass-bg)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+            <FileText size={48} style={{ color: 'var(--text-muted)', margin: '0 auto 1.5rem', opacity: 0.5 }} />
+            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '1rem' }}>No circulars found</h3>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Try another circular number, keyword, year or category.</p>
+            <button 
+              onClick={clearFilters}
+              style={{ padding: '0.75rem 1.5rem', background: 'var(--brand-gold)', color: 'var(--primary-color)', border: 'none', borderRadius: '8px', fontWeight: 600, cursor: 'pointer' }}
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* OFFICIAL REFERENCE FOOTER */}
+      <div className="official-reference-card" style={{ marginTop: '4rem', padding: '2rem', background: 'var(--glass-bg)', border: '1px solid rgba(201, 160, 80, 0.3)', borderRadius: '12px', borderLeft: '4px solid var(--brand-gold)' }}>
+        <h3 style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+          <Book size={24} color="var(--brand-gold)" /> Official MCA Circulars
+        </h3>
+        <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+          Corporate law and compliance requirements are subject to amendments, notifications, circulars and other regulatory updates. Verify the applicable and current position from the official MCA source before relying on any circular.
+        </p>
+        <a 
+          href="https://www.mca.gov.in/content/mca/global/en/data-and-reports/notifications-and-circulars/general-circulars.html" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="circular-official-btn"
+          style={{ display: 'inline-flex', padding: '0.75rem 1.5rem', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid var(--glass-border)', borderRadius: '8px', color: 'white', textDecoration: 'none', fontWeight: 500 }}
+        >
+          View Official MCA Circulars <ExternalLink size={16} />
+        </a>
+      </div>
+
+      {/* RELATED KNOWLEDGE BASE */}
+      <div className="related-kb-section" style={{ marginTop: '4rem', padding: '3rem 0', borderTop: '1px solid var(--glass-border)' }}>
+        <h2 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '2rem', textAlign: 'center' }}>Related Knowledge Base</h2>
+        <div className="circulars-overview-grid">
+          {relatedActs.map((item, idx) => (
+            <Link key={idx} to={item.path} className="circulars-stat-card" style={{ textDecoration: 'none', minHeight: 'auto', padding: '1rem' }}>
+              <span style={{ color: 'white', fontWeight: 500 }}>{item.title}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* DETAIL MODAL */}
+      {selectedCircular && (
+        <div className="circular-modal-overlay" onClick={closeCircular}>
+          <div className="circular-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="circular-modal-header">
+              <div>
+                <h2>Circular No. {selectedCircular.circularNumber}</h2>
+                <div style={{ color: 'var(--text-muted)' }}>{selectedCircular.date}</div>
+              </div>
+              <button className="circular-modal-close" onClick={closeCircular}>
+                <X size={24} />
+              </button>
+            </div>
+            
+            <div className="circular-modal-body">
+              <h3 style={{ fontSize: '1.3rem', lineHeight: 1.5, marginBottom: '2rem', color: 'white' }}>
+                {selectedCircular.title}
+              </h3>
+              
+              <div className="circular-modal-meta-grid">
+                <div className="circular-modal-meta-item">
+                  <span className="circular-modal-meta-label">Issuing Authority</span>
+                  <span className="circular-modal-meta-value">{selectedCircular.source}</span>
+                </div>
+                <div className="circular-modal-meta-item">
+                  <span className="circular-modal-meta-label">Category</span>
+                  <span className="circular-modal-meta-value">{selectedCircular.category}</span>
+                </div>
+                {selectedCircular.applicableLaw && (
+                  <div className="circular-modal-meta-item">
+                    <span className="circular-modal-meta-label">Applicable Law</span>
+                    <span className="circular-modal-meta-value">{selectedCircular.applicableLaw}</span>
+                  </div>
+                )}
+                {selectedCircular.status && (
+                  <div className="circular-modal-meta-item">
+                    <span className="circular-modal-meta-label">Status</span>
+                    <span className="circular-modal-meta-value" style={{ 
+                      color: selectedCircular.status === 'Active' ? 'var(--success-green)' : 'var(--brand-gold)' 
+                    }}>
+                      {selectedCircular.status}
+                    </span>
+                  </div>
+                )}
+                {selectedCircular.sections && selectedCircular.sections.length > 0 && (
+                  <div className="circular-modal-meta-item">
+                    <span className="circular-modal-meta-label">Related Sections</span>
+                    <span className="circular-modal-meta-value">{selectedCircular.sections.join(', ')}</span>
+                  </div>
+                )}
+              </div>
+              
+              <div className="circular-modal-summary">
+                <h3>Summary</h3>
+                <p>{selectedCircular.summary}</p>
+              </div>
+              
+            </div>
+            
+            <div className="circular-modal-footer">
+              <a 
+                href={selectedCircular.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="circular-official-btn"
+              >
+                View Official Circular <ExternalLink size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+      </div>
+    </div>
   );
 };

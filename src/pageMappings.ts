@@ -16,7 +16,7 @@ import { CompetitionAct } from './pages/knowledge-base/CompetitionAct';
 import { CharteredAccountantsAct } from './pages/knowledge-base/CharteredAccountantsAct';
 import { CostWorksAccountantsAct } from './pages/knowledge-base/CostWorksAccountantsAct';
 import { IncomeTaxRules } from './pages/knowledge-base/IncomeTaxRules';
-import { CompanyLawRules } from './pages/knowledge-base/CompanyLawRules';
+import { CompaniesRules } from './pages/knowledge-base/CompaniesRules';
 import { IncomeTaxCirculars } from './pages/knowledge-base/IncomeTaxCirculars';
 import { CompanyLawCirculars } from './pages/knowledge-base/CompanyLawCirculars';
 import { IncomeTaxNotifications } from './pages/knowledge-base/IncomeTaxNotifications';
@@ -28,6 +28,7 @@ import { IncomeTaxChallans } from './pages/knowledge-base/IncomeTaxChallans';
 import { IncomeTaxOtherForms } from './pages/knowledge-base/IncomeTaxOtherForms';
 import { RocForms } from './pages/knowledge-base/RocForms';
 import { LlpForms } from './pages/knowledge-base/LlpForms';
+import { CompanySecretariesAct } from './pages/knowledge-base/CompanySecretariesAct';
 import { KbGeneric } from './pages/knowledge-base/KbGeneric';
 import { RatesOfNscInterest } from './pages/knowledge-base/RatesOfNscInterest';
 
@@ -43,9 +44,9 @@ import { GstActs } from './pages/gst/GstActs';
 import { GstRules } from './pages/gst/GstRules';
 import { GstCirculars } from './pages/gst/GstCirculars';
 import { GstNotifications } from './pages/gst/GstNotifications';
-import { GstForms } from './pages/gst/GstForms';
-import { GstSacCodes } from './pages/gst/GstSacCodes';
-import { GstHsnCodes } from './pages/gst/GstHsnCodes';
+import { GstForms } from './pages/knowledge-base/GstForms';
+import { GstSacCodes } from './pages/knowledge-base/GstSacCodes';
+import { GstHsnCodes } from './pages/knowledge-base/GstHsnCodes';
 import { GstOrders } from './pages/gst/GstOrders';
 import { GstInstructions } from './pages/gst/GstInstructions';
 import { EmiCalculator } from './pages/calculator/EmiCalculator';
@@ -73,7 +74,7 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'monopolies-act': MonopoliesAct,
     'insolvency-bankruptcy-code': InsolvencyBankruptcyCode,
     'income-tax-rules': IncomeTaxRules,
-    'company-law-rules': CompanyLawRules,
+    'company-law-rules': CompaniesRules,
     'income-tax-circulars': IncomeTaxCirculars,
     'company-law-circulars': CompanyLawCirculars,
     'income-tax-notifications': IncomeTaxNotifications,
@@ -85,6 +86,7 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'income-tax-other-forms': IncomeTaxOtherForms,
     'roc-forms': RocForms,
     'llp-forms': LlpForms,
+    'gst-forms': GstForms,
     'rates-of-income-tax': RatesOfIncomeTax,
     'tds-rates-for-nri': TdsRatesForNri,
     'rates-of-tds': KbGeneric,
@@ -112,8 +114,10 @@ export const pageMappings: Record<string, Record<string, React.FC>> = {
     'societies-registration-act': SocietiesRegistrationAct,
     'competition-act': CompetitionAct,
     'chartered-accountants-act': CharteredAccountantsAct,
-    'company-secretaries-act': KbGeneric,
+    'company-secretaries-act': CompanySecretariesAct,
     'cost-works-accountants-act': CostWorksAccountantsAct,
+    'gst-hsn-codes': GstHsnCodes,
+    'gst-sac-codes': GstSacCodes,
   },
   gst: {
     'gst-acts': GstActs,

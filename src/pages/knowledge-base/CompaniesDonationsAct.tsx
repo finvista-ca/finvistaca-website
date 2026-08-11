@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ChevronDown, ChevronUp, FileText, Download, ChevronLeft, ChevronRight, BookOpen, Clock, Layers, Hash, Building2, Landmark, LineChart, FileSignature, HandCoins, ArrowRight, CheckCircle2, AlertCircle, Scale } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Landmark, Hash, Building2, Clock, FileSignature, ArrowRight, Link as LinkIcon, BarChart, UserCheck, Heart, AlertTriangle, HandCoins, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import { companiesDonationsSearchIndex, companiesDonationsStatementOfObjects, companiesDonationsSection3Text } from '../../data/companiesDonationsData';

@@ -239,7 +239,7 @@ export const About: React.FC = () => {
                   else if (bNameLower.includes("kakinada")) mapUrl = "https://maps.app.goo.gl/8imbGw1YefMU6ycQ8";
                   else if (bNameLower.includes("rayagada")) mapUrl = "https://maps.app.goo.gl/jEMrH2uTwsWherDx8";
                   else if (bNameLower.includes("peddapuram")) mapUrl = "https://maps.app.goo.gl/TNs19gDv38trQ6Q18";
-                  else if (bNameLower.includes("vijayawada")) mapUrl = "https://maps.app.goo.gl/WeB1UB6FAE6VVNCH8";
+                  else if (bNameLower.includes("vijayawada")) mapUrl = "https://maps.app.goo.gl/EELwR4Eddm4NdTi1A";
 
                   return (
                     <motion.a 

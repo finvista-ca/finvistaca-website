@@ -1,316 +1,518 @@
-import React from 'react';
-import { ResourceLayout } from '../../components/layout/ResourceLayout';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { 
+  Search, 
+  X, 
+  ChevronLeft, 
+  ChevronRight, 
+  FileText, 
+  Book,
+  Scale,
+  Building2,
+  ExternalLink,
+  ChevronDown
+} from 'lucide-react';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
+import { KnowledgeBaseHeader } from '../../components/common/KnowledgeBaseHeader';
+import { companyLawNotificationsData, type CompanyLawNotification, relatedActs } from '../../data/companyLawNotificationsData';
+import './CompanyLawNotifications.css';
 
-const pageData = [
-  [
-    "1",
-    "G.S.R. 416(E)-Amendment of Schedule VII of the Companies Act,2013",
-    "Notification",
-    "27/05/2026"
-  ],
-  [
-    "2",
-    "G.S.R. 415(E)-The Companies (Corporate Social Responsibility Policy) Amendment Rules, 2026.",
-    "Notification",
-    "27/05/2026"
-  ],
-  [
-    "3",
-    "G.S.R. 300(E)-The Companies (Registration Offices and Fees) Amendment Rules, 2026.",
-    "Notification",
-    "21/04/2026"
-  ],
-  [
-    "4",
-    "G.S.R. 169(E)-The Companies (Accounting Standards) Amendment Rules, 2026",
-    "Notification",
-    "10/03/2026"
-  ],
-  [
-    "5",
-    "S.O. 701(E)-Amendment to delegation under section 208 of the Companies Act, 2013.",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "6",
-    "S.O. 707(E)-Amendment to delegation under section 66 of the Companies Act, 2013.",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "7",
-    "S.O. 709(E)-Amendment to delegation under section 8 and others.",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "8",
-    "S.O. 699(E)-Amendment to delegation under section 94 of the Companies Act, 2013",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "9",
-    "S.O. 700(E)-Amendment to delegation under sections 153 and 154 of the Companies Act, 2013.",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "10",
-    "S.O. 708(E)-Amendment to delegation under clause 41 of Section 2 and Section 14 of Companies Act, 2013.",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "11",
-    "S.O. 698(E)-Notification under section 154 of the Companies Act, 2013. | 764KB",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "12",
-    "S.O. 697(E)-Amendment to delegation of power under section 17 of LLP Act, 2008",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "13",
-    "S.O. 696(E)-Notification under section 76A of the Limited Liability Partnership Act, 2008",
-    "Notification",
-    "10/02/2026"
-  ],
-  [
-    "14",
-    "G.S.R. 940(E)-The Companies (Removal of Names of Companies from the Register of Companies) Amendment Rules, 2025.",
-    "Notification",
-    "31/12/2025"
-  ],
-  [
-    "15",
-    "G.S.R. 943(E)-The Companies (Appointment and Qualification of Directors) Amendment Rules, 2025.",
-    "Notification",
-    "31/12/2025"
-  ],
-  [
-    "16",
-    "G.S.R. 880(E)-The Companies (Specification of definition details) Amendment Rules, 2025",
-    "Notification",
-    "01/12/2025"
-  ],
-  [
-    "17",
-    "G.S.R. 811(E)-The Companies (Meetings of Board and its Powers) Amendment Rules, 2025.",
-    "Notification",
-    "03/11/2025"
-  ],
-  [
-    "18",
-    "S.O. 4850(E)-Establishment of ROCs under the Companies Act, 2013",
-    "Notification",
-    "23/10/2025"
-  ],
-  [
-    "19",
-    "S.O. 4852(E)-Establishment of RDs under the Companies Act, 2013",
-    "Notification",
-    "23/10/2025"
-  ],
-  [
-    "20",
-    "S.O. 4849(E)-Establishment of ROCs under the LLP Act, 2008",
-    "Notification",
-    "23/10/2025"
-  ],
-  [
-    "21",
-    "S.O. 4851(E)-Establishment of RDs under the LLP Act, 2008",
-    "Notification",
-    "23/10/2025"
-  ],
-  [
-    "22",
-    "G.S.R. 733(E)-The Investor Education and Protection Fund Authority (Accounting, Audit, Transfer and Refund) Amendment Rules, 2025",
-    "Notification",
-    "01/10/2025"
-  ],
-  [
-    "23",
-    "G.S.R. 603(E)-The Companies (Compromises, Arrangements and Amalgamations) Amendment Rules, 2025.",
-    "Notification",
-    "04/09/2025"
-  ],
-  [
-    "24",
-    "G.S.R. 579(E)-The Companies (Incorporation) Second Amendment Rules, 2025",
-    "Notification",
-    "26/08/2025"
-  ],
-  [
-    "25",
-    "G.S.R. 549(E)-Companies (Indian Accounting Standards) Second Amendment Rules, 2025.",
-    "Notification",
-    "13/08/2025"
-  ],
-  [
-    "26",
-    "G.S.R. 452(E)-The Companies (Corporate Social Responsibility Policy) Rules, 2025",
-    "Notification",
-    "07/07/2025"
-  ],
-  [
-    "27",
-    "G.S.R. 443(E)-The Companies (Listing of equity shares in permissible jurisdictions) Amendment Rules,2025",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "28",
-    "G.S.R. 426(E)-The Companies (Incorporation) Amendment Rules, 2025",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "29",
-    "G.S.R. 427(E)-The Companies (Restriction on number of layers) Amendment Rules, 2025.",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "30",
-    "G.S.R. 371(E)-The Companies (Filing of Documents and Forms in Extensible Business Reporting Language) Amendment Rules, 2025",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "31",
-    "G.S.R. 360(E)-The Companies (Registration Offices and Fees) Amendment Rules, 2025",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "32",
-    "G.S.R. 361(E)-The Companies (Cost Records and Audit) Amendment Rules, 2025.",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "33",
-    "G.S.R. 359(E)-The Companies (Audit and Auditors) Amendment Rules, 2025",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "34",
-    "G.S.R.358(E)-The Companies (Management and Administration) Amendment Rules, 2025.",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "35",
-    "G.S.R. 357(E)-The Companies (Accounts) Second Amendment Rules, 2025.",
-    "Notification",
-    "30/05/2025"
-  ],
-  [
-    "36",
-    "G.S.R. 317(E)-The Companies (Accounts) Amendment Rules, 2025",
-    "Notification",
-    "19/05/2025"
-  ],
-  [
-    "37",
-    "G.S.R. 291(E)-The Companies (Indian Accounting Standards) Amendment Rules, 2025",
-    "Notification",
-    "07/05/2025"
-  ],
-  [
-    "38",
-    "G.S.R. 131(E)-The Companies (Prospectus and Allotment of Securities) Amendment Rules, 2025",
-    "Notification",
-    "12/02/2025"
-  ],
-  [
-    "39",
-    "G.S.R. 794(E)-The Companies (Accounts) Second Amendment Rules, 2024.",
-    "Notification",
-    "31/12/2024"
-  ],
-  [
-    "40",
-    "G.S.R. 630(E)-The Companies (Adjudication of Penalties) Second Amendment Rules, 2024.",
-    "Notification",
-    "09/10/2024"
-  ],
-  [
-    "41",
-    "G.S.R. 607(E)-The Investor Education and Protection Fund Authority (Form of Annual Statement of Accounts) Amendment Rules, 2024.",
-    "Notification",
-    "03/10/2024"
-  ],
-  [
-    "42",
-    "G.S.R. 602(E)-The Companies (Indian Accounting Standards) Third Amendment Rules, 2024",
-    "Notification",
-    "28/09/2024"
-  ],
-  [
-    "43",
-    "G.S.R. 587(E)-The Companies (Accounts) Amendment Rules, 2024.",
-    "Notification",
-    "24/09/2024"
-  ],
-  [
-    "44",
-    "G.S.R. 554(E)-The Companies (Indian Accounting Standards) Second Amendment Rules, 2024.",
-    "Notification",
-    "09/09/2024"
-  ],
-  [
-    "45",
-    "G.S.R. 552(E)-The Investor Education and Protection Fund Authority (Accounting, Audit, Transfer and Refund) Second Amendment Rules, 2024",
-    "Notification",
-    "09/09/2024"
-  ],
-  [
-    "46",
-    "G.S.R. 555 (E)-The Companies (Compromises, Arrangements and Amalgamations) Amendment Rules, 2024.",
-    "Notification",
-    "09/09/2024"
-  ],
-  [
-    "47",
-    "G.S.R. 491(E)-The Companies (Registration of Foreign Companies) Amendment Rules, 2024",
-    "Notification",
-    "12/08/2024"
-  ],
-  [
-    "48",
-    "G.S.R. 492(E)-The Companies (Indian Accounting Standards) Amendment Rules, 2024.",
-    "Notification",
-    "12/08/2024"
-  ],
-  [
-    "49",
-    "G.S.R. 475(E)-The Limited Liability Partnership (Amendment) Rules,2024.",
-    "Notification",
-    "05/08/2024"
-  ],
-  [
-    "50",
-    "G.S.R. 476(E)-The Companies (Adjudication of Penalties) Amendment Rules, 2024",
-    "Notification",
-    "05/08/2024"
-  ]
-];
+const NOTIFICATIONS_PER_PAGE = 20;
 
 export const CompanyLawNotifications: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [yearFilter, setYearFilter] = useState('All Years');
+  const [categoryFilter, setCategoryFilter] = useState('All');
+  const [actFilter, setActFilter] = useState('All');
+  const [statusFilter, setStatusFilter] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedNotificationId, setSelectedNotificationId] = useState<string | null>(searchParams.get('notification'));
+  
+  const directoryRef = useRef<HTMLDivElement>(null);
+
+  // Debounce search
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // Sync selectedNotificationId with URL
+  useEffect(() => {
+    const notifParam = searchParams.get('notification');
+    if (notifParam !== selectedNotificationId) {
+      setSelectedNotificationId(notifParam);
+    }
+  }, [searchParams]);
+
+  const openNotification = (id: string) => {
+    setSelectedNotificationId(id);
+    setSearchParams({ notification: id });
+  };
+
+  const closeNotification = () => {
+    setSelectedNotificationId(null);
+    setSearchParams({});
+  };
+
+  const availableYears = useMemo(() => {
+    const years = Array.from(new Set(companyLawNotificationsData.map(c => c.year)));
+    return years.sort((a, b) => b - a);
+  }, []);
+
+  const categories = useMemo(() => {
+    const cats = Array.from(new Set(companyLawNotificationsData.map(c => c.category)));
+    return cats.sort();
+  }, []);
+
+  const applicableLaws = useMemo(() => {
+    const laws = Array.from(new Set(companyLawNotificationsData.map(c => c.applicableLaw).filter(Boolean))) as string[];
+    return laws.sort();
+  }, []);
+
+  const statuses = useMemo(() => {
+    const s = Array.from(new Set(companyLawNotificationsData.map(c => c.status).filter(Boolean))) as string[];
+    return s.sort();
+  }, []);
+
+  // Filter Notifications
+  const filteredNotifications = useMemo(() => {
+    let result = companyLawNotificationsData;
+
+    // Search
+    if (debouncedQuery) {
+      const query = debouncedQuery.toLowerCase();
+      result = result.filter(notification => {
+        return (
+          notification.notificationNumber.toLowerCase().includes(query) ||
+          notification.title.toLowerCase().includes(query) ||
+          notification.category.toLowerCase().includes(query) ||
+          (notification.sections && notification.sections.some(s => s.toLowerCase().includes(query))) ||
+          notification.summary.toLowerCase().includes(query) ||
+          (notification.applicableLaw && notification.applicableLaw.toLowerCase().includes(query))
+        );
+      });
+
+      // Sort by exact number match
+      result = [...result].sort((a, b) => {
+        const aNumMatch = a.notificationNumber.toLowerCase() === query;
+        const bNumMatch = b.notificationNumber.toLowerCase() === query;
+        if (aNumMatch && !bNumMatch) return -1;
+        if (!aNumMatch && bNumMatch) return 1;
+        
+        const aContains = a.notificationNumber.toLowerCase().includes(query);
+        const bContains = b.notificationNumber.toLowerCase().includes(query);
+        if (aContains && !bContains) return -1;
+        if (!aContains && bContains) return 1;
+
+        return 0;
+      });
+    } else {
+      // Default sort by date descending
+      result = [...result].sort((a, b) => {
+        const dateA = new Date(a.date.split('/').reverse().join('-'));
+        const dateB = new Date(b.date.split('/').reverse().join('-'));
+        return dateB.getTime() - dateA.getTime();
+      });
+    }
+
+    if (yearFilter !== 'All Years') {
+      result = result.filter(c => c.year.toString() === yearFilter);
+    }
+    
+    if (categoryFilter !== 'All') {
+      result = result.filter(c => c.category === categoryFilter);
+    }
+    
+    if (actFilter !== 'All') {
+      result = result.filter(c => c.applicableLaw === actFilter);
+    }
+
+    if (statusFilter !== 'All') {
+      result = result.filter(c => c.status === statusFilter);
+    }
+
+    return result;
+  }, [debouncedQuery, yearFilter, categoryFilter, actFilter, statusFilter]);
+
+  const featuredNotifications = useMemo(() => {
+    return [...companyLawNotificationsData]
+      .sort((a, b) => {
+        const dateA = new Date(a.date.split('/').reverse().join('-'));
+        const dateB = new Date(b.date.split('/').reverse().join('-'));
+        return dateB.getTime() - dateA.getTime();
+      })
+      .slice(0, 3);
+  }, []);
+
+  const selectedNotification = useMemo(() => {
+    return companyLawNotificationsData.find(c => c.id === selectedNotificationId) || null;
+  }, [selectedNotificationId]);
+
+  // Pagination
+  const totalPages = Math.ceil(filteredNotifications.length / NOTIFICATIONS_PER_PAGE);
+  const paginatedNotifications = filteredNotifications.slice(
+    (currentPage - 1) * NOTIFICATIONS_PER_PAGE,
+    currentPage * NOTIFICATIONS_PER_PAGE
+  );
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    if (directoryRef.current) {
+      const y = directoryRef.current.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setYearFilter('All Years');
+    setCategoryFilter('All');
+    setActFilter('All');
+    setStatusFilter('All');
+    setCurrentPage(1);
+  };
+
   return (
-    <ResourceLayout 
-      title="Company Law Notifications"
-      description="View and search through Company Law Notifications documents."
-      data={pageData}
-      type="table"
-    />
+    <div className="company-law-notifications-page">
+      <InternalPageHero 
+        title="Company Law Notifications"
+        description="Browse official MCA notifications relating to companies, corporate compliance, governance and other corporate-law requirements."
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base', path: '/knowledge-base' },
+          { label: 'Company Law Notifications' }
+        ]}
+      />
+
+      <div className="container" style={{ marginTop: '0' }}>
+        {/* AT A GLANCE */}
+        <KnowledgeBaseHeader
+          infoTitle="Browse official MCA notifications relating to companies, corporate compliance, governance and other corporate-law requirements."
+          infoIcon={<Book className="icon" size={24} />}
+          infoGrid={[
+            { label: 'Notifications Indexed', value: companyLawNotificationsData.length },
+            { label: 'Issuing Authority', value: 'MCA' },
+            { label: 'Primary Source', value: 'MCA / India Code' },
+            { label: 'Directory', value: 'Searchable' }
+          ]}
+          statCards={[
+            { value: 'MCA', label: 'Issuing Authority' },
+            { value: companyLawNotificationsData.length, label: 'Notifications Indexed' },
+            { value: 'Searchable', label: 'Notification Directory' },
+            { value: 'MCA / India Code', label: 'Primary Source' }
+          ]}
+        />
+
+      {/* FEATURED NOTIFICATIONS */}
+      {featuredNotifications.length > 0 && (
+        <div className="featured-notifications-section" style={{ marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '1.5rem', color: 'var(--brand-gold)', marginBottom: '1.5rem', borderBottom: '1px solid var(--glass-border)', paddingBottom: '0.5rem' }}>
+            Featured Notifications
+          </h2>
+          <div className="notifications-directory-grid">
+            {featuredNotifications.map((notification) => (
+              <div key={`feat-${notification.id}`} className="notification-card" onClick={() => openNotification(notification.id)}>
+                <div className="notification-header">
+                  <div className="notification-number">Notification No. {notification.notificationNumber}</div>
+                  <div className="notification-date">Published: {notification.date}</div>
+                </div>
+                <div className="notification-title">{notification.title}</div>
+                <div className="notification-tags">
+                  <span className="notification-tag">{notification.category}</span>
+                  {notification.applicableLaw && <span className="notification-tag act">{notification.applicableLaw}</span>}
+                </div>
+                <div className="notification-summary">{notification.summary}</div>
+                <div className="notification-card-footer">
+                  <span className="notification-source">{notification.source}</span>
+                  <span className="notification-view-link">View Notification <ChevronRight size={16} /></span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* MAIN DIRECTORY */}
+      <div ref={directoryRef} className="notifications-directory-section">
+        <h2 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1.5rem' }}>MCA Notification Directory</h2>
+        
+        {/* Search and Filters */}
+        <div className="notification-search-filter-container">
+          <div className="notification-search-wrapper">
+            <Search className="notification-search-icon" size={20} />
+            <input
+              type="text"
+              placeholder="Search notification number, topic, section or keyword..."
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="notification-search-input"
+            />
+            {searchQuery && (
+              <button className="clear-search-btn" onClick={() => { setSearchQuery(''); setCurrentPage(1); }} style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>
+                <X size={18} />
+              </button>
+            )}
+          </div>
+          
+          <div className="notification-filters-row">
+            <div className="filter-group">
+              <select 
+                value={yearFilter} 
+                onChange={(e) => { setYearFilter(e.target.value); setCurrentPage(1); }}
+                className="notification-filter-select"
+              >
+                <option value="All Years">All Years</option>
+                {availableYears.map(year => (
+                  <option key={year} value={year.toString()}>{year}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div className="filter-group">
+              <select 
+                value={categoryFilter} 
+                onChange={(e) => { setCategoryFilter(e.target.value); setCurrentPage(1); }}
+                className="notification-filter-select"
+              >
+                <option value="All">All Categories</option>
+                {categories.map(cat => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
+            
+            {applicableLaws.length > 0 && (
+              <div className="filter-group">
+                <select 
+                  value={actFilter} 
+                  onChange={(e) => { setActFilter(e.target.value); setCurrentPage(1); }}
+                  className="notification-filter-select"
+                >
+                  <option value="All">All Applicable Laws</option>
+                  {applicableLaws.map(law => (
+                    <option key={law} value={law}>{law}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            {statuses.length > 0 && (
+              <div className="filter-group">
+                <select 
+                  value={statusFilter} 
+                  onChange={(e) => { setStatusFilter(e.target.value); setCurrentPage(1); }}
+                  className="notification-filter-select"
+                >
+                  <option value="All">All Statuses</option>
+                  {statuses.map(s => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Notifications List */}
+        {paginatedNotifications.length > 0 ? (
+          <>
+            <div className="notifications-directory-grid">
+              {paginatedNotifications.map((notification) => (
+                <div key={notification.id} className="notification-card" onClick={() => openNotification(notification.id)}>
+                  <div className="notification-header">
+                    <div className="notification-number">Notification No. {notification.notificationNumber}</div>
+                    <div className="notification-date">Published: {notification.date}</div>
+                  </div>
+                  <div className="notification-title">{notification.title}</div>
+                  <div className="notification-tags">
+                    <span className="notification-tag">{notification.category}</span>
+                    {notification.applicableLaw && <span className="notification-tag act">{notification.applicableLaw}</span>}
+                  </div>
+                  {notification.effectiveDate && (
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+                      <strong>Effective:</strong> {notification.effectiveDate}
+                    </div>
+                  )}
+                  <div className="notification-summary">{notification.summary}</div>
+                  <div className="notification-card-footer">
+                    <span className="notification-source">{notification.source}</span>
+                    <span className="notification-view-link">View Notification <ChevronRight size={16} /></span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="notification-pagination">
+                <div className="pagination-info">
+                  Showing {(currentPage - 1) * NOTIFICATIONS_PER_PAGE + 1} - {Math.min(currentPage * NOTIFICATIONS_PER_PAGE, filteredNotifications.length)} of {filteredNotifications.length} notifications
+                </div>
+                <div className="pagination-controls">
+                  <button 
+                    className="page-btn" 
+                    onClick={() => handlePageChange(currentPage - 1)} 
+                    disabled={currentPage === 1}
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter(p => p === 1 || p === totalPages || Math.abs(currentPage - p) <= 1)
+                    .map((page, idx, arr) => (
+                      <React.Fragment key={page}>
+                        {idx > 0 && arr[idx - 1] !== page - 1 && <span style={{ color: 'var(--text-muted)', alignSelf: 'center' }}>...</span>}
+                        <button 
+                          className={`page-btn ${currentPage === page ? 'active' : ''}`}
+                          onClick={() => handlePageChange(page)}
+                        >
+                          {page}
+                        </button>
+                      </React.Fragment>
+                  ))}
+                  <button 
+                    className="page-btn" 
+                    onClick={() => handlePageChange(currentPage + 1)} 
+                    disabled={currentPage === totalPages}
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="no-results-state" style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--glass-bg)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+            <FileText size={48} style={{ color: 'var(--text-muted)', margin: '0 auto 1.5rem', opacity: 0.5 }} />
+            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '1rem' }}>No notifications found</h3>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Try another notification number, keyword, year or category.</p>
+            <button 
+              onClick={clearFilters}
+              style={{ padding: '0.75rem 1.5rem', background: 'var(--brand-gold)', color: 'var(--primary-color)', border: 'none', borderRadius: '8px', fontWeight: 600, cursor: 'pointer' }}
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* OFFICIAL REFERENCE FOOTER */}
+      <div className="official-reference-card" style={{ marginTop: '4rem', padding: '2rem', background: 'var(--glass-bg)', border: '1px solid rgba(201, 160, 80, 0.3)', borderRadius: '12px', borderLeft: '4px solid var(--brand-gold)' }}>
+        <h3 style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+          <Book size={24} color="var(--brand-gold)" /> Official MCA Notifications
+        </h3>
+        <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+          Corporate-law requirements may be amended or supplemented through subsequent notifications, circulars, rules and other regulatory instruments. Verify the current applicable position from the official MCA source before relying on any notification.
+        </p>
+        <a 
+          href="https://www.mca.gov.in/content/mca/global/en/acts-rules/notifications.html" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="notification-official-btn"
+          style={{ display: 'inline-flex', padding: '0.75rem 1.5rem', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid var(--glass-border)', borderRadius: '8px', color: 'white', textDecoration: 'none', fontWeight: 500 }}
+        >
+          View Official MCA Notifications <ExternalLink size={16} />
+        </a>
+      </div>
+
+      {/* RELATED KNOWLEDGE BASE */}
+      <div className="related-kb-section" style={{ marginTop: '4rem', padding: '3rem 0', borderTop: '1px solid var(--glass-border)' }}>
+        <h2 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '2rem', textAlign: 'center' }}>Related Knowledge Base</h2>
+        <div className="notifications-overview-grid">
+          {relatedActs.map((item, idx) => (
+            <Link key={idx} to={item.path} className="notifications-stat-card" style={{ textDecoration: 'none', minHeight: 'auto', padding: '1rem' }}>
+              <span style={{ color: 'white', fontWeight: 500 }}>{item.title}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* DETAIL MODAL */}
+      {selectedNotification && (
+        <div className="notification-modal-overlay" onClick={closeNotification}>
+          <div className="notification-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="notification-modal-header">
+              <div>
+                <h2>Notification No. {selectedNotification.notificationNumber}</h2>
+                <div style={{ color: 'var(--text-muted)' }}>Published: {selectedNotification.date}</div>
+              </div>
+              <button className="notification-modal-close" onClick={closeNotification}>
+                <X size={24} />
+              </button>
+            </div>
+            
+            <div className="notification-modal-body">
+              <h3 style={{ fontSize: '1.3rem', lineHeight: 1.5, marginBottom: '2rem', color: 'white' }}>
+                {selectedNotification.title}
+              </h3>
+              
+              <div className="notification-modal-meta-grid">
+                <div className="notification-modal-meta-item">
+                  <span className="notification-modal-meta-label">Issuing Authority</span>
+                  <span className="notification-modal-meta-value">{selectedNotification.source}</span>
+                </div>
+                <div className="notification-modal-meta-item">
+                  <span className="notification-modal-meta-label">Category</span>
+                  <span className="notification-modal-meta-value">{selectedNotification.category}</span>
+                </div>
+                {selectedNotification.applicableLaw && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Applicable Law</span>
+                    <span className="notification-modal-meta-value">{selectedNotification.applicableLaw}</span>
+                  </div>
+                )}
+                {selectedNotification.effectiveDate && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Effective Date</span>
+                    <span className="notification-modal-meta-value">{selectedNotification.effectiveDate}</span>
+                  </div>
+                )}
+                {selectedNotification.status && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Status</span>
+                    <span className="notification-modal-meta-value" style={{ 
+                      color: selectedNotification.status === 'Active' ? 'var(--success-green)' : 'var(--brand-gold)' 
+                    }}>
+                      {selectedNotification.status}
+                    </span>
+                  </div>
+                )}
+                {selectedNotification.sections && selectedNotification.sections.length > 0 && (
+                  <div className="notification-modal-meta-item">
+                    <span className="notification-modal-meta-label">Related Sections</span>
+                    <span className="notification-modal-meta-value">{selectedNotification.sections.join(', ')}</span>
+                  </div>
+                )}
+              </div>
+              
+              <div className="notification-modal-summary">
+                <h3>Summary</h3>
+                <p>{selectedNotification.summary}</p>
+                <p style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--text-muted)' }}>Complete notification available at the official source.</p>
+              </div>
+              
+            </div>
+            
+            <div className="notification-modal-footer">
+              <a 
+                href={selectedNotification.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="notification-official-btn"
+              >
+                View Official Notification <ExternalLink size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+      </div>
+    </div>
   );
 };

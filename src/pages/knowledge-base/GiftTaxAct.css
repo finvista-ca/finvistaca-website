@@ -293,10 +293,13 @@
 
 .search-box-custom .search-icon {
   position: absolute;
-  left: 0.75rem;
+
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-secondary);
+
+
+  color: var(--brand-gold);
+  left: 1.5rem;
 }
 
 .table-custom-container {

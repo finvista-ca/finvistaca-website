@@ -67,7 +67,7 @@ export const knowledgeBaseData: ServiceColumn[] = [
           { name: 'Monopolies and Restrictive Trade Practices Act', slug: 'monopolies-act', keywords: ['mrtp', 'monopoly', ...actKeywords] },
           { name: 'Competition Act', slug: 'competition-act', keywords: ['competition', 'cci', ...actKeywords] },
           { name: 'Chartered Accountants Act', slug: 'chartered-accountants-act', keywords: ['ca', 'icai', ...actKeywords] },
-          { name: 'Company Secretaries Act', slug: 'company-secretaries-act', externalUrl: 'https://www.icsi.edu/', keywords: ['cs', 'icsi', ...actKeywords] },
+          { name: 'Company Secretaries Act', slug: 'company-secretaries-act', keywords: ['cs', 'icsi', ...actKeywords] },
           { name: 'Cost And Works Accountants Act', slug: 'cost-works-accountants-act', keywords: ['cma', 'icwai', ...actKeywords] },
           { name: 'Insolvency And Bankruptcy Code', slug: 'insolvency-bankruptcy-code', keywords: ['ibc', 'nclt', 'insolvency', 'bankruptcy', ...companyKeywords, ...actKeywords] }
         ]
@@ -80,7 +80,7 @@ export const knowledgeBaseData: ServiceColumn[] = [
         title: 'RULES',
         items: [
           { name: 'Income Tax Rules', slug: 'income-tax-rules', keywords: [...taxKeywords, ...ruleKeywords] },
-          { name: 'Company Law Rules', slug: 'company-law-rules', keywords: [...companyKeywords, ...ruleKeywords] }
+          { name: 'Companies Rules, 2014', slug: 'company-law-rules', keywords: [...companyKeywords, ...ruleKeywords] }
         ]
       },
       {

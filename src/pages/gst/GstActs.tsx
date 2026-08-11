@@ -8,6 +8,8 @@ import {
   gstChapters, gstSections, gstImportantSections, 
   gstDefinitions, gstSchedules 
 } from '../../data/gstActsData';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
+import { KnowledgeBaseHeader } from '../../components/common/KnowledgeBaseHeader';
 import './GstActs.css';
 
 export const GstActs: React.FC = () => {
@@ -54,61 +56,32 @@ export const GstActs: React.FC = () => {
 
   return (
     <div className="gst-portal-page">
-      <div className="container">
-        
-        {/* Breadcrumb */}
-        <div className="breadcrumb" style={{ marginTop: '2rem', marginBottom: '2rem' }}>
-          <Link to="/">Home</Link>
-          <span className="separator">/</span>
-          <Link to="/knowledge-base">Knowledge Base</Link>
-          <span className="separator">/</span>
-          <span className="current">GST Acts</span>
-        </div>
-
-        {/* HERO SECTION */}
-        <div className="section-header text-center" style={{ marginBottom: '2rem' }}>
-          <h1 className="section-title" style={{ marginBottom: '16px' }}>Goods & Services Tax (GST) Acts, 2017</h1>
-          <p className="section-desc" style={{ fontSize: '1.15rem', color: 'var(--text-secondary)' }}>India's unified indirect taxation framework governing supply, registration, ITC, returns, and compliance.</p>
-        </div>
-
-        <div className="info-card">
-          <ShieldCheck className="icon" size={28} />
-          <div>
-            <h3>GST Framework Information</h3>
-            <div className="info-card-grid">
-              <span><strong>Implemented:</strong> 1 July 2017</span>
-              <span><strong>Act Type:</strong> Central Act</span>
-              <span><strong>Total Sections:</strong> 174 (CGST)</span>
-              <span><strong>Schedules:</strong> 3</span>
-              <span><strong>Structure:</strong> Multiple Legislations</span>
-              <span><strong>Scope:</strong> Nationwide Indirect Tax</span>
-            </div>
-          </div>
-        </div>
-
-        {/* GST AT A GLANCE */}
-        <div className="overview-grid">
-          <div className="stat-card">
-            <span className="stat-value">CGST</span>
-            <span className="stat-label">Central Act</span>
-          </div>
-          <div className="stat-card">
-            <span className="stat-value">IGST</span>
-            <span className="stat-label">Integrated Act</span>
-          </div>
-          <div className="stat-card">
-            <span className="stat-value">UTGST</span>
-            <span className="stat-label">Union Territory Act</span>
-          </div>
-          <div className="stat-card">
-            <span className="stat-value">174</span>
-            <span className="stat-label">Sections</span>
-          </div>
-          <div className="stat-card">
-            <span className="stat-value">3</span>
-            <span className="stat-label">Schedules</span>
-          </div>
-        </div>
+      <InternalPageHero 
+        title="Goods & Services Tax (GST) Acts, 2017"
+        description="India's unified indirect taxation framework governing supply, registration, ITC, returns, and compliance."
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base', path: '/knowledge-base' },
+          { label: 'GST Acts' }
+        ]}
+      />
+      <div className="container" style={{ marginTop: '0' }}>
+        <KnowledgeBaseHeader
+          infoTitle="India's unified indirect taxation framework governing supply, registration, ITC, returns, and compliance."
+          infoIcon={<ShieldCheck className="icon" size={24} />}
+          infoGrid={[
+            { label: 'Implemented', value: '1 July 2017' },
+            { label: 'Act Type', value: 'Central Act' },
+            { label: 'Total Sections', value: '174 (CGST)' },
+            { label: 'Schedules', value: '3' }
+          ]}
+          statCards={[
+            { value: 'CGST', label: 'Central Act' },
+            { value: 'IGST', label: 'Integrated Act' },
+            { value: 'UTGST', label: 'Union Territory Act' },
+            { value: '174', label: 'Sections' }
+          ]}
+        />
 
         {/* WHAT IS GST? */}
         <h2 className="section-title">What is GST?</h2>

@@ -1,366 +1,497 @@
-import React from 'react';
-import { ResourceLayout } from '../../components/layout/ResourceLayout';
+import React, { useState, useMemo, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  X,
+  Search,
+  ChevronRight,
+  ExternalLink,
+  Book,
+  FileText
+} from 'lucide-react';
+import { InternalPageHero } from '../../components/layout/InternalPageHero';
+import { KnowledgeBaseHeader } from '../../components/common/KnowledgeBaseHeader';
+import { rocFormsData, type ROCForm, relatedKnowledgeBase } from '../../data/rocFormsData';
+import './RocForms.css';
 
-const pageData = [
-  [
-    "1",
-    "ROC Froms",
-    "Intimation of Director Identification Number by the company to the Registrar DIN services",
-    "Form DIR-3C [zip] (702 KB)",
-    "Form DIR-3C [zip] (373 KB)"
-  ],
-  [
-    "2",
-    "ROC Froms",
-    "Information to the Registrar by company regarding the number of layers of subsidiaries.",
-    "Form CRL-1 [zip] (605 KB)",
-    "Form CRL-1 [zip] (115 KB)"
-  ],
-  [
-    "3",
-    "Approval Services (Headquarters)",
-    "Form of intimation of appointment of cost auditor by the company to Central Government.",
-    "Form CRA-2 [zip] (701 KB)",
-    "Form CRA-2 [zip] (215 KB)"
-  ],
-  [
-    "4",
-    "Approval Services (Headquarters)",
-    "Form for filing application or documents with Central Government",
-    "Form CG-1 [zip] (546 KB)",
-    "Form CG-1 [zip] (138 KB)"
-  ],
-  [
-    "5",
-    "Approval Services (Regional Director)",
-    "Application for removal of auditor(s) from his/their office before expiry of term",
-    "Form ADT-2 [zip] (577 KB)",
-    "Form ADT-2 [zip] (160 KB)"
-  ],
-  [
-    "6",
-    "Approval Services (Regional Director)",
-    "Application to Regional director for conversion of section 8 company into company of any other kind",
-    "Form INC-18 [zip] (622 KB)",
-    "Form INC-18 [zip] (196 KB)"
-  ],
-  [
-    "7",
-    "Approval Services (Regional Director)",
-    "Application to Regional Director for approval to shift the Registered Office from one state to another state or from jurisdiction of one Registrar to another Registrar within the same State",
-    "Form INC-23 [zip] (707 KB)",
-    "Form INC-23 [zip] (207 KB)"
-  ],
-  [
-    "8",
-    "Approval Services (Regional Director)",
-    "Memorandum of Appeal",
-    "Form ADJ [zip] (643 KB)",
-    "Form ADJ [zip] (175 KB)"
-  ],
-  [
-    "9",
-    "Approval Services (Regional Director)",
-    "Applications made to Regional Director",
-    "Form RD-1 [zip] (634 KB)",
-    "Form RD-1 [zip] (153 KB)"
-  ],
-  [
-    "10",
-    "Approval Services (Regional Director)",
-    "Form for filing Addendum for Rectification of Defects or Incompleteness",
-    "Form RD GNL-5 [zip] (614 KB)",
-    "Form RD GNL-5 [zip] (125 KB)"
-  ],
-  [
-    "11",
-    "Approval Services (Regional Director)",
-    "Application to Central Government for extension of time for filing particulars of registration of creation / modification / satisfaction of charge OR for rectification of omission or misstatement of any particular in respect of creation/ modification/ sat",
-    "Form CHG-8 [zip] (723 KB)",
-    "Form CHG-8 [zip] (197 KB)"
-  ],
-  [
-    "12",
-    "Approval Services (Regional Director)",
-    "Application for extension of time",
-    "Form NDH-2[zip] (777 KB)",
-    "Form NDH-2[zip] (464 KB)"
-  ],
-  [
-    "13",
-    "Approval Services (Registrar of Companies)",
-    "Application by company to ROC for removing its name from register of Companies",
-    "Form STK-2 [zip] (635 KB)",
-    "Form STK-2 [zip] (208 KB)"
-  ],
-  [
-    "14",
-    "ROC Froms",
-    "One Person Company- Application for Conversion",
-    "Form INC-6 [zip] (835 KB)",
-    "Form INC-6 [zip] (343 KB)"
-  ],
-  [
-    "15",
-    "ROC Froms",
-    "Application for approval of Central Government for change of name",
-    "Form INC-24 [zip] (754 KB)",
-    "Form INC-24 [zip] (156 KB)"
-  ],
-  [
-    "16",
-    "ROC Froms",
-    "Application to Registrar for obtaining the status of dormant company",
-    "Form MSC-1 [zip] (803 KB)",
-    "Form MSC-1 [zip] (210 KB)"
-  ],
-  [
-    "17",
-    "ROC Froms",
-    "Application for seeking status of active company",
-    "Form MSC-4 [zip] (604 KB)",
-    "Form MSC-4 [zip] (158 KB)"
-  ],
-  [
-    "18",
-    "ROC Froms",
-    "Applications made to Registrar of Companies",
-    "Form GNL-1 [zip] (866 KB)",
-    "Form GNL-1 [zip] (252 KB)"
-  ],
-  [
-    "19",
-    "ROC Froms",
-    "Application for grant of License under section 8",
-    "Form INC-12 [zip] (772 KB)",
-    "Form INC-12 [zip] (270 KB)"
-  ],
-  [
-    "20",
-    "ROC Froms",
-    "Application for striking off the name of company under the Fast Track Exit(FTE) Mode",
-    "Form FTE [zip] (446 KB)",
-    "Form FTE [zip] (161 KB)"
-  ],
-  [
-    "21",
-    "Change Services",
-    "One Person Company- Nominee consent form",
-    "Form INC-3 [zip] (765 KB)",
-    "Form INC-3 [zip] (180 KB)"
-  ],
-  [
-    "22",
-    "Change Services",
-    "One Person Company- Change in Member/Nominee",
-    "Form INC-4 [zip] (770 KB)",
-    "Form INC-4 [zip] (262 KB)"
-  ],
-  [
-    "23",
-    "Change Services",
-    "Notice of situation or change of situation of registered office",
-    "Form INC-22 [zip] (0.98 KB)",
-    "Form INC-22 [zip] (254 KB)"
-  ],
-  [
-    "24",
-    "Change Services",
-    "Conversion of public company into private company or private company into public company",
-    "Form INC-27 [zip] (603 KB)",
-    "Form INC-27 [zip] (170 KB)"
-  ],
-  [
-    "25",
-    "Change Services",
-    "Notice to Registrar of any alteration of share capital",
-    "Form SH-7 [zip] (1.09 MB)",
-    "Form SH-7 [zip] (304 KB)"
-  ],
-  [
-    "26",
-    "Change Services",
-    "Particulars of appointment of Directors and the key managerial personnel and the changes among them",
-    "Form DIR-12 [zip] (1095 KB)",
-    "Form DIR-12 [zip] (324 KB)"
-  ],
-  [
-    "27",
-    "Change Services",
-    "Return of alteration in the documents filed for registration by foreign company",
-    "Form FC-2 [zip] (738 KB)",
-    "Form FC-2 [zip] (260 KB)"
-  ],
-  [
-    "28",
-    "Change Services",
-    "Annual accounts along with the list of all principal places of business in India established by foreign company",
-    "Form FC-3 [zip] (562 KB)",
-    "Form FC-3 [zip] (147 KB)"
-  ],
-  [
-    "29",
-    "Charge Management",
-    "Application for registration of creation, modification of charge (other than those related to debentures)",
-    "Form CHG-1 [zip] (906 KB)",
-    "Form CHG-1 [zip] (307 KB)"
-  ],
-  [
-    "30",
-    "Charge Management",
-    "Particulars for satisfaction of charge thereof",
-    "Form CHG-4 [zip] (604 KB)",
-    "Form CHG-4 [zip] (209 KB)"
-  ],
-  [
-    "31",
-    "Charge Management",
-    "Notice of appointment or cessation of receiver or manager",
-    "Form CHG-6 [zip] (605 KB)",
-    "Form CHG-6 [zip] (193 KB)"
-  ],
-  [
-    "32",
-    "Charge Management",
-    "Application for registration of creation or modification of charge for debentures or rectification of particulars filed in respect of creation or modification of charge for debentures",
-    "Form CHG-9 [zip] (927 KB)",
-    "Form CHG-9 [zip] (304 KB)"
-  ],
-  [
-    "33",
-    "Charge Management",
-    "Details of persons/directors/charged/specified",
-    "Form GNL-3 [zip] (813 KB)",
-    "Form GNL-3 [zip] (293 KB)"
-  ],
-  [
-    "34",
-    "DIN Forms",
-    "Application for allotment of Director Identification Number before appointment in an existing company",
-    "Form DIR-3 [zip] (852 KB)",
-    "Form DIR-3 [zip] (227 KB)"
-  ],
-  [
-    "35",
-    "DIN Forms",
-    "Application for surrender of Director Identification Number",
-    "Form DIR-5 [zip] (618 KB)",
-    "Form DIR-5 [zip] (193 KB)"
-  ],
-  [
-    "36",
-    "DIN Forms",
-    "Intimation of change in particulars of Director to be given to the Central Government",
-    "Form DIR-6 [zip] (884 KB)",
-    "Form DIR-6 [zip] (265 KB)"
-  ],
-  [
-    "37",
-    "DIN Forms",
-    "Application for KYC of Directors",
-    "Form DIR-3 KYC [zip] (814 KB)",
-    "Form DIR-3 KYC [zip] (241 KB)"
-  ],
-  [
-    "38",
-    "Incorporation services",
-    "Active Company Tagging Identities and Verification (ACTIVE)",
-    "Form INC-22A [zip] (837 KB)",
-    "Form INC-22A [zip] (219 KB)"
-  ],
-  [
-    "39",
-    "Incorporation services",
-    "Simplified Proforma for Incorporating Company Electronically (SPICe) - with mandatory PAN & TAN application included.",
-    "SPICe  [zip] (1.72 MB)",
-    "SPICe  [zip] (667 KB)"
-  ],
-  [
-    "40",
-    "Incorporation services",
-    "eMemorandum of Association (SPICe MoA)",
-    "SPICe MoA [zip] (1.24 MB)",
-    "SPICe MoA [zip] (487 KB)"
-  ],
-  [
-    "41",
-    "Incorporation services",
-    "eArticles of Association (SPICe AoA)",
-    "SPICe AoA [zip] (740 KB)",
-    "SPICe AoA [zip] (401 KB)"
-  ],
-  [
-    "42",
-    "Incorporation services",
-    "Application for Goods and services tax Identification number, employees state Insurance corporation registration pLus Employees provident fund organisation registration (AGILE)",
-    "AGILE [zip] (302 KB)",
-    "AGILE [zip] (623 KB)"
-  ],
-  [
-    "43",
-    "Incorporation services",
-    "One Person Company- Nominee consent form",
-    "Form INC-3 [zip] (863 KB)",
-    "Form INC-3 [zip] (181 KB)"
-  ],
-  [
-    "44",
-    "Incorporation services",
-    "Application by a company for registration under section 366",
-    "Form URC-1 [zip] (600 KB)",
-    "Form URC-1 [zip] (170 KB)"
-  ],
-  [
-    "45",
-    "Incorporation services",
-    "Information to be filed by foreign company",
-    "Form FC-1 [zip] (899 KB)",
-    "Form FC-1 [zip] (373 KB)"
-  ],
-  [
-    "46",
-    "Compliance Related Filing",
-    "Application for declaration as Nidhi Company and for updation of status by Nidhis",
-    "Form NDH-4 [zip] (869 KB)",
-    "Form NDH-4 [zip] (170 KB)"
-  ],
-  [
-    "47",
-    "Compliance Related Filing",
-    "Return to the Registrar in respect of declaration under section 90",
-    "Form BEN-2 [zip] (804 KB)",
-    "Form BEN-2 [zip] (232 KB)"
-  ],
-  [
-    "48",
-    "Compliance Related Filing",
-    "Form for furnishing half yearly return with the registrar in respect of outstanding payments to Micro or Small Enterprise.",
-    "Form MSME [zip] (741 KB)",
-    "Form MSME [zip] (252 KB)"
-  ],
-  [
-    "49",
-    "Compliance Related Filing",
-    "Form for filing Cost Audit Report with the Central Government.",
-    "Form CRA-4 [zip] (741 KB)",
-    "Form CRA-4 [zip] (252 KB)"
-  ],
-  [
-    "50",
-    "Compliance Related Filing",
-    "Return of deposits",
-    "Form DPT-3 [zip] (616 KB)",
-    "Form DPT-3 [zip] (179 KB)"
-  ]
-];
+const ITEMS_PER_PAGE = 20;
 
 export const RocForms: React.FC = () => {
+  // Global Directory State
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedEntity, setSelectedEntity] = useState<string>('All');
+  const [selectedFramework, setSelectedFramework] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedStatus, setSelectedStatus] = useState<string>('All');
+  const [selectedFormId, setSelectedFormId] = useState<string | null>(null);
+  
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const directoryRef = useRef<HTMLDivElement>(null);
+
+  // Intent Finder State
+  const [finderEntity, setFinderEntity] = useState<string | null>(null);
+  const [finderIntent, setFinderIntent] = useState<string | null>(null);
+
+  // Derive unique values for filters
+  const allEntityTypes = useMemo(() => {
+    const types = new Set<string>();
+    rocFormsData.forEach(f => f.entityTypes.forEach(t => types.add(t)));
+    return ['All', ...Array.from(types).sort()];
+  }, []);
+
+  const allFrameworks = useMemo(() => {
+    const frames = Array.from(new Set(rocFormsData.map(f => f.applicableLaw)));
+    return ['All', ...frames.sort()];
+  }, []);
+
+  const allCategories = useMemo(() => {
+    const cats = Array.from(new Set(rocFormsData.map(f => f.category)));
+    return ['All', ...cats.sort()];
+  }, []);
+
+  const allStatuses = useMemo(() => {
+    const stats = Array.from(new Set(rocFormsData.map(f => f.status)));
+    return ['All', ...stats.sort()];
+  }, []);
+
+  // Intent Options for Finder (based on the actual data categories)
+  const intentOptions = allCategories.filter(c => c !== 'All');
+
+  // Finder Output Logic
+  const finderMatches = useMemo(() => {
+    if (!finderEntity || !finderIntent) return null;
+    return rocFormsData.filter(
+      f => f.entityTypes.includes(finderEntity) && f.category === finderIntent
+    );
+  }, [finderEntity, finderIntent]);
+
+  // Main Directory Filter Logic
+  const filteredForms = useMemo(() => {
+    let result = rocFormsData;
+
+    if (selectedEntity !== 'All') {
+      result = result.filter(f => f.entityTypes.includes(selectedEntity));
+    }
+
+    if (selectedFramework !== 'All') {
+      result = result.filter(f => f.applicableLaw === selectedFramework);
+    }
+
+    if (selectedCategory !== 'All') {
+      result = result.filter(f => f.category === selectedCategory);
+    }
+
+    if (selectedStatus !== 'All') {
+      result = result.filter(f => f.status === selectedStatus);
+    }
+
+    if (searchQuery) {
+      const lower = searchQuery.toLowerCase();
+      // Prioritize exact form number
+      result = result.sort((a, b) => {
+        const aExact = a.formNumber.toLowerCase() === lower ? -1 : 0;
+        const bExact = b.formNumber.toLowerCase() === lower ? -1 : 0;
+        return aExact - bExact;
+      });
+
+      result = result.filter(f => 
+        f.formNumber.toLowerCase().includes(lower) ||
+        f.title.toLowerCase().includes(lower) ||
+        f.purpose.toLowerCase().includes(lower) ||
+        f.category.toLowerCase().includes(lower) ||
+        f.applicableLaw.toLowerCase().includes(lower) ||
+        (f.triggerEvent && f.triggerEvent.toLowerCase().includes(lower)) ||
+        (f.relevantSections && f.relevantSections.some(s => s.toLowerCase().includes(lower))) ||
+        (f.applicableRules && f.applicableRules.some(r => r.toLowerCase().includes(lower)))
+      );
+    }
+
+    return result;
+  }, [searchQuery, selectedEntity, selectedFramework, selectedCategory, selectedStatus]);
+
+  // Pagination Logic
+  const totalPages = Math.ceil(filteredForms.length / ITEMS_PER_PAGE);
+  const paginatedForms = filteredForms.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    if (directoryRef.current) {
+      directoryRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Reset pagination on filter change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedEntity, selectedFramework, selectedCategory, selectedStatus]);
+
+  // Selected Detail
+  const selectedForm = rocFormsData.find(f => f.id === selectedFormId);
+
   return (
-    <ResourceLayout 
-      title="Roc Forms"
-      description="View and search through Roc Forms documents."
-      data={pageData}
-      type="table"
-    />
+    <div className="roc-forms-page-wrapper">
+      <InternalPageHero 
+        title="ROC Forms"
+        description="Explore MCA and Registrar of Companies forms used for company, LLP and corporate compliance filings."
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'Knowledge Base', path: '/knowledge-base' },
+          { label: 'ROC Forms' }
+        ]}
+      />
+
+      <div className="container" style={{ marginTop: '0', paddingBottom: '0' }}>
+        <KnowledgeBaseHeader
+          infoTitle="Explore MCA and Registrar of Companies forms used for company, LLP and corporate compliance filings."
+          infoIcon={<Book className="icon" size={24} />}
+          infoGrid={[
+            { label: 'ROC Forms Indexed', value: rocFormsData.length },
+            { label: 'Entity Types', value: 'Companies / LLPs' },
+            { label: 'Directory', value: 'Searchable' },
+            { label: 'Regulatory Authority', value: 'MCA / ROC' }
+          ]}
+          statCards={[
+            { value: rocFormsData.length, label: 'ROC Forms Indexed' },
+            { value: 'Companies / LLPs', label: 'Entity Types' },
+            { value: 'Searchable', label: 'Compliance Directory' },
+            { value: 'MCA / ROC', label: 'Regulatory Authority' }
+          ]}
+        />
+      </div>
+
+      {/* SECTION 1: FIND A ROC FORM */}
+      <div className="roc-finder-section">
+        <div className="roc-finder-header">
+          <h2>Find a ROC Form</h2>
+          <p>Select the compliance requirement and entity type to find relevant MCA forms.</p>
+        </div>
+        
+        <div className="roc-finder-step">
+          <div className="roc-step-label"><div className="roc-step-num">1</div> What type of entity are you filing for?</div>
+          <div className="roc-intent-wrapper">
+            {['Company', 'LLP'].map(entity => (
+              <button 
+                key={entity}
+                className={`roc-intent-btn ${finderEntity === entity ? 'active' : ''}`}
+                onClick={() => {
+                  setFinderEntity(entity);
+                  if (finderIntent && finderMatches === null) setFinderIntent(null);
+                }}
+              >
+                {entity}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="roc-finder-step">
+          <div className="roc-step-label"><div className="roc-step-num">2</div> What are you trying to do?</div>
+          <div className="roc-intent-wrapper">
+            {intentOptions.map(intent => (
+              <button 
+                key={intent}
+                className={`roc-intent-btn ${finderIntent === intent ? 'active' : ''}`}
+                onClick={() => setFinderIntent(intent)}
+              >
+                {intent}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Finder Results */}
+        {finderEntity && finderIntent && (
+          <div className="roc-finder-results">
+            {finderMatches && finderMatches.length > 0 ? (
+              <div>
+                <h3 style={{ color: 'var(--brand-gold)', marginBottom: '1rem', fontSize: '1.1rem' }}>
+                  {finderMatches.length > 1 ? 'Possible ROC Forms:' : 'Recommended ROC Form:'}
+                </h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+                  {finderMatches.map(match => (
+                    <div 
+                      key={match.id} 
+                      style={{ 
+                        background: 'var(--primary-color)', 
+                        padding: '1rem', 
+                        borderRadius: '8px', 
+                        border: '1px solid var(--brand-blue)',
+                        cursor: 'pointer'
+                      }}
+                      onClick={() => setSelectedFormId(match.id)}
+                    >
+                      <div style={{ color: 'var(--brand-blue)', fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '0.25rem' }}>{match.formNumber}</div>
+                      <div style={{ color: 'white', fontSize: '0.9rem', marginBottom: '0.5rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{match.title}</div>
+                      <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>View Details &rarr;</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div style={{ color: 'var(--text-secondary)', fontStyle: 'italic' }}>
+                No verified ROC form currently matches this requirement for the selected entity.
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* COMPANIES VS LLP SECTION */}
+      <div className="roc-comparison-section">
+        <h2>Companies vs LLP Forms</h2>
+        <p>
+          ROC forms are governed by distinct legal frameworks depending on the entity type. Forms applicable to Companies cannot be used for Limited Liability Partnerships (LLPs), and vice versa.
+        </p>
+        <div className="roc-comp-grid">
+          <div className="roc-comp-card">
+            <h3>Company Forms</h3>
+            <ul>
+              <li>Governed by the Companies Act, 2013</li>
+              <li>Includes Companies Rules, 2014 & amendments</li>
+              <li>Examples: SPICe+, AOC-4, MGT-7, DIR-12</li>
+            </ul>
+          </div>
+          <div className="roc-comp-card">
+            <h3>LLP Forms</h3>
+            <ul>
+              <li>Governed by the Limited Liability Partnership Act, 2008</li>
+              <li>Includes LLP Rules, 2009 & amendments</li>
+              <li>Examples: FiLLiP, Form 8, Form 11</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 2: DIRECTORY */}
+      <div className="roc-directory-section" ref={directoryRef}>
+        <h2 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '1.5rem' }}>ROC Form Directory</h2>
+        
+        <div className="roc-controls">
+          <div className="roc-search-wrapper">
+            <Search className="roc-search-icon" size={20} />
+            <input 
+              type="text" 
+              className="roc-search-input"
+              placeholder="Search form number, title, compliance requirement or section..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            {searchQuery && (
+              <button onClick={() => setSearchQuery('')} style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer' }}>
+                <X size={18} />
+              </button>
+            )}
+          </div>
+          <div className="roc-filters">
+            <select className="roc-filter-select" value={selectedEntity} onChange={(e) => setSelectedEntity(e.target.value)}>
+              {allEntityTypes.map(c => <option key={c} value={c}>{c === 'All' ? 'Entity Type (All)' : c}</option>)}
+            </select>
+            <select className="roc-filter-select" value={selectedFramework} onChange={(e) => setSelectedFramework(e.target.value)}>
+              {allFrameworks.map(f => <option key={f} value={f}>{f === 'All' ? 'Applicable Law (All)' : f}</option>)}
+            </select>
+            <select className="roc-filter-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+              {allCategories.map(c => <option key={c} value={c}>{c === 'All' ? 'Category (All)' : c}</option>)}
+            </select>
+            <select className="roc-filter-select" value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value)}>
+              {allStatuses.map(s => <option key={s} value={s}>{s === 'All' ? 'Status (All)' : s}</option>)}
+            </select>
+          </div>
+        </div>
+
+        {paginatedForms.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '4rem 1rem', background: 'var(--glass-bg)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+            <p style={{ color: 'var(--text-secondary)' }}>No verified forms currently match this requirement.</p>
+          </div>
+        ) : (
+          <>
+            <div className="roc-grid">
+              {paginatedForms.map(form => (
+                <div key={form.id} className="roc-card" onClick={() => setSelectedFormId(form.id)}>
+                  <div className="roc-card-header">
+                    <div className="roc-number">{form.formNumber}</div>
+                    <div className={`roc-status-badge ${form.status.toLowerCase()}`}>
+                      {form.status}
+                    </div>
+                  </div>
+                  <div className="roc-detail-badges">
+                    {form.entityTypes.map(et => (
+                      <span key={et} className="roc-entity-badge">{et}</span>
+                    ))}
+                  </div>
+                  <div className="roc-title">{form.title}</div>
+                  <div className="roc-card-body">
+                    <div className="roc-detail">
+                      <div className="roc-detail-lbl">Law</div>
+                      <div className="roc-detail-val" style={{ color: 'var(--brand-gold)' }}>{form.applicableLaw}</div>
+                    </div>
+                    <div className="roc-detail">
+                      <div className="roc-detail-lbl">Category</div>
+                      <div className="roc-detail-val">{form.category}</div>
+                    </div>
+                    <div className="roc-detail">
+                      <div className="roc-detail-lbl">Purpose</div>
+                      <div className="roc-detail-val" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{form.purpose}</div>
+                    </div>
+                  </div>
+                  <div className="roc-card-footer">
+                    <span className="roc-view-btn">View Form Details <ChevronRight size={16} /></span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {totalPages > 1 && (
+              <div className="roc-pagination">
+                <button 
+                  className="roc-page-btn" 
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                >
+                  Previous
+                </button>
+                <span className="roc-page-info">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button 
+                  className="roc-page-btn" 
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+
+      {/* LOOKING FOR SOMETHING ELSE? */}
+      <div className="roc-nav-hub">
+        <h2>Looking for something else?</h2>
+        <div className="roc-nav-grid">
+          <Link to="/knowledge-base/companies-act" className="roc-nav-pill">Companies Act</Link>
+          <Link to="/knowledge-base/llp-act" className="roc-nav-pill">LLP Act</Link>
+          <Link to="/knowledge-base/company-law-circulars" className="roc-nav-pill">Company Law Circulars</Link>
+          <Link to="/knowledge-base/company-law-notifications" className="roc-nav-pill">Company Law Notifications</Link>
+          <Link to="/knowledge-base/company-law-rules" className="roc-nav-pill">Company Law Rules</Link>
+          <Link to="/knowledge-base/income-tax-forms" className="roc-nav-pill">Income Tax Forms</Link>
+        </div>
+      </div>
+
+      {/* OFFICIAL REFERENCE FOOTER */}
+      <div className="roc-official-ref-box">
+        <h3><Book size={24} color="var(--brand-gold)" /> Official MCA / ROC Forms</h3>
+        <p>
+          ROC forms, filing requirements, procedures and applicable rules may change through amendments and MCA updates. Always verify the current form, applicability and filing instructions on the official MCA portal.
+        </p>
+        <a 
+          href="https://www.mca.gov.in/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="roc-official-btn"
+        >
+          View Official MCA Portal <ExternalLink size={16} />
+        </a>
+      </div>
+
+      {/* RELATED KB */}
+      <div className="h-related-kb" style={{ marginTop: '4rem', paddingTop: '3rem', borderTop: '1px solid var(--glass-border)' }}>
+        <h2 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '2rem', textAlign: 'center' }}>Related Knowledge Base</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
+          {relatedKnowledgeBase.map((item, idx) => (
+            <Link key={idx} to={item.path} style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', padding: '1rem', borderRadius: '8px', textDecoration: 'none', color: 'white', textAlign: 'center', transition: 'all 0.2s', fontWeight: 500 }}>
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* DETAIL MODAL */}
+      {selectedForm && (
+        <div className="roc-modal-overlay" onClick={() => setSelectedFormId(null)}>
+          <div className="roc-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="roc-modal-header">
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.25rem' }}>
+                  <div style={{ color: 'var(--brand-gold)', fontSize: '0.85rem', textTransform: 'uppercase', fontWeight: 600, letterSpacing: '0.5px' }}>
+                    {selectedForm.applicableLaw}
+                  </div>
+                  <div className={`roc-status-badge ${selectedForm.status.toLowerCase()}`}>
+                    {selectedForm.status}
+                  </div>
+                </div>
+                <h2 style={{ color: 'var(--brand-blue)', fontSize: '1.8rem', marginBottom: '0.25rem' }}>{selectedForm.formNumber}</h2>
+                <div className="roc-modal-subtitle">{selectedForm.title}</div>
+              </div>
+              <button className="roc-modal-close" onClick={() => setSelectedFormId(null)}>
+                <X size={24} />
+              </button>
+            </div>
+            
+            <div className="roc-modal-body">
+              <div className="roc-modal-row">
+                <div className="roc-modal-lbl">Entity Type</div>
+                <div className="roc-modal-val" style={{ color: 'var(--brand-gold)', fontWeight: 600 }}>{selectedForm.entityTypes.join(', ')}</div>
+              </div>
+              
+              {selectedForm.triggerEvent && (
+                <div className="roc-modal-row">
+                  <div className="roc-modal-lbl">Trigger Event</div>
+                  <div className="roc-modal-val"><i>Used when:</i> {selectedForm.triggerEvent}</div>
+                </div>
+              )}
+
+              <div className="roc-modal-row">
+                <div className="roc-modal-lbl">Purpose</div>
+                <div className="roc-modal-val">{selectedForm.purpose}</div>
+              </div>
+
+              {selectedForm.relevantSections && selectedForm.relevantSections.length > 0 && (
+                <div className="roc-modal-row">
+                  <div className="roc-modal-lbl">Relevant Sections</div>
+                  <div className="roc-modal-val">{selectedForm.relevantSections.join(', ')}</div>
+                </div>
+              )}
+              
+              {selectedForm.applicableRules && selectedForm.applicableRules.length > 0 && (
+                <div className="roc-modal-row">
+                  <div className="roc-modal-lbl">Applicable Rules</div>
+                  <div className="roc-modal-val">{selectedForm.applicableRules.join(', ')}</div>
+                </div>
+              )}
+
+              {selectedForm.filingMode && (
+                <div className="roc-modal-row">
+                  <div className="roc-modal-lbl">Filing Mode</div>
+                  <div className="roc-modal-val">{selectedForm.filingMode}</div>
+                </div>
+              )}
+
+              <div className="roc-modal-row">
+                <div className="roc-modal-lbl">Summary</div>
+                <div className="roc-modal-val">{selectedForm.summary}</div>
+              </div>
+            </div>
+            
+            <div className="roc-modal-footer">
+              <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                Complete form and instructions are available from the official source.
+              </span>
+              <a 
+                href={selectedForm.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="roc-official-btn"
+              >
+                View Official MCA Source <ExternalLink size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };

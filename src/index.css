@@ -125,6 +125,12 @@ button {
   transition: all var(--transition-normal);
 }
 
+/* Fix for dropdown options visibility */
+option {
+  background-color: var(--brand-navy, #0B1F3A);
+  color: #FFFFFF;
+}
+
 /* Global Media Reset */
 img, picture, video, canvas, svg {
   display: block;

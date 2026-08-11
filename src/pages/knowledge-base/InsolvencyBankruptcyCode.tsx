@@ -1,23 +1,20 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Search, ArrowRight, Briefcase, 
-  Users, Shield, TrendingUp, Scale, BookOpen, FileText, 
-  CheckCircle, ChevronRight, Landmark, Hash, Building2, Clock, FileSignature
-} from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Landmark, Hash, Building2, Clock, FileSignature, ArrowRight, Link as LinkIcon, BarChart, UserCheck, Heart } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import { 
-  competitionChapters, 
-  importantCompetitionSections, 
+  ibcParts as competitionChapters, 
+  importantIbcSections as importantCompetitionSections, 
   complianceDashboardItems, 
   featuredTopics, 
   relatedActs,
-  competitionSections
-} from '../../data/competitionActData';
+  ibcSections as competitionSections
+} from '../../data/ibcData';
 import './InsolvencyBankruptcyCode.css';
 
 export const InsolvencyBankruptcyCode: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [expandedChapter, setExpandedChapter] = useState<string | null>(null);
 
 
 
@@ -60,7 +57,7 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
       setExpandedChapter(filteredSections[0].section);
     } else if (!searchQuery) {
       setExpandedChapter(null);
-      setExpandedSection(null);
+      
     }
   }, [searchQuery, filteredSections]);
 
@@ -349,9 +346,9 @@ export const InsolvencyBankruptcyCode: React.FC = () => {
               if (chapterSecs.length === 0) return null;
 
               return (
-                <div key={chapter.chapterNumber} style={{ marginBottom: '2rem' }}>
+                <div key={chapter.partNumber} style={{ marginBottom: '2rem' }}>
                   <h3 style={{ color: 'var(--brand-gold)', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-                    Chapter {chapter.chapterNumber}: {chapter.title}
+                    Chapter {chapter.partNumber}: {chapter.title}
                   </h3>
                   {chapterSecs.map((section) => (
                     <div key={section.section} className="accordion-item static">

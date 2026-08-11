@@ -19,7 +19,6 @@ import { DueDates } from './pages/DueDates';
 import { VirtualAssistant } from './components/shared/VirtualAssistant';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 import { GlobalBackground } from './components/layout/GlobalBackground';
-import AnimatedBackground from './components/layout/AnimatedBackground';
 import { SplashScreen } from './components/shared/SplashScreen';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 
@@ -35,7 +34,6 @@ function App() {
     <Router>
       <ScrollToTop />
       <GlobalBackground />
-      <AnimatedBackground />
       <SplashScreen />
       <div className="app-wrapper">
         <Navbar />

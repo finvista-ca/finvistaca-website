@@ -17,7 +17,7 @@ export const gstData: ServiceColumn[] = [
         items: [
           { name: 'Circulars', slug: 'gst-circulars', keywords: [...coreGstKeywords, 'circular', 'update', 'clarification'] },
           { name: 'Notifications', slug: 'gst-notifications', keywords: [...coreGstKeywords, 'notification', 'update'] },
-          { name: 'Orders / Instructions', slug: 'gst-instructions', keywords: [...coreGstKeywords, 'order', 'instruction', 'direction'] }
+          { name: 'Orders / Instructions', slug: 'gst-orders', keywords: [...coreGstKeywords, 'order', 'instruction', 'direction'] }
         ]
       },
       {

@@ -1,118 +1,149 @@
-import React, { useState } from 'react';
-import { Search, ExternalLink, Calendar, TrendingUp, Filter } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, ExternalLink, Calendar, TrendingUp, Filter, AlertCircle } from 'lucide-react';
 import { newsData } from '../data/newsData';
-import { InternalPageHero } from '../components/layout/InternalPageHero';
 import './NewsFeed.css';
 
-const categories = ["All", "GST", "Taxation", "Audit", "Compliance", "Technology", "Economy"];
+const categories = ["All", "Income Tax", "GST", "Corporate Law", "Compliance", "Finance", "Business"];
 
 export const NewsFeed: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredNews = newsData.filter(news => {
-    const matchesCategory = activeCategory === "All" || news.category === activeCategory;
-    return matchesCategory;
-  });
+  // Sort news by date (newest first)
+  const sortedNews = useMemo(() => {
+    return [...newsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }, []);
 
-  const featuredNews = filteredNews.filter(news => news.featured);
-  const latestNews = filteredNews.filter(news => !news.featured);
+  // Filter news
+  const filteredNews = useMemo(() => {
+    return sortedNews.filter(news => {
+      const matchesCategory = activeCategory === "All" || news.category === activeCategory;
+      const query = searchQuery.toLowerCase();
+      const matchesSearch = !query || 
+        news.title.toLowerCase().includes(query) || 
+        news.summary.toLowerCase().includes(query) || 
+        news.category.toLowerCase().includes(query) ||
+        news.source.toLowerCase().includes(query);
+      
+      return matchesCategory && matchesSearch;
+    });
+  }, [sortedNews, activeCategory, searchQuery]);
+
+  const featuredArticle = filteredNews.length > 0 ? filteredNews[0] : null;
+  const gridNews = filteredNews.length > 1 ? filteredNews.slice(1) : [];
+
+  const lastUpdated = sortedNews.length > 0 ? sortedNews[0].date : '';
+
+  const formatDate = (dateString: string) => {
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('en-IN', options);
+  };
 
   return (
     <div className="newsfeed-page">
-      {/* Hero Section */}
-      <InternalPageHero
-        breadcrumbs={[
-          { label: 'Home', path: '/' },
-          { label: 'News' }
-        ]}
-        title="News & Updates"
-        description="Stay informed with the latest updates on taxation, compliance, audit, and global economics from trusted sources."
-      />
-      
-      <section className="newsfeed-main" style={{ paddingTop: '1rem' }}>
-        <div className="container">
-          <div className="section-header text-center" style={{ marginBottom: '2rem' }}>
-            <h1 className="section-title" style={{ marginBottom: '16px' }}>News & Updates</h1>
-            <p className="section-desc" style={{ fontSize: '1.15rem', color: 'var(--text-secondary)' }}>Stay informed with the latest updates on taxation, compliance, audit, and global economics from trusted sources.</p>
+      <div className="container">
+        
+        {/* Breadcrumbs and Compact Header */}
+        <div className="news-header">
+          <div className="breadcrumb-container" style={{ justifyContent: 'center', marginBottom: '1rem' }}>
+            <Link to="/">Home</Link>
+            <span className="breadcrumb-separator">›</span>
+            <span>News Feed</span>
+          </div>
+          <h1 className="news-title">Latest Financial & Regulatory Updates</h1>
+          <p className="news-subtitle">Stay informed with the latest tax, compliance, corporate and financial developments.</p>
+          {lastUpdated && (
+            <p className="last-updated">Last updated: {formatDate(lastUpdated)}</p>
+          )}
+        </div>
+
+        {/* Search and Filters */}
+        <div className="news-controls">
+          <div className="search-container compact-search">
+            <div className="search-box-custom">
+              <Search size={18} className="search-icon" />
+              <input 
+                type="text" 
+                placeholder="Search financial and regulatory updates..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
           
-          {/* Categories Filter */}
-          <div className="categories-wrapper">
-            <div className="categories-header">
-              <Filter size={18} />
-              <span>Filter by Category:</span>
-            </div>
-            <div className="categories-list">
-              {categories.map(cat => (
-                <button 
-                  key={cat}
-                  className={`category-chip ${activeCategory === cat ? 'active' : ''}`}
-                  onClick={() => setActiveCategory(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+          <div className="pill-container filter-bar">
+            {categories.map(cat => (
+              <button 
+                key={cat}
+                className={`filter-pill ${activeCategory === cat ? 'active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
+        </div>
 
-          {/* Featured News (Only show if no search term or if search matches featured) */}
-          {featuredNews.length > 0 && (
-            <div className="featured-section">
-              <div className="section-header">
-                <h2><TrendingUp size={24} /> Featured Stories</h2>
+        {filteredNews.length === 0 ? (
+          <div className="no-results">
+            <AlertCircle size={48} color="var(--text-secondary)" />
+            <h3>No updates found</h3>
+            <p>We couldn't find any news matching your criteria. Try adjusting your search or filters.</p>
+          </div>
+        ) : (
+          <div className="news-content">
+            {/* Featured Article */}
+            {featuredArticle && (
+              <div className="featured-update">
+                <a href={featuredArticle.sourceUrl} target="_blank" rel="noopener noreferrer" className="featured-card">
+                  <div className="card-badges">
+                    <span className="category-badge">{featuredArticle.category}</span>
+                    <span className="featured-badge"><TrendingUp size={14} /> Featured</span>
+                  </div>
+                  <h2>{featuredArticle.title}</h2>
+                  <p className="featured-summary">{featuredArticle.summary}</p>
+                  
+                  <div className="card-footer">
+                    <div className="meta-info">
+                      <span className="date"><Calendar size={14} /> {formatDate(featuredArticle.date)}</span>
+                      <span className="source">{featuredArticle.source}</span>
+                    </div>
+                    <div className="read-more-btn">
+                      Read More <ExternalLink size={16} />
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div className="featured-grid">
-                {featuredNews.map(news => (
-                  <a href={news.url} target="_blank" rel="noopener noreferrer" className="featured-card glass-card" key={news.id}>
+            )}
+
+            {/* News Grid */}
+            {gridNews.length > 0 && (
+              <div className="news-grid">
+                {gridNews.map(news => (
+                  <a href={news.sourceUrl} target="_blank" rel="noopener noreferrer" className="news-card" key={news.id}>
                     <div className="card-badges">
                       <span className="category-badge">{news.category}</span>
-                      <span className="source-badge">{news.source}</span>
                     </div>
-                    <h3>{news.title}</h3>
-                    <div className="card-footer">
-                      <div className="date"><Calendar size={14} /> {news.date}</div>
-                      <div className="read-more">Read Article <ExternalLink size={14} /></div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Latest News */}
-          <div className="latest-section">
-            <div className="section-header">
-              <h2>Latest Updates</h2>
-            </div>
-            {latestNews.length > 0 ? (
-              <div className="latest-grid">
-                {latestNews.map(news => (
-                  <a href={news.url} target="_blank" rel="noopener noreferrer" className="news-card glass-card" key={news.id}>
-                    <div className="card-badges">
-                      <span className="category-badge">{news.category}</span>
-                    </div>
-                    <h4>{news.title}</h4>
-                    <div className="card-footer">
-                      <div className="source-info">
-                        <span className="source-badge minimal">{news.source}</span>
-                        <span className="date"><Calendar size={12} /> {news.date}</span>
+                    <h3 className="news-card-title">{news.title}</h3>
+                    <p className="news-card-summary">{news.summary}</p>
+                    
+                    <div className="card-footer mt-auto">
+                      <div className="meta-info-col">
+                        <span className="date"><Calendar size={12} /> {formatDate(news.date)}</span>
+                        <span className="source text-sm">{news.source}</span>
                       </div>
-                      <ExternalLink size={16} className="ext-icon" />
+                      <div className="read-more-icon">
+                        <ExternalLink size={16} />
+                      </div>
                     </div>
                   </a>
                 ))}
-              </div>
-            ) : (
-              <div className="no-results glass-card">
-                <p>No news articles found for this category.</p>
-                <button className="btn btn-secondary" onClick={() => setActiveCategory('All')}>Clear Filters</button>
               </div>
             )}
           </div>
-
-        </div>
-      </section>
-
+        )}
+      </div>
     </div>
   );
 };

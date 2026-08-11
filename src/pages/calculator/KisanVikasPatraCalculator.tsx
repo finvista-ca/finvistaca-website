@@ -167,7 +167,7 @@ export const KisanVikasPatraCalculator: React.FC = () => {
               <div style={{ display: 'flex', gap: '0.85rem', background: 'rgba(200, 164, 93, 0.05)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(200, 164, 93, 0.2)' }}>
                 <AlertCircle size={20} color="#C8A45D" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
-                  Disclaimer: This calculator provides an estimated maturity value based on Government-notified Kisan Vikas Patra interest rates applicable on the selected investment date. Please consult FinVista Chartered Accountants or India Post for official calculations.
+                  Disclaimer: This calculator provides an estimated maturity value based on Government-notified Kisan Vikas Patra interest rates applicable on the selected investment date. Please consult FinvistaCA or India Post for official calculations.
                 </div>
               </div>
             </>

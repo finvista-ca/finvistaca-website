@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, AlertCircle, FileText, Download, ChevronLeft, BookOpen, Clock, FileKey, Layers, Hash } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Landmark, Hash, Building2, Clock, FileSignature, ArrowRight, Link as LinkIcon, BarChart, UserCheck, Heart, AlertTriangle, HandCoins, AlertCircle, CheckCircle2, Layers, FileKey } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 
 import { giftTaxChapters, giftTaxImportantSections, giftTaxSearchIndex } from '../../data/giftTaxData';
@@ -7,6 +7,8 @@ import './GiftTaxAct.css';
 
 export const GiftTaxAct: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const toggleImportantSection = (sec: string) => setExpandedSection(p => p === sec ? null : sec);
   const [page, setPage] = useState(1);
   const pageSize = 10;
 

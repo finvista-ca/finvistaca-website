@@ -636,7 +636,7 @@ export const IncomeTaxCalculator: React.FC = () => {
               <div style={{ marginBottom: '0.5rem' }}>
                 <strong style={{ color: '#fff' }}>Selected:</strong> FY {fy} | {regime === 'new' ? 'New' : 'Old'} Regime | {age === 'regular' ? 'Individual' : age === 'senior' ? 'Senior' : 'Super Senior'} | {empType.charAt(0).toUpperCase() + empType.slice(1)}
               </div>
-              Disclaimer: This calculator provides an estimate only and should not be considered professional tax advice. Consult FinVista Chartered Accountants for personalised tax planning.
+              Disclaimer: This calculator provides an estimate only and should not be considered professional tax advice. Consult FinvistaCA for personalised tax planning.
             </div>
           </div>
 

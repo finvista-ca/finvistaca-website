@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ChevronDown, ChevronUp, AlertCircle, FileText, Download, ChevronLeft, ChevronRight, BookOpen, Clock, FileKey, Layers, Hash, Building2, Landmark, LineChart, FileSignature, Scale, Calculator, RefreshCcw, HandCoins, ArrowRight } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Landmark, Hash, Building2, Clock, FileSignature, ArrowRight, Link as LinkIcon, BarChart, UserCheck, Heart, Layers, HandCoins, LineChart, Calculator, AlertCircle, RefreshCcw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import { expenditureTaxChapters, expenditureTaxImportantSections, expenditureTaxSearchIndex } from '../../data/expenditureTaxData';

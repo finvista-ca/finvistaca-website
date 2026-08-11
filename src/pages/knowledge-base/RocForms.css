@@ -1,0 +1,675 @@
+.roc-forms-page-wrapper {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Compact Header */
+.roc-header {
+  margin-bottom: 2.5rem;
+}
+
+.roc-breadcrumb {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.roc-breadcrumb a {
+  color: var(--brand-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.roc-breadcrumb a:hover {
+  color: var(--brand-gold);
+}
+
+.roc-breadcrumb .active {
+  color: var(--text-muted);
+}
+
+.roc-title {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.roc-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 800px;
+}
+
+/* At A Glance Grid */
+.roc-at-a-glance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.roc-glance-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.roc-glance-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.roc-glance-val {
+  color: var(--brand-gold);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Find a Form (Intent Helper) */
+.roc-finder-section {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-top: 4px solid var(--brand-blue);
+}
+
+.roc-finder-header {
+  margin-bottom: 1.5rem;
+}
+
+.roc-finder-header h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.roc-finder-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.roc-finder-step {
+  margin-bottom: 2rem;
+}
+
+.roc-finder-step:last-child {
+  margin-bottom: 0;
+}
+
+.roc-step-label {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.roc-step-num {
+  background: var(--brand-gold);
+  color: black;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.roc-intent-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.roc-intent-btn {
+  background: var(--primary-color);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.roc-intent-btn:hover {
+  border-color: var(--brand-blue);
+  color: white;
+}
+
+.roc-intent-btn.active {
+  background: rgba(0, 163, 224, 0.15);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+.roc-finder-results {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--glass-border);
+}
+
+/* Companies vs LLP Comparison Section */
+.roc-comparison-section {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.roc-comparison-section h2 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.roc-comparison-section p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.roc-comp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .roc-comp-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.roc-comp-card {
+  background: var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.roc-comp-card h3 {
+  color: var(--brand-gold);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.roc-comp-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roc-comp-card ul li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.roc-comp-card ul li::before {
+  content: '•';
+  color: var(--brand-blue);
+}
+
+/* Search & Filters */
+.roc-directory-section {
+  margin-bottom: 4rem;
+}
+
+.roc-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.roc-search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.roc-search-icon {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  color: var(--brand-gold);
+  left: 1.5rem;
+}
+
+.roc-search-input {
+  width: 100%;
+
+
+  color: white;
+
+  outline: none;
+
+
+  padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+}
+
+.roc-search-input:focus {
+
+  border-color: var(--brand-gold);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(200, 164, 93, 0.15);
+  transform: translateY(-2px);
+}
+
+.roc-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.roc-filter-select {
+  padding: 0.75rem 1rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  min-width: 180px;
+  flex: 1;
+}
+
+/* Directory Grid & Cards */
+.roc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.roc-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.roc-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-blue);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.roc-card-header {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.roc-number {
+  color: var(--brand-blue);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.roc-status-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+.roc-status-badge.current {
+  background: rgba(39, 174, 96, 0.15);
+  color: #2ecc71;
+}
+
+.roc-title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.roc-card-body {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.roc-detail {
+  margin-bottom: 0.75rem;
+}
+
+.roc-detail-lbl {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.roc-detail-val {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.roc-detail-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.roc-entity-badge {
+  background: rgba(201, 160, 80, 0.15);
+  color: var(--brand-gold);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.roc-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1rem;
+}
+
+.roc-view-btn {
+  color: var(--brand-gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.2s;
+}
+
+.roc-card:hover .roc-view-btn {
+  gap: 0.75rem;
+}
+
+/* Looking for something else? (Navigation Hub) */
+.roc-nav-hub {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+}
+
+.roc-nav-hub h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.roc-nav-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.roc-nav-pill {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.roc-nav-pill:hover {
+  border-color: var(--brand-gold);
+  color: white;
+}
+
+/* Official Ref Box */
+.roc-official-ref-box {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--glass-bg);
+  border: 1px solid rgba(201, 160, 80, 0.3);
+  border-radius: 12px;
+  border-left: 4px solid var(--brand-gold);
+}
+
+.roc-official-ref-box h3 {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.roc-official-ref-box p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+/* Modal */
+.roc-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.roc-modal-content {
+  background: var(--primary-color);
+  border: 1px solid var(--brand-gold);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 750px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.roc-modal-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.roc-modal-title h2 {
+  color: var(--brand-blue);
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.roc-modal-subtitle {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.roc-modal-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.roc-modal-close:hover {
+  color: white;
+}
+
+.roc-modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.roc-modal-row {
+  display: flex;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.roc-modal-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.roc-modal-lbl {
+  flex: 0 0 160px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.roc-modal-val {
+  flex: 1;
+  color: white;
+  line-height: 1.5;
+}
+
+.roc-modal-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .roc-modal-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.roc-official-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--brand-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.roc-official-btn:hover {
+  background: #2980b9;
+}
+
+/* Pagination */
+.roc-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.roc-page-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.roc-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.roc-page-btn:not(:disabled):hover {
+  border-color: var(--brand-gold);
+}
+
+.roc-page-info {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .roc-controls {
+    flex-direction: column;
+  }
+  .roc-filters {
+    flex-direction: column;
+  }
+  .roc-filter-select {
+    width: 100%;
+  }
+  .roc-modal-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .roc-modal-lbl {
+    flex: none;
+  }
+}

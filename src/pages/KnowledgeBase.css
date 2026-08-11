@@ -53,7 +53,9 @@
 }
 
 .hero-search-container .search-icon {
-  color: var(--text-secondary);
+
+  color: var(--brand-gold);
+  left: 1.5rem;
 }
 
 .kb-main {

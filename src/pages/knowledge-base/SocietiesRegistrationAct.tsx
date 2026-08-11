@@ -1,10 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Search, ArrowRight, Briefcase, 
-  Users, Shield, TrendingUp, Scale, BookOpen, FileText, 
-  CheckCircle, ChevronRight, Landmark, Hash, Building2, Clock, FileSignature, Heart
-} from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, Landmark, Hash, Building2, Clock, FileSignature, ArrowRight, Link as LinkIcon, BarChart, UserCheck, Heart } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import { 
   societiesActChapters, 
@@ -52,15 +48,7 @@ export const SocietiesRegistrationAct: React.FC = () => {
     );
   }, [searchQuery]);
 
-  // Auto-expand section if there's only one search result
-  React.useEffect(() => {
-    if (searchQuery && filteredSections.length === 1) {
-      setExpandedChapter(filteredSections[0].section); // Using section number as key
-    } else if (!searchQuery) {
-      setExpandedChapter(null);
-      setExpandedSection(null);
-    }
-  }, [searchQuery, filteredSections]);
+  
 
   const IconMap: Record<string, React.FC<any>> = {
     Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, CheckCircle, FileEdit: FileText

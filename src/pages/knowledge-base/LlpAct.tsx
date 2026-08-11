@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ArrowRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText } from 'lucide-react';
+import { Search, ArrowRight, Briefcase, Users, Shield, TrendingUp, Scale, BookOpen, FileText, Landmark, Hash, Building2, Clock, FileSignature } from 'lucide-react';
 import { InternalPageHero } from '../../components/layout/InternalPageHero';
 import {
   llpChapters,
@@ -11,10 +11,8 @@ import './LlpAct.css';
 
 export const LlpAct: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-
-
-
-  // Filter Chapters based on Search
+  const [expandedChapter, setExpandedChapter] = useState<string | null>(null);
+  const toggleChapter = (chapter: string) => setExpandedChapter(prev => prev === chapter ? null : chapter);  // Filter Chapters based on Search
   const filteredChapters = useMemo(() => {
     if (!searchQuery) return llpChapters;
     
@@ -62,25 +60,55 @@ export const LlpAct: React.FC = () => {
         ]}
       />
 
-      <div className="container" style={{ marginTop: '2rem' }}>
+      <div className="container">
         
+        {/* Information Card (Act Information) */}
+        <div className="info-card">
+          <Landmark className="icon" size={32} />
+          <div style={{ width: '100%' }}>
+            <h3>Act Information</h3>
+            <div className="info-card-grid">
+              <span><strong>Act Name:</strong> Limited Liability Partnership Act</span>
+              <span><strong>Year Enacted:</strong> 2008</span>
+              <span><strong>Act Number:</strong> 6 of 2009</span>
+              <span><strong>Status:</strong> In Force</span>
+              <span><strong>Applicable To:</strong> Formation & Regulation of LLPs</span>
+              <span><strong>Administered By:</strong> Ministry of Corporate Affairs (MCA)</span>
+            </div>
+          </div>
+        </div>
+
         {/* At a Glance Statistics */}
         <div className="overview-grid">
           <div className="stat-card">
-            <span className="stat-value">14</span>
-            <span className="stat-label">Chapters</span>
+            <BookOpen size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value">2008</span>
+            <span className="stat-label">YEAR ENACTED</span>
           </div>
           <div className="stat-card">
+            <Hash size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
             <span className="stat-value">81</span>
-            <span className="stat-label">Sections</span>
+            <span className="stat-label">TOTAL SECTIONS</span>
           </div>
           <div className="stat-card">
-            <span className="stat-value">4</span>
-            <span className="stat-label">Schedules</span>
+            <Hash size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value" style={{ fontSize: '1.25rem' }}>6 of 2009</span>
+            <span className="stat-label">ACT NUMBER</span>
           </div>
           <div className="stat-card">
-            <span className="stat-value">2009</span>
-            <span className="stat-label">Year Effective</span>
+            <Building2 size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value" style={{ fontSize: '1.25rem' }}>LLPs</span>
+            <span className="stat-label">APPLICABLE TO</span>
+          </div>
+          <div className="stat-card">
+            <Clock size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value">In Force</span>
+            <span className="stat-label">CURRENT STATUS</span>
+          </div>
+          <div className="stat-card">
+            <FileSignature size={24} color="var(--brand-blue)" style={{ marginBottom: '1rem' }}/>
+            <span className="stat-value">MCA</span>
+            <span className="stat-label">ADMINISTERED BY</span>
           </div>
         </div>
 
@@ -183,12 +211,29 @@ export const LlpAct: React.FC = () => {
         ) : (
           <div style={{ marginBottom: '4rem' }}>
             {filteredChapters.map((chapter) => (
-              <div key={chapter.chapterNumber} className="accordion-item static">
-                <div className="accordion-header static-header">
+              <div key={chapter.chapterNumber} className={`accordion-item ${expandedChapter === chapter.chapterNumber ? 'active' : ''}`}>
+                <button 
+                  className="accordion-header"
+                  onClick={() => toggleChapter(chapter.chapterNumber)}
+                >
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                     <span className="stat-label" style={{ fontSize: '0.85rem' }}>Chapter {chapter.chapterNumber}</span>
                     <span style={{ fontWeight: 600, fontSize: '1.1rem' }}>{chapter.title}</span>
                   </div>
+                </button>
+                <div className="accordion-content">
+                  {chapter.sections && chapter.sections.length > 0 ? (
+                    <div style={{ padding: '1rem 0' }}>
+                      {chapter.sections.map((sec, idx) => (
+                        <div key={idx} style={{ marginBottom: '1.5rem' }}>
+                          <h4 style={{ color: 'var(--brand-gold)', marginBottom: '0.5rem' }}>Section {sec.sectionNumber}: {sec.title}</h4>
+                          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', whiteSpace: 'pre-wrap', lineHeight: '1.6' }}>{sec.content}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{ padding: '1rem 0', color: 'var(--text-secondary)' }}>No sections available for this chapter.</div>
+                  )}
                 </div>
               </div>
             ))}

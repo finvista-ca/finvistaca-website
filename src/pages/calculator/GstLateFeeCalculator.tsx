@@ -291,7 +291,7 @@ export const GstLateFeeCalculator: React.FC = () => {
           <div style={{ display: 'flex', gap: '0.85rem', background: 'rgba(200, 164, 93, 0.05)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(200, 164, 93, 0.2)' }}>
             <AlertCircle size={20} color="#C8A45D" style={{ flexShrink: 0, marginTop: '2px' }} />
             <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
-              This calculator provides an estimated GST late fee based on the latest applicable GST provisions. Actual liability may vary depending on government notifications and specific taxpayer circumstances. Please consult FinVista Chartered Accountants for professional guidance.
+              This calculator provides an estimated GST late fee based on the latest applicable GST provisions. Actual liability may vary depending on government notifications and specific taxpayer circumstances. Please consult FinvistaCA for professional guidance.
             </div>
           </div>
 
