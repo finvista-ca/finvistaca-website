@@ -74,7 +74,7 @@
 }
 
 .glass-panel {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/modern-accounting.png');
+  background: var(--card-bg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,6 +104,7 @@
 .visual-badge {
   position: relative;
   z-index: 1;
+  margin-top: 7rem;
 }
 
 .badge-icon {

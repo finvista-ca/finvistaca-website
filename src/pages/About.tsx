@@ -84,8 +84,13 @@ export const About: React.FC = () => {
               </p>
             </div>
             <div className="overview-visual">
-              <div className="glass-panel">
-                <div className="visual-badge">
+              <div className="glass-panel" style={{ position: 'relative', overflow: 'hidden' }}>
+                <img 
+                  src="/modern-accounting.png" 
+                  alt="Modern Accounting" 
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.4 }} 
+                />
+                <div className="visual-badge" style={{ position: 'relative', zIndex: 1 }}>
                   <Building2 size={48} className="badge-icon" strokeWidth={1.5} />
                   <h3>Modern Accounting</h3>
                   <p>Enterprise-grade solutions tailored for your business scale.</p>
