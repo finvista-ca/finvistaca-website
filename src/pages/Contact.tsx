@@ -144,7 +144,7 @@ export const Contact: React.FC = () => {
                 <h3>Vijayawada</h3>
                 <div className="info-items">
                   <a 
-                    href="https://maps.app.goo.gl/WeB1UB6FAE6VVNCH8" 
+                    href="https://maps.app.goo.gl/EELwR4Eddm4NdTi1A" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="info-item"
