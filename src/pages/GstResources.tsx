@@ -59,7 +59,7 @@ export const GstResources: React.FC = () => {
         description="Your comprehensive resource for GST Acts, Rules, Notifications, Circulars, Forms, and Codes."
       />
       
-      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+      <div className="container" style={{ marginTop: '1.5rem', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
         <SmartSearch 
           services={allGstServices} 
           basePath="/gst"

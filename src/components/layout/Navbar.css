@@ -72,6 +72,8 @@
 @media (min-width: 1024px) {
   .desktop-nav {
     display: block;
+    margin-right: auto;
+    margin-left: clamp(2rem, 4vw, 5rem);
   }
 }
 

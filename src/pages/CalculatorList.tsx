@@ -44,7 +44,7 @@ export const CalculatorList: React.FC = () => {
         description="Plan your finances better with our free online calculators for EMI, Home Loans, Income Tax, and more."
       />
       
-      <div className="container" style={{ marginTop: '-20px', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
+      <div className="container" style={{ marginTop: '1.5rem', marginBottom: '40px', position: 'relative', zIndex: 10 }}>
         <SmartSearch 
           services={allCalculators} 
           basePath="/calculator"

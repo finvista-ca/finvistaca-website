@@ -5,7 +5,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 120px 0 60px;
+  padding: 120px 0 15px;
   background: transparent;
   z-index: 10;
 }
@@ -57,7 +57,27 @@
 
 @media (max-width: 768px) {
   .internal-page-hero {
-    padding: 95px 0 40px;
+    padding: 95px 0 10px;
+  }
+  
+  .internal-page-hero .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-breadcrumbs {
+    padding: 5px 12px;
+    font-size: 12px;
+    gap: 5px;
+    border-radius: 12px;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .hero-breadcrumbs::-webkit-scrollbar {
+    display: none;
   }
 }
 

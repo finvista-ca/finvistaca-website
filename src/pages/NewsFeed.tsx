@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Search, ExternalLink, Calendar, TrendingUp, Filter, AlertCircle } from 'lucide-react';
 import { newsData } from '../data/newsData';
 import './NewsFeed.css';
+import { InternalPageHero } from '../components/layout/InternalPageHero';
 
 const categories = ["All", "Income Tax", "GST", "Corporate Law", "Compliance", "Finance", "Business"];
 
@@ -42,21 +43,15 @@ export const NewsFeed: React.FC = () => {
 
   return (
     <div className="newsfeed-page">
-      <div className="container">
-        
-        {/* Breadcrumbs and Compact Header */}
-        <div className="news-header">
-          <div className="breadcrumb-container" style={{ justifyContent: 'center', marginBottom: '1rem' }}>
-            <Link to="/">Home</Link>
-            <span className="breadcrumb-separator">›</span>
-            <span>News Feed</span>
-          </div>
-          <h1 className="news-title">Latest Financial & Regulatory Updates</h1>
-          <p className="news-subtitle">Stay informed with the latest tax, compliance, corporate and financial developments.</p>
-          {lastUpdated && (
-            <p className="last-updated">Last updated: {formatDate(lastUpdated)}</p>
-          )}
-        </div>
+      <InternalPageHero 
+        breadcrumbs={[
+          { label: 'Home', path: '/' },
+          { label: 'News Feed' }
+        ]}
+        title=""
+        description=""
+      />
+      <div className="container" style={{ marginTop: '2rem' }}>
 
         {/* Search and Filters */}
         <div className="news-controls">

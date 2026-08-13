@@ -83,44 +83,44 @@ export const InternalPageHero: React.FC<InternalPageHeroProps> = ({
           </motion.div>
         )}
 
-        <motion.div 
-          className="hero-content"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h1 className="hero-title">{title}</h1>
-          {description && <p className="hero-description">{description}</p>}
-          
-          {ctaButtons.length > 0 && (
-            <div className="hero-actions">
-              {ctaButtons.map((btn, index) => (
-                <Link 
-                  key={index} 
-                  to={btn.path} 
-                  className={`hero-btn ${btn.primary ? 'primary' : 'secondary'}`}
-                  onClick={(e) => handleScroll(e, btn.path)}
-                >
-                  {btn.label}
-                </Link>
-              ))}
-            </div>
-          )}
-          
-          {stats.length > 0 && (
-            <div className="hero-stats">
-              {stats.map((stat, index) => (
-                <div key={index} className="hero-stat-item">
-                  <div className="stat-icon">{renderIcon(stat.icon)}</div>
-                  <div className="stat-details">
-                    <span className="stat-value">{stat.value}</span>
-                    <span className="stat-label">{stat.label}</span>
+        {(ctaButtons.length > 0 || stats.length > 0) && (
+          <motion.div 
+            className="hero-content"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {/* Title and Description intentionally removed per user request, only breadcrumbs and optional CTAs/stats remain */}
+            {ctaButtons.length > 0 && (
+              <div className="hero-actions">
+                {ctaButtons.map((btn, index) => (
+                  <Link 
+                    key={index} 
+                    to={btn.path} 
+                    className={`hero-btn ${btn.primary ? 'primary' : 'secondary'}`}
+                    onClick={(e) => handleScroll(e, btn.path)}
+                  >
+                    {btn.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+            
+            {stats.length > 0 && (
+              <div className="hero-stats">
+                {stats.map((stat, index) => (
+                  <div key={index} className="hero-stat-item">
+                    <div className="stat-icon">{renderIcon(stat.icon)}</div>
+                    <div className="stat-details">
+                      <span className="stat-value">{stat.value}</span>
+                      <span className="stat-label">{stat.label}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </motion.div>
+                ))}
+              </div>
+            )}
+          </motion.div>
+        )}
 
       </div>
     </div>
